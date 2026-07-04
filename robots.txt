@@ -1,0 +1,6 @@
+# AutoSelector — https://autoselector.polecat.live
+User-agent: *
+Allow: /
+Disallow: /v/
+
+Sitemap: https://autoselector.polecat.live/sitemap.xml

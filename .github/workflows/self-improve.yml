@@ -1,0 +1,156 @@
+name: Hourly self-improvement
+
+# Runs Claude Code on a schedule to build the next ROADMAP item (or, every 5th
+# feature run, do a polish/reflection sweep), gate it behind the smoke test,
+# then commit to main and deploy to production automatically.
+#
+# Pause any time by disabling this workflow or removing CLAUDE_CODE_OAUTH_TOKEN.
+#
+# Note: a push to main by the built-in GITHUB_TOKEN does NOT trigger deploy.yml
+# (GitHub blocks that to avoid loops), so this job deploys Pages itself.
+on:
+  schedule:
+    # Off-peak minutes: GitHub heavily delays/drops scheduled jobs at :00.
+    # Two attempts/hour improve the odds of a roughly-hourly cadence; the
+    # concurrency lock keeps them from overlapping.
+    - cron: '23,53 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: autoselector-deploy
+  cancel-in-progress: false
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code + test browsers
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          npm install -D playwright
+          # Chromium AND WebKit: WebKit is iOS Safari/Chrome's engine and catches
+          # iOS-only failures (e.g. Intl.format throwing on an invalid Date) that
+          # Chromium silently tolerates.
+          npx playwright install --with-deps chromium webkit
+
+      # Every 5th run is a polish/reflection sweep; the rest build features.
+      - name: Pick mode
+        id: mode
+        run: |
+          if [ $(( ${{ github.run_number }} % 5 )) -eq 0 ]; then
+            echo "mode=polish"  >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=feature" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run Claude Code
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          MODE: ${{ steps.mode.outputs.mode }}
+        run: |
+          PROMPT="$(cat .github/self-improve-prompt.md)
+          ---
+          This run's mode is: ${MODE}"
+          claude -p "$PROMPT" \
+            --dangerously-skip-permissions \
+            --max-turns 150 \
+            --allowedTools "Bash,Edit,Write,Read,Glob,Grep,WebSearch,WebFetch" || echo "claude exited non-zero (continuing to smoke test)"
+
+      - name: Record run cadence
+        run: |
+          mkdir -p .github
+          echo "$(date -u +%FT%TZ) run=${{ github.run_number }} mode=${MODE}" >> .github/cadence.log
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+
+      - name: Stamp changelog timestamps
+        run: |
+          if git diff --name-only | grep -q '^js/changelog.js$'; then
+            node .github/stamp-changelog.mjs
+          else
+            echo "changelog.js unchanged; nothing to stamp."
+          fi
+
+      - name: Smoke test (marketing + app must load with no errors)
+        run: node .github/smoke-test.mjs
+
+      # Freeze this build as an immutable /v/<n>/ snapshot AFTER it passes the
+      # smoke test, so the Settings → Version switcher can roll back to it later.
+      - name: Archive this release
+        run: node .github/archive-release.mjs
+
+      - name: Commit + push to main
+        id: commit
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes produced this run."; echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git config user.name  "autoselector-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "auto: self-improvement (${MODE})" \
+            -m "Automated hourly improvement; passed smoke test and auto-deployed."
+          # Integrate any commits that landed on main during this run (the owner
+          # pushes to main too), then push. Retry with rebase so a concurrent
+          # push never causes a non-fast-forward failure or lost work.
+          pushed=false
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            # On the rare true conflict, prefer main (the owner's pushes win).
+            if git rebase origin/main; then :; else git rebase --abort; git merge -X theirs origin/main -m "merge main"; fi
+            if git push origin HEAD:main; then pushed=true; break; fi
+            sleep $((3*i))
+          done
+          if [ "$pushed" != true ]; then echo "Could not push to main after retries"; exit 1; fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Keep the marketing site's screenshots in lock-step with the app as it
+      # evolves. Regenerated into the Pages artifact (working tree) but NOT
+      # committed — so the live site always matches the just-built app without
+      # bloating git history every hour. Non-fatal: a flaky capture falls back
+      # to the committed baseline screenshots.
+      - name: Refresh marketing screenshots
+        if: steps.commit.outputs.changed == 'true'
+        run: node .github/gen-shots.mjs || echo "gen-shots failed; keeping committed baseline screenshots"
+
+      # Deploy Pages ourselves (the bot's push to main won't trigger deploy.yml).
+      - name: Prepare artifact
+        if: steps.commit.outputs.changed == 'true'
+        run: rm -rf node_modules package.json package-lock.json
+
+      - name: Configure Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        id: deploy
+        uses: actions/deploy-pages@v4

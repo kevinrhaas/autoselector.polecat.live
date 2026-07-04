@@ -1,0 +1,79 @@
+# AutoSelector — Roadmap
+
+The self-improvement loop reads this file every run (see
+`.github/self-improve-prompt.md`). Feature runs take the top unchecked item in
+**Next up**; every 5th run is a polish/reflection sweep that also updates this
+file with new ideas. Keep `js/whatsnext.js` in sync with the top of this list.
+
+Sizing rule: every run ships 30–45 minutes of complete work — no small
+releases. If an item is smaller, bundle it with a data sweep.
+
+## Next up (ordered)
+
+- [ ] **Data sweep #1 + coverage audit** — verify the 3 `low` and the worst
+  `medium` confidence records (start: Tesla Model S/X wind-down pricing, Ioniq
+  6 N, Nexo, Dodge Hornet). Audit coverage against industry counts (~379
+  models incl. variants — cars.com); document any intentional folds in
+  docs/DATA.md, add genuinely missing nameplates.
+- [ ] **Local hero images for every model** — extend assets/vehicles/ beyond
+  the 75 popular models, ~30 vehicles per run via Wikimedia Commons (update
+  assets/credits.json + js/data/assets.js each time).
+- [ ] **Finder: "Two cars enter" tournament** — head-to-head bracket from a
+  filtered pool; keep picking the one you like more until a winner emerges.
+  Confetti at the end, winner straight into Garage.
+- [ ] **Build sheet** — pick a trim + options on the vehicle page, get a
+  printable/sharable spec sheet with estimated out-the-door price (destination
+  fees per brand, simple tax/fee estimator).
+- [ ] **Ownership-cost lens** — annual fuel/energy cost estimate per vehicle
+  (national average $/gal and ¢/kWh), toggleable on cards and Compare.
+- [ ] **Deep links & shareable shortlists** — encode a filter set / compare
+  set in the URL hash so any result list can be shared.
+- [ ] **EPA + NHTSA live hooks** — pull fueleconomy.gov + NHTSA safety ratings
+  where CORS allows; cache locally; show safety stars on detail pages.
+- [ ] **Remote database sync v1** — flesh out Settings → Data profiles:
+  read/write workspace rows against an HTTP JSON endpoint with conflict
+  prompts; document a tiny optional proxy for SQLite/Postgres.
+- [ ] **Garage insights** — "your taste" mini-dashboard: price band, body
+  styles, powertrains you gravitate to; suggest 3 vehicles you haven't seen.
+- [ ] **Dealer-visit checklist** — per-favorite printable checklist built from
+  the practical attributes (test the climate knobs! check the spare!).
+
+## Data verification rotation
+
+One brand per feature run (verify prices/specs vs manufacturer + price guides,
+raise `confidence`, fix `notes`, then check off; restart when all done):
+
+- [ ] Toyota — [ ] Lexus — [ ] Honda — [ ] Acura — [ ] Ford — [ ] Lincoln
+- [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
+- [ ] Hyundai — [ ] Kia — [ ] Genesis
+- [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
+- [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
+- [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
+- [ ] Subaru — [ ] Mazda — [ ] Volvo — [ ] Polestar — [ ] Land Rover — [ ] Jaguar
+- [ ] Tesla — [ ] Rivian — [ ] Lucid — [ ] VinFast — [ ] Ineos
+- [ ] Exotics (Ferrari, Lamborghini, McLaren, Bentley, Rolls-Royce, Aston Martin, Maserati, Lotus)
+
+## Exploring (unranked ideas — polish runs: promote, refine, or cut)
+
+- Personal ranking sliders ("what matters most to you") re-weighting all finders
+- A "surprise me" spin-the-wheel finder for fun discovery
+- Trim-level deep data (per-trim features matrices)
+- Lease/finance payment estimator
+- Side-by-side photo compare (exterior/interior galleries per vehicle)
+- i18n groundwork; unit toggles (metric)
+- PWA install nudge + richer offline caching of images
+- Capacitor wrapper notes for future mobile app store builds
+
+## Shipped
+
+- [x] v1 — Full 2026 catalog (326 models, 47 brands, manufacturer+brand+model),
+  three finders, garage/compare/notes, six themes, tour, docs, simple mode,
+  undo/history, settings with SQL export + data profiles + version switcher,
+  marketing site with SEO, hourly self-improvement loop with smoke battery.
+
+## Cadence expectations
+
+- Hourly feature runs (GitHub cron `23,53 * * * *`, concurrency-locked).
+- Every 5th run: polish/reflection sweep across app + marketing site.
+- Every run ends with the full smoke battery; failures block deploy.
+- Run history: `.github/cadence.log`.

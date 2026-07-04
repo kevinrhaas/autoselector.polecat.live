@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090d18"/>
+      <stop offset="1" stop-color="#101c38"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#77a4ff"/>
+      <stop offset="1" stop-color="#f0762f"/>
+    </linearGradient>
+    <radialGradient id="a1" cx="0.15" cy="0.1" r="0.6">
+      <stop offset="0" stop-color="#3e7bfa" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3e7bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="a2" cx="0.9" cy="0.9" r="0.7">
+      <stop offset="0" stop-color="#f0762f" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#f0762f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#a1)"/>
+  <rect width="1200" height="630" fill="url(#a2)"/>
+  <g transform="translate(92,96)">
+    <rect width="96" height="96" rx="24" fill="url(#g)"/>
+    <g fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(16,16) scale(2.7)">
+      <path d="M4 16v-3l1.6-4.2A1.8 1.8 0 0 1 7.3 7.5h9.4a1.8 1.8 0 0 1 1.7 1.3L20 13v3"/>
+      <path d="M4 13h16"/><circle cx="8" cy="16.5" r="1.7"/><circle cx="16" cy="16.5" r="1.7"/>
+    </g>
+    <text x="124" y="66" font-family="-apple-system,'Segoe UI',system-ui,sans-serif" font-size="46" font-weight="800" fill="#e9eff8">AutoSelector</text>
+    <text x="126" y="94" font-family="-apple-system,'Segoe UI',system-ui,sans-serif" font-size="21" font-weight="600" fill="#5a6b88">autoselector.polecat.live</text>
+  </g>
+  <text x="92" y="330" font-family="-apple-system,'Segoe UI',system-ui,sans-serif" font-size="88" font-weight="800" fill="#e9eff8" letter-spacing="-2">326 cars. 47 brands.</text>
+  <text x="92" y="430" font-family="-apple-system,'Segoe UI',system-ui,sans-serif" font-size="88" font-weight="800" fill="url(#g)" letter-spacing="-2">One is yours.</text>
+  <text x="92" y="512" font-family="-apple-system,'Segoe UI',system-ui,sans-serif" font-size="30" font-weight="500" fill="#94a5c1">Every 2026 US vehicle · fun finders · honest specs · free</text>
+</svg>
