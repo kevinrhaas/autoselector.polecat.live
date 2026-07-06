@@ -10,14 +10,39 @@ releases. If an item is smaller, bundle it with a data sweep.
 
 ## Next up (ordered)
 
+- [ ] **Sources for every stat** — every record gets a `sources` array of
+  precise, verified citations (manufacturer 2026 model page or pressroom,
+  fueleconomy.gov for EPA numbers, one major price guide). The 30 most
+  popular models shipped with sources; continue ~15 models per run until all
+  326 are cited. Be precise — deep URLs only, verified to be 2026-specific.
+- [ ] **Trim-level options** — different trims carry different options:
+  populate `trims[].features` (notable equipment each trim adds) brand by
+  brand during verification sweeps. UI already renders the column.
+- [ ] **Colors & swatches** — populate `colors.exterior[{name,hex}]` and
+  `colors.interior[{name,hex,tone:'dark'|'light'}]` per model from
+  manufacturer configurators; classify every interior as dark or light and
+  reconcile with `interior.lightInterior/darkInterior`. UI renders swatches.
+- [ ] **2026-photo audit + fill** — every photo must show the actual 2026
+  model-year generation. Audit the existing local photos, replace any
+  prior-generation shots, and keep adding missing models (current-gen only —
+  skip models whose only Commons photo is an old generation and note them).
+- [ ] **Real nearby-dealer lists** — beyond the Maps/locator links: verify
+  every brand's dealer-locator URL in `js/dealers.js` during brand sweeps;
+  explore free dealer APIs for true in-app closest-3 lists using the saved
+  ZIP/location.
+- [ ] **More fun, multi-select finders** — every new survey/selector must be
+  game-like and multi-select (nobody should feel forced into one box; see
+  Match Maker). Ideas: "Two cars enter" tournament, spin-the-wheel discovery,
+  emoji-reaction speed round ("swipe" left/right on 10 cars → taste profile).
+- [ ] **More interactive visuals** — animated market map (bubbles by
+  price/size that filter live), whittle-strip upgrades, seat-count pictogram
+  picker, animated price-range brush.
+
 - [ ] **Data sweep #1 + coverage audit** — verify the 3 `low` and the worst
   `medium` confidence records (start: Tesla Model S/X wind-down pricing, Ioniq
   6 N, Nexo, Dodge Hornet). Audit coverage against industry counts (~379
   models incl. variants — cars.com); document any intentional folds in
   docs/DATA.md, add genuinely missing nameplates.
-- [ ] **Local hero images for every model** — extend assets/vehicles/ beyond
-  the 75 popular models, ~30 vehicles per run via Wikimedia Commons (update
-  assets/credits.json + js/data/assets.js each time).
 - [ ] **Finder: "Two cars enter" tournament** — head-to-head bracket from a
   filtered pool; keep picking the one you like more until a winner emerges.
   Confetti at the end, winner straight into Garage.

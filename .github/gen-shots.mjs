@@ -86,10 +86,13 @@ const SEED = {
     // ---- hero carousel (desktop, no chrome) ----
     await shoot('hero-home', { url:'/app/#home' });
     await shoot('hero-matchmaker', { url:'/app/#matchmaker', prep: async p=>{
-      // two answers in: the counter has visibly shrunk and dots are fading
-      await p.evaluate(()=>[...document.querySelectorAll('.q-opt')].find(o=>/Haul the family/.test(o.textContent))?.click());
-      await p.waitForTimeout(500);
-      await p.evaluate(()=>[...document.querySelectorAll('.q-opt')].find(o=>/6, 7, 8/.test(o.textContent))?.click());
+      // show off multi-select: two picks on Q1 with the live preview line,
+      // then lock in so the counter + dots have visibly shrunk on Q2
+      await p.evaluate(()=>[...document.querySelectorAll('.q-opt')].find(o=>/Daily commute/.test(o.textContent))?.click());
+      await p.waitForTimeout(250);
+      await p.evaluate(()=>[...document.querySelectorAll('.q-opt')].find(o=>/Adventure & outdoors/.test(o.textContent))?.click());
+      await p.waitForTimeout(350);
+      await p.evaluate(()=>[...document.querySelectorAll('.finder-foot .btn.primary')].find(b=>/Lock it in/.test(b.textContent))?.click());
       await p.waitForTimeout(700);
     }});
     await shoot('hero-lifestyles', { url:'/app/#lifestyles', prep: async p=>{

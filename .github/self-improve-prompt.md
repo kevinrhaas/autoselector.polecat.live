@@ -55,6 +55,29 @@ meaningful, complete improvement this run.
 6. Leave the working tree committed-ready (the workflow commits and pushes to
    main, archives /v/<n>/, and deploys). Do NOT git push yourself.
 
+## Standing product rules (from the owner)
+
+- **Cite every stat, precisely.** Records carry a `sources` array
+  ({label,url,site}) with deep, verified, 2026-specific URLs (manufacturer
+  model page / pressroom, fueleconomy.gov, one price guide). Never guess a
+  URL; verify it resolves. Extend coverage ~15 models per run.
+- **Trims differ.** Options vary by trim — populate `trims[].features`
+  (notable equipment per trim) during brand sweeps; the UI renders it.
+- **Colors.** Populate `colors.exterior[{name,hex}]` and
+  `colors.interior[{name,hex,tone:'dark'|'light'}]` from manufacturer
+  configurators; every interior classified dark or light.
+- **2026 model year only.** All stats AND photos must depict the 2026 US
+  model-year vehicle (current generation/facelift). Replace any
+  older-generation photo; skip models whose only available photo is old-gen
+  and note it. The marketing site states this promise — keep it true.
+- **Finders are games, never forms.** New surveys/selectors must be fun and
+  MULTI-SELECT wherever multiple answers are natural (see Match Maker) — no
+  one should feel forced into a single box. Always include easy-going
+  options (e.g. the spare-tire question offers full-size, donut, AND repair
+  kit) and a "not sure / don't care" skip.
+- **Dealers.** Keep `js/dealers.js` locator URLs verified per brand sweep;
+  the home-ZIP / favorite-brands profile features build on it.
+
 ## Quality bar
 
 - Mobile is first-class: 390px wide must fit, paint, and scroll everywhere.

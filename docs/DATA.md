@@ -43,7 +43,11 @@ brands, from the Chevrolet Trax to the Ferrari F80. Conventions:
 | `physicalControls.climate/audio` | `physical_climate/physical_audio` | real knobs/buttons vs touchscreen-only |
 | `keyOptions[]` | `key_options` (JSON) | notable options/packages |
 | `towingLb` | `towing_lb` | max tow rating where meaningful |
-| `image.remote/credit` | `image_remote/image_credit` | good-res photo URL + credit |
+| `image.remote/credit` | `image_remote/image_credit` | good-res photo URL + credit (2026 model-year generation ONLY) |
+| `sources[]` | `sources` (JSON) | precise citations `{label,url,site}` backing the stats — manufacturer 2026 page/pressroom, fueleconomy.gov, price guide. Deep, verified URLs only. |
+| `trims[].features` | `trims.features` (JSON) | notable equipment each trim adds (options differ by trim — rolling out brand by brand) |
+| `colors.exterior[]` | `colors` (JSON) | `{name,hex}` factory exterior colors |
+| `colors.interior[]` | `colors` (JSON) | `{name,hex,tone:'dark'\|'light'}` — every interior classified dark or light |
 | `confidence` | `confidence` | high · medium · low (record-level honesty) |
 | `notes` | `notes` | provenance, caveats, discontinuations |
 
