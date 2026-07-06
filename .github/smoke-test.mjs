@@ -54,8 +54,27 @@ async function checkPage(browser, url, mustFind, label){
   const browser = await chromium.launch();
   let code = 0;
   try{
-    // 1) marketing page
+    // 1) marketing page — and its hero carousel must have ≥5 live slides
     await checkPage(browser, `http://localhost:${PORT}/`, '.hero h1', 'marketing');
+    {
+      const mpage = await browser.newPage();
+      await mpage.goto(`http://localhost:${PORT}/`, { waitUntil:'networkidle', timeout:20000 });
+      await mpage.waitForTimeout(600);
+      const hc = await mpage.evaluate(()=>{
+        const root = document.getElementById('hero-carousel');
+        if(!root) return { err:'no #hero-carousel' };
+        const slides = root.querySelectorAll('.hc-slide').length;
+        const visible = root.querySelector('.hc-slide.on img');
+        const capped = !!document.getElementById('hc-title')?.textContent;
+        return { slides, hasVisible: !!visible && visible.naturalWidth>0, capped };
+      });
+      await mpage.close();
+      if(hc.err) throw new Error(`hero carousel: ${hc.err}`);
+      if(hc.slides < 5) throw new Error(`hero carousel: only ${hc.slides} slides (need ≥5)`);
+      if(!hc.hasVisible) throw new Error('hero carousel: active slide image failed to load');
+      if(!hc.capped) throw new Error('hero carousel: caption did not populate');
+      console.log(`✓ hero carousel: ${hc.slides} slides, image loaded, caption live`);
+    }
     // 2) the app — open access, rail must render
     await checkPage(browser, `http://localhost:${PORT}/app/`, '#rail .rail-item', 'app');
 

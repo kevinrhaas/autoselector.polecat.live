@@ -127,51 +127,74 @@
         </div>
       </div>
 
-      <!-- real app screenshot in a browser frame -->
-      <div class="shot reveal">
-        <div class="bar"><i></i><i></i><i></i><span class="url">autoselector.polecat.live/app</span></div>
-        <img class="shot-img" src="/assets/shots/home.png" width="1950" height="1260"
-             alt="The AutoSelector home screen — favorites, finders, and the full 2026 catalog at a glance"
-             loading="eager"/>
+      <!-- HERO: auto-rotating carousel of real, chrome-less app screenshots.
+           Each slide explains one superpower while looking gorgeous. -->
+      <div class="hero-carousel reveal" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="AutoSelector screenshots">
+        <div class="hc-progress" aria-hidden="true"></div>
+        <div class="hc-slide" data-title="Your home base"
+             data-cap="Favorites, recents, saved searches and live market stats — with every finder one tap away.">
+          <img src="/assets/shots/hero-home.png" alt="AutoSelector home: favorites, recents, quick actions and market stats" loading="eager"/></div>
+        <div class="hc-slide" data-title="Match Maker — watch 326 cars become yours"
+             data-cap="Friendly questions, a live counter, and a field of dots fading away as the market whittles down. “Not sure” is always an answer.">
+          <img src="/assets/shots/hero-matchmaker.png" alt="Match Maker mid-quiz with the live counter shrinking" loading="lazy"/></div>
+        <div class="hc-slide" data-title="Lifestyles — ranked for the driver you are"
+             data-cap="Pick a persona (first car, growing family, weekend adventurer…) and every 2026 vehicle gets scored and ranked for that life.">
+          <img src="/assets/shots/hero-lifestyles.png" alt="Lifestyles persona results ranked by fit" loading="lazy"/></div>
+        <div class="hc-slide" data-title="Filters other sites don’t have"
+             data-cap="Hybrid SUVs with real climate knobs? One tap each. Full-size spare, physical audio controls, light interiors — the living-with-it details, filterable.">
+          <img src="/assets/shots/hero-browse.png" alt="All Vehicles with hybrid, SUV and climate-knob filters active" loading="lazy"/></div>
+        <div class="hc-slide" data-title="The full story on every vehicle"
+             data-cap="Price and trims, powertrains, dimensions, cargo, the spare tire — plus honest confidence notes and your own private note box.">
+          <img src="/assets/shots/hero-vehicle.png" alt="A vehicle detail page with complete specifications" loading="lazy"/></div>
+        <div class="hc-slide" data-title="Compare up to four, best numbers glow"
+             data-cap="Line your finalists up side by side — the best price, power, MPG and cargo in each row light up green.">
+          <img src="/assets/shots/hero-compare.png" alt="Four sedans compared side by side with best values highlighted" loading="lazy"/></div>
+        <div class="hc-slide" data-title="Budget Explorer — slide the money"
+             data-cap="Drag the price slider and watch the market respond in real time, with seats, efficiency and powertrain toggles.">
+          <img src="/assets/shots/hero-budget.png" alt="Budget Explorer with live sliders and matching vehicles" loading="lazy"/></div>
+        <button class="hc-arrow prev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6-6 6 6 6"/></svg></button>
+        <button class="hc-arrow next" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 6 6 6-6 6"/></svg></button>
+        <div class="hc-cap"><h3 id="hc-title"></h3><p id="hc-text"></p></div>
+        <div class="hc-dots" id="hc-dots" role="tablist" aria-label="Choose screenshot"></div>
       </div>
     </section>
 
     <!-- finders -->
-    <section id="finders" class="band">
+    <section id="finders">
       <div class="wrap">
         <div class="sec-head reveal">
           <span class="kick">Three ways in</span>
           <h2>Finding a car should be <span class="g">the fun part</span></h2>
           <p>No 40-field filter walls. Pick the finder that matches your mood — they all end at the same place: a shortlist you actually love.</p>
         </div>
-        <div class="grid">
+        <div class="grid f3">
           <div class="card reveal">
-            <span class="ic" style="color:#77a4ff"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-target"/></svg></span>
+            <span class="ic" style="background:linear-gradient(135deg,#3e7bfa,#77a4ff)"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-target"/></svg></span>
             <h3>Match Maker</h3>
             <p>Answer friendly questions — budget, people, buttons-vs-screens, snow — and watch a live counter whittle 326 cars down to a handful. "Not sure" is always an answer.</p>
           </div>
           <div class="card reveal">
-            <span class="ic" style="color:#f0762f"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-users"/></svg></span>
+            <span class="ic" style="background:linear-gradient(135deg,#f0762f,#f6a06b)"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-users"/></svg></span>
             <h3>Lifestyles</h3>
             <p>First car? Growing family? Comfort &amp; confidence? Weekend adventurer? Pick the driver you are and every vehicle gets ranked for that life — with reasons.</p>
           </div>
           <div class="card reveal">
-            <span class="ic" style="color:#1fb8a5"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-chart"/></svg></span>
+            <span class="ic" style="background:linear-gradient(135deg,#1fb8a5,#5fd6c8)"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-chart"/></svg></span>
             <h3>Budget Explorer</h3>
             <p>Slide the money and watch the market respond in real time. Add seats, efficiency and powertrain toggles, then hand your result to the full filter grid.</p>
           </div>
           <div class="card reveal">
-            <span class="ic" style="color:#77a4ff"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-wheel"/></svg></span>
+            <span class="ic" style="background:linear-gradient(135deg,#5b8cfb,#8fb2ff)"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-wheel"/></svg></span>
             <h3>The details that matter</h3>
             <p>Filter by full-size spare, physical climate and audio controls, light or dark interiors, ground clearance, towing — the living-with-it stuff other sites bury.</p>
           </div>
           <div class="card reveal">
-            <span class="ic" style="color:#f0762f"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-compare"/></svg></span>
+            <span class="ic" style="background:linear-gradient(135deg,#e0662a,#f0925c)"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-compare"/></svg></span>
             <h3>Compare &amp; Garage</h3>
             <p>Heart your contenders, add private notes, and line up four side-by-side — best numbers glow green. Undo anything with ⌘Z.</p>
           </div>
           <div class="card reveal">
-            <span class="ic" style="color:#1fb8a5"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-shield"/></svg></span>
+            <span class="ic" style="background:linear-gradient(135deg,#17a08f,#3ecbb8)"><svg width="26" height="26" viewBox="0 0 24 24"><use href="#i-shield"/></svg></span>
             <h3>Honest data</h3>
             <p>Every record carries a confidence flag and provenance notes. Pre-release estimates say so, right on the page — no silent guesses.</p>
           </div>
@@ -180,36 +203,12 @@
     </section>
 
     <!-- screenshots carousel -->
-    <section id="showcase" class="showcase band">
+    <section id="showcase" class="showcase">
       <div class="wrap">
         <div class="sec-head reveal">
-          <span class="kick">See it</span>
-          <h2>Designed to be <span class="g">a joy</span></h2>
-          <p>Six themes — AutoSelector or Polecat house style, each in dark and light. Gorgeous on a desktop, delightful on a phone.</p>
-        </div>
-        <div class="sc-tabs reveal" role="tablist" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">
-          <button class="sc-tab" role="tab">Home</button>
-          <button class="sc-tab" role="tab">Match Maker</button>
-          <button class="sc-tab" role="tab">All Vehicles</button>
-          <button class="sc-tab" role="tab">Vehicle page</button>
-          <button class="sc-tab" role="tab">Compare</button>
-        </div>
-        <div class="sc-carousel reveal">
-          <button class="sc-arrow" id="sc-prev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 6-6 6 6 6"/></svg></button>
-          <div class="sc-stage">
-            <div class="shot">
-              <div class="bar"><i></i><i></i><i></i><span class="url" id="sc-url">autoselector.polecat.live/app</span></div>
-              <div class="sc-frames">
-                <img class="sc-img" src="/assets/shots/home.png" alt="Home: favorites, recents and quick actions" data-cap="Your favorites, recents and every finder, one tap away." data-url="/app — Home"/>
-                <img class="sc-img" src="/assets/shots/matchmaker.png" alt="Match Maker question flow with a live shrinking counter" data-cap="Watch 326 cars melt down to yours, one friendly question at a time." data-url="/app — Match Maker" loading="lazy"/>
-                <img class="sc-img" src="/assets/shots/browse.png" alt="The full 2026 catalog with practical filters" data-cap="The whole 2026 market, with filters for the details that matter." data-url="/app — All Vehicles" loading="lazy"/>
-                <img class="sc-img" src="/assets/shots/vehicle.png" alt="A vehicle detail page with full specifications" data-cap="Price, powertrains, dimensions, the spare tire — the full story." data-url="/app — Vehicle" loading="lazy"/>
-                <img class="sc-img" src="/assets/shots/compare.png" alt="Four vehicles side by side with best values highlighted" data-cap="Up to four, side by side. Best numbers glow." data-url="/app — Compare" loading="lazy"/>
-              </div>
-            </div>
-            <p class="sc-cap" id="sc-cap"></p>
-          </div>
-          <button class="sc-arrow" id="sc-next" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10 6 6 6-6 6"/></svg></button>
+          <span class="kick">Take it anywhere</span>
+          <h2>Delightful <span class="g">on your phone</span> too</h2>
+          <p>The full experience — finders, garage, compare — fits beautifully in one hand. Six themes: AutoSelector or Polecat house style, each in dark and light.</p>
         </div>
         <div class="phones reveal">
           <div class="phone"><div class="dev"><img src="/assets/shots/mobile-home.png" alt="AutoSelector home on a phone" loading="lazy"/></div><span>Home</span></div>
@@ -220,14 +219,14 @@
     </section>
 
     <!-- data -->
-    <section id="data" class="band">
+    <section id="data">
       <div class="wrap">
         <div class="sec-head reveal">
           <span class="kick">The catalog</span>
           <h2>Every 2026 vehicle. <span class="g">Actually every one.</span></h2>
           <p>From the $20k Chevy Trax to the $3.1M Ferrari F80 — compiled from manufacturer announcements and price guides, and re-verified continuously by an automated improvement loop.</p>
         </div>
-        <div class="grid">
+        <div class="grid f4">
           <div class="card reveal"><h3>326</h3><p>models on sale in the US for 2026 — cars, SUVs, trucks, vans, EVs, exotics.</p></div>
           <div class="card reveal"><h3>47</h3><p>brands with parent manufacturers, logos, and good-resolution photos.</p></div>
           <div class="card reveal"><h3>20+</h3><p>attributes per vehicle: trims &amp; MSRPs, powertrains, MPG/range, dimensions, cargo, seats, spare tire, physical controls, interior colors, options.</p></div>
@@ -237,23 +236,23 @@
     </section>
 
     <!-- how it works -->
-    <section id="how" class="band">
+    <section id="how">
       <div class="wrap">
         <div class="sec-head reveal">
           <span class="kick">How it works</span>
           <h2>Three steps to <span class="g">your car</span></h2>
         </div>
         <div class="steps">
-          <div class="step reveal"><span class="n">1</span><h3>Pick a finder</h3><p>Match Maker for guided questions, Lifestyles for instant persona shortlists, Budget Explorer for the money-first view.</p></div>
-          <div class="step reveal"><span class="n">2</span><h3>Heart your contenders</h3><p>Favorites land in your Garage with private notes. Everything is undoable, and it all stays on your device.</p></div>
-          <div class="step reveal"><span class="n">3</span><h3>Compare and decide</h3><p>Four side-by-side, best values highlighted. Copy a link to any car to share it.</p></div>
+          <div class="step reveal"><span class="n"></span><h3>Pick a finder</h3><p>Match Maker for guided questions, Lifestyles for instant persona shortlists, Budget Explorer for the money-first view.</p></div>
+          <div class="step reveal"><span class="n"></span><h3>Heart your contenders</h3><p>Favorites land in your Garage with private notes. Everything is undoable, and it all stays on your device.</p></div>
+          <div class="step reveal"><span class="n"></span><h3>Compare and decide</h3><p>Four side-by-side, best values highlighted. Copy a link to any car to share it.</p></div>
         </div>
         <p class="note reveal">New here? The app opens with a 60-second welcome tour, has full built-in documentation, and a Simple mode for calmer screens. It improves itself every hour — check <a class="tl" href="/js/changelog.js">what's new</a> and <a class="tl" href="/js/whatsnext.js">what's next</a>.</p>
       </div>
     </section>
 
     <!-- final CTA -->
-    <section class="final band">
+    <section class="final">
       <div class="wrap reveal">
         <h2>Your 2026 car is in here. <span class="g">Go find it.</span></h2>
         <div class="hero-cta" style="justify-content:center">
@@ -269,7 +268,6 @@
       <nav class="foot-links">
         <a href="/app/">App</a>
         <a href="/app/#docs">Docs</a>
-        <a href="https://github.com/kevinrhaas/autoselector.polecat.live">GitHub</a>
       </nav>
     </div>
   </footer>
@@ -281,23 +279,68 @@
     // reveal-on-scroll
     const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
     document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
-    // screenshot carousel — stacked images cross-fade via the .on class
-    const tabs=[...document.querySelectorAll('.sc-tab')], imgs=[...document.querySelectorAll('.sc-img')];
-    const cap=document.getElementById('sc-cap'), urlEl=document.getElementById('sc-url');
-    let idx=0, timer;
-    function go(i){ idx=(i+imgs.length)%imgs.length;
-      imgs.forEach((im,k)=>im.classList.toggle('on',k===idx));
-      tabs.forEach((t,k)=>t.classList.toggle('on',k===idx));
-      cap.textContent = imgs[idx].dataset.cap||''; urlEl.textContent = imgs[idx].dataset.url||''; }
-    tabs.forEach((t,i)=>t.addEventListener('click', ()=>{ go(i); restart(); }));
-    document.getElementById('sc-prev').addEventListener('click', ()=>{ go(idx-1); restart(); });
-    document.getElementById('sc-next').addEventListener('click', ()=>{ go(idx+1); restart(); });
-    function rotate(){ timer=setInterval(()=>go(idx+1), 5000); }
-    function restart(){ clearInterval(timer); rotate(); }
-    go(0); if(!matchMedia('(prefers-reduced-motion: reduce)').matches) rotate();
-    // graceful fallback while the first real captures are generating
-    document.querySelectorAll('img.shot-img, .phone img').forEach(img=>{
-      img.addEventListener('error', ()=>{ const f=img.closest('.shot,.phone'); if(f) f.style.display='none'; });
+    // HERO carousel — cross-fading chrome-less screenshots with caption,
+    // arrows, dots, a progress bar, and pause-on-hover. Respects
+    // prefers-reduced-motion (no auto-advance).
+    (function(){
+      const root = document.getElementById('hero-carousel');
+      const slides = [...root.querySelectorAll('.hc-slide')];
+      const title = document.getElementById('hc-title'), text = document.getElementById('hc-text');
+      const dots = document.getElementById('hc-dots');
+      const bar = root.querySelector('.hc-progress');
+      const HOLD = 6000; // ms per slide
+      let idx = 0, timer = null, t0 = 0, paused = false;
+
+      slides.forEach((s,i)=>{
+        const b = document.createElement('button');
+        b.setAttribute('role','tab'); b.setAttribute('aria-label', s.dataset.title||('Screenshot '+(i+1)));
+        b.appendChild(document.createElement('i'));
+        b.addEventListener('click', ()=>{ go(i); reset(); });
+        dots.appendChild(b);
+        // if a capture is missing (first deploy), drop that slide gracefully
+        s.querySelector('img').addEventListener('error', ()=>{
+          s.remove(); b.remove();
+          const k = slides.indexOf(s); if(k>=0) slides.splice(k,1);
+          if(!slides.length) root.style.display='none'; else go(0);
+        });
+      });
+
+      function go(i){
+        if(!slides.length) return;
+        idx = (i+slides.length)%slides.length;
+        slides.forEach((s,k)=>s.classList.toggle('on', k===idx));
+        [...dots.children].forEach((d,k)=>d.classList.toggle('on', k===idx));
+        title.textContent = slides[idx].dataset.title||'';
+        text.textContent = slides[idx].dataset.cap||'';
+        t0 = performance.now();
+      }
+      root.querySelector('.hc-arrow.prev').addEventListener('click', ()=>{ go(idx-1); reset(); });
+      root.querySelector('.hc-arrow.next').addEventListener('click', ()=>{ go(idx+1); reset(); });
+      root.addEventListener('mouseenter', ()=>paused=true);
+      root.addEventListener('mouseleave', ()=>paused=false);
+      root.addEventListener('focusin',   ()=>paused=true);
+      root.addEventListener('focusout',  ()=>paused=false);
+      document.addEventListener('keydown', e=>{
+        if(e.key==='ArrowLeft'  && root.matches(':hover')){ go(idx-1); reset(); }
+        if(e.key==='ArrowRight' && root.matches(':hover')){ go(idx+1); reset(); }
+      });
+
+      const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function tick(now){
+        if(!still && !paused){
+          const el = now - t0;
+          bar.style.width = Math.min(100, el/HOLD*100) + '%';
+          if(el >= HOLD) go(idx+1);
+        } else { bar.style.width = '0%'; if(paused) t0 = now; }
+        timer = requestAnimationFrame(tick);
+      }
+      function reset(){ t0 = performance.now(); }
+      go(0); timer = requestAnimationFrame(tick);
+    })();
+
+    // graceful fallback for the phone gallery while captures regenerate
+    document.querySelectorAll('.phone img').forEach(img=>{
+      img.addEventListener('error', ()=>{ const f=img.closest('.phone'); if(f) f.style.display='none'; });
     });
   </script>
 </body>
