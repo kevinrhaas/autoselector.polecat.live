@@ -23,9 +23,13 @@ releases. If an item is smaller, bundle it with a data sweep.
   manufacturer configurators; classify every interior as dark or light and
   reconcile with `interior.lightInterior/darkInterior`. UI renders swatches.
 - [ ] **2026-photo audit + fill** — every photo must show the actual 2026
-  model-year generation. Audit the existing local photos, replace any
-  prior-generation shots, and keep adding missing models (current-gen only —
-  skip models whose only Commons photo is an old generation and note them).
+  model-year generation. 120 of 326 models now have local photos. Audit the
+  existing shots, replace any prior-generation ones, and keep adding missing
+  models (current-gen only — skip models whose only Commons photo is an old
+  generation and note them; acura-rdx is a known skip). A vetted, ready-to-run
+  next batch (gmc-canyon, ford-ranger, ford-expedition, bronco-sport,
+  jeep-compass, dodge-durango, bmw-x3, mercedes-benz-c-class, lexus-nx/gx/tx)
+  is in `.github/next-photo-batch.py`.
 - [ ] **Real nearby-dealer lists** — beyond the Maps/locator links: verify
   every brand's dealer-locator URL in `js/dealers.js` during brand sweeps;
   explore free dealer APIs for true in-app closest-3 lists using the saved
