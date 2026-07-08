@@ -1,11 +1,12 @@
-// stamp-changelog.mjs — stamp ship time onto the newest changelog entry and
-// regenerate every entry's human `date` from its `ts`.
+// stamp-changelog.mjs — stamp the real ship time onto the newest changelog
+// entry.
 //
 // The self-improvement loop prepends a new CHANGELOG entry with an EMPTY `ts`
-// (`ts: ''`). This script fills that first empty `ts` with the real deploy time
-// so dates reflect when a change actually shipped and can't be fabricated. It
-// then rewrites every `date:` to a Central Time alias derived from that entry's
-// `ts`, keeping the fleet-standard shape ({v, title, ts, date, items}).
+// (`ts: ''`). This script fills that first empty `ts` with the real deploy
+// time so timestamps reflect when a change actually shipped and can't be
+// fabricated. `ts` is ISO-8601 UTC; the in-app panel formats it to Central
+// Time at render (js/whatsnew.js), so there is no `date` field to maintain —
+// js/changelog.js is a pure-data module that sibling apps fetch and parse.
 //
 // Run from CI right before the smoke test whenever js/changelog.js changed.
 import { readFile, writeFile } from 'node:fs/promises';
@@ -13,22 +14,11 @@ import { readFile, writeFile } from 'node:fs/promises';
 const FILE = 'js/changelog.js';
 const nowIso = new Date().toISOString();
 
-function ctAlias(iso){
-  const d = new Date(iso);
-  if(isNaN(d)) return '';
-  return d.toLocaleString('en-US',{ timeZone:'America/Chicago', month:'short',
-    day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit' }) + ' CT';
-}
-
 let src = await readFile(FILE, 'utf8');
 
-// 1) Fill the first empty ts (newest entry sits at the top of the array).
+// Fill the first empty ts (newest entry sits at the top of the array).
 let stamped = false;
 src = src.replace(/ts:\s*(['"])\1/, () => { stamped = true; return `ts: '${nowIso}'`; });
 
-// 2) Regenerate every `date:` from the ts on the same entry.
-src = src.replace(/ts:\s*'([^']*)'(\s*,\s*)date:\s*'[^']*'/g,
-  (_, iso, sep) => `ts: '${iso}'${sep}date: '${ctAlias(iso)}'`);
-
 await writeFile(FILE, src);
-console.log(stamped ? `Stamped newest changelog entry: ${nowIso}` : 'No empty changelog timestamp to stamp; dates refreshed.');
+console.log(stamped ? `Stamped newest changelog entry: ${nowIso}` : 'No empty changelog timestamp to stamp.');

@@ -44,8 +44,11 @@ meaningful, complete improvement this run.
    when every brand is done).
 4. Update in lock-step with any user-visible change:
    - `js/changelog.js`: prepend an entry — bump `v` by 1, `ts: ''` (CI stamps
-     it), 1–4 plain-English `items`. This powers "What's new" and the fleet
-     changelog URL.
+     it), optional `kind`, 1–4 plain-English `items`. Entry shape is exactly
+     `{v, title, kind?, ts, items}` (NO `date`). This file is PURE DATA — no
+     imports, no functions, nothing but the header comment and the array —
+     because sibling apps (manager, relay) fetch and parse it. The "What's
+     new" UI lives in js/whatsnew.js; never add code to changelog.js.
    - `js/whatsnext.js`: keep it matching the top of ROADMAP.md (it's public).
    - `ROADMAP.md`: check off shipped items, add discoveries.
    - In-app docs (js/views/docs.js) and the tour if flows changed.

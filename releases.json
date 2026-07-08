@@ -1,5 +1,11 @@
 [
   {
+    "v": 7,
+    "title": "Changelog now syncs cleanly to the rest of the fleet",
+    "date": "Jul 8, 2026, 3:05 PM CT",
+    "path": "/v/7/app/"
+  },
+  {
     "v": 6,
     "title": "Toyota data sweep: sources, trims & colors for all 24 models",
     "date": "Jul 8, 2026, 10:21 AM CT",

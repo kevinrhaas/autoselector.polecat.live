@@ -79,7 +79,11 @@ if(import.meta.url === `file://${process.argv[1]}`){
   const src = await readFile('js/changelog.js', 'utf8');
   const v     = Number((src.match(/v:\s*(\d+)/) || [])[1] || 0);
   const title = (src.match(/title:\s*'([^']*)'/) || [])[1] || '';
-  const date  = (src.match(/date:\s*'([^']*)'/)  || [])[1] || '';
+  // changelog.js is pure data (ts only, no `date`) — derive a human Central
+  // Time label for releases.json from the newest entry's ts.
+  const ts    = (src.match(/ts:\s*'([^']*)'/) || [])[1] || '';
+  const date  = ts ? new Date(ts).toLocaleString('en-US',{ timeZone:'America/Chicago',
+    month:'short', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit' }) + ' CT' : '';
   if(!v){ console.log('archive-release: no version found, skipping'); process.exit(0); }
 
   const dir = `v/${v}`;
