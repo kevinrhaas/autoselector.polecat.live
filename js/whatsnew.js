@@ -4,6 +4,7 @@
 // apps fetch and parse — see the note there). All UI for it lives HERE so the
 // data file stays import-free and parseable everywhere.
 import { CHANGELOG } from './changelog.js';
+import { WHATSNEXT } from './whatsnext.js';
 import { el, modal, fmtDateTime } from './ui.js';
 import { icon } from './icons.js';
 
@@ -36,4 +37,22 @@ export function openWhatsNew(){
     body.append(el('div',{style:'padding:12px 0;border-bottom:1px solid var(--border)'},[head, ul]));
   });
   return modal({ title:"What's new", icon:icon('sparkle',20), body, wide:true });
+}
+
+// ---- "What's next" panel (renders the pure-data js/whatsnext.js roadmap) ----
+export function openWhatsNext(){
+  const LBL = { next:'Up next', planned:'Planned', exploring:'Exploring' };
+  const body = el('div');
+  ['next','planned','exploring'].forEach(st=>{
+    const items = WHATSNEXT.filter(w=>w.status===st);
+    if(!items.length) return;
+    body.append(el('div',{class:'sc-group-title muted tiny', text:LBL[st]}));
+    items.forEach(w=>{
+      body.append(el('div',{style:'padding:10px 0;border-bottom:1px solid var(--border)'},[
+        el('b',{text:w.title}),
+        el('div',{class:'muted', style:'font-size:13px;margin-top:3px', text:w.detail}),
+      ]));
+    });
+  });
+  return modal({ title:"What's next", icon:icon('road',20), body, wide:true });
 }

@@ -1,23 +1,22 @@
 // Changelog powering the in-app "What's new" panel. Newest first.
 //
 // Fleet convention (shared with relay / manager / jobtracker / the polecat
-// family): every project publishes its release history as a `CHANGELOG`
-// array exported from `js/changelog.js`, so any app's "Sync changelog" can
-// fetch it — e.g. https://autoselector.polecat.live/js/changelog.js
-// Each entry:
-//   { v:int, title, kind?, ts, items:[…] }   (newest first)
+// family): every project publishes its release history as a changelog array
+// exported from js/changelog.js, so any app's "Sync changelog" can fetch it.
+// Each entry has: v (int), title, kind (optional), ts, items.
 //
-// IMPORTANT: this file is PURE DATA — no imports, no UI code, nothing but the
-// header comment and the `export const CHANGELOG` array. Sibling apps
-// (manager, relay) fetch and evaluate it as a standalone module, so anything
-// else here (an `import`, a helper function) breaks their parser. The
-// "What's new" UI lives in js/whatsnew.js and imports this array.
+// IMPORTANT — TWO RULES so sibling apps can fetch and parse this file:
+//   1. Keep it PURE DATA. No imports, no functions, nothing but this header
+//      and the export below. The "What's new" UI lives in js/whatsnew.js.
+//   2. Keep the header comment free of the literal export token and of any
+//      "[" bracket. Naive parsers locate the array by finding that token then
+//      the next "[" — a bracketed example up here would trap them.
 //
 // The self-improvement loop prepends a new entry at the TOP for each
-// user-visible change (bump `v` by 1, short `title`, optional `kind`, 1–4
-// `items`). Leave `ts` as an EMPTY string on the new entry — the workflow
-// stamps it with the real commit time so timestamps are never fabricated.
-// `ts` is ISO-8601 UTC; the panel formats it to Central Time (shown as CT).
+// user-visible change (bump v by 1, short title, optional kind, 1-4 items).
+// Leave ts as an EMPTY string on the new entry — the workflow stamps it with
+// the real commit time so timestamps are never fabricated. ts is ISO-8601
+// UTC; the panel formats it to Central Time (shown as CT).
 
 export const CHANGELOG = [
   {

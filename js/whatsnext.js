@@ -1,14 +1,14 @@
 // What's-next: the public, machine-readable slice of the roadmap. Newest
-// planning first. Fleet convention (like relay's
-// https://relay.polecat.live/js/whatsnext.js): every project exports a
-// `WHATSNEXT` array from js/whatsnext.js so people — and sibling apps — can
-// see what's coming, e.g. https://autoselector.polecat.live/js/whatsnext.js
+// planning first. Fleet convention (like relay's whatsnext feed): every
+// project exports a whatsnext array from js/whatsnext.js so people — and
+// sibling apps — can see what's coming.
+// Each entry: status ('next' | 'planned' | 'exploring'), title, detail.
 //
-// The self-improvement loop keeps this in sync with ROADMAP.md: when an item
-// ships it moves into js/changelog.js; when planning changes, edit here.
-// Each entry: { title, detail, status:'next'|'planned'|'exploring', eta? }
-import { el, modal } from './ui.js';
-import { icon } from './icons.js';
+// PURE DATA — no imports, no functions, and no "[" bracket in this header
+// (naive fetchers find the array by the export token then the next "["). The
+// UI that renders this lives in js/whatsnew.js. The self-improvement loop
+// keeps this in sync with ROADMAP.md; when an item ships it moves into
+// js/changelog.js.
 
 export const WHATSNEXT = [
   { status:'next', title:'Sources for every stat',
@@ -34,20 +34,3 @@ export const WHATSNEXT = [
   { status:'exploring', title:'EPA + NHTSA live data hooks',
     detail:'Pull fuel economy and safety ratings straight from public APIs where CORS allows.' },
 ];
-
-export function openWhatsNext(){
-  const LBL = { next:'Up next', planned:'Planned', exploring:'Exploring' };
-  const body = el('div');
-  ['next','planned','exploring'].forEach(st=>{
-    const items = WHATSNEXT.filter(w=>w.status===st);
-    if(!items.length) return;
-    body.append(el('div',{class:'sc-group-title muted tiny', text:LBL[st]}));
-    items.forEach(w=>{
-      body.append(el('div',{style:'padding:10px 0;border-bottom:1px solid var(--border)'},[
-        el('b',{text:w.title}),
-        el('div',{class:'muted', style:'font-size:13px;margin-top:3px', text:w.detail}),
-      ]));
-    });
-  });
-  return modal({ title:"What's next", icon:icon('road',20), body, wide:true });
-}

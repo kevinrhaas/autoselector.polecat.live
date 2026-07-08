@@ -4,7 +4,7 @@ import { el, relTime, escapeHtml } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { vtileGrid, emptyState, money } from './shared.js';
-import { openWhatsNext } from '../whatsnext.js';
+import { openWhatsNext } from '../whatsnew.js';
 
 export function renderHome(view, ctx){
   const all = Store.vehicles();

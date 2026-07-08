@@ -4,8 +4,7 @@ import { el } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { startTour } from '../tour.js';
-import { openWhatsNext } from '../whatsnext.js';
-import { openWhatsNew } from '../whatsnew.js';
+import { openWhatsNext, openWhatsNew } from '../whatsnew.js';
 
 const SECTIONS = [
   { id:'start', icon:'rocket', title:'Getting started', body:[
