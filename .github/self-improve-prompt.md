@@ -77,6 +77,13 @@ meaningful, complete improvement this run.
   kit) and a "not sure / don't care" skip.
 - **Dealers.** Keep `js/dealers.js` locator URLs verified per brand sweep;
   the home-ZIP / favorite-brands profile features build on it.
+- **Independent, and gently say so.** AutoSelector is totally free: no ads,
+  no sponsors, no affiliate links, no agenda — no brand pays for placement
+  and finders rank on facts alone. Keep this PRESENT but UNDERSTATED on the
+  public site (a trust chip, one quiet line, the FAQ — as today). Never turn
+  it into a banner or repeat it all over the page, and never add anything
+  (affiliate links, sponsored placements, tracking) that would make it
+  untrue.
 
 ## Quality bar
 
