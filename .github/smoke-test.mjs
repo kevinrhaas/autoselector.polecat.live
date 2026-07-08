@@ -54,6 +54,12 @@ async function checkPage(browser, url, mustFind, label){
   const browser = await chromium.launch();
   let code = 0;
   try{
+    // 0) fleet-sync guard: our changelog/whatsnext must parse with manager's
+    //    exact parser (see .github/check-changelog.mjs). Fail fast if not.
+    {
+      const { execSync } = await import('node:child_process');
+      execSync('node .github/check-changelog.mjs', { stdio:'inherit' });
+    }
     // 1) marketing page — and its hero carousel must have ≥5 live slides
     await checkPage(browser, `http://localhost:${PORT}/`, '.hero h1', 'marketing');
     {

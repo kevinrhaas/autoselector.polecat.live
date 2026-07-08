@@ -25,8 +25,9 @@ export const CHANGELOG = [
     kind: 'fix',
     ts: '2026-07-08T20:05:14.461Z',
     items: [
-      'js/changelog.js is now a pure-data module — just the release array, no imports or UI code — matching the manager/relay format, so sibling apps can fetch and parse our changelog again.',
-      'The "What\'s new" panel moved to js/whatsnew.js and now formats each entry\'s timestamp to Central Time at display, so the data file carries only the ISO `ts` (no derived date to drift).',
+      'Fixed the reason manager could not import our changelog — a title with a comma-word-colon phrase tripped its key-quoting parser. Reworded it and added a guard (check-changelog.mjs) that runs manager\'s exact parser in our smoke test, so it can never regress.',
+      'js/changelog.js and js/whatsnext.js are now pure-data modules — just the arrays, no imports or UI code — matching the manager/relay format.',
+      'The "What\'s new" and "What\'s next" panels moved to js/whatsnew.js and format each timestamp to Central Time at display, so the data files carry only the ISO ts.',
     ],
   },
   {
@@ -43,7 +44,7 @@ export const CHANGELOG = [
   },
   {
     v: 5,
-    title: 'Saying the quiet part, quietly: free and unbiased',
+    title: 'Free and unbiased — said quietly',
     kind: 'polish',
     ts: '2026-07-08T13:47:13.782Z',
     items: [

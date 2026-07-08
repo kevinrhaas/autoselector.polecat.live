@@ -49,6 +49,11 @@ meaningful, complete improvement this run.
      imports, no functions, nothing but the header comment and the array —
      because sibling apps (manager, relay) fetch and parse it. The "What's
      new" UI lives in js/whatsnew.js; never add code to changelog.js.
+     AVOID a `, word:` or `{ word:` pattern INSIDE any title/item string
+     (a comma or brace, then a single word, then a colon) — manager's
+     changelog parser mistakes it for an object key and corrupts the JSON.
+     Use an em dash or rephrase (write "quietly — free", not "quietly: free").
+     `node .github/check-changelog.mjs` enforces this and runs in the smoke test.
    - `js/whatsnext.js`: keep it matching the top of ROADMAP.md (it's public).
    - `ROADMAP.md`: check off shipped items, add discoveries.
    - In-app docs (js/views/docs.js) and the tour if flows changed.
