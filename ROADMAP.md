@@ -12,9 +12,10 @@ releases. If an item is smaller, bundle it with a data sweep.
 
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
-  fueleconomy.gov for EPA numbers, one major price guide). The 30 most
-  popular models shipped with sources; continue ~15 models per run until all
-  326 are cited. Be precise — deep URLs only, verified to be 2026-specific.
+  fueleconomy.gov for EPA numbers, one major price guide). 49 of 326 models
+  now have sources (all 24 Toyota models, plus the original 30 minus overlap);
+  continue ~15 models per run until all 326 are cited. Be precise — deep URLs
+  only, verified to be 2026-specific.
 - [ ] **Trim-level options** — different trims carry different options:
   populate `trims[].features` (notable equipment each trim adds) brand by
   brand during verification sweeps. UI already renders the column.
@@ -72,7 +73,10 @@ releases. If an item is smaller, bundle it with a data sweep.
 One brand per feature run (verify prices/specs vs manufacturer + price guides,
 raise `confidence`, fix `notes`, then check off; restart when all done):
 
-- [ ] Toyota — [ ] Lexus — [ ] Honda — [ ] Acura — [ ] Ford — [ ] Lincoln
+- [x] Toyota (2026-07-08 — all 24 models re-verified: corrected several stale
+  prices/trim lists — see js/changelog.js v6 — added sources, per-trim
+  features, and colors to most records)
+- [ ] Lexus — [ ] Honda — [ ] Acura — [ ] Ford — [ ] Lincoln
 - [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi

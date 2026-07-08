@@ -67,7 +67,7 @@ price is carried with `confidence:'medium'` and a note. The hourly loop's
 **data verification rotation** (ROADMAP.md) re-verifies one brand per run and
 upgrades confidence; wrong-MSRP fixes always outrank feature work.
 
-Current state (DATA_VERSION 3): 163 high · 160 medium · 3 low.
+Current state (DATA_VERSION 5): 176 high · 147 medium · 3 low.
 
 ## Images
 
