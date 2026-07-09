@@ -106,7 +106,7 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 
 ## Cadence expectations
 
-- Hourly feature runs (GitHub cron `23,53 * * * *`, concurrency-locked).
+- Feature runs every 2 hours (GitHub cron `23 */2 * * *`, concurrency-locked).
 - Every 5th run: polish/reflection sweep across app + marketing site.
 - Every run ends with the full smoke battery; failures block deploy.
 - Run history: `.github/cadence.log`.

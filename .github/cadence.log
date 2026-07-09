@@ -3,3 +3,4 @@
 2026-07-08T13:44:34Z run=- mode=resumed (hourly schedule re-enabled on request)
 2026-07-08T15:21:45Z run=1 mode=feature
 2026-07-08T15:49:51Z run=- mode=paused (hourly schedule disabled on request)
+2026-07-09T15:16:14Z run=- mode=resumed (schedule re-enabled every 2h: cron 23 */2 * * *)

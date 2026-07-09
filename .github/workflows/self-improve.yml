@@ -1,4 +1,4 @@
-name: Hourly self-improvement
+name: Scheduled self-improvement
 
 # Runs Claude Code on a schedule to build the next ROADMAP item (or, every 5th
 # feature run, do a polish/reflection sweep), gate it behind the smoke test,
@@ -9,14 +9,11 @@ name: Hourly self-improvement
 # Note: a push to main by the built-in GITHUB_TOKEN does NOT trigger deploy.yml
 # (GitHub blocks that to avoid loops), so this job deploys Pages itself.
 on:
-  # PAUSED (requested 2026-07-08). The hourly schedule is disabled; re-enable
-  # by uncommenting the `schedule:` block below. The workflow can still be run
-  # on demand from the Actions tab (workflow_dispatch).
-  # schedule:
-  #   # Off-peak minutes: GitHub heavily delays/drops scheduled jobs at :00.
-  #   # Two attempts/hour improve the odds of a roughly-hourly cadence; the
-  #   # concurrency lock keeps them from overlapping.
-  #   - cron: '23,53 * * * *'
+  schedule:
+    # Every 2 hours (requested 2026-07-08). Off-peak minute :23 — GitHub
+    # heavily delays/drops jobs scheduled at :00. One fire per 2-hour window;
+    # the concurrency lock keeps a fire from overlapping a still-running one.
+    - cron: '23 */2 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -112,7 +109,7 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git add -A
           git commit -m "auto: self-improvement (${MODE})" \
-            -m "Automated hourly improvement; passed smoke test and auto-deployed."
+            -m "Automated scheduled improvement; passed smoke test and auto-deployed."
           # Integrate any commits that landed on main during this run (the owner
           # pushes to main too), then push. Retry with rebase so a concurrent
           # push never causes a non-fast-forward failure or lost work.
@@ -130,7 +127,7 @@ jobs:
       # Keep the marketing site's screenshots in lock-step with the app as it
       # evolves. Regenerated into the Pages artifact (working tree) but NOT
       # committed — so the live site always matches the just-built app without
-      # bloating git history every hour. Non-fatal: a flaky capture falls back
+      # bloating git history every run. Non-fatal: a flaky capture falls back
       # to the committed baseline screenshots.
       - name: Refresh marketing screenshots
         if: steps.commit.outputs.changed == 'true'
