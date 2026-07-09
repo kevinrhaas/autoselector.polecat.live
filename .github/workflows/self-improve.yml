@@ -110,11 +110,25 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes produced this run."; echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
+          # The cadence log is appended every run, so its presence alone does
+          # NOT mean real work happened (e.g. Claude hit a usage limit and did
+          # nothing). Only DEPLOY when something OTHER than the cadence log
+          # changed — otherwise commit just the log for the record and skip the
+          # deploy, so "deployed" always means "shipped a real change".
+          SUBSTANTIVE=$(git status --porcelain | grep -vE ' \.github/cadence\.log$' || true)
           git config user.name  "autoselector-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A
-          git commit -m "auto: self-improvement (${MODE})" \
-            -m "Automated scheduled improvement; passed smoke test and auto-deployed."
+          if [ -n "$SUBSTANTIVE" ]; then
+            git commit -m "auto: self-improvement (${MODE})" \
+              -m "Automated scheduled improvement; passed smoke test and auto-deployed."
+            DEPLOY=true
+          else
+            git commit -m "chore: record run cadence (no content change this run)" \
+              -m "Claude produced no user-visible change this run (e.g. usage limit); logging the run only, not deploying."
+            DEPLOY=false
+            echo "::notice::No substantive change this run — recording cadence only, not deploying."
+          fi
           # Integrate any commits that landed on main during this run (the owner
           # pushes to main too), then push. Retry with rebase so a concurrent
           # push never causes a non-fast-forward failure or lost work.
@@ -127,7 +141,7 @@ jobs:
             sleep $((3*i))
           done
           if [ "$pushed" != true ]; then echo "Could not push to main after retries"; exit 1; fi
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "changed=$DEPLOY" >> "$GITHUB_OUTPUT"
 
       # Keep the marketing site's screenshots in lock-step with the app as it
       # evolves. Regenerated into the Pages artifact (working tree) but NOT
