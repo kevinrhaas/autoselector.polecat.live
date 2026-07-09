@@ -28,7 +28,7 @@ concurrency:
 jobs:
   improve:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 65
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -69,10 +69,15 @@ jobs:
           PROMPT="$(cat .github/self-improve-prompt.md)
           ---
           This run's mode is: ${MODE}"
-          claude -p "$PROMPT" \
+          # Give Claude a hard 48-min budget (job timeout is 65m). If it runs
+          # over, `timeout` kills it gracefully and we still run the smoke
+          # gate + commit on whatever is finished — instead of the whole job
+          # being hard-cancelled at the job timeout and shipping nothing.
+          timeout 48m claude -p "$PROMPT" \
             --dangerously-skip-permissions \
             --max-turns 150 \
-            --allowedTools "Bash,Edit,Write,Read,Glob,Grep,WebSearch,WebFetch" || echo "claude exited non-zero (continuing to smoke test)"
+            --allowedTools "Bash,Edit,Write,Read,Glob,Grep,WebSearch,WebFetch" \
+            || echo "claude exited (over time budget or non-zero) — continuing to smoke test with whatever is staged"
 
       - name: Record run cadence
         run: |

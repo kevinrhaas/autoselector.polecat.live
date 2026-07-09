@@ -4,3 +4,4 @@
 2026-07-08T15:21:45Z run=1 mode=feature
 2026-07-08T15:49:51Z run=- mode=paused (hourly schedule disabled on request)
 2026-07-09T15:16:14Z run=- mode=resumed (schedule re-enabled every 2h: cron 23 */2 * * *)
+2026-07-09T17:10:18Z run=3 mode=feature result=cancelled (hit 50m job timeout mid-build; raised to 65m + wrapped claude in timeout 48m)
