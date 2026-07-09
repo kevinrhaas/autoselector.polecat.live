@@ -7,17 +7,20 @@ Settings → Data.
 
 ## Scope & completeness
 
-Every nameplate sold **new in the US for model year 2026** — 326 records, 47
+Every nameplate sold **new in the US for model year 2026** — 325 records, 47
 brands, from the Chevrolet Trax to the Ferrari F80. Conventions:
 
 - **One record per nameplate.** Sub-variants fold into the parent with notes
   (Yukon XL → Yukon; Maybach → S-Class/GLS; M340i → 3 Series) — but distinct
   nameplates stay separate (M3 vs 3 Series, Mustang vs Mach-E).
 - Industry counts that tally variants separately put the market at ~379
-  models (cars.com, 2026); after folding, 326 nameplates is full coverage.
+  models (cars.com, 2026); after folding, 325 nameplates is full coverage.
   The coverage audit item in ROADMAP.md re-checks this every so often.
-- Discontinued-during-2026 models stay listed with the situation in `notes`
-  (e.g. Tesla Model S/X, Ford F-150 Lightning, Dodge Hornet).
+- Models that ARE offered for MY2026 but are winding down stay listed with
+  the situation in `notes` (e.g. Tesla Model S/X, Ford F-150 Lightning, Dodge
+  Hornet). Models with **no 2026 model year at all** (production ended after
+  MY2025, no successor) are removed entirely — e.g. the Lexus RC/RC F, which
+  Lexus discontinued after MY2025 with no 2026 offering.
 
 ## Field dictionary (JS → SQL)
 

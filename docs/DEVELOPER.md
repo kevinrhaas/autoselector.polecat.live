@@ -34,7 +34,7 @@ profiles. Rules:
 
 ## The catalog (`js/data/vehicles.js`)
 
-326 records, one per nameplate; see `docs/DATA.md` for the field dictionary
+325 records, one per nameplate; see `docs/DATA.md` for the field dictionary
 and SQL mapping. Invariants:
 
 - `id` is forever (favorites/notes/recents key off it).

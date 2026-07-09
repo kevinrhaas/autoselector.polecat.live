@@ -12,10 +12,10 @@ releases. If an item is smaller, bundle it with a data sweep.
 
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
-  fueleconomy.gov for EPA numbers, one major price guide). 49 of 326 models
-  now have sources (all 24 Toyota models, plus the original 30 minus overlap);
-  continue ~15 models per run until all 326 are cited. Be precise — deep URLs
-  only, verified to be 2026-specific.
+  fueleconomy.gov for EPA numbers, one major price guide). 60 of 325 models
+  now have sources (all 24 Toyota models, all 11 Lexus models, plus the
+  original 30 minus overlap); continue ~15 models per run until all 325 are
+  cited. Be precise — deep URLs only, verified to be 2026-specific.
 - [ ] **Trim-level options** — different trims carry different options:
   populate `trims[].features` (notable equipment each trim adds) brand by
   brand during verification sweeps. UI already renders the column.
@@ -24,7 +24,7 @@ releases. If an item is smaller, bundle it with a data sweep.
   manufacturer configurators; classify every interior as dark or light and
   reconcile with `interior.lightInterior/darkInterior`. UI renders swatches.
 - [ ] **2026-photo audit + fill** — every photo must show the actual 2026
-  model-year generation. 120 of 326 models now have local photos. Audit the
+  model-year generation. 120 of 325 models now have local photos. Audit the
   existing shots, replace any prior-generation ones, and keep adding missing
   models (current-gen only — skip models whose only Commons photo is an old
   generation and note them; acura-rdx is a known skip). A vetted, ready-to-run
@@ -76,7 +76,14 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 - [x] Toyota (2026-07-08 — all 24 models re-verified: corrected several stale
   prices/trim lists — see js/changelog.js v6 — added sources, per-trim
   features, and colors to most records)
-- [ ] Lexus — [ ] Honda — [ ] Acura — [ ] Ford — [ ] Lincoln
+- [x] Lexus (2026-07-09 — all 11 current models re-verified, see
+  js/changelog.js v8: removed the discontinued RC, fixed the redesigned ES's
+  trim count/dimensions/range, dropped the LC's discontinued 500h hybrid,
+  fixed the LS engine size, expanded LX from 3 to 7 trims and GX from 3 to 6,
+  added the new RZ 550e F SPORT flagship, and corrected pricing/EPA figures
+  across IS/NX/RX/TX/UX — added sources, per-trim features, and colors to
+  every record)
+- [ ] Honda — [ ] Acura — [ ] Ford — [ ] Lincoln
 - [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
@@ -99,7 +106,7 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 
 ## Shipped
 
-- [x] v1 — Full 2026 catalog (326 models, 47 brands, manufacturer+brand+model),
+- [x] v1 — Full 2026 catalog (325 models, 47 brands, manufacturer+brand+model),
   three finders, garage/compare/notes, six themes, tour, docs, simple mode,
   undo/history, settings with SQL export + data profiles + version switcher,
   marketing site with SEO, hourly self-improvement loop with smoke battery.

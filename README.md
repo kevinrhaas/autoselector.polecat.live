@@ -4,7 +4,7 @@
 Live at **https://autoselector.polecat.live** · app at **/app/** (open to everyone, no sign-up).
 
 AutoSelector knows **every vehicle sold new in the US for model year 2026** —
-326 models across 47 brands — with real prices, powertrains, dimensions,
+325 models across 47 brands — with real prices, powertrains, dimensions,
 seating, cargo, and the practical details other sites bury: spare-tire type,
 physical vs. touchscreen climate/audio controls, light/dark interior
 availability, ground clearance, towing.
@@ -17,7 +17,7 @@ jobtracker…), sharing the fleet look & feel and conventions.
 | Area | What it does |
 |---|---|
 | **Home** | Greeting, favorites, recents, saved searches, activity, one-tap key actions |
-| **Match Maker** | Question-by-question finder — a live counter + dot field whittle 326 cars to a shortlist ("not sure" always allowed) |
+| **Match Maker** | Question-by-question finder — a live counter + dot field whittle 325 cars to a shortlist ("not sure" always allowed) |
 | **Lifestyles** | Persona finder — pick the driver you are; every vehicle is *ranked* for that life |
 | **Budget Explorer** | Money-first sliders with a live market count |
 | **All Vehicles** | The full catalog with practical filters and saved searches |
