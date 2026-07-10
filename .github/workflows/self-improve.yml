@@ -9,11 +9,14 @@ name: Scheduled self-improvement
 # Note: a push to main by the built-in GITHUB_TOKEN does NOT trigger deploy.yml
 # (GitHub blocks that to avoid loops), so this job deploys Pages itself.
 on:
-  schedule:
-    # Every 2 hours (requested 2026-07-08). Off-peak minute :23 — GitHub
-    # heavily delays/drops jobs scheduled at :00. One fire per 2-hour window;
-    # the concurrency lock keeps a fire from overlapping a still-running one.
-    - cron: '23 */2 * * *'
+  # PAUSED (requested 2026-07-10). The schedule is disabled; re-enable by
+  # uncommenting the `schedule:` block below. The workflow can still be run on
+  # demand from the Actions tab (workflow_dispatch).
+  # schedule:
+  #   # Every 2 hours. Off-peak minute :23 — GitHub heavily delays/drops jobs
+  #   # scheduled at :00. One fire per 2-hour window; the concurrency lock
+  #   # keeps a fire from overlapping a still-running one.
+  #   - cron: '23 */2 * * *'
   workflow_dispatch: {}
 
 permissions:
