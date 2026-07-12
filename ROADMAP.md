@@ -12,8 +12,8 @@ releases. If an item is smaller, bundle it with a data sweep.
 
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
-  fueleconomy.gov for EPA numbers, one major price guide). 60 of 325 models
-  now have sources (all 24 Toyota models, all 11 Lexus models, plus the
+  fueleconomy.gov for EPA numbers, one major price guide). 74 of 325 models
+  now have sources (all Toyota, Lexus, Subaru, and Honda models, plus the
   original 30 minus overlap); continue ~15 models per run until all 325 are
   cited. Be precise — deep URLs only, verified to be 2026-specific.
 - [ ] **Trim-level options** — different trims carry different options:
@@ -83,13 +83,19 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   added the new RZ 550e F SPORT flagship, and corrected pricing/EPA figures
   across IS/NX/RX/TX/UX — added sources, per-trim features, and colors to
   every record)
-- [ ] Honda — [ ] Acura — [ ] Ford — [ ] Lincoln
+- [x] Honda (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
+  Passport lineup expanded to 7 variants, Pilot gained Touring Blackout,
+  HR-V trims corrected, Prelude verified to high; sources/features/colors added)
+- [ ] Acura — [ ] Ford — [ ] Lincoln
 - [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
-- [ ] Subaru — [ ] Mazda — [ ] Volvo — [ ] Polestar — [ ] Land Rover — [ ] Jaguar
+- [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
+  Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
+  fixed, Ascent "final year" note corrected; sources/features/colors added)
+- [ ] Mazda — [ ] Volvo — [ ] Polestar — [ ] Land Rover — [ ] Jaguar
 - [ ] Tesla — [ ] Rivian — [ ] Lucid — [ ] VinFast — [ ] Ineos
 - [ ] Exotics (Ferrari, Lamborghini, McLaren, Bentley, Rolls-Royce, Aston Martin, Maserati, Lotus)
 
