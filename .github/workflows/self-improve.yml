@@ -1,21 +1,24 @@
 name: Scheduled self-improvement
 
-# Runs Claude Code on a schedule to build the next ROADMAP item (or, every 5th
-# feature run, do a polish/reflection sweep), gate it behind the smoke test,
-# then commit to main and deploy to production automatically.
+# DISPATCH-ONLY FALLBACK — superseded by the Polecat Platform steward.
 #
-# Pause any time by disabling this workflow or removing CLAUDE_CODE_OAUTH_TOKEN.
+# Self-improvement is now centralized in kevinrhaas/polecat-platform
+# (.github/workflows/steward-improve.yml, prompts in .github/steward/*.md): it
+# works on a steward/* branch, opens a PR, and merges when the smoke test is
+# green (see polecat-platform docs/AUTOMATION.md). This per-app workflow is
+# kept ONLY as a manual/emergency fallback and is slated for deletion once the
+# steward is proven for this app.
 #
-# Note: a push to main by the built-in GITHUB_TOKEN does NOT trigger deploy.yml
-# (GitHub blocks that to avoid loops), so this job deploys Pages itself.
+# Its schedule stays COMMENTED. Do not re-enable it without coordinating with
+# the platform steward — two loops committing to main would collide.
+#
+# When run on demand (workflow_dispatch), it builds a ROADMAP item, gates it
+# behind the smoke test, then commits to main and deploys Pages itself (a push
+# by the built-in GITHUB_TOKEN does NOT trigger deploy.yml).
 on:
-  # PAUSED (requested 2026-07-10). The schedule is disabled; re-enable by
-  # uncommenting the `schedule:` block below. The workflow can still be run on
-  # demand from the Actions tab (workflow_dispatch).
+  # Schedule intentionally disabled — superseded by the platform steward (see
+  # header). Run on demand from the Actions tab only.
   # schedule:
-  #   # Every 2 hours. Off-peak minute :23 — GitHub heavily delays/drops jobs
-  #   # scheduled at :00. One fire per 2-hour window; the concurrency lock
-  #   # keeps a fire from overlapping a still-running one.
   #   - cron: '23 */2 * * *'
   workflow_dispatch: {}
 
