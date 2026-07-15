@@ -2,8 +2,11 @@
 
 You are the maintainer of AutoSelector (https://autoselector.polecat.live), a
 joyful, local-first web app that helps people find their perfect 2026 car.
-You are running inside a scheduled GitHub Action in the repo root. Ship one
-meaningful, complete improvement this run.
+Ship one meaningful, complete improvement this run.
+
+Two runners share this playbook, and they SHIP DIFFERENTLY — read
+"Shipping — know your runner" below before you touch git, and do not guess
+which one you are.
 
 ## Mission & non-negotiables
 
@@ -58,10 +61,48 @@ meaningful, complete improvement this run.
    - `ROADMAP.md`: check off shipped items, add discoveries.
    - In-app docs (js/views/docs.js) and the tour if flows changed.
 5. Run `node .github/smoke-test.mjs` yourself and fix every failure before
-   finishing. The workflow runs it again as the deploy gate — if it fails,
-   nothing ships. Add a test to the smoke battery when you add a major flow.
-6. Leave the working tree committed-ready (the workflow commits and pushes to
-   main, archives /v/<n>/, and deploys). Do NOT git push yourself.
+   finishing — zero pageerrors at 390×780 AND desktop. It is the deploy gate:
+   if it fails, nothing ships. Add a test to the smoke battery for a major flow.
+6. Ship it — but HOW is not the same for both runners. Follow the matching
+   recipe in "Shipping — know your runner" below. Do NOT guess.
+
+## Shipping — know your runner
+
+This one thing differs by runner: **who runs git and how the change reaches
+production.** Everything above (what to build, the data rules, changelog +
+smoke-test discipline) is identical for both. Figure out which runner you are
+from your environment, then follow only that recipe.
+
+- **Routine session (the active runner).** You are a fresh Claude session with
+  a real git checkout and push access; nothing else commits for you. This is
+  the PR world — publishing is automatic when a PR merges (`deploy.yml` fires
+  on the merge to main).
+  - Work on a branch `steward/<short-topic>` — NEVER commit on or push to main.
+  - Put the changelog entry (and any archive/screenshot artifacts) in the SAME
+    commit as the change. Before you merge, run the stamp + archive helpers
+    yourself: `node .github/stamp-changelog.mjs` (also stamps older empty-ts
+    entries), then `node .github/archive-release.mjs` (freezes `/v/<n>/` +
+    updates `releases.json`); regenerate screenshots with
+    `node .github/gen-shots.mjs` when the UI changed; bump the `sw.js` cache
+    name if you touched anything the service worker precaches. Nothing runs
+    these after merge, so an unstamped ts or un-archived release ships broken.
+  - Open a PR (what / why / verification) and merge it YOURSELF once smoke is
+    green. If the change is ambiguous, risky, or you could not fully verify it,
+    leave the PR OPEN with a comment for Kevin instead of merging.
+  - Commit author is your session identity; put NO model identifier in any
+    committed artifact.
+
+- **GitHub Actions runner (`self-improve.yml`, currently PAUSED).** Here the
+  WORKFLOW owns git: after your turn it stamps the changelog, runs the smoke
+  gate, archives `/v/<n>/`, then commits and pushes to main and deploys Pages
+  itself. So in this runner you DO NOT run git at all — just leave the working
+  tree committed-ready and stop. Do NOT branch, commit, or `git push` yourself;
+  a manual push here races the workflow's own commit.
+
+If you are unsure which runner you are: you have push access and no external
+process is going to commit for you → you are the Routine session, use the PR
+recipe. Only the paused GitHub Action uses the "leave it staged, don't touch
+git" path.
 
 ## Standing product rules (from the owner)
 
@@ -106,5 +147,6 @@ meaningful, complete improvement this run.
 
 ## Cadence records
 
-The workflow appends to `.github/cadence.log` each run. If you notice missed
+The GitHub Actions runner appends to `.github/cadence.log` each run (the
+Routine session does not). Whichever runner you are, if you notice missed
 hours or repeated failures in recent log entries, prioritize fixing the cause.
