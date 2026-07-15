@@ -8,6 +8,31 @@ file with new ideas. Keep `js/whatsnext.js` in sync with the top of this list.
 Sizing rule: every run ships 30–45 minutes of complete work — no small
 releases. If an item is smaller, bundle it with a data sweep.
 
+## Polecat Shell migration (steward-driven, see polecat-platform/docs/MIGRATION.md #4)
+
+vendor/polecat-shell/ is now populated and READ-ONLY (changes land in the
+polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
+
+- [x] Vendor `lib/` into `vendor/polecat-shell/`.
+- [x] `js/ui.js` re-exports the vendored module verbatim (byte-identical
+  superset, adds `sheet()`).
+- [x] `js/icons.js` now layers AutoSelector's automotive icon family
+  (car/suv/truck/van/…) onto the vendored base set via `registerIcons()`;
+  `icon`/`iconNames` re-exported, `bodyIcon()` stays local (maps vehicle data,
+  not an icon set).
+- [ ] `js/theme.js` — NOT yet swapped. The vendored `applyTheme()` also drives
+  `data-reduce-motion` off its own `<storageKey>.motion` convention, which
+  collides with AutoSelector's existing reduce-motion source (`Store` /
+  `as.workspace.settings.reduceMotion`, set independently in `js/app.js`).
+  Needs a bridge (or a call to `setReduceMotion()` from the settings save
+  path) before swapping — do this as its own slice.
+- [ ] `initShell`/`rightPanel`/`appSwitcher(FLEET)` adoption (`js/shell.js` is
+  still app-local) — a bigger slice touching the rail markup.
+- [ ] `initWhatsNew` adoption for the What's-New panel (`js/whatsnew.js` is
+  still app-local).
+- [ ] SW cache bump — not needed yet (no precached file list changed this
+  slice).
+
 ## Next up (ordered)
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
