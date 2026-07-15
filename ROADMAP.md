@@ -42,7 +42,7 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 32 popular models done so far. Pull NHTSA overall stars from the
+  the 50 popular models done so far. Pull NHTSA overall stars from the
   official api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org,
   and owner/expert scores only where a real number sits on a real page.
   Omit — never guess — anything a source doesn't publish for the 2026 (or

@@ -1,0 +1,13 @@
+{
+  "name": "AutoSelector",
+  "short_name": "AutoSelector",
+  "description": "The joyful way to find your 2026 car — every US model, fun finders, honest specs.",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "background_color": "#090d18",
+  "theme_color": "#090d18",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
