@@ -7,7 +7,8 @@
 //
 // IMPORTANT — TWO RULES so sibling apps can fetch and parse this file:
 //   1. Keep it PURE DATA. No imports, no functions, nothing but this header
-//      and the export below. The "What's new" UI lives in js/whatsnew.js.
+//      and the two exports below (the CHANGELOG array and the LATEST_VERSION
+//      convenience constant). The "What's new" UI lives in js/whatsnew.js.
 //   2. Keep the header comment free of the literal export token and of any
 //      "[" bracket. Naive parsers locate the array by finding that token then
 //      the next "[" — a bracketed example up here would trap them.
@@ -155,3 +156,8 @@ export const CHANGELOG = [
     ],
   },
 ];
+
+// Newest version number, per the fleet changelog contract (see
+// polecat-platform docs/SHELL-API.md). Manager's ingest and the launcher read
+// this alongside the array; it is pure data, not a function.
+export const LATEST_VERSION = CHANGELOG[0]?.v ?? 0;
