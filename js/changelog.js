@@ -20,6 +20,15 @@
 
 export const CHANGELOG = [
   {
+    v: 11,
+    title: 'Shared fleet toolkit vendored in — same look, one source of truth',
+    kind: 'polish',
+    ts: '2026-07-15T19:14:11.455Z',
+    items: [
+      'The buttons, dialogs, toasts, and icon set now come from Polecat Shell, the small toolkit shared with the rest of the fleet, instead of a local copy — no visible change, just less drift to maintain.',
+    ],
+  },
+  {
     v: 10,
     title: 'Build a shortlist, see real ratings, and gauge every spec at a glance',
     kind: 'feature',
