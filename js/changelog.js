@@ -20,6 +20,16 @@
 
 export const CHANGELOG = [
   {
+    v: 12,
+    title: 'Theme engine vendored in — reduce-motion now stays put across theme changes',
+    kind: 'fix',
+    ts: '2026-07-15T20:06:09.826Z',
+    items: [
+      'Palettes, light/dark, and system mode now run on the shared Polecat Shell theme engine — no visible change to the six existing themes.',
+      "Fixed a latent bug: toggling theme or switching light/dark could silently reset your Reduce Motion preference back to the browser's OS setting. It now stays exactly as you left it in Settings.",
+    ],
+  },
+  {
     v: 11,
     title: 'Shared fleet toolkit vendored in — same look, one source of truth',
     kind: 'polish',
