@@ -167,7 +167,7 @@
  "logos/mini.svg": {
   "source": "https://commons.wikimedia.org/wiki/File:MINI_logo.svg",
   "license": "Public domain",
-  "author": "BMW\n\nSVG by CMetalCore\u00a0This W3C-unspecified vector image was created with Inkscape ."
+  "author": "BMW\n\nSVG by CMetalCore This W3C-unspecified vector image was created with Inkscape ."
  },
  "logos/mitsubishi.svg": {
   "source": "https://commons.wikimedia.org/wiki/File:Mitsubishi_motors_new_logo.svg",
@@ -277,7 +277,7 @@
  "vehicles/chevrolet-equinox.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:Chevrolet_Equinox_LT_(III,_Facelift)_%E2%80%93_f_05102022.jpg",
   "license": "CC BY-SA 3.0 de",
-  "author": "\u00a9 M 93"
+  "author": "© M 93"
  },
  "vehicles/chevrolet-silverado-1500.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:2022_Chevrolet_Silverado_1500_LT_in_Summit_White,_Front_Left,_06-26-2022.jpg",
@@ -357,7 +357,7 @@
  "vehicles/honda-cr-v.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:Honda_CR-V_e-HEV_Elegance_AWD_(VI)_%E2%80%93_f_14072024.jpg",
   "license": "CC BY-SA 3.0 de",
-  "author": "\u00a9 M 93"
+  "author": "© M 93"
  },
  "vehicles/honda-odyssey.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:2018_Honda_Odyssey_EX-L_3.5L,_front_8.23.19.jpg",
@@ -377,7 +377,7 @@
  "vehicles/hyundai-ioniq-5.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_AWD_Techniq-Paket_%E2%80%93_f_31122024.jpg",
   "license": "CC BY-SA 3.0 de",
-  "author": "\u00a9 M 93"
+  "author": "© M 93"
  },
  "vehicles/hyundai-palisade.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Palisade_2.5T_Calligraphy_LX3_Creamy_White_Pearl_(46)_(cropped).jpg",
@@ -572,7 +572,7 @@
  "vehicles/toyota-prius.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:Toyota_Prius_2.0_HEV_Limited_(V)_%E2%80%93_f_18112022.jpg",
   "license": "CC BY-SA 3.0 de",
-  "author": "\u00a9 M 93"
+  "author": "© M 93"
  },
  "vehicles/toyota-rav4.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_RAV4_Prime_XSE_Premium_in_Silver_Sky_with_Midnight_Black_roof,_front_left.jpg",
@@ -667,7 +667,7 @@
  "vehicles/nissan-kicks.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File%3A2026_Nissan_Kicks_-_01.jpg",
   "license": "CC BY-SA 4.0",
-  "author": "This picture has been taken by Oleg Yunakov. Contact e-mail: yunakovgmail.com. Image can be used in accordance with the terms of the \u0421\u0421-BY-SA license. Other photos can be seen here."
+  "author": "This picture has been taken by Oleg Yunakov. Contact e-mail: yunakovgmail.com. Image can be used in accordance with the terms of the СС-BY-SA license. Other photos can be seen here."
  },
  "vehicles/nissan-pathfinder.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File%3A2026_Nissan_Pathfinder_front_view.jpg",
@@ -797,7 +797,7 @@
  "vehicles/kia-ev6.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File%3AKia_EV6_GT-line_%28Facelift%29_%E2%80%93_f_27072025.jpg",
   "license": "CC BY-SA 3.0 de",
-  "author": "\u00a9 M 93"
+  "author": "© M 93"
  },
  "vehicles/kia-k4.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File%3A2025_Kia_K4_4DR_GT_Line_%28United_States%29_front_view_03.jpg",
@@ -833,5 +833,341 @@
   "source": "https://commons.wikimedia.org/wiki/File%3A2024_GMC_Acadia_Denali_front_view.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Deathpallie325"
+ },
+ "gallery/chevrolet-equinox/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Equinox_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/chevrolet-silverado-1500/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Chevrolet_Silverado_facelift_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/chevrolet-traverse/1 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Traverse_RS_AWD,_front_10.16.24.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Kevauto",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-bronco/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_Bronco_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-bronco/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2021_Ford_Bronco_Outer_Banks_4-dr_in_Area_51,_front_right.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-explorer/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_Explorer_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-explorer/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2020_Ford_Explorer_XLT_in_Oxford_White,_rear_left.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-f-150/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_F-150_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-f-150/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Ford_F-150_Lariat_rear_view.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-maverick/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_Maverick_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-accord/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Honda_Accord_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-accord/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Honda_Accord_LX,_rear_left,_07-13-2023.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "MercurySable99",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-cr-v/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:HONDA_CR-V_SIXTH_GENERATION_CHINA_VERSION_INTERIOR_(2).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Dinkun Chen",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-cr-v/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Honda_CR-V_EX-L_4WD_in_Radiant_Red_Metallic,_rear_right.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-civic/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Honda_CIVIC_e%EF%BC%9AHEV_EX_(6AA-FL4)_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Tokumeigakarinoaoshima",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-civic/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Honda_Civic_Sedan_EX_in_Platinum_White_Pearl,_front_left.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-hr-v/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Honda_HR-V_Sport_(United_States)_interior.png",
+  "license": "CC BY 3.0",
+  "author": "Gold Pony",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-pilot/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Honda_Pilot_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/honda-pilot/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Honda_Pilot_AWD_Touring,_rear_2.2.24.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Kevauto",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/hyundai-santa-fe/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Hyundai_Santa_Fe_2.5_Calligraphy_AWD_(interior).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/hyundai-santa-fe/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Hyundai_Santa_Fe_(MX5)_IMG_5309.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Alexander Migl",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/hyundai-tucson/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Tucson_NX4_1.6_GLS_HEV_-_interior_view.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/hyundai-tucson/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Tucson_NX4_PE_1.6T_GLS_HEV_Black.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/jeep-grand-cherokee/1 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Jeep_Grand_Cherokee_Summit_Reserve_4x4_in_Bright_White,_Front_Left,_01-16-2022.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Elise240SX",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/jeep-wrangler/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Jeep_Wrangler_Unlimited_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/kia-sportage/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Kia_Sportage_X-Pro_Prestige_AWD_(2024)_(53623799467).jpg",
+  "license": "CC BY 2.0",
+  "author": "Charles (Flickr)",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/kia-sportage/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Kia_Sportage_Signature_NQ5_PE_Black_(2).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Damian B Oh",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/kia-telluride/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Kia_Telluride_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/kia-telluride/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Kia_Telluride_front_end.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/mazda-cx-5/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Mazda_CX-5_2.5_AWD_Turbo_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/mazda-cx-5/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Mazda_CX-5_2.5_Skyactiv_AWD_Turbo_in_Machine_Gray,_front_left.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/nissan-rogue/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Rogue_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/nissan-rogue/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Rogue_SV_Moonroof_in_Gun_Metallic,_front_right,_2026-06-14.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Elise240SX",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-crosstrek/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Subaru_Crosstrek_2.0i-L_Eyesight_2024_(interior).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-crosstrek/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:24_Subaru_Crosstrek_Premium.jpg",
+  "license": "CC0",
+  "author": "HJUdall",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-forester/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Subaru_Forester_Sport_(United_States)_interior.jpg",
+  "license": "CC BY 2.0",
+  "author": "Charles (Flickr)",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-forester/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Subaru_Forester_Hybrid_Touring_in_Brilliant_Bronze_Metallic,_front_right.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-outback/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Outback_dashboard.jpg",
+  "license": "CC BY 4.0",
+  "author": "Baron Maddock",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-outback/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Outback_Wilderness,_front_left,_05-24-2026.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "MercurySable99",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-outback/3 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Outback_Rear_Left_Quater_NYC_2025.png",
+  "license": "CC BY 4.0",
+  "author": "Raszbeary",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/tesla-model-3/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_Highland_Performance_White_%2B_Black.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/tesla-model-3/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Tesla_Model_3_Long_Range_in_Obsidian_Black_Metallic,_front_right.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/tesla-model-y/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_Juniper_Long_Range_AWD_White_%2B_Black_01.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/tesla-model-y/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Tesla_Model_Y_RWD_front.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "LuvsMG481",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-camry/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Toyota_Camry_Hybrid_XSE_(United_States)_interior.png",
+  "license": "CC BY 3.0",
+  "author": "Autosdeprimera",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-camry/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Toyota_Camry_LE,_rear_left,_05-24-2025.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "MercurySable99",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-corolla/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_2026_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Nissangeniss",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-corolla/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Corolla_SE_rear_view_(United_States).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Gold Pony",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-highlander/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Highlander_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-highlander/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Highlander_LE_AWD_in_Magnetic_Gray_Met.,_rear_left.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-rav4/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:TOYOTA_RAV4_(XA60)_CHINA_SPECIFICATION_INTERIOR_(2).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Dinkun Chen",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-rav4/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Toyota_RAV4_CORE_(rear_view)_at_Japan_Mobility_Show_Kansai_2025.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Aos.1905",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-tacoma/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Tacoma_TRD_Sport_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-tacoma/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Tacoma_TRD_Sport_front_view.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-tundra/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Tundra_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-tundra/2 (exterior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Toyota_Tundra_Limited_(United_States)_front_view.jpg",
+  "license": "CC BY 3.0",
+  "author": "Oxmoor Toyota",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
  }
 }

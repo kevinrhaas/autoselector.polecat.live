@@ -10,6 +10,18 @@ releases. If an item is smaller, bundle it with a data sweep.
 
 ## Next up (ordered)
 
+- [ ] **Public ratings for every model** — extend `ratings` (safety
+  `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
+  the 32 popular models done so far. Pull NHTSA overall stars from the
+  official api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org,
+  and owner/expert scores only where a real number sits on a real page.
+  Omit — never guess — anything a source doesn't publish for the 2026 (or
+  carried-over) model year. ~15–20 models per run.
+- [ ] **Interior & multi-photo galleries** — extend `image.gallery`
+  (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
+  31 models done. Wikimedia Commons, free licenses only, current generation
+  only; interior/cabin shots are the priority. Record each in
+  assets/credits.json. The detail-page thumbnail strip already renders them.
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
   fueleconomy.gov for EPA numbers, one major price guide). 74 of 325 models
@@ -112,6 +124,12 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 
 ## Shipped
 
+- [x] v10 — Shopping-cart multi-select on All Vehicles (Select mode → Compare
+  or a persistent Shortlist), searchable multi-brand picker, seat min AND max
+  filter, at-a-glance relative-standing bars (vs class / all / brand) on the
+  vehicle page, public ratings (NHTSA / IIHS / owner / expert, source-linked)
+  for 32 models, interior + multi-photo galleries for 31 models, and clickable
+  Home dashboard tiles.
 - [x] v1 — Full 2026 catalog (325 models, 47 brands, manufacturer+brand+model),
   three finders, garage/compare/notes, six themes, tour, docs, simple mode,
   undo/history, settings with SQL export + data profiles + version switcher,
