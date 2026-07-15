@@ -20,12 +20,17 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   (car/suv/truck/van/…) onto the vendored base set via `registerIcons()`;
   `icon`/`iconNames` re-exported, `bodyIcon()` stays local (maps vehicle data,
   not an icon set).
-- [ ] `js/theme.js` — NOT yet swapped. The vendored `applyTheme()` also drives
-  `data-reduce-motion` off its own `<storageKey>.motion` convention, which
-  collides with AutoSelector's existing reduce-motion source (`Store` /
-  `as.workspace.settings.reduceMotion`, set independently in `js/app.js`).
-  Needs a bridge (or a call to `setReduceMotion()` from the settings save
-  path) before swapping — do this as its own slice.
+- [x] `js/theme.js` now `configure()`s and re-exports the vendored module
+  (storage key `as.theme.v1`, `auto`/`polecat` palettes unchanged). Bridged
+  the reduce-motion collision: `js/theme.js` mirrors `Store.settings()
+  .reduceMotion` into the vendor's `<storageKey>.motion` override on every
+  Store change, so the vendored `applyTheme()` — invoked internally by
+  `toggleMode()`/`setTheme()`/its OS motion-preference listener — always
+  agrees with the Settings toggle instead of falling back to the OS
+  preference. `js/app.js`'s `applySimple()` no longer stamps
+  `data-reduce-motion` itself (see js/changelog.js v12 — this also fixed a
+  latent bug where toggling theme could silently reset the user's Reduce
+  Motion preference).
 - [ ] `initShell`/`rightPanel`/`appSwitcher(FLEET)` adoption (`js/shell.js` is
   still app-local) — a bigger slice touching the rail markup.
 - [ ] `initWhatsNew` adoption for the What's-New panel (`js/whatsnew.js` is

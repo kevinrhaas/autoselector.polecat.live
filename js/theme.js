@@ -1,68 +1,31 @@
-// -----------------------------------------------------------------------
-// theme.js — palette + light/dark, six modes total.
+// theme.js — configures + re-exports the vendored Polecat Shell theme module
+// (vendor/polecat-shell/ is READ-ONLY — see docs/SHELL-API.md in
+// polecat-platform). AutoSelector keeps its historical storage key
+// (as.theme.v1) and its own 'auto' palette (defined in css/styles.css)
+// alongside the shared 'polecat' one, via configure().
 //
-//   palette:  'auto'    (AutoSelector electric blue / sunset orange)
-//             'polecat' (warm polecat.live house style, brown/amber)
-//   mode:     'dark' | 'light' | 'system'
-//
-// The selectable modes are the cross product: AutoSelector Dark / Light /
-// System and Polecat Dark / Light / System. Default is AutoSelector Dark.
-// We stamp two attributes on <html>: data-palette and data-theme, which the
-// stylesheet keys off. The pre-paint inline script in the HTML applies the
-// saved choice before first paint to avoid a flash.
-// -----------------------------------------------------------------------
-
-const KEY = 'as.theme.v1';           // stores e.g. "auto:dark"
-const mq = window.matchMedia('(prefers-color-scheme: light)');
+// Reduce-motion bridge: the vendored module tracks its own override under
+// `<storageKey>.motion`, independent of AutoSelector's real source of truth
+// (Store's settings.reduceMotion, edited on the Settings page). Left
+// unbridged, the vendored applyTheme() — called internally by toggleMode()/
+// setTheme()/its OS motion-preference listener — would fall back to the OS
+// preference the moment a user toggled the theme, silently overriding their
+// explicit setting. Mirroring Store's value into that key on every Store
+// change keeps the two in permanent agreement.
+import {
+  configure, MODES, getTheme, setTheme, applyTheme, effectiveMode, toggleMode, setReduceMotion,
+} from '../vendor/polecat-shell/theme.js';
+import { Store } from './store.js';
 
 export const PALETTES = [
   { key:'auto',    label:'AutoSelector', hint:'Electric blue / sunset orange' },
   { key:'polecat', label:'Polecat',      hint:'Warm polecat.live house style' },
 ];
-export const MODES = [
-  { key:'dark',   label:'Dark' },
-  { key:'light',  label:'Light' },
-  { key:'system', label:'System' },
-];
 
-export function getTheme(){
-  const raw = localStorage.getItem(KEY) || 'auto:dark';
-  const [palette='auto', mode='dark'] = raw.split(':');
-  return { palette, mode };
-}
+configure({ storageKey:'as.theme.v1', defaultTheme:'auto:dark', palettes:PALETTES });
 
-export function setTheme(palette, mode){
-  localStorage.setItem(KEY, `${palette}:${mode}`);
-  applyTheme();
-}
+function syncReduceMotion(){ setReduceMotion(!!Store.settings().reduceMotion); }
+syncReduceMotion();
+Store.onChange(syncReduceMotion);
 
-// Resolve system → concrete light/dark using the OS preference.
-function resolvedMode(mode){
-  if(mode==='system') return mq.matches ? 'light' : 'dark';
-  return mode;
-}
-
-export function applyTheme(){
-  const { palette, mode } = getTheme();
-  const root = document.documentElement;
-  root.setAttribute('data-palette', palette);
-  root.setAttribute('data-theme', resolvedMode(mode));
-  // Keep the browser UI (address bar) in sync with the surface color.
-  const meta = document.querySelector('meta[name="theme-color"]');
-  if(meta){
-    const dark = resolvedMode(mode)==='dark';
-    meta.setAttribute('content', dark ? (palette==='auto'?'#090d18':'#0a0a0f') : (palette==='auto'?'#eef2fa':'#f4f4fb'));
-  }
-}
-
-// Convenience: current effective (light|dark) for choosing sun/moon icon etc.
-export function effectiveMode(){ return resolvedMode(getTheme().mode); }
-
-// Cycle just the light/dark mode of the current palette (topbar quick toggle).
-export function toggleMode(){
-  const { palette, mode } = getTheme();
-  const eff = resolvedMode(mode);
-  setTheme(palette, eff==='dark' ? 'light' : 'dark');
-}
-
-mq.addEventListener?.('change', ()=>{ if(getTheme().mode==='system') applyTheme(); });
+export { MODES, getTheme, setTheme, applyTheme, effectiveMode, toggleMode };
