@@ -49,7 +49,7 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   carried-over) model year. ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  31 models done. Wikimedia Commons, free licenses only, current generation
+  47 models done. Wikimedia Commons, free licenses only, current generation
   only; interior/cabin shots are the priority. Record each in
   assets/credits.json. The detail-page thumbnail strip already renders them.
 - [ ] **Sources for every stat** — every record gets a `sources` array of
