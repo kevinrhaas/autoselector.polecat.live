@@ -54,7 +54,7 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   assets/credits.json. The detail-page thumbnail strip already renders them.
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
-  fueleconomy.gov for EPA numbers, one major price guide). 74 of 325 models
+  fueleconomy.gov for EPA numbers, one major price guide). 78 of 325 models
   now have sources (all Toyota, Lexus, Subaru, and Honda models, plus the
   original 30 minus overlap); continue ~15 models per run until all 325 are
   cited. Be precise — deep URLs only, verified to be 2026-specific.
@@ -128,7 +128,12 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 - [x] Honda (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Passport lineup expanded to 7 variants, Pilot gained Touring Blackout,
   HR-V trims corrected, Prelude verified to high; sources/features/colors added)
-- [ ] Acura — [ ] Ford — [ ] Lincoln
+- [x] Acura (2026-07-16 — all 4 models re-verified, see js/changelog.js v16:
+  corrected EPA MPG on ADX/Integra/RDX, confirmed ADX 190 hp, RDX SH-AWD-only;
+  added sources, per-trim features and colors; confirmed TLX and ZDX are both
+  gone for 2026. KNOWN GAP: the all-new Acura RSX EV (Honda in-house platform,
+  arriving late 2026) is a genuine 2026 nameplate not yet in the catalog — add
+  during the coverage audit once specs are published.) — [ ] Ford — [ ] Lincoln
 - [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
