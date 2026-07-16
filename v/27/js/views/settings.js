@@ -64,6 +64,8 @@ export function renderSettings(view, ctx){
       Store.settings().simpleMode, v=>{ Store.setSetting('simpleMode', v); ctx.applySimple(); ctx.rebuildRail(); }));
     b2.append(switchRow('Reduce motion', 'Turn off animations and confetti.',
       Store.settings().reduceMotion, v=>{ Store.setSetting('reduceMotion', v); ctx.applySimple(); }));
+    b2.append(switchRow('Show data-completeness meter', 'The little bar on each card showing how fully researched a vehicle’s data is. Tap it on a card for a breakdown.',
+      Store.settings().dataMeter!==false, v=>{ Store.setSetting('dataMeter', v); toast(v?'Data meter on':'Data meter hidden',{kind:'ok'}); }));
     panel.append(b2);
 
     const b3 = block('Welcome tour', '');
@@ -73,11 +75,44 @@ export function renderSettings(view, ctx){
 
   // ---- profile --------------------------------------------------------------
   function profile(){
-    const b = block('Profile', 'Just for a friendlier Home screen — stays on this device.');
+    const b = block('Profile', 'Just for a friendlier, more useful app — everything stays on this device.');
     const name = el('input',{class:'input', type:'text', value:Store.profile().name||'', placeholder:'Your first name'});
     name.addEventListener('change', ()=>{ Store.setProfile({name:name.value.trim()}); toast('Saved',{kind:'ok'}); });
     b.append(field('Name', name, 'Shown in the Home greeting.'));
+
+    // home ZIP + optional device location → powers "Dealers near you"
+    const zip = el('input',{class:'input', type:'text', inputmode:'numeric', maxlength:'5', style:'max-width:140px',
+      value:Store.profile().zip||'', placeholder:'e.g. 78701'});
+    zip.addEventListener('change', ()=>{
+      const val = zip.value.trim();
+      if(val && !/^\d{5}$/.test(val)){ toast('ZIP should be 5 digits',{kind:'err'}); return; }
+      Store.setProfile({zip:val}); toast('Saved',{kind:'ok'});
+    });
+    const locBtn = el('button',{class:'btn sm', html:`${icon('compass',14)} Use my location`, onclick:()=>{
+      if(!navigator.geolocation){ toast('Location not available in this browser',{kind:'err'}); return; }
+      navigator.geolocation.getCurrentPosition(pos=>{
+        Store.setProfile({ lat:+pos.coords.latitude.toFixed(4), lon:+pos.coords.longitude.toFixed(4) });
+        toast('Location saved',{kind:'ok', body:'Used for nearby-dealer searches; add a ZIP too for the best links.'});
+      }, ()=>toast('Could not get location',{kind:'err'}));
+    }});
+    b.append(field('Home ZIP code', el('div',{style:'display:flex;gap:8px;align-items:center;flex-wrap:wrap'},[zip, locBtn]),
+      'Powers "Dealers near you" on every vehicle page.'));
     panel.append(b);
+
+    // favorite manufacturers — a saved set of brands you care about
+    const b2 = block('Favorite brands', 'Pick the makes you care about — they get a quick-jump row on Home.');
+    const favs = new Set(Store.profile().favMakes||[]);
+    const row = el('div',{class:'chip-row'});
+    Store.makes().forEach(m=>{
+      const p = el('button',{class:'pill'+(favs.has(m)?' on':''), text:m, onclick:()=>{
+        favs.has(m) ? favs.delete(m) : favs.add(m);
+        p.classList.toggle('on', favs.has(m));
+        Store.setProfile({ favMakes:[...favs] });
+      }});
+      row.append(p);
+    });
+    b2.append(row);
+    panel.append(b2);
   }
 
   // ---- data & sync ------------------------------------------------------------

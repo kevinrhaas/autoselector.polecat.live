@@ -30,11 +30,12 @@ function blank(){
     recents: [],                      // [{id, at}] — vehicles opened, newest first
     notes: {},                        // vehicleId -> free-text note
     compare: [],                      // [vehicleId] — current compare tray (max 4)
+    shortlist: [],                    // [vehicleId] — the "cart": an unlimited holding list you build up, then send to Compare
     savedSearches: [],                // [{id, name, filters, at}]
     finderRuns: [],                   // [{id, finder, answers, resultIds, at}] — finished finder sessions
     activity: [],                     // [{id, at, kind, text, vehicleId?}] — newest first
     settings: {
-      tourDone:false, simpleMode:false, reduceMotion:false,
+      tourDone:false, simpleMode:false, reduceMotion:false, dataMeter:true,
       pinnedVersion:'',               // '/v/<n>/app/' to run an archived build
       profile:{ name:'', persona:'' } // light personalization for Home
     },
@@ -140,6 +141,40 @@ export const Store = new (class {
     save(); return {ok:true, on:true};
   }
   clearCompare(){ snapshot('Clear compare'); doc.compare=[]; save(); }
+
+  // ---- shortlist (the "cart") ------------------------------------------------
+  // Unlimited holding list you build up while browsing, then hand off to
+  // Compare (which stays capped at 4). Persisted like everything else.
+  shortlistIds(){ return doc.shortlist.filter(id=>this.vehicle(id)); }
+  shortlist(){ return this.shortlistIds().map(id=>this.vehicle(id)); }
+  inShortlist(id){ return doc.shortlist.includes(id); }
+  toggleShortlist(id){
+    const v=this.vehicle(id); if(!v) return {ok:false};
+    if(this.inShortlist(id)){
+      snapshot(`Remove ${v.model} from shortlist`);
+      doc.shortlist = doc.shortlist.filter(x=>x!==id); save(); return {ok:true, on:false};
+    }
+    snapshot(`Add ${v.model} to shortlist`);
+    doc.shortlist.push(id); this.logActivity('shortlist', `Added ${v.make} ${v.model} to your shortlist`, id);
+    save(); return {ok:true, on:true};
+  }
+  // Bulk add (from the browse multi-select bar). Returns how many were new.
+  addManyToShortlist(ids){
+    const fresh = ids.filter(id=>this.vehicle(id) && !doc.shortlist.includes(id));
+    if(!fresh.length) return 0;
+    snapshot(`Add ${fresh.length} to shortlist`);
+    doc.shortlist.push(...fresh);
+    this.logActivity('shortlist', `Added ${fresh.length} vehicle${fresh.length===1?'':'s'} to your shortlist`);
+    save(); return fresh.length;
+  }
+  removeFromShortlist(id){ const v=this.vehicle(id); if(!v||!this.inShortlist(id)) return;
+    snapshot(`Remove ${v.model} from shortlist`); doc.shortlist=doc.shortlist.filter(x=>x!==id); save(); }
+  clearShortlist(){ if(!doc.shortlist.length) return; snapshot('Clear shortlist'); doc.shortlist=[]; save(); }
+  // Load up to 4 shortlisted vehicles into the compare tray (for "Compare now").
+  compareFromShortlist(ids){
+    const pick = (ids && ids.length ? ids : doc.shortlist).filter(id=>this.vehicle(id)).slice(0,4);
+    snapshot('Send to compare'); doc.compare = [...pick]; save(); return pick.length;
+  }
 
   // ---- saved searches ---------------------------------------------------------
   savedSearches(){ return doc.savedSearches; }

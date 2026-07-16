@@ -4,7 +4,7 @@ import { el, relTime, escapeHtml } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { vtileGrid, emptyState, money } from './shared.js';
-import { openWhatsNext } from '../whatsnext.js';
+import { openWhatsNext } from '../whatsnew.js';
 
 export function renderHome(view, ctx){
   const all = Store.vehicles();
@@ -21,13 +21,13 @@ export function renderHome(view, ctx){
     ]),
   ]));
 
-  // ---- KPI strip ----
+  // ---- KPI strip (each tile links somewhere relevant) ----
   const kpis = el('div',{class:'kpis'});
-  kpi(kpis, all.length, '2026 models', 'car');
-  kpi(kpis, Store.makes().length, 'Brands', 'flag');
-  kpi(kpis, evCount, 'Fully electric', 'plug');
-  kpi(kpis, under30, 'Under $30k', 'dollar');
-  kpi(kpis, favs.length, 'Your favorites', 'heart');
+  kpi(kpis, all.length, '2026 models', 'car', ()=>ctx.navigate('browse'));
+  kpi(kpis, Store.makes().length, 'Brands', 'flag', ()=>ctx.navigate('browse',{ openBrands:true }));
+  kpi(kpis, evCount, 'Fully electric', 'plug', ()=>ctx.navigate('browse',{ filters:{ pts:['ev'] } }));
+  kpi(kpis, under30, 'Under $30k', 'dollar', ()=>ctx.navigate('browse',{ filters:{ priceMax:30000 } }));
+  kpi(kpis, favs.length, 'Your favorites', 'heart', ()=>ctx.navigate(favs.length?'garage':'browse'));
   view.append(kpis);
 
   // ---- key actions ----
@@ -49,6 +49,19 @@ export function renderHome(view, ctx){
   if(recents.length){
     section(view, 'Recently viewed', '');
     view.append(vtileGrid(recents.slice(0,6).map(r=>r.vehicle), ctx));
+  }
+
+  // ---- your brands (favorite manufacturers from Settings → Profile) ----
+  const favMakes = Store.profile().favMakes||[];
+  if(favMakes.length){
+    section(view, 'Your brands', '');
+    const row = el('div',{class:'chip-row', style:'margin-bottom:18px'});
+    favMakes.forEach(m=>{
+      row.append(el('button',{class:'pill', text:m,
+        onclick:()=>ctx.navigate('browse',{ filters:{ makes:[m] } })}));
+    });
+    row.append(el('button',{class:'pill', text:'✎ Edit', onclick:()=>ctx.navigate('settings')}));
+    view.append(row);
   }
 
   // ---- saved searches ----
@@ -80,7 +93,7 @@ export function renderHome(view, ctx){
   }
 }
 
-const ACT_ICON = { fav:'heart', unfav:'heart', note:'edit', compare:'compare', search:'search', finder:'target' };
+const ACT_ICON = { fav:'heart', unfav:'heart', note:'edit', compare:'compare', search:'search', finder:'target', shortlist:'garage' };
 
 function greeting(){
   const name = Store.profile().name;
@@ -88,12 +101,15 @@ function greeting(){
   const part = h<5?'Up late':h<12?'Good morning':h<17?'Good afternoon':'Good evening';
   return name ? `${part}, ${name}!` : `${part}! Let’s find your car.`;
 }
-function kpi(root, val, lbl, ic){
-  root.append(el('div',{class:'kpi'},[
+function kpi(root, val, lbl, ic, onclick){
+  const kids = [
     el('div',{class:'k-val', text:String(val)}),
     el('div',{class:'k-lbl', text:lbl}),
     el('span',{class:'k-ic', html:icon(ic,20)}),
-  ]));
+  ];
+  root.append(onclick
+    ? el('button',{class:'kpi kpi-link', type:'button', onclick, 'aria-label':`${val} ${lbl}`}, kids)
+    : el('div',{class:'kpi'}, kids));
 }
 function qa(root, ic, title, sub, onclick){
   root.append(el('button',{class:'qa-card', onclick},[
