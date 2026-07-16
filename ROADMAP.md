@@ -54,10 +54,11 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   assets/credits.json. The detail-page thumbnail strip already renders them.
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
-  fueleconomy.gov for EPA numbers, one major price guide). 89 of 325 models
-  now have sources (all Toyota, Lexus, Subaru, and Honda models, plus the
-  original 30 minus overlap); continue ~15 models per run until all 325 are
-  cited. Be precise — deep URLs only, verified to be 2026-specific.
+  fueleconomy.gov for EPA numbers, one major price guide). 93 of 325 models
+  now have sources (all Toyota, Lexus, Subaru, Honda, Acura, Ford and Lincoln
+  models, plus the original 30 minus overlap); continue ~15 models per run
+  until all 325 are cited. Be precise — deep URLs only, verified to be
+  2026-specific.
 - [ ] **Trim-level options** — different trims carry different options:
   populate `trims[].features` (notable equipment each trim adds) brand by
   brand during verification sweeps. UI already renders the column.
@@ -136,7 +137,12 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   during the coverage audit once specs are published.) — [x] Ford (2026-07-16 — all 14 models re-verified, see js/changelog.js v17:
   sources, per-trim features and colors added; Mustang GTD and 6-speed manual
   confirmed, Escape 4 powertrains detailed, Bronco/Explorer/Expedition trims
-  filled in; F-150 Lightning 2026 status flagged uncertain) — [ ] Lincoln
+  filled in; F-150 Lightning 2026 status flagged uncertain)
+- [x] Lincoln (2026-07-16 — all 4 SUVs re-verified, see js/changelog.js v26:
+  Aviator corrected to 383 hp / 21 mpg, Navigator to 432 hp / 17 mpg,
+  Nautilus top price to 77660; Corsair flagged final model year — Louisville
+  production ended Dec 2025 — and now IIHS-Marginal side, not a TSP; sources,
+  per-trim features and colors added to every record)
 - [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
