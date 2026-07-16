@@ -22,7 +22,7 @@ import { renderAdmin } from './views/admin.js';
 import { renderSettings } from './views/settings.js';
 import { openVehicle } from './views/vehicle.js';
 import { openSearch } from './views/search.js';
-import { openWhatsNew, hasUnread } from './changelog.js';
+import { openWhatsNew, hasUnread } from './whatsnew.js';
 import { maybeStartTour } from './tour.js';
 import { openShortcuts } from './shortcuts.js';
 
@@ -103,9 +103,9 @@ async function boot(){
 }
 
 function applySimple(){
+  // data-reduce-motion is stamped by theme.js's Store subscription instead —
+  // see the reduce-motion bridge comment there.
   document.documentElement.setAttribute('data-simple', Store.settings().simpleMode ? '1':'0');
-  if(Store.settings().reduceMotion) document.documentElement.setAttribute('data-reduce-motion','1');
-  else document.documentElement.removeAttribute('data-reduce-motion');
 }
 
 // ---- routing ---------------------------------------------------------------

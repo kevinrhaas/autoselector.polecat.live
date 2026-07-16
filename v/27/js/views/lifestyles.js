@@ -2,13 +2,14 @@
 // curated, explained shortlist. Each persona is a scored filter over the
 // catalog (hard requirements + soft preferences), so results rank by fit.
 import { el } from '../ui.js';
+import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { vtileGrid, emptyState } from './shared.js';
 
 // score(v) → null to exclude, or a number (higher = better fit).
 const PERSONAS = [
   {
-    key:'first-car', emoji:'🎓', name:'My first car',
+    key:'first-car', ic:'key', name:'My first car',
     blurb:'Affordable, easy to park, cheap to run — and safe.',
     score(v){
       if(v.priceFrom==null || v.priceFrom>32000) return null;
@@ -20,7 +21,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'family', emoji:'👨‍👩‍👧‍👦', name:'Growing family',
+    key:'family', ic:'users', name:'Growing family',
     blurb:'Three rows or giant cargo, sliding-door sanity welcome.',
     score(v){
       const seats = Math.max(...(v.seats||[0]));
@@ -32,7 +33,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'comfort', emoji:'🌷', name:'Comfort & confidence',
+    key:'comfort', ic:'shield', name:'Comfort & confidence',
     blurb:'Easy in and out, great visibility, real buttons, no drama. Perfect when climbing into a big rig — or down into a sports car — is a hard no.',
     score(v){
       const h = v.dims?.heightIn ?? 0;
@@ -51,7 +52,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'adventure', emoji:'🏔️', name:'Weekend adventurer',
+    key:'adventure', ic:'mountain', name:'Weekend adventurer',
     blurb:'AWD, clearance, cargo for bikes, boards and mud.',
     score(v){
       if(!(v.powertrains||[]).some(p=>(p.drive||[]).some(d=>['AWD','4WD'].includes(d)))) return null;
@@ -61,7 +62,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'eco', emoji:'🌱', name:'Eco commuter',
+    key:'eco', ic:'leaf', name:'Eco commuter',
     blurb:'Electric or seriously efficient — lowest running costs.',
     score(v){
       const best = Math.max(...(v.powertrains||[]).map(p=>p.mpgCombined||0));
@@ -74,7 +75,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'work', emoji:'🔧', name:'Work & tow',
+    key:'work', ic:'truck', name:'Work & tow',
     blurb:'Payload, trailers, tools — a truck that earns its keep.',
     score(v){
       if(v.bodyStyle!=='pickup' && (v.towingLb||0)<6000) return null;
@@ -82,7 +83,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'fun', emoji:'🏁', name:'Pure fun',
+    key:'fun', ic:'bolt', name:'Pure fun',
     blurb:'Coupes, convertibles, hot hatches — smiles per mile.',
     score(v){
       const hp = Math.max(...(v.powertrains||[]).map(p=>p.hp||0));
@@ -95,7 +96,7 @@ const PERSONAS = [
     },
   },
   {
-    key:'luxury', emoji:'🥂', name:'Luxury lounge',
+    key:'luxury', ic:'sparkle', name:'Luxury lounge',
     blurb:'First-class cabins, quiet power, no compromises.',
     score(v){
       if(v.priceFrom==null || v.priceFrom<68000) return null;
@@ -116,7 +117,7 @@ export function renderLifestyles(view, ctx){
 
   PERSONAS.forEach(p=>{
     grid.append(el('button',{class:'persona-card', onclick:()=>show(p)},[
-      el('div',{class:'p-emoji', text:p.emoji}),
+      el('div',{class:'p-ic', html:icon(p.ic,26)}),
       el('h3',{text:p.name}),
       el('p',{text:p.blurb}),
     ]));
@@ -132,7 +133,7 @@ export function renderLifestyles(view, ctx){
     Store.recordFinderRun('Lifestyles', [{q:'persona', a:p.name}], ranked.slice(0,12).map(v=>v.id));
     results.innerHTML='';
     results.append(el('div',{class:'section-head'},[
-      el('h2',{text:`${p.emoji} Best matches for “${p.name}”`}),
+      el('h2',{class:'ls-result-h', html:`<span class="ls-result-ic">${icon(p.ic,20)}</span> Best matches for “${p.name}”`}),
       el('div',{class:'sub', text:`${ranked.length} candidates ranked by fit — top 12 shown. ${p.blurb}`}),
     ]));
     results.append(ranked.length ? vtileGrid(ranked.slice(0,12), ctx)

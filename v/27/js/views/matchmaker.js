@@ -1,17 +1,20 @@
 // views/matchmaker.js — the question-by-question finder.
 //
-// Answer friendly questions ("Not sure" is always allowed — it just skips
-// the filter) and watch the live counter + dot field whittle the whole 2026
-// market down to a handful. Every option carries a predicate over the
-// vehicle record; the pool is re-filtered after each answer.
+// Fun rules: nothing is forced. Most questions are MULTI-SELECT — tap every
+// answer that's true for you and the choices are OR-combined — and every
+// question has a "Not sure / don't care" that simply skips the filter.
+// The live counter + dot field whittle the whole 2026 market down as you go.
 import { el } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { vtileGrid, emptyState } from './shared.js';
 
+// Each option carries a predicate p(vehicle). On multi-select questions the
+// selected options are OR-combined (a vehicle survives if ANY selected
+// option matches).
 const Q = [
   {
-    key:'use', title:'What will this car mostly do?', sub:'Pick the closest — this just sets the direction.',
+    key:'use', multi:true, title:'What will this car do?', sub:'Tap everything that applies — commuting weekdays AND camping weekends is a normal life.',
     opts:[
       { t:'Daily commute', ic:'road',    hint:'Efficient, easy to live with', p:v=>['sedan','hatchback','suv','wagon'].includes(v.bodyStyle) },
       { t:'Haul the family', ic:'users', hint:'Room for kids, gear, grandparents', p:v=>(v.seats||[]).some(s=>s>=6)||['minivan','suv'].includes(v.bodyStyle) },
@@ -21,7 +24,7 @@ const Q = [
     ],
   },
   {
-    key:'people', title:'How many people ride along?', sub:'Regularly — not the once-a-year airport run.',
+    key:'people', multi:false, title:'How many people ride along?', sub:'Regularly — not the once-a-year airport run.',
     opts:[
       { t:'Mostly just me (or +1)', ic:'car',  p:()=>true },
       { t:'Up to 5', ic:'users',               p:v=>(v.seats||[]).some(s=>s>=5) },
@@ -29,16 +32,16 @@ const Q = [
     ],
   },
   {
-    key:'budget', title:'Where’s your budget comfy?', sub:'Base price — options come later.',
+    key:'budget', multi:true, title:'Where’s your budget comfy?', sub:'Base price — pick one band or a couple of neighbors.',
     opts:[
       { t:'Under $30k', ic:'dollar',  p:v=>v.priceFrom!=null && v.priceFrom<30000 },
-      { t:'$30k – $45k', ic:'dollar', p:v=>v.priceFrom!=null && v.priceFrom>=25000 && v.priceFrom<45000 },
-      { t:'$45k – $70k', ic:'dollar', p:v=>v.priceFrom!=null && v.priceFrom>=40000 && v.priceFrom<70000 },
+      { t:'$30k – $45k', ic:'dollar', p:v=>v.priceFrom!=null && v.priceFrom>=27500 && v.priceFrom<45000 },
+      { t:'$45k – $70k', ic:'dollar', p:v=>v.priceFrom!=null && v.priceFrom>=42000 && v.priceFrom<70000 },
       { t:'$70k+', ic:'sparkle',      p:v=>v.priceFrom!=null && v.priceFrom>=70000 },
     ],
   },
   {
-    key:'fuel', title:'What should power it?', sub:'"Not sure" keeps every option open.',
+    key:'fuel', multi:true, title:'What should power it?', sub:'Tap every kind you’d happily live with.',
     opts:[
       { t:'Good old gas', ic:'fuel',      p:v=>(v.powertrains||[]).some(p=>p.type==='gas') },
       { t:'Hybrid', ic:'leaf',            hint:'No plug, great MPG', p:v=>(v.powertrains||[]).some(p=>p.type==='hybrid') },
@@ -47,7 +50,7 @@ const Q = [
     ],
   },
   {
-    key:'size', title:'How should it feel on the road?', sub:'Think parking spots and driveways too.',
+    key:'size', multi:true, title:'How should it feel on the road?', sub:'Think parking spots and driveways too. Two neighboring sizes is a fine answer.',
     opts:[
       { t:'Small & nimble', ic:'car',   hint:'Easy to park anywhere', p:v=>(v.dims?.lengthIn??999)<182 },
       { t:'Balanced middle', ic:'car',  p:v=>{ const L=v.dims?.lengthIn; return L!=null && L>=178 && L<=198; } },
@@ -55,31 +58,33 @@ const Q = [
     ],
   },
   {
-    key:'entry', title:'Getting in and out?', sub:'A real comfort factor people forget to check.',
+    key:'entry', multi:true, title:'How do you want to get in?', sub:'Ride height is a real comfort factor people forget to check — pick every one that suits you.',
     opts:[
-      { t:'Easy step-in, sit up high', ic:'suv', hint:'No climbing down or up', p:v=>['suv','minivan','pickup','van'].includes(v.bodyStyle) && (v.dims?.heightIn??0)>=63 },
-      { t:'Low & sporty is fine', ic:'car', p:()=>true },
+      { t:'Sit up high', ic:'suv', hint:'Commanding view — a step up to climb in', p:v=>(v.dims?.heightIn??0)>=66 },
+      { t:'Slide straight in', ic:'car', hint:'Hip-height seat — no climbing up or dropping down', p:v=>{ const h=v.dims?.heightIn; return h!=null && h>=57 && h<66; } },
+      { t:'Low & sporty', ic:'car', hint:'Sit low and drop down into it', p:v=>(v.dims?.heightIn??999)<57 },
     ],
   },
   {
-    key:'controls', title:'Buttons or screens?', sub:'Some cars bury climate controls in menus.',
+    key:'controls', multi:true, title:'Buttons or screens?', sub:'Some cars bury climate controls in menus. Pick either — or both if you don’t mind.',
     opts:[
       { t:'Real knobs, please', ic:'wheel', hint:'Physical climate & volume controls', p:v=>v.physicalControls?.climate && v.physicalControls?.audio },
-      { t:'Touchscreens are fine', ic:'grid', p:()=>true },
+      { t:'Touchscreen-first is fine', ic:'grid', hint:'Most controls live on the screen', p:v=>!(v.physicalControls?.climate && v.physicalControls?.audio) },
     ],
   },
   {
-    key:'weather', title:'Snow, rain, rough roads?', sub:'All-wheel drive matters if winter is real where you live.',
+    key:'weather', multi:false, title:'Snow, rain, rough roads?', sub:'All-wheel drive matters if winter is real where you live.',
     opts:[
       { t:'Yes — give me AWD/4WD', ic:'snow', p:v=>(v.powertrains||[]).some(p=>(p.drive||[]).some(d=>['AWD','4WD'].includes(d))) },
       { t:'Not really', ic:'sun', p:()=>true },
     ],
   },
   {
-    key:'spare', title:'One last practical one: spare tire?', sub:'Long road trips far from help? A full-size spare is gold.',
+    key:'spare', multi:true, title:'Flat-tire plan?', sub:'Tap every setup you could live with — being open here keeps more great cars in.',
     opts:[
-      { t:'Full-size spare, please', ic:'wheel', p:v=>v.spareTire==='full-size' },
-      { t:'Whatever’s standard', ic:'check', p:()=>true },
+      { t:'Full-size spare', ic:'wheel',       hint:'The road-tripper’s security blanket', p:v=>v.spareTire==='full-size' },
+      { t:'Donut (temporary) is fine', ic:'wheel', hint:'Gets you to the shop', p:v=>v.spareTire==='temporary' },
+      { t:'Repair kit / run-flats OK', ic:'check', hint:'Lightest option — no spare at all', p:v=>v.spareTire==='none' },
     ],
   },
 ];
@@ -97,7 +102,7 @@ export function renderMatchmaker(view, ctx){
 
   const head = el('div',{class:'finder-head'},[
     el('h2',{text:'Match Maker'}),
-    el('p',{text:'Answer a few questions and watch the whole 2026 market shrink to your shortlist. Not sure about one? Skip it — no wrong answers.'}),
+    el('p',{text:'Tap every answer that fits — most questions welcome more than one — and watch the whole 2026 market shrink to your shortlist. Not sure? Skip it. No wrong answers.'}),
   ]);
   const counter = el('div',{class:'finder-count'},[
     el('span',{class:'fc-n', text:String(pool.length)}),
@@ -126,15 +131,34 @@ export function renderMatchmaker(view, ctx){
     stage.innerHTML='';
     if(step>=questions.length || pool.length<=3){ return results(); }
     const q = questions[step];
+    const selected = new Set();
     const card = el('div',{class:'q-card'});
     card.append(el('h3',{text:q.title}), el('div',{class:'q-sub', text:q.sub}));
     const opts = el('div',{class:'q-opts'});
+
+    const contBtn = el('button',{class:'btn primary', style:'display:none', html:`Lock it in ${icon('chevron',14)}`,
+      onclick:()=>answer(q, [...selected])});
+
     q.opts.forEach(o=>{
-      opts.append(el('button',{class:'q-opt', onclick:()=>answer(q, o)},[
+      const b = el('button',{class:'q-opt'},[
         el('span',{class:'q-ic', html:icon(o.ic,22)}),
         el('span',{text:o.t}),
         o.hint?el('small',{text:o.hint}):null,
-      ]));
+      ]);
+      if(q.multi){
+        b.setAttribute('aria-pressed','false');
+        b.addEventListener('click', ()=>{
+          if(selected.has(o)) selected.delete(o); else selected.add(o);
+          const on = selected.has(o);
+          b.classList.toggle('sel', on);
+          b.setAttribute('aria-pressed', String(on));
+          contBtn.style.display = selected.size ? '' : 'none';
+          liveCount();
+        });
+      } else {
+        b.addEventListener('click', ()=>answer(q, [o]));
+      }
+      opts.append(b);
     });
     opts.append(el('button',{class:'q-opt skip', onclick:()=>answer(q, null)},[
       el('span',{class:'q-ic', html:icon('question',22)}),
@@ -142,16 +166,29 @@ export function renderMatchmaker(view, ctx){
       el('small',{text:'Skip — keeps everything in'}),
     ]));
     card.append(opts);
+
+    // On multi questions a live line previews what the current picks keep in.
+    const preview = el('div',{class:'muted tiny', style:'text-align:center;margin-top:12px;min-height:1.2em'});
+    if(q.multi) card.append(preview);
+    function liveCount(){
+      if(!selected.size){ preview.textContent=''; return; }
+      const n = pool.filter(v=>[...selected].some(o=>o.p(v))).length;
+      preview.textContent = `${selected.size} pick${selected.size>1?'s':''} → ${n} vehicle${n===1?'':'s'} stay in`;
+    }
+
     const foot = el('div',{class:'finder-foot', style:'margin-top:16px'});
     if(step>0) foot.append(el('button',{class:'btn ghost sm', html:`${icon('undo',14)} Back`, onclick:back}));
+    if(q.multi) foot.append(contBtn);
     card.append(foot);
     stage.append(card);
   }
 
-  function answer(q, opt){
-    answers.push({ q:q.key, a:opt?opt.t:'(skipped)', pool:[...pool] });
-    if(opt){
-      const next = pool.filter(opt.p);
+  // opts: array of selected options (OR-combined), or null for skip.
+  function answer(q, opts){
+    const label = opts ? opts.map(o=>o.t).join(' + ') : '(skipped)';
+    answers.push({ q:q.key, a:label, pool:[...pool] });
+    if(opts && opts.length){
+      const next = pool.filter(v=>opts.some(o=>o.p(v)));
       if(next.length===0){
         // Never strand the user at zero: keep the pool and tell them.
         stage.prepend(el('div',{class:'callout warn', html:`<span class="ci">${icon('warn',15)}</span><span>No vehicle matches <b>every</b> answer so far — we kept your list as-is and skipped that one.</span>`}));
