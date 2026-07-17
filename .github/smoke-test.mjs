@@ -82,7 +82,7 @@ async function checkPage(browser, url, mustFind, label){
       console.log(`✓ hero carousel: ${hc.slides} slides, image loaded, caption live`);
     }
     // 2) the app — open access, rail must render
-    await checkPage(browser, `http://localhost:${PORT}/app/`, '#rail .rail-item', 'app');
+    await checkPage(browser, `http://localhost:${PORT}/app/`, '.ps-rail .ps-rail-item', 'app');
 
     // 3) navigate every section; no throw, no stray "undefined" text
     const page = await browser.newPage();
@@ -92,7 +92,7 @@ async function checkPage(browser, url, mustFind, label){
     for(const sec of SECTIONS){
       // dispatch the click straight on the element so the welcome tour's
       // backdrop (auto-opens on a fresh workspace) can't stall Playwright
-      await page.evaluate(s=>document.querySelector(`.rail-item[data-sec="${s}"]`)?.click(), sec);
+      await page.evaluate(s=>document.querySelector(`.ps-rail-item[data-sec="${s}"]`)?.click(), sec);
       await page.waitForTimeout(350);
       const bad = await page.evaluate(()=>{
         const view = document.querySelector('#view'); if(!view) return 'no #view';
@@ -137,8 +137,8 @@ async function checkPage(browser, url, mustFind, label){
       throw new Error('mobile: marketing page overflows horizontally at 390px');
 
     await mp.goto(`http://localhost:${PORT}/app/#browse`, { waitUntil:'domcontentloaded' });
-    await mp.waitForSelector('#rail .rail-item'); await mp.waitForTimeout(500);
-    if(await mp.evaluate(()=>{ const b=[...document.querySelectorAll('.topbar > *')].pop(); return b ? b.getBoundingClientRect().right > innerWidth+1 : false; }))
+    await mp.waitForSelector('.ps-rail .ps-rail-item'); await mp.waitForTimeout(500);
+    if(await mp.evaluate(()=>{ const b=[...document.querySelectorAll('.ps-topbar > *')].pop(); return b ? b.getBoundingClientRect().right > innerWidth+1 : false; }))
       throw new Error('mobile: app topbar buttons overflow the 390px viewport');
     // vehicle modal must fit the viewport
     await mp.evaluate(()=>document.querySelector('.vtile')?.click());
@@ -198,7 +198,7 @@ async function checkPage(browser, url, mustFind, label){
         wp.on('pageerror', e=>wErrs.push('pageerror: '+e));
         wp.on('console', m=>{ if(m.type()==='error') wErrs.push('console: '+m.text()); });
         await wp.goto(`http://localhost:${PORT}/app/`, { waitUntil:'networkidle', timeout:20000 });
-        await wp.waitForSelector('#rail .rail-item', { timeout:12000 });
+        await wp.waitForSelector('.ps-rail .ps-rail-item', { timeout:12000 });
         const bad = [];
         for(const sec of SECTIONS){
           await wp.evaluate(s=>location.hash=s, sec); await wp.waitForTimeout(320);
