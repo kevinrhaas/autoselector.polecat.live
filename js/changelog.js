@@ -21,6 +21,15 @@
 
 export const CHANGELOG = [
   {
+    v: 32,
+    title: 'Shell caught up to v0.4.0',
+    kind: 'fix',
+    ts: '2026-07-17T08:55:15.933Z',
+    items: [
+      'Vendored Polecat Shell refreshed from v0.1.0 to v0.4.0 — the shared fleet app catalog now carries Analytics’s current tagline, the icon set gained the chrome/media controls (back, fullscreen, sound, muted) promoted from Games, toasts gained an inline action button, and modal/sheet bodies now accept HTML strings alongside DOM nodes.',
+    ],
+  },
+  {
     v: 31,
     title: 'Mind Reader now crowns a clear #1 match — and you can step back a question',
     kind: 'fix',
