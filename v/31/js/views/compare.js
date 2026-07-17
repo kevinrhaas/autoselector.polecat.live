@@ -14,6 +14,16 @@ export function renderCompare(view, ctx){
     vs.length ? el('button',{class:'btn sm ghost', text:'Clear all', onclick:()=>{ Store.clearCompare(); ctx.refresh(); }}) : null,
   ]));
 
+  // quick-add from the shortlist when there's a free slot
+  const spare = Store.shortlist().filter(v=>!Store.inCompare(v.id));
+  if(vs.length<4 && spare.length){
+    const row = el('div',{class:'chip-row', style:'margin:-4px 0 14px'});
+    row.append(el('span',{class:'muted tiny', text:'Add from shortlist:', style:'align-self:center'}));
+    spare.slice(0,8).forEach(v=>row.append(el('button',{class:'pill', html:`${logoImg(v.make,14)} ${escapeHtml(v.model)} +`,
+      onclick:()=>{ const r=Store.toggleCompare(v.id); if(r.full){ toast('Compare is full',{kind:'err'}); return; } ctx.refresh(); }})));
+    view.append(row);
+  }
+
   if(vs.length<2){
     view.append(emptyState({ title: vs.length ? 'Add one more to compare' : 'Nothing to compare yet',
       body:'Open any vehicle and hit “Compare” (or press C) — up to four line up here.', icon:'compare' }));
