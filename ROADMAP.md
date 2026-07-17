@@ -168,6 +168,10 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 
 ## Shipped
 
+- [x] v28 — Mind Reader finder — a psychological/abstract finder (100+ odd,
+  non-car questions) that scores every vehicle across 14 traits and whittles
+  the pool, with a tap-to-reveal "why did it shrink?" and a "give me a
+  different question" skip. (js/data/oracle.js + js/views/oracle.js)
 - [x] v10 — Shopping-cart multi-select on All Vehicles (Select mode → Compare
   or a persistent Shortlist), searchable multi-brand picker, seat min AND max
   filter, at-a-glance relative-standing bars (vs class / all / brand) on the

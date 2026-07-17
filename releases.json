@@ -1,5 +1,11 @@
 [
   {
+    "v": 28,
+    "title": "New finder — Mind Reader reads your taste from questions that aren’t about cars",
+    "date": "Jul 16, 2026, 8:15 PM CT",
+    "path": "/v/28/app/"
+  },
+  {
     "v": 27,
     "title": "Match Maker — the getting-in and controls questions are multi-select now",
     "date": "Jul 16, 2026, 3:45 PM CT",
@@ -136,11 +142,5 @@
     "title": "Multi-select finders, cited stats, dealers near you",
     "date": "Jul 6, 2026, 1:21 PM CT",
     "path": "/v/3/app/"
-  },
-  {
-    "v": 2,
-    "title": "Marketing hero: the app, front and center",
-    "date": "Jul 6, 2026, 8:52 AM CT",
-    "path": "/v/2/app/"
   }
 ]
