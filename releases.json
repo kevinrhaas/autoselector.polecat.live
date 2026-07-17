@@ -1,5 +1,11 @@
 [
   {
+    "v": 35,
+    "title": "Mind Reader gets 197 new questions — 300+ in the library now",
+    "date": "Jul 17, 2026, 1:29 PM CT",
+    "path": "/v/35/app/"
+  },
+  {
     "v": 34,
     "title": "Acura photos rounded out — the ADX and RDX now have pictures, plus new interiors",
     "date": "Jul 17, 2026, 10:22 AM CT",
@@ -136,11 +142,5 @@
     "title": "Lexus data sweep: sources, trims, colors — and a lineup correction",
     "date": "Jul 9, 2026, 2:49 PM CT",
     "path": "/v/8/app/"
-  },
-  {
-    "v": 7,
-    "title": "Changelog now syncs cleanly to the rest of the fleet",
-    "date": "Jul 8, 2026, 3:05 PM CT",
-    "path": "/v/7/app/"
   }
 ]
