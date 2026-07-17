@@ -67,14 +67,15 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   manufacturer configurators; classify every interior as dark or light and
   reconcile with `interior.lightInterior/darkInterior`. UI renders swatches.
 - [ ] **2026-photo audit + fill** — every photo must show the actual 2026
-  model-year generation. 129 of 325 models now have local photos (all 11
-  Lexus models added 2026-07-16). Audit the
+  model-year generation. 137 of 325 models now have local photos (all 11
+  Lexus models added 2026-07-16; the vetted batch — gmc-canyon, ford-ranger,
+  ford-expedition, ford-bronco-sport, jeep-compass, dodge-durango, bmw-x3,
+  mercedes-benz-c-class — added 2026-07-16). Audit the
   existing shots, replace any prior-generation ones, and keep adding missing
   models (current-gen only — skip models whose only Commons photo is an old
-  generation and note them; acura-rdx is a known skip). A vetted, ready-to-run
-  next batch (gmc-canyon, ford-ranger, ford-expedition, bronco-sport,
-  jeep-compass, dodge-durango, bmw-x3, mercedes-benz-c-class, lexus-nx/gx/tx)
-  is in `.github/next-photo-batch.py`.
+  generation and note them; acura-rdx is a known skip). Next candidates: use a
+  research agent to find current-gen free Commons files for the remaining
+  ~188 models, prioritizing best-sellers.
 - [ ] **Real nearby-dealer lists** — beyond the Maps/locator links: verify
   every brand's dealer-locator URL in `js/dealers.js` during brand sweeps;
   explore free dealer APIs for true in-app closest-3 lists using the saved
