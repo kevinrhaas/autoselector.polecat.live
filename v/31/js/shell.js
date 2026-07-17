@@ -14,6 +14,7 @@ export const SECTIONS = [
   { group:'Finders' },
   { key:'matchmaker', label:'Match Maker',     icon:'target' },
   { key:'lifestyles', label:'Lifestyles',      icon:'users' },
+  { key:'oracle',     label:'Mind Reader',     icon:'wand' },
   { key:'budget',     label:'Budget Explorer', icon:'chart' },
   { group:'My Garage' },
   { key:'garage',     label:'Garage',          icon:'garage' },

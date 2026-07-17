@@ -1204,6 +1204,16 @@ input[type=color].color-input{width:34px;height:30px;flex:none;padding:2px;borde
 .or-detail .or-ex{margin:0;font-size:12.5px}
 .or-drop{color:var(--text-3)}
 .or-keep{color:var(--brand-2);font-weight:600}
+/* Mind Reader results — the crowned #1 match + the runners-up */
+.oracle-winner{position:relative;margin:18px auto 6px;max-width:360px;
+  border:1.5px solid color-mix(in srgb,var(--brand) 55%,var(--border));border-radius:calc(var(--radius-lg) + 2px);
+  padding:14px 14px 6px;background:color-mix(in srgb,var(--brand) 7%,var(--surface));
+  box-shadow:0 6px 26px -12px color-mix(in srgb,var(--brand) 60%,transparent)}
+.oracle-winner .vtile{background:var(--surface)}
+.ow-badge{display:inline-flex;align-items:center;gap:6px;margin:0 auto 12px;
+  padding:5px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.02em;
+  color:#fff;background:linear-gradient(90deg,var(--brand),var(--accent))}
+.oracle-rest-h{font-size:14px;color:var(--text-2);font-weight:700;margin:22px 0 10px;text-align:center}
 .finder-foot{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 
 /* whittle strip — silhouettes fading away as the pool shrinks */

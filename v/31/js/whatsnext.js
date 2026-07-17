@@ -1,24 +1,26 @@
 // What's-next: the public, machine-readable slice of the roadmap. Newest
-// planning first. Fleet convention (like relay's
-// https://relay.polecat.live/js/whatsnext.js): every project exports a
-// `WHATSNEXT` array from js/whatsnext.js so people — and sibling apps — can
-// see what's coming, e.g. https://autoselector.polecat.live/js/whatsnext.js
+// planning first. Fleet convention (like relay's whatsnext feed): every
+// project exports a whatsnext array from js/whatsnext.js so people — and
+// sibling apps — can see what's coming.
+// Each entry: status ('next' | 'planned' | 'exploring'), title, detail.
 //
-// The self-improvement loop keeps this in sync with ROADMAP.md: when an item
-// ships it moves into js/changelog.js; when planning changes, edit here.
-// Each entry: { title, detail, status:'next'|'planned'|'exploring', eta? }
-import { el, modal } from './ui.js';
-import { icon } from './icons.js';
+// PURE DATA — no imports, no functions, and no "[" bracket in this header
+// (naive fetchers find the array by the export token then the next "["). The
+// UI that renders this lives in js/whatsnew.js. The self-improvement loop
+// keeps this in sync with ROADMAP.md; when an item ships it moves into
+// js/changelog.js.
 
 export const WHATSNEXT = [
+  { status:'next', title:'Public ratings for every model',
+    detail:'NHTSA safety stars, IIHS awards, and owner and expert scores — each source-linked. Live for 50 popular models today, rolling out to the rest, honestly omitting anything not yet published.' },
+  { status:'next', title:'Interior & multi-photo galleries',
+    detail:'Real cabin and extra-angle photos on every vehicle page — current generation only. 47 models live; expanding across the catalog.' },
   { status:'next', title:'Sources for every stat',
-    detail:'Every vehicle page gets precise, verified citations (manufacturer 2026 pages, fueleconomy.gov, price guides) — the 30 most popular models are live, ~15 more per run until all 326 are cited.' },
+    detail:'Every vehicle page gets precise, verified citations (manufacturer 2026 pages, fueleconomy.gov, price guides) — 93 of 325 models are live (Toyota, Lexus, Subaru, Honda, Acura, Ford and Lincoln are fully cited), ~15 more per run until all 325 are cited.' },
   { status:'next', title:'Trim-level options & equipment',
     detail:'Different trims carry different options — per-trim notable-equipment lists roll out brand by brand (the UI column is already live).' },
   { status:'next', title:'Colors with real swatches',
     detail:'All exterior colors and interior colors per model, with samples, and every interior classified light or dark.' },
-  { status:'next', title:'2026-photo audit + missing images',
-    detail:'Every photo must show the actual 2026-model-year generation; auditing existing shots and adding missing models (current generation only).' },
   { status:'next', title:'Per-make data verification sweeps',
     detail:'The loop re-verifies one manufacturer per run against current published specs and prices, raising every record to high confidence.' },
   { status:'planned', title:'More fun multi-select finders & visuals',
@@ -34,20 +36,3 @@ export const WHATSNEXT = [
   { status:'exploring', title:'EPA + NHTSA live data hooks',
     detail:'Pull fuel economy and safety ratings straight from public APIs where CORS allows.' },
 ];
-
-export function openWhatsNext(){
-  const LBL = { next:'Up next', planned:'Planned', exploring:'Exploring' };
-  const body = el('div');
-  ['next','planned','exploring'].forEach(st=>{
-    const items = WHATSNEXT.filter(w=>w.status===st);
-    if(!items.length) return;
-    body.append(el('div',{class:'sc-group-title muted tiny', text:LBL[st]}));
-    items.forEach(w=>{
-      body.append(el('div',{style:'padding:10px 0;border-bottom:1px solid var(--border)'},[
-        el('b',{text:w.title}),
-        el('div',{class:'muted', style:'font-size:13px;margin-top:3px', text:w.detail}),
-      ]));
-    });
-  });
-  return modal({ title:"What's next", icon:icon('road',20), body, wide:true });
-}

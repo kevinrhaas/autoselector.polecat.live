@@ -6,11 +6,30 @@ import { vtileGrid, emptyState } from './shared.js';
 
 export function renderGarage(view, ctx){
   const favs = Store.favorites();
+  const shortlist = Store.shortlist();
 
   view.append(el('div',{class:'section-head'},[
     el('h2',{text:'My Garage'}),
-    el('div',{class:'sub', text:'Everything you’ve saved — favorites, searches, and past finder runs.'}),
+    el('div',{class:'sub', text:'Everything you’ve saved — your shortlist, favorites, searches, and past finder runs.'}),
   ]));
+
+  // ---- shortlist (the cart you build in All Vehicles) ----
+  if(shortlist.length){
+    view.append(el('div',{class:'section-head', style:'margin-top:4px'},[
+      el('h2',{text:'Your shortlist'}),
+      el('div',{class:'sub', text:`${shortlist.length} vehicle${shortlist.length===1?'':'s'} lined up`}),
+    ]));
+    view.append(vtileGrid(shortlist, ctx));
+    const row = el('div',{style:'display:flex;gap:8px;margin-top:14px;flex-wrap:wrap'});
+    if(shortlist.length>=2) row.append(el('button',{class:'btn primary', html:`${icon('compare',15)} Compare shortlist${shortlist.length>4?' (first 4)':''}`,
+      onclick:()=>{ Store.compareFromShortlist(); ctx.navigate('compare'); }}));
+    row.append(el('button',{class:'btn ghost', html:`${icon('trash',14)} Clear shortlist`, onclick:async ()=>{
+      if(await confirmDialog({ title:'Clear your shortlist?', message:`${shortlist.length} vehicles — you can undo this afterwards.`, okText:'Clear', danger:true }))
+        { Store.clearShortlist(); ctx.refresh(); }
+    }}));
+    view.append(row);
+    view.append(el('div',{class:'section-head', style:'margin-top:22px'},[ el('h2',{text:'Favorites'}) ]));
+  }
 
   if(favs.length){
     view.append(vtileGrid(favs, ctx));

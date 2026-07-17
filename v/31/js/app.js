@@ -13,6 +13,7 @@ import { renderHome } from './views/home.js';
 import { renderBrowse } from './views/browse.js';
 import { renderMatchmaker } from './views/matchmaker.js';
 import { renderLifestyles } from './views/lifestyles.js';
+import { renderOracle } from './views/oracle.js';
 import { renderBudget } from './views/budget.js';
 import { renderGarage } from './views/garage.js';
 import { renderCompare } from './views/compare.js';
@@ -22,15 +23,15 @@ import { renderAdmin } from './views/admin.js';
 import { renderSettings } from './views/settings.js';
 import { openVehicle } from './views/vehicle.js';
 import { openSearch } from './views/search.js';
-import { openWhatsNew, hasUnread } from './changelog.js';
+import { openWhatsNew, hasUnread } from './whatsnew.js';
 import { maybeStartTour } from './tour.js';
 import { openShortcuts } from './shortcuts.js';
 
 const TITLES = { home:'Home', browse:'All Vehicles', matchmaker:'Match Maker', lifestyles:'Lifestyles',
-  budget:'Budget Explorer', garage:'My Garage', compare:'Compare', history:'History',
+  oracle:'Mind Reader', budget:'Budget Explorer', garage:'My Garage', compare:'Compare', history:'History',
   docs:'Documentation', admin:'Admin', settings:'Settings' };
 const RENDERERS = { home:renderHome, browse:renderBrowse, matchmaker:renderMatchmaker,
-  lifestyles:renderLifestyles, budget:renderBudget, garage:renderGarage, compare:renderCompare,
+  lifestyles:renderLifestyles, oracle:renderOracle, budget:renderBudget, garage:renderGarage, compare:renderCompare,
   history:renderHistory, docs:renderDocs, admin:renderAdmin, settings:renderSettings };
 
 let rail, view, topTitle;
@@ -103,9 +104,9 @@ async function boot(){
 }
 
 function applySimple(){
+  // data-reduce-motion is stamped by theme.js's Store subscription instead —
+  // see the reduce-motion bridge comment there.
   document.documentElement.setAttribute('data-simple', Store.settings().simpleMode ? '1':'0');
-  if(Store.settings().reduceMotion) document.documentElement.setAttribute('data-reduce-motion','1');
-  else document.documentElement.removeAttribute('data-reduce-motion');
 }
 
 // ---- routing ---------------------------------------------------------------
@@ -185,8 +186,8 @@ function wireKeyboard(){
     if(typing || e.metaKey || e.ctrlKey || e.altKey) return;
     if(e.key==='/' ){ e.preventDefault(); openSearch({ onOpenVehicle:openVehicleById }); }
     else if(e.key==='?'){ e.preventDefault(); openShortcuts(); }
-    else if(e.key>='1' && e.key<='5' && !document.querySelector('.modal-back')){
-      navigate(['home','browse','matchmaker','lifestyles','budget'][+e.key-1]);
+    else if(e.key>='1' && e.key<='6' && !document.querySelector('.modal-back')){
+      navigate(['home','browse','matchmaker','lifestyles','oracle','budget'][+e.key-1]);
     }
   });
 }
