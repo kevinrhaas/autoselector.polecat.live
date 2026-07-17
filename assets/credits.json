@@ -1,4 +1,29 @@
 {
+ "bmw-x3.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3ABMW_G45_X3_M_Sport_Alpine_White.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Damian B Oh"
+ },
+ "dodge-durango.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3A2021_Dodge_Durango_Citadel_(facelift)%2C_front_6.21.22.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Kevauto"
+ },
+ "ford-bronco-sport.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3A2026_Ford_Bronco_Sport_au_salon_auto_Lanaudi%C3%A8re_2025.jpg",
+  "license": "Public domain",
+  "author": "Bull-Doser"
+ },
+ "ford-expedition.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3A2025_Ford_Expedition_Tremor%2C_front_NYIAS_2025.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Kevauto"
+ },
+ "ford-ranger.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3AFord_Ranger_LARIAT_4WD_SuperCrew_(2024)_(53620395647).jpg",
+  "license": "CC BY 2.0",
+  "author": "Charles from Port Chester, New York"
+ },
  "gallery/chevrolet-colorado/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_interior.jpg",
   "license": "CC BY-SA 4.0",
@@ -521,6 +546,16 @@
   "author": "Raszbeary",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
+ "gmc-canyon.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3A2023_GMC_Canyon.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "42-BRT"
+ },
+ "jeep-compass.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3AJeep_Compass_(MP)_PHEV_Facelift_1X7A0139.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Alexander Migl"
+ },
  "lexus-es.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File%3ALexus-ES-2026.jpg",
   "license": "CC0",
@@ -810,6 +845,11 @@
   "source": "https://commons.wikimedia.org/wiki/File:Volvo_logo.svg",
   "license": "Public domain",
   "author": "Designed by Karl-Erik Forsberg in the 1950s."
+ },
+ "mercedes-benz-c-class.jpg": {
+  "source": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_W206_C_300_4MATIC_AMG_Line_Polar_White_(14).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Damian B Oh"
  },
  "vehicles/acura-integra.jpg": {
   "source": "https://commons.wikimedia.org/wiki/File%3A2023_Acura_Integra_A-Spec%2C_front_12.29.22.jpg",
