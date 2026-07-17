@@ -31,6 +31,13 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   `data-reduce-motion` itself (see js/changelog.js v12 — this also fixed a
   latent bug where toggling theme could silently reset the user's Reduce
   Motion preference).
+- [x] Vendor copy caught up from v0.1.0 to v0.4.0 (2026-07-17) — had drifted
+  three releases behind since the initial adoption PR, no `sync-shell`
+  dispatch had targeted this app since. Picked up the chrome/media icons
+  (back/fullscreen/sound/muted), the toast action button, HTML-string
+  modal/sheet bodies, and the refreshed fleet catalog tagline — all
+  additive, no app code changed. Keep it current with future `sync-shell`
+  dispatches (mirrors the jobtracker#11 / manager#14 catch-ups).
 - [ ] `initShell`/`rightPanel`/`appSwitcher(FLEET)` adoption (`js/shell.js` is
   still app-local) — a bigger slice touching the rail markup.
 - [ ] `initWhatsNew` adoption for the What's-New panel (`js/whatsnew.js` is
