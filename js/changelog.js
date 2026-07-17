@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 33,
+    title: 'Fleet app switcher + refreshed What\'s-New panel',
+    kind: 'polish',
+    ts: '2026-07-17T10:58:02.851Z',
+    items: [
+      'The topbar now has a waffle app-switcher, so you can hop straight to any other polecat.live app without leaving your place.',
+      'What\'s-New moved into a slide-in panel with search and feature/polish/fix filters instead of a plain list.',
+      'Internal-only: the rail/topbar frame now runs on the vendored Polecat Shell (initShell) instead of an AutoSelector-only implementation — same look, shared fleet code underneath.',
+    ],
+  },
+  {
     v: 32,
     title: 'Shell caught up to v0.4.0',
     kind: 'fix',

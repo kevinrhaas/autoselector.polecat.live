@@ -4,12 +4,12 @@ import { el, $ } from './ui.js';
 import { Store } from './store.js';
 
 const STEPS = [
-  { sel:'.rail-item[data-sec="home"]',       title:'Home base', body:'Your favorites, recent looks, and one-tap shortcuts into every finder land here.' },
-  { sel:'.rail-item[data-sec="matchmaker"]', title:'Match Maker', body:'Answer a few friendly questions — "not sure" is always an option — and watch the whole 2026 market whittle down to your car.' },
-  { sel:'.rail-item[data-sec="lifestyles"]',  title:'Lifestyles', body:'Pick the driver you are (first car, growing family, easy-in comfort…) and get a curated shortlist instantly.' },
-  { sel:'.rail-item[data-sec="browse"]',     title:'Every 2026 vehicle', body:'The full US catalog — filter by price, powertrain, seats, size, even physical climate knobs or a full-size spare.' },
-  { sel:'.rail-item[data-sec="garage"]',     title:'Your Garage', body:'Tap the heart on any car to save it here, add notes, and line up to four side by side in Compare.' },
-  { sel:'.rail-item[data-sec="settings"]',   title:'Make it yours', body:'Themes (AutoSelector or Polecat, dark or light), Simple mode, data tools, version switcher — and restart this tour anytime.' },
+  { sel:'.ps-rail-item[data-sec="home"]',       title:'Home base', body:'Your favorites, recent looks, and one-tap shortcuts into every finder land here.' },
+  { sel:'.ps-rail-item[data-sec="matchmaker"]', title:'Match Maker', body:'Answer a few friendly questions — "not sure" is always an option — and watch the whole 2026 market whittle down to your car.' },
+  { sel:'.ps-rail-item[data-sec="lifestyles"]',  title:'Lifestyles', body:'Pick the driver you are (first car, growing family, easy-in comfort…) and get a curated shortlist instantly.' },
+  { sel:'.ps-rail-item[data-sec="browse"]',     title:'Every 2026 vehicle', body:'The full US catalog — filter by price, powertrain, seats, size, even physical climate knobs or a full-size spare.' },
+  { sel:'.ps-rail-item[data-sec="garage"]',     title:'Your Garage', body:'Tap the heart on any car to save it here, add notes, and line up to four side by side in Compare.' },
+  { sel:'.ps-rail-item[data-sec="settings"]',   title:'Make it yours', body:'Themes (AutoSelector or Polecat, dark or light), Simple mode, data tools, version switcher — and restart this tour anytime.' },
 ];
 
 export function maybeStartTour(ctx){

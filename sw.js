@@ -7,7 +7,7 @@
 // online visit is never served stale JS after a deploy (this app ships new
 // builds hourly). The cache only kicks in when the network is unavailable,
 // which is exactly what "installable / offline-capable" needs here.
-const CACHE = 'as-shell-v1';
+const CACHE = 'as-shell-v2';   // bumped: initShell/appSwitcher/rightPanel adoption, js/shell.js removed
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();

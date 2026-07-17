@@ -38,12 +38,24 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   modal/sheet bodies, and the refreshed fleet catalog tagline — all
   additive, no app code changed. Keep it current with future `sync-shell`
   dispatches (mirrors the jobtracker#11 / manager#14 catch-ups).
-- [ ] `initShell`/`rightPanel`/`appSwitcher(FLEET)` adoption (`js/shell.js` is
-  still app-local) — a bigger slice touching the rail markup.
-- [ ] `initWhatsNew` adoption for the What's-New panel (`js/whatsnew.js` is
-  still app-local).
-- [ ] SW cache bump — not needed yet (no precached file list changed this
-  slice).
+- [x] `initShell`/`rightPanel`/`appSwitcher(FLEET)` adoption (2026-07-17) —
+  `js/shell.js` (the app-local rail) is gone; `js/sections.js` now holds the
+  declarative `SECTIONS` list fed to the vendored `initShell()`. The topbar's
+  nodes (title, search, undo, What's-New, theme, waffle) are built once and
+  re-slotted across rebuilds so their state survives admin-unlock/Simple-mode
+  toggles. `vendor/polecat-shell/{tokens,shell}.css` linked in `app/index.html`
+  before `css/styles.css`; the app keeps its own from-scratch `auto`/`polecat`
+  token blocks (no conflict — `--rail-accent`/`--font-display` fall through
+  from tokens.css since the app doesn't set them). Old `#rail`/`.rail-*`/
+  `#main`/`.topbar` CSS removed in favor of the shell's `ps-` prefixed classes.
+- [x] `initWhatsNew` adoption for the What's-New panel (2026-07-17) —
+  `openWhatsNew()` now opens the vendored `rightPanel()` + `initWhatsNew()`
+  (search + kind filters come free) instead of a local `modal()`. "What's
+  next" stays a separate, unchanged `modal()` (vendor whatsnew.js only covers
+  the changelog contract, not the roadmap feed).
+- [x] SW cache bump (2026-07-17, `as-shell-v1` → `as-shell-v2`) — the shell
+  swap changes enough cached JS/CSS that stale offline visitors need a clean
+  cache.
 
 ## Next up (ordered)
 
