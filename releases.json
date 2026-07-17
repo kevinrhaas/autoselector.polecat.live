@@ -1,5 +1,11 @@
 [
   {
+    "v": 34,
+    "title": "Acura photos rounded out — the ADX and RDX now have pictures, plus new interiors",
+    "date": "Jul 17, 2026, 10:22 AM CT",
+    "path": "/v/34/app/"
+  },
+  {
     "v": 31,
     "title": "Mind Reader now crowns a clear #1 match — and you can step back a question",
     "date": "Jul 16, 2026, 9:11 PM CT",
@@ -136,11 +142,5 @@
     "title": "Changelog now syncs cleanly to the rest of the fleet",
     "date": "Jul 8, 2026, 3:05 PM CT",
     "path": "/v/7/app/"
-  },
-  {
-    "v": 6,
-    "title": "Toyota data sweep: sources, trims & colors for all 24 models",
-    "date": "Jul 8, 2026, 10:21 AM CT",
-    "path": "/v/6/app/"
   }
 ]
