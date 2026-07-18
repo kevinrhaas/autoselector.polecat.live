@@ -1,5 +1,11 @@
 [
   {
+    "v": 37,
+    "title": "Mind Reader is multi-select — tap every answer that fits",
+    "date": "Jul 18, 2026, 8:44 AM CT",
+    "path": "/v/37/app/"
+  },
+  {
     "v": 36,
     "title": "Public safety ratings land — 17 more models get real NHTSA stars and IIHS awards",
     "date": "Jul 18, 2026, 5:45 AM CT",
@@ -136,11 +142,5 @@
     "title": "Build a shortlist, see real ratings, and gauge every spec at a glance",
     "date": "Jul 15, 2026, 1:19 AM CT",
     "path": "/v/10/app/"
-  },
-  {
-    "v": 9,
-    "title": "Subaru and Honda data sweeps — sources, trims, colors, corrections",
-    "date": "Jul 12, 2026, 1:46 AM CT",
-    "path": "/v/9/app/"
   }
 ]
