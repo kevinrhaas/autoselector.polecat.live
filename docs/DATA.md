@@ -53,6 +53,8 @@ brands, from the Chevrolet Trax to the Ferrari F80. Conventions:
 | `colors.interior[]` | `colors` (JSON) | `{name,hex,tone:'dark'\|'light'}` — every interior classified dark or light |
 | `confidence` | `confidence` | high · medium · low (record-level honesty) |
 | `notes` | `notes` | provenance, caveats, discontinuations |
+| `ratings.safety.nhtsa/iihs` | `ratings` (JSON) | NHTSA overall stars (api.nhtsa.gov/SafetyRatings) and/or IIHS award (iihs.org), each with `appliesTo` (model year the test result covers — carries forward only across an unchanged generation) and a `source` citation |
+| `ratings.owner/expert` | `ratings` (JSON) | consumer/expert scores (`score`, `scale`, optional `count`) with a `source` citation — added only where a real number sits on a real page |
 
 Powertrain rows: `type` (gas·hybrid·phev·ev·diesel·hydrogen), `engine`, `hp`
 (combined system), `transmission`, `manual_available`, `drive` (JSON subset of
