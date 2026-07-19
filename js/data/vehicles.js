@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 17;
+export const DATA_VERSION = 18;
 
 export const VEHICLES = [
  {
@@ -7465,7 +7465,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination."
+  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Suburban SUV, RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21860",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-tahoe",
@@ -10110,7 +10121,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/expedition/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Expedition SUV, RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21400",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-explorer",
@@ -11638,6 +11660,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Mustang (2-door fastback, RWD), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21424",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -12078,7 +12111,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/ranger/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Ranger (Super Crew) pickup, RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21430",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-transit",
@@ -15885,7 +15929,18 @@ export const VEHICLES = [
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_Prologue.shtml",
     "site": "fueleconomy.gov"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Honda Prologue SUV, BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20906",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "honda-ridgeline",
@@ -16070,7 +16125,18 @@ export const VEHICLES = [
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_Ridgeline.shtml",
     "site": "fueleconomy.gov"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Honda Ridgeline pickup/crew cab, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20901",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-elantra",
@@ -16793,7 +16859,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026."
+  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Kona SUV, FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21146",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-kona-electric",
@@ -17183,7 +17260,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination."
+  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Santa Cruz pickup/crew cab, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21140",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-santa-fe",
@@ -19091,7 +19179,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia."
+  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia EV6 SUV, BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21169",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-ev9",
@@ -22608,6 +22707,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus RX 350 SUV, FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21619",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -25057,7 +25167,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota."
+  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-50 SUV, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21114",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-70",
@@ -33555,7 +33676,18 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicle-info/subaru-wrx-colors.html",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru WRX 4dr, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21695",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "tesla-cybertruck",
@@ -35460,7 +35592,18 @@ export const VEHICLES = [
     "url": "https://www.autoevolution.com/news/2026-toyota-corolla-hatchback-fx-edition-replaces-nightshade-pricing-shoots-up-256599.html",
     "site": "autoevolution.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Corolla Hatchback 5-door, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21645",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-crown",
@@ -35593,7 +35736,18 @@ export const VEHICLES = [
     "url": "https://carbuzz.com/cars/toyota/crown/2026/",
     "site": "carbuzz.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Crown Hybrid 4dr, HEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21680",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-crown-signia",
@@ -36595,7 +36749,18 @@ export const VEHICLES = [
     "url": "https://www.carsdirect.com/toyota/land-cruiser/2026",
     "site": "carsdirect.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Land Cruiser SUV, HEV 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21659",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-mirai",
@@ -38173,7 +38338,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls."
+  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas SUV, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21031",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-atlas-cross-sport",
@@ -38660,7 +38836,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI)."
+  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Jetta 4dr, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21040",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-jetta-gli",

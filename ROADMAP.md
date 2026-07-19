@@ -61,21 +61,24 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 70 models done so far (2026-07-18: +17 — acura-integra/mdx/rdx,
-  audi-q5, bmw-3-series/x3, hyundai-elantra/sonata, kia-k5/niro/seltos,
-  mazda-cx-30/mazda3, nissan-murano/sentra, subaru-ascent/impreza — all
-  `safety` only; see js/changelog.js v36). Pull NHTSA overall stars from the
-  official api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org,
-  and owner/expert scores only where a real number sits on a real page.
+  the 87 models done so far (2026-07-19: +17 — ford-mustang/expedition/
+  ranger, honda-ridgeline/prologue, mazda-cx-50, hyundai-kona/santa-cruz,
+  volkswagen-atlas/jetta, subaru-wrx, chevrolet-suburban, toyota-crown/
+  corolla-hatchback/land-cruiser, kia-ev6, lexus-rx — all `safety` only; see
+  js/changelog.js v38). Pull NHTSA overall stars from the official
+  api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org, and
+  owner/expert scores only where a real number sits on a real page.
   Omit — never guess — anything a source doesn't publish for the 2026 (or
   carried-over) model year. **A same-generation "carried-over" NHTSA rating
   is only valid if the record's own `notes` don't say "all-new"/redesigned
   for 2026** — audi-q3, mazda-cx-5, and (for the NHTSA figure only) the
-  ninth-gen nissan-sentra were dropped/trimmed this run for exactly that
-  reason; re-check next batch too. Edmunds and KBB both return HTTP 403 to
-  WebFetch in this environment (owner/expert sourcing blocked here — try a
-  different fetch path or accept NHTSA/IIHS-only coverage for now).
-  ~15–20 models per run.
+  ninth-gen nissan-sentra were dropped/trimmed for that reason (2026-07-18
+  run); this run's NHTSA "Not Rated" (no OverallRating published yet, not a
+  generation issue) skips: toyota-supra/bz/bz-woodland/gr-corolla/sequoia,
+  lexus-nx/es, kia-carnival — re-check next batch, NHTSA adds ratings on a
+  rolling basis. Edmunds and KBB both return HTTP 403 to WebFetch in this
+  environment (owner/expert sourcing blocked here — try a different fetch
+  path or accept NHTSA/IIHS-only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
   47 models done. Wikimedia Commons, free licenses only, current generation
