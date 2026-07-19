@@ -21,6 +21,16 @@
 
 export const CHANGELOG = [
   {
+    v: 38,
+    title: '17 more models get real NHTSA safety ratings — 87 covered now',
+    kind: 'data',
+    ts: '2026-07-19T00:59:11.671Z',
+    items: [
+      'Ford Mustang/Expedition/Ranger, Honda Ridgeline/Prologue, Mazda CX-50, Hyundai Kona/Santa Cruz, Volkswagen Atlas/Jetta, Subaru WRX, Chevrolet Suburban, Toyota Crown/Corolla Hatchback/Land Cruiser, Kia EV6, and Lexus RX now show NHTSA overall stars — 87 of 325 models covered.',
+      'Every number is pulled live from the official api.nhtsa.gov/SafetyRatings API and cited with a source link; models the agency hasn\'t rated yet (Toyota Supra, bZ, bZ Woodland, GR Corolla, Sequoia; Lexus NX/ES; Kia Carnival) were left uncovered rather than guessed.',
+    ],
+  },
+  {
     v: 37,
     title: 'Mind Reader is multi-select — tap every answer that fits',
     kind: 'feature',
