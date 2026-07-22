@@ -61,23 +61,28 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 92 models done so far (2026-07-22: +9 — toyota-camry/corolla/sienna,
+  the 104 models done so far (2026-07-22 run 2: +13 — ford-mustang-mach-e/
+  maverick, kia-k4/ev9, cadillac-ct5, buick-encore-gx, chrysler-pacifica,
+  dodge-durango, mitsubishi-outlander, volvo-xc40/xc60/xc90, nissan-frontier
+  — all `safety`/`nhtsa`, 93 models now have a real NHTSA star rating; see
+  js/changelog.js v40). This run's skips: ford-bronco, mazda-mx-5-miata,
+  cadillac-ct4, jeep-gladiator (current generation never NHTSA-rated, no
+  valid carryover), jeep-cherokee (all-new STLA-platform redesign, not yet
+  tested). Earlier (2026-07-22 run 1, +9): toyota-camry/corolla/sienna,
   nissan-kicks, volkswagen-id4/taos, chevrolet-blazer/trax, hyundai-venue —
-  all `safety`/`nhtsa`, 80 models now have a real NHTSA star rating; see
-  js/changelog.js v39). Pull NHTSA overall stars from the official
-  api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org, and
-  owner/expert scores only where a real number sits on a real page.
+  see js/changelog.js v39; that run's skips: toyota-rav4, nissan-sentra/leaf
+  (all-new redesigns, not yet tested), nissan-armada, subaru-outback,
+  chevrolet-equinox, jeep-wrangler, gmc-terrain (current generation never
+  NHTSA-rated, no valid carryover). Pull NHTSA overall stars from the
+  official api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org,
+  and owner/expert scores only where a real number sits on a real page.
   Omit — never guess — anything a source doesn't publish for the 2026 (or
   carried-over) model year. **A same-generation "carried-over" NHTSA rating
   is only valid if the record's own `notes` don't say "all-new"/redesigned
   for 2026** — audi-q3, mazda-cx-5, and (for the NHTSA figure only) the
   ninth-gen nissan-sentra were dropped/trimmed for that reason (2026-07-18
-  run); this run's NHTSA "Not Rated"/no-usable-carryover skips: toyota-rav4
-  (all-new redesign, not yet tested), nissan-sentra/leaf (all-new redesigns,
-  not yet tested), nissan-armada, subaru-outback, chevrolet-equinox,
-  jeep-wrangler, gmc-terrain (current generation never NHTSA-rated, no valid
-  carryover) — re-check next batch, NHTSA adds ratings on a rolling basis.
-  Edmunds and KBB both return HTTP 403 to WebFetch in this environment
+  run) — re-check skipped models each batch, NHTSA adds ratings on a rolling
+  basis. Edmunds and KBB both return HTTP 403 to WebFetch in this environment
   (owner/expert sourcing blocked here — try a different fetch path or accept
   NHTSA/IIHS-only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`

@@ -12,11 +12,11 @@
 
 export const WHATSNEXT = [
   { status:'next', title:'Public ratings for every model',
-    detail:'NHTSA safety stars, IIHS awards, and owner and expert scores — each source-linked. Live for 50 popular models today, rolling out to the rest, honestly omitting anything not yet published.' },
+    detail:'NHTSA safety stars, IIHS awards, and owner and expert scores — each source-linked. Live for 104 models today, rolling out to the rest, honestly omitting anything not yet published.' },
   { status:'next', title:'Interior & multi-photo galleries',
-    detail:'Real cabin and extra-angle photos on every vehicle page — current generation only. 31 models live; expanding across the catalog.' },
+    detail:'Real cabin and extra-angle photos on every vehicle page — current generation only. 47 models live; expanding across the catalog.' },
   { status:'next', title:'Sources for every stat',
-    detail:'Every vehicle page gets precise, verified citations (manufacturer 2026 pages, fueleconomy.gov, price guides) — 74 of 325 models are live (Toyota, Lexus, Subaru, and Honda are fully cited), ~15 more per run until all 325 are cited.' },
+    detail:'Every vehicle page gets precise, verified citations (manufacturer 2026 pages, fueleconomy.gov, price guides) — 93 of 325 models are live (Toyota, Lexus, Subaru, Honda, Acura, Ford and Lincoln are fully cited), ~15 more per run until all 325 are cited.' },
   { status:'next', title:'Trim-level options & equipment',
     detail:'Different trims carry different options — per-trim notable-equipment lists roll out brand by brand (the UI column is already live).' },
   { status:'next', title:'Colors with real swatches',
