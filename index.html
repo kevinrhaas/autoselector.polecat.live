@@ -12,6 +12,7 @@
   <link rel="canonical" href="https://autoselector.polecat.live/"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="apple-touch-icon" href="/favicon.svg"/>
+  <link rel="stylesheet" href="/vendor/polecat-shell/site-chrome.css"/>
   <link rel="stylesheet" href="/css/landing.css"/>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
   <!-- Open Graph -->
@@ -93,18 +94,8 @@
     <g id="i-bolt" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></g>
   </defs></svg>
 
-  <header class="nav" id="nav">
-    <div class="wrap nav-in">
-      <a class="brand" href="/"><span class="logo"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-car"/></svg></span> AutoSelector <small>polecat.live</small></a>
-      <nav class="nav-links">
-        <a href="#finders">Finders</a>
-        <a href="#showcase">Screenshots</a>
-        <a href="#data">The data</a>
-        <a href="#how">How it works</a>
-        <a class="btn primary" href="/app/">Launch app <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
-      </nav>
-    </div>
-  </header>
+  <!-- Shared fleet header (site-chrome.js) — see polecat-platform docs/BRAND.md -->
+  <header id="siteHeader"></header>
 
   <main>
     <!-- hero -->
@@ -263,20 +254,11 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap foot-in">
-      <span>AutoSelector · part of <a class="tl" href="https://polecat.live">polecat.live</a> · all data &amp; photos: 2026 US model year</span>
-      <nav class="foot-links">
-        <a href="/app/">App</a>
-        <a href="/app/#docs">Docs</a>
-      </nav>
-    </div>
-  </footer>
+  <!-- Shared fleet footer (site-chrome.js) — see polecat-platform docs/BRAND.md -->
+  <footer id="siteFooter"></footer>
 
   <script>
-    // glass nav on scroll
-    const nav = document.getElementById('nav');
-    addEventListener('scroll', ()=>nav.classList.toggle('scrolled', scrollY>8), {passive:true});
+    // (the sticky-header scroll shadow is handled by the shared site-chrome header now)
     // reveal-on-scroll
     const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
     document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
@@ -343,6 +325,21 @@
     document.querySelectorAll('.phone img').forEach(img=>{
       img.addEventListener('error', ()=>{ const f=img.closest('.phone'); if(f) f.style.display='none'; });
     });
+  </script>
+  <!-- Mount the shared header + footer -->
+  <script type="module">
+    import { siteHeader, siteFooter } from '/vendor/polecat-shell/site-chrome.js';
+    siteHeader('#siteHeader', {
+      app: 'autoselector',
+      nav: [
+        { href: '#finders', label: 'Finders' },
+        { href: '#showcase', label: 'Screenshots' },
+        { href: '#data', label: 'The data' },
+        { href: '#how', label: 'How it works' },
+      ],
+      cta: { href: '/app/', label: 'Launch app' },
+    });
+    siteFooter('#siteFooter', { app: 'autoselector', docs: '/app/#docs', appUrl: '/app/', notices: '/THIRD-PARTY-NOTICES.md' });
   </script>
 </body>
 </html>
