@@ -18,7 +18,7 @@ const SECTIONS = [
     ['Budget Explorer', 'Sliders for price, seats and efficiency plus powertrain toggles, with a live count. Hand the result off to All Vehicles for fine-tuning.'],
   ]},
   { id:'browse', icon:'list', title:'All Vehicles & search', body:[
-    ['Filters that matter', 'Beyond price and body style, you can multi-pick brands (with logos and live counts), set seats by a minimum AND a maximum (a strict two-seater, or capped at five), and require a full-size spare, physical climate or audio controls, or a light interior — details that make or break a car you’ll live with for a decade.'],
+    ['Filters that matter', 'Engine and Body are separate pill groups; everything else is a multi-select dropdown with live counts — brands (with logos), Tire (full-size, donut, or none), Controls (physical climate/audio knobs), and Exterior/Interior color grouped into families (all the blues together). Plus seats by a minimum AND a maximum (a strict two-seater, or capped at five) — details that make or break a car you’ll live with for a decade.'],
     ['Select mode (your cart)', 'Tap “Select” to multi-pick vehicles. Send them straight to Compare, or add them to your Shortlist — a cart you build up as you browse. Your Shortlist lives in My Garage and loads into Compare in one tap.'],
     ['Saved searches', 'Set up filters, hit “Save search”, name it. Rerun it from Home or My Garage with one tap.'],
     ['Quick search', 'Press / anywhere. Type any mix of words — “hybrid suv 7 seats”, “miata”, “kia ev”.'],

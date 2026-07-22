@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 19;
+export const DATA_VERSION = 20;
 
 export const VEHICLES = [
  {
@@ -5213,7 +5213,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination."
+  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Buick Encore GX SUV N/A FWD Early Release, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21818",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "buick-envision",
@@ -5669,7 +5680,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026."
+  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac CT5 4 DR N/A RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21811",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "cadillac-escalade",
@@ -8093,7 +8115,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination."
+  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chrysler Pacifica PV N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20913",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chrysler-voyager",
@@ -8463,7 +8496,18 @@ export const VEHICLES = [
    "credit": "Kevauto"
   },
   "confidence": "high",
-  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration."
+  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Dodge Durango SUV N/A RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20919",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "dodge-hornet",
@@ -11356,6 +11400,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Ford Maverick Later Release PU/CC FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20335",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 4.2,
     "scale": 5,
@@ -11924,7 +11977,19 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/mustang-mach-e/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Mustang Mach-E BEV SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21428",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-ranger",
@@ -19310,7 +19375,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia."
+  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia EV9 SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21170",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-k4",
@@ -19401,7 +19478,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025)."
+  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia K4 4 DR N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21172",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-k5",
@@ -28497,7 +28586,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small."
+  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Mitsubishi Outlander SUV FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20196",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mitsubishi-outlander-phev",
@@ -28977,7 +29077,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup."
+  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Frontier Crew Cab PU/CC N/A RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21069",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-kicks",
@@ -39744,7 +39855,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "2026 lineup restructured: lower-priced 194-hp base engine on Core/Plus, 247-hp B5 on Ultra; exact powertrain/trim pairings and EPA figures for the new base engine not fully confirmed. Compact spare optional."
+  "notes": "2026 lineup restructured: lower-priced 194-hp base engine on Core/Plus, 247-hp B5 on Ultra; exact powertrain/trim pairings and EPA figures for the new base engine not fully confirmed. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC40 SUV MHEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20873",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-xc60",
@@ -39841,7 +39963,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Refreshed for 2026 with new grille, larger 11.2-inch screen and updated interior. T8 trim prices quoted by some sources may include destination. Compact spare optional."
+  "notes": "Refreshed for 2026 with new grille, larger 11.2-inch screen and updated interior. T8 trim prices quoted by some sources may include destination. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC60 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20876",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-xc90",
@@ -39947,6 +40080,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Carries the major 2025.5 facelift into 2026. B6 Plus price is approximate; base and top prices verified. XC60-platform SUV remains Volvo's 3-row flagship alongside electric EX90."
+  "notes": "Carries the major 2025.5 facelift into 2026. B6 Plus price is approximate; base and top prices verified. XC60-platform SUV remains Volvo's 3-row flagship alongside electric EX90.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC90 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20880",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  }
 ];

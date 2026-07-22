@@ -64,6 +64,8 @@ export function renderSettings(view, ctx){
       Store.settings().simpleMode, v=>{ Store.setSetting('simpleMode', v); ctx.applySimple(); ctx.rebuildRail(); }));
     b2.append(switchRow('Reduce motion', 'Turn off animations and confetti.',
       Store.settings().reduceMotion, v=>{ Store.setSetting('reduceMotion', v); ctx.applySimple(); }));
+    b2.append(switchRow('Show data-completeness meter', 'The little bar on each card showing how fully researched a vehicle’s data is. Tap it on a card for a breakdown.',
+      Store.settings().dataMeter!==false, v=>{ Store.setSetting('dataMeter', v); toast(v?'Data meter on':'Data meter hidden',{kind:'ok'}); }));
     panel.append(b2);
 
     const b3 = block('Welcome tour', '');

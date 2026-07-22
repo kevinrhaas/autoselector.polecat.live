@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 9;
+export const DATA_VERSION = 20;
 
 export const VEHICLES = [
  {
@@ -37,33 +37,50 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "ADX",
-    "msrp": 35000
+    "msrp": 35000,
+    "features": [
+     "1.5T turbo I4",
+     "Power moonroof",
+     "Heated front seats",
+     "10.2-in digital cluster",
+     "AcuraWatch safety suite"
+    ]
    },
    {
     "name": "A-Spec",
-    "msrp": 38000
+    "msrp": 38000,
+    "features": [
+     "19-in alloy wheels",
+     "A-Spec sport styling",
+     "LED fog lights",
+     "Ventilated front seats",
+     "Sport pedals/microsuede accents"
+    ]
    },
    {
-    "name": "A-Spec w/Advance",
-    "msrp": 42000
-   },
-   {
-    "name": "A-Spec w/Advance AWD",
-    "msrp": 44000
+    "name": "A-Spec Advance",
+    "msrp": 42000,
+    "features": [
+     "Bang & Olufsen audio",
+     "Leather seating",
+     "Heated steering wheel",
+     "Hands-free power tailgate",
+     "Google Built-In / driver memory"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "1.5L turbo I4",
+    "engine": "1.5L turbocharged VTEC I4",
     "hp": 190,
-    "transmission": "CVT",
+    "transmission": "CVT automatic",
     "manualAvailable": false,
     "drive": [
      "FWD",
      "AWD"
     ],
-    "mpgCombined": 29,
+    "mpgCombined": 28,
     "evRangeMi": null
    }
   ],
@@ -102,11 +119,77 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Acura_ADX_A-Spec%2C_front_7.19.25.jpg",
+   "credit": "Kevauto"
   },
-  "confidence": "medium",
-  "notes": "Acura's HR-V-based entry SUV, in its second model year; base price held at $35,000 for 2026 per Acura. Dimensions and cargo figures are close estimates; AWD versions rated about 1 mpg lower."
+  "confidence": "high",
+  "notes": "190 hp / 179 lb-ft confirmed (the widely-repeated 200 hp figure is an error; that is the Integra rating). EPA combined is 28 mpg FWD / 27 mpg AWD per fueleconomy.gov, so prior record 29 was slightly high. AWD is a $2,000 option on each package (top AWD A-Spec Advance = $44,000). Trims are Acura package tiers; each of ADX/A-Spec/A-Spec Advance is offered FWD or AWD. Exterior/interior color hex values are best-effort sRGB matches to Acura swatches; color availability varies by trim (Orchid restricted to certain paints).",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Platinum White Pearl",
+     "hex": "#E9E9E7"
+    },
+    {
+     "name": "Urban Gray Pearl",
+     "hex": "#6E7175"
+    },
+    {
+     "name": "Majestic Black Pearl",
+     "hex": "#101012"
+    },
+    {
+     "name": "Solar Silver Metallic",
+     "hex": "#B9BCC0"
+    },
+    {
+     "name": "Apex Blue Pearl",
+     "hex": "#1F3A6E"
+    },
+    {
+     "name": "Double Apex Blue Pearl",
+     "hex": "#22345C"
+    },
+    {
+     "name": "Performance Red Pearl",
+     "hex": "#A5000E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Orchid",
+     "hex": "#E7E3D9",
+     "tone": "light"
+    },
+    {
+     "name": "Red",
+     "hex": "#7A1F27",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Acura ADX Pricing & Specs",
+    "url": "https://www.acura.com/suvs/adx/pricing-and-specs",
+    "site": "acura.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Acura ADX",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Acura_ADX.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Acura ADX Features & Specs",
+    "url": "https://www.edmunds.com/acura/adx/2026/features-specs/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "acura-integra",
@@ -122,37 +205,65 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Integra",
-    "msrp": 33400
+    "msrp": 33400,
+    "features": [
+     "1.5T VTEC turbo / CVT",
+     "10.2-in digital cluster",
+     "Wireless Apple CarPlay & Android Auto",
+     "Heated front seats",
+     "AcuraWatch"
+    ]
    },
    {
     "name": "A-Spec",
-    "msrp": 35400
+    "msrp": 35950,
+    "features": [
+     "18-in alloy wheels",
+     "A-Spec sport styling",
+     "LED fog lights",
+     "Rear spoiler",
+     "Dark exterior trim"
+    ]
    },
    {
     "name": "A-Spec w/Technology",
-    "msrp": 39300
+    "msrp": 39200,
+    "features": [
+     "16-speaker ELS Studio 3D audio",
+     "Adaptive dampers",
+     "9-in touchscreen / wireless charging",
+     "Head-up display",
+     "6-speed manual available"
+    ]
    },
    {
     "name": "Type S",
-    "msrp": 53400
+    "msrp": 53400,
+    "features": [
+     "2.0T 320-hp turbo I4",
+     "Standard 6-speed manual",
+     "Brembo front brakes",
+     "Wide-body / 19-in wheels",
+     "Adaptive dampers & sport exhaust"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "1.5L turbo I4",
+    "engine": "1.5L turbocharged VTEC I4",
     "hp": 200,
-    "transmission": "CVT",
+    "transmission": "CVT (6-speed manual on A-Spec w/Technology)",
     "manualAvailable": true,
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 33,
+    "mpgCombined": 32,
     "evRangeMi": null
    },
    {
     "type": "gas",
-    "engine": "2.0L turbo I4 (Type S)",
+    "engine": "2.0L turbocharged VTEC I4 (Type S)",
     "hp": 320,
     "transmission": "6-speed manual",
     "manualAvailable": true,
@@ -199,10 +310,93 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/2023_Acura_Integra_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2023_Acura_Integra_interior.jpg"
+    }
+   ]
   },
-  "confidence": "medium",
-  "notes": "Five-door liftback; Acura's only remaining sedan-shaped model after TLX was discontinued. Base price ($33,400) confirmed by Acura; A-Spec and A-Spec w/Technology prices are close estimates and Type S (~$53,400) per Edmunds. Type S uses a tire repair kit instead of a spare."
+  "confidence": "high",
+  "notes": "EPA per fueleconomy.gov: 1.5T CVT 32 mpg combined, 1.5T 6-speed manual 30 mpg combined, Type S 2.0T manual 24 mpg combined. The 6-speed manual is offered only on A-Spec w/Technology (1.5T) and is standard/exclusive on Type S. Color hex values are best-effort sRGB matches; several paints are $600 premium options and Double Apex Blue is limited to A-Spec/Type S.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Platinum White Pearl",
+     "hex": "#E9E9E7"
+    },
+    {
+     "name": "Majestic Black Pearl",
+     "hex": "#101012"
+    },
+    {
+     "name": "Solar Silver Metallic",
+     "hex": "#B9BCC0"
+    },
+    {
+     "name": "Urban Gray Pearl",
+     "hex": "#6E7175"
+    },
+    {
+     "name": "Performance Red Pearl",
+     "hex": "#A5000E"
+    },
+    {
+     "name": "Double Apex Blue Pearl",
+     "hex": "#22345C"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Red",
+     "hex": "#7A1F27",
+     "tone": "dark"
+    },
+    {
+     "name": "Orchid",
+     "hex": "#E7E3D9",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Acura Integra Pricing & Specs",
+    "url": "https://www.acura.com/cars/integra/pricing-and-specs",
+    "site": "acura.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Acura Integra",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Acura_Integra.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Acura Integra Prices",
+    "url": "https://www.edmunds.com/acura/integra/2026/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura Integra (5-door hatchback, FWD), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20899",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "acura-mdx",
@@ -218,27 +412,65 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "MDX",
-    "msrp": 51800
+    "msrp": 51800,
+    "features": [
+     "3.5L V6 / 10-speed auto",
+     "12.3-in display",
+     "Panoramic moonroof",
+     "Wireless Apple CarPlay & Android Auto"
+    ]
    },
    {
-    "name": "Technology Package",
-    "msrp": 55800
+    "name": "Technology",
+    "msrp": 57200,
+    "features": [
+     "Milano leather",
+     "Navigation",
+     "Bang & Olufsen audio",
+     "20-in wheels"
+    ]
    },
    {
-    "name": "A-Spec Package",
-    "msrp": 62200
+    "name": "A-Spec",
+    "msrp": 62400,
+    "features": [
+     "SH-AWD standard",
+     "A-Spec sport styling",
+     "Ultrasuede seat inserts",
+     "Ventilated front seats",
+     "Flat-bottom steering wheel"
+    ]
    },
    {
-    "name": "Advance Package",
-    "msrp": 66300
+    "name": "Advance",
+    "msrp": 66900,
+    "features": [
+     "16-way power front seats",
+     "Surround-view camera",
+     "Head-up display",
+     "Heated/ventilated seats"
+    ]
    },
    {
     "name": "Type S",
-    "msrp": 70050
+    "msrp": 68900,
+    "features": [
+     "3.0L turbo V6 355 hp",
+     "Air suspension",
+     "Brembo front brakes",
+     "25-speaker ELS 3D audio",
+     "Sport exhaust"
+    ]
    },
    {
     "name": "Type S Advance",
-    "msrp": 75850
+    "msrp": 75850,
+    "features": [
+     "Massaging front seats",
+     "Premium leather",
+     "Full luxury/tech package",
+     "Type S performance styling"
+    ]
    }
   ],
   "powertrains": [
@@ -257,7 +489,7 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "3.0L turbo V6 (Type S)",
+    "engine": "3.0L turbocharged V6 (Type S)",
     "hp": 355,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -307,8 +539,110 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "high",
-  "notes": "Base ($51,800) and Type S Advance ($75,850) prices verified for 2026; intermediate trim prices are close estimates. Towing: 5,000 lb with SH-AWD (3,500 lb FWD); Type S rated 19 mpg combined."
+  "confidence": "medium",
+  "notes": "EPA per fueleconomy.gov: 3.5L V6 FWD 22 / AWD 21 combined; Type S 3.0TT 19 combined. Base MDX and Technology are FWD-standard (AWD optional); A-Spec, Advance, Type S and Type S Advance are SH-AWD standard. Per-trim MSRPs verified from Edmunds for Base ($51,800), Technology ($57,200), A-Spec ($62,400), Advance ($66,900) and Type S Advance ($75,850). Standalone Type S MSRP ($68,900) is from a dealer research page and not independently confirmed; KBB/some Edmunds pages list the Type S Advance at $77,300 vs. $75,850 elsewhere, so top-price is medium confidence. Color hex values are best-effort sRGB matches; Azurite Blue is Type S-exclusive.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Platinum White Pearl",
+     "hex": "#E9E9E7"
+    },
+    {
+     "name": "Majestic Black Pearl",
+     "hex": "#101012"
+    },
+    {
+     "name": "Liquid Carbon Metallic",
+     "hex": "#3A3D40"
+    },
+    {
+     "name": "Solar Silver Metallic",
+     "hex": "#B9BCC0"
+    },
+    {
+     "name": "Urban Gray Pearl",
+     "hex": "#6E7175"
+    },
+    {
+     "name": "Canyon River Blue Metallic",
+     "hex": "#3E5C6E"
+    },
+    {
+     "name": "Performance Red Pearl",
+     "hex": "#A5000E"
+    },
+    {
+     "name": "Double Apex Blue Pearl",
+     "hex": "#22345C"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Graystone",
+     "hex": "#8A8D8F",
+     "tone": "light"
+    },
+    {
+     "name": "Parchment",
+     "hex": "#E6DFD1",
+     "tone": "light"
+    },
+    {
+     "name": "Espresso",
+     "hex": "#3B2A22",
+     "tone": "dark"
+    },
+    {
+     "name": "Red",
+     "hex": "#7A1F27",
+     "tone": "dark"
+    },
+    {
+     "name": "Orchid",
+     "hex": "#E7E3D9",
+     "tone": "light"
+    },
+    {
+     "name": "Azurite Blue (Type S)",
+     "hex": "#2E4A6B",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Acura MDX Pricing & Specs",
+    "url": "https://www.acura.com/suvs/mdx/pricing-and-specs",
+    "site": "acura.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Acura MDX",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Acura_MDX.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Acura MDX Prices",
+    "url": "https://www.edmunds.com/acura/mdx/2026/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura MDX SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20891",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "acura-rdx",
@@ -324,37 +658,67 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "RDX",
-    "msrp": 45100
+    "msrp": 45100,
+    "features": [
+     "2.0T / 10-speed auto",
+     "SH-AWD standard",
+     "Panoramic moonroof",
+     "Heated front seats",
+     "AcuraWatch"
+    ]
    },
    {
-    "name": "Technology Package",
-    "msrp": 47700
+    "name": "Technology",
+    "msrp": 47700,
+    "features": [
+     "Perforated Milano leather",
+     "Navigation",
+     "12-speaker ELS audio",
+     "Ventilated front seats / wireless charging"
+    ]
    },
    {
-    "name": "A-Spec Package",
-    "msrp": 50700
+    "name": "A-Spec",
+    "msrp": 50700,
+    "features": [
+     "A-Spec sport styling",
+     "20-in wheels",
+     "Flat-bottom steering wheel",
+     "Red/Ultrasuede sport interior"
+    ]
    },
    {
-    "name": "Advance Package",
-    "msrp": 52850
+    "name": "Advance",
+    "msrp": 52850,
+    "features": [
+     "Adaptive damper suspension",
+     "Surround-view camera",
+     "Head-up display",
+     "Heated rear seats",
+     "16-speaker ELS 3D audio"
+    ]
    },
    {
-    "name": "A-Spec Advance Package",
-    "msrp": 54850
+    "name": "A-Spec Advance",
+    "msrp": 54850,
+    "features": [
+     "A-Spec styling plus full Advance content",
+     "Adaptive suspension",
+     "Premium cabin materials"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.0L turbo I4",
+    "engine": "2.0L turbocharged VTEC I4",
     "hp": 272,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
-     "FWD",
      "AWD"
     ],
-    "mpgCombined": 24,
+    "mpgCombined": 23,
     "evRangeMi": null
    }
   ],
@@ -393,11 +757,116 @@ export const VEHICLES = [
   ],
   "towingLb": 1500,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Acura_RDX_(TC1)_Washington_DC_Metro_Area%2C_USA.jpg",
+   "credit": "OWS Photography",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/2023_Acura_RDX_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2023_Acura_RDX_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Carryover generation; SH-AWD optional on all trims (standard pricing shown is FWD). SH-AWD versions rated about 23 mpg combined."
+  "notes": "SH-AWD is standard on every 2026 RDX trim (no FWD offered), so the single powertrain is AWD-only. EPA combined is 23 mpg per fueleconomy.gov, so prior record 24 was high. 2.0T 272 hp / 280 lb-ft with 10-speed automatic confirmed. Per-trim MSRPs verified via dealer research/Edmunds. Color hex values are best-effort sRGB matches.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Platinum White Pearl",
+     "hex": "#E9E9E7"
+    },
+    {
+     "name": "Majestic Black Pearl",
+     "hex": "#101012"
+    },
+    {
+     "name": "Liquid Carbon Metallic",
+     "hex": "#3A3D40"
+    },
+    {
+     "name": "Solar Silver Metallic",
+     "hex": "#B9BCC0"
+    },
+    {
+     "name": "Urban Gray Pearl",
+     "hex": "#6E7175"
+    },
+    {
+     "name": "Canyon River Blue Metallic",
+     "hex": "#3E5C6E"
+    },
+    {
+     "name": "Apex Blue Pearl",
+     "hex": "#1F3A6E"
+    },
+    {
+     "name": "Performance Red Pearl",
+     "hex": "#A5000E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Graystone",
+     "hex": "#8A8D8F",
+     "tone": "light"
+    },
+    {
+     "name": "Parchment",
+     "hex": "#E6DFD1",
+     "tone": "light"
+    },
+    {
+     "name": "Espresso",
+     "hex": "#3B2A22",
+     "tone": "dark"
+    },
+    {
+     "name": "Red",
+     "hex": "#7A1F27",
+     "tone": "dark"
+    },
+    {
+     "name": "Orchid",
+     "hex": "#E7E3D9",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Acura RDX Pricing & Specs",
+    "url": "https://www.acura.com/suvs/rdx/pricing-and-specs",
+    "site": "acura.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Acura RDX",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Acura_RDX.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Acura RDX Prices",
+    "url": "https://www.edmunds.com/acura/rdx/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura RDX SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20904",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "alfa-romeo-giulia",
@@ -1442,6 +1911,97 @@ export const VEHICLES = [
   "notes": "US market gets long-wheelbase A8 L only; S8 uses standard wheelbase. Nearing end of life with no direct successor announced. Base price derived from published $96,395 figure less $1,495 destination; S8 price approximate."
  },
  {
+  "id": "audi-e-tron-gt",
+  "make": "Audi",
+  "manufacturer": "Volkswagen Group",
+  "model": "e-tron GT",
+  "year": 2026,
+  "bodyStyle": "sedan",
+  "segment": "electric grand touring sedan",
+  "category": "car",
+  "priceFrom": 127700,
+  "priceTo": 170500,
+  "trims": [
+   {
+    "name": "S e-tron GT Premium Plus",
+    "msrp": 127700
+   },
+   {
+    "name": "S e-tron GT Prestige",
+    "msrp": 137000
+   },
+   {
+    "name": "RS e-tron GT performance",
+    "msrp": 170500
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (S e-tron GT)",
+    "hp": 670,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 84,
+    "evRangeMi": 300
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (RS e-tron GT performance)",
+    "hp": 912,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 82,
+    "evRangeMi": 278
+   }
+  ],
+  "seats": [
+   4
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 196.4,
+   "widthIn": 77.3,
+   "heightIn": 55.4,
+   "wheelbaseIn": 114.2,
+   "curbWeightLb": 5060,
+   "groundClearanceIn": 5.6
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 9.2,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Active suspension",
+   "Carbon roof & carbon-ceramic brakes (RS)",
+   "Bang & Olufsen premium audio",
+   "18-way sport seats with massage",
+   "Matrix LED headlights with laser light",
+   "Rear-axle steering"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "medium",
+  "notes": "Shares J1 platform with Porsche Taycan; 2025 refresh dropped the base trim, leaving S and RS performance. Small frunk in addition to rear trunk. Some published prices may include destination."
+ },
+ {
   "id": "audi-q3",
   "make": "Audi",
   "manufacturer": "Volkswagen Group",
@@ -1683,7 +2243,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Third-generation Q5 (new for 2025) carries into 2026; Audi's best-seller. Prices derived from published figures less $1,495 destination. Sportback variants cost about $2,300 more. Touchscreen-centric controls."
+  "notes": "Third-generation Q5 (new for 2025) carries into 2026; Audi's best-seller. Prices derived from published figures less $1,495 destination. Sportback variants cost about $2,300 more. Touchscreen-centric controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Audi Q5 SUV AWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20611",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "audi-q6-e-tron",
@@ -1975,71 +2547,168 @@ export const VEHICLES = [
   "notes": "Two-row coupe sibling to the Q7. Base price derived from published $75,600 figure less destination; SQ8 and RS Q8 performance prices approximate (latest published figures)."
  },
  {
-  "id": "audi-e-tron-gt",
-  "make": "Audi",
+  "id": "bentley-bentayga",
+  "make": "Bentley",
   "manufacturer": "Volkswagen Group",
-  "model": "e-tron GT",
+  "model": "Bentayga",
   "year": 2026,
-  "bodyStyle": "sedan",
-  "segment": "electric grand touring sedan",
-  "category": "car",
-  "priceFrom": 127700,
-  "priceTo": 170500,
+  "bodyStyle": "suv",
+  "segment": "ultra-luxury SUV",
+  "category": "suv",
+  "priceFrom": 195000,
+  "priceTo": 309000,
   "trims": [
    {
-    "name": "S e-tron GT Premium Plus",
-    "msrp": 127700
+    "name": "Bentayga",
+    "msrp": 195000
    },
    {
-    "name": "S e-tron GT Prestige",
-    "msrp": 137000
+    "name": "Bentayga EWB Azure",
+    "msrp": 240000
    },
    {
-    "name": "RS e-tron GT performance",
-    "msrp": 170500
+    "name": "Bentayga Speed",
+    "msrp": 309000
    }
   ],
   "powertrains": [
    {
-    "type": "ev",
-    "engine": "Dual-motor AWD (S e-tron GT)",
-    "hp": 670,
-    "transmission": "2-speed (rear axle)",
+    "type": "gas",
+    "engine": "4.0L twin-turbo V8",
+    "hp": 542,
+    "transmission": "8-speed automatic",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 84,
-    "evRangeMi": 300
+    "mpgCombined": 16,
+    "evRangeMi": null
    },
    {
-    "type": "ev",
-    "engine": "Dual-motor AWD (RS e-tron GT performance)",
-    "hp": 912,
-    "transmission": "2-speed (rear axle)",
+    "type": "gas",
+    "engine": "4.0L twin-turbo V8 (Speed)",
+    "hp": 641,
+    "transmission": "8-speed automatic",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 82,
-    "evRangeMi": 278
+    "mpgCombined": null,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   4,
+   5,
+   7
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 201.8,
+   "widthIn": 78.7,
+   "heightIn": 68.6,
+   "wheelbaseIn": 117.9,
+   "curbWeightLb": 5340,
+   "groundClearanceIn": 8
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 17.1,
+   "cargoMaxCuFt": 62.6,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Extended wheelbase with airline rear seats",
+   "Naim for Bentley audio",
+   "Four-seat / seven-seat configurations",
+   "All-terrain specification",
+   "Mulliner specification",
+   "Rear-seat entertainment"
+  ],
+  "towingLb": 7716,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "medium",
+  "notes": "2026 lineup: standard-wheelbase V8, EWB (extended wheelbase), and reintroduced 641-hp Bentayga Speed (now V8, formerly W12). Prices approximate from dealer price lists; 7-seat option on standard wheelbase only."
+ },
+ {
+  "id": "bentley-continental-gt",
+  "make": "Bentley",
+  "manufacturer": "Volkswagen Group",
+  "model": "Continental GT",
+  "year": 2026,
+  "bodyStyle": "coupe",
+  "segment": "ultra-luxury grand tourer",
+  "category": "car",
+  "priceFrom": 240000,
+  "priceTo": 310000,
+  "trims": [
+   {
+    "name": "Continental GT",
+    "msrp": 240000
+   },
+   {
+    "name": "Continental GT S",
+    "msrp": 250000
+   },
+   {
+    "name": "Continental GT Speed",
+    "msrp": 285000
+   },
+   {
+    "name": "Continental GTC Speed",
+    "msrp": 310000
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "phev",
+    "engine": "4.0L twin-turbo V8 plug-in hybrid",
+    "hp": 671,
+    "transmission": "8-speed dual-clutch",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   },
+   {
+    "type": "phev",
+    "engine": "4.0L twin-turbo V8 plug-in hybrid (Speed)",
+    "hp": 771,
+    "transmission": "8-speed dual-clutch",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
    }
   ],
   "seats": [
    4
   ],
-  "doors": 4,
+  "doors": 2,
   "dims": {
-   "lengthIn": 196.4,
-   "widthIn": 77.3,
-   "heightIn": 55.4,
-   "wheelbaseIn": 114.2,
-   "curbWeightLb": 5060,
-   "groundClearanceIn": 5.6
+   "lengthIn": 190.9,
+   "widthIn": 77.4,
+   "heightIn": 55.3,
+   "wheelbaseIn": 112.2,
+   "curbWeightLb": 5469,
+   "groundClearanceIn": 5.3
   },
   "interior": {
    "passengerVolumeCuFt": null,
-   "cargoCuFt": 9.2,
+   "cargoCuFt": 12.6,
    "cargoMaxCuFt": null,
    "lightInterior": true,
    "darkInterior": true
@@ -2050,12 +2719,12 @@ export const VEHICLES = [
    "audio": true
   },
   "keyOptions": [
-   "Active suspension",
-   "Carbon roof & carbon-ceramic brakes (RS)",
-   "Bang & Olufsen premium audio",
-   "18-way sport seats with massage",
-   "Matrix LED headlights with laser light",
-   "Rear-axle steering"
+   "Rotating display dashboard",
+   "Naim for Bentley audio",
+   "Mulliner specification",
+   "Rotating-spoke wheels",
+   "Contrast stitching and hide combinations",
+   "Touring driver-assist package"
   ],
   "towingLb": null,
   "image": {
@@ -2063,7 +2732,99 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Shares J1 platform with Porsche Taycan; 2025 refresh dropped the base trim, leaving S and RS performance. Small frunk in addition to rear trunk. Some published prices may include destination."
+  "notes": "Fourth generation: every 2026 Continental GT is now a plug-in hybrid (no more W12 or pure V8). GTC convertible variants offered across trims. US prices approximate from dealer price lists; official trim-by-trim MSRPs vary."
+ },
+ {
+  "id": "bentley-flying-spur",
+  "make": "Bentley",
+  "manufacturer": "Volkswagen Group",
+  "model": "Flying Spur",
+  "year": 2026,
+  "bodyStyle": "sedan",
+  "segment": "ultra-luxury sedan",
+  "category": "car",
+  "priceFrom": 225000,
+  "priceTo": 300000,
+  "trims": [
+   {
+    "name": "Flying Spur",
+    "msrp": 225000
+   },
+   {
+    "name": "Flying Spur S",
+    "msrp": 265000
+   },
+   {
+    "name": "Flying Spur Speed",
+    "msrp": 300000
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "phev",
+    "engine": "4.0L twin-turbo V8 plug-in hybrid",
+    "hp": 671,
+    "transmission": "8-speed dual-clutch",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   },
+   {
+    "type": "phev",
+    "engine": "4.0L twin-turbo V8 plug-in hybrid (Speed)",
+    "hp": 771,
+    "transmission": "8-speed dual-clutch",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   4,
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 209.3,
+   "widthIn": 77.9,
+   "heightIn": 58,
+   "wheelbaseIn": 125.7,
+   "curbWeightLb": 5800,
+   "groundClearanceIn": 5.9
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 14.8,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Rotating display",
+   "Naim for Bentley audio",
+   "Rear-seat entertainment",
+   "Airline-style rear seats (4-seat configuration)",
+   "Mulliner specification",
+   "Panoramic sunroof"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "medium",
+  "notes": "For 2026 the Flying Spur moves to the 671-hp high-performance hybrid as standard; Speed gets 771 hp. Prices approximate from dealer price lists."
  },
  {
   "id": "bmw-2-series",
@@ -2351,7 +3112,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Final year of the G20 generation; new 3 Series (Neue Klasse) arrives for 2027. M340i mild-hybrid is folded in here. Climate is touchscreen-based since the 2023 facelift."
+  "notes": "Final year of the G20 generation; new 3 Series (Neue Klasse) arrives for 2027. M340i mild-hybrid is folded in here. Climate is touchscreen-based since the 2023 facelift.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW 3 Series Sedan RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21332",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-4-series",
@@ -2742,6 +3514,424 @@ export const VEHICLES = [
   },
   "confidence": "medium",
   "notes": "Final model year: production ends April 2026 with no direct successor; M8 and Alpina B8 already discontinued. Sold as Coupe, Convertible, and 4-door Gran Coupe (5 seats). Prices from sources that may include the $1,550 destination fee. Retains iDrive 7 with physical climate controls."
+ },
+ {
+  "id": "bmw-i4",
+  "make": "BMW",
+  "manufacturer": "BMW Group",
+  "model": "i4",
+  "year": 2026,
+  "bodyStyle": "sedan",
+  "segment": "compact luxury EV",
+  "category": "car",
+  "priceFrom": 57900,
+  "priceTo": 71400,
+  "trims": [
+   {
+    "name": "eDrive40",
+    "msrp": 57900
+   },
+   {
+    "name": "xDrive40",
+    "msrp": 61900
+   },
+   {
+    "name": "M50",
+    "msrp": 71400
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Single-motor RWD (eDrive40)",
+    "hp": 335,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 109,
+    "evRangeMi": 318
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (xDrive40)",
+    "hp": 396,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 100,
+    "evRangeMi": 307
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (M50)",
+    "hp": 536,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 90,
+    "evRangeMi": 269
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 188.5,
+   "widthIn": 72.9,
+   "heightIn": 57,
+   "wheelbaseIn": 112.4,
+   "curbWeightLb": 4680,
+   "groundClearanceIn": 4.9
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 10,
+   "cargoMaxCuFt": 45.6,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": true
+  },
+  "keyOptions": [
+   "M Sport Package",
+   "Harman Kardon surround sound",
+   "Head-up display",
+   "Driving Assistance Professional",
+   "Parking Assistant Professional",
+   "Heated front and rear seats"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "high",
+  "notes": "Gran Coupe liftback body (hatch-style tailgate). EPA range varies with wheel choice; figures shown are best-case for each trim. xDrive40 and M50 MSRPs reflect small 2026 increases and are approximate within a few hundred dollars."
+ },
+ {
+  "id": "bmw-i5",
+  "make": "BMW",
+  "manufacturer": "BMW Group",
+  "model": "i5",
+  "year": 2026,
+  "bodyStyle": "sedan",
+  "segment": "midsize luxury EV",
+  "category": "car",
+  "priceFrom": 67100,
+  "priceTo": 85100,
+  "trims": [
+   {
+    "name": "eDrive40",
+    "msrp": 67100
+   },
+   {
+    "name": "xDrive40",
+    "msrp": 70100
+   },
+   {
+    "name": "xDrive40 Touring",
+    "msrp": 72600
+   },
+   {
+    "name": "M60 xDrive",
+    "msrp": 85100
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Single-motor RWD (eDrive40)",
+    "hp": 335,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 104,
+    "evRangeMi": 295
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (xDrive40)",
+    "hp": 389,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 98,
+    "evRangeMi": 285
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (M60)",
+    "hp": 593,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 84,
+    "evRangeMi": 240
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 199.2,
+   "widthIn": 74.8,
+   "heightIn": 59.6,
+   "wheelbaseIn": 117.9,
+   "curbWeightLb": 4916,
+   "groundClearanceIn": 5.4
+  },
+  "interior": {
+   "passengerVolumeCuFt": 102,
+   "cargoCuFt": 17.3,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": true
+  },
+  "keyOptions": [
+   "Bowers & Wilkins surround sound",
+   "Highway Assistant hands-free driving",
+   "Head-up display",
+   "Ventilated multifunction seats",
+   "Panoramic moonroof",
+   "Max Range mode",
+   "M Sport Package"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "high",
+  "notes": "Electric version of the G60 5 Series. xDrive40 Touring wagon joined the US lineup; its MSRP shown is approximate. Ranges vary with wheels."
+ },
+ {
+  "id": "bmw-i7",
+  "make": "BMW",
+  "manufacturer": "BMW Group",
+  "model": "i7",
+  "year": 2026,
+  "bodyStyle": "sedan",
+  "segment": "full-size luxury EV",
+  "category": "car",
+  "priceFrom": 105700,
+  "priceTo": 168500,
+  "trims": [
+   {
+    "name": "eDrive50",
+    "msrp": 105700
+   },
+   {
+    "name": "xDrive60",
+    "msrp": 124200
+   },
+   {
+    "name": "M70 xDrive",
+    "msrp": 168500
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Single-motor RWD (eDrive50)",
+    "hp": 449,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 87,
+    "evRangeMi": 321
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (xDrive60)",
+    "hp": 536,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 83,
+    "evRangeMi": 307
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (M70)",
+    "hp": 650,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 75,
+    "evRangeMi": 285
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 212.2,
+   "widthIn": 76.8,
+   "heightIn": 60.8,
+   "wheelbaseIn": 126.6,
+   "curbWeightLb": 5917,
+   "groundClearanceIn": 5.3
+  },
+  "interior": {
+   "passengerVolumeCuFt": 112,
+   "cargoCuFt": 11.4,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": true
+  },
+  "keyOptions": [
+   "Executive Lounge rear seating",
+   "31-inch 8K Theater Screen",
+   "Bowers & Wilkins Diamond surround sound",
+   "Automatic doors",
+   "Highway Assistant hands-free driving",
+   "Crystal headlights with Swarovski elements",
+   "Rear-seat entertainment tablets"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "high",
+  "notes": "Electric 7 Series. EPA range varies with wheel choice; best-case figures shown."
+ },
+ {
+  "id": "bmw-ix",
+  "make": "BMW",
+  "manufacturer": "BMW Group",
+  "model": "iX",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "midsize luxury EV SUV",
+  "category": "suv",
+  "priceFrom": 75150,
+  "priceTo": 111500,
+  "trims": [
+   {
+    "name": "xDrive45",
+    "msrp": 75150
+   },
+   {
+    "name": "xDrive60",
+    "msrp": 88500
+   },
+   {
+    "name": "M70 xDrive",
+    "msrp": 111500
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (xDrive45)",
+    "hp": 402,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 107,
+    "evRangeMi": 312
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (xDrive60)",
+    "hp": 536,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 106,
+    "evRangeMi": 364
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (M70)",
+    "hp": 650,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 88,
+    "evRangeMi": 302
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 195,
+   "widthIn": 77.4,
+   "heightIn": 66.8,
+   "wheelbaseIn": 118.1,
+   "curbWeightLb": 5659,
+   "groundClearanceIn": 8
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 35.5,
+   "cargoMaxCuFt": 77.9,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": true
+  },
+  "keyOptions": [
+   "Bowers & Wilkins surround sound",
+   "Electrochromic panoramic Sky Lounge roof",
+   "Ventilated multifunction seats",
+   "Driving Assistance Professional",
+   "Air suspension",
+   "Interior camera"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "high",
+  "notes": "Major 2026 refresh: new entry xDrive45 replaces xDrive50; more power and range across lineup. Ranges shown are best-case (vary with wheels)."
  },
  {
   "id": "bmw-m2",
@@ -3340,11 +4530,23 @@ export const VEHICLES = [
   ],
   "towingLb": 4850,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_G45_X3_M_Sport_Alpine_White.jpg",
+   "credit": "Damian B Oh"
   },
   "confidence": "high",
-  "notes": "G45 generation launched for 2025. No full X3 M offered this generation; M50 is the performance flagship."
+  "notes": "G45 generation launched for 2025. No full X3 M offered this generation; M50 is the performance flagship.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW X3 SUV AWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21368",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-x5",
@@ -3842,704 +5044,6 @@ export const VEHICLES = [
   "notes": "Final model year; production ends in 2026 with no successor. Limited M40i Final Edition (Frozen Black) sold Feb-Apr 2026. Base trim MSRPs approximate (sources mix in destination). Retains iDrive 7 with physical climate controls."
  },
  {
-  "id": "bmw-i4",
-  "make": "BMW",
-  "manufacturer": "BMW Group",
-  "model": "i4",
-  "year": 2026,
-  "bodyStyle": "sedan",
-  "segment": "compact luxury EV",
-  "category": "car",
-  "priceFrom": 57900,
-  "priceTo": 71400,
-  "trims": [
-   {
-    "name": "eDrive40",
-    "msrp": 57900
-   },
-   {
-    "name": "xDrive40",
-    "msrp": 61900
-   },
-   {
-    "name": "M50",
-    "msrp": 71400
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Single-motor RWD (eDrive40)",
-    "hp": 335,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "RWD"
-    ],
-    "mpgCombined": 109,
-    "evRangeMi": 318
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (xDrive40)",
-    "hp": 396,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 100,
-    "evRangeMi": 307
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (M50)",
-    "hp": 536,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 90,
-    "evRangeMi": 269
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 188.5,
-   "widthIn": 72.9,
-   "heightIn": 57,
-   "wheelbaseIn": 112.4,
-   "curbWeightLb": 4680,
-   "groundClearanceIn": 4.9
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 10,
-   "cargoMaxCuFt": 45.6,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": true
-  },
-  "keyOptions": [
-   "M Sport Package",
-   "Harman Kardon surround sound",
-   "Head-up display",
-   "Driving Assistance Professional",
-   "Parking Assistant Professional",
-   "Heated front and rear seats"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "high",
-  "notes": "Gran Coupe liftback body (hatch-style tailgate). EPA range varies with wheel choice; figures shown are best-case for each trim. xDrive40 and M50 MSRPs reflect small 2026 increases and are approximate within a few hundred dollars."
- },
- {
-  "id": "bmw-i5",
-  "make": "BMW",
-  "manufacturer": "BMW Group",
-  "model": "i5",
-  "year": 2026,
-  "bodyStyle": "sedan",
-  "segment": "midsize luxury EV",
-  "category": "car",
-  "priceFrom": 67100,
-  "priceTo": 85100,
-  "trims": [
-   {
-    "name": "eDrive40",
-    "msrp": 67100
-   },
-   {
-    "name": "xDrive40",
-    "msrp": 70100
-   },
-   {
-    "name": "xDrive40 Touring",
-    "msrp": 72600
-   },
-   {
-    "name": "M60 xDrive",
-    "msrp": 85100
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Single-motor RWD (eDrive40)",
-    "hp": 335,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "RWD"
-    ],
-    "mpgCombined": 104,
-    "evRangeMi": 295
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (xDrive40)",
-    "hp": 389,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 98,
-    "evRangeMi": 285
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (M60)",
-    "hp": 593,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 84,
-    "evRangeMi": 240
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 199.2,
-   "widthIn": 74.8,
-   "heightIn": 59.6,
-   "wheelbaseIn": 117.9,
-   "curbWeightLb": 4916,
-   "groundClearanceIn": 5.4
-  },
-  "interior": {
-   "passengerVolumeCuFt": 102,
-   "cargoCuFt": 17.3,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": true
-  },
-  "keyOptions": [
-   "Bowers & Wilkins surround sound",
-   "Highway Assistant hands-free driving",
-   "Head-up display",
-   "Ventilated multifunction seats",
-   "Panoramic moonroof",
-   "Max Range mode",
-   "M Sport Package"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "high",
-  "notes": "Electric version of the G60 5 Series. xDrive40 Touring wagon joined the US lineup; its MSRP shown is approximate. Ranges vary with wheels."
- },
- {
-  "id": "bmw-i7",
-  "make": "BMW",
-  "manufacturer": "BMW Group",
-  "model": "i7",
-  "year": 2026,
-  "bodyStyle": "sedan",
-  "segment": "full-size luxury EV",
-  "category": "car",
-  "priceFrom": 105700,
-  "priceTo": 168500,
-  "trims": [
-   {
-    "name": "eDrive50",
-    "msrp": 105700
-   },
-   {
-    "name": "xDrive60",
-    "msrp": 124200
-   },
-   {
-    "name": "M70 xDrive",
-    "msrp": 168500
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Single-motor RWD (eDrive50)",
-    "hp": 449,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "RWD"
-    ],
-    "mpgCombined": 87,
-    "evRangeMi": 321
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (xDrive60)",
-    "hp": 536,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 83,
-    "evRangeMi": 307
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (M70)",
-    "hp": 650,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 75,
-    "evRangeMi": 285
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 212.2,
-   "widthIn": 76.8,
-   "heightIn": 60.8,
-   "wheelbaseIn": 126.6,
-   "curbWeightLb": 5917,
-   "groundClearanceIn": 5.3
-  },
-  "interior": {
-   "passengerVolumeCuFt": 112,
-   "cargoCuFt": 11.4,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": true
-  },
-  "keyOptions": [
-   "Executive Lounge rear seating",
-   "31-inch 8K Theater Screen",
-   "Bowers & Wilkins Diamond surround sound",
-   "Automatic doors",
-   "Highway Assistant hands-free driving",
-   "Crystal headlights with Swarovski elements",
-   "Rear-seat entertainment tablets"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "high",
-  "notes": "Electric 7 Series. EPA range varies with wheel choice; best-case figures shown."
- },
- {
-  "id": "bmw-ix",
-  "make": "BMW",
-  "manufacturer": "BMW Group",
-  "model": "iX",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "midsize luxury EV SUV",
-  "category": "suv",
-  "priceFrom": 75150,
-  "priceTo": 111500,
-  "trims": [
-   {
-    "name": "xDrive45",
-    "msrp": 75150
-   },
-   {
-    "name": "xDrive60",
-    "msrp": 88500
-   },
-   {
-    "name": "M70 xDrive",
-    "msrp": 111500
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (xDrive45)",
-    "hp": 402,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 107,
-    "evRangeMi": 312
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (xDrive60)",
-    "hp": 536,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 106,
-    "evRangeMi": 364
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (M70)",
-    "hp": 650,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 88,
-    "evRangeMi": 302
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 195,
-   "widthIn": 77.4,
-   "heightIn": 66.8,
-   "wheelbaseIn": 118.1,
-   "curbWeightLb": 5659,
-   "groundClearanceIn": 8
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 35.5,
-   "cargoMaxCuFt": 77.9,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": true
-  },
-  "keyOptions": [
-   "Bowers & Wilkins surround sound",
-   "Electrochromic panoramic Sky Lounge roof",
-   "Ventilated multifunction seats",
-   "Driving Assistance Professional",
-   "Air suspension",
-   "Interior camera"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "high",
-  "notes": "Major 2026 refresh: new entry xDrive45 replaces xDrive50; more power and range across lineup. Ranges shown are best-case (vary with wheels)."
- },
- {
-  "id": "bentley-bentayga",
-  "make": "Bentley",
-  "manufacturer": "Volkswagen Group",
-  "model": "Bentayga",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "ultra-luxury SUV",
-  "category": "suv",
-  "priceFrom": 195000,
-  "priceTo": 309000,
-  "trims": [
-   {
-    "name": "Bentayga",
-    "msrp": 195000
-   },
-   {
-    "name": "Bentayga EWB Azure",
-    "msrp": 240000
-   },
-   {
-    "name": "Bentayga Speed",
-    "msrp": 309000
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "4.0L twin-turbo V8",
-    "hp": 542,
-    "transmission": "8-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 16,
-    "evRangeMi": null
-   },
-   {
-    "type": "gas",
-    "engine": "4.0L twin-turbo V8 (Speed)",
-    "hp": 641,
-    "transmission": "8-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   4,
-   5,
-   7
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 201.8,
-   "widthIn": 78.7,
-   "heightIn": 68.6,
-   "wheelbaseIn": 117.9,
-   "curbWeightLb": 5340,
-   "groundClearanceIn": 8
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 17.1,
-   "cargoMaxCuFt": 62.6,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Extended wheelbase with airline rear seats",
-   "Naim for Bentley audio",
-   "Four-seat / seven-seat configurations",
-   "All-terrain specification",
-   "Mulliner specification",
-   "Rear-seat entertainment"
-  ],
-  "towingLb": 7716,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "medium",
-  "notes": "2026 lineup: standard-wheelbase V8, EWB (extended wheelbase), and reintroduced 641-hp Bentayga Speed (now V8, formerly W12). Prices approximate from dealer price lists; 7-seat option on standard wheelbase only."
- },
- {
-  "id": "bentley-continental-gt",
-  "make": "Bentley",
-  "manufacturer": "Volkswagen Group",
-  "model": "Continental GT",
-  "year": 2026,
-  "bodyStyle": "coupe",
-  "segment": "ultra-luxury grand tourer",
-  "category": "car",
-  "priceFrom": 240000,
-  "priceTo": 310000,
-  "trims": [
-   {
-    "name": "Continental GT",
-    "msrp": 240000
-   },
-   {
-    "name": "Continental GT S",
-    "msrp": 250000
-   },
-   {
-    "name": "Continental GT Speed",
-    "msrp": 285000
-   },
-   {
-    "name": "Continental GTC Speed",
-    "msrp": 310000
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "phev",
-    "engine": "4.0L twin-turbo V8 plug-in hybrid",
-    "hp": 671,
-    "transmission": "8-speed dual-clutch",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   },
-   {
-    "type": "phev",
-    "engine": "4.0L twin-turbo V8 plug-in hybrid (Speed)",
-    "hp": 771,
-    "transmission": "8-speed dual-clutch",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   4
-  ],
-  "doors": 2,
-  "dims": {
-   "lengthIn": 190.9,
-   "widthIn": 77.4,
-   "heightIn": 55.3,
-   "wheelbaseIn": 112.2,
-   "curbWeightLb": 5469,
-   "groundClearanceIn": 5.3
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 12.6,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Rotating display dashboard",
-   "Naim for Bentley audio",
-   "Mulliner specification",
-   "Rotating-spoke wheels",
-   "Contrast stitching and hide combinations",
-   "Touring driver-assist package"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "medium",
-  "notes": "Fourth generation: every 2026 Continental GT is now a plug-in hybrid (no more W12 or pure V8). GTC convertible variants offered across trims. US prices approximate from dealer price lists; official trim-by-trim MSRPs vary."
- },
- {
-  "id": "bentley-flying-spur",
-  "make": "Bentley",
-  "manufacturer": "Volkswagen Group",
-  "model": "Flying Spur",
-  "year": 2026,
-  "bodyStyle": "sedan",
-  "segment": "ultra-luxury sedan",
-  "category": "car",
-  "priceFrom": 225000,
-  "priceTo": 300000,
-  "trims": [
-   {
-    "name": "Flying Spur",
-    "msrp": 225000
-   },
-   {
-    "name": "Flying Spur S",
-    "msrp": 265000
-   },
-   {
-    "name": "Flying Spur Speed",
-    "msrp": 300000
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "phev",
-    "engine": "4.0L twin-turbo V8 plug-in hybrid",
-    "hp": 671,
-    "transmission": "8-speed dual-clutch",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   },
-   {
-    "type": "phev",
-    "engine": "4.0L twin-turbo V8 plug-in hybrid (Speed)",
-    "hp": 771,
-    "transmission": "8-speed dual-clutch",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   4,
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 209.3,
-   "widthIn": 77.9,
-   "heightIn": 58,
-   "wheelbaseIn": 125.7,
-   "curbWeightLb": 5800,
-   "groundClearanceIn": 5.9
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 14.8,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Rotating display",
-   "Naim for Bentley audio",
-   "Rear-seat entertainment",
-   "Airline-style rear seats (4-seat configuration)",
-   "Mulliner specification",
-   "Panoramic sunroof"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "medium",
-  "notes": "For 2026 the Flying Spur moves to the 671-hp high-performance hybrid as standard; Speed gets 771 hp. Prices approximate from dealer price lists."
- },
- {
   "id": "buick-enclave",
   "make": "Buick",
   "manufacturer": "General Motors",
@@ -4709,7 +5213,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination."
+  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Buick Encore GX SUV N/A FWD Early Release, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21818",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "buick-envision",
@@ -4869,6 +5384,77 @@ export const VEHICLES = [
   },
   "confidence": "medium",
   "notes": "FWD only. Sleek fastback-styled crossover on the Trax platform. Prices approximate, excluding ~$1,395 destination."
+ },
+ {
+  "id": "cadillac-celestiq",
+  "make": "Cadillac",
+  "manufacturer": "General Motors",
+  "model": "Celestiq",
+  "year": 2026,
+  "bodyStyle": "sedan",
+  "segment": "ultra-luxury sedan",
+  "category": "car",
+  "priceFrom": 414855,
+  "priceTo": 414855,
+  "trims": [
+   {
+    "name": "Celestiq (bespoke commission)",
+    "msrp": 414855
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD",
+    "hp": 655,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 303
+   }
+  ],
+  "seats": [
+   4
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 217.2,
+   "widthIn": 81.9,
+   "heightIn": 57.6,
+   "wheelbaseIn": 121.8,
+   "curbWeightLb": 6441,
+   "groundClearanceIn": 5.7
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": null,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": true
+  },
+  "keyOptions": [
+   "Hand-built to individual commission at GM's Global Technical Center",
+   "55-inch pillar-to-pillar display plus four more screens",
+   "Smart glass roof with four-quadrant adjustable tint",
+   "Ultra Cruise/Super Cruise hands-free driving",
+   "Active rear steering and Magnetic Ride Control",
+   "38-speaker AKG audio"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac%20Celestiq%2020231120.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "high",
+  "notes": "Hand-built flagship EV; 2026 base price $414,855 before $8,195 destination, effectively bespoke with virtually unlimited personalization."
  },
  {
   "id": "cadillac-ct4",
@@ -5094,78 +5680,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026."
- },
- {
-  "id": "cadillac-celestiq",
-  "make": "Cadillac",
-  "manufacturer": "General Motors",
-  "model": "Celestiq",
-  "year": 2026,
-  "bodyStyle": "sedan",
-  "segment": "ultra-luxury sedan",
-  "category": "car",
-  "priceFrom": 414855,
-  "priceTo": 414855,
-  "trims": [
-   {
-    "name": "Celestiq (bespoke commission)",
-    "msrp": 414855
+  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac CT5 4 DR N/A RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21811",
+     "site": "nhtsa.gov"
+    }
    }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD",
-    "hp": 655,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 303
-   }
-  ],
-  "seats": [
-   4
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 217.2,
-   "widthIn": 81.9,
-   "heightIn": 57.6,
-   "wheelbaseIn": 121.8,
-   "curbWeightLb": 6441,
-   "groundClearanceIn": 5.7
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": true
-  },
-  "keyOptions": [
-   "Hand-built to individual commission at GM's Global Technical Center",
-   "55-inch pillar-to-pillar display plus four more screens",
-   "Smart glass roof with four-quadrant adjustable tint",
-   "Ultra Cruise/Super Cruise hands-free driving",
-   "Active rear steering and Magnetic Ride Control",
-   "38-speaker AKG audio"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac%20Celestiq%2020231120.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "high",
-  "notes": "Hand-built flagship EV; 2026 base price $414,855 before $8,195 destination, effectively bespoke with virtually unlimited personalization."
+  }
  },
  {
   "id": "cadillac-escalade",
@@ -5861,7 +6387,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination."
+  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Blazer SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21788",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-blazer-ev",
@@ -6061,7 +6598,23 @@ export const VEHICLES = [
   "towingLb": 7700,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Chevrolet%20Colorado%20ZR2.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/2024_Chevrolet_Colorado_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/2023_Chevrolet_Colorado_LT%2C_front_1.7.24.jpg",
+     "kind": "exterior",
+     "credit": "Kevauto",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Chevrolet_Colorado_LT,_front_1.7.24.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Crew cab / short bed only. Single 310 hp TurboMax engine across the range. WT/LT verified; mid trims approximate. Prices exclude $2,095 destination. ZR2 ground clearance 10.7 in.",
@@ -6945,7 +7498,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination."
+  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Suburban SUV, RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21860",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-tahoe",
@@ -7421,6 +7985,15 @@ export const VEHICLES = [
   "confidence": "high",
   "notes": "FWD only; no AWD offered. Prices exclude $1,495 destination. One of the least expensive new vehicles in the US.",
   "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Chevrolet Trax Early Release SUV FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20410",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 4.4,
     "scale": 5,
@@ -7542,7 +8115,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination."
+  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chrysler Pacifica PV N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20913",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chrysler-voyager",
@@ -7908,11 +8492,22 @@ export const VEHICLES = [
   ],
   "towingLb": 8700,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/7/70/2021_Dodge_Durango_GT_%28facelift%29%2C_front_6.21.22.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_Dodge_Durango_Citadel_(facelift)%2C_front_6.21.22.jpg",
+   "credit": "Kevauto"
   },
   "confidence": "high",
-  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration."
+  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Dodge Durango SUV N/A RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20919",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "dodge-hornet",
@@ -8528,41 +9123,83 @@ export const VEHICLES = [
   "segment": "midsize off-road SUV",
   "category": "suv",
   "priceFrom": 40495,
-  "priceTo": 79995,
+  "priceTo": 81990,
   "trims": [
    {
     "name": "Base",
-    "msrp": 40495
+    "msrp": 42490,
+    "features": [
+     "2.3L EcoBoost with standard 7-speed manual",
+     "Standard 4x4 with G.O.A.T. drive modes",
+     "Removable roof and doors",
+     "12-inch SYNC 4 touchscreen"
+    ]
    },
    {
     "name": "Big Bend",
-    "msrp": 40995
+    "msrp": 42990,
+    "features": [
+     "Upgraded cloth seats and interior trim",
+     "Unique wheels",
+     "Body-color exterior accents",
+     "Additional convenience features"
+    ]
    },
    {
     "name": "Outer Banks",
-    "msrp": 48090
+    "msrp": 50085,
+    "features": [
+     "Available 2.7L EcoBoost V6",
+     "Leather-trimmed heated front seats",
+     "LED signature lighting",
+     "Dual-zone climate control"
+    ]
    },
    {
     "name": "Badlands",
-    "msrp": 48890
+    "msrp": 50885,
+    "features": [
+     "Bilstein off-road position-sensitive dampers",
+     "Front and rear locking differentials",
+     "Electronic front sway-bar disconnect",
+     "Skid plates and Trail off-road modes"
+    ]
    },
    {
     "name": "Heritage Edition",
-    "msrp": 51625
+    "msrp": 53620,
+    "features": [
+     "Retro white grille, wheels and roof",
+     "Heritage-themed interior",
+     "Unique two-tone paint options",
+     "Special exterior badging"
+    ]
    },
    {
     "name": "Stroppe Edition",
-    "msrp": 69995
+    "msrp": 71990,
+    "features": [
+     "Baja-inspired heritage livery",
+     "Upgraded suspension and appearance package",
+     "Unique wheels and graphics",
+     "Special interior appointments"
+    ]
    },
    {
     "name": "Raptor",
-    "msrp": 79995
+    "msrp": 81990,
+    "features": [
+     "3.0L twin-turbo EcoBoost V6 with 418 hp",
+     "FOX Live Valve internal-bypass shocks",
+     "37-inch tires and widened track",
+     "Reinforced high-clearance suspension"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.3L turbo I4 EcoBoost",
+    "engine": "2.3L EcoBoost turbo I-4",
     "hp": 300,
     "transmission": "7-speed manual or 10-speed automatic",
     "manualAvailable": true,
@@ -8574,7 +9211,7 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "2.7L twin-turbo V6 EcoBoost",
+    "engine": "2.7L EcoBoost twin-turbo V6",
     "hp": 330,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -8586,7 +9223,7 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "3.0L twin-turbo V6 EcoBoost (Raptor)",
+    "engine": "3.0L EcoBoost twin-turbo V6 (Raptor)",
     "hp": 418,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -8653,7 +9290,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "2-door (seats 4) and 4-door (seats 5) body styles; dims/cargo shown are 4-door. Rear-mounted full-size spare. Ground clearance up to 11.5+ in with Sasquatch/Raptor.",
+  "notes": "Full-size 4x4 Bronco offered in two-door and four-door bodies. priceFrom reflects the lowest advertised MSRP ($40,495, two-door Base); the Edmunds per-trim figures listed here are four-door starting prices, so a given trim's two-door variant may be lower. 2.7L V6 combined MPG varies by configuration (EPA shows 17 on the base 2.7 4WD auto and 20 on Outer Banks 2.7); 18 is used as a representative figure. 2.3L manual is available on four-cylinder trims only. Raptor 418 hp and 3.0L V6 confirmed on Ford.com.",
   "ratings": {
    "owner": {
     "score": 4.7,
@@ -8674,7 +9311,82 @@ export const VEHICLES = [
      "site": "kbb.com"
     }
    }
-  }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#F3F3F0"
+    },
+    {
+     "name": "Shadow Black",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Avalanche Gray",
+     "hex": "#6E7377"
+    },
+    {
+     "name": "Marsh Gray",
+     "hex": "#6B6A62"
+    },
+    {
+     "name": "Desert Sand",
+     "hex": "#B9A883"
+    },
+    {
+     "name": "Velocity Blue Metallic",
+     "hex": "#2C5AA0"
+    },
+    {
+     "name": "Ruby Red Metallic Tinted Clearcoat",
+     "hex": "#7E1220"
+    },
+    {
+     "name": "Shelter Green Metallic (Raptor)",
+     "hex": "#3B4A3A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Dark Space Gray",
+     "hex": "#3A3D40",
+     "tone": "dark"
+    },
+    {
+     "name": "Black Onyx",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    },
+    {
+     "name": "Smoked Truffle / Black Onyx",
+     "hex": "#5A4A3E",
+     "tone": "dark"
+    },
+    {
+     "name": "Navy Pier / Black Onyx",
+     "hex": "#26303E",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford 2026 Bronco model page",
+    "url": "https://www.ford.com/suvs/bronco/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy - 2026 Ford Bronco",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Bronco.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Bronco pricing",
+    "url": "https://www.edmunds.com/ford/bronco/2026/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "ford-bronco-sport",
@@ -8685,47 +9397,71 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact SUV",
   "category": "suv",
-  "priceFrom": 29850,
-  "priceTo": 38270,
+  "priceFrom": 33840,
+  "priceTo": 42260,
   "trims": [
    {
     "name": "Big Bend",
-    "msrp": 29850
+    "msrp": 33840,
+    "features": [
+     "Standard 4x4 with 5 GOAT drive modes",
+     "1.5L EcoBoost with 8-speed automatic",
+     "13.2-inch SYNC 4 touchscreen",
+     "Cloth seats and roof rails"
+    ]
    },
    {
     "name": "Heritage",
-    "msrp": 32150
+    "msrp": 36140,
+    "features": [
+     "Retro-styled grille and heritage accents",
+     "Unique wheels and exterior graphics",
+     "Cloth with plaid-pattern seat accents",
+     "Special heritage badging"
+    ]
    },
    {
     "name": "Outer Banks",
-    "msrp": 34950
+    "msrp": 38940,
+    "features": [
+     "Leather-trimmed heated front seats",
+     "Upgraded interior trim and lighting",
+     "LED signature exterior lighting",
+     "Larger alloy wheels"
+    ]
    },
    {
     "name": "Badlands",
-    "msrp": 38270
+    "msrp": 42260,
+    "features": [
+     "250 hp 2.0L EcoBoost engine",
+     "Advanced 4x4 with twin-clutch rear drive unit",
+     "Off-road suspension and steel skid plates",
+     "Additional off-road GOAT modes"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "1.5L turbo I3 EcoBoost",
+    "engine": "1.5L EcoBoost turbo I-3",
     "hp": 180,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
     "drive": [
-     "AWD"
+     "4WD"
     ],
-    "mpgCombined": 26,
+    "mpgCombined": 27,
     "evRangeMi": null
    },
    {
     "type": "gas",
-    "engine": "2.0L turbo I4 EcoBoost (Badlands)",
+    "engine": "2.0L EcoBoost turbo I-4 (Badlands)",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
     "drive": [
-     "AWD"
+     "4WD"
     ],
     "mpgCombined": 23,
     "evRangeMi": null
@@ -8766,11 +9502,81 @@ export const VEHICLES = [
   ],
   "towingLb": 2700,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/2/29/Ford_Bronco_Sport_Badlands_1X7A0384.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2026_Ford_Bronco_Sport_au_salon_auto_Lanaudi%C3%A8re_2025.jpg",
+   "credit": "Bull-Doser"
   },
-  "confidence": "medium",
-  "notes": "Trim prices derived from advertised prices that included the $1,995 destination fee; treat as approximate. Standard AWD on all trims. Badlands adds 2.0L engine, 8.8-in clearance and 2,700-lb towing (others 2,200 lb)."
+  "confidence": "high",
+  "notes": "Ford.com confirms only four 2026 trims (Big Bend, Heritage, Outer Banks, Badlands) and carryover engines, so 2026 is a mid-cycle refresh (new grille, colors, interior fabrics) rather than a ground-up redesign. Base engine is now cataloged by the EPA as a 3-cylinder 1.5L EcoBoost. Some dealer sites quote a $31,845 start; the verified per-trim Big Bend MSRP is $33,840. Dealer chatter about 'Free Wheeling' and other special editions is not reflected on Ford's current 2026 configurator.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#F3F3F0"
+    },
+    {
+     "name": "Space White Metallic",
+     "hex": "#E9EAE4"
+    },
+    {
+     "name": "Shadow Black",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#54585B"
+    },
+    {
+     "name": "Azure Gray Metallic Tri-Coat",
+     "hex": "#6C7175"
+    },
+    {
+     "name": "Velocity Blue Metallic",
+     "hex": "#2C5AA0"
+    },
+    {
+     "name": "Ruby Red Tinted Clearcoat",
+     "hex": "#7E1220"
+    },
+    {
+     "name": "Orange Fury Metallic Tri-Coat",
+     "hex": "#D2481A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony / Roast",
+     "hex": "#2A2622",
+     "tone": "dark"
+    },
+    {
+     "name": "Navy Pier",
+     "hex": "#26303E",
+     "tone": "dark"
+    },
+    {
+     "name": "Smoked Truffle",
+     "hex": "#5A4A3E",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford 2026 Bronco Sport model page",
+    "url": "https://www.ford.com/suvs/bronco-sport/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy - 2026 Ford Bronco Sport",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Bronco_Sport.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Bronco Sport pricing",
+    "url": "https://www.edmunds.com/ford/bronco-sport/2026/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "ford-e-transit",
@@ -8782,19 +9588,52 @@ export const VEHICLES = [
   "segment": "full-size electric van",
   "category": "van",
   "priceFrom": 53260,
-  "priceTo": null,
+  "priceTo": 58770,
   "trims": [
    {
-    "name": "Cargo Van",
-    "msrp": 53260
+    "name": "E-Transit 350 Low Roof (Cargo)",
+    "msrp": 53260,
+    "features": [
+     "Entry all-electric cargo configuration",
+     "89 kWh battery, single rear motor",
+     "12-in SYNC 4 touchscreen standard",
+     "Ford Co-Pilot360 driver assistance"
+    ]
+   },
+   {
+    "name": "E-Transit 350 Medium Roof (Cargo)",
+    "msrp": 54475,
+    "features": [
+     "Taller medium roof for more cargo volume",
+     "Same 89 kWh battery and rear-motor drive",
+     "Improved heat-pump climate system"
+    ]
+   },
+   {
+    "name": "E-Transit 350 High Roof (Cargo)",
+    "msrp": 55475,
+    "features": [
+     "Stand-up high-roof cargo area",
+     "Pro Power Onboard exportable power available",
+     "Fleet telematics and connectivity ready"
+    ]
+   },
+   {
+    "name": "E-Transit 350 High Roof Extended (Cargo)",
+    "msrp": 56675,
+    "features": [
+     "Longest body / maximum cargo length",
+     "High roof for tallest load space",
+     "Top of the E-Transit cargo range"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "ev",
-    "engine": "Single-motor RWD, 89 kWh usable battery",
+    "engine": "Single rear-mounted electric motor, 89 kWh battery",
     "hp": 266,
-    "transmission": "1-speed direct",
+    "transmission": "single-speed",
     "manualAvailable": false,
     "drive": [
      "RWD"
@@ -8841,8 +9680,65 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ford_E-Transit_1X7A1522.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Commercial EV van; cargo van only (plus chassis/cutaway). Range up to 159 mi (low-roof); high-roof and heavier configs less. No EPA MPGe published (heavy-duty class). Price varies by length/roof/GVWR configuration."
+  "confidence": "high",
+  "notes": "All-electric commercial van. Single rear electric motor rated 266 hp / 317 lb-ft, fed by an ~89 kWh (89.9 kWh) battery. Ford-estimated range is up to 159 miles; an official EPA range/MPGe is not published (heavy-duty class), so mpgCombined is null and evRangeMi uses Ford's estimate. 2026 adds a 12-in SYNC 4 screen, standard Co-Pilot360, and an improved heat pump. Trims are 350-series roof-height/length cargo configurations. Prices verified via Edmunds (53260 Low Roof to 56675 High Roof Extended); priceTo of 58770 reflects a higher-content High Roof Extended build reported at launch.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#F2F3F1"
+    },
+    {
+     "name": "Agate Black",
+     "hex": "#0A0A0A"
+    },
+    {
+     "name": "Ingot Silver",
+     "hex": "#9A9CA0"
+    },
+    {
+     "name": "Race Red",
+     "hex": "#C8102E"
+    },
+    {
+     "name": "Blue Metallic",
+     "hex": "#2E4B6B"
+    },
+    {
+     "name": "Carbonized Gray",
+     "hex": "#52565A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Dark Palazzo Gray Vinyl",
+     "hex": "#3A3B3D",
+     "tone": "dark"
+    },
+    {
+     "name": "Dark Palazzo Gray Cloth",
+     "hex": "#404244",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford Pro 2026 E-Transit",
+    "url": "https://www.fordpro.com/en-us/fleet-vehicles/e-transit/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy Ford search (E-Transit not rated)",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Ford&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 E-Transit cargo van pricing",
+    "url": "https://www.edmunds.com/ford/e-transit-cargo-van/2026/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "ford-escape",
@@ -8854,29 +9750,73 @@ export const VEHICLES = [
   "segment": "compact SUV",
   "category": "suv",
   "priceFrom": 30350,
-  "priceTo": 37210,
+  "priceTo": 38705,
   "trims": [
    {
     "name": "Active",
-    "msrp": 30350
+    "msrp": 31845,
+    "features": [
+     "1.5L EcoBoost turbo three-cylinder",
+     "13.2-inch touchscreen with Ford Digital Experience",
+     "Front-wheel drive with available AWD",
+     "Base convenience and safety content"
+    ]
    },
    {
     "name": "ST-Line",
-    "msrp": 31195
+    "msrp": 32690,
+    "features": [
+     "Sport-themed blacked-out exterior styling",
+     "Unique grille and alloy wheels",
+     "Sport cloth seats and steering wheel",
+     "ST-Line badging and trim"
+    ]
+   },
+   {
+    "name": "ST-Line Select",
+    "msrp": 35385,
+    "features": [
+     "Available hybrid and 2.0L EcoBoost powertrains",
+     "Heated front seats and wireless charging",
+     "Upgraded tech and driver-assist features",
+     "Larger wheels"
+    ]
+   },
+   {
+    "name": "Plug-In Hybrid",
+    "msrp": 36895,
+    "features": [
+     "2.5L plug-in hybrid with 37-mile electric range",
+     "101 MPGe combined efficiency",
+     "EV, Auto and Charge drive modes",
+     "Front-wheel drive powertrain"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 36215
+    "msrp": 37710,
+    "features": [
+     "Premium leather-trimmed seating",
+     "Bang and Olufsen premium audio",
+     "ActiveX and upscale interior materials",
+     "Additional luxury and tech content"
+    ]
    },
    {
     "name": "ST-Line Elite",
-    "msrp": 37210
+    "msrp": 38705,
+    "features": [
+     "Top ST-Line equipment and finishes",
+     "Panoramic roof and premium audio",
+     "Full leather-trimmed sport interior",
+     "Standard all-wheel drive availability"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "1.5L turbo I3 EcoBoost",
+    "engine": "1.5L EcoBoost turbo I-3",
     "hp": 180,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -8889,7 +9829,7 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "2.0L turbo I4 EcoBoost",
+    "engine": "2.0L EcoBoost turbo I-4",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -8901,9 +9841,9 @@ export const VEHICLES = [
    },
    {
     "type": "hybrid",
-    "engine": "2.5L I4 hybrid",
+    "engine": "2.5L Atkinson I-4 full hybrid",
     "hp": 192,
-    "transmission": "eCVT",
+    "transmission": "eCVT (electronic CVT)",
     "manualAvailable": false,
     "drive": [
      "FWD",
@@ -8914,14 +9854,14 @@ export const VEHICLES = [
    },
    {
     "type": "phev",
-    "engine": "2.5L I4 plug-in hybrid",
+    "engine": "2.5L Atkinson I-4 plug-in hybrid",
     "hp": 210,
-    "transmission": "eCVT",
+    "transmission": "eCVT (electronic CVT)",
     "manualAvailable": false,
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 101,
+    "mpgCombined": 40,
     "evRangeMi": 37
    }
   ],
@@ -8964,7 +9904,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Final model year: production ended December 2025 (Louisville plant converting to EVs); the 2026 Escape is not sold in CA, NY, MA, VT, OR or WA. PHEV trim continues (~$38-40k) but 2026 pricing is unclear. Sources vary on whether quoted trim prices include destination; treat as approximate. Hybrid cargo slightly less (34.4 cu ft). PHEV has no spare (inflator kit).",
+  "notes": "Escape offers four powertrains: 1.5L EcoBoost gas (3-cyl, 180 hp), 2.0L EcoBoost gas (250 hp, AWD), 2.5L full hybrid (192 hp system) and 2.5L plug-in hybrid (210 hp system, 37-mile EV range, 101 MPGe). Hybrid EPA combined is 39 (42 city / 36 hwy) per fueleconomy.gov; PHEV mpgCombined shown is the gas-only (charge-sustaining) figure of ~40 with 101 MPGe when using electricity. priceFrom $30,350 is the lowest advertised Active figure (Edmunds lists Active at $31,845 as configured); confidence set to medium because the exact base-Active MSRP and the fifth/sixth verified exterior color could not be pinned to a single resolving source. ST-Line Elite is the top gas/ST-Line trim at $38,705.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -8994,7 +9934,60 @@ export const VEHICLES = [
      "site": "kbb.com"
     }
    }
-  }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Star White Metallic",
+     "hex": "#F4F4F0"
+    },
+    {
+     "name": "Agate Black Metallic",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#54585B"
+    },
+    {
+     "name": "Vapor Blue Metallic",
+     "hex": "#7C90A0"
+    },
+    {
+     "name": "Rapid Red Metallic Tinted Clearcoat",
+     "hex": "#8C1420"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Space Gray",
+     "hex": "#3A3D40",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford 2026 Escape model page",
+    "url": "https://www.ford.com/suvs-crossovers/escape/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy - 2026 Ford Escape",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Escape.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Escape pricing",
+    "url": "https://www.edmunds.com/ford/escape/2026/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "ford-expedition",
@@ -9005,30 +9998,54 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "full-size 3-row SUV",
   "category": "suv",
-  "priceFrom": 62400,
-  "priceTo": 84060,
+  "priceFrom": 62700,
+  "priceTo": 90155,
   "trims": [
    {
     "name": "Active",
-    "msrp": 62400
+    "msrp": 62700,
+    "features": [
+     "3.5L EcoBoost V6 with 400 hp",
+     "Rear-wheel drive standard (4WD available)",
+     "24-inch panoramic digital dashboard",
+     "Power-folding third row and power liftgate"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 73950
+    "msrp": 77045,
+    "features": [
+     "Available 440 hp high-output V6",
+     "Standard 4WD and adaptive suspension",
+     "Premium leather and Bang and Olufsen audio",
+     "22-inch wheels and upscale trim"
+    ]
    },
    {
     "name": "Tremor",
-    "msrp": 81400
+    "msrp": 84495,
+    "features": [
+     "Standard 440 hp high-output V6",
+     "Off-road suspension with 33-inch tires",
+     "Skid plates and Trail Control",
+     "Rugged Tremor exterior styling"
+    ]
    },
    {
     "name": "King Ranch",
-    "msrp": 84060
+    "msrp": 87155,
+    "features": [
+     "King Ranch Del Rio leather interior",
+     "Unique King Ranch badging and trim",
+     "Top-tier luxury appointments",
+     "Distinctive two-tone exterior accents"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "3.5L twin-turbo V6 EcoBoost",
+    "engine": "3.5L EcoBoost twin-turbo V6",
     "hp": 400,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -9036,19 +10053,19 @@ export const VEHICLES = [
      "RWD",
      "4WD"
     ],
-    "mpgCombined": 17,
+    "mpgCombined": 19,
     "evRangeMi": null
    },
    {
     "type": "gas",
-    "engine": "3.5L twin-turbo V6 EcoBoost High Output",
+    "engine": "3.5L EcoBoost High-Output twin-turbo V6",
     "hp": 440,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "4WD"
     ],
-    "mpgCombined": 16,
+    "mpgCombined": 18,
     "evRangeMi": null
    }
   ],
@@ -9088,11 +10105,98 @@ export const VEHICLES = [
   ],
   "towingLb": 9600,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Ford_Expedition_%28fourth_generation%29_Max_DSC_2924.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Ford_Expedition_Tremor%2C_front_NYIAS_2025.jpg",
+   "credit": "Kevauto"
   },
-  "confidence": "medium",
-  "notes": "Redesigned generation launched for 2025. Extended-length Expedition MAX versions run about $3,000-$3,300 more (King Ranch MAX ~$87,360). Cargo figures approximate for standard length. A fleet-oriented XL trim (~$57,400) appears in some listings."
+  "confidence": "high",
+  "notes": "Fifth-generation Expedition (redesigned for 2025, carryover for 2026) with 24-inch digital dash and two-piece power liftgate. priceFrom reflects the retail Active trim ($62,700 RWD); a fleet-only XL trim (~$57,700) exists but is not a retail consumer trim. priceTo reflects Max King Ranch ($90,155). Extended-length Max variants of Active, Platinum and King Ranch add roughly $3,000. Standard V6 is 400 hp; high-output V6 (standard on Tremor, optional on Platinum) is 440 hp. EPA combined 19 (RWD) / 18 (4WD).",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#F3F3F0"
+    },
+    {
+     "name": "Star White Metallic Tri-coat",
+     "hex": "#F4F4F0"
+    },
+    {
+     "name": "Agate Black Metallic",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Dark Matter Gray Metallic",
+     "hex": "#494C4F"
+    },
+    {
+     "name": "Glacier Gray Metallic Tri-coat",
+     "hex": "#B6BABD"
+    },
+    {
+     "name": "Space Silver Metallic",
+     "hex": "#9EA1A5"
+    },
+    {
+     "name": "Stone Blue Metallic",
+     "hex": "#3E4C5E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    },
+    {
+     "name": "Space Gray",
+     "hex": "#3A3D40",
+     "tone": "dark"
+    },
+    {
+     "name": "Salt Crystal Gray",
+     "hex": "#C9C6BE",
+     "tone": "light"
+    },
+    {
+     "name": "Mojave Dusk",
+     "hex": "#6E5B47",
+     "tone": "light"
+    },
+    {
+     "name": "Mesa",
+     "hex": "#B79B77",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford 2026 Expedition model page",
+    "url": "https://www.ford.com/suvs/expedition/2026/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy - 2026 Ford Expedition",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Expedition.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Expedition pricing",
+    "url": "https://www.edmunds.com/ford/expedition/2026/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Expedition SUV, RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21400",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-explorer",
@@ -9104,52 +10208,92 @@ export const VEHICLES = [
   "segment": "midsize 3-row SUV",
   "category": "suv",
   "priceFrom": 38465,
-  "priceTo": 54870,
+  "priceTo": 56700,
   "trims": [
    {
+    "name": "Active 100A",
+    "msrp": 38465,
+    "features": [
+     "2.3L EcoBoost with rear-wheel drive",
+     "13.2-inch touchscreen with Ford Digital Experience",
+     "12.3-inch digital instrument cluster",
+     "Value-oriented base equipment group"
+    ]
+   },
+   {
     "name": "Active",
-    "msrp": 38465
+    "msrp": 40260,
+    "features": [
+     "Expanded standard convenience content",
+     "Additional driver-assist features",
+     "Upgraded wheels over base group",
+     "Broader option availability"
+    ]
    },
    {
     "name": "ST-Line",
-    "msrp": 45120
+    "msrp": 46950,
+    "features": [
+     "Sport-tuned exterior with blacked-out accents",
+     "Sport front seats and unique trim",
+     "Sport steering wheel and pedals",
+     "Larger machined alloy wheels"
+    ]
    },
    {
     "name": "Tremor",
-    "msrp": 48430
+    "msrp": 50760,
+    "features": [
+     "Intelligent 4WD with off-road tuning",
+     "All-terrain tires and skid plates",
+     "Trail Turn Assist and off-road drive modes",
+     "Raised ride height and recovery hooks"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 50930
+    "msrp": 52760,
+    "features": [
+     "Available 3.0L EcoBoost V6",
+     "Premium leather with quilted inserts",
+     "Bang and Olufsen premium audio",
+     "Additional chrome and luxury trim"
+    ]
    },
    {
     "name": "ST",
-    "msrp": 54870
+    "msrp": 56700,
+    "features": [
+     "Standard 3.0L EcoBoost V6 with 385 hp",
+     "Sport-tuned performance suspension",
+     "Red-painted brake calipers",
+     "ST performance styling and seats"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.3L turbo I4 EcoBoost",
+    "engine": "2.3L EcoBoost turbo I-4",
     "hp": 300,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
-     "AWD"
+     "4WD"
     ],
     "mpgCombined": 24,
     "evRangeMi": null
    },
    {
     "type": "gas",
-    "engine": "3.0L twin-turbo V6 EcoBoost (ST/Platinum/Tremor)",
-    "hp": 400,
+    "engine": "3.0L EcoBoost twin-turbo V6",
+    "hp": 385,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
-     "AWD"
+     "4WD"
     ],
     "mpgCombined": 21,
     "evRangeMi": null
@@ -9210,8 +10354,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Trim prices are destination-adjusted approximations from sources quoting delivered prices. New Tremor trim for 2026. Most climate functions handled through the 13.2-inch touchscreen; volume knob retained.",
+  "confidence": "high",
+  "notes": "2026 Explorer reflects the recent redesign/refresh: new Tremor off-road model, Ford Digital Experience infotainment, 13.2-inch screen. Base 2.3L is 300 hp; ST 3.0L V6 is 385 hp per Ford.com. RWD standard on four-cylinder trims with intelligent 4WD available across the line. EPA combined: 2.3L RWD 24 (AWD 23), 3.0L RWD 21 (AWD 20); Tremor variants slightly lower.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -9242,7 +10386,83 @@ export const VEHICLES = [
      "site": "edmunds.com"
     }
    }
-  }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Space White Metallic",
+     "hex": "#E9EAE4"
+    },
+    {
+     "name": "Star White Metallic Tri-coat",
+     "hex": "#F4F4F0"
+    },
+    {
+     "name": "Agate Black Metallic",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#54585B"
+    },
+    {
+     "name": "Marsh Gray",
+     "hex": "#6B6A62"
+    },
+    {
+     "name": "Vapor Blue Metallic",
+     "hex": "#7C90A0"
+    },
+    {
+     "name": "Rapid Red Metallic Tinted Clearcoat",
+     "hex": "#8C1420"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Dark Space Gray Cloth",
+     "hex": "#3A3D40",
+     "tone": "dark"
+    },
+    {
+     "name": "Onyx Cloth with Red Stitching",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Onyx Miko",
+     "hex": "#1C1C1E",
+     "tone": "dark"
+    },
+    {
+     "name": "Mojave Dusk ActiveX",
+     "hex": "#6E5B47",
+     "tone": "light"
+    },
+    {
+     "name": "Salt Crystal Gray Leather",
+     "hex": "#C9C6BE",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford 2026 Explorer model page",
+    "url": "https://www.ford.com/suvs/explorer/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy - 2026 Ford Explorer",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Explorer.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Explorer pricing",
+    "url": "https://www.edmunds.com/ford/explorer/2026/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "ford-f-150",
@@ -9254,49 +10474,93 @@ export const VEHICLES = [
   "segment": "full-size pickup",
   "category": "truck",
   "priceFrom": 39330,
-  "priceTo": 110930,
+  "priceTo": 79005,
   "trims": [
    {
     "name": "XL",
-    "msrp": 39330
+    "msrp": 39330,
+    "features": [
+     "Base work trim",
+     "12-inch SYNC 4 touchscreen available",
+     "Multiple engine choices",
+     "Vinyl or cloth seating"
+    ]
    },
    {
     "name": "STX",
-    "msrp": 41855
+    "msrp": 41855,
+    "features": [
+     "Sport appearance package",
+     "18-inch wheels",
+     "Standard 12-inch touchscreen",
+     "Body-color or black-accent styling"
+    ]
    },
    {
     "name": "XLT",
-    "msrp": 44695
+    "msrp": 44695,
+    "features": [
+     "Upgraded cloth seats",
+     "Chrome/bright accents",
+     "Power driver seat",
+     "Most popular volume trim"
+    ]
    },
    {
     "name": "Lariat",
-    "msrp": 59560
+    "msrp": 59560,
+    "features": [
+     "Leather-trimmed seats",
+     "Dual-zone climate",
+     "Available B&O audio",
+     "Now offered in 4x2"
+    ]
    },
    {
     "name": "Tremor",
-    "msrp": 64915
+    "msrp": 64915,
+    "features": [
+     "FX4 off-road suspension",
+     "All-terrain tires",
+     "Skid plates",
+     "Trail control and unique styling"
+    ]
    },
    {
     "name": "King Ranch",
-    "msrp": 65825
+    "msrp": 65825,
+    "features": [
+     "Western-themed premium leather",
+     "Real wood trim",
+     "Multicontour front seats",
+     "Now offered in 4x2"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 68800
+    "msrp": 68800,
+    "features": [
+     "Massaging front seats",
+     "Top-tier tech and trim",
+     "22-inch wheels available",
+     "Now offered in 4x2"
+    ]
    },
    {
     "name": "Raptor",
-    "msrp": 79005
-   },
-   {
-    "name": "Raptor R",
-    "msrp": 110930
+    "msrp": 79005,
+    "features": [
+     "High-output 3.5L EcoBoost",
+     "37-inch tires available",
+     "FOX Live Valve shocks",
+     "Widened track and long-travel suspension"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.7L twin-turbo V6 EcoBoost",
+    "engine": "2.7L EcoBoost V6",
     "hp": 325,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -9304,12 +10568,12 @@ export const VEHICLES = [
      "RWD",
      "4WD"
     ],
-    "mpgCombined": 21,
+    "mpgCombined": 20,
     "evRangeMi": null
    },
    {
     "type": "gas",
-    "engine": "5.0L V8",
+    "engine": "3.5L EcoBoost V6",
     "hp": 400,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -9322,7 +10586,7 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "3.5L twin-turbo V6 EcoBoost",
+    "engine": "5.0L Ti-VCT V8",
     "hp": 400,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -9330,12 +10594,12 @@ export const VEHICLES = [
      "RWD",
      "4WD"
     ],
-    "mpgCombined": 20,
+    "mpgCombined": 19,
     "evRangeMi": null
    },
    {
     "type": "hybrid",
-    "engine": "3.5L V6 PowerBoost hybrid",
+    "engine": "3.5L PowerBoost Full-Hybrid V6",
     "hp": 430,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -9348,14 +10612,14 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "5.2L supercharged V8 (Raptor R)",
-    "hp": 720,
+    "engine": "3.5L High-Output EcoBoost V6 (Raptor)",
+    "hp": 450,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "4WD"
     ],
-    "mpgCombined": 12,
+    "mpgCombined": 18,
     "evRangeMi": null
    }
   ],
@@ -9416,27 +10680,22 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Dims are SuperCrew 5.5-ft bed; regular and SuperCab configurations also offered. cargoCuFt is the 5.5-ft bed volume. Destination fee is $2,595.",
+  "notes": "Eight-trim lineup (XL, STX, XLT, Lariat, Tremor, King Ranch, Platinum, Raptor). For 2026 Lariat, King Ranch and Platinum gained a 4x2 option, lowering their base MSRP. Destination is $2,795 (excluded from MSRP figures). Combined MPG from EPA: 2.7L 21/20 (2WD/4WD), 3.5L 20/19, 5.0L 19, PowerBoost hybrid 24/23; representative figures used. Supercharged 5.2L V8 Raptor R (~720 hp) starts around $113,000-$115,000 and is not EPA-rated in the combined data; not included in priceTo.",
   "sources": [
    {
-    "label": "2026 specs & features",
+    "label": "Ford F-150 official model page",
     "url": "https://www.ford.com/trucks/f150/",
     "site": "ford.com"
    },
    {
-    "label": "Towing",
-    "url": "https://www.ford.com/trucks/f150/features/towing-capability/",
-    "site": "ford.com"
-   },
-   {
-    "label": "EPA fuel economy",
+    "label": "EPA fuel economy 2026 Ford F150",
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_F150.shtml",
     "site": "fueleconomy.gov"
    },
    {
-    "label": "2026 pricing & trims",
-    "url": "https://www.edmunds.com/ford/f-150/2026/",
-    "site": "edmunds.com"
+    "label": "TrueCar 2026 F-150 pricing",
+    "url": "https://www.truecar.com/overview/ford/f-150/2026/",
+    "site": "truecar.com"
    }
   ],
   "ratings": {
@@ -9468,6 +10727,76 @@ export const VEHICLES = [
      "site": "edmunds.com"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#EDEEF0"
+    },
+    {
+     "name": "Agate Black Metallic",
+     "hex": "#14161A"
+    },
+    {
+     "name": "Iconic Silver Metallic",
+     "hex": "#9DA1A4"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#4C4F52"
+    },
+    {
+     "name": "Avalanche",
+     "hex": "#CFCEC6"
+    },
+    {
+     "name": "Antimatter Blue Metallic",
+     "hex": "#26313D"
+    },
+    {
+     "name": "Argon Blue Metallic",
+     "hex": "#6E8BA6"
+    },
+    {
+     "name": "Marsh Gray",
+     "hex": "#6A6D66"
+    },
+    {
+     "name": "Ruby Red Metallic Tinted Clearcoat",
+     "hex": "#7C0A11"
+    },
+    {
+     "name": "Star White Metallic Tri-Coat",
+     "hex": "#EFF1EF"
+    },
+    {
+     "name": "Shelter Green (Raptor)",
+     "hex": "#3B4A3B"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Dark Slate",
+     "hex": "#3E4145",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Slate",
+     "hex": "#8A8D90",
+     "tone": "light"
+    },
+    {
+     "name": "Baja (King Ranch leather)",
+     "hex": "#6B4A2E",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -9480,40 +10809,82 @@ export const VEHICLES = [
   "segment": "full-size electric pickup",
   "category": "truck",
   "priceFrom": 54780,
-  "priceTo": 84995,
+  "priceTo": 87190,
   "trims": [
    {
     "name": "Pro",
-    "msrp": 54780
+    "msrp": 54780,
+    "features": [
+     "Commercial/work focus",
+     "Vinyl easy-clean seating",
+     "2.4 kW Pro Power Onboard",
+     "Standard-range battery base"
+    ]
    },
    {
     "name": "STX",
-    "msrp": 63345
+    "msrp": 62995,
+    "features": [
+     "Retail entry styling",
+     "20-inch wheels",
+     "Extended-range battery standard",
+     "Unique interior accents"
+    ]
    },
    {
     "name": "Flash",
-    "msrp": 65995
+    "msrp": 65995,
+    "features": [
+     "Extended-range battery",
+     "15.5-inch center screen",
+     "B&O sound system",
+     "Value-oriented sweet spot"
+    ]
    },
    {
     "name": "Lariat",
-    "msrp": 74995
+    "msrp": 74995,
+    "features": [
+     "Leather-trimmed seats",
+     "Power tailgate",
+     "BlueCruise hands-free ready",
+     "580 hp dual-motor output"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 84995
+    "msrp": 87190,
+    "features": [
+     "22-inch wheels",
+     "Multicontour massaging seats",
+     "Highest-output Pro Power Onboard",
+     "Luxury flagship trim"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "ev",
-    "engine": "Dual-motor AWD, extended-range battery",
-    "hp": 580,
-    "transmission": "1-speed direct",
+    "engine": "Dual eMotor (Extended Range battery, Pro/STX/Flash)",
+    "hp": 536,
+    "transmission": "single-speed",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 70,
+    "mpgCombined": 66,
+    "evRangeMi": 300
+   },
+   {
+    "type": "ev",
+    "engine": "Dual eMotor (Extended Range battery, Lariat/Platinum)",
+    "hp": 580,
+    "transmission": "single-speed",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 66,
     "evRangeMi": 320
    }
   ],
@@ -9556,7 +10927,73 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Discontinued: Ford canceled Lightning production in December 2025 shortly after opening 2026 order banks, so 2026 availability is extremely limited/uncertain. All 2026 trims use the extended-range battery (~320 mi on Pro/STX/Flash, ~300 mi Platinum). cargoCuFt is the 14.1 cu-ft front trunk; 5.5-ft bed also standard. Pro/STX/Flash have physical climate controls; Lariat/Platinum move most controls to the portrait screen."
+  "notes": "2026 availability is uncertain: Ford opened 2026 order banks (making the 123 kWh Extended Range battery standard and adding the STX trim in place of XLT) but reportedly moved to end F-150 Lightning production in late 2025 amid slow EV demand; treat the 2026 spec below as the announced lineup. 2026 Lightning combined MPGe and EPA range are not yet posted on fueleconomy.gov (2025 data cited as proxy). Manufacturer-estimated range is about 300 mi (Pro/STX/Flash), about 320 mi (Lariat) and about 300 mi (Platinum); dual-motor outputs are 536 hp (Pro/STX/Flash) and 580 hp (Lariat/Platinum), each 775 lb-ft. MPGe ~66 per reporting; treat as approximate. STX MSRP (~$62,995) is estimated. Lariat received a $2,000 cut to $74,995; Platinum starts $87,190. Destination is $2,595. Exterior color set is approximate pending Ford's final 2026 Lightning palette.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#EDEEF0"
+    },
+    {
+     "name": "Agate Black Metallic",
+     "hex": "#14161A"
+    },
+    {
+     "name": "Iconic Silver Metallic",
+     "hex": "#9DA1A4"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#4C4F52"
+    },
+    {
+     "name": "Antimatter Blue Metallic",
+     "hex": "#26313D"
+    },
+    {
+     "name": "Star White Metallic Tri-Coat",
+     "hex": "#EFF1EF"
+    },
+    {
+     "name": "Avalanche",
+     "hex": "#CFCEC6"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Dark Slate",
+     "hex": "#3E4145",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Slate",
+     "hex": "#8A8D90",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford F-150 Lightning official page",
+    "url": "https://www.ford.com/trucks/f150-lightning/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy F-150 Lightning",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2025_Ford_F-150_Lightning.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "TrueCar 2026 F-150 Lightning pricing",
+    "url": "https://www.truecar.com/overview/ford/f-150-lightning/2026/",
+    "site": "truecar.com"
+   }
+  ]
  },
  {
   "id": "ford-f-series-super-duty",
@@ -9567,32 +11004,66 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "heavy-duty full-size pickup",
   "category": "truck",
-  "priceFrom": 48875,
-  "priceTo": 78665,
+  "priceFrom": 48770,
+  "priceTo": 81760,
   "trims": [
    {
-    "name": "F-250 XL",
-    "msrp": 48875
+    "name": "XL",
+    "msrp": 48770,
+    "features": [
+     "Work-grade base trim",
+     "Vinyl or cloth seating",
+     "Steel wheels",
+     "Full engine range available"
+    ]
    },
    {
-    "name": "F-250 Lariat",
-    "msrp": 62735
+    "name": "XLT",
+    "msrp": 51970,
+    "features": [
+     "Chrome exterior accents",
+     "Larger touchscreen",
+     "Cloth seating upgrade",
+     "Alloy wheels"
+    ]
    },
    {
-    "name": "F-250 King Ranch",
-    "msrp": 77775
+    "name": "Lariat",
+    "msrp": 65830,
+    "features": [
+     "Leather-trimmed seats",
+     "Dual-zone climate",
+     "Upgraded audio and tech",
+     "Available Crew Cab luxury"
+    ]
    },
    {
-    "name": "F-250 Platinum",
-    "msrp": 78665
+    "name": "King Ranch",
+    "msrp": 80870,
+    "features": [
+     "Western premium leather",
+     "Standard Crew Cab 4x4",
+     "Wood-tone trim",
+     "Advanced towing tech"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "msrp": 81760,
+    "features": [
+     "Top-tier luxury appointments",
+     "Standard Crew Cab 4x4",
+     "Massaging front seats",
+     "Premium 12-inch displays"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "6.8L V8",
+    "engine": "6.8L Godzilla V8",
     "hp": 405,
-    "transmission": "10-speed automatic",
+    "transmission": "10-speed TorqShift automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
@@ -9603,9 +11074,9 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "7.3L V8",
+    "engine": "7.3L Godzilla V8",
     "hp": 430,
-    "transmission": "10-speed automatic",
+    "transmission": "10-speed TorqShift automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
@@ -9616,9 +11087,9 @@ export const VEHICLES = [
    },
    {
     "type": "diesel",
-    "engine": "6.7L Power Stroke turbo-diesel V8",
+    "engine": "6.7L Power Stroke Turbo Diesel V8",
     "hp": 475,
-    "transmission": "10-speed automatic",
+    "transmission": "10-speed TorqShift automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
@@ -9629,11 +11100,12 @@ export const VEHICLES = [
    },
    {
     "type": "diesel",
-    "engine": "6.7L High-Output Power Stroke turbo-diesel V8",
+    "engine": "6.7L High-Output Power Stroke Turbo Diesel V8",
     "hp": 500,
-    "transmission": "10-speed automatic",
+    "transmission": "10-speed TorqShift automatic",
     "manualAvailable": false,
     "drive": [
+     "RWD",
      "4WD"
     ],
     "mpgCombined": null,
@@ -9681,7 +11153,94 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "One record covering F-250/F-350 (F-450 pickup and chassis cabs also exist). XLT and Limited trims also offered; Limited tops roughly $100k. Max tow shown is F-350 dually gooseneck; conventional towing lower. No EPA ratings (heavy-duty class). Dims are crew cab 6.75-ft bed."
+  "notes": "Super Duty (F-250/F-350/F-450) trucks exceed 8,500 lb GVWR and are EPA-exempt, so combined MPG is null (EPA truly does not rate them). Trims: XL, XLT, Lariat, King Ranch, Platinum (a Limited trim and F-450 configurations push MSRP well above the listed priceTo). MSRPs shown are F-250 4x2/4x4 starting points; Edmunds lists F-250 XL at about $50,190 vs the dealer-sourced $48,770 used here - base varies by cab/bed. High-output 6.7L diesel makes up to 1,200 lb-ft torque. Confidence medium due to base-price source variance and configuration breadth.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#EDEEF0"
+    },
+    {
+     "name": "Agate Black Metallic",
+     "hex": "#14161A"
+    },
+    {
+     "name": "Race Red",
+     "hex": "#B4141A"
+    },
+    {
+     "name": "Avalanche Gray",
+     "hex": "#C9C7BE"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#4C4F52"
+    },
+    {
+     "name": "Argon Blue Metallic",
+     "hex": "#6E8BA6"
+    },
+    {
+     "name": "Marsh Gray",
+     "hex": "#6A6D66"
+    },
+    {
+     "name": "Iconic Silver",
+     "hex": "#9DA1A4"
+    },
+    {
+     "name": "Star White Metallic Tri-Coat",
+     "hex": "#EFF1EF"
+    },
+    {
+     "name": "Glacier Gray Metallic Tri-Coat",
+     "hex": "#8E9498"
+    },
+    {
+     "name": "Ruby Red Metallic Tinted Clearcoat",
+     "hex": "#7C0A11"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Dark Slate",
+     "hex": "#3E4145",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Slate",
+     "hex": "#8A8D90",
+     "tone": "light"
+    },
+    {
+     "name": "Baja (King Ranch leather)",
+     "hex": "#6B4A2E",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford Super Duty official page",
+    "url": "https://www.ford.com/trucks/super-duty/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy note (HD trucks exempt)",
+    "url": "https://www.fueleconomy.gov/feg/byfueltype.htm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 F-250 Super Duty pricing",
+    "url": "https://www.edmunds.com/ford/f-250-super-duty/2026/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "ford-maverick",
@@ -9692,32 +11251,66 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "compact pickup",
   "category": "truck",
-  "priceFrom": 27145,
-  "priceTo": 38090,
+  "priceFrom": 28145,
+  "priceTo": 41495,
   "trims": [
    {
     "name": "XL",
-    "msrp": 27145
+    "msrp": 28145,
+    "features": [
+     "Standard full-hybrid powertrain",
+     "Base work-focused trim",
+     "8-inch touchscreen",
+     "FlexBed cargo system"
+    ]
    },
    {
     "name": "XLT",
-    "msrp": 30645
+    "msrp": 30645,
+    "features": [
+     "Painted aluminum wheels",
+     "Power tailgate lock",
+     "Added creature comforts",
+     "Available EcoBoost turbo engine"
+    ]
    },
    {
-    "name": "Lobo AWD",
-    "msrp": 35930
+    "name": "Lobo",
+    "msrp": 35930,
+    "features": [
+     "Street-performance styling",
+     "EcoBoost AWD only",
+     "Lowered sport suspension",
+     "Unique wheels and appearance"
+    ]
    },
    {
-    "name": "Lariat AWD",
-    "msrp": 38090
+    "name": "Lariat",
+    "msrp": 38090,
+    "features": [
+     "Leatherette/upgraded seating",
+     "Premium interior trim",
+     "Advanced tech and driver assist",
+     "Hybrid or EcoBoost available"
+    ]
+   },
+   {
+    "name": "Tremor",
+    "msrp": 41495,
+    "features": [
+     "Off-road Tremor suspension",
+     "EcoBoost AWD only",
+     "All-terrain capability",
+     "Skid plates and trail tuning"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "hybrid",
-    "engine": "2.5L I4 hybrid",
+    "engine": "2.5L Full-Hybrid I4",
     "hp": 191,
-    "transmission": "eCVT",
+    "transmission": "eCVT (continuously variable)",
     "manualAvailable": false,
     "drive": [
      "FWD",
@@ -9728,7 +11321,7 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "2.0L turbo I4 EcoBoost",
+    "engine": "2.0L EcoBoost Turbo I4",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -9736,7 +11329,7 @@ export const VEHICLES = [
      "FWD",
      "AWD"
     ],
-    "mpgCombined": 25,
+    "mpgCombined": 26,
     "evRangeMi": null
    }
   ],
@@ -9788,25 +11381,34 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "cargoCuFt is the 4.5-ft bed volume. Hybrid and EcoBoost both offered on XL/XLT/Lariat; Lobo and Tremor are EcoBoost-only.",
+  "notes": "Five trims: XL, XLT, Lobo, Lariat, Tremor. Full-hybrid (191 hp, eCVT) is the standard powertrain on XL/XLT/Lariat; the 250 hp 2.0L EcoBoost is optional there and standard (AWD-only) on Lobo and Tremor. EPA combined: hybrid 38 FWD / 37 AWD / 36 Lariat AWD; EcoBoost 26 FWD / 25 AWD / 24 Lobo / 23 Tremor. AWD adds about $2,220. Base $28,145 reflects standard hybrid; a 2.0L EcoBoost XL is a bit lower (~$27,145). Destination excluded.",
   "sources": [
    {
-    "label": "2026 specs & features",
+    "label": "Ford Maverick official page",
     "url": "https://www.ford.com/trucks/maverick/",
     "site": "ford.com"
    },
    {
-    "label": "EPA fuel economy",
+    "label": "EPA fuel economy 2026 Ford Maverick",
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Maverick.shtml",
     "site": "fueleconomy.gov"
    },
    {
-    "label": "2026 pricing & trims",
-    "url": "https://www.edmunds.com/ford/maverick/2026/",
+    "label": "Edmunds 2026 Ford Maverick pricing",
+    "url": "https://www.edmunds.com/ford/maverick/2026/hybrid/",
     "site": "edmunds.com"
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Ford Maverick Later Release PU/CC FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20335",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 4.2,
     "scale": 5,
@@ -9826,6 +11428,63 @@ export const VEHICLES = [
      "site": "kbb.com"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Shadow Black",
+     "hex": "#121212"
+    },
+    {
+     "name": "Space White Metallic",
+     "hex": "#E7E9E6"
+    },
+    {
+     "name": "Oxford White",
+     "hex": "#EDEEF0"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#4C4F52"
+    },
+    {
+     "name": "Velocity Blue",
+     "hex": "#1E5CB3"
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#A9C4DE"
+    },
+    {
+     "name": "Ruby Red Metallic Tinted Clearcoat",
+     "hex": "#7C0A11"
+    },
+    {
+     "name": "Azure Gray Metallic Tri-Coat",
+     "hex": "#565C62"
+    },
+    {
+     "name": "Orange Fury Metallic Tri-Coat",
+     "hex": "#CE4418"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1C",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Dark Slate",
+     "hex": "#3E4145",
+     "tone": "dark"
+    },
+    {
+     "name": "Navy/Sand accents (Lariat)",
+     "hex": "#B9AC90",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -9837,47 +11496,97 @@ export const VEHICLES = [
   "bodyStyle": "coupe",
   "segment": "sports car",
   "category": "car",
-  "priceFrom": 32640,
-  "priceTo": 69075,
+  "priceFrom": 34635,
+  "priceTo": 71070,
   "trims": [
    {
-    "name": "EcoBoost",
-    "msrp": 32640
+    "name": "EcoBoost Fastback",
+    "msrp": 34635,
+    "features": [
+     "Turbo 2.3L I4 with 315 hp",
+     "10-speed automatic (no manual)",
+     "Sync 4 12.4-in cluster and 13.2-in center screen",
+     "Standard RWD base sports car"
+    ]
    },
    {
-    "name": "GT",
-    "msrp": 46560
+    "name": "EcoBoost Premium Fastback",
+    "msrp": 38340,
+    "features": [
+     "Upgraded interior trim and materials",
+     "B&O premium audio",
+     "Ambient lighting and extra creature comforts",
+     "More available options over base EcoBoost"
+    ]
    },
    {
-    "name": "GT Premium",
-    "msrp": 51080
+    "name": "GT Fastback",
+    "msrp": 48555,
+    "features": [
+     "5.0L Coyote V8 with 480 hp (486 with active exhaust)",
+     "Standard 6-speed manual with rev-matching",
+     "Larger brakes and performance suspension",
+     "Dual exhaust with active valve system"
+    ]
+   },
+   {
+    "name": "GT Premium Fastback",
+    "msrp": 53075,
+    "features": [
+     "Premium interior and B&O audio over GT",
+     "Digital gauge customization",
+     "Available Performance Pack (Torsen diff, Brembos)",
+     "Heated and cooled front seats available"
+    ]
    },
    {
     "name": "Dark Horse",
-    "msrp": 64080
+    "msrp": 66075,
+    "features": [
+     "Uprated 5.0L V8 tuned to 500 hp",
+     "Tremec 6-speed manual with rev-matching",
+     "MagneRide adaptive damping",
+     "Unique aero, Brembo brakes, dark-themed styling"
+    ]
    },
    {
     "name": "Dark Horse Premium",
-    "msrp": 69075
+    "msrp": 71070,
+    "features": [
+     "Premium cabin appointments over Dark Horse",
+     "Recaro seats available",
+     "Enhanced trim and tech content",
+     "Track-focused options bundled"
+    ]
+   },
+   {
+    "name": "GTD",
+    "msrp": 325000,
+    "features": [
+     "Supercharged 5.2L V8 producing about 815 hp",
+     "8-speed dual-clutch rear transaxle",
+     "Active aero, pushrod rear suspension, carbon-ceramic brakes",
+     "Limited-production street-legal track special"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.3L turbo I4 EcoBoost",
+    "engine": "2.3L EcoBoost turbo I4",
     "hp": 315,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "RWD"
     ],
-    "mpgCombined": 25,
+    "mpgCombined": 26,
     "evRangeMi": null
    },
    {
     "type": "gas",
-    "engine": "5.0L V8 (GT)",
-    "hp": 486,
+    "engine": "5.0L Ti-VCT Coyote V8 (GT)",
+    "hp": 480,
     "transmission": "6-speed manual or 10-speed automatic",
     "manualAvailable": true,
     "drive": [
@@ -9888,14 +11597,26 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "5.0L V8 (Dark Horse)",
+    "engine": "5.0L Coyote V8 (Dark Horse)",
     "hp": 500,
     "transmission": "6-speed manual or 10-speed automatic",
     "manualAvailable": true,
     "drive": [
      "RWD"
     ],
-    "mpgCombined": 18,
+    "mpgCombined": 17,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "5.2L supercharged V8 (GTD)",
+    "hp": 815,
+    "transmission": "8-speed dual-clutch (AM-S8)",
+    "manualAvailable": false,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 12,
     "evRangeMi": null
    }
   ],
@@ -9938,24 +11659,92 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Convertible available on EcoBoost and GT trims. Limited-run 815-hp Mustang GTD (~$325k) sold separately by application. Climate controls live in the 13.2-inch touchscreen; a physical volume knob remains.",
+  "notes": "S650 Mustang. MSRPs from Edmunds include destination and are verified for EcoBoost through Dark Horse; Dark Horse Premium (71070) confirmed via dealer/aggregator pricing. EPA combined MPG verified on fueleconomy.gov (EcoBoost 26, GT auto 19/manual 18, Dark Horse 17, GTD 12). GT V8 rises to 486 hp with active exhaust. GTD is a limited-production halo car; ~325000 MSRP is an approximate market figure (Ford has not published a standard MSRP), so priceTo is set to the regular-production Dark Horse Premium (71070) and GTD is listed separately.",
   "sources": [
    {
-    "label": "2026 specs & features",
+    "label": "Ford.com 2026 Mustang",
     "url": "https://www.ford.com/cars/mustang/",
     "site": "ford.com"
    },
    {
-    "label": "EPA fuel economy",
-    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Mustang.shtml",
+    "label": "EPA fuel economy 2026 Mustang",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Ford&baseModel=Mustang&srchtyp=ymm",
     "site": "fueleconomy.gov"
    },
    {
-    "label": "2026 pricing & trims",
-    "url": "https://www.edmunds.com/ford/mustang/2026/",
+    "label": "Edmunds 2026 Mustang trims and pricing",
+    "url": "https://www.edmunds.com/ford/mustang/2026/trims/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#F2F3F1"
+    },
+    {
+     "name": "Race Red",
+     "hex": "#C8102E"
+    },
+    {
+     "name": "Shadow Black",
+     "hex": "#0A0A0A"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#52565A"
+    },
+    {
+     "name": "Avalanche Gray",
+     "hex": "#8C8F91"
+    },
+    {
+     "name": "Vapor Blue Metallic",
+     "hex": "#6E7F8D"
+    },
+    {
+     "name": "Atlas Blue Metallic",
+     "hex": "#2E4B6B"
+    },
+    {
+     "name": "Molten Magenta Metallic",
+     "hex": "#7A2E4A"
+    },
+    {
+     "name": "Orange Fury Metallic Tri-coat",
+     "hex": "#E8611A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Space Gray",
+     "hex": "#4A4D50",
+     "tone": "dark"
+    },
+    {
+     "name": "Carmine Red",
+     "hex": "#7C1F2B",
+     "tone": "dark"
+    }
+   ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Mustang (2-door fastback, RWD), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21424",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-mustang-mach-e",
@@ -9966,47 +11755,122 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact electric SUV",
   "category": "suv",
-  "priceFrom": 39840,
-  "priceTo": 59530,
+  "priceFrom": 37795,
+  "priceTo": 55440,
   "trims": [
    {
     "name": "Select",
-    "msrp": 39840
+    "msrp": 37795,
+    "features": [
+     "Standard Range battery, single-motor RWD",
+     "10.2-in digital cluster and 15.5-in center screen",
+     "Wireless Apple CarPlay and Android Auto",
+     "Ford Co-Pilot360 driver assistance"
+    ]
+   },
+   {
+    "name": "Premium",
+    "msrp": 40595,
+    "features": [
+     "Heated and ventilated front seats",
+     "Bang & Olufsen sound system",
+     "Panoramic fixed-glass roof",
+     "Extended Range battery and eAWD available"
+    ]
    },
    {
     "name": "GT",
-    "msrp": 55440
+    "msrp": 53395,
+    "features": [
+     "Dual-motor eAWD tuned to 480 hp",
+     "Brembo front brakes and performance tune",
+     "Ford Performance front seats",
+     "GT-specific styling and suspension"
+    ]
    },
    {
     "name": "Rally",
-    "msrp": 59530
+    "msrp": 55440,
+    "features": [
+     "MagneRide adaptive damping raised for dirt",
+     "Michelin CrossClimate2 tires and skid protection",
+     "RallySport and Slippery drive modes",
+     "Unique rally-themed exterior graphics"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "ev",
-    "engine": "Single-motor RWD",
-    "hp": 264,
-    "transmission": "1-speed direct",
+    "engine": "Single-motor RWD, Standard Range (~72 kWh usable)",
+    "hp": 266,
+    "transmission": "single-speed",
     "manualAvailable": false,
     "drive": [
-     "RWD",
-     "AWD"
+     "RWD"
     ],
-    "mpgCombined": 103,
+    "mpgCombined": 107,
     "evRangeMi": 260
    },
    {
     "type": "ev",
-    "engine": "Dual-motor AWD (GT/Rally)",
+    "engine": "Single-motor RWD, Extended Range (~91 kWh usable)",
+    "hp": 290,
+    "transmission": "single-speed",
+    "manualAvailable": false,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 110,
+    "evRangeMi": 320
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor eAWD, Standard Range",
+    "hp": 266,
+    "transmission": "single-speed",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 100,
+    "evRangeMi": 240
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor eAWD, Extended Range",
+    "hp": 325,
+    "transmission": "single-speed",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 104,
+    "evRangeMi": 300
+   },
+   {
+    "type": "ev",
+    "engine": "GT dual-motor eAWD, Extended Range",
     "hp": 480,
-    "transmission": "1-speed direct",
+    "transmission": "single-speed",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
     "mpgCombined": 90,
     "evRangeMi": 280
+   },
+   {
+    "type": "ev",
+    "engine": "Rally dual-motor eAWD, Extended Range",
+    "hp": 480,
+    "transmission": "single-speed",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 84,
+    "evRangeMi": 255
    }
   ],
   "seats": [
@@ -10047,8 +11911,85 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Ford_Mustang_Mach-E_Rally_Auto_Zuerich_2023_1X7A1182.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "high",
-  "notes": "Premium trim slots between Select and GT (roughly $43k-$50k depending on battery). Range varies by battery/motor: roughly 250-320 miles across the lineup. 4.7 cu-ft front trunk in addition to rear cargo."
+  "confidence": "medium",
+  "notes": "Electric crossover. MPGe and EPA range verified on fueleconomy.gov: RWD Standard 107 MPGe/260 mi, RWD Extended 110 MPGe/320 mi, AWD Standard 100 MPGe/240 mi, AWD Extended 104 MPGe/300 mi, GT 90 MPGe/280 mi, Rally 84 MPGe/255 mi. Prices from Edmunds (Select from 37795, Premium from 40595, GT from 53395); Rally top price ~55440 per Ford/aggregator. Confidence is medium because exact per-configuration horsepower is not published uniformly by Ford; 266 hp (RWD/AWD Standard), ~325 hp (AWD Extended), and 480 hp (GT/Rally) are well supported, while the RWD Extended figure (~290 hp) is a best estimate and battery usable-kWh values are approximate.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Shadow Black",
+     "hex": "#0A0A0A"
+    },
+    {
+     "name": "Star White Metallic Tri-Coat",
+     "hex": "#EDEDE8"
+    },
+    {
+     "name": "Adriatic Blue Metallic",
+     "hex": "#2E4B6B"
+    },
+    {
+     "name": "Velocity Blue Metallic",
+     "hex": "#1E5AA8"
+    },
+    {
+     "name": "Eruption Green Metallic",
+     "hex": "#2F5D3A"
+    },
+    {
+     "name": "Race Red",
+     "hex": "#C8102E"
+    },
+    {
+     "name": "Glacier Gray Metallic Tri-Coat",
+     "hex": "#9BA0A3"
+    },
+    {
+     "name": "Desert Sand",
+     "hex": "#C9B79C"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Space Gray",
+     "hex": "#C9C7C0",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford.com 2026 Mustang Mach-E",
+    "url": "https://www.ford.com/suvs/mach-e/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Mach-E",
+    "url": "https://fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Ford&baseModel=Mustang+Mach-E&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Mach-E pricing",
+    "url": "https://www.edmunds.com/ford/mustang-mach-e/2026/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Mustang Mach-E BEV SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21428",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-ranger",
@@ -10064,25 +12005,49 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "XL",
-    "msrp": 33350
+    "msrp": 33350,
+    "features": [
+     "Base trim",
+     "2.3L EcoBoost standard",
+     "10-speed automatic",
+     "Available 4WD (+$3,500)"
+    ]
    },
    {
     "name": "XLT",
-    "msrp": 36075
+    "msrp": 35875,
+    "features": [
+     "Available 2.7L V6",
+     "Alloy wheels",
+     "Upgraded interior trim",
+     "More tech/convenience features"
+    ]
    },
    {
     "name": "Lariat",
-    "msrp": 43755
+    "msrp": 43755,
+    "features": [
+     "Leather-trimmed seats",
+     "2.7L V6 available",
+     "12-inch touchscreen",
+     "Premium audio and driver assist"
+    ]
    },
    {
     "name": "Raptor",
-    "msrp": 57070
+    "msrp": 57070,
+    "features": [
+     "3.0L twin-turbo V6 405 hp",
+     "FOX 2.5-inch Live Valve shocks",
+     "Front and rear locking diffs",
+     "33-inch all-terrain tires"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.3L turbo I4 EcoBoost",
+    "engine": "2.3L EcoBoost I4",
     "hp": 270,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -10095,12 +12060,11 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "2.7L twin-turbo V6 EcoBoost",
+    "engine": "2.7L EcoBoost V6",
     "hp": 315,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
-     "RWD",
      "4WD"
     ],
     "mpgCombined": 20,
@@ -10108,14 +12072,14 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "3.0L twin-turbo V6 EcoBoost (Raptor)",
+    "engine": "3.0L EcoBoost Twin-Turbo V6 (Raptor)",
     "hp": 405,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "4WD"
     ],
-    "mpgCombined": 16,
+    "mpgCombined": 17,
     "evRangeMi": null
    }
   ],
@@ -10154,11 +12118,96 @@ export const VEHICLES = [
   ],
   "towingLb": 7500,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/8/82/Ford_Ranger_Raptor_%28P703%29_DSC_7063.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Ford_Ranger_LARIAT_4WD_SuperCrew_(2024)_(53620395647).jpg",
+   "credit": "Charles from Port Chester, New York"
   },
   "confidence": "high",
-  "notes": "SuperCrew only in the US (5-ft bed). 4WD adds ~$3,500 on XL/XLT/Lariat; standard on Raptor. Interior is mostly dark tones; lighter gray accents on some trims."
+  "notes": "Four trims: XL, XLT, Lariat, Raptor. XL/XLT/Lariat are RWD standard with 4WD +$3,500; Raptor is 4WD-only SuperCrew. EPA combined: 2.3L 23/21 (2WD/4WD), 2.7L V6 20 (4WD), Raptor 3.0L 17. The 2.7L V6 is optional on XLT/Lariat. Destination excluded from MSRP.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#EDEEF0"
+    },
+    {
+     "name": "Shadow Black",
+     "hex": "#121212"
+    },
+    {
+     "name": "Carbonized Gray Metallic",
+     "hex": "#4C4F52"
+    },
+    {
+     "name": "Marsh Gray",
+     "hex": "#6A6D66"
+    },
+    {
+     "name": "Desert Sand",
+     "hex": "#A99B7E"
+    },
+    {
+     "name": "Velocity Blue Metallic",
+     "hex": "#1E5CB3"
+    },
+    {
+     "name": "Shelter Green Metallic",
+     "hex": "#3B4A3B"
+    },
+    {
+     "name": "Avalanche",
+     "hex": "#CFCEC6"
+    },
+    {
+     "name": "Ruby Red Metallic Tinted Clearcoat",
+     "hex": "#7C0A11"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1A1A1C",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Dark Slate",
+     "hex": "#3E4145",
+     "tone": "dark"
+    },
+    {
+     "name": "Cyber Orange accents (Raptor)",
+     "hex": "#D1451B",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Ford Ranger official page",
+    "url": "https://www.ford.com/trucks/ranger/",
+    "site": "ford.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Ford Ranger",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Ford_Ranger.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds 2026 Ford Ranger pricing",
+    "url": "https://www.edmunds.com/ford/ranger/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Ranger (Super Crew) pickup, RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21430",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-transit",
@@ -10170,17 +12219,53 @@ export const VEHICLES = [
   "segment": "full-size van",
   "category": "van",
   "priceFrom": 48400,
-  "priceTo": null,
+  "priceTo": 62900,
   "trims": [
    {
-    "name": "Cargo Van XL",
-    "msrp": 48400
+    "name": "Transit 150 Low Roof (Cargo)",
+    "msrp": 48400,
+    "features": [
+     "Entry cargo configuration",
+     "82.4-in low roof, 130-in wheelbase",
+     "3.5L PFDi V6 with 10-speed automatic",
+     "Standard 12-in touchscreen and Co-Pilot360"
+    ]
+   },
+   {
+    "name": "Transit 250 Medium Roof (Cargo)",
+    "msrp": 50800,
+    "features": [
+     "Higher 250 payload/GVWR rating",
+     "99-in medium roof for more cargo volume",
+     "Available longer wheelbase and length",
+     "Intelligent AWD available"
+    ]
+   },
+   {
+    "name": "Transit 350 High Roof (Cargo)",
+    "msrp": 52800,
+    "features": [
+     "Top 350 payload/GVWR rating",
+     "108-in high roof for stand-up cargo area",
+     "Available 3.5L EcoBoost twin-turbo V6",
+     "Dual-rear-wheel and extended-length options"
+    ]
+   },
+   {
+    "name": "Transit 350 Passenger Van (XL/XLT)",
+    "msrp": 59180,
+    "features": [
+     "Seating for up to 15 passengers",
+     "Available three roof heights",
+     "XLT adds upgraded trim over XL",
+     "Single or dual rear wheels"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "3.5L V6",
+    "engine": "3.5L PFDi V6 (port/direct injection)",
     "hp": 275,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
@@ -10193,8 +12278,8 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "3.5L twin-turbo V6 EcoBoost",
-    "hp": 310,
+    "engine": "3.5L EcoBoost twin-turbo V6",
+    "hp": 300,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
@@ -10247,935 +12332,64 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Commercial van sold in cargo, crew and passenger (XL/XLT) forms; passenger wagons and high-roof/extended models cost more, so top price varies widely by configuration. Dims shown are regular-length low-roof; cargoCuFt is low-roof RWB cargo volume, cargoMaxCuFt is extended high-roof. No EPA ratings (over 8,500-lb GVWR)."
- },
- {
-  "id": "gmc-acadia",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Acadia",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "midsize 3-row SUV",
-  "category": "suv",
-  "priceFrom": 43800,
-  "priceTo": 63100,
-  "trims": [
-   {
-    "name": "Elevation",
-    "msrp": 43800
-   },
-   {
-    "name": "AT4",
-    "msrp": 52500
-   },
-   {
-    "name": "Denali",
-    "msrp": 55900
-   },
-   {
-    "name": "Denali Ultimate",
-    "msrp": 63100
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "2.5L turbo I4",
-    "hp": 328,
-    "transmission": "8-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "FWD",
-     "AWD"
-    ],
-    "mpgCombined": 22,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   7,
-   8
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 203.9,
-   "widthIn": 78.8,
-   "heightIn": 71.3,
-   "wheelbaseIn": 121.7,
-   "curbWeightLb": 4731,
-   "groundClearanceIn": 7.6
+  "notes": "Full-size commercial van (gas). Configurations are roof heights (Low ~82 in, Medium ~99 in, High ~108 in), wheelbases, and 150/250/350 GVWR grades in cargo and passenger bodies. Standard 3.5L PFDi V6 (275 hp / 260 lb-ft); optional 3.5L EcoBoost twin-turbo V6 (300 hp / 400 lb-ft on ford.com; some sources cite 310 hp). Both use a 10-speed automatic; RWD standard with available Intelligent AWD. EPA combined MPG is null: the Transit exceeds 8,500 lb GVWR and is exempt from EPA fuel-economy labeling, so no combined figure is published on fueleconomy.gov. Pricing is approximate from Ford/Edmunds (cargo from ~48400 to ~62900; passenger from ~59180) and can vary widely by configuration, hence medium confidence.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Oxford White",
+     "hex": "#F2F3F1"
+    },
+    {
+     "name": "Race Red",
+     "hex": "#C8102E"
+    },
+    {
+     "name": "Agate Black",
+     "hex": "#0A0A0A"
+    },
+    {
+     "name": "Ingot Silver",
+     "hex": "#9A9CA0"
+    },
+    {
+     "name": "Blue Metallic",
+     "hex": "#2E4B6B"
+    },
+    {
+     "name": "Carbonized Gray",
+     "hex": "#52565A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Dark Palazzo Gray Vinyl",
+     "hex": "#3A3B3D",
+     "tone": "dark"
+    },
+    {
+     "name": "Dark Palazzo Gray Cloth",
+     "hex": "#404244",
+     "tone": "dark"
+    }
+   ]
   },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 23,
-   "cargoMaxCuFt": 97.5,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "temporary",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Super Cruise hands-free driver assistance",
-   "15-inch portrait touchscreen",
-   "AT4 off-road package",
-   "Panoramic sunroof",
-   "Bose premium audio",
-   "Heated/ventilated front seats"
-  ],
-  "towingLb": 5000,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Acadia%20Denali%20front%20view.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination."
- },
- {
-  "id": "gmc-canyon",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Canyon",
-  "year": 2026,
-  "bodyStyle": "pickup",
-  "segment": "midsize pickup",
-  "category": "truck",
-  "priceFrom": 38900,
-  "priceTo": 57300,
-  "trims": [
-   {
-    "name": "Elevation",
-    "msrp": 38900
-   },
-   {
-    "name": "AT4",
-    "msrp": 44300
-   },
-   {
-    "name": "Denali",
-    "msrp": 52300
-   },
-   {
-    "name": "AT4X",
-    "msrp": 57300
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "2.7L TurboMax turbo I4",
-    "hp": 310,
-    "transmission": "8-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 19,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 213.2,
-   "widthIn": 74.9,
-   "heightIn": 71,
-   "wheelbaseIn": 131.4,
-   "curbWeightLb": 4430,
-   "groundClearanceIn": 9.6
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "full-size",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "AT4X with Multimatic DSSV dampers and front/rear lockers",
-   "AT4X AEV Edition",
-   "11.3-inch touchscreen (standard)",
-   "Advanced trailering package",
-   "Bose premium audio",
-   "Underbody skid plates"
-  ],
-  "towingLb": 7700,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20GMC%20Canyon.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination."
- },
- {
-  "id": "gmc-hummer-ev-pickup",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Hummer EV Pickup",
-  "year": 2026,
-  "bodyStyle": "pickup",
-  "segment": "electric off-road super truck",
-  "category": "truck",
-  "priceFrom": 94910,
-  "priceTo": 105705,
-  "trims": [
-   {
-    "name": "2X",
-    "msrp": 94910
-   },
-   {
-    "name": "3X",
-    "msrp": 105705
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (2X)",
-    "hp": 570,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 311
-   },
-   {
-    "type": "ev",
-    "engine": "Tri-motor AWD (3X)",
-    "hp": 800,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 381
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 216.8,
-   "widthIn": 86.7,
-   "heightIn": 79.1,
-   "wheelbaseIn": 135.6,
-   "curbWeightLb": 9063,
-   "groundClearanceIn": 10.1
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "CrabWalk four-wheel steering",
-   "Extract Mode (raises ride height ~6 in)",
-   "Removable Infinity Roof panels",
-   "UltraVision underbody cameras",
-   "Extreme Off-Road Package with 35-in tires",
-   "Watts to Freedom (WTF) launch mode"
-  ],
-  "towingLb": 7500,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/GMC%20Hummer%20EV%20Pickup%20Washington%20DC%20Metro%20Area%2C%20USA.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Prices back-calculated from advertised MSRPs minus ~$2,290 destination. Curb weight over 9,000 lb; 3X range varies by battery/tires."
- },
- {
-  "id": "gmc-hummer-ev-suv",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Hummer EV SUV",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "electric off-road SUV",
-  "category": "suv",
-  "priceFrom": 94910,
-  "priceTo": 103010,
-  "trims": [
-   {
-    "name": "2X",
-    "msrp": 94910
-   },
-   {
-    "name": "3X",
-    "msrp": 103010
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (2X)",
-    "hp": 570,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 283
-   },
-   {
-    "type": "ev",
-    "engine": "Tri-motor AWD (3X)",
-    "hp": 830,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 314
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 206.7,
-   "widthIn": 86.5,
-   "heightIn": 77.8,
-   "wheelbaseIn": 126.7,
-   "curbWeightLb": 8600,
-   "groundClearanceIn": 10.1
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 35.9,
-   "cargoMaxCuFt": 81.8,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "CrabWalk four-wheel steering",
-   "Extract Mode air suspension",
-   "Removable Infinity Roof panels",
-   "UltraVision underbody cameras",
-   "Extreme Off-Road Package",
-   "Rear-mounted full-size spare delete (tire carrier standard)"
-  ],
-  "towingLb": 7500,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/GMC%20Hummer%20EV%20SUV%20001.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Shorter wheelbase than the pickup; exterior-mounted spare carrier is standard on SUV. Prices exclude ~$2,290 destination; ranges vary by configuration."
- },
- {
-  "id": "gmc-sierra-1500",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Sierra 1500",
-  "year": 2026,
-  "bodyStyle": "pickup",
-  "segment": "full-size pickup",
-  "category": "truck",
-  "priceFrom": 38700,
-  "priceTo": 83100,
-  "trims": [
-   {
-    "name": "Pro",
-    "msrp": 38700
-   },
-   {
-    "name": "SLE",
-    "msrp": 49100
-   },
-   {
-    "name": "Elevation",
-    "msrp": 50900
-   },
-   {
-    "name": "SLT",
-    "msrp": 55300
-   },
-   {
-    "name": "Denali",
-    "msrp": 66300
-   },
-   {
-    "name": "AT4",
-    "msrp": 67200
-   },
-   {
-    "name": "AT4X",
-    "msrp": 78800
-   },
-   {
-    "name": "Denali Ultimate",
-    "msrp": 83100
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "2.7L TurboMax turbo I4",
-    "hp": 310,
-    "transmission": "8-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 19,
-    "evRangeMi": null
-   },
-   {
-    "type": "gas",
-    "engine": "5.3L V8",
-    "hp": 355,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 17,
-    "evRangeMi": null
-   },
-   {
-    "type": "gas",
-    "engine": "6.2L V8",
-    "hp": 420,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 17,
-    "evRangeMi": null
-   },
-   {
-    "type": "diesel",
-    "engine": "3.0L Duramax turbodiesel I6",
-    "hp": 305,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 26,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   3,
-   5,
-   6
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 231.9,
-   "widthIn": 81.2,
-   "heightIn": 75.5,
-   "wheelbaseIn": 147.4,
-   "curbWeightLb": 4750,
-   "groundClearanceIn": 8.9
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "full-size",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Super Cruise hands-free driver assistance (with trailering)",
-   "MultiPro six-function tailgate",
-   "AT4X with Multimatic DSSV dampers",
-   "Denali Ultimate with full-grain leather and 16-camera views",
-   "CarbonPro carbon-fiber bed (availability varies)",
-   "Bose premium audio"
-  ],
-  "towingLb": 13200,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/23%20GMC%20Sierra%201500%20Denali.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "high",
-  "notes": "Trim MSRPs from published 2026 pricing minus $2,195 destination; dims for crew cab short bed.",
   "sources": [
    {
-    "label": "2026 pricing & trims",
-    "url": "https://www.gmc.com/trucks/sierra/1500",
-    "site": "gmc.com"
+    "label": "Ford.com 2026 Transit van",
+    "url": "https://www.ford.com/trucks/transit-passenger-van-wagon/",
+    "site": "ford.com"
    },
    {
-    "label": "EPA fuel economy",
-    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_GMC_Sierra.shtml",
+    "label": "EPA fuel economy Ford search (Transit exempt)",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Ford&srchtyp=ymm",
     "site": "fueleconomy.gov"
    },
    {
-    "label": "2026 pricing & trims",
-    "url": "https://www.edmunds.com/gmc/sierra-1500/2026/",
+    "label": "Edmunds 2026 Transit cargo van pricing",
+    "url": "https://www.edmunds.com/ford/transit-cargo-van/2026/",
     "site": "edmunds.com"
    }
-  ],
-  "ratings": {
-   "safety": {
-    "nhtsa": 5,
-    "appliesTo": "2025 (carries over)",
-    "source": {
-     "label": "NHTSA SafetyRatings API - 2025 GMC Sierra 1500 crew cab 4WD (VehicleId 20529), OverallRating 5; 2026 crew cab not yet rated (same generation)",
-     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20529",
-     "site": "nhtsa.gov"
-    }
-   },
-   "owner": {
-    "score": 3.6,
-    "scale": 5,
-    "count": 26,
-    "source": {
-     "label": "Edmunds consumer reviews - 2026 GMC Sierra 1500 (3.6/5, 26 reviews)",
-     "url": "https://www.edmunds.com/gmc/sierra-1500/2026/",
-     "site": "edmunds.com"
-    }
-   },
-   "expert": {
-    "score": 6.7,
-    "scale": 10,
-    "source": {
-     "label": "Edmunds expert Rating - 2026 GMC Sierra 1500 (6.7/10)",
-     "url": "https://www.edmunds.com/gmc/sierra-1500/2026/",
-     "site": "edmunds.com"
-    }
-   }
-  }
- },
- {
-  "id": "gmc-sierra-ev",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Sierra EV",
-  "year": 2026,
-  "bodyStyle": "pickup",
-  "segment": "full-size electric pickup",
-  "category": "truck",
-  "priceFrom": 62400,
-  "priceTo": 99000,
-  "trims": [
-   {
-    "name": "Elevation",
-    "msrp": 62400
-   },
-   {
-    "name": "AT4",
-    "msrp": 79800
-   },
-   {
-    "name": "Denali Max Range",
-    "msrp": 99000
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD (up to 760 hp Denali Max Range)",
-    "hp": 625,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 460
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 233.2,
-   "widthIn": 83.8,
-   "heightIn": 78.9,
-   "wheelbaseIn": 145.7,
-   "curbWeightLb": 8600,
-   "groundClearanceIn": 8.9
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": true
-  },
-  "keyOptions": [
-   "Up to 460 miles of range (Max Range battery)",
-   "MultiPro Midgate cab pass-through",
-   "Four-wheel steer with CrabWalk (Denali)",
-   "Super Cruise",
-   "Air Ride adaptive suspension (Denali)",
-   "10.2 kW PowerBase offboard power"
-  ],
-  "towingLb": 12500,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Sierra%20EV%20Denali%20front%20view.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination."
- },
- {
-  "id": "gmc-sierra-hd",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Sierra HD",
-  "year": 2026,
-  "bodyStyle": "pickup",
-  "segment": "heavy-duty pickup",
-  "category": "truck",
-  "priceFrom": 47000,
-  "priceTo": 99300,
-  "trims": [
-   {
-    "name": "Pro",
-    "msrp": 47000
-   },
-   {
-    "name": "SLE",
-    "msrp": 55500
-   },
-   {
-    "name": "SLT",
-    "msrp": 64500
-   },
-   {
-    "name": "AT4",
-    "msrp": 71500
-   },
-   {
-    "name": "Denali",
-    "msrp": 76500
-   },
-   {
-    "name": "AT4X",
-    "msrp": 88500
-   },
-   {
-    "name": "Denali Ultimate",
-    "msrp": 99300
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "6.6L V8",
-    "hp": 401,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   },
-   {
-    "type": "diesel",
-    "engine": "6.6L Duramax turbodiesel V8",
-    "hp": 470,
-    "transmission": "10-speed Allison automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   3,
-   5,
-   6
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 250,
-   "widthIn": 81.9,
-   "heightIn": 79.8,
-   "wheelbaseIn": 158.9,
-   "curbWeightLb": 6950,
-   "groundClearanceIn": 10
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "full-size",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Duramax diesel with 975 lb-ft of torque",
-   "Gooseneck/5th-wheel prep package",
-   "AT4X off-road package",
-   "Denali Ultimate luxury package",
-   "Transparent trailer camera view",
-   "Power up/down tailgate"
-  ],
-  "towingLb": 36000,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Sierra%202500HD%20Denali%20front%20view.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Single record covering Sierra 2500HD and 3500HD. Max tow is 3500HD dually diesel gooseneck; 2500HD up to ~22,500 lb. Mid/top prices approximate, exclude destination."
- },
- {
-  "id": "gmc-terrain",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Terrain",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "compact SUV",
-  "category": "suv",
-  "priceFrom": 30700,
-  "priceTo": 42400,
-  "trims": [
-   {
-    "name": "Elevation",
-    "msrp": 30700
-   },
-   {
-    "name": "AT4",
-    "msrp": 38400
-   },
-   {
-    "name": "Denali",
-    "msrp": 42400
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "1.5L turbo I4",
-    "hp": 175,
-    "transmission": "CVT (FWD) / 8-speed automatic (AWD)",
-    "manualAvailable": false,
-    "drive": [
-     "FWD",
-     "AWD"
-    ],
-    "mpgCombined": 27,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 183.4,
-   "widthIn": 75.6,
-   "heightIn": 65.9,
-   "wheelbaseIn": 107.5,
-   "curbWeightLb": 3628,
-   "groundClearanceIn": 7.9
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 29.8,
-   "cargoMaxCuFt": 63.5,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "temporary",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "15-inch portrait touchscreen",
-   "Panoramic sunroof",
-   "Adaptive cruise control",
-   "Heated and ventilated front seats",
-   "AT4 all-terrain styling and tires",
-   "Denali premium trim with Bose audio"
-  ],
-  "towingLb": 1500,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20GMC%20Terrain%20front%20view.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "All-new generation launched 2025; shares platform with Chevy Equinox. AT4 price approximate. Prices exclude ~$1,495 destination.",
-  "ratings": {
-   "owner": {
-    "score": 3.9,
-    "scale": 5,
-    "count": 10,
-    "source": {
-     "label": "Edmunds consumer reviews - 2026 GMC Terrain (3.9/5, 10 reviews)",
-     "url": "https://www.edmunds.com/gmc/terrain/2026/",
-     "site": "edmunds.com"
-    }
-   }
-  }
- },
- {
-  "id": "gmc-yukon",
-  "make": "GMC",
-  "manufacturer": "General Motors",
-  "model": "Yukon",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "full-size SUV",
-  "category": "suv",
-  "priceFrom": 69600,
-  "priceTo": 103900,
-  "trims": [
-   {
-    "name": "Elevation",
-    "msrp": 69600
-   },
-   {
-    "name": "AT4",
-    "msrp": 76500
-   },
-   {
-    "name": "Denali",
-    "msrp": 82900
-   },
-   {
-    "name": "AT4 Ultimate",
-    "msrp": 96500
-   },
-   {
-    "name": "Denali Ultimate",
-    "msrp": 103900
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "5.3L V8",
-    "hp": 355,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 16,
-    "evRangeMi": null
-   },
-   {
-    "type": "gas",
-    "engine": "6.2L V8",
-    "hp": 420,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 16,
-    "evRangeMi": null
-   },
-   {
-    "type": "diesel",
-    "engine": "3.0L turbodiesel I6",
-    "hp": 305,
-    "transmission": "10-speed automatic",
-    "manualAvailable": false,
-    "drive": [
-     "RWD",
-     "4WD"
-    ],
-    "mpgCombined": 23,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   7,
-   8
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 210,
-   "widthIn": 81,
-   "heightIn": 76.5,
-   "wheelbaseIn": 120.9,
-   "curbWeightLb": 5700,
-   "groundClearanceIn": 8
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 25.5,
-   "cargoMaxCuFt": 122.9,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "full-size",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Super Cruise hands-free driver assistance",
-   "Air Ride adaptive suspension with Magnetic Ride Control",
-   "16.8-inch touchscreen",
-   "Power-sliding center console",
-   "Rear-seat entertainment",
-   "AT4 off-road package"
-  ],
-  "towingLb": 8400,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20GMC%20Yukon%20AT4%20Facelift.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "medium",
-  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination."
+  ]
  },
  {
   "id": "genesis-electrified-gv70",
@@ -11798,6 +13012,966 @@ export const VEHICLES = [
   "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Sleeker GV80 Coupe (from $81,850, 409-hp e-SC available) shares the nameplate; cargo figures are for the standard SUV."
  },
  {
+  "id": "gmc-acadia",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Acadia",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "midsize 3-row SUV",
+  "category": "suv",
+  "priceFrom": 43800,
+  "priceTo": 63100,
+  "trims": [
+   {
+    "name": "Elevation",
+    "msrp": 43800
+   },
+   {
+    "name": "AT4",
+    "msrp": 52500
+   },
+   {
+    "name": "Denali",
+    "msrp": 55900
+   },
+   {
+    "name": "Denali Ultimate",
+    "msrp": 63100
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "2.5L turbo I4",
+    "hp": 328,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "FWD",
+     "AWD"
+    ],
+    "mpgCombined": 22,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   7,
+   8
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 203.9,
+   "widthIn": 78.8,
+   "heightIn": 71.3,
+   "wheelbaseIn": 121.7,
+   "curbWeightLb": 4731,
+   "groundClearanceIn": 7.6
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 23,
+   "cargoMaxCuFt": 97.5,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "temporary",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Super Cruise hands-free driver assistance",
+   "15-inch portrait touchscreen",
+   "AT4 off-road package",
+   "Panoramic sunroof",
+   "Bose premium audio",
+   "Heated/ventilated front seats"
+  ],
+  "towingLb": 5000,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Acadia%20Denali%20front%20view.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "medium",
+  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination."
+ },
+ {
+  "id": "gmc-canyon",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Canyon",
+  "year": 2026,
+  "bodyStyle": "pickup",
+  "segment": "midsize pickup",
+  "category": "truck",
+  "priceFrom": 38900,
+  "priceTo": 57300,
+  "trims": [
+   {
+    "name": "Elevation",
+    "msrp": 38900
+   },
+   {
+    "name": "AT4",
+    "msrp": 44300
+   },
+   {
+    "name": "Denali",
+    "msrp": 52300
+   },
+   {
+    "name": "AT4X",
+    "msrp": 57300
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "2.7L TurboMax turbo I4",
+    "hp": 310,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 19,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 213.2,
+   "widthIn": 74.9,
+   "heightIn": 71,
+   "wheelbaseIn": 131.4,
+   "curbWeightLb": 4430,
+   "groundClearanceIn": 9.6
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": null,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "full-size",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "AT4X with Multimatic DSSV dampers and front/rear lockers",
+   "AT4X AEV Edition",
+   "11.3-inch touchscreen (standard)",
+   "Advanced trailering package",
+   "Bose premium audio",
+   "Underbody skid plates"
+  ],
+  "towingLb": 7700,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_GMC_Canyon.jpg",
+   "credit": "42-BRT"
+  },
+  "confidence": "medium",
+  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination."
+ },
+ {
+  "id": "gmc-hummer-ev-pickup",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Hummer EV Pickup",
+  "year": 2026,
+  "bodyStyle": "pickup",
+  "segment": "electric off-road super truck",
+  "category": "truck",
+  "priceFrom": 94910,
+  "priceTo": 105705,
+  "trims": [
+   {
+    "name": "2X",
+    "msrp": 94910
+   },
+   {
+    "name": "3X",
+    "msrp": 105705
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (2X)",
+    "hp": 570,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 311
+   },
+   {
+    "type": "ev",
+    "engine": "Tri-motor AWD (3X)",
+    "hp": 800,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 381
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 216.8,
+   "widthIn": 86.7,
+   "heightIn": 79.1,
+   "wheelbaseIn": 135.6,
+   "curbWeightLb": 9063,
+   "groundClearanceIn": 10.1
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": null,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "CrabWalk four-wheel steering",
+   "Extract Mode (raises ride height ~6 in)",
+   "Removable Infinity Roof panels",
+   "UltraVision underbody cameras",
+   "Extreme Off-Road Package with 35-in tires",
+   "Watts to Freedom (WTF) launch mode"
+  ],
+  "towingLb": 7500,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/GMC%20Hummer%20EV%20Pickup%20Washington%20DC%20Metro%20Area%2C%20USA.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "medium",
+  "notes": "Prices back-calculated from advertised MSRPs minus ~$2,290 destination. Curb weight over 9,000 lb; 3X range varies by battery/tires."
+ },
+ {
+  "id": "gmc-hummer-ev-suv",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Hummer EV SUV",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "electric off-road SUV",
+  "category": "suv",
+  "priceFrom": 94910,
+  "priceTo": 103010,
+  "trims": [
+   {
+    "name": "2X",
+    "msrp": 94910
+   },
+   {
+    "name": "3X",
+    "msrp": 103010
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (2X)",
+    "hp": 570,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 283
+   },
+   {
+    "type": "ev",
+    "engine": "Tri-motor AWD (3X)",
+    "hp": 830,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 314
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 206.7,
+   "widthIn": 86.5,
+   "heightIn": 77.8,
+   "wheelbaseIn": 126.7,
+   "curbWeightLb": 8600,
+   "groundClearanceIn": 10.1
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 35.9,
+   "cargoMaxCuFt": 81.8,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "CrabWalk four-wheel steering",
+   "Extract Mode air suspension",
+   "Removable Infinity Roof panels",
+   "UltraVision underbody cameras",
+   "Extreme Off-Road Package",
+   "Rear-mounted full-size spare delete (tire carrier standard)"
+  ],
+  "towingLb": 7500,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/GMC%20Hummer%20EV%20SUV%20001.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "medium",
+  "notes": "Shorter wheelbase than the pickup; exterior-mounted spare carrier is standard on SUV. Prices exclude ~$2,290 destination; ranges vary by configuration."
+ },
+ {
+  "id": "gmc-sierra-1500",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Sierra 1500",
+  "year": 2026,
+  "bodyStyle": "pickup",
+  "segment": "full-size pickup",
+  "category": "truck",
+  "priceFrom": 38700,
+  "priceTo": 83100,
+  "trims": [
+   {
+    "name": "Pro",
+    "msrp": 38700
+   },
+   {
+    "name": "SLE",
+    "msrp": 49100
+   },
+   {
+    "name": "Elevation",
+    "msrp": 50900
+   },
+   {
+    "name": "SLT",
+    "msrp": 55300
+   },
+   {
+    "name": "Denali",
+    "msrp": 66300
+   },
+   {
+    "name": "AT4",
+    "msrp": 67200
+   },
+   {
+    "name": "AT4X",
+    "msrp": 78800
+   },
+   {
+    "name": "Denali Ultimate",
+    "msrp": 83100
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "2.7L TurboMax turbo I4",
+    "hp": 310,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 19,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "5.3L V8",
+    "hp": 355,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 17,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "6.2L V8",
+    "hp": 420,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 17,
+    "evRangeMi": null
+   },
+   {
+    "type": "diesel",
+    "engine": "3.0L Duramax turbodiesel I6",
+    "hp": 305,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 26,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   3,
+   5,
+   6
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 231.9,
+   "widthIn": 81.2,
+   "heightIn": 75.5,
+   "wheelbaseIn": 147.4,
+   "curbWeightLb": 4750,
+   "groundClearanceIn": 8.9
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": null,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "full-size",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Super Cruise hands-free driver assistance (with trailering)",
+   "MultiPro six-function tailgate",
+   "AT4X with Multimatic DSSV dampers",
+   "Denali Ultimate with full-grain leather and 16-camera views",
+   "CarbonPro carbon-fiber bed (availability varies)",
+   "Bose premium audio"
+  ],
+  "towingLb": 13200,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/23%20GMC%20Sierra%201500%20Denali.jpg",
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/2023_GMC_Sierra_Denali_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_GMC_Sierra_Denali_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/2025_GMC_Sierra_1500_Denali_Ultimate_in_Thunderstorm_Gray.jpg",
+     "kind": "exterior",
+     "credit": "ShortlineBuickGMC",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_GMC_Sierra_1500_Denali_Ultimate_in_Thunderstorm_Gray.jpg"
+    }
+   ]
+  },
+  "confidence": "high",
+  "notes": "Trim MSRPs from published 2026 pricing minus $2,195 destination; dims for crew cab short bed.",
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.gmc.com/trucks/sierra/1500",
+    "site": "gmc.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_GMC_Sierra.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/gmc/sierra-1500/2026/",
+    "site": "edmunds.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2025 (carries over)",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 GMC Sierra 1500 crew cab 4WD (VehicleId 20529), OverallRating 5; 2026 crew cab not yet rated (same generation)",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20529",
+     "site": "nhtsa.gov"
+    }
+   },
+   "owner": {
+    "score": 3.6,
+    "scale": 5,
+    "count": 26,
+    "source": {
+     "label": "Edmunds consumer reviews - 2026 GMC Sierra 1500 (3.6/5, 26 reviews)",
+     "url": "https://www.edmunds.com/gmc/sierra-1500/2026/",
+     "site": "edmunds.com"
+    }
+   },
+   "expert": {
+    "score": 6.7,
+    "scale": 10,
+    "source": {
+     "label": "Edmunds expert Rating - 2026 GMC Sierra 1500 (6.7/10)",
+     "url": "https://www.edmunds.com/gmc/sierra-1500/2026/",
+     "site": "edmunds.com"
+    }
+   }
+  }
+ },
+ {
+  "id": "gmc-sierra-ev",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Sierra EV",
+  "year": 2026,
+  "bodyStyle": "pickup",
+  "segment": "full-size electric pickup",
+  "category": "truck",
+  "priceFrom": 62400,
+  "priceTo": 99000,
+  "trims": [
+   {
+    "name": "Elevation",
+    "msrp": 62400
+   },
+   {
+    "name": "AT4",
+    "msrp": 79800
+   },
+   {
+    "name": "Denali Max Range",
+    "msrp": 99000
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (up to 760 hp Denali Max Range)",
+    "hp": 625,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 460
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 233.2,
+   "widthIn": 83.8,
+   "heightIn": 78.9,
+   "wheelbaseIn": 145.7,
+   "curbWeightLb": 8600,
+   "groundClearanceIn": 8.9
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": null,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": true
+  },
+  "keyOptions": [
+   "Up to 460 miles of range (Max Range battery)",
+   "MultiPro Midgate cab pass-through",
+   "Four-wheel steer with CrabWalk (Denali)",
+   "Super Cruise",
+   "Air Ride adaptive suspension (Denali)",
+   "10.2 kW PowerBase offboard power"
+  ],
+  "towingLb": 12500,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Sierra%20EV%20Denali%20front%20view.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "medium",
+  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination."
+ },
+ {
+  "id": "gmc-sierra-hd",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Sierra HD",
+  "year": 2026,
+  "bodyStyle": "pickup",
+  "segment": "heavy-duty pickup",
+  "category": "truck",
+  "priceFrom": 47000,
+  "priceTo": 99300,
+  "trims": [
+   {
+    "name": "Pro",
+    "msrp": 47000
+   },
+   {
+    "name": "SLE",
+    "msrp": 55500
+   },
+   {
+    "name": "SLT",
+    "msrp": 64500
+   },
+   {
+    "name": "AT4",
+    "msrp": 71500
+   },
+   {
+    "name": "Denali",
+    "msrp": 76500
+   },
+   {
+    "name": "AT4X",
+    "msrp": 88500
+   },
+   {
+    "name": "Denali Ultimate",
+    "msrp": 99300
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "6.6L V8",
+    "hp": 401,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   },
+   {
+    "type": "diesel",
+    "engine": "6.6L Duramax turbodiesel V8",
+    "hp": 470,
+    "transmission": "10-speed Allison automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   3,
+   5,
+   6
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 250,
+   "widthIn": 81.9,
+   "heightIn": 79.8,
+   "wheelbaseIn": 158.9,
+   "curbWeightLb": 6950,
+   "groundClearanceIn": 10
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": null,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "full-size",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Duramax diesel with 975 lb-ft of torque",
+   "Gooseneck/5th-wheel prep package",
+   "AT4X off-road package",
+   "Denali Ultimate luxury package",
+   "Transparent trailer camera view",
+   "Power up/down tailgate"
+  ],
+  "towingLb": 36000,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Sierra%202500HD%20Denali%20front%20view.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "medium",
+  "notes": "Single record covering Sierra 2500HD and 3500HD. Max tow is 3500HD dually diesel gooseneck; 2500HD up to ~22,500 lb. Mid/top prices approximate, exclude destination."
+ },
+ {
+  "id": "gmc-terrain",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Terrain",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "compact SUV",
+  "category": "suv",
+  "priceFrom": 30700,
+  "priceTo": 42400,
+  "trims": [
+   {
+    "name": "Elevation",
+    "msrp": 30700
+   },
+   {
+    "name": "AT4",
+    "msrp": 38400
+   },
+   {
+    "name": "Denali",
+    "msrp": 42400
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "1.5L turbo I4",
+    "hp": 175,
+    "transmission": "CVT (FWD) / 8-speed automatic (AWD)",
+    "manualAvailable": false,
+    "drive": [
+     "FWD",
+     "AWD"
+    ],
+    "mpgCombined": 27,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 183.4,
+   "widthIn": 75.6,
+   "heightIn": 65.9,
+   "wheelbaseIn": 107.5,
+   "curbWeightLb": 3628,
+   "groundClearanceIn": 7.9
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 29.8,
+   "cargoMaxCuFt": 63.5,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "temporary",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "15-inch portrait touchscreen",
+   "Panoramic sunroof",
+   "Adaptive cruise control",
+   "Heated and ventilated front seats",
+   "AT4 all-terrain styling and tires",
+   "Denali premium trim with Bose audio"
+  ],
+  "towingLb": 1500,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20GMC%20Terrain%20front%20view.jpg",
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/GMC_D2UX_Terrain.jpg",
+     "kind": "exterior",
+     "credit": "Bull-Doser",
+     "license": "Public Domain",
+     "commons": "https://commons.wikimedia.org/wiki/File:GMC_D2UX_Terrain.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Moscow%2C_GMC_Terrain_%28D2UX%29_blue%2C_Sept_2025_01.jpg",
+     "kind": "exterior",
+     "credit": "Retired electrician",
+     "license": "CC0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Moscow,_GMC_Terrain_(D2UX)_blue,_Sept_2025_01.jpg"
+    }
+   ]
+  },
+  "confidence": "medium",
+  "notes": "All-new generation launched 2025; shares platform with Chevy Equinox. AT4 price approximate. Prices exclude ~$1,495 destination.",
+  "ratings": {
+   "owner": {
+    "score": 3.9,
+    "scale": 5,
+    "count": 10,
+    "source": {
+     "label": "Edmunds consumer reviews - 2026 GMC Terrain (3.9/5, 10 reviews)",
+     "url": "https://www.edmunds.com/gmc/terrain/2026/",
+     "site": "edmunds.com"
+    }
+   }
+  }
+ },
+ {
+  "id": "gmc-yukon",
+  "make": "GMC",
+  "manufacturer": "General Motors",
+  "model": "Yukon",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "full-size SUV",
+  "category": "suv",
+  "priceFrom": 69600,
+  "priceTo": 103900,
+  "trims": [
+   {
+    "name": "Elevation",
+    "msrp": 69600
+   },
+   {
+    "name": "AT4",
+    "msrp": 76500
+   },
+   {
+    "name": "Denali",
+    "msrp": 82900
+   },
+   {
+    "name": "AT4 Ultimate",
+    "msrp": 96500
+   },
+   {
+    "name": "Denali Ultimate",
+    "msrp": 103900
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "5.3L V8",
+    "hp": 355,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 16,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "6.2L V8",
+    "hp": 420,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 16,
+    "evRangeMi": null
+   },
+   {
+    "type": "diesel",
+    "engine": "3.0L turbodiesel I6",
+    "hp": 305,
+    "transmission": "10-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "RWD",
+     "4WD"
+    ],
+    "mpgCombined": 23,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   7,
+   8
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 210,
+   "widthIn": 81,
+   "heightIn": 76.5,
+   "wheelbaseIn": 120.9,
+   "curbWeightLb": 5700,
+   "groundClearanceIn": 8
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 25.5,
+   "cargoMaxCuFt": 122.9,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "full-size",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Super Cruise hands-free driver assistance",
+   "Air Ride adaptive suspension with Magnetic Ride Control",
+   "16.8-inch touchscreen",
+   "Power-sliding center console",
+   "Rear-seat entertainment",
+   "AT4 off-road package"
+  ],
+  "towingLb": 8400,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20GMC%20Yukon%20AT4%20Facelift.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "medium",
+  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination."
+ },
+ {
   "id": "honda-accord",
   "make": "Honda",
   "manufacturer": "Honda Motor Co.",
@@ -12046,270 +14220,6 @@ export const VEHICLES = [
     "source": {
      "label": "Edmunds Expert Rating (Tested) — 2026 Honda Accord",
      "url": "https://www.edmunds.com/honda/accord/2026/",
-     "site": "edmunds.com"
-    }
-   }
-  }
- },
- {
-  "id": "honda-cr-v",
-  "make": "Honda",
-  "manufacturer": "Honda Motor Co.",
-  "model": "CR-V",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "compact SUV",
-  "category": "suv",
-  "priceFrom": 30920,
-  "priceTo": 42550,
-  "trims": [
-   {
-    "name": "LX",
-    "msrp": 30920,
-    "features": [
-     "190-hp 1.5L turbo I4",
-     "Honda Sensing suite",
-     "7-inch touchscreen",
-     "adaptive cruise control",
-     "17-inch alloy wheels"
-    ]
-   },
-   {
-    "name": "EX",
-    "msrp": 33150,
-    "features": [
-     "Available Real Time AWD",
-     "power moonroof",
-     "heated front seats",
-     "9-inch touchscreen",
-     "blind-spot monitoring & remote start"
-    ]
-   },
-   {
-    "name": "EX-L",
-    "msrp": 35400,
-    "features": [
-     "Leather-trimmed seats",
-     "hands-free power tailgate",
-     "8-way power passenger seat",
-     "leather-wrapped steering wheel"
-    ]
-   },
-   {
-    "name": "Sport Hybrid",
-    "msrp": 35630,
-    "features": [
-     "204-hp two-motor hybrid",
-     "18-inch gloss-black alloys",
-     "sport styling with dual exhaust",
-     "paddle shifters"
-    ]
-   },
-   {
-    "name": "Sport-L Hybrid",
-    "msrp": 38725,
-    "features": [
-     "Leather-trimmed seats",
-     "heated steering wheel",
-     "wireless charger",
-     "12-speaker premium audio",
-     "hands-free power tailgate"
-    ]
-   },
-   {
-    "name": "TrailSport Hybrid",
-    "msrp": 38800,
-    "features": [
-     "Standard Real Time AWD",
-     "all-terrain tires",
-     "TrailSport styling & orange stitching",
-     "hill descent control",
-     "rugged 18-inch wheels"
-    ]
-   },
-   {
-    "name": "Sport Touring Hybrid",
-    "msrp": 42550,
-    "features": [
-     "Bose 12-speaker premium audio",
-     "9-inch touchscreen with Google built-in",
-     "19-inch alloy wheels",
-     "wireless charger",
-     "front & rear parking sensors"
-    ]
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "1.5L turbo I4",
-    "hp": 190,
-    "transmission": "CVT",
-    "manualAvailable": false,
-    "drive": [
-     "FWD",
-     "AWD"
-    ],
-    "mpgCombined": 30,
-    "evRangeMi": null
-   },
-   {
-    "type": "hybrid",
-    "engine": "2.0L I4 two-motor hybrid",
-    "hp": 204,
-    "transmission": "eCVT",
-    "manualAvailable": false,
-    "drive": [
-     "FWD",
-     "AWD"
-    ],
-    "mpgCombined": 40,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 184.8,
-   "widthIn": 73.5,
-   "heightIn": 66.5,
-   "wheelbaseIn": 106.3,
-   "curbWeightLb": 3472,
-   "groundClearanceIn": 8.2
-  },
-  "interior": {
-   "passengerVolumeCuFt": 105.9,
-   "cargoCuFt": 39.3,
-   "cargoMaxCuFt": 76.5,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "temporary",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Real Time AWD (standard on TrailSport)",
-   "Panoramic/one-touch power moonroof",
-   "Bose 12-speaker premium audio",
-   "Heated front seats & heated steering wheel",
-   "Hands-free power tailgate",
-   "9-inch touchscreen with wireless CarPlay",
-   "All-terrain tires (TrailSport)"
-  ],
-  "towingLb": 1500,
-  "image": {
-   "remote": null,
-   "credit": null,
-   "gallery": [
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/HONDA_CR-V_SIXTH_GENERATION_CHINA_VERSION_INTERIOR_%282%29.jpg",
-     "kind": "interior",
-     "credit": "Dinkun Chen",
-     "license": "CC BY-SA 4.0",
-     "commons": "https://commons.wikimedia.org/wiki/File:HONDA_CR-V_SIXTH_GENERATION_CHINA_VERSION_INTERIOR_(2).jpg"
-    },
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/2023_Honda_CR-V_EX-L_4WD_in_Radiant_Red_Metallic%2C_rear_right.jpg",
-     "kind": "exterior",
-     "credit": "Mr.choppers",
-     "license": "CC BY-SA 3.0",
-     "commons": "https://commons.wikimedia.org/wiki/File:2023_Honda_CR-V_EX-L_4WD_in_Radiant_Red_Metallic,_rear_right.jpg"
-    }
-   ]
-  },
-  "confidence": "high",
-  "notes": "2026 pricing verified (MSRP excludes $1,395 destination). TrailSport Hybrid comes standard with AWD; hybrid AWD rated 37 mpg combined, gas AWD 29. Tow rating 1,500 lb gas / 1,000 lb hybrid.",
-  "sources": [
-   {
-    "label": "2026 CR-V pricing & EPA ratings",
-    "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-0d29cf91ab5515b985a1c286910fb0f9-2026-honda-cr-v-pricing-and-epa-ratings",
-    "site": "hondanews.com"
-   },
-   {
-    "label": "EPA fuel economy",
-    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_CR-V.shtml",
-    "site": "fueleconomy.gov"
-   },
-   {
-    "label": "2026 MSRP & trims",
-    "url": "https://www.edmunds.com/honda/cr-v/2026/msrp/",
-    "site": "edmunds.com"
-   }
-  ],
-  "colors": {
-   "exterior": [
-    {
-     "name": "Platinum White Pearl",
-     "hex": "#f3f4f4"
-    },
-    {
-     "name": "Crystal Black Pearl",
-     "hex": "#0b0b0d"
-    },
-    {
-     "name": "Meteorite Gray Metallic",
-     "hex": "#4c4e51"
-    },
-    {
-     "name": "Urban Gray Pearl",
-     "hex": "#6f7276"
-    },
-    {
-     "name": "Canyon River Blue Metallic",
-     "hex": "#3a536b"
-    },
-    {
-     "name": "Radiant Red Metallic II",
-     "hex": "#9e1b22"
-    },
-    {
-     "name": "Ash Green Metallic (TrailSport)",
-     "hex": "#6b7263"
-    }
-   ],
-   "interior": [
-    {
-     "name": "Black cloth/leather",
-     "hex": "#1c1c1e",
-     "tone": "dark"
-    },
-    {
-     "name": "Gray leather",
-     "hex": "#b7b7bb",
-     "tone": "light"
-    }
-   ]
-  },
-  "ratings": {
-   "safety": {
-    "nhtsa": 5,
-    "appliesTo": "2026",
-    "source": {
-     "label": "NHTSA 5-Star Safety Ratings — 2026 Honda CR-V AWD",
-     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20886",
-     "site": "nhtsa.gov"
-    }
-   },
-   "owner": {
-    "score": 4.2,
-    "scale": 5,
-    "count": 59,
-    "source": {
-     "label": "Edmunds Consumer Reviews — 2026 Honda CR-V",
-     "url": "https://www.edmunds.com/honda/cr-v/2026/consumer-reviews/",
-     "site": "edmunds.com"
-    }
-   },
-   "expert": {
-    "score": 7.5,
-    "scale": 10,
-    "source": {
-     "label": "Edmunds Expert Rating (Tested) — 2026 Honda CR-V",
-     "url": "https://www.edmunds.com/honda/cr-v/2026/",
      "site": "edmunds.com"
     }
    }
@@ -12599,6 +14509,270 @@ export const VEHICLES = [
     "source": {
      "label": "Edmunds Expert Rating (Tested) — 2026 Honda Civic",
      "url": "https://www.edmunds.com/honda/civic/2026/",
+     "site": "edmunds.com"
+    }
+   }
+  }
+ },
+ {
+  "id": "honda-cr-v",
+  "make": "Honda",
+  "manufacturer": "Honda Motor Co.",
+  "model": "CR-V",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "compact SUV",
+  "category": "suv",
+  "priceFrom": 30920,
+  "priceTo": 42550,
+  "trims": [
+   {
+    "name": "LX",
+    "msrp": 30920,
+    "features": [
+     "190-hp 1.5L turbo I4",
+     "Honda Sensing suite",
+     "7-inch touchscreen",
+     "adaptive cruise control",
+     "17-inch alloy wheels"
+    ]
+   },
+   {
+    "name": "EX",
+    "msrp": 33150,
+    "features": [
+     "Available Real Time AWD",
+     "power moonroof",
+     "heated front seats",
+     "9-inch touchscreen",
+     "blind-spot monitoring & remote start"
+    ]
+   },
+   {
+    "name": "EX-L",
+    "msrp": 35400,
+    "features": [
+     "Leather-trimmed seats",
+     "hands-free power tailgate",
+     "8-way power passenger seat",
+     "leather-wrapped steering wheel"
+    ]
+   },
+   {
+    "name": "Sport Hybrid",
+    "msrp": 35630,
+    "features": [
+     "204-hp two-motor hybrid",
+     "18-inch gloss-black alloys",
+     "sport styling with dual exhaust",
+     "paddle shifters"
+    ]
+   },
+   {
+    "name": "Sport-L Hybrid",
+    "msrp": 38725,
+    "features": [
+     "Leather-trimmed seats",
+     "heated steering wheel",
+     "wireless charger",
+     "12-speaker premium audio",
+     "hands-free power tailgate"
+    ]
+   },
+   {
+    "name": "TrailSport Hybrid",
+    "msrp": 38800,
+    "features": [
+     "Standard Real Time AWD",
+     "all-terrain tires",
+     "TrailSport styling & orange stitching",
+     "hill descent control",
+     "rugged 18-inch wheels"
+    ]
+   },
+   {
+    "name": "Sport Touring Hybrid",
+    "msrp": 42550,
+    "features": [
+     "Bose 12-speaker premium audio",
+     "9-inch touchscreen with Google built-in",
+     "19-inch alloy wheels",
+     "wireless charger",
+     "front & rear parking sensors"
+    ]
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "1.5L turbo I4",
+    "hp": 190,
+    "transmission": "CVT",
+    "manualAvailable": false,
+    "drive": [
+     "FWD",
+     "AWD"
+    ],
+    "mpgCombined": 30,
+    "evRangeMi": null
+   },
+   {
+    "type": "hybrid",
+    "engine": "2.0L I4 two-motor hybrid",
+    "hp": 204,
+    "transmission": "eCVT",
+    "manualAvailable": false,
+    "drive": [
+     "FWD",
+     "AWD"
+    ],
+    "mpgCombined": 40,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 184.8,
+   "widthIn": 73.5,
+   "heightIn": 66.5,
+   "wheelbaseIn": 106.3,
+   "curbWeightLb": 3472,
+   "groundClearanceIn": 8.2
+  },
+  "interior": {
+   "passengerVolumeCuFt": 105.9,
+   "cargoCuFt": 39.3,
+   "cargoMaxCuFt": 76.5,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "temporary",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Real Time AWD (standard on TrailSport)",
+   "Panoramic/one-touch power moonroof",
+   "Bose 12-speaker premium audio",
+   "Heated front seats & heated steering wheel",
+   "Hands-free power tailgate",
+   "9-inch touchscreen with wireless CarPlay",
+   "All-terrain tires (TrailSport)"
+  ],
+  "towingLb": 1500,
+  "image": {
+   "remote": null,
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/HONDA_CR-V_SIXTH_GENERATION_CHINA_VERSION_INTERIOR_%282%29.jpg",
+     "kind": "interior",
+     "credit": "Dinkun Chen",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:HONDA_CR-V_SIXTH_GENERATION_CHINA_VERSION_INTERIOR_(2).jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/2023_Honda_CR-V_EX-L_4WD_in_Radiant_Red_Metallic%2C_rear_right.jpg",
+     "kind": "exterior",
+     "credit": "Mr.choppers",
+     "license": "CC BY-SA 3.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Honda_CR-V_EX-L_4WD_in_Radiant_Red_Metallic,_rear_right.jpg"
+    }
+   ]
+  },
+  "confidence": "high",
+  "notes": "2026 pricing verified (MSRP excludes $1,395 destination). TrailSport Hybrid comes standard with AWD; hybrid AWD rated 37 mpg combined, gas AWD 29. Tow rating 1,500 lb gas / 1,000 lb hybrid.",
+  "sources": [
+   {
+    "label": "2026 CR-V pricing & EPA ratings",
+    "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-0d29cf91ab5515b985a1c286910fb0f9-2026-honda-cr-v-pricing-and-epa-ratings",
+    "site": "hondanews.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_CR-V.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 MSRP & trims",
+    "url": "https://www.edmunds.com/honda/cr-v/2026/msrp/",
+    "site": "edmunds.com"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Platinum White Pearl",
+     "hex": "#f3f4f4"
+    },
+    {
+     "name": "Crystal Black Pearl",
+     "hex": "#0b0b0d"
+    },
+    {
+     "name": "Meteorite Gray Metallic",
+     "hex": "#4c4e51"
+    },
+    {
+     "name": "Urban Gray Pearl",
+     "hex": "#6f7276"
+    },
+    {
+     "name": "Canyon River Blue Metallic",
+     "hex": "#3a536b"
+    },
+    {
+     "name": "Radiant Red Metallic II",
+     "hex": "#9e1b22"
+    },
+    {
+     "name": "Ash Green Metallic (TrailSport)",
+     "hex": "#6b7263"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black cloth/leather",
+     "hex": "#1c1c1e",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray leather",
+     "hex": "#b7b7bb",
+     "tone": "light"
+    }
+   ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA 5-Star Safety Ratings — 2026 Honda CR-V AWD",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20886",
+     "site": "nhtsa.gov"
+    }
+   },
+   "owner": {
+    "score": 4.2,
+    "scale": 5,
+    "count": 59,
+    "source": {
+     "label": "Edmunds Consumer Reviews — 2026 Honda CR-V",
+     "url": "https://www.edmunds.com/honda/cr-v/2026/consumer-reviews/",
+     "site": "edmunds.com"
+    }
+   },
+   "expert": {
+    "score": 7.5,
+    "scale": 10,
+    "source": {
+     "label": "Edmunds Expert Rating (Tested) — 2026 Honda CR-V",
+     "url": "https://www.edmunds.com/honda/cr-v/2026/",
      "site": "edmunds.com"
     }
    }
@@ -12910,7 +15084,23 @@ export const VEHICLES = [
   "towingLb": 3500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/2023_Honda_Odyssey_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Honda_Odyssey_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/2025_Honda_Odyssey_front_view.jpg",
+     "kind": "exterior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Honda_Odyssey_front_view.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Carryover after the 2025 refresh; lineup starts at the well-equipped EX-L (no LX/EX). 280-hp 3.5L V6, 10-speed automatic, FWD only. 8-passenger seating; max cargo behind first row with 2nd row removed.",
@@ -13140,7 +15330,23 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/2026_Honda_Passport_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2026_Honda_Passport_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/2026_Honda_Passport_RTL%2C_front_right%2C_06-07-2025.jpg",
+     "kind": "exterior",
+     "credit": "MercurySable99",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2026_Honda_Passport_RTL,_front_right,_06-07-2025.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "All-new fourth generation for 2026 with standard AWD and a rugged TrailSport focus (285-hp V6, 262 lb-ft, 10-speed auto). 2026 lineup verified with seven variants including RTL Towing and TrailSport Blackout. RTL rated 21 mpg combined, TrailSport 20. TrailSport carries a full-size spare on a matching wheel.",
@@ -13808,7 +16014,18 @@ export const VEHICLES = [
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_Prologue.shtml",
     "site": "fueleconomy.gov"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Honda Prologue SUV, BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20906",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "honda-ridgeline",
@@ -13993,7 +16210,18 @@ export const VEHICLES = [
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_Ridgeline.shtml",
     "site": "fueleconomy.gov"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Honda Ridgeline pickup/crew cab, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20901",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-elantra",
@@ -14100,7 +16328,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "SEL Sport Premium replaces SEL Convenience for 2026. Hybrid Blue rated up to 54 mpg combined. Hybrid trims use a tire mobility kit instead of a spare."
+  "notes": "SEL Sport Premium replaces SEL Convenience for 2026. Hybrid Blue rated up to 54 mpg combined. Hybrid trims use a tire mobility kit instead of a spare.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Elantra 4dr FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21149",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-elantra-n",
@@ -14704,7 +16944,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026."
+  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Kona SUV, FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21146",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-kona-electric",
@@ -14939,7 +17190,23 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Hyundai_Palisade_Highroof_LX3_Interior.jpg",
+     "kind": "interior",
+     "credit": "Damian B Oh",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Hyundai_Palisade_Highroof_LX3_Interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/2026_Hyundai_Palisade_XRT_Pro_%28USDM%29.jpg",
+     "kind": "exterior",
+     "credit": "Masamiotter",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2026_Hyundai_Palisade_XRT_Pro_(USDM).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "All-new generation for 2026, larger with first-ever Palisade Hybrid (329 hp, up to ~34 mpg). Trim prices above derived from published incl.-destination figures ($1,495 freight); cargo figures approximate.",
@@ -15078,7 +17345,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination."
+  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Santa Cruz pickup/crew cab, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21140",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-santa-fe",
@@ -15341,7 +17619,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Trim lineup simplified for 2026 (SEL Sport replaces SEL/SEL Convenience). N Line price is approximate (~$35,900; sources vary slightly). Hybrid uses a tire mobility kit."
+  "notes": "Trim lineup simplified for 2026 (SEL Sport replaces SEL/SEL Convenience). N Line price is approximate (~$35,900; sources vary slightly). Hybrid uses a tire mobility kit.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Sonata 4dr FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21160",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-tucson",
@@ -15589,7 +17879,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL."
+  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Venue 5HB FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21163",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ineos-grenadier",
@@ -16173,8 +18474,24 @@ export const VEHICLES = [
   ],
   "towingLb": 2000,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/e/e0/2019_Jeep_Compass_Limited_2.4L%2C_front_7.6.19.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeep_Compass_(MP)_PHEV_Facelift_1X7A0139.jpg",
+   "credit": "Alexander Migl",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/2022_Jeep_Compass_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2022_Jeep_Compass_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/2025_Jeep_Compass_Sport_in_Bright_White%2C_front_right%2C_2025-09-07.jpg",
+     "kind": "exterior",
+     "credit": "Elise240SX",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Jeep_Compass_Sport_in_Bright_White,_front_right,_2025-09-07.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Carryover of the current-generation Compass for 2026 in the US (10th model year); base Sport trim dropped, Latitude is the new entry trim. AWD standard. All-new next-gen Compass not yet on sale in the US.",
@@ -16958,7 +19275,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia."
+  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia EV6 SUV, BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21169",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-ev9",
@@ -17047,7 +19375,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia."
+  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia EV9 SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21170",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-k4",
@@ -17138,7 +19478,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025)."
+  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia K4 4 DR N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21172",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-k5",
@@ -17226,7 +19578,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Base and top prices derived from published incl.-destination figures (LXS ~$27.4k, EX ~$34.9k excl. freight). Availability of the 290-hp GT trim for 2026 is unclear; Kia's 2026 price list showed EX as the top trim."
+  "notes": "Base and top prices derived from published incl.-destination figures (LXS ~$27.4k, EX ~$34.9k excl. freight). Availability of the 290-hp GT trim for 2026 is unclear; Kia's 2026 price list showed EX as the top trim.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia K5 4dr FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21174",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-niro",
@@ -17317,7 +19680,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Sold as Niro Hybrid and Niro EV for 2026; the plug-in hybrid no longer appears in the US lineup. Prices derived from published incl.-destination figures. A refreshed 2027 Niro (hybrid-only) has been revealed."
+  "notes": "Sold as Niro Hybrid and Niro EV for 2026; the plug-in hybrid no longer appears in the US lineup. Prices derived from published incl.-destination figures. A refreshed 2027 Niro (hybrid-only) has been revealed.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Kia Niro SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20732",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-seltos",
@@ -17405,7 +19779,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Carryover generation, slightly cheaper for 2026; prices derived from published incl.-destination figures. An all-new Seltos has been revealed globally and is expected as a 2027 model."
+  "notes": "Carryover generation, slightly cheaper for 2026; prices derived from published incl.-destination figures. An all-new Seltos has been revealed globally and is expected as a 2027 model.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia Seltos SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21179",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-sorento",
@@ -17518,7 +19903,23 @@ export const VEHICLES = [
   "towingLb": 4500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/2024_Kia_Sorento_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Kia_Sorento_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/2024_Kia_Sorento_X-Line_SX_Prestige_%28facelift%29%2C_front_12.20.24.jpg",
+     "kind": "exterior",
+     "credit": "Kevauto",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Kia_Sorento_X-Line_SX_Prestige_(facelift),_front_12.20.24.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Smaller 3-row alternative to Telluride. Base/top prices derived from published incl.-destination figures ($33,635 / $54,935 with ~$1,445 freight).",
@@ -18929,8 +21330,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus-ES-2026.jpg",
+   "credit": "Ohcock"
   },
   "confidence": "high",
   "notes": "All-new eighth-generation ES for 2026, larger and offered as hybrid (ES 350h) or EV (ES 350e/500e) - the first electric ES. 8 total trims across 3 powertrains (representative subset shown). Destination fee is $1,395; priceFrom/priceTo shown are ex-destination base prices. EV range figures are final EPA-rated (19-inch wheels; 21-inch wheels reduce range slightly).",
@@ -19122,8 +21523,17 @@ export const VEHICLES = [
   ],
   "towingLb": 9063,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024_Lexus_GX_550_Overtrail_(United_States)_front_view_01.jpg",
+   "credit": "Charles",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/2024_Lexus_GX_550_Luxury%2B_%28United_States%29_interior.png",
+     "kind": "interior",
+     "credit": "Autosdeprimera",
+     "license": "CC BY 3.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2024_Lexus_GX_550_Luxury%2B_(United_States)_interior.png"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Body-on-frame off-road luxury SUV sharing the Land Cruiser platform. Full 2026 lineup is 6 trims across 3 families (Premium, Luxury, Overtrail), each with a base and \"+\" tier; a mid-cycle 2026 price increase (~$1,350) is reflected here. Overtrail/Overtrail+ are 2-row (5-passenger) with E-KDSS and a locking rear diff; other trims seat 7. Destination fee is $1,450.",
@@ -19305,8 +21715,17 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Lexus_IS_350_F_Sport_in_Sonic_Iridium%2C_front_left.jpg",
+   "credit": "Ethan Llamas",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Lexus_IS_350_F_Sport_GSE31_FL3_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_IS_350_F_Sport_GSE31_FL3_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "2026 refresh: new front styling, larger 12.3-inch screens, physical climate row. IS 300 and V8 IS 500 both dropped for 2026; lineup is IS 350 only, in F Sport Design and F Sport grades (AWD is a ~$2,000 option on either, not a separate trim), plus the limited-run F Sport Special Appearance Package. Destination fee is $1,295.",
@@ -19487,8 +21906,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Lexus_LC_500_in_White_Nova_Glass_Flake%2C_front_right.jpg",
+   "credit": "Ethan Llamas"
   },
   "confidence": "high",
   "notes": "471-hp V8 grand tourer, coupe or convertible. The 354-hp LC 500h hybrid is discontinued for 2026 - the lineup is now V8-only. New Inspiration Series limited editions (200 coupes, 350 convertibles) add exclusive colors and interiors. Destination fee is $1,550; priceFrom/priceTo shown are ex-destination base prices.",
@@ -19650,8 +22069,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_LS_500_VXFA50_F_Sport_White_Nova_01.jpg",
+   "credit": "Ethan Llamas"
   },
   "confidence": "high",
   "notes": "Final model year for the LS in the US after a 36-year run; sold only as the LS 500 Heritage Edition limited to 250 units (about $99,380 with the $1,550 destination fee). Only 2026 exterior color is Ninety Noir; only interior color is Rioja Red.",
@@ -19831,8 +22250,17 @@ export const VEHICLES = [
   ],
   "towingLb": 8000,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_LX_600_VJA310_Sonic_Quartz_-_front.jpg",
+   "credit": "Ethan Llamas",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/LEXUS_LX_600_ULTRA_LUXURY_%28J310%29_INTERIOR.jpg",
+     "kind": "interior",
+     "credit": "Dinkun Chen",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALEXUS_LX_600_ULTRA_LUXURY_(J310)_INTERIOR.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Flagship Lexus SUV on the Land Cruiser 300 platform, 7 total 2026 trims (LX 600 Premium/F SPORT Handling/Luxury, LX 700h Overtrail/F SPORT Handling/Luxury/Ultra Luxury). No E-KDSS on the LX (that's GX-exclusive) - LX uses standard Active Height Control + Adaptive Variable Suspension lineup-wide, with front and rear locking differentials added on Overtrail. Ultra Luxury is 4-passenger only; other trims seat 5 or 7. Destination fee is $1,550; priceFrom/priceTo shown are ex-destination base prices.",
@@ -20055,8 +22483,17 @@ export const VEHICLES = [
   ],
   "towingLb": 2000,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_NX_350_(TAZA25)_1X7A0305.jpg",
+   "credit": "Alexander Migl",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lexus_NX_450h%2B_%22version_L%22_%286LA-AAZH26-AWXLB%28L%29%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_NX_450h%2B_%22version_L%22_(6LA-AAZH26-AWXLB(L))_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Base NX 250 dropped for 2026; lineup now starts with the new-for-2026 NX 350h FWD hybrid (cheapest trim at $44,175), running through NX 350, NX 350h AWD, and NX 450h+ plug-in hybrid, each in Standard/Premium/Luxury/F Sport Handling grades (12 trims total; a representative subset is shown). Destination fee is $1,395. NX 450h+ MPGe/EV-range figures are manufacturer-projected, not yet EPA-certified.",
@@ -20284,8 +22721,17 @@ export const VEHICLES = [
   ],
   "towingLb": 3500,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_RX_500h_F_Sport_Performance_(TALH17)_1X7A7076.jpg",
+   "credit": "Alexander-93",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Lexus_RX_500h_F_Sport_Performance_TALH17_DIRECT-4_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_RX_500h_F_Sport_Performance_TALH17_DIRECT-4_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Best-selling Lexus, offered in 7 grades (Standard, Premium, Premium+, F SPORT Design, F SPORT Handling, Luxury, F SPORT Performance) across 4 powertrains. Destination fee is $1,550; priceFrom/priceTo shown are ex-destination base prices. RX 450h+ plug-in offers 38 miles EV range and 85 MPGe.",
@@ -20381,6 +22827,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus RX 350 SUV, FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21619",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -20517,8 +22974,17 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_RZ_450e_(XEBM15)_1X7A0836.jpg",
+   "credit": "Alexander-93",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lexus_RZ_450e%22F_SPORT_Performance%22_%28ZAA-XEBM15-AWDLS%28T%29%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_RZ_450e%22F_SPORT_Performance%22_(ZAA-XEBM15-AWDLS(T))_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Significantly updated for 2026: larger 74.69 kWh battery (76.96 kWh on 550e F SPORT), native NACS charging port (first Lexus BEV with native NACS; CCS/J1772 adapter included), and the new 402-hp RZ 550e F SPORT flagship with M Mode paddle-shift simulation. 6 total trims across 3 power levels. Destination fee is $1,395; priceFrom/priceTo shown are ex-destination base prices.",
@@ -20725,8 +23191,8 @@ export const VEHICLES = [
   ],
   "towingLb": 5000,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_TX_550h%2B_(2024)_(53626567768).jpg",
+   "credit": "Charles from Port Chester, New York"
   },
   "confidence": "high",
   "notes": "Three-row Lexus based on the Grand Highlander platform, 10 total trims across TX 350/TX 500h F SPORT Performance/TX 550h+ (representative subset shown). TX 550h+'s PHEV powertrain uses a 3.5L V6 (not a 4-cylinder). Destination fee is $1,450; priceFrom/priceTo shown are ex-destination base prices.",
@@ -20906,8 +23372,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_UX_300h_MZAH11_Sonic_Quartz.jpg",
+   "credit": "Ethan Llamas"
   },
   "confidence": "high",
   "notes": "Hybrid-only (UX 300h, 196 hp) since 2025. New-for-2026 F Sport Design grade added between Premium and F Sport Handling (4 trims total). Destination fee is $1,295. Smallest Lexus crossover.",
@@ -21002,29 +23468,51 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 56910
+    "msrp": 56910,
+    "features": [
+     "Standard rear-wheel drive with optional all-wheel drive",
+     "13.2-inch center touchscreen with Lincoln Digital Experience",
+     "Heated and ventilated front seats",
+     "Adaptive suspension",
+     "BlueCruise hands-free highway driving capability"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 66730
+    "msrp": 66730,
+    "features": [
+     "Illumination Package",
+     "Adaptive Pixel LED headlamps",
+     "Dynamic Handling Package",
+     "Panoramic Vista Roof",
+     "Premium leather seating surfaces",
+     "Second-row 5.8-inch rear touchscreen"
+    ]
    },
    {
     "name": "Black Label",
-    "msrp": 85910
+    "msrp": 85910,
+    "features": [
+     "Standard all-wheel drive",
+     "Exclusive interior themes Invitation, Flight and Moonbeam",
+     "Perfect Position front seats",
+     "Revel Ultima 3D Audio System with 28 speakers",
+     "Black Label owner privileges and services"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "3.0L twin-turbo V6",
-    "hp": 400,
-    "transmission": "10-speed automatic",
+    "engine": "3.0L twin-turbocharged V6",
+    "hp": 383,
+    "transmission": "10-speed SelectShift automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
      "AWD"
     ],
-    "mpgCombined": 20,
+    "mpgCombined": 21,
     "evRangeMi": null
    }
   ],
@@ -21034,23 +23522,23 @@ export const VEHICLES = [
   ],
   "doors": 4,
   "dims": {
-   "lengthIn": 199.3,
+   "lengthIn": 199.7,
    "widthIn": 79.6,
-   "heightIn": 69.8,
+   "heightIn": 69.2,
    "wheelbaseIn": 119.1,
-   "curbWeightLb": 4774,
-   "groundClearanceIn": null
+   "curbWeightLb": 4745,
+   "groundClearanceIn": 8.5
   },
   "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 18.3,
+   "passengerVolumeCuFt": 140.6,
+   "cargoCuFt": 16.5,
    "cargoMaxCuFt": 77.7,
    "lightInterior": true,
    "darkInterior": true
   },
   "spareTire": "temporary",
   "physicalControls": {
-   "climate": false,
+   "climate": true,
    "audio": true
   },
   "keyOptions": [
@@ -21062,13 +23550,123 @@ export const VEHICLES = [
    "Soft-close doors (Black Label)",
    "Adaptive pixel LED headlights"
   ],
-  "towingLb": 6700,
+  "towingLb": 5000,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/d/de/2020_Lincoln_Aviator_Reserve_AWD%2C_front_left%2C_10-28-2022.jpg",
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Gas V6 only since the Grand Touring PHEV was dropped. RWD standard on Premiere/Reserve; AWD standard on Black Label. Most climate functions in the touchscreen."
+  "notes": "For 2026 the Aviator is offered exclusively with the 3.0L twin-turbo V6 rated at 383 hp and 415 lb-ft paired to a 10-speed automatic. The former Grand Touring plug-in hybrid is discontinued so no electrified variant remains. Premiere and Reserve come standard with rear-wheel drive and offer optional all-wheel drive while Black Label includes standard all-wheel drive. EPA combined economy is 21 mpg for RWD and 20 mpg for AWD. Trim lineup carries over as Premiere, Reserve and Black Label. The cabin uses a 13.2-inch touchscreen but retains partial physical climate controls plus a volume control for easier operation. Note that Edmunds lists 400 hp while Lincoln and KBB official specs state 383 hp.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Infinite Black Metallic",
+     "hex": "#141516"
+    },
+    {
+     "name": "Pristine White Metallic Tri-Coat",
+     "hex": "#f4f4f0"
+    },
+    {
+     "name": "Harbor Gray",
+     "hex": "#6f7377"
+    },
+    {
+     "name": "Whisper Blue Metallic",
+     "hex": "#a9b6c4"
+    },
+    {
+     "name": "Red Carpet Metallic",
+     "hex": "#7c1d24"
+    },
+    {
+     "name": "Cenote Green (Black Label)",
+     "hex": "#33493a"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Onyx",
+     "hex": "#1c1c1c",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Light Space Gray",
+     "hex": "#b6b7b3",
+     "tone": "light"
+    },
+    {
+     "name": "Harvest Bronze",
+     "hex": "#9a7b4f",
+     "tone": "light"
+    },
+    {
+     "name": "Hot Chocolate",
+     "hex": "#4a3627",
+     "tone": "dark"
+    },
+    {
+     "name": "Black Label Invitation",
+     "hex": "#ddd6c8",
+     "tone": "light"
+    },
+    {
+     "name": "Black Label Flight",
+     "hex": "#2b3138",
+     "tone": "dark"
+    },
+    {
+     "name": "Black Label Moonbeam",
+     "hex": "#c9cebc",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Aviator Premiere specs — Lincoln.com",
+    "url": "https://www.lincoln.com/luxury-suvs/aviator/models/premiere/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov 2026 Aviator RWD",
+    "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49887",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Aviator specs — KBB",
+    "url": "https://www.kbb.com/lincoln/aviator/2026/specs/",
+    "site": "kbb.com"
+   },
+   {
+    "label": "2026 Aviator review and ratings — Edmunds",
+    "url": "https://www.edmunds.com/lincoln/aviator/2026/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Aviator safety — NHTSA",
+    "url": "https://www.nhtsa.gov/vehicle/2026/LINCOLN/AVIATOR",
+    "site": "nhtsa.gov"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": "https://www.nhtsa.gov/vehicle/2026/LINCOLN/AVIATOR"
+   },
+   "owner": {
+    "score": 4.4,
+    "scale": 5,
+    "count": 38,
+    "source": "https://www.edmunds.com/lincoln/aviator/2026/"
+   },
+   "expert": {
+    "score": 6.5,
+    "scale": 10,
+    "source": "https://www.edmunds.com/lincoln/aviator/2026/"
+   }
+  }
  },
  {
   "id": "lincoln-corsair",
@@ -21084,21 +23682,46 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 39985
+    "msrp": 39985,
+    "features": [
+     "2.0L turbocharged gas I4",
+     "8-speed automatic",
+     "FWD standard (AWD available)",
+     "13.2-inch SYNC 4 touchscreen",
+     "12.3-inch digital cluster",
+     "dual-zone automatic climate control",
+     "wireless Apple CarPlay and Android Auto"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 47640
+    "msrp": 47640,
+    "features": [
+     "2.0L turbocharged gas I4",
+     "leather-trimmed seating",
+     "14-speaker Revel audio",
+     "heated and ventilated front seats",
+     "hands-free liftgate",
+     "wireless charging pad"
+    ]
    },
    {
-    "name": "Grand Touring (PHEV)",
-    "msrp": 54365
+    "name": "Grand Touring",
+    "msrp": 54365,
+    "features": [
+     "2.5L plug-in hybrid powertrain",
+     "standard all-wheel drive",
+     "27 miles EPA electric range",
+     "onboard charging",
+     "Phone As A Key",
+     "adaptive suspension"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.0L turbo I4",
+    "engine": "2.0L turbocharged I4",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -21111,14 +23734,14 @@ export const VEHICLES = [
    },
    {
     "type": "phev",
-    "engine": "2.5L I4 plug-in hybrid (Grand Touring)",
+    "engine": "2.5L I4 plug-in hybrid",
     "hp": 266,
-    "transmission": "eCVT",
+    "transmission": "eCVT (continuously variable)",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 78,
+    "mpgCombined": 76,
     "evRangeMi": 27
    }
   ],
@@ -21127,15 +23750,15 @@ export const VEHICLES = [
   ],
   "doors": 4,
   "dims": {
-   "lengthIn": 180.6,
+   "lengthIn": 181.4,
    "widthIn": 74.3,
    "heightIn": 64.1,
    "wheelbaseIn": 106.7,
-   "curbWeightLb": 3708,
+   "curbWeightLb": 3685,
    "groundClearanceIn": null
   },
   "interior": {
-   "passengerVolumeCuFt": null,
+   "passengerVolumeCuFt": 102.5,
    "cargoCuFt": 27.6,
    "cargoMaxCuFt": 57.6,
    "lightInterior": true,
@@ -21143,7 +23766,7 @@ export const VEHICLES = [
   },
   "spareTire": "temporary",
   "physicalControls": {
-   "climate": false,
+   "climate": true,
    "audio": true
   },
   "keyOptions": [
@@ -21161,7 +23784,88 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Final model year: Corsair production ends alongside the Ford Escape as the Louisville plant converts to EV production. Grand Touring PHEV: 27-mile electric range. Climate is controlled mainly through the 13.2-inch touchscreen."
+  "notes": "The 2026 Corsair is the final model year. Production at Louisville Assembly ended in December 2025 as the plant retools for EV output alongside the discontinued Ford Escape and Lincoln.com now lists the 2026 Corsair as sold out. Two powertrains were offered. The 250-hp 2.0L turbo gas four came with FWD or AWD and the 266-hp 2.5L Grand Touring plug-in hybrid was AWD only with 27 miles of electric range and a 76 MPGe combined rating. The cabin pairs a 13.2-inch SYNC 4 touchscreen with retained physical climate and volume controls. IIHS rated the updated side crash test only Marginal for 2026 so it is not a Top Safety Pick and NHTSA had no published 2026 star rating at research time.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Infinite Black Metallic",
+     "hex": "#17181C"
+    },
+    {
+     "name": "Crystal White Metallic",
+     "hex": "#E6E7E4"
+    },
+    {
+     "name": "Pristine White Metallic Tri-Coat",
+     "hex": "#F3F2EE"
+    },
+    {
+     "name": "Red Carpet Metallic",
+     "hex": "#7A1B1F"
+    },
+    {
+     "name": "Harbor Gray",
+     "hex": "#5C6268"
+    },
+    {
+     "name": "Whisper Blue Metallic",
+     "hex": "#A9B7C2"
+    },
+    {
+     "name": "Asher Gray Metallic",
+     "hex": "#8A8D8F"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1B1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Smoked Truffle",
+     "hex": "#C9BBA6",
+     "tone": "light"
+    },
+    {
+     "name": "Medium Smoked Truffle",
+     "hex": "#7A6E5F",
+     "tone": "dark"
+    },
+    {
+     "name": "Eternal Red",
+     "hex": "#6E1E22",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Lincoln.com — 2026 Corsair",
+    "url": "https://www.lincoln.com/luxury-suvs/corsair/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov 2026 Corsair",
+    "url": "https://fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Lincoln&baseModel=Corsair&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds — 2026 Corsair specs",
+    "url": "https://www.edmunds.com/lincoln/corsair/2026/features-specs/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "IIHS — 2026 Corsair ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/lincoln/corsair-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "Ford Authority — Escape and Corsair production ends",
+    "url": "https://fordauthority.com/2025/12/ford-escape-lincoln-corsair-production-ends-this-week/",
+    "site": "fordauthority.com"
+   }
+  ]
  },
  {
   "id": "lincoln-nautilus",
@@ -21173,25 +23877,43 @@ export const VEHICLES = [
   "segment": "midsize luxury SUV",
   "category": "suv",
   "priceFrom": 53995,
-  "priceTo": 77130,
+  "priceTo": 77660,
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 53995
+    "msrp": 53995,
+    "features": [
+     "2.0L turbocharged I-4 with 250 hp and AWD standard",
+     "48-inch panoramic display with 11.1-inch center touchscreen",
+     "Lincoln Co-Pilot360 Drive 2.0 with adaptive cruise and 360-degree camera",
+     "Power-adjustable heated front seats"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 63180
+    "msrp": 63595,
+    "features": [
+     "Genuine leather upholstery",
+     "Panoramic Vista Roof",
+     "Ventilated front seats",
+     "Adaptive suspension"
+    ]
    },
    {
     "name": "Black Label",
-    "msrp": 77130
+    "msrp": 77660,
+    "features": [
+     "Curated interior theme packages with premium materials",
+     "28-speaker Revel Ultima 3D audio",
+     "BlueCruise hands-free highway driving standard",
+     "Black Label member privileges and concierge service"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.0L turbo I4",
+    "engine": "2.0L Turbocharged I-4",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -21203,9 +23925,9 @@ export const VEHICLES = [
    },
    {
     "type": "hybrid",
-    "engine": "2.0L turbo I4 hybrid",
+    "engine": "2.0L Turbocharged I-4 Hybrid with 100 kW electric motor",
     "hp": 310,
-    "transmission": "CVT",
+    "transmission": "eCVT (continuously variable automatic)",
     "manualAvailable": false,
     "drive": [
      "AWD"
@@ -21219,21 +23941,21 @@ export const VEHICLES = [
   ],
   "doors": 4,
   "dims": {
-   "lengthIn": 193.4,
-   "widthIn": 78.2,
+   "lengthIn": 193.2,
+   "widthIn": 76.9,
    "heightIn": 68.2,
    "wheelbaseIn": 114.2,
-   "curbWeightLb": 4534,
-   "groundClearanceIn": null
+   "curbWeightLb": 4301,
+   "groundClearanceIn": 8
   },
   "interior": {
    "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
+   "cargoCuFt": 36.4,
+   "cargoMaxCuFt": 71.3,
    "lightInterior": true,
    "darkInterior": true
   },
-  "spareTire": "temporary",
+  "spareTire": "none",
   "physicalControls": {
    "climate": false,
    "audio": true
@@ -21253,7 +23975,100 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Pricing carried over unchanged from 2025 per Ford Authority. Hybrid available on every trim (~$1,500-2,000 upcharge). AWD standard. Nearly all controls run through the 48-inch display plus center touchscreen; volume knob retained."
+  "notes": "The 2026 Nautilus carries over the 2024 redesign with three trims (Premiere 53995, Reserve 63595, Black Label 77660) and pricing essentially unchanged from 2025. All trims are AWD standard and every trim can be ordered as a hybrid for roughly 3000 dollars more (Premiere Hybrid starts near 56995). Gas 2.0L turbo makes 250 hp and rates 21/29/24 mpg; the 2.0L turbo hybrid makes 310 hp total system output and rates 29/31/30 mpg per fueleconomy.gov. Ergonomics center on the 48-inch panoramic display paired with an 11.1-inch lower touchscreen that handles most climate and comfort functions, so dedicated physical climate buttons are absent, though a physical audio volume control is retained. Standard tire kit is an inflator and sealant kit rather than a spare, with a spare available as an option. IIHS names it a Top Safety Pick; a current NHTSA overall star rating was not verifiable and is omitted.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "White Platinum",
+     "hex": "#EDEEEA"
+    },
+    {
+     "name": "Silver Radiance",
+     "hex": "#C9CBCC"
+    },
+    {
+     "name": "Whisper Blue",
+     "hex": "#B9C4CC"
+    },
+    {
+     "name": "Gray Matter",
+     "hex": "#6E7276"
+    },
+    {
+     "name": "Chroma Caviar Dark Gray",
+     "hex": "#34373B"
+    },
+    {
+     "name": "Red Carpet",
+     "hex": "#6D1A1F"
+    },
+    {
+     "name": "Infinite Black",
+     "hex": "#0B0C0E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#16171B",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Light Space Gray",
+     "hex": "#9A9EA3",
+     "tone": "light"
+    },
+    {
+     "name": "Hot Chocolate",
+     "hex": "#4A3220",
+     "tone": "dark"
+    },
+    {
+     "name": "Chalet",
+     "hex": "#D8CDBB",
+     "tone": "light"
+    },
+    {
+     "name": "Aurora",
+     "hex": "#B7C0C8",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Lincoln official 2026 Nautilus",
+    "url": "https://www.lincoln.com/luxury-suvs/nautilus/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Lincoln&baseModel=Nautilus&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "IIHS 2026 Nautilus ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/lincoln/nautilus-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "2026 Nautilus powertrains outlined",
+    "url": "https://fordauthority.com/2025/08/2026-lincoln-nautilus-all-powertrains-outlined/",
+    "site": "fordauthority.com"
+   },
+   {
+    "label": "2026 Nautilus trims and pricing",
+    "url": "https://trimatlas.com/compare/lincoln/nautilus/2026/",
+    "site": "trimatlas.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": "https://www.iihs.org/ratings/vehicle/lincoln/nautilus-4-door-suv/2026"
+   }
+  }
  },
  {
   "id": "lincoln-navigator",
@@ -21269,32 +24084,77 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 91995
+    "msrp": 91995,
+    "features": [
+     "Standard 4x4",
+     "3.5L twin-turbo V6 (432 hp)",
+     "48-inch panoramic display",
+     "11.1-inch center touchscreen",
+     "14-speaker audio",
+     "Lincoln Connectivity Package (5G, Wi-Fi hotspot)"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 101995
+    "msrp": 101995,
+    "features": [
+     "Panoramic Vista Roof with power sunshade",
+     "Power-deployable running boards",
+     "Revel Ultima 3D Audio (28 speakers)",
+     "Lincoln Rejuvenate wellness experience",
+     "Digital Scent",
+     "Premium leather first/second rows"
+    ]
    },
    {
     "name": "Black Label",
-    "msrp": 118995
+    "msrp": 118995,
+    "features": [
+     "Curated interior themes (Atmospheric, Enlighten, Invitation)",
+     "Exclusive premium colors",
+     "Black Label member privileges",
+     "Highest-tier appointments"
+    ]
+   },
+   {
+    "name": "Premiere L",
+    "msrp": 93995,
+    "features": [
+     "Extended long-wheelbase body (221.9 in)",
+     "Standard 4x4",
+     "Premiere equipment level"
+    ]
+   },
+   {
+    "name": "Reserve L",
+    "msrp": 104995,
+    "features": [
+     "Extended long-wheelbase body",
+     "Reserve equipment level",
+     "Revel Ultima 3D Audio (28 speakers)"
+    ]
    },
    {
     "name": "Black Label L",
-    "msrp": 121995
+    "msrp": 121995,
+    "features": [
+     "Extended long-wheelbase body",
+     "Curated interior themes",
+     "Black Label member privileges"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
     "engine": "3.5L twin-turbo V6",
-    "hp": 440,
+    "hp": 432,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "4WD"
     ],
-    "mpgCombined": 16,
+    "mpgCombined": 17,
     "evRangeMi": null
    }
   ],
@@ -21305,16 +24165,16 @@ export const VEHICLES = [
   "doors": 4,
   "dims": {
    "lengthIn": 210,
-   "widthIn": 79.9,
-   "heightIn": 77.6,
+   "widthIn": 80,
+   "heightIn": 78,
    "wheelbaseIn": 122.5,
-   "curbWeightLb": 6100,
-   "groundClearanceIn": null
+   "curbWeightLb": 5936,
+   "groundClearanceIn": 8.9
   },
   "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
+   "passengerVolumeCuFt": 195,
+   "cargoCuFt": 22.9,
+   "cargoMaxCuFt": 107,
    "lightInterior": true,
    "darkInterior": true
   },
@@ -21338,7 +24198,103 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Redesigned generation launched for 2025; base Premiere trim added for 2026, cutting the entry price by ~$8,000. Extended-length Navigator L versions run ~$2,000-3,000 more per trim (Premiere L $93,995, Reserve L $104,995). Destination fee $2,595. 4WD standard."
+  "notes": "Redesigned generation (launched 2025) built around a 48-inch panoramic dash display plus an 11.1-inch center touchscreen. For 2026 Lincoln added a new base Premiere trim that drops entry pricing roughly 8000 dollars below the former Reserve starting point. Each trim (Premiere Reserve Black Label) is offered in a standard body and an extended L body that runs about 2000 to 3000 dollars more per trim. Every model uses a 3.5L twin-turbo V6 rated at 432 hp and 510 lb-ft with a 10-speed automatic and standard 4x4. Destination is 2595 dollars and is not included in the listed MSRPs. Ergonomically the cabin relies heavily on screens; a large console volume knob remains but climate and most audio functions moved onto the touchscreen, a point several reviewers criticized.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Infinite Black Metallic",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Pristine White Metallic Tri-Coat",
+     "hex": "#F3F4F5"
+    },
+    {
+     "name": "Crystal White Metallic",
+     "hex": "#E9EAEC"
+    },
+    {
+     "name": "Star White Metallic Tri-Coat",
+     "hex": "#ECEBE4"
+    },
+    {
+     "name": "Gray Mist Metallic",
+     "hex": "#9DA1A4"
+    },
+    {
+     "name": "Starlight Gray",
+     "hex": "#7B7F82"
+    },
+    {
+     "name": "Flight Blue Metallic",
+     "hex": "#2E4A63"
+    },
+    {
+     "name": "Chroma Caviar Dark Gray Metallic",
+     "hex": "#2B2D30"
+    },
+    {
+     "name": "Sunrise Copper Metallic Pearlcoat",
+     "hex": "#8A5A3B"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1A1A1C",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Light Space Gray",
+     "hex": "#A9ABAD",
+     "tone": "light"
+    },
+    {
+     "name": "Hot Chocolate",
+     "hex": "#4A2E22",
+     "tone": "dark"
+    },
+    {
+     "name": "Salt Crystal Gray",
+     "hex": "#C9C7C0",
+     "tone": "light"
+    },
+    {
+     "name": "Warm Horizon",
+     "hex": "#B99C7A",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Lincoln Navigator official page",
+    "url": "https://www.lincoln.com/luxury-suvs/navigator/2026/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Lincoln&baseModel=Navigator&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Navigator prices, specs and expert rating",
+    "url": "https://www.edmunds.com/lincoln/navigator/2026/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Navigator lineup new trim and pricing",
+    "url": "https://fordauthority.com/2025/12/2026-lincoln-navigator-lineup-features-new-trim-higher-prices/",
+    "site": "fordauthority.com"
+   }
+  ],
+  "ratings": {
+   "expert": {
+    "score": 6.3,
+    "scale": 10,
+    "source": "https://www.edmunds.com/lincoln/navigator/2026/"
+   }
+  }
  },
  {
   "id": "lotus-emira",
@@ -22071,7 +25027,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "i-Activ AWD standard on every trim. Turbo makes 250 hp on 93-octane / 227 hp on 87-octane."
+  "notes": "i-Activ AWD standard on every trim. Turbo makes 250 hp on 93-octane / 227 hp on 87-octane.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-30 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21112",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-5",
@@ -22319,7 +25287,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota."
+  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-50 SUV, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21114",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-70",
@@ -22552,93 +25531,6 @@ export const VEHICLES = [
   "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row."
  },
  {
-  "id": "mazda-mx-5-miata",
-  "make": "Mazda",
-  "manufacturer": "Mazda Motor Corporation",
-  "model": "MX-5 Miata",
-  "year": 2026,
-  "bodyStyle": "convertible",
-  "segment": "sports car",
-  "category": "car",
-  "priceFrom": 30430,
-  "priceTo": 41900,
-  "trims": [
-   {
-    "name": "Sport (soft top)",
-    "msrp": 30430
-   },
-   {
-    "name": "Club (soft top)",
-    "msrp": 33930
-   },
-   {
-    "name": "Grand Touring (soft top)",
-    "msrp": 35730
-   },
-   {
-    "name": "RF Grand Touring",
-    "msrp": 38450
-   },
-   {
-    "name": "RF Club (Brembo BBS Recaro)",
-    "msrp": 41900
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "2.0L I4",
-    "hp": 181,
-    "transmission": "6-speed manual or 6-speed automatic",
-    "manualAvailable": true,
-    "drive": [
-     "RWD"
-    ],
-    "mpgCombined": 29,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   2
-  ],
-  "doors": 2,
-  "dims": {
-   "lengthIn": 154.1,
-   "widthIn": 68.3,
-   "heightIn": 48.8,
-   "wheelbaseIn": 90.9,
-   "curbWeightLb": 2366,
-   "groundClearanceIn": null
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 4.6,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "RF power-retractable hardtop (Club and Grand Touring)",
-   "Brembo BBS Recaro Package",
-   "Bose 9-speaker audio with headrest speakers",
-   "Tan Nappa leather (Grand Touring)",
-   "Limited-slip differential and Bilstein dampers (Club MT)",
-   "6-speed automatic (Grand Touring)"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Mazda%20MX-5%20(ND)%201X7A7471.jpg?width=1280",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "high",
-  "notes": "Soft top and RF retractable-hardtop offered (one record; RF adds roughly $2,700-8,000 depending on trim and weighs ~90 lb more). Manual standard; automatic offered on Grand Touring. RF Club includes the Brembo BBS Recaro package as standard."
- },
- {
   "id": "mazda-mazda3",
   "make": "Mazda",
   "manufacturer": "Mazda Motor Corporation",
@@ -22746,7 +25638,106 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Sold as sedan and hatchback (one record; hatchback costs ~$1,000-1,150 more, dims for sedan). Turbo makes 250 hp on 93-octane / 227 hp on 87-octane."
+  "notes": "Sold as sedan and hatchback (one record; hatchback costs ~$1,000-1,150 more, dims for sedan). Turbo makes 250 hp on 93-octane / 227 hp on 87-octane.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda3 Sedan FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21108",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
+ },
+ {
+  "id": "mazda-mx-5-miata",
+  "make": "Mazda",
+  "manufacturer": "Mazda Motor Corporation",
+  "model": "MX-5 Miata",
+  "year": 2026,
+  "bodyStyle": "convertible",
+  "segment": "sports car",
+  "category": "car",
+  "priceFrom": 30430,
+  "priceTo": 41900,
+  "trims": [
+   {
+    "name": "Sport (soft top)",
+    "msrp": 30430
+   },
+   {
+    "name": "Club (soft top)",
+    "msrp": 33930
+   },
+   {
+    "name": "Grand Touring (soft top)",
+    "msrp": 35730
+   },
+   {
+    "name": "RF Grand Touring",
+    "msrp": 38450
+   },
+   {
+    "name": "RF Club (Brembo BBS Recaro)",
+    "msrp": 41900
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "2.0L I4",
+    "hp": 181,
+    "transmission": "6-speed manual or 6-speed automatic",
+    "manualAvailable": true,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 29,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   2
+  ],
+  "doors": 2,
+  "dims": {
+   "lengthIn": 154.1,
+   "widthIn": 68.3,
+   "heightIn": 48.8,
+   "wheelbaseIn": 90.9,
+   "curbWeightLb": 2366,
+   "groundClearanceIn": null
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 4.6,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "RF power-retractable hardtop (Club and Grand Touring)",
+   "Brembo BBS Recaro Package",
+   "Bose 9-speaker audio with headrest speakers",
+   "Tan Nappa leather (Grand Touring)",
+   "Limited-slip differential and Bilstein dampers (Club MT)",
+   "6-speed automatic (Grand Touring)"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Mazda%20MX-5%20(ND)%201X7A7471.jpg?width=1280",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "high",
+  "notes": "Soft top and RF retractable-hardtop offered (one record; RF adds roughly $2,700-8,000 depending on trim and weighs ~90 lb more). Manual standard; automatic offered on Grand Touring. RF Club includes the Brembo BBS Recaro package as standard."
  },
  {
   "id": "mclaren-750s",
@@ -23149,6 +26140,115 @@ export const VEHICLES = [
   "notes": "AMG-only nameplate (2-door liftback coupe). V8 entry covers GT 55 (469 hp), GT 63 (577 hp) and GT 63 PRO (603 hp). GT 63 S E PERFORMANCE is an 805-hp plug-in hybrid."
  },
  {
+  "id": "mercedes-amg-sl",
+  "make": "Mercedes-Benz",
+  "manufacturer": "Mercedes-Benz Group",
+  "model": "SL",
+  "year": 2026,
+  "bodyStyle": "convertible",
+  "segment": "luxury roadster",
+  "category": "car",
+  "priceFrom": 112550,
+  "priceTo": 207900,
+  "trims": [
+   {
+    "name": "AMG SL 43",
+    "msrp": 112550
+   },
+   {
+    "name": "AMG SL 55 4MATIC+",
+    "msrp": 145250
+   },
+   {
+    "name": "AMG SL 63 4MATIC+",
+    "msrp": 187850
+   },
+   {
+    "name": "AMG SL 63 S E PERFORMANCE",
+    "msrp": 207900
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "gas",
+    "engine": "AMG 2.0L I4 turbo mild hybrid",
+    "hp": 375,
+    "transmission": "9-speed automatic (MCT)",
+    "manualAvailable": false,
+    "drive": [
+     "RWD"
+    ],
+    "mpgCombined": 21,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "AMG 4.0L V8 twin-turbo (469-577 hp)",
+    "hp": 577,
+    "transmission": "9-speed automatic (MCT)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 16,
+    "evRangeMi": null
+   },
+   {
+    "type": "phev",
+    "engine": "AMG 4.0L V8 twin-turbo plug-in hybrid (E Performance)",
+    "hp": 805,
+    "transmission": "9-speed automatic (MCT)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   }
+  ],
+  "seats": [
+   2,
+   4
+  ],
+  "doors": 2,
+  "dims": {
+   "lengthIn": 185.2,
+   "widthIn": 75.4,
+   "heightIn": 53.5,
+   "wheelbaseIn": 106.3,
+   "curbWeightLb": 4266,
+   "groundClearanceIn": 3.9
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 7.5,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": false,
+   "audio": false
+  },
+  "keyOptions": [
+   "Soft-top power roof (opens in ~15 seconds)",
+   "AIRSCARF neck-level heating",
+   "AMG Performance seats",
+   "Burmester surround sound",
+   "Head-up display",
+   "Rear-axle steering",
+   "Carbon fiber packages"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/6/62/Mercedes-AMG_SL_63_%28R232%29_1X7A7444.jpg",
+   "credit": "Wikimedia Commons"
+  },
+  "confidence": "high",
+  "notes": "AMG-only nameplate; 2+2 seating on most trims. An ultra-exclusive Mercedes-Maybach SL 680 Monogram Series joins the lineup for 2026 (pricing announced separately, roughly $235,000)."
+ },
+ {
   "id": "mercedes-benz-c-class",
   "make": "Mercedes-Benz",
   "manufacturer": "Mercedes-Benz Group",
@@ -23252,8 +26352,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mercedes-AMG_C_63_%28W206%29_IMG_0310.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz_W206_C_300_4MATIC_AMG_Line_Polar_White_(14).jpg",
+   "credit": "Damian B Oh"
   },
   "confidence": "high",
   "notes": "AMG C 63 S E Performance is a 671-hp plug-in hybrid with a small performance-oriented battery (minimal usable EV range). Climate and audio are controlled via the central touchscreen; no physical knobs."
@@ -24873,115 +27973,6 @@ export const VEHICLES = [
   "notes": "Mercedes-Maybach S 580/S 680 (long-wheelbase ultra-luxury variants) folded into this record. S 580e plug-in hybrid EPA electric range approximate (~46 mi)."
  },
  {
-  "id": "mercedes-amg-sl",
-  "make": "Mercedes-Benz",
-  "manufacturer": "Mercedes-Benz Group",
-  "model": "SL",
-  "year": 2026,
-  "bodyStyle": "convertible",
-  "segment": "luxury roadster",
-  "category": "car",
-  "priceFrom": 112550,
-  "priceTo": 207900,
-  "trims": [
-   {
-    "name": "AMG SL 43",
-    "msrp": 112550
-   },
-   {
-    "name": "AMG SL 55 4MATIC+",
-    "msrp": 145250
-   },
-   {
-    "name": "AMG SL 63 4MATIC+",
-    "msrp": 187850
-   },
-   {
-    "name": "AMG SL 63 S E PERFORMANCE",
-    "msrp": 207900
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "gas",
-    "engine": "AMG 2.0L I4 turbo mild hybrid",
-    "hp": 375,
-    "transmission": "9-speed automatic (MCT)",
-    "manualAvailable": false,
-    "drive": [
-     "RWD"
-    ],
-    "mpgCombined": 21,
-    "evRangeMi": null
-   },
-   {
-    "type": "gas",
-    "engine": "AMG 4.0L V8 twin-turbo (469-577 hp)",
-    "hp": 577,
-    "transmission": "9-speed automatic (MCT)",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": 16,
-    "evRangeMi": null
-   },
-   {
-    "type": "phev",
-    "engine": "AMG 4.0L V8 twin-turbo plug-in hybrid (E Performance)",
-    "hp": 805,
-    "transmission": "9-speed automatic (MCT)",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   }
-  ],
-  "seats": [
-   2,
-   4
-  ],
-  "doors": 2,
-  "dims": {
-   "lengthIn": 185.2,
-   "widthIn": 75.4,
-   "heightIn": 53.5,
-   "wheelbaseIn": 106.3,
-   "curbWeightLb": 4266,
-   "groundClearanceIn": 3.9
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 7.5,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": false,
-   "audio": false
-  },
-  "keyOptions": [
-   "Soft-top power roof (opens in ~15 seconds)",
-   "AIRSCARF neck-level heating",
-   "AMG Performance seats",
-   "Burmester surround sound",
-   "Head-up display",
-   "Rear-axle steering",
-   "Carbon fiber packages"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/6/62/Mercedes-AMG_SL_63_%28R232%29_1X7A7444.jpg",
-   "credit": "Wikimedia Commons"
-  },
-  "confidence": "high",
-  "notes": "AMG-only nameplate; 2+2 seating on most trims. An ultra-exclusive Mercedes-Maybach SL 680 Monogram Series joins the lineup for 2026 (pricing announced separately, roughly $235,000)."
- },
- {
   "id": "mercedes-benz-sprinter",
   "make": "Mercedes-Benz",
   "manufacturer": "Mercedes-Benz Group",
@@ -25595,7 +28586,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small."
+  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Mitsubishi Outlander SUV FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20196",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mitsubishi-outlander-phev",
@@ -25863,7 +28865,23 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/b/bc/NISSAN_ALTIMA_%28L34%29_China_%283%29.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/2023_Nissan_Altima_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Altima_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/2023_Nissan_Altima_SR_in_Brilliant_Silver_Metallic%2C_front_right.jpg",
+     "kind": "exterior",
+     "credit": "Mr.choppers",
+     "license": "CC BY-SA 3.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Altima_SR_in_Brilliant_Silver_Metallic,_front_right.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Final model year; production expected to end mid-2026. Lineup cut to SV and SR grades only (S and SL dropped).",
@@ -26059,7 +29077,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup."
+  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Frontier Crew Cab PU/CC N/A RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21069",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-kicks",
@@ -26143,7 +29172,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD."
+  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Kicks SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21077",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-leaf",
@@ -26318,7 +29358,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs."
+  "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Murano SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21074",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-pathfinder",
@@ -26397,7 +29449,23 @@ export const VEHICLES = [
   "towingLb": 6000,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Nissan_Pathfinder_Rock_Creek_%28R53%29_AMA_Marbach_2025_DSC_8665.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/2026_Nissan_Pathfinder_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2026_Nissan_Pathfinder_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Nissan_Pathfinder_%28R53%29.jpg",
+     "kind": "exterior",
+     "credit": "Jason Lawrence",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Nissan_Pathfinder_(R53).jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Refreshed for 2026 (new front styling, upgraded tech). Trim ladder is S, SV, SL, Rock Creek, Platinum; some sources list base S at $38,995 vs Nissan's announced $39,990 start.",
@@ -26748,7 +29816,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL."
+  "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Nissan Sentra 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/nissan/sentra-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "nissan-z",
@@ -27802,7 +30881,23 @@ export const VEHICLES = [
   "towingLb": 11550,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/8/84/2025_RAM_1500%2C_front_7.1.25.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/2022_Ram_1500_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2022_Ram_1500_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/2025_RAM_1500_Limited%2C_front_5.23.25.jpg",
+     "kind": "exterior",
+     "credit": "Kevauto",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_RAM_1500_Limited,_front_5.23.25.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "5.7L HEMI V8 returns for 2026 alongside the Hurricane sixes; 540-hp RHO off-road flagship included as a trim here. Ramcharger range-extended EV pickup delayed (not included). Dims are crew cab 5'7\" bed. Prices exclude $2,595 destination.",
@@ -28809,7 +31904,19 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicles/ascent",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru Ascent SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21699",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "subaru-brz",
@@ -29732,7 +32839,18 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicle-info/subaru-impreza-colors.html",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru Impreza SW AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21691",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "subaru-outback",
@@ -30711,7 +33829,18 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicle-info/subaru-wrx-colors.html",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru WRX 4dr, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21695",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "tesla-cybertruck",
@@ -31596,6 +34725,244 @@ export const VEHICLES = [
   }
  },
  {
+  "id": "toyota-bz",
+  "make": "Toyota",
+  "manufacturer": "Toyota Motor Corporation",
+  "model": "bZ",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "compact electric SUV",
+  "category": "suv",
+  "priceFrom": 34900,
+  "priceTo": 45300,
+  "trims": [
+   {
+    "name": "XLE",
+    "msrp": 34900,
+    "features": [
+     "57.7-kWh battery, 168 hp FWD",
+     "236-mile EPA range",
+     "14-inch touchscreen",
+     "Toyota Safety Sense 3.0"
+    ]
+   },
+   {
+    "name": "XLE Plus",
+    "msrp": 37900,
+    "features": [
+     "74.7-kWh battery, 221 hp FWD",
+     "314-mile EPA range",
+     "Digital key"
+    ]
+   },
+   {
+    "name": "Limited",
+    "msrp": 43300,
+    "features": [
+     "Panoramic roof",
+     "JBL premium audio",
+     "Heated & ventilated seats"
+    ]
+   },
+   {
+    "name": "Limited AWD",
+    "msrp": 45300,
+    "features": [
+     "Dual-motor AWD, 338 hp",
+     "278-mile EPA range",
+     "150-kW DC fast charging"
+    ]
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Single-motor FWD",
+    "hp": 221,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "FWD"
+    ],
+    "mpgCombined": 117,
+    "evRangeMi": 314
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD",
+    "hp": 338,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 278
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 184.6,
+   "widthIn": 73.2,
+   "heightIn": 65,
+   "wheelbaseIn": 112.2,
+   "curbWeightLb": 4400,
+   "groundClearanceIn": 8.1
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 27.7,
+   "cargoMaxCuFt": null,
+   "lightInterior": true,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "NACS (Tesla-style) charge port",
+   "Battery preconditioning",
+   "Panoramic roof",
+   "JBL premium audio",
+   "Heated & ventilated seats",
+   "Digital key",
+   "14-inch touchscreen"
+  ],
+  "towingLb": null,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "high",
+  "notes": "Heavily updated successor to the bZ4X, renamed bZ for 2026 with NACS port and more range. Base XLE uses a 57.7-kWh pack (168 hp, 236 mi); XLE Plus/Limited use 74.7 kWh (221 hp FWD, up to 314 mi; 338 hp AWD, about 278 mi). AWD is a $2,000 option on Plus/Limited. Prices confirmed both ex-destination (as listed) and destination-inclusive across multiple sources.",
+  "sources": [
+   {
+    "label": "2026 bZ model page",
+    "url": "https://www.toyota.com/bz/",
+    "site": "toyota.com"
+   },
+   {
+    "label": "EPA fuel economy / range",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Toyota_bZ.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 bZ pricing & range by trim",
+    "url": "https://insideevs.com/news/769526/2026-toyota-bz-ev-suv-price-specs/",
+    "site": "insideevs.com"
+   }
+  ]
+ },
+ {
+  "id": "toyota-bz-woodland",
+  "make": "Toyota",
+  "manufacturer": "Toyota Motor Corporation",
+  "model": "bZ Woodland",
+  "year": 2026,
+  "bodyStyle": "suv",
+  "segment": "compact electric adventure SUV",
+  "category": "suv",
+  "priceFrom": 45300,
+  "priceTo": 47400,
+  "trims": [
+   {
+    "name": "bZ Woodland",
+    "msrp": 45300,
+    "features": [
+     "375-hp dual-motor AWD standard",
+     "260-mile EPA range",
+     "Roof rails & all-terrain tire option",
+     "X-MODE with Grip Control"
+    ]
+   },
+   {
+    "name": "Premium",
+    "msrp": 47400,
+    "features": [
+     "Panoramic sunroof",
+     "Ventilated front seats",
+     "Radiant lower-body heating",
+     "9-speaker JBL audio"
+    ]
+   }
+  ],
+  "powertrains": [
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD",
+    "hp": 375,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 260
+   }
+  ],
+  "seats": [
+   5
+  ],
+  "doors": 4,
+  "dims": {
+   "lengthIn": 190.6,
+   "widthIn": 73.2,
+   "heightIn": 65.7,
+   "wheelbaseIn": 112.2,
+   "curbWeightLb": 4750,
+   "groundClearanceIn": 8.3
+  },
+  "interior": {
+   "passengerVolumeCuFt": null,
+   "cargoCuFt": 30,
+   "cargoMaxCuFt": null,
+   "lightInterior": false,
+   "darkInterior": true
+  },
+  "spareTire": "none",
+  "physicalControls": {
+   "climate": true,
+   "audio": true
+  },
+  "keyOptions": [
+   "Standard dual-motor AWD (375 hp)",
+   "NACS charge port",
+   "Roof rails & all-terrain tire option",
+   "X-MODE with Grip Control",
+   "JBL premium audio",
+   "Panoramic roof (Premium)"
+  ],
+  "towingLb": 3500,
+  "image": {
+   "remote": null,
+   "credit": null
+  },
+  "confidence": "high",
+  "notes": "New nameplate for 2026: a longer, more rugged wagon-style variant of the bZ co-developed with Subaru (Trailseeker sibling). 74.7-kWh battery, 281-mile EPA range at the wheel-size tested (some configurations rated 260 mi). Prices verified: $45,300/$47,400 before $1,450 destination.",
+  "sources": [
+   {
+    "label": "2026 bZ Woodland model page",
+    "url": "https://www.toyota.com/bz-woodland/",
+    "site": "toyota.com"
+   },
+   {
+    "label": "EPA fuel economy / range",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Toyota_bZ_Woodland.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 bZ Woodland MSRP & specs",
+    "url": "https://carbuzz.com/cars/toyota/bz-woodland/2026/",
+    "site": "carbuzz.com"
+   }
+  ]
+ },
+ {
   "id": "toyota-c-hr",
   "make": "Toyota",
   "manufacturer": "Toyota Motor Corporation",
@@ -31825,12 +35192,13 @@ export const VEHICLES = [
   ],
   "ratings": {
    "safety": {
+    "nhtsa": 5,
     "iihs": "Top Safety Pick+",
     "appliesTo": "2026",
     "source": {
-     "label": "IIHS 2026 Top Safety Pick Awards — Toyota (Camry 4-door sedan: Top Safety Pick+)",
-     "url": "https://www.iihs.org/ratings/top-safety-picks/2026/all/toyota",
-     "site": "iihs.org"
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Camry Hybrid 4 DR HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21640",
+     "site": "nhtsa.gov"
     }
    },
    "owner": {
@@ -31984,6 +35352,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Toyota Corolla 4 DR FWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20249",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 3.7,
     "scale": 5,
@@ -32144,7 +35521,23 @@ export const VEHICLES = [
   "towingLb": 1500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Toyota_Corolla_Cross_1.8_G_interior_20221019.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Cross_1.8_G_interior_20221019.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/2022_Toyota_Corolla_Cross_1.8AT_High_black_interior_in_Brunei.jpg",
+     "kind": "interior",
+     "credit": "AIMHO'S REBELLION 8490s",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2022_Toyota_Corolla_Cross_1.8AT_High_black_interior_in_Brunei.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Refreshed styling and interior for 2026. Gas lineup is L/LE/XLE ($24,635/$26,965/$29,560); Hybrid lineup is S/SE/XSE ($28,995/$30,315/$33,030), all standard AWD via Electronic On-Demand system. Corrected priceTo and added the previously-missing LE and Hybrid SE trims (file had only 4 of 6 trims). Towing rated up to 1,500 lb with accessories.",
@@ -32362,7 +35755,18 @@ export const VEHICLES = [
     "url": "https://www.autoevolution.com/news/2026-toyota-corolla-hatchback-fx-edition-replaces-nightshade-pricing-shoots-up-256599.html",
     "site": "autoevolution.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Corolla Hatchback 5-door, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21645",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-crown",
@@ -32495,7 +35899,18 @@ export const VEHICLES = [
     "url": "https://carbuzz.com/cars/toyota/crown/2026/",
     "site": "carbuzz.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Crown Hybrid 4dr, HEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21680",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-crown-signia",
@@ -33096,7 +36511,23 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD_Toyota_Grand_Highlander.png",
+     "kind": "interior",
+     "credit": "Euro1212",
+     "license": "CC0",
+     "commons": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD_Toyota_Grand_Highlander.png"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/2024_Toyota_Grand_Highlander_XLE_AWD_in_Blueprint%2C_Front_Right%2C_09-10-2023.jpg",
+     "kind": "exterior",
+     "credit": "Elise240SX",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Toyota_Grand_Highlander_XLE_AWD_in_Blueprint,_Front_Right,_09-10-2023.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Three powertrains across the lineup: 265-hp turbo gas (LE/XLE/Limited/Platinum), 245-hp hybrid (Hybrid LE/XLE/Limited/Nightshade), and 362-hp Hybrid Max (Limited/Platinum). 8-passenger seating standard on LE; 7-passenger captain's-chair layout available on every trim above it. Price sources disagree on whether destination ($1,495) is included, so treat priceFrom/priceTo as approximate pending a direct toyota.com confirmation.",
@@ -33481,7 +36912,18 @@ export const VEHICLES = [
     "url": "https://www.carsdirect.com/toyota/land-cruiser/2026",
     "site": "carsdirect.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Land Cruiser SUV, HEV 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21659",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-mirai",
@@ -33679,7 +37121,23 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Toyota_PRIUS_Z_%286AA-MXWH60-AHXHB%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Toyota_PRIUS_Z_(6AA-MXWH60-AHXHB)_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/2023_Toyota_Prius_Z_2.0L_HEV_%282%29.jpg",
+     "kind": "interior",
+     "credit": "芯正",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Prius_Z_2.0L_HEV_(2).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "4-trim lineup confirmed: LE, XLE, Nightshade, Limited ($28,550-$35,565 FWD; AWD adds about $1,400 on every trim). Nightshade slots between XLE and Limited with blacked-out styling. LE FWD rated up to 57 mpg combined; XLE/Nightshade/Limited on 19-inch wheels about 52 mpg (AWD models 51 mpg).",
@@ -34273,7 +37731,16 @@ export const VEHICLES = [
   "towingLb": 3500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/TOYOTA_SIENNA_%28XL40%29_CHINA_VERSION_INTERIOR.jpg",
+     "kind": "interior",
+     "credit": "Dinkun Chen",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:TOYOTA_SIENNA_(XL40)_CHINA_VERSION_INTERIOR.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Hybrid-only minivan, 36 mpg combined even with available AWD. LE base $40,420 verified via dealer data for 2026; XLE/Platinum estimated from 2025 ladder. Woodland and 25th Anniversary editions also offered.",
@@ -34295,6 +37762,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Sienna Hybrid Van HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21660",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 3.5,
     "scale": 5,
@@ -34803,244 +38279,6 @@ export const VEHICLES = [
   }
  },
  {
-  "id": "toyota-bz",
-  "make": "Toyota",
-  "manufacturer": "Toyota Motor Corporation",
-  "model": "bZ",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "compact electric SUV",
-  "category": "suv",
-  "priceFrom": 34900,
-  "priceTo": 45300,
-  "trims": [
-   {
-    "name": "XLE",
-    "msrp": 34900,
-    "features": [
-     "57.7-kWh battery, 168 hp FWD",
-     "236-mile EPA range",
-     "14-inch touchscreen",
-     "Toyota Safety Sense 3.0"
-    ]
-   },
-   {
-    "name": "XLE Plus",
-    "msrp": 37900,
-    "features": [
-     "74.7-kWh battery, 221 hp FWD",
-     "314-mile EPA range",
-     "Digital key"
-    ]
-   },
-   {
-    "name": "Limited",
-    "msrp": 43300,
-    "features": [
-     "Panoramic roof",
-     "JBL premium audio",
-     "Heated & ventilated seats"
-    ]
-   },
-   {
-    "name": "Limited AWD",
-    "msrp": 45300,
-    "features": [
-     "Dual-motor AWD, 338 hp",
-     "278-mile EPA range",
-     "150-kW DC fast charging"
-    ]
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Single-motor FWD",
-    "hp": 221,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "FWD"
-    ],
-    "mpgCombined": 117,
-    "evRangeMi": 314
-   },
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD",
-    "hp": 338,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 278
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 184.6,
-   "widthIn": 73.2,
-   "heightIn": 65,
-   "wheelbaseIn": 112.2,
-   "curbWeightLb": 4400,
-   "groundClearanceIn": 8.1
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 27.7,
-   "cargoMaxCuFt": null,
-   "lightInterior": true,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "NACS (Tesla-style) charge port",
-   "Battery preconditioning",
-   "Panoramic roof",
-   "JBL premium audio",
-   "Heated & ventilated seats",
-   "Digital key",
-   "14-inch touchscreen"
-  ],
-  "towingLb": null,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "high",
-  "notes": "Heavily updated successor to the bZ4X, renamed bZ for 2026 with NACS port and more range. Base XLE uses a 57.7-kWh pack (168 hp, 236 mi); XLE Plus/Limited use 74.7 kWh (221 hp FWD, up to 314 mi; 338 hp AWD, about 278 mi). AWD is a $2,000 option on Plus/Limited. Prices confirmed both ex-destination (as listed) and destination-inclusive across multiple sources.",
-  "sources": [
-   {
-    "label": "2026 bZ model page",
-    "url": "https://www.toyota.com/bz/",
-    "site": "toyota.com"
-   },
-   {
-    "label": "EPA fuel economy / range",
-    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Toyota_bZ.shtml",
-    "site": "fueleconomy.gov"
-   },
-   {
-    "label": "2026 bZ pricing & range by trim",
-    "url": "https://insideevs.com/news/769526/2026-toyota-bz-ev-suv-price-specs/",
-    "site": "insideevs.com"
-   }
-  ]
- },
- {
-  "id": "toyota-bz-woodland",
-  "make": "Toyota",
-  "manufacturer": "Toyota Motor Corporation",
-  "model": "bZ Woodland",
-  "year": 2026,
-  "bodyStyle": "suv",
-  "segment": "compact electric adventure SUV",
-  "category": "suv",
-  "priceFrom": 45300,
-  "priceTo": 47400,
-  "trims": [
-   {
-    "name": "bZ Woodland",
-    "msrp": 45300,
-    "features": [
-     "375-hp dual-motor AWD standard",
-     "260-mile EPA range",
-     "Roof rails & all-terrain tire option",
-     "X-MODE with Grip Control"
-    ]
-   },
-   {
-    "name": "Premium",
-    "msrp": 47400,
-    "features": [
-     "Panoramic sunroof",
-     "Ventilated front seats",
-     "Radiant lower-body heating",
-     "9-speaker JBL audio"
-    ]
-   }
-  ],
-  "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Dual-motor AWD",
-    "hp": 375,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "AWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": 260
-   }
-  ],
-  "seats": [
-   5
-  ],
-  "doors": 4,
-  "dims": {
-   "lengthIn": 190.6,
-   "widthIn": 73.2,
-   "heightIn": 65.7,
-   "wheelbaseIn": 112.2,
-   "curbWeightLb": 4750,
-   "groundClearanceIn": 8.3
-  },
-  "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 30,
-   "cargoMaxCuFt": null,
-   "lightInterior": false,
-   "darkInterior": true
-  },
-  "spareTire": "none",
-  "physicalControls": {
-   "climate": true,
-   "audio": true
-  },
-  "keyOptions": [
-   "Standard dual-motor AWD (375 hp)",
-   "NACS charge port",
-   "Roof rails & all-terrain tire option",
-   "X-MODE with Grip Control",
-   "JBL premium audio",
-   "Panoramic roof (Premium)"
-  ],
-  "towingLb": 3500,
-  "image": {
-   "remote": null,
-   "credit": null
-  },
-  "confidence": "high",
-  "notes": "New nameplate for 2026: a longer, more rugged wagon-style variant of the bZ co-developed with Subaru (Trailseeker sibling). 74.7-kWh battery, 281-mile EPA range at the wheel-size tested (some configurations rated 260 mi). Prices verified: $45,300/$47,400 before $1,450 destination.",
-  "sources": [
-   {
-    "label": "2026 bZ Woodland model page",
-    "url": "https://www.toyota.com/bz-woodland/",
-    "site": "toyota.com"
-   },
-   {
-    "label": "EPA fuel economy / range",
-    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Toyota_bZ_Woodland.shtml",
-    "site": "fueleconomy.gov"
-   },
-   {
-    "label": "2026 bZ Woodland MSRP & specs",
-    "url": "https://carbuzz.com/cars/toyota/bz-woodland/2026/",
-    "site": "carbuzz.com"
-   }
-  ]
- },
- {
   "id": "vinfast-vf-8",
   "make": "VinFast",
   "manufacturer": "Vingroup (VinFast Auto)",
@@ -35272,7 +38510,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls."
+  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas SUV, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21031",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-atlas-cross-sport",
@@ -35676,7 +38925,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls."
+  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen ID.4 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21037",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-jetta",
@@ -35759,7 +39019,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI)."
+  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Jetta 4dr, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21040",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-jetta-gli",
@@ -35910,7 +39181,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28."
+  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Taos SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21042",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-tiguan",
@@ -35995,7 +39277,23 @@ export const VEHICLES = [
   "towingLb": 1500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Volkswagen_TIGUAN_eTSI_R-Line_%283AA-CT15%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Volkswagen_TIGUAN_eTSI_R-Line_(3AA-CT15)_interior.jpg"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/2026_Volkswagen_Tiguan_%28Front%29_at_the_2025_NYC_Auto_Show.png",
+     "kind": "exterior",
+     "credit": "Raszbeary",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2026_Volkswagen_Tiguan_(Front)_at_the_2025_NYC_Auto_Show.png"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Third generation launched for 2025 (five seats only, no more third row). 2026 adds 268-hp SEL R-Line Turbo flagship; that trim's price is approximate pending official destination-exclusive figure. Most controls are touchscreen-based with a rotary driving-experience dial.",
@@ -36557,7 +39855,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "2026 lineup restructured: lower-priced 194-hp base engine on Core/Plus, 247-hp B5 on Ultra; exact powertrain/trim pairings and EPA figures for the new base engine not fully confirmed. Compact spare optional."
+  "notes": "2026 lineup restructured: lower-priced 194-hp base engine on Core/Plus, 247-hp B5 on Ultra; exact powertrain/trim pairings and EPA figures for the new base engine not fully confirmed. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC40 SUV MHEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20873",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-xc60",
@@ -36654,7 +39963,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Refreshed for 2026 with new grille, larger 11.2-inch screen and updated interior. T8 trim prices quoted by some sources may include destination. Compact spare optional."
+  "notes": "Refreshed for 2026 with new grille, larger 11.2-inch screen and updated interior. T8 trim prices quoted by some sources may include destination. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC60 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20876",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-xc90",
@@ -36760,6 +40080,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Carries the major 2025.5 facelift into 2026. B6 Plus price is approximate; base and top prices verified. XC60-platform SUV remains Volvo's 3-row flagship alongside electric EX90."
+  "notes": "Carries the major 2025.5 facelift into 2026. B6 Plus price is approximate; base and top prices verified. XC60-platform SUV remains Volvo's 3-row flagship alongside electric EX90.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC90 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20880",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  }
 ];
