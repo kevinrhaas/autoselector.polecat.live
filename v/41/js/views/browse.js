@@ -8,6 +8,7 @@ import { el, toast, promptDialog, debounce, escapeHtml } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { vtile, vtileGrid, emptyState, money, PT_LABEL, logoImg } from './shared.js';
+import { peerClass } from '../stats.js';
 
 export const BODY_STYLES = ['sedan','hatchback','coupe','convertible','wagon','suv','minivan','pickup','van'];
 const DRIVES = ['FWD','RWD','AWD','4WD'];
@@ -58,9 +59,21 @@ export function colorFamily(hex){
 }
 
 export function defaultFilters(){
-  return { q:'', makes:[], bodies:[], pts:[], drives:[], priceMax:0, seatsMin:0, seatsMax:0,
-    spares:[], controls:[], extColors:[], intColors:[], sort:'price' };
+  return { q:'', makes:[], bodies:[], classes:[], pts:[], drives:[], priceMax:0, seatsMin:0, seatsMax:0,
+    mpgMin:0, hpMin:0, feats:[], spares:[], controls:[], extColors:[], intColors:[], sort:'price' };
 }
+
+// Boolean "capability" filters — independent AND toggles, populated where the
+// data supports them. Kept next to applyFilters so both share one source.
+export const FEATURES = [
+  { key:'manual',  label:'Manual transmission',    test:v=>(v.powertrains||[]).some(p=>p.manualAvailable) },
+  { key:'tow5k',   label:'Tows 5,000+ lb',          test:v=>(v.towingLb||0)>=5000 },
+  { key:'evrange', label:'250+ mi electric range',  test:v=>Math.max(0,...(v.powertrains||[]).map(p=>p.evRangeMi||0))>=250 },
+  { key:'tsp',     label:'IIHS Top Safety Pick+',   test:v=>/Top Safety Pick\+|TSP\+/i.test(v.ratings?.safety?.iihs||'') },
+];
+const FEAT_TEST = Object.fromEntries(FEATURES.map(f=>[f.key, f.test]));
+const maxMpg = v=>Math.max(0,...(v.powertrains||[]).map(p=>p.mpgCombined||0));
+const maxHp  = v=>Math.max(0,...(v.powertrains||[]).map(p=>p.hp||0));
 
 // The single source of truth for filter logic — the finders reuse this via
 // applyFilters(vehicles, filters).
@@ -69,6 +82,7 @@ export function applyFilters(vehicles, f){
     if(f.q){ const s=`${v.make} ${v.manufacturer||''} ${v.model} ${v.segment}`.toLowerCase(); if(!s.includes(f.q.toLowerCase())) return false; }
     if(f.makes.length && !f.makes.includes(v.make)) return false;
     if(f.bodies.length && !f.bodies.includes(v.bodyStyle)) return false;
+    if(f.classes?.length && !f.classes.includes(peerClass(v))) return false;
     if(f.pts.length && !(v.powertrains||[]).some(p=>f.pts.includes(p.type))) return false;
     if(f.drives.length && !(v.powertrains||[]).some(p=>(p.drive||[]).some(d=>f.drives.includes(d)))) return false;
     if(f.priceMax>0 && (v.priceFrom==null || v.priceFrom>f.priceMax)) return false;
@@ -77,6 +91,11 @@ export function applyFilters(vehicles, f){
     // more than N seats" — so "2 max" gives true two-seaters, "5 max" excludes
     // any 3-row option).
     if(f.seatsMax>0 && Math.max(0,...(v.seats||[0])) > f.seatsMax) return false;
+    // fuel economy / power — the vehicle's BEST powertrain must clear the floor
+    if(f.mpgMin>0 && maxMpg(v) < f.mpgMin) return false;
+    if(f.hpMin>0  && maxHp(v)  < f.hpMin)  return false;
+    // capability toggles — AND: every picked feature must be present
+    if(f.feats?.length && !f.feats.every(k=>FEAT_TEST[k]?.(v))) return false;
     // tire type — OR over the vehicle's single spareTire value
     if(f.spares?.length && !f.spares.includes(v.spareTire)) return false;
     // physical controls ("buttons") — AND: every selected control must be present
@@ -170,14 +189,25 @@ export function renderBrowse(view, ctx){
   const colorCount = (scope,key)=> all.filter(v=>(v.colors?.[scope]||[]).some(c=>c.hex && colorFamily(c.hex)===key)).length;
   const extColorOpts = COLOR_FAMILIES.map(fam=>({ ...fam, count:colorCount('exterior', fam.key) })).filter(o=>o.count);
   const intColorOpts = COLOR_FAMILIES.map(fam=>({ ...fam, count:colorCount('interior', fam.key) })).filter(o=>o.count);
+  const driveOpts = [['AWD','All-wheel drive'],['FWD','Front-wheel drive'],['RWD','Rear-wheel drive'],['4WD','Four-wheel drive']]
+    .map(([k,l])=>({ key:k, label:l, count:cnt(v=>(v.powertrains||[]).some(p=>(p.drive||[]).includes(k))) })).filter(o=>o.count);
+  const featOpts = FEATURES.map(ft=>({ key:ft.key, label:ft.label, count:cnt(ft.test) })).filter(o=>o.count);
+  // vehicle class = the peer class (size + body: "compact SUV", "full-size pickup"…)
+  const classCounts = {};
+  for(const v of all){ const pc=peerClass(v); if(pc) classCounts[pc]=(classCounts[pc]||0)+1; }
+  const classOpts = Object.entries(classCounts).sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+    .map(([k,n])=>({ key:k, label:k[0].toUpperCase()+k.slice(1), count:n }));
 
   const brand = brandPicker(all, f, update);
   const ddRow = el('div',{class:'toolbar filter-dd'});
   ddRow.append(brand.el);
+  ddRow.append(multiDropdown({ label:'Class',          ic:'grid',     options:classOpts,    sel:f.classes,   onChange:update, note:'Size + body — e.g. compact SUV, full-size pickup' }));
+  ddRow.append(multiDropdown({ label:'Drivetrain',     ic:'wheel',    options:driveOpts,    sel:f.drives,    onChange:update }));
   ddRow.append(multiDropdown({ label:'Tire',           ic:'wheel',    options:tireOpts,     sel:f.spares,    onChange:update }));
   ddRow.append(multiDropdown({ label:'Controls',       ic:'settings', options:ctrlOpts,     sel:f.controls,  onChange:update }));
   ddRow.append(multiDropdown({ label:'Exterior color', ic:'palette',  options:extColorOpts, sel:f.extColors, onChange:update, note:'Grouped into color families' }));
   ddRow.append(multiDropdown({ label:'Interior color', ic:'palette',  options:intColorOpts, sel:f.intColors, onChange:update, note:'Grouped into color families' }));
+  ddRow.append(multiDropdown({ label:'More',           ic:'filter',   options:featOpts,     sel:f.feats,     onChange:update, note:'Capability and safety filters' }));
   view.append(ddRow);
   view.append(brand.chips);   // selected-brand chips (their own row, wraps nicely)
   if(ctx.openBrands) setTimeout(()=>brand.open(), 60);   // Home "Brands" tile deep-link
@@ -192,6 +222,14 @@ export function renderBrowse(view, ctx){
   priceWrap.append(el('span',{class:'muted tiny', text:'Base price'}), price, priceOut);
   row2.append(priceWrap, seatRange(f, update));
   view.append(row2);
+
+  // ---- efficiency + power minimums ----
+  const row3 = el('div',{class:'toolbar'});
+  row3.append(minSlider({ label:'Min MPG', unit:' mpg', min:0, max:60, step:5,
+    get:()=>f.mpgMin, set:v=>f.mpgMin=v, update, hint:'combined, best powertrain' }));
+  row3.append(minSlider({ label:'Min power', unit:' hp', min:0, max:600, step:25,
+    get:()=>f.hpMin, set:v=>f.hpMin=v, update }));
+  view.append(row3);
 
   // ---- count + grid ----
   const count = el('div',{class:'muted', style:'margin:2px 0 12px;font-size:13px'});
@@ -373,6 +411,18 @@ function seatRange(f, update){
   min.addEventListener('change', ()=>{ f.seatsMin=+min.value; update(); });
   max.addEventListener('change', ()=>{ f.seatsMax=+max.value; update(); });
   wrap.append(min, el('span',{class:'muted tiny', text:'→'}), max);
+  return wrap;
+}
+
+// ---- generic "minimum" slider (0 = Any) ----------------------------------
+function minSlider({ label, unit='', min, max, step, get, set, update, hint }){
+  const wrap = el('div',{style:'display:flex;align-items:center;gap:8px;min-width:200px;flex:1'});
+  const fmt = (v)=> v>0 ? `≥ ${v}${unit}` : 'Any';
+  const out = el('b',{text:fmt(get()), style:'min-width:74px;font-size:12.5px'});
+  const slider = el('input',{type:'range', class:'slider-x', min:String(min), max:String(max), step:String(step),
+    value:String(get()||min), 'aria-label':`Minimum ${label}`});
+  slider.addEventListener('input', ()=>{ const v=+slider.value<=min?0:+slider.value; set(v); out.textContent=fmt(v); update(); });
+  wrap.append(el('span',{class:'muted tiny', text:label, title:hint||label}), slider, out);
   return wrap;
 }
 

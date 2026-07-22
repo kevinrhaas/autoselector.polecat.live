@@ -12,7 +12,7 @@
 
 export const WHATSNEXT = [
   { status:'next', title:'Public ratings for every model',
-    detail:'NHTSA safety stars, IIHS awards, and owner and expert scores — each source-linked. Live for 104 models today, rolling out to the rest, honestly omitting anything not yet published.' },
+    detail:'NHTSA safety stars, IIHS awards, and owner and expert scores — each source-linked. Live for 109 models today, rolling out to the rest, honestly omitting anything not yet published.' },
   { status:'next', title:'Interior & multi-photo galleries',
     detail:'Real cabin and extra-angle photos on every vehicle page — current generation only. 47 models live; expanding across the catalog.' },
   { status:'next', title:'Sources for every stat',
