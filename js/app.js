@@ -80,7 +80,7 @@ function buildShell(){
   app.innerHTML='';
   const tb = ensureTopbarNodes();
   const shell = initShell({
-    app: { id:'autoselector', name:'AutoSelector', wordmark: icon('car',22) },
+    app: { id:'autoselector', name:'AutoSelector', icon: icon('car',22) },
     sections: SECTIONS.map(s => s.group ? s : { ...s, icon: icon(s.icon) }),
     onNav: (s)=>navigate(s),
     isAdmin: Access.isAdmin(),
