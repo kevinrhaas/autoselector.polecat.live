@@ -7,7 +7,7 @@
 // online visit is never served stale JS after a deploy (this app ships new
 // builds hourly). The cache only kicks in when the network is unavailable,
 // which is exactly what "installable / offline-capable" needs here.
-const CACHE = 'as-shell-v2';   // bumped: initShell/appSwitcher/rightPanel adoption, js/shell.js removed
+const CACHE = 'as-shell-v3';   // bumped: polecat-shell v0.5.2 (shell.css touch targets + site-chrome)
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();

@@ -21,6 +21,16 @@
 
 export const CHANGELOG = [
   {
+    v: 42,
+    title: 'The landing page now wears the shared fleet header & footer',
+    kind: 'polish',
+    ts: '2026-07-22T18:35:46.909Z',
+    items: [
+      'AutoSelector’s front door adopts the suite-wide header and footer, so it matches every Polecat app — the same brand tile, a consistent “Polecat” link back to the suite, and the standard footer.',
+      'Built on Polecat Shell v0.5.2 (the shared site-chrome plus the ~44px mobile touch targets).',
+    ],
+  },
+  {
     v: 41,
     title: '6 more models get real NHTSA safety ratings — 109 covered now',
     kind: 'data',

@@ -132,7 +132,7 @@ async function checkPage(browser, url, mustFind, label){
     const mp = await mob.newPage();
     const mobErrs=[]; mp.on('pageerror',e=>mobErrs.push(String(e)));
     await mp.goto(`http://localhost:${PORT}/`, { waitUntil:'domcontentloaded' });
-    await mp.waitForSelector('.nav-in'); await mp.waitForTimeout(200);
+    await mp.waitForSelector('.psx-header'); await mp.waitForTimeout(200);
     if(await mp.evaluate(()=>document.documentElement.scrollWidth > innerWidth+1))
       throw new Error('mobile: marketing page overflows horizontally at 390px');
 
