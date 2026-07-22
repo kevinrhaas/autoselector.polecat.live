@@ -61,30 +61,28 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 104 models done so far (2026-07-22 run 2: +13 — ford-mustang-mach-e/
-  maverick, kia-k4/ev9, cadillac-ct5, buick-encore-gx, chrysler-pacifica,
-  dodge-durango, mitsubishi-outlander, volvo-xc40/xc60/xc90, nissan-frontier
-  — all `safety`/`nhtsa`, 93 models now have a real NHTSA star rating; see
-  js/changelog.js v40). This run's skips: ford-bronco, mazda-mx-5-miata,
-  cadillac-ct4, jeep-gladiator (current generation never NHTSA-rated, no
-  valid carryover), jeep-cherokee (all-new STLA-platform redesign, not yet
-  tested). Earlier (2026-07-22 run 1, +9): toyota-camry/corolla/sienna,
-  nissan-kicks, volkswagen-id4/taos, chevrolet-blazer/trax, hyundai-venue —
-  see js/changelog.js v39; that run's skips: toyota-rav4, nissan-sentra/leaf
-  (all-new redesigns, not yet tested), nissan-armada, subaru-outback,
-  chevrolet-equinox, jeep-wrangler, gmc-terrain (current generation never
-  NHTSA-rated, no valid carryover). Pull NHTSA overall stars from the
-  official api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org,
-  and owner/expert scores only where a real number sits on a real page.
-  Omit — never guess — anything a source doesn't publish for the 2026 (or
-  carried-over) model year. **A same-generation "carried-over" NHTSA rating
-  is only valid if the record's own `notes` don't say "all-new"/redesigned
-  for 2026** — audi-q3, mazda-cx-5, and (for the NHTSA figure only) the
-  ninth-gen nissan-sentra were dropped/trimmed for that reason (2026-07-18
-  run) — re-check skipped models each batch, NHTSA adds ratings on a rolling
-  basis. Edmunds and KBB both return HTTP 403 to WebFetch in this environment
-  (owner/expert sourcing blocked here — try a different fetch path or accept
-  NHTSA/IIHS-only coverage for now). ~15–20 models per run.
+  the 109 models done so far (99 with a real NHTSA star rating). Latest
+  (2026-07-22 run 3, +6): mazda-cx-90, lincoln-corsair/nautilus, gmc-yukon/
+  acadia, hyundai-ioniq-6 — see js/changelog.js v41; this run's skips
+  (checked, not guessed): tesla-model-3/s/x, porsche-macan, hyundai-ioniq-5,
+  mercedes-benz-e-class/glc/gle, toyota-corolla-cross, rivian-r1s (NHTSA
+  "Not Rated", no valid carryover), mazda-cx-5, subaru-solterra (all-new
+  redesigns for 2026, so no prior-year carryover applies either). Earlier:
+  run 2 (+13, js/changelog.js v40) and run 1 (+9, js/changelog.js v39) —
+  see those entries for their model lists and skip reasons. Pull NHTSA
+  overall stars from the official api.nhtsa.gov/SafetyRatings endpoints,
+  IIHS awards from iihs.org, and owner/expert scores only where a real
+  number sits on a real page. Omit — never guess — anything a source
+  doesn't publish for the 2026 (or carried-over) model year. **A
+  same-generation "carried-over" NHTSA rating is only valid if the vehicle
+  is confirmed NOT all-new/redesigned for 2026** (check the manufacturer's
+  own materials, not just NHTSA's description) — audi-q3, mazda-cx-5,
+  subaru-solterra, and (for the NHTSA figure only) the ninth-gen
+  nissan-sentra were dropped/trimmed for that reason — re-check skipped
+  models each batch, NHTSA adds ratings on a rolling basis. Edmunds and KBB
+  both return HTTP 403 to WebFetch in this environment (owner/expert
+  sourcing blocked here — try a different fetch path or accept NHTSA/IIHS-
+  only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
   47 models done. Wikimedia Commons, free licenses only, current generation

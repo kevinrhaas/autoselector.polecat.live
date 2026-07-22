@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 20;
+export const DATA_VERSION = 21;
 
 export const VEHICLES = [
  {
@@ -13094,7 +13094,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination."
+  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Acadia SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21786",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-canyon",
@@ -13969,7 +13981,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination."
+  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Yukon SUV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21874",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "honda-accord",
@@ -16701,7 +16724,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Refreshed for 2026 with new styling, NACS port and added N Line trim; official 2026 US pricing not announced at time of writing, so 2025 prices shown. Expect possible cuts in line with Ioniq 5."
+  "notes": "Refreshed for 2026 with new styling, NACS port and added N Line trim; official 2026 US pricing not announced at time of writing, so 2025 prices shown. Expect possible cuts in line with Ioniq 5.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Hyundai Ioniq 6 4 DR RWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20579",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-ioniq-6-n",
@@ -23865,7 +23900,18 @@ export const VEHICLES = [
     "url": "https://fordauthority.com/2025/12/ford-escape-lincoln-corsair-production-ends-this-week/",
     "site": "fordauthority.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lincoln Corsair Gas SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21445",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "lincoln-nautilus",
@@ -24064,9 +24110,14 @@ export const VEHICLES = [
   ],
   "ratings": {
    "safety": {
+    "nhtsa": 5,
     "iihs": "Top Safety Pick",
     "appliesTo": "2026",
-    "source": "https://www.iihs.org/ratings/vehicle/lincoln/nautilus-4-door-suv/2026"
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lincoln Nautilus SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21448",
+     "site": "nhtsa.gov"
+    }
    }
   }
  },
@@ -25528,7 +25579,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row."
+  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-90 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21117",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-mazda3",

@@ -4,7 +4,7 @@
 import { el, modal, toast, escapeHtml } from '../ui.js';
 import { icon, bodyIcon } from '../icons.js';
 import { Store } from '../store.js';
-import { money, priceLabel, ptChip, PT_LABEL, logoImg, photoUrl, seatsLabel, relBar, galleryFor, ratingsBadge } from './shared.js';
+import { money, priceLabel, ptChip, PT_LABEL, logoImg, photoUrl, seatsLabel, relBar, relLegend, galleryFor, ratingsBadge } from './shared.js';
 import { mapsDealerUrl, locatorUrl } from '../dealers.js';
 
 const yn = (b)=> b==null ? '—' : (b ? 'Yes' : 'No');
@@ -74,6 +74,8 @@ export function openVehicle(v, ctx={}){
   main.append(acts);
   hero.append(imgCol, main);
   body.append(hero);
+  // key for the standing bars (the price bar just above, the spec bars below)
+  if(priceRel) body.append(relLegend(v));
 
   // ---- spec sections ----
   const spec = (lbl, val, sub, rel)=> el('div',{class:'spec'},[
@@ -84,19 +86,29 @@ export function openVehicle(v, ctx={}){
   ]);
   const section = (title, node)=>{ body.append(el('h3',{text:title, style:'margin:20px 0 10px;font-size:15px'})); body.append(node); };
 
-  // powertrains — the first row carries the vehicle-level "vs rivals" bars
-  // (power & efficiency) so they aren't repeated per powertrain.
-  const pts = el('div',{style:'display:flex;flex-direction:column;gap:10px'});
-  (v.powertrains||[]).forEach((p,idx)=>{
+  // powertrains — each is its own titled card so multiple options don't blur
+  // together. The first card carries the vehicle-level "vs rivals" bars (power
+  // & efficiency) so they aren't repeated per powertrain.
+  const ptList = v.powertrains||[];
+  const multiPt = ptList.length>1;
+  const ptName = (p)=> [PT_LABEL[p.type]||p.type, p.engine, p.hp?`${p.hp} hp`:null].filter(Boolean).join(' · ');
+  const pts = el('div',{style:'display:flex;flex-direction:column;gap:12px'});
+  ptList.forEach((p,idx)=>{
+    const block = el('div',{class:'pt-block'+(multiPt?' pt-multi':'')});
+    if(multiPt) block.append(el('div',{class:'pt-head'},[
+      el('span',{class:'pt-num', text:String(idx+1)}),
+      el('span',{class:'pt-name', text:ptName(p)}),
+    ]));
     const g = el('div',{class:'spec-grid'});
     g.append(spec('Type', PT_LABEL[p.type]||p.type, p.engine||''));
     g.append(spec('Power', p.hp?`${p.hp} hp`:'—', p.transmission||'', idx===0?relBar('hp',v):null));
     g.append(spec('Drive', (p.drive||[]).join(' / ')||'—', p.manualAvailable?'Manual gearbox available':''));
     g.append(spec(p.type==='ev'||p.type==='phev' ? 'Efficiency (MPGe)' : 'EPA combined', p.mpgCombined??'—',
       p.evRangeMi?`${p.evRangeMi} mi electric range`:'', idx===0?relBar('mpg',v):null));
-    pts.append(g);
+    block.append(g);
+    pts.append(block);
   });
-  section('Powertrain'+((v.powertrains||[]).length>1?'s':''), pts);
+  section('Powertrain'+(multiPt?'s':''), pts);
 
   // size & space
   const d=v.dims||{}, i=v.interior||{};
