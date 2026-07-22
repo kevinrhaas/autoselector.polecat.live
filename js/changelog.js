@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 43,
+    title: 'The app rail now wears AutoSelector’s own mark',
+    kind: 'polish',
+    ts: '2026-07-22T19:53:02.713Z',
+    items: [
+      'The rail brand is now AutoSelector’s glyph — the same mark you see on its polecat.live launcher tile and its landing-page header — so the app reads as one identity everywhere.',
+      'A faint “polecat.live” link sits just under the name in the rail: a quiet way back to the suite.',
+      'Built on Polecat Shell v0.5.3.',
+    ],
+  },
+  {
     v: 42,
     title: 'The landing page now wears the shared fleet header & footer',
     kind: 'polish',
