@@ -61,11 +61,10 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 87 models done so far (2026-07-19: +17 — ford-mustang/expedition/
-  ranger, honda-ridgeline/prologue, mazda-cx-50, hyundai-kona/santa-cruz,
-  volkswagen-atlas/jetta, subaru-wrx, chevrolet-suburban, toyota-crown/
-  corolla-hatchback/land-cruiser, kia-ev6, lexus-rx — all `safety` only; see
-  js/changelog.js v38). Pull NHTSA overall stars from the official
+  the 92 models done so far (2026-07-22: +9 — toyota-camry/corolla/sienna,
+  nissan-kicks, volkswagen-id4/taos, chevrolet-blazer/trax, hyundai-venue —
+  all `safety`/`nhtsa`, 80 models now have a real NHTSA star rating; see
+  js/changelog.js v39). Pull NHTSA overall stars from the official
   api.nhtsa.gov/SafetyRatings endpoints, IIHS awards from iihs.org, and
   owner/expert scores only where a real number sits on a real page.
   Omit — never guess — anything a source doesn't publish for the 2026 (or
@@ -73,12 +72,14 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   is only valid if the record's own `notes` don't say "all-new"/redesigned
   for 2026** — audi-q3, mazda-cx-5, and (for the NHTSA figure only) the
   ninth-gen nissan-sentra were dropped/trimmed for that reason (2026-07-18
-  run); this run's NHTSA "Not Rated" (no OverallRating published yet, not a
-  generation issue) skips: toyota-supra/bz/bz-woodland/gr-corolla/sequoia,
-  lexus-nx/es, kia-carnival — re-check next batch, NHTSA adds ratings on a
-  rolling basis. Edmunds and KBB both return HTTP 403 to WebFetch in this
-  environment (owner/expert sourcing blocked here — try a different fetch
-  path or accept NHTSA/IIHS-only coverage for now). ~15–20 models per run.
+  run); this run's NHTSA "Not Rated"/no-usable-carryover skips: toyota-rav4
+  (all-new redesign, not yet tested), nissan-sentra/leaf (all-new redesigns,
+  not yet tested), nissan-armada, subaru-outback, chevrolet-equinox,
+  jeep-wrangler, gmc-terrain (current generation never NHTSA-rated, no valid
+  carryover) — re-check next batch, NHTSA adds ratings on a rolling basis.
+  Edmunds and KBB both return HTTP 403 to WebFetch in this environment
+  (owner/expert sourcing blocked here — try a different fetch path or accept
+  NHTSA/IIHS-only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
   47 models done. Wikimedia Commons, free licenses only, current generation
