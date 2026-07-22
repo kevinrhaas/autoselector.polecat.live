@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 18;
+export const DATA_VERSION = 19;
 
 export const VEHICLES = [
  {
@@ -6365,7 +6365,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination."
+  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Blazer SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21788",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-blazer-ev",
@@ -7952,6 +7963,15 @@ export const VEHICLES = [
   "confidence": "high",
   "notes": "FWD only; no AWD offered. Prices exclude $1,495 destination. One of the least expensive new vehicles in the US.",
   "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Chevrolet Trax Early Release SUV FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20410",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 4.4,
     "scale": 5,
@@ -17794,7 +17814,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL."
+  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Venue 5HB FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21163",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ineos-grenadier",
@@ -29030,7 +29061,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD."
+  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Kicks SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21077",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-leaf",
@@ -35039,12 +35081,13 @@ export const VEHICLES = [
   ],
   "ratings": {
    "safety": {
+    "nhtsa": 5,
     "iihs": "Top Safety Pick+",
     "appliesTo": "2026",
     "source": {
-     "label": "IIHS 2026 Top Safety Pick Awards — Toyota (Camry 4-door sedan: Top Safety Pick+)",
-     "url": "https://www.iihs.org/ratings/top-safety-picks/2026/all/toyota",
-     "site": "iihs.org"
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Camry Hybrid 4 DR HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21640",
+     "site": "nhtsa.gov"
     }
    },
    "owner": {
@@ -35198,6 +35241,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Toyota Corolla 4 DR FWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20249",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 3.7,
     "scale": 5,
@@ -37599,6 +37651,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Sienna Hybrid Van HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21660",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 3.5,
     "scale": 5,
@@ -38753,7 +38814,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls."
+  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen ID.4 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21037",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-jetta",
@@ -38998,7 +39070,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28."
+  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Taos SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21042",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-tiguan",
