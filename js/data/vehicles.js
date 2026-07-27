@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 21;
+export const DATA_VERSION = 22;
 
 export const VEHICLES = [
  {
@@ -5304,7 +5304,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Base Preferred price verified ($42,895 incl. destination); mid/top trims approximate. Prices exclude ~$1,495 destination."
+  "notes": "Base Preferred price verified ($42,895 incl. destination); mid/top trims approximate. Prices exclude ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Buick Envision SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21820",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "buick-envista",
@@ -6294,7 +6305,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Continues for 2026 as Cadillac's last gas crossover alongside Escalade; XT4 and XT6 are discontinued. Mid/top trim prices approximate; excludes ~$1,595 destination."
+  "notes": "Continues for 2026 as Cadillac's last gas crossover alongside Escalade; XT4 and XT6 are discontinued. Mid/top trim prices approximate; excludes ~$1,595 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac XT5 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21873",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-blazer",
@@ -9576,7 +9598,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/bronco-sport/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Bronco Sport SUV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21394",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-e-transit",
@@ -12640,7 +12673,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Refreshed for 2026; AWD now standard across the line and the Electrified G80 EV was discontinued for the US after 2025. Top-trim (3.5T Prestige Black) price approximate."
+  "notes": "Refreshed for 2026; AWD now standard across the line and the Electrified G80 EV was discontinued for the US after 2025. Top-trim (3.5T Prestige Black) price approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis G80 4 DR AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21122",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "genesis-g90",
@@ -12903,7 +12948,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling); base 2.5T price from Genesis' pricing announcement. 3.5T top-trim price approximate."
+  "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling); base 2.5T price from Genesis' pricing announcement. 3.5T top-trim price approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis GV70 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20838",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "genesis-gv80",
@@ -13009,7 +13066,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Sleeker GV80 Coupe (from $81,850, 409-hp e-SC available) shares the nameplate; cargo figures are for the standard SUV."
+  "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Sleeker GV80 Coupe (from $81,850, 409-hp e-SC available) shares the nameplate; cargo figures are for the standard SUV.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis GV80 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21127",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-acadia",
@@ -13190,7 +13259,18 @@ export const VEHICLES = [
    "credit": "42-BRT"
   },
   "confidence": "medium",
-  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination."
+  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Canyon PU/CC 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21796",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-hummer-ev-pickup",
@@ -18163,7 +18243,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Significantly refreshed for 2026 with new SPORT grade. Base ($51,200) and SPORT ($61,700) prices are from Infiniti; LUXE and AUTOGRAPH MSRPs derived from list prices less $1,495 destination and vary slightly by source. Q50, QX50 and QX55 were all discontinued before 2026."
+  "notes": "Significantly refreshed for 2026 with new SPORT grade. Base ($51,200) and SPORT ($61,700) prices are from Infiniti; LUXE and AUTOGRAPH MSRPs derived from list prices less $1,495 destination and vary slightly by source. Q50, QX50 and QX55 were all discontinued before 2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Infiniti QX60 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21072",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "infiniti-qx80",
@@ -38663,7 +38755,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Five-seat coupe-roof version of the Atlas. Top-trim price is approximate (official 2026 top-trim figure not confirmed)."
+  "notes": "Five-seat coupe-roof version of the Atlas. Top-trim price is approximate (official 2026 top-trim figure not confirmed).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas Cross Sport SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21033",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-golf-gti",
@@ -39164,7 +39268,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Sold in a single loaded Autobahn trim. One of the last affordable sedans still offered with a manual gearbox."
+  "notes": "Sold in a single loaded Autobahn trim. One of the last affordable sedans still offered with a manual gearbox.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Jetta GLI 4 DR FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21041",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-taos",
