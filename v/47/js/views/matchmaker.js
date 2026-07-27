@@ -58,17 +58,18 @@ const Q = [
     ],
   },
   {
-    key:'entry', multi:false, title:'Getting in and out?', sub:'A real comfort factor people forget to check.',
+    key:'entry', multi:true, title:'How do you want to get in?', sub:'Ride height is a real comfort factor people forget to check — pick every one that suits you.',
     opts:[
-      { t:'Easy step-in, sit up high', ic:'suv', hint:'No climbing down or up', p:v=>['suv','minivan','pickup','van'].includes(v.bodyStyle) && (v.dims?.heightIn??0)>=63 },
-      { t:'Low & sporty is fine', ic:'car', p:()=>true },
+      { t:'Sit up high', ic:'suv', hint:'Commanding view — a step up to climb in', p:v=>(v.dims?.heightIn??0)>=66 },
+      { t:'Slide straight in', ic:'car', hint:'Hip-height seat — no climbing up or dropping down', p:v=>{ const h=v.dims?.heightIn; return h!=null && h>=57 && h<66; } },
+      { t:'Low & sporty', ic:'car', hint:'Sit low and drop down into it', p:v=>(v.dims?.heightIn??999)<57 },
     ],
   },
   {
-    key:'controls', multi:false, title:'Buttons or screens?', sub:'Some cars bury climate controls in menus.',
+    key:'controls', multi:true, title:'Buttons or screens?', sub:'Some cars bury climate controls in menus. Pick either — or both if you don’t mind.',
     opts:[
       { t:'Real knobs, please', ic:'wheel', hint:'Physical climate & volume controls', p:v=>v.physicalControls?.climate && v.physicalControls?.audio },
-      { t:'Touchscreens are fine', ic:'grid', p:()=>true },
+      { t:'Touchscreen-first is fine', ic:'grid', hint:'Most controls live on the screen', p:v=>!(v.physicalControls?.climate && v.physicalControls?.audio) },
     ],
   },
   {

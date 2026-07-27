@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 23;
+export const DATA_VERSION = 24;
 
 export const VEHICLES = [
  {
@@ -2452,7 +2452,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Carryover generation with 2025 facelift. SQ7 price is approximate (latest published figure). Three engines: 261-hp four, 335-hp V6, 500-hp V8 SQ7."
+  "notes": "Carryover generation with 2025 facelift. SQ7 price is approximate (latest published figure). Three engines: 261-hp four, 335-hp V6, 500-hp V8 SQ7.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q7 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21025",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "audi-q8",
@@ -2555,7 +2566,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Two-row coupe sibling to the Q7. Base price derived from published $75,600 figure less destination; SQ8 and RS Q8 performance prices approximate (latest published figures)."
+  "notes": "Two-row coupe sibling to the Q7. Base price derived from published $75,600 figure less destination; SQ8 and RS Q8 performance prices approximate (latest published figures).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q8 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21027",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bentley-bentayga",
@@ -12915,7 +12937,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Updated for 2026 with larger 84-kWh battery (RWD range up to 306 mi) and refreshed design. Base price verified; Performance top-trim price and some efficiency figures approximate."
+  "notes": "Updated for 2026 with larger 84-kWh battery (RWD range up to 306 mi) and refreshed design. Base price verified; Performance top-trim price and some efficiency figures approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis GV60 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21130",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "genesis-gv70",
@@ -23251,6 +23284,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus RZ 450E SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21634",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -23454,6 +23498,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus TX 350 SUV N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21636",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -23645,6 +23700,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus UX 300H 5 HB HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21631",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -25636,7 +25702,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Two-row version of CX-90; standard AWD. PHEV EV range improved from 26 to 32 miles for 2026 via smaller 19-in wheels. Mazda raised 2026 CX-70 prices $200-$500 effective May 2026. Turbo S output on 93-octane (319 hp on 87); PHEV tow rating 3,500 lb."
+  "notes": "Two-row version of CX-90; standard AWD. PHEV EV range improved from 26 to 32 miles for 2026 via smaller 19-in wheels. Mazda raised 2026 CX-70 prices $200-$500 effective May 2026. Turbo S output on 93-octane (319 hp on 87); PHEV tow rating 3,500 lb.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-70 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21119",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-90",
@@ -37617,6 +37694,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Prius PHEV 5 HB PHEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21652",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -39966,7 +40054,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Volvo's sole remaining US wagon for 2026 after the V90 Cross Country's discontinuation. Compact spare optional."
+  "notes": "Volvo's sole remaining US wagon for 2026 after the V90 Cross Country's discontinuation. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo V60 CC SW MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20875",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-v90-cross-country",
