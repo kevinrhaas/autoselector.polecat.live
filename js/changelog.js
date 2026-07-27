@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 45,
+    title: '10 more models get real NHTSA safety ratings — 109 covered now',
+    kind: 'data',
+    ts: '2026-07-27T22:35:13.991Z',
+    items: [
+      'Buick Envision, Cadillac XT5, GMC Canyon, Volkswagen Atlas Cross Sport, Volkswagen Jetta GLI, Infiniti QX60, and the Genesis GV70/GV80/G80 now show real NHTSA overall stars — 109 of 325 models covered.',
+      'Five of these (Atlas Cross Sport, QX60, GV70, GV80, G80) also carry an IIHS Top Safety Pick+ award.',
+      'Checked and skipped this batch — NHTSA "Not Rated": Chevrolet Equinox/Trailblazer, GMC Terrain, Buick Enclave, Nissan Armada/Rogue, Subaru Outback, Kia Carnival, Infiniti QX80, Genesis G70, Jeep Gladiator. No NHTSA test on file yet (2026 or 2025): Jeep Wrangler, Ford Bronco, Toyota Sequoia, plus all-new-for-2026 nameplates Jeep Cherokee, Honda Prelude, and Nissan Leaf.',
+    ],
+  },
+  {
     v: 44,
     title: 'The AutoSelector mark now wears its brand color everywhere',
     kind: 'polish',

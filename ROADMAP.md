@@ -61,15 +61,17 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 109 models done so far (99 with a real NHTSA star rating). Latest
-  (2026-07-22 run 3, +6): mazda-cx-90, lincoln-corsair/nautilus, gmc-yukon/
-  acadia, hyundai-ioniq-6 — see js/changelog.js v41; this run's skips
-  (checked, not guessed): tesla-model-3/s/x, porsche-macan, hyundai-ioniq-5,
-  mercedes-benz-e-class/glc/gle, toyota-corolla-cross, rivian-r1s (NHTSA
-  "Not Rated", no valid carryover), mazda-cx-5, subaru-solterra (all-new
-  redesigns for 2026, so no prior-year carryover applies either). Earlier:
-  run 2 (+13, js/changelog.js v40) and run 1 (+9, js/changelog.js v39) —
-  see those entries for their model lists and skip reasons. Pull NHTSA
+  the 119 models done so far (109 with a real NHTSA star rating). Latest
+  (2026-07-27, +10): buick-envision, cadillac-xt5, gmc-canyon, volkswagen-
+  atlas-cross-sport/jetta-gli, infiniti-qx60, genesis-gv70/gv80/g80 — see
+  js/changelog.js v45; this run's skips (checked, not guessed): chevrolet-
+  equinox/trailblazer, gmc-terrain, buick-enclave, nissan-armada/rogue,
+  subaru-outback, kia-carnival, infiniti-qx80, genesis-g70, jeep-gladiator
+  (NHTSA "Not Rated"); jeep-wrangler, ford-bronco, toyota-sequoia (no NHTSA
+  test on file yet); jeep-cherokee, honda-prelude, nissan-leaf (all-new
+  nameplates for 2026, no carryover applies). Earlier batches: js/
+  changelog.js v41 (+6), v40 (+13), v39 (+9) — see those entries for their
+  model lists and skip reasons. Pull NHTSA
   overall stars from the official api.nhtsa.gov/SafetyRatings endpoints,
   IIHS awards from iihs.org, and owner/expert scores only where a real
   number sits on a real page. Omit — never guess — anything a source
