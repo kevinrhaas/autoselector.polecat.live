@@ -61,14 +61,26 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 136 models done so far (127 with a real NHTSA star rating). Latest
-  (2026-07-27, +9): audi-q7/q8, genesis-gv60, lexus-rz/tx/ux, mazda-cx-70,
-  toyota-prius-plug-in, volvo-v60-cross-country — see js/changelog.js v47;
-  this run's skips (checked, not guessed): audi-a6/a8, bmw-5-series/x6,
-  fiat-500e, genesis-electrified-gv70, hyundai-ioniq-5, jaguar-f-pace,
-  land-rover-defender/discovery/discovery-sport/range-rover-evoque/
-  range-rover-velar (whole brand — no 2026 rating yet), lexus-gx/is/lc/
-  ls/lx, mazda-mx-5-miata, mini-cooper/cooper-convertible,
+  the 146 models done so far (137 with a real NHTSA star rating). Latest
+  (2026-07-27, +10): audi-q4-e-tron, cadillac-lyriq, chevrolet-blazer-ev/
+  equinox-ev/silverado-ev/trailblazer, ford-f-150-lightning, gmc-sierra-ev,
+  hyundai-ioniq-9, tesla-cybertruck (all 5-star) — see js/changelog.js v48;
+  this run's skips (checked, not guessed — NHTSA "Not Rated" or no 2026
+  record at all): audi-a3/a5/q3/q6-e-tron/a6-e-tron/e-tron-gt,
+  buick-enclave/envista, cadillac-ct4/optiq/vistiq/celestiq/escalade-iq,
+  chevrolet-equinox (gas)/silverado-hd/corvette, ford-bronco/
+  f-series-super-duty/transit/e-transit, genesis-g70/g90, gmc-terrain/
+  sierra-hd/hummer-ev-pickup/hummer-ev-suv, honda-prelude,
+  hyundai-elantra-n/ioniq-5-n/ioniq-6-n, infiniti-qx80, jeep-cherokee/
+  gladiator/wrangler/recon, kia-carnival, lexus-es/nx, mercedes-benz-c-class/
+  e-class/glc/gle/cla/cle/gla/glb/gls/s-class/g-class/amg-gt/amg-sl/eqe/
+  eqe-suv/eqs/eqs-suv/sprinter, nissan-armada/leaf/rogue-plug-in-hybrid/z,
+  rivian-r1s/r1t, subaru-brz/outback, tesla-model-3/model-s/model-x,
+  volkswagen-golf-gti/golf-r/id-buzz. Earlier batch skips: audi-a6/a8,
+  bmw-5-series/x6, fiat-500e, genesis-electrified-gv70, hyundai-ioniq-5,
+  jaguar-f-pace, land-rover-defender/discovery/discovery-sport/
+  range-rover-evoque/range-rover-velar (whole brand — no 2026 rating yet),
+  lexus-gx/is/lc/ls/lx, mazda-mx-5-miata, mini-cooper/cooper-convertible,
   mitsubishi-outlander-phev, subaru-solterra/trailseeker/uncharted,
   toyota-bz/bz-woodland/c-hr/crown-signia/gr-supra/mirai/sequoia,
   volvo-ex30/ex40/ex90/v90-cross-country (NHTSA "Not Rated");
@@ -76,7 +88,7 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   "Kona" listing (already attributed to the gas hyundai-kona), no distinct
   electric-powertrain record to cite; alfa-romeo-giulia/stelvio/tonale
   confirmed no 2026 NHTSA record at all. Earlier batches: js/changelog.js
-  v46 (+9), v45 (+10), v41 (+6), v40 (+13), v39 (+9) — see those
+  v47 (+9), v46 (+9), v45 (+10), v41 (+6), v40 (+13), v39 (+9) — see those
   entries for their model lists and skip reasons. Pull NHTSA
   overall stars from the official api.nhtsa.gov/SafetyRatings endpoints,
   IIHS awards from iihs.org, and owner/expert scores only where a real

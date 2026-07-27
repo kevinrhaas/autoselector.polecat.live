@@ -2167,7 +2167,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Continues for 2026; prices shown are latest published (2025) MSRPs and the top-trim figure is approximate. Sportback roofline sold under the same nameplate."
+  "notes": "Continues for 2026; prices shown are latest published (2025) MSRPs and the top-trim figure is approximate. Sportback roofline sold under the same nameplate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q4 E-Tron SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21013",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "audi-q5",
@@ -6084,7 +6095,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "2026 trim prices verified (incl.-destination figures minus $1,495 DFC). Lyriq-V does 0-60 in about 3.3 s."
+  "notes": "2026 trim prices verified (incl.-destination figures minus $1,495 DFC). Lyriq-V does 0-60 in about 3.3 s.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac Lyriq SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21834",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "cadillac-optiq",
@@ -6601,7 +6623,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "SS makes 615 hp / 650 lb-ft, 0-60 in under 3.5 s. RS mid-trim price approximate. Prices exclude ~$1,495 destination."
+  "notes": "SS makes 615 hp / 650 lb-ft, 0-60 in under 3.5 s. RS mid-trim price approximate. Prices exclude ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Blazer EV SUV BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21790",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-colorado",
@@ -7088,7 +7121,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "One of the least expensive 300+ mile EVs in the US. Mid-trim (LT 2) price approximate. Prices exclude ~$1,395 destination."
+  "notes": "One of the least expensive 300+ mile EVs in the US. Mid-trim (LT 2) price approximate. Prices exclude ~$1,395 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Equinox EV SUV BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21824",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-silverado-1500",
@@ -7364,7 +7408,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Range varies ~283-478 mi by battery. Trail Boss trim new for 2026. Prices back-calculated excluding $2,195 destination."
+  "notes": "Range varies ~283-478 mi by battery. Trail Boss trim new for 2026. Prices back-calculated excluding $2,195 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Silverado EV PU/CC BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21858",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-silverado-hd",
@@ -7859,7 +7914,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Prices exclude ~$1,395 destination; trim MSRPs derived from advertised prices and may vary slightly. AWD requires 1.3L engine."
+  "notes": "Prices exclude ~$1,395 destination; trim MSRPs derived from advertised prices and may vary slightly. AWD requires 1.3L engine.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Trailblazer SUV FWD (early release), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21866",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-traverse",
@@ -11103,7 +11169,18 @@ export const VEHICLES = [
     "url": "https://www.truecar.com/overview/ford/f-150-lightning/2026/",
     "site": "truecar.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford F-150 (Super Crew) Lightning PU/CC BEV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21413",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-f-series-super-duty",
@@ -13815,7 +13892,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination."
+  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Sierra EV PU/CC BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21850",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-sierra-hd",
@@ -17058,7 +17146,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "All-new for 2026; Hyundai's first three-row EV, built in Georgia. Mid trims (SE/SEL/Performance Limited) fall between the prices shown; AWD range and MPGe figures approximate."
+  "notes": "All-new for 2026; Hyundai's first three-row EV, built in Georgia. Mid trims (SE/SEL/Performance Limited) fall between the prices shown; AWD range and MPGe figures approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Ioniq 9 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21158",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-kona",
@@ -34261,7 +34360,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Tesla does not use traditional model years; current production treated as 2026. Single-motor Long Range RWD trim was discontinued in 2025; lineup is now Dual Motor AWD ($69,990 after 2026 price cuts), Premium AWD and Cyberbeast. Cargo figure is the 6-ft bed volume; max includes frunk/sub-trunk. Ground clearance is max on air suspension. Prices exclude $1,995 destination."
+  "notes": "Tesla does not use traditional model years; current production treated as 2026. Single-motor Long Range RWD trim was discontinued in 2025; lineup is now Dual Motor AWD ($69,990 after 2026 price cuts), Premium AWD and Cyberbeast. Cargo figure is the 6-ft bed volume; max includes frunk/sub-trunk. Ground clearance is max on air suspension. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Tesla Cybertruck PU/CC BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/22075",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "tesla-model-3",
