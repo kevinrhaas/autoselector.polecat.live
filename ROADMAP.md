@@ -61,17 +61,23 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 119 models done so far (109 with a real NHTSA star rating). Latest
-  (2026-07-27, +10): buick-envision, cadillac-xt5, gmc-canyon, volkswagen-
-  atlas-cross-sport/jetta-gli, infiniti-qx60, genesis-gv70/gv80/g80 — see
-  js/changelog.js v45; this run's skips (checked, not guessed): chevrolet-
-  equinox/trailblazer, gmc-terrain, buick-enclave, nissan-armada/rogue,
-  subaru-outback, kia-carnival, infiniti-qx80, genesis-g70, jeep-gladiator
-  (NHTSA "Not Rated"); jeep-wrangler, ford-bronco, toyota-sequoia (no NHTSA
-  test on file yet); jeep-cherokee, honda-prelude, nissan-leaf (all-new
-  nameplates for 2026, no carryover applies). Earlier batches: js/
-  changelog.js v41 (+6), v40 (+13), v39 (+9) — see those entries for their
-  model lists and skip reasons. Pull NHTSA
+  the 119 models done so far (118 with a real NHTSA star rating). Latest
+  (2026-07-27, +9): acura-adx, bmw-x1/x5, cadillac-escalade,
+  chrysler-voyager, jeep-grand-wagoneer, lincoln-navigator,
+  mitsubishi-eclipse-cross/outlander-sport — see js/changelog.js v46;
+  this run's skips (checked, not guessed): audi-q3/a3/a5, bmw-x2/x7,
+  buick-envista, cadillac-ct4, chevrolet-corvette, genesis-g90,
+  hyundai-elantra-n, mercedes-benz-c-class/e-class/glc/gle, nissan-rogue/
+  sentra/z, toyota-corolla-cross/gr86/gr-corolla, volkswagen-golf-gti/
+  golf-r, dodge-charger-daytona/sixpack, subaru-brz, mini-countryman
+  (NHTSA "Not Rated"); the exotic/ultra-low-volume brands (Ferrari,
+  Lamborghini, McLaren, Bentley, Rolls-Royce, Aston Martin, Maserati,
+  Lotus, Porsche) plus Tesla, Rivian, VinFast, Polestar, and most vans/
+  HD trucks/EVs checked and confirmed NHTSA has no 2026 vehicle record at
+  all (no VehicleId returned, vs. a "Not Rated" result — genuinely
+  untested rather than tested-and-failed). Earlier batches: js/
+  changelog.js v45 (+10), v41 (+6), v40 (+13), v39 (+9) — see those
+  entries for their model lists and skip reasons. Pull NHTSA
   overall stars from the official api.nhtsa.gov/SafetyRatings endpoints,
   IIHS awards from iihs.org, and owner/expert scores only where a real
   number sits on a real page. Omit — never guess — anything a source

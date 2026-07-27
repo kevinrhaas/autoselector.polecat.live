@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 22;
+export const DATA_VERSION = 23;
 
 export const VEHICLES = [
  {
@@ -189,7 +189,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/acura/adx/2026/features-specs/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura ADX SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/22064",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "acura-integra",
@@ -4359,7 +4370,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "AWD standard on all trims. MSRPs back-calculated from sticker prices that include the destination fee, so may be off by about $100."
+  "notes": "AWD standard on all trims. MSRPs back-calculated from sticker prices that include the destination fee, so may be off by about $100.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW X1 SUV AWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21366",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-x2",
@@ -4671,7 +4693,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "X5 M Competition folded in as top trim (shares nameplate). 50e plug-in hybrid figure shown is MPGe. Last full year of this generation; redesign expected for 2027."
+  "notes": "X5 M Competition folded in as top trim (shares nameplate). 50e plug-in hybrid figure shown is MPGe. Last full year of this generation; redesign expected for 2027.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW X5 SUV AWD, OverallRating 4 (RWD variant Not Rated)",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21370",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-x6",
@@ -5816,7 +5849,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "ESV long-wheelbase adds ~$3,000. Base and V prices verified; mid-trim figures approximate. Climate control is largely screen-based after the 2025 refresh. Prices exclude ~$1,995 destination."
+  "notes": "ESV long-wheelbase adds ~$3,000. Base and V prices verified; mid-trim figures approximate. Climate control is largely screen-based after the 2025 refresh. Prices exclude ~$1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac Escalade SUV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21827",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "cadillac-escalade-iq",
@@ -8219,7 +8263,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Value version of the Pacifica sold in a single LX trim with one powertrain; returned to retail sale in 2025. Price excludes $1,995 destination."
+  "notes": "Value version of the Pacifica sold in a single LX trim with one powertrain; returned to retail sale in 2025. Price excludes $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chrysler Voyager PV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20916",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "dodge-charger-daytona",
@@ -18999,7 +19054,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability. Prices exclude $2,595 destination."
+  "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability. Prices exclude $2,595 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Jeep Grand Wagoneer SUV 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20931",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "jeep-recon",
@@ -24432,6 +24498,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lincoln Navigator SUV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21450",
+     "site": "nhtsa.gov"
+    }
+   },
    "expert": {
     "score": 6.3,
     "scale": 10,
@@ -28644,7 +28719,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Minimal changes for 2026 (embedded navigation deleted; hood badging added on SEL trims). Mirage was discontinued after 2025, leaving Mitsubishi with a four-model US lineup."
+  "notes": "Minimal changes for 2026 (embedded navigation deleted; hood badging added on SEL trims). Mirage was discontinued after 2025, leaving Mitsubishi with a four-model US lineup.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mitsubishi Eclipse Cross SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21609",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mitsubishi-outlander",
@@ -28935,7 +29021,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Carries over for 2026 with a new budget S trim and Trail Edition; AWD now standard. Design dates to 2011, making it one of the oldest vehicles on sale."
+  "notes": "Carries over for 2026 with a new budget S trim and Trail Edition; AWD now standard. Design dates to 2011, making it one of the oldest vehicles on sale.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mitsubishi Outlander Sport SUV AWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21608",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-altima",
