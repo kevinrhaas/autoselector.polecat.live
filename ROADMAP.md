@@ -61,22 +61,22 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 119 models done so far (118 with a real NHTSA star rating). Latest
-  (2026-07-27, +9): acura-adx, bmw-x1/x5, cadillac-escalade,
-  chrysler-voyager, jeep-grand-wagoneer, lincoln-navigator,
-  mitsubishi-eclipse-cross/outlander-sport — see js/changelog.js v46;
-  this run's skips (checked, not guessed): audi-q3/a3/a5, bmw-x2/x7,
-  buick-envista, cadillac-ct4, chevrolet-corvette, genesis-g90,
-  hyundai-elantra-n, mercedes-benz-c-class/e-class/glc/gle, nissan-rogue/
-  sentra/z, toyota-corolla-cross/gr86/gr-corolla, volkswagen-golf-gti/
-  golf-r, dodge-charger-daytona/sixpack, subaru-brz, mini-countryman
-  (NHTSA "Not Rated"); the exotic/ultra-low-volume brands (Ferrari,
-  Lamborghini, McLaren, Bentley, Rolls-Royce, Aston Martin, Maserati,
-  Lotus, Porsche) plus Tesla, Rivian, VinFast, Polestar, and most vans/
-  HD trucks/EVs checked and confirmed NHTSA has no 2026 vehicle record at
-  all (no VehicleId returned, vs. a "Not Rated" result — genuinely
-  untested rather than tested-and-failed). Earlier batches: js/
-  changelog.js v45 (+10), v41 (+6), v40 (+13), v39 (+9) — see those
+  the 136 models done so far (127 with a real NHTSA star rating). Latest
+  (2026-07-27, +9): audi-q7/q8, genesis-gv60, lexus-rz/tx/ux, mazda-cx-70,
+  toyota-prius-plug-in, volvo-v60-cross-country — see js/changelog.js v47;
+  this run's skips (checked, not guessed): audi-a6/a8, bmw-5-series/x6,
+  fiat-500e, genesis-electrified-gv70, hyundai-ioniq-5, jaguar-f-pace,
+  land-rover-defender/discovery/discovery-sport/range-rover-evoque/
+  range-rover-velar (whole brand — no 2026 rating yet), lexus-gx/is/lc/
+  ls/lx, mazda-mx-5-miata, mini-cooper/cooper-convertible,
+  mitsubishi-outlander-phev, subaru-solterra/trailseeker/uncharted,
+  toyota-bz/bz-woodland/c-hr/crown-signia/gr-supra/mirai/sequoia,
+  volvo-ex30/ex40/ex90/v90-cross-country (NHTSA "Not Rated");
+  hyundai-kona-electric stays unrated too — NHTSA only tests one combined
+  "Kona" listing (already attributed to the gas hyundai-kona), no distinct
+  electric-powertrain record to cite; alfa-romeo-giulia/stelvio/tonale
+  confirmed no 2026 NHTSA record at all. Earlier batches: js/changelog.js
+  v46 (+9), v45 (+10), v41 (+6), v40 (+13), v39 (+9) — see those
   entries for their model lists and skip reasons. Pull NHTSA
   overall stars from the official api.nhtsa.gov/SafetyRatings endpoints,
   IIHS awards from iihs.org, and owner/expert scores only where a real
