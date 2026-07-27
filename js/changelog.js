@@ -21,6 +21,16 @@
 
 export const CHANGELOG = [
   {
+    v: 48,
+    title: '10 more models get real NHTSA safety ratings — 137 covered now',
+    kind: 'data',
+    ts: '2026-07-27T23:50:20.248Z',
+    items: [
+      'Audi Q4 e-tron, Cadillac Lyriq, Chevrolet Blazer EV/Equinox EV/Silverado EV/Trailblazer, Ford F-150 Lightning, GMC Sierra EV, Hyundai Ioniq 9, and the Tesla Cybertruck now show real NHTSA overall stars (all 5-star) — 137 of 325 models covered.',
+      'Checked and skipped this batch — NHTSA "Not Rated" or no 2026 test on file: Audi A3/A5/Q3/Q6 e-tron/A6 e-tron/e-tron GT, Buick Enclave/Envista, Cadillac CT4/Optiq/Vistiq/Celestiq/Escalade IQ, Chevrolet Equinox (gas)/Silverado HD/Corvette, Ford Bronco/F-Series Super Duty/Transit/E-Transit, Genesis G70/G90, GMC Terrain/Sierra HD/Hummer EV, Honda Prelude, Hyundai Elantra N/Ioniq 5 N/Ioniq 6 N, Infiniti QX80, Jeep Cherokee/Gladiator/Wrangler/Recon, Kia Carnival, Lexus ES/NX, Mercedes-Benz C-Class/E-Class/GLC/GLE/CLA/CLE/GLA/GLB/GLS/S-Class/G-Class/AMG GT/AMG SL/EQE/EQS/Sprinter, Nissan Armada/Leaf/Rogue PHEV/Z, Rivian R1S/R1T, Subaru BRZ/Outback, Tesla Model 3/Model S/Model X, and VW Golf GTI/Golf R/ID.Buzz.',
+    ],
+  },
+  {
     v: 47,
     title: '9 more models get real NHTSA safety ratings — 127 covered now',
     kind: 'data',
