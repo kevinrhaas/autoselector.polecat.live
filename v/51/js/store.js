@@ -35,7 +35,7 @@ function blank(){
     finderRuns: [],                   // [{id, finder, answers, resultIds, at}] — finished finder sessions
     activity: [],                     // [{id, at, kind, text, vehicleId?}] — newest first
     settings: {
-      tourDone:false, simpleMode:false, reduceMotion:false,
+      tourDone:false, simpleMode:false, reduceMotion:false, dataMeter:true,
       pinnedVersion:'',               // '/v/<n>/app/' to run an archived build
       profile:{ name:'', persona:'' } // light personalization for Home
     },

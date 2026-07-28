@@ -61,8 +61,19 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 159 models done so far (137 with a real NHTSA star, 22 with an IIHS
-  award only). Latest (2026-07-28, +13, IIHS-sourced): mercedes-benz-c-class,
+  the 160 models done so far (137 with a real NHTSA star, 23 with an IIHS
+  award only). Latest (2026-07-28, +1, IIHS-sourced): rivian-r1t — Top Safety
+  Pick for 2025-26 (one tier below sibling r1s's Top Safety Pick+) — see
+  js/changelog.js v51; this run's skips (checked both NHTSA and IIHS, neither
+  has an award): porsche-911/panamera/taycan/cayenne-electric/macan-electric,
+  bmw-7-series/8-series/i7/m2/m3/m4/m5/xm/2-series-gran-coupe, alfa-romeo-
+  stelvio, lotus-emira. Also checked and noted for later — a real IIHS test
+  page exists but with no award (so nothing added, per the never-guess rule):
+  bmw-5-series and bmw-i5 ("Good" scores, no Top Safety Pick), alfa-romeo-
+  giulia (incomplete crashworthiness rating); bmw-z4 and
+  bmw-2-series-gran-coupe have an NHTSA record but OverallRating "Not Rated"
+  (no star to show).
+  Previous batch (2026-07-28, +13, IIHS-sourced): mercedes-benz-c-class,
   mercedes-benz-glc, audi-a5, audi-a6, volvo-ex90, genesis-electrified-gv70,
   lexus-nx, infiniti-qx80, nissan-armada, buick-enclave, hyundai-ioniq-5,
   mazda-cx-5, rivian-r1s — all confirmed NHTSA "Not Rated" for 2026 but IIHS
