@@ -22023,16 +22023,78 @@ export const VEHICLES = [
   "bodyStyle": "minivan",
   "segment": "minivan",
   "category": "van",
-  "priceFrom": 37090,
-  "priceTo": 53190,
+  "priceFrom": 36990,
+  "priceTo": 53090,
   "trims": [
    {
+    "name": "LX",
+    "msrp": 36990,
+    "features": [
+     "7-passenger seating standard",
+     "12.3-in touchscreen with navigation, wireless Apple CarPlay/Android Auto",
+     "Forward Collision-Avoidance Assist with pedestrian/cyclist detection",
+     "Highway Driving Assist"
+    ]
+   },
+   {
     "name": "LXS",
-    "msrp": 37090
+    "msrp": 38990,
+    "features": [
+     "8-passenger seating (sliding, removable 2nd-row middle seat)",
+     "Dual power sliding doors",
+     "Blind-Spot Collision-Avoidance Assist",
+     "Heated front seats"
+    ]
+   },
+   {
+    "name": "EX",
+    "msrp": 41190,
+    "features": [
+     "Larger center touchscreen",
+     "Hands-free smart power liftgate",
+     "Wireless device charging",
+     "Available Passenger View & Talk cabin camera/intercom"
+    ]
+   },
+   {
+    "name": "SX",
+    "msrp": 46090,
+    "features": [
+     "Dual sunroofs",
+     "Upgraded 12.3-in digital instrument cluster",
+     "Surround View & Blind-Spot View monitors",
+     "Bose premium audio"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "msrp": 51090,
+    "features": [
+     "VIP second-row lounge seats (heat/vent, one-touch relaxation, leg extensions)",
+     "Digital rearview mirror",
+     "Head-up display",
+     "Dark exterior trim/badging, Nappa leather seating"
+    ]
+   },
+   {
+    "name": "HEV LXS",
+    "msrp": 40990,
+    "features": [
+     "1.6L turbo-hybrid powertrain (242 hp combined)",
+     "Est. 33 mpg combined",
+     "8-passenger seating",
+     "Dual power sliding doors"
+    ]
    },
    {
     "name": "HEV SX Prestige",
-    "msrp": 53190
+    "msrp": 53090,
+    "features": [
+     "All SX Prestige content plus hybrid powertrain",
+     "VIP second-row lounge seats",
+     "Head-up display, digital rearview mirror",
+     "Dark exterior trim/badging"
+    ]
    }
   ],
   "powertrains": [
@@ -22109,8 +22171,88 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Only minivan with a hybrid option besides the Sienna/Pacifica set; no AWD offered. Prices derived from published incl.-destination figures ($38,485 / $54,585 with ~$1,395 freight)."
+  "confidence": "high",
+  "notes": "Only minivan with a hybrid option besides the Sienna/Pacifica set; no AWD offered. Re-verified against Kia's own 2026 Carnival pricing announcement (excl. destination); expanded the trim ladder from 2 to 7 (LX/LXS/EX/SX/SX Prestige plus HEV LXS/HEV SX Prestige) and added per-trim features. Destination fee is $1,435, unchanged from prior estimate range.",
+  "sources": [
+   {
+    "label": "2026 specs & features",
+    "url": "https://www.kiamedia.com/us/en/models/carnival/2026",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_Carnival.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/carnival/2026/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Carnival pricing announcement",
+    "url": "https://www.prnewswire.com/news-releases/kia-america-announces-2026-carnival-pricing-302462681.html",
+    "site": "prnewswire.com"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Deep Chroma Blue",
+     "hex": "#1B3A5C"
+    },
+    {
+     "name": "Panthera Metal",
+     "hex": "#55585B"
+    },
+    {
+     "name": "Snow White Pearl",
+     "hex": "#F4F3EE"
+    },
+    {
+     "name": "Aurora Black Pearl",
+     "hex": "#1A1A1D"
+    },
+    {
+     "name": "Flare Red",
+     "hex": "#B5262C"
+    },
+    {
+     "name": "Ceramic Silver",
+     "hex": "#C8C9C7"
+    },
+    {
+     "name": "Ivory Silver",
+     "hex": "#D9D6CC"
+    },
+    {
+     "name": "Astra Blue",
+     "hex": "#2C4A6E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Off-Black",
+     "hex": "#1B1B1B",
+     "tone": "dark"
+    },
+    {
+     "name": "Taupe/Off-Black",
+     "hex": "#9C8A73",
+     "tone": "light"
+    },
+    {
+     "name": "Navy/Gray",
+     "hex": "#2B3A4A",
+     "tone": "dark"
+    },
+    {
+     "name": "Tuscan Umber/Off-Black",
+     "hex": "#4A2E22",
+     "tone": "dark"
+    }
+   ]
+  }
  },
  {
   "id": "kia-ev6",
@@ -22122,19 +22264,57 @@ export const VEHICLES = [
   "segment": "compact electric crossover",
   "category": "suv",
   "priceFrom": 37900,
-  "priceTo": 48700,
+  "priceTo": 53000,
   "trims": [
    {
-    "name": "Light RWD",
-    "msrp": 37900
+    "name": "Light SR RWD",
+    "msrp": 37900,
+    "features": [
+     "167-hp single motor, 63 kWh battery",
+     "237-mi EPA range",
+     "Heated front seats, 12.3-in touchscreen",
+     "Standard dual-voltage charging cable"
+    ]
    },
    {
-    "name": "Wind",
-    "msrp": 44800
+    "name": "Light LR RWD",
+    "msrp": 41200,
+    "features": [
+     "225-hp single motor, 84 kWh battery",
+     "319-mi EPA range",
+     "DC fast-charger adapter standard (ZEV states)",
+     "Vehicle-to-Load (V2L)"
+    ]
    },
    {
-    "name": "GT-Line",
-    "msrp": 48700
+    "name": "Wind RWD",
+    "msrp": 44800,
+    "features": [
+     "Ventilated front seats",
+     "Meridian premium audio",
+     "Panoramic curved dual displays",
+     "Wireless device charging"
+    ]
+   },
+   {
+    "name": "Wind AWD",
+    "msrp": 48800,
+    "features": [
+     "320-hp dual-motor AWD, 84 kWh battery",
+     "291-mi EPA range",
+     "Power sunroof",
+     "Head-up display with AR"
+    ]
+   },
+   {
+    "name": "GT-Line AWD",
+    "msrp": 53000,
+    "features": [
+     "GT-Line exterior/interior design cues",
+     "Sport-tuned suspension, 20-in wheels",
+     "Highway Driving Assist 2",
+     "Meridian premium audio, head-up display"
+    ]
    }
   ],
   "powertrains": [
@@ -22213,7 +22393,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia.",
+  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia. Expanded the trim ladder from 3 to 5 (added Light LR RWD and Wind AWD) to reflect the full 2026 lineup confirmed via Kia's own pricing announcement; top price rises to $53,000 for GT-Line AWD.",
+  "sources": [
+   {
+    "label": "2026 EV6 pricing announcement",
+    "url": "https://www.kiamedia.com/us/en/media/pressreleases/24658/kia-announces-pricing-for-2026-ev6",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_EV6.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/ev6/2026/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -22224,6 +22421,50 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Ebony Black",
+     "hex": "#17181B"
+    },
+    {
+     "name": "Glacial White Pearl",
+     "hex": "#F2F1EB"
+    },
+    {
+     "name": "Wolf Gray",
+     "hex": "#6E6F71"
+    },
+    {
+     "name": "Nebular Blue",
+     "hex": "#1D3A52"
+    },
+    {
+     "name": "Runway Red",
+     "hex": "#B32A2E"
+    },
+    {
+     "name": "Panthera Metal Gray",
+     "hex": "#53565A"
+    },
+    {
+     "name": "Glacial White",
+     "hex": "#F1F0EA"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Saturn Black",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    },
+    {
+     "name": "Saturn Black/Mild Toffee Brown",
+     "hex": "#5C4230",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -22240,11 +22481,53 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Light RWD",
-    "msrp": 54900
+    "msrp": 54900,
+    "features": [
+     "215-hp single motor, 76.1 kWh battery",
+     "230-mi EPA range",
+     "Panoramic triple-screen display",
+     "Highway Driving Assist 2"
+    ]
+   },
+   {
+    "name": "Light LR RWD",
+    "msrp": 57900,
+    "features": [
+     "Larger 99.8 kWh battery",
+     "~304-mi EPA range",
+     "800V ultra-fast charging",
+     "Vehicle-to-Load (V2L)"
+    ]
+   },
+   {
+    "name": "Wind AWD",
+    "msrp": 63900,
+    "features": [
+     "379-hp dual-motor AWD",
+     "Terrain Mode (snow/mud)",
+     "Meridian premium audio",
+     "Digital Key 2"
+    ]
+   },
+   {
+    "name": "Land AWD",
+    "msrp": 68900,
+    "features": [
+     "Second-row swivel/relaxation seats",
+     "Digital lighting grille",
+     "Meridian premium audio",
+     "Upgraded interior trim/materials"
+    ]
    },
    {
     "name": "GT-Line AWD",
-    "msrp": 71900
+    "msrp": 71900,
+    "features": [
+     "Exclusive interior/exterior design cues",
+     "12-in head-up display",
+     "Remote Smart Parking Assist 2",
+     "519 lb-ft torque, available upgraded passenger seat"
+    ]
    }
   ],
   "powertrains": [
@@ -22313,7 +22596,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia.",
+  "notes": "Base and top prices ($54,900 / $71,900) re-confirmed exactly via Kia's own 2026 pricing page. Expanded the trim ladder from 2 to 5 (Light RWD, Light LR RWD, Wind AWD, Land AWD, GT-Line AWD) to show the full lineup; range/MPGe vary by battery and wheels. Built in Georgia.",
+  "sources": [
+   {
+    "label": "2026 EV9 MSRP",
+    "url": "https://www.kiamedia.com/us/en/models/ev9/2026/pricing",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_EV9.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/ev9/2026/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -22325,6 +22625,55 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Ebony Black",
+     "hex": "#17181B"
+    },
+    {
+     "name": "Glacial White Pearl",
+     "hex": "#F2F1EB"
+    },
+    {
+     "name": "Ivory Silver",
+     "hex": "#D9D6CC"
+    },
+    {
+     "name": "Panthera Metal",
+     "hex": "#55585B"
+    },
+    {
+     "name": "Ocean Blue",
+     "hex": "#1D4E63"
+    },
+    {
+     "name": "Road Rider Brown",
+     "hex": "#5A4432"
+    },
+    {
+     "name": "Wolf Gray",
+     "hex": "#6E6F71"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Gray",
+     "hex": "#8A8C8E",
+     "tone": "light"
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#B9BABA",
+     "tone": "light"
+    },
+    {
+     "name": "Brown/Black",
+     "hex": "#4A342A",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -22337,19 +22686,77 @@ export const VEHICLES = [
   "segment": "compact sedan",
   "category": "car",
   "priceFrom": 22290,
-  "priceTo": 28090,
+  "priceTo": 28790,
   "trims": [
    {
     "name": "LX",
-    "msrp": 22290
+    "msrp": 22290,
+    "features": [
+     "2.0L 147-hp engine, CVT",
+     "12.3-in touchscreen, wireless Apple CarPlay/Android Auto",
+     "Forward Collision-Avoidance Assist, driver-assist suite",
+     "Rearview monitor with dynamic parking guidance"
+    ]
    },
    {
-    "name": "Hatchback LXS",
-    "msrp": 24890
+    "name": "LXS",
+    "msrp": 23390,
+    "features": [
+     "Blind-Spot Detection, rear cross-traffic assist",
+     "16-in alloy wheels",
+     "6-speaker audio",
+     "60/40 split-folding rear seats"
+    ]
+   },
+   {
+    "name": "EX",
+    "msrp": 24490,
+    "features": [
+     "SynTex synthetic leather seating",
+     "Dual-zone automatic climate control with display",
+     "Wireless phone charger",
+     "17-in alloy wheels"
+    ]
+   },
+   {
+    "name": "GT-Line",
+    "msrp": 25490,
+    "features": [
+     "Larger rear disc brakes, multi-link rear suspension",
+     "18-in alloy wheels, sportier styling",
+     "GT-Line sport steering wheel with paddle shifters",
+     "Power driver's seat with lumbar support"
+    ]
    },
    {
     "name": "GT-Line Turbo",
-    "msrp": 28090
+    "msrp": 28390,
+    "features": [
+     "1.6L turbo 190-hp engine, 8-speed automatic",
+     "Harman Kardon premium audio",
+     "Dual panoramic 12.3-in displays with navigation",
+     "Highway Driving Assist 2"
+    ]
+   },
+   {
+    "name": "Hatchback EX",
+    "msrp": 24890,
+    "features": [
+     "2.0L 147-hp engine, CVT",
+     "Class-leading rear legroom for the segment",
+     "SynTex synthetic leather seating, wireless charger",
+     "17-in alloy wheels"
+    ]
+   },
+   {
+    "name": "Hatchback GT-Line Turbo",
+    "msrp": 28790,
+    "features": [
+     "1.6L turbo 190-hp engine, 8-speed automatic",
+     "Harman Kardon premium audio",
+     "Dual panoramic 12.3-in displays with navigation",
+     "Sportier hatchback styling"
+    ]
    }
   ],
   "powertrains": [
@@ -22416,7 +22823,29 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025).",
+  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joined the line in January 2026 (EX from $24,890, GT-Line Turbo now confirmed at $28,790, both excl. destination). Sedan LX-through-GT-Line Turbo pricing re-confirmed via Kia's own 2026 K4 pricing page; destination fee is $1,245.",
+  "sources": [
+   {
+    "label": "2026 specs & features",
+    "url": "https://www.kiamedia.com/us/en/models/k4/2026",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_K4.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/k4/2026/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 K4 Hatchback pricing announcement",
+    "url": "https://www.kiamedia.com/us/en/media/pressreleases/24087/kia-america-announces-2026-k4-hatchback-pricing",
+    "site": "kiamedia.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -22428,6 +22857,58 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Aurora Black Pearl",
+     "hex": "#1A1A1D"
+    },
+    {
+     "name": "Snow White Pearl",
+     "hex": "#F4F3EE"
+    },
+    {
+     "name": "Interstellar Gray",
+     "hex": "#4A4A4C"
+    },
+    {
+     "name": "Currant Red",
+     "hex": "#7A1F2B"
+    },
+    {
+     "name": "Wave Blue",
+     "hex": "#1F5C7A"
+    },
+    {
+     "name": "Sparkling Yellow",
+     "hex": "#F2C21C"
+    },
+    {
+     "name": "Morning Haze",
+     "hex": "#C9C2B4"
+    },
+    {
+     "name": "Deep Sea Blue",
+     "hex": "#17324A"
+    },
+    {
+     "name": "Steel Gray",
+     "hex": "#6B6E70"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8F9092",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -22439,16 +22920,58 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "midsize sedan",
   "category": "car",
-  "priceFrom": 27390,
-  "priceTo": 34890,
+  "priceFrom": 27490,
+  "priceTo": 34990,
   "trims": [
    {
     "name": "LXS",
-    "msrp": 27390
+    "msrp": 27490,
+    "features": [
+     "191-hp 2.5L I4, 8-speed automatic",
+     "LED head/taillights, smart key with remote start",
+     "Dual-zone automatic climate control",
+     "Wireless Apple CarPlay/Android Auto"
+    ]
+   },
+   {
+    "name": "GT-Line FWD",
+    "msrp": 28490,
+    "features": [
+     "18-in alloy wheels, gloss black/machined finish",
+     "Sportier GT-Line body styling",
+     "LED lighting throughout",
+     "8-speed automatic"
+    ]
+   },
+   {
+    "name": "GT-Line AWD",
+    "msrp": 30090,
+    "features": [
+     "AWD powertrain",
+     "Drive Mode Select with Snow Mode",
+     "Heated steering wheel",
+     "18-in alloy wheels"
+    ]
+   },
+   {
+    "name": "GT",
+    "msrp": 33590,
+    "features": [
+     "290-hp 2.5L turbo I4, 8-speed dual-clutch",
+     "Sport-tuned suspension",
+     "Quad-tip dual exhaust",
+     "Launch Control"
+    ]
    },
    {
     "name": "EX",
-    "msrp": 34890
+    "msrp": 34990,
+    "features": [
+     "Ventilated front seats",
+     "12-speaker Bose premium audio",
+     "12.3-in curved instrument display",
+     "360-degree Surround View Monitor, Digital Key 2.0"
+    ]
    }
   ],
   "powertrains": [
@@ -22524,8 +23047,25 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Base and top prices derived from published incl.-destination figures (LXS ~$27.4k, EX ~$34.9k excl. freight). Availability of the 290-hp GT trim for 2026 is unclear; Kia's 2026 price list showed EX as the top trim.",
+  "confidence": "high",
+  "notes": "Re-verified against Kia's own 2026 K5 pricing page: LXS $27,490 through EX $34,990, destination $1,245. The 290-hp GT trim IS available for 2026 (confirmed, priced at $33,590) — the prior session's uncertainty is resolved. Expanded the trim ladder from 2 to 5 (LXS, GT-Line FWD, GT-Line AWD, GT, EX) to match the real lineup.",
+  "sources": [
+   {
+    "label": "2026 specs & features",
+    "url": "https://www.kiamedia.com/us/en/models/k5/2026",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_K5.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/k5/2026/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -22536,6 +23076,45 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Aurora Black Pearl",
+     "hex": "#1A1A1D"
+    },
+    {
+     "name": "Interstellar Gray",
+     "hex": "#4A4A4C"
+    },
+    {
+     "name": "Snow White Pearl",
+     "hex": "#F4F3EE"
+    },
+    {
+     "name": "Runway Red",
+     "hex": "#B32A2E"
+    },
+    {
+     "name": "Steel Matte Gray",
+     "hex": "#616366"
+    },
+    {
+     "name": "Wolf Gray",
+     "hex": "#6E6F71"
+    },
+    {
+     "name": "Yacht Blue",
+     "hex": "#2A4D6E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -22547,20 +23126,68 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact hybrid/electric crossover",
   "category": "suv",
-  "priceFrom": 25945,
-  "priceTo": 44750,
+  "priceFrom": 27390,
+  "priceTo": 44700,
   "trims": [
    {
     "name": "Hybrid LX",
-    "msrp": 25945
+    "msrp": 27390,
+    "features": [
+     "139-hp hybrid powertrain, est. 53 mpg combined",
+     "Dual 10.25-in displays",
+     "Forward Collision-Avoidance Assist",
+     "16-in alloy wheels"
+    ]
+   },
+   {
+    "name": "Hybrid EX",
+    "msrp": 30190,
+    "features": [
+     "Remote start",
+     "Heated front seats",
+     "Wireless device charging",
+     "17-in alloy wheels"
+    ]
+   },
+   {
+    "name": "Hybrid SX",
+    "msrp": 33390,
+    "features": [
+     "Harman Kardon premium audio",
+     "Power sunroof",
+     "Ventilated front seats",
+     "Highway Driving Assist"
+    ]
+   },
+   {
+    "name": "Hybrid SX Touring",
+    "msrp": 35790,
+    "features": [
+     "Leather-appointed seating",
+     "Blind-Spot View Monitor",
+     "Surround View Monitor",
+     "Top trim tech package"
+    ]
    },
    {
     "name": "EV Wind",
-    "msrp": 39750
+    "msrp": 39700,
+    "features": [
+     "201-hp single motor, 64.8 kWh battery",
+     "253-mi EPA range",
+     "Dual 10.25-in displays",
+     "Vehicle-to-Load (V2L)"
+    ]
    },
    {
     "name": "EV Wave",
-    "msrp": 44750
+    "msrp": 44700,
+    "features": [
+     "Blind-Spot Collision-Avoidance Assist standard",
+     "Heated & ventilated front seats",
+     "Harman Kardon premium audio",
+     "Power sunroof"
+    ]
    }
   ],
   "powertrains": [
@@ -22626,8 +23253,30 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Sold as Niro Hybrid and Niro EV for 2026; the plug-in hybrid no longer appears in the US lineup. Prices derived from published incl.-destination figures. A refreshed 2027 Niro (hybrid-only) has been revealed.",
+  "confidence": "high",
+  "notes": "Sold as Niro Hybrid (LX/EX/SX/SX Touring) and Niro EV (Wind/Wave) for 2026; the plug-in hybrid no longer appears in the US lineup. Prices re-verified via Kia's own 2026 pricing pages (Hybrid destination $1,495; EV destination $1,495) — the Hybrid ladder is $27,390-$35,790, replacing the prior single-LX estimate. A refreshed 2027 Niro (hybrid-only) has been revealed.",
+  "sources": [
+   {
+    "label": "2026 Niro HEV MSRP",
+    "url": "https://www.kiamedia.com/us/en/models/niro-hev/2026/pricing",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "2026 Niro EV MSRP",
+    "url": "https://www.kiamedia.com/us/en/models/niro-ev/2026/pricing",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_Niro.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/niro/2026/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -22638,6 +23287,55 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Snow White Pearl",
+     "hex": "#F4F3EE"
+    },
+    {
+     "name": "Aurora Black Pearl",
+     "hex": "#1A1A1D"
+    },
+    {
+     "name": "Interstellar Gray",
+     "hex": "#4A4A4C"
+    },
+    {
+     "name": "Steel Gray",
+     "hex": "#6B6E70"
+    },
+    {
+     "name": "Runway Red",
+     "hex": "#B32A2E"
+    },
+    {
+     "name": "Mineral Blue",
+     "hex": "#33586E"
+    },
+    {
+     "name": "Cityscape Green",
+     "hex": "#4C5E4A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Charcoal",
+     "hex": "#3A3A3C",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#B9BABA",
+     "tone": "light"
+    },
+    {
+     "name": "Medium Gray",
+     "hex": "#8F9092",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -22649,16 +23347,48 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact SUV",
   "category": "suv",
-  "priceFrom": 23700,
-  "priceTo": 31390,
+  "priceFrom": 23790,
+  "priceTo": 31490,
   "trims": [
    {
     "name": "LX",
-    "msrp": 23700
+    "msrp": 23790,
+    "features": [
+     "8-in touchscreen, wireless Apple CarPlay/Android Auto",
+     "Forward Collision-Avoidance Assist",
+     "Newly offered with FWD or AWD for 2026",
+     "146-hp 2.0L engine"
+    ]
+   },
+   {
+    "name": "S",
+    "msrp": 25490,
+    "features": [
+     "10.25-in navigation touchscreen with Kia Connect",
+     "Blind-Spot Collision Warning, rear cross-traffic assist",
+     "Lane Keeping Assist, Lane Following Assist",
+     "Driver Attention Warning"
+    ]
+   },
+   {
+    "name": "EX",
+    "msrp": 26490,
+    "features": [
+     "Available dual 10.25-in panoramic displays",
+     "Wireless charging pad",
+     "Smart power liftgate (standard on AWD)",
+     "Available 17-in gloss black wheels"
+    ]
    },
    {
     "name": "SX AWD",
-    "msrp": 31390
+    "msrp": 31490,
+    "features": [
+     "190-hp 1.6L turbo engine (exclusive to SX)",
+     "Bose premium audio with sound-connected mood lighting",
+     "Smart Cruise Control with Stop & Go, Highway Driving Assist",
+     "Smart power liftgate"
+    ]
    }
   ],
   "powertrains": [
@@ -22734,8 +23464,25 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Carryover generation, slightly cheaper for 2026; prices derived from published incl.-destination figures. An all-new Seltos has been revealed globally and is expected as a 2027 model.",
+  "confidence": "high",
+  "notes": "Carryover generation, slightly cheaper for 2026; re-verified via Kia's own 2026 Seltos pricing page (destination $1,495). Expanded the trim ladder from 2 to 4 (LX, S, EX, SX AWD) — S and EX were missing entirely. An all-new Seltos has been revealed globally and Kia's own site has already moved to showing it as a 2027 build-and-price tool, so this generation's days as a current model are numbered. Colors were left as-is: CarsDirect's Seltos color page largely duplicates the exterior list under \"interior colors\" with no reliable distinct interior names, so nothing trustworthy to add.",
+  "sources": [
+   {
+    "label": "2026 Seltos MSRP",
+    "url": "https://www.kiamedia.com/us/en/models/seltos/2026/pricing",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_Seltos.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/seltos/2026/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -22757,16 +23504,98 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize SUV (3-row)",
   "category": "suv",
-  "priceFrom": 32190,
+  "priceFrom": 32390,
   "priceTo": 53490,
   "trims": [
    {
     "name": "LX",
-    "msrp": 32190
+    "msrp": 32390,
+    "features": [
+     "191-hp 2.5L I4, FWD standard, 8-speed automatic",
+     "Seating for up to 7",
+     "8-in touchscreen infotainment",
+     "Blind-spot monitoring, adaptive cruise control"
+    ]
    },
    {
-    "name": "PHEV SX Prestige X-Line",
-    "msrp": 53490
+    "name": "S",
+    "msrp": 35290,
+    "features": [
+     "Heated front seats",
+     "SynTex synthetic leather upholstery",
+     "Front and rear parking sensors",
+     "AWD available"
+    ]
+   },
+   {
+    "name": "EX",
+    "msrp": 38490,
+    "features": [
+     "281-hp 2.5L turbo I4",
+     "AWD available",
+     "Available 12.3-in curved display",
+     "Stronger acceleration than base LX/S"
+    ]
+   },
+   {
+    "name": "SX",
+    "msrp": 42290,
+    "features": [
+     "12.3-in curved instrument display",
+     "12-speaker Bose premium audio",
+     "Blind-Spot View Monitor, Surround View Monitor",
+     "Auto rain-sensing wipers, power-folding mirrors"
+    ]
+   },
+   {
+    "name": "X-Pro SX Prestige",
+    "msrp": 47790,
+    "features": [
+     "17-in matte black alloy wheels, all-terrain tires",
+     "Off-road-tuned suspension, skid plates",
+     "Increased towing capacity",
+     "Nappa leather, luxury trim"
+    ]
+   },
+   {
+    "name": "HEV EX",
+    "msrp": 38890,
+    "features": [
+     "227-hp 1.6L turbo-hybrid powertrain",
+     "Est. 36 mpg combined",
+     "AWD available",
+     "Highway Driving Assist 2"
+    ]
+   },
+   {
+    "name": "HEV SX Prestige",
+    "msrp": 47190,
+    "features": [
+     "All SX Prestige content plus hybrid powertrain",
+     "12-speaker Bose premium audio",
+     "Blind-Spot View Monitor",
+     "Panoramic sunroof"
+    ]
+   },
+   {
+    "name": "PHEV EX",
+    "msrp": 48290,
+    "features": [
+     "262-hp PHEV powertrain, ~32-mi EV range",
+     "Standard AWD",
+     "Onboard Level 2 charging capability",
+     "Tire mobility kit (no spare)"
+    ]
+   },
+   {
+    "name": "PHEV SX Prestige",
+    "msrp": 53490,
+    "features": [
+     "All SX Prestige content plus PHEV powertrain",
+     "Nappa leather seating",
+     "Digital rearview mirror",
+     "Head-up display"
+    ]
    }
   ],
   "powertrains": [
@@ -22877,8 +23706,30 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Smaller 3-row alternative to Telluride. Base/top prices derived from published incl.-destination figures ($33,635 / $54,935 with ~$1,445 freight).",
+  "confidence": "high",
+  "notes": "Smaller 3-row alternative to Telluride. Re-verified against Kia's own 2026 Sorento pricing pages (gas, HEV and PHEV) — destination is $1,495 across all three powertrains. Expanded the trim ladder from 2 to 9 to represent the gas LX-through-X-Pro range plus the HEV and PHEV sub-lines Kia sells alongside it. Colors left as-is: CarsDirect's Sorento color list appears to bleed in names from other Kia models (16-18 entries, well above the ~7-9 a mainstream trim usually offers), so nothing on it was trustworthy enough to cite.",
+  "sources": [
+   {
+    "label": "2026 Sorento MSRP (gas)",
+    "url": "https://www.kiamedia.com/us/en/models/sorento/2026/pricing",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "2026 Sorento Hybrid & PHEV MSRP",
+    "url": "https://www.kiamedia.com/us/en/models/sorento-hev/2026/pricing",
+    "site": "kiamedia.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Kia_Sorento.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.edmunds.com/kia/sorento/2026/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -22920,16 +23771,98 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact SUV",
   "category": "suv",
-  "priceFrom": 28690,
-  "priceTo": 39590,
+  "priceFrom": 28790,
+  "priceTo": 47190,
   "trims": [
    {
     "name": "LX",
-    "msrp": 28690
+    "msrp": 28790,
+    "features": [
+     "12.3-in touchscreen, wireless Apple CarPlay/Android Auto",
+     "Smart Key with dual rear USB-C charging",
+     "Forward Collision-Avoidance Assist, Smart Cruise Control with Stop & Go",
+     "Forward/reverse Park Distance Warning"
+    ]
+   },
+   {
+    "name": "EX",
+    "msrp": 30590,
+    "features": [
+     "Dual-zone automatic climate control",
+     "Heated front seats",
+     "18-in alloy wheels",
+     "Smart power liftgate"
+    ]
+   },
+   {
+    "name": "SX",
+    "msrp": 34390,
+    "features": [
+     "Panoramic sunroof",
+     "Harman Kardon premium audio",
+     "Ventilated front seats",
+     "12.3-in navigation"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "msrp": 36390,
+    "features": [
+     "Digital rearview mirror",
+     "Head-up display",
+     "Surround View Monitor",
+     "Harman Kardon premium audio"
+    ]
    },
    {
     "name": "X-Pro Prestige AWD",
-    "msrp": 39590
+    "msrp": 39690,
+    "features": [
+     "Active All-Wheel Drive System",
+     "All-terrain tires, new Terrain Mode (snow/mud/sand)",
+     "Off-road-tuned suspension",
+     "Roof rails with increased capacity"
+    ]
+   },
+   {
+    "name": "HEV LX",
+    "msrp": 30490,
+    "features": [
+     "231-hp 1.6L turbo-hybrid powertrain",
+     "Est. 43 mpg combined",
+     "12.3-in touchscreen",
+     "Forward Collision-Avoidance Assist"
+    ]
+   },
+   {
+    "name": "HEV SX Prestige",
+    "msrp": 40590,
+    "features": [
+     "All SX Prestige content plus hybrid powertrain",
+     "Harman Kardon premium audio",
+     "Panoramic sunroof",
+     "Head-up display"
+    ]
+   },
+   {
+    "name": "PHEV X-Line",
+    "msrp": 40490,
+    "features": [
+     "268-hp PHEV powertrain, ~34-mi EV range",
+     "Standard AWD",
+     "X-Line cladding and wheels",
+     "Onboard Level 2 charging capability"
+    ]
+   },
+   {
+    "name": "PHEV X-Line Prestige",
+    "msrp": 47190,
+    "features": [
+     "All X-Line content plus Prestige luxury package",
+     "Nappa leather seating",
+     "Digital rearview mirror",
+     "Head-up display"
+    ]
    }
   ],
   "powertrains": [
@@ -23027,12 +23960,12 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Refreshed for 2026 (new front/rear styling, larger screen). Class-leading cargo space. priceTo shown is the top gas trim; Hybrid starts in the mid-$30ks and the PHEV tops the range in the mid-$40ks (announced separately).",
+  "notes": "Refreshed for 2026 (new front/rear styling, larger screen). Class-leading cargo space. priceTo now reflects the actual top trim (PHEV X-Line Prestige, $47,190) rather than the top gas trim — expanded the ladder from 2 to 9 to cover the full gas/HEV/PHEV range, re-verified against Kia's own 2026 pricing pages for all three powertrains (destination $1,495 across the board). kia.com returned nav-only content to automated fetches as it did for prior brand sweeps, so the specs citation below points to kiamedia.com instead. Colors left as-is: CarsDirect's Sportage color list (21+ exterior entries) looks contaminated with names from other Kia models, so nothing on it was trustworthy enough to cite.",
   "sources": [
    {
     "label": "2026 specs & features",
-    "url": "https://www.kia.com/us/en/sportage",
-    "site": "kia.com"
+    "url": "https://www.kiamedia.com/us/en/models/sportage/2026",
+    "site": "kiamedia.com"
    },
    {
     "label": "EPA fuel economy",
@@ -23043,6 +23976,11 @@ export const VEHICLES = [
     "label": "2026 pricing & trims",
     "url": "https://www.edmunds.com/kia/sportage/2026/",
     "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Sportage pricing announcement",
+    "url": "https://www.kiamedia.com/us/en/media/pressreleases/23189/kia-america-announces-2026-sportage-pricing",
+    "site": "kiamedia.com"
    }
   ],
   "ratings": {
@@ -23091,11 +24029,23 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "LX",
-    "msrp": 36390
+    "msrp": 36390,
+    "features": [
+     "3.8L V6, 291 hp, 8-speed automatic",
+     "12.3-in touchscreen with navigation",
+     "Kia Drive Wise safety suite standard",
+     "7-passenger seating (2nd-row bench)"
+    ]
    },
    {
     "name": "SX Prestige X-Pro",
-    "msrp": 53090
+    "msrp": 53090,
+    "features": [
+     "Nappa leather seating, head-up display",
+     "Digital rearview mirror",
+     "Active On-Demand All-Wheel Drive, off-road-tuned suspension",
+     "Dual panoramic sunroofs, Harman Kardon audio"
+    ]
    }
   ],
   "powertrains": [
@@ -23169,7 +24119,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "medium",
-  "notes": "IMPORTANT: Kia skipped the 2026 model year for the Telluride — the first generation was sold as 2025, and the all-new second generation (first hybrid, from $39,190) arrives in early 2026 as a 2027 model. Specs shown reflect the outgoing generation still on dealer lots. Final year of the first-generation Telluride, sold as a carryover 2026; an all-new Telluride arrives as a 2027 (from $37,795 excl. freight). 2026 prices shown are close to 2025 levels; Kia had not published a full official 2026 price list at time of writing. Full-size spare on some X-Pro configurations.",
+  "notes": "IMPORTANT: Kia skipped the 2026 model year for the Telluride — the first generation was sold as 2025, and the all-new second generation (first hybrid, from $39,190) arrives in early 2026 as a 2027 model. Specs shown reflect the outgoing generation still on dealer lots. Final year of the first-generation Telluride, sold as a carryover 2026; an all-new Telluride arrives as a 2027 (from $37,795 excl. freight). 2026 prices shown are close to 2025 levels; Kia had not published a full official 2026 price list at time of writing. Full-size spare on some X-Pro configurations. This session added per-trim features for the two existing carryover trims; colors were not added because CarsDirect and Kia's own site now only surface the 2027 generation's palette, and guessing the outgoing 2026 lineup's colors would violate the no-guessing rule.",
   "sources": [
    {
     "label": "2027 pricing & trims (Kia skipped the 2026 model year; all-new gen is MY2027, on sale early 2026, from $39,190)",

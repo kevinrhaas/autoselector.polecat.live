@@ -1,5 +1,11 @@
 [
   {
+    "v": 60,
+    "title": "Kia lineup re-verified — trim features, sources and colors added",
+    "date": "Jul 28, 2026, 4:38 AM CT",
+    "path": "/v/60/app/"
+  },
+  {
     "v": 58,
     "title": "Hyundai lineup re-verified — two nameplates dropped for 2026, per-trim features and sources added",
     "date": "Jul 28, 2026, 2:47 AM CT",
@@ -136,11 +142,5 @@
     "title": "Match Maker — the getting-in and controls questions are multi-select now",
     "date": "Jul 16, 2026, 3:45 PM CT",
     "path": "/v/27/app/"
-  },
-  {
-    "v": 26,
-    "title": "Lincoln data sweep — all four SUVs verified with sources, trims and colors",
-    "date": "Jul 16, 2026, 3:16 PM CT",
-    "path": "/v/26/app/"
   }
 ]

@@ -362,7 +362,36 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   nav-only content to automated fetches, so most citations lean on
   hyundainews.com press releases (which did resolve), PRNewswire, cars.com
   and dealer trim-comparison pages instead.)
-- [ ] Kia — [ ] Genesis
+- [x] Kia (2026-07-28 — all 10 models re-verified, see js/changelog.js v60:
+  every model's price ladder was thin (most had only 2 trims recorded) and
+  none had sources or features, so this run rebuilt the trim lists from
+  Kia's own MSRP tables — Carnival grew from 2 to 7 trims, K4 from 3 to 7
+  (sedan + hatchback), Sorento and Sportage from 2 to 9 each (their full
+  gas/hybrid/PHEV sub-lines), K5 from 2 to 5, EV6/EV9/Niro/Seltos similarly
+  expanded. Two real corrections came out of it: the K5's 290-hp GT trim,
+  previously flagged as "unclear if it's for 2026," is confirmed still sold
+  at $33,590; and Sportage's priceTo was quietly wrong before — it tracked
+  only the top *gas* trim ($39,590) when the PHEV X-Line Prestige actually
+  tops the range at $47,190. Niro's hybrid pricing needed a second look
+  mid-run: an initial pull (via a press-release summary) gave $27,090-$35,490,
+  but Kia's own tabulated pricing page consistently returned $27,390-$35,790
+  across two independent fetches, so the table was trusted over the prose
+  summary. kia.com is JS-rendered and returned nav-only content to automated
+  fetches, exactly as it did for the Hyundai sweep, so citations lean on
+  kiamedia.com's press releases and per-model pricing tables, PRNewswire and
+  Edmunds instead. Per-trim features and a sources array were added to every
+  model. Colors were added for Carnival, EV6, EV9, K4 and Niro, where
+  CarsDirect's color pages gave clean, plausible-sized lists; they were
+  deliberately skipped for Sorento and Sportage (those pages returned
+  16-24 "exterior" colors that visibly bled in names from other Kia models —
+  not trustworthy) and for Seltos and most of K5's interior colors (the
+  "interior" list on CarsDirect was just the exterior list repeated, with
+  only a stray "Black" of genuine signal). Telluride is the one holdout at
+  confidence medium — Kia skipped the 2026 model year for it entirely (sold
+  as a carryover of the 2025 generation, with the all-new redesign arriving
+  as a 2027), so this run only added trim features for the two existing
+  carryover trims and left pricing/colors alone rather than relitigate or
+  guess at a lineup Kia itself never fully priced.) — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
