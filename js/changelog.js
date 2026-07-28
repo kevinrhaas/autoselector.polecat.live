@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 59,
+    title: 'Interior galleries — 8 more models, including one facelift Commons hadn\'t surfaced before',
+    kind: 'data',
+    ts: '2026-07-28T09:13:21.079Z',
+    items: [
+      'Added real, verified cabin interior photos for honda-prologue, ford-mustang-mach-e, chevrolet-tahoe, nissan-armada, kia-k5, kia-seltos, volkswagen-id4 and subaru-wrx — 74 of 325 models now have an interior shot.',
+      'Every photo came from Wikimedia Commons under a free license (CC BY, CC BY-SA or CC0), matched to the model\'s current production generation, and live-checked with curl before shipping.',
+      'kia-k5 and kia-seltos both had earlier runs come up empty for a current-generation interior shot — a facelifted cabin photo has since been uploaded to Commons for each, so this run picked them up.',
+    ],
+  },
+  {
     v: 58,
     title: 'Hyundai lineup re-verified — two nameplates dropped for 2026, per-trim features and sources added',
     kind: 'data',
