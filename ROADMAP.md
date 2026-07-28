@@ -62,10 +62,31 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
   the 160 models done so far (137 with a real NHTSA star, 23 with an IIHS
-  award only). Latest (2026-07-28, +1, IIHS-sourced): rivian-r1t — Top Safety
-  Pick for 2025-26 (one tier below sibling r1s's Top Safety Pick+) — see
-  js/changelog.js v51; this run's skips (checked both NHTSA and IIHS, neither
-  has an award): porsche-911/panamera/taycan/cayenne-electric/macan-electric,
+  award only). **SAFETY SUB-SWEEP NOW EXHAUSTIVE (2026-07-28, js/changelog.js
+  v53)**: every one of the 325 models has been checked at least once — the
+  remaining 165 unrated models (170 minus rivian-r1t's IIHS add) all have a
+  confirmed, verified reason for having no citable 2026 NHTSA/IIHS rating
+  (never-tested exotic, no 2026 record, or "Not Rated"/no-award). This run's
+  batch (+0 to safety, all confirmed no-record via real NHTSA API queries +
+  IIHS site checks, not assumed): every Aston Martin, Bentley, Ferrari,
+  Lamborghini, Maserati, McLaren and Rolls-Royce model (aston-martin-db12/
+  dbx/valhalla/vanquish/vantage, bentley-bentayga/continental-gt/flying-spur,
+  ferrari-12cilindri/296-speciale/849-testarossa/amalfi/f80/purosangue,
+  lamborghini-revuelto/temerario/urus, maserati-grancabrio/granturismo/
+  grecale/mcpura, mclaren-750s/artura/gts/w1, rolls-royce-cullinan/ghost/
+  phantom/spectre — ultra-low-volume exotics NHTSA/IIHS have never tested;
+  Rolls-Royce Cullinan/Ghost/Phantom have an NHTSA vehicle record but every
+  category is explicitly "Not Rated") plus toyota-rav4 (NHTSA has no 2026
+  record — it's an all-new 6th-gen redesign for MY2026, so the prior-year
+  5-star rating doesn't carry over per the redesign rule; not yet IIHS-tested
+  either). **Future runs on this item: re-check periodically (NHTSA adds
+  ratings on a rolling basis) rather than re-querying the same 165 — or shift
+  effort to the owner/expert sub-target instead**, since the safety sub-target
+  has no fresh candidates left today. Older skip history below is kept for
+  provenance. Previous latest (2026-07-28, +1, IIHS-sourced): rivian-r1t —
+  Top Safety Pick for 2025-26 (one tier below sibling r1s's Top Safety
+  Pick+) — see js/changelog.js v51; that run's skips (checked both NHTSA and
+  IIHS, neither has an award): porsche-911/panamera/taycan/cayenne-electric/macan-electric,
   bmw-7-series/8-series/i7/m2/m3/m4/m5/xm/2-series-gran-coupe, alfa-romeo-
   stelvio, lotus-emira. Also checked and noted for later — a real IIHS test
   page exists but with no award (so nothing added, per the never-guess rule):
@@ -135,9 +156,15 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   assets/credits.json. The detail-page thumbnail strip already renders them.
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
-  fueleconomy.gov for EPA numbers, one major price guide). 93 of 325 models
-  now have sources (all Toyota, Lexus, Subaru, Honda, Acura, Ford and Lincoln
-  models, plus the original 30 minus overlap); continue ~15 models per run
+  fueleconomy.gov for EPA numbers, one major price guide). 116 of 325 models
+  now have sources (all Toyota, Lexus, Subaru, Honda, Acura, Ford, Lincoln and
+  Mazda models, plus all remaining Nissan models and the original 30 minus
+  overlap — 2026-07-28, js/changelog.js v53, +15: Mazda CX-30/CX-50/CX-70/
+  CX-90/Mazda3/MX-5 Miata and Nissan Altima/Armada/Frontier/Kicks/Leaf/
+  Murano/Pathfinder/Rogue Plug-in Hybrid/Z; edmunds.com and kbb.com both
+  blocked automated fetches even with browser headers, so these 15 ship with
+  2 verified sources — manufacturer + EPA — instead of the usual 3, rather
+  than guess an unverifiable price-guide URL); continue ~15 models per run
   until all 325 are cited. Be precise — deep URLs only, verified to be
   2026-specific.
 - [ ] **Trim-level options** — different trims carry different options:
