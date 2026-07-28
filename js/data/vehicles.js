@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 29;
+export const DATA_VERSION = 30;
 
 export const VEHICLES = [
  {
@@ -5206,7 +5206,16 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20Buick%20Enclave%20front%20view.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/2025_Buick_Enclave_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Buick_Enclave_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices exclude $1,995 destination.",
@@ -5309,7 +5318,16 @@ export const VEHICLES = [
   "towingLb": 1000,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20Buick%20Encore%20GX%20Preferred%2C%20front%20left%2C%2007-21-2024.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/2024_Buick_Encore_GX_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Buick_Encore_GX_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination.",
@@ -5400,7 +5418,16 @@ export const VEHICLES = [
   "towingLb": 1500,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Buick%20Envision%20ST%20Essence%20in%20Moonstone%20Gray%20Metallic%2C%20front%20right.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/2025_Buick_Envision_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Buick_Envision_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Base Preferred price verified ($42,895 incl. destination); mid/top trims approximate. Prices exclude ~$1,495 destination.",
@@ -5490,7 +5517,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Buick%20Envista%20001.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/2024_Buick_Envista_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Buick_Envista_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "FWD only. Sleek fastback-styled crossover on the Trax platform. Prices approximate, excluding ~$1,395 destination."
@@ -18263,10 +18299,19 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/2025_Hyundai_Santa_Cruz_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Hyundai_Santa_Cruz_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination.",
+  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination. Interior photo is the 2025 refresh (facelifted front/interior); 2026 is a carryover of that refresh (source: TFLtruck 2026-02 review).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -30600,7 +30645,16 @@ export const VEHICLES = [
   "towingLb": 1500,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/0/0c/2025_Nissan_Murano_%28Front%29_NYC_Auto_Show.png",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/2025_Nissan_Murano_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Murano_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs.",
