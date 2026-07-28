@@ -34,6 +34,12 @@
   "license": "CC BY 2.0",
   "author": "Charles from Port Chester, New York"
  },
+ "gallery/bmw-x3/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:BMW_X3_G45_xDrive30e_PHEV_M_Sport_Package_Dune_Grey_Metallic_03.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/buick-enclave/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:2025_Buick_Enclave_interior.jpg",
   "license": "CC BY-SA 4.0",
@@ -80,6 +86,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2023_Chevrolet_Colorado_LT,_front_1.7.24.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Kevauto",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/chevrolet-corvette/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Chevrolet_Corvette_C8_6.2_LT2_V8_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/chevrolet-equinox/1 (interior)": {
@@ -440,6 +452,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2025_Mazda_CX-5_2.5_Skyactiv_AWD_Turbo_in_Machine_Gray,_front_left.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/mercedes-benz-glc/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLC_220d_4MATIC_(X254)_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Tokumeigakarinoaoshima",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/nissan-altima/1 (interior)": {

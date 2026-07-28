@@ -159,7 +159,25 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  79 models done so far (2026-07-28, +5, js/changelog.js v62: chevrolet-suburban,
+  82 models done so far (2026-07-28, +3, js/changelog.js v68: chevrolet-corvette
+  (C8, MIAS 2024 showfloor shot), mercedes-benz-glc (X254, a Japan-market 220d
+  interior — generation/dash architecture is shared across powertrains and
+  markets, same call as prior JDM/Euro-shot precedent below), bmw-x3 (G45, the
+  current redesigned generation) — all interior shots, found via the Commons
+  search API, generation confirmed against each file's own Commons categories/
+  description (not just the filename) before shipping, every URL live-checked
+  with curl. Checked but held back this run for a generation mismatch or
+  unconfirmed currency (never guess): audi-q5 (the only Commons interior shot
+  found is the outgoing 2nd-gen cabin — Audi redesigned the Q5 as an all-new
+  third generation for 2026, confirmed via web search, so it doesn't qualify)
+  and audi-q3 (also all-new for 2026; no Commons interior shot of the redesign
+  exists yet); audi-a3 (the one interior shot found predates the 2024 mid-cycle
+  facelift that changed the vents/door-handle finish/shifter — held back rather
+  than risk a stale-trim photo, same caution as the mazda-cx-30/kia-seltos
+  precedent below); mazda-mazda3 (only a 2019 pre-2024-facelift dashboard
+  shot found, same larger-touchscreen-refresh risk as CX-30); cadillac-escalade
+  and mazda-cx-50 (no interior shot surfaced on Commons at all this run).
+  Previous batch (2026-07-28, +5, js/changelog.js v62: chevrolet-suburban,
   nissan-z, infiniti-qx80, kia-k4, hyundai-elantra-n — all interior shots, found
   via the Commons search API, license/author pulled from each file's own
   metadata, every URL live-checked with curl before shipping; chevrolet-suburban

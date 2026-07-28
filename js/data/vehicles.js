@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 38;
+export const DATA_VERSION = 39;
 
 export const VEHICLES = [
  {
@@ -4608,7 +4608,16 @@ export const VEHICLES = [
   "towingLb": 4850,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_G45_X3_M_Sport_Alpine_White.jpg",
-   "credit": "Damian B Oh"
+   "credit": "Damian B Oh",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/BMW_X3_G45_xDrive30e_PHEV_M_Sport_Package_Dune_Grey_Metallic_03.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:BMW_X3_G45_xDrive30e_PHEV_M_Sport_Package_Dune_Grey_Metallic_03.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "G45 generation launched for 2025. No full X3 M offered this generation; M50 is the performance flagship.",
@@ -7536,7 +7545,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Chevrolet%20Corvette%20C8%20IMG%208837.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/MIAS_2024_-_2024_Chevrolet_Corvette_C8_6.2_LT2_V8_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Chevrolet_Corvette_C8_6.2_LT2_V8_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Coupe and convertible offered on most variants (convertible ~$7,000-10,000 more depending on trim). Prices verified 2026-07-28, base 1LT/1LZ coupe MSRP before the $2,495 destination charge (up from $1,995)."
@@ -32217,7 +32235,16 @@ export const VEHICLES = [
   "towingLb": 3500,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/2/28/Mercedes-Benz_X254_GLC_300_4MATIC_AMG_Line_Obsidian_Black_%2811%29.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Mercedes-Benz_GLC_220d_4MATIC_%28X254%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLC_220d_4MATIC_(X254)_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Best-selling Mercedes in the US. GLC Coupe body style folded into this record. All-new electric GLC 400 4MATIC with EQ Technology (483 hp, MBUX Hyperscreen) arrives during 2026 - US pricing not yet announced. PHEV cargo volume slightly reduced.",
