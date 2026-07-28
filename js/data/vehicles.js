@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 24;
+export const DATA_VERSION = 25;
 
 export const VEHICLES = [
  {
@@ -1674,7 +1674,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "All-new generation replaced the A4 sedan; body is a five-door liftback. S5 included as performance variant (price approximate). Nearly all controls are on the touchscreen."
+  "notes": "All-new generation replaced the A4 sedan; body is a five-door liftback. S5 included as performance variant (price approximate). Nearly all controls are on the touchscreen.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Audi A5 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/audi/a5-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "audi-a6",
@@ -1745,7 +1756,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "All-new generation gas A6 sedan for 2026 with 362-hp V6 (published start price of $65,395 appears to include $1,495 destination; $63,900 used here). Upper-trim pricing and EPA figures not yet confirmed. No gas S6 offered; S6 continues only as the S6 e-tron EV."
+  "notes": "All-new generation gas A6 sedan for 2026 with 362-hp V6 (published start price of $65,395 appears to include $1,495 destination; $63,900 used here). Upper-trim pricing and EPA figures not yet confirmed. No gas S6 offered; S6 continues only as the S6 e-tron EV.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Audi A6 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/audi/a6-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "audi-a6-e-tron",
@@ -5187,7 +5209,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices exclude $1,995 destination."
+  "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Buick Enclave 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/buick/enclave-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "buick-encore-gx",
@@ -12651,7 +12684,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Refreshed for 2026 with larger 84-kWh battery (~298 mi range, up from 236) and lower base price. Built in Alabama. Top-trim price and efficiency approximate."
+  "notes": "Refreshed for 2026 with larger 84-kWh battery (~298 mi range, up from 236) and lower base price. Built in Alabama. Top-trim price and efficiency approximate.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2023-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Genesis Electrified GV70 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/genesis/electrified-gv70-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "genesis-g70",
@@ -16810,7 +16854,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Hyundai cut 2026 prices by $7,600-$9,800 per trim after the federal EV tax credit expired; now from $35,000. Built in Georgia; NACS port standard."
+  "notes": "Hyundai cut 2026 prices by $7,600-$9,800 per trim after the federal EV tax credit expired; now from $35,000. Built in Georgia; NACS port standard.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Hyundai Ioniq 5 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/hyundai/ioniq-5-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-ioniq-5-n",
@@ -18528,7 +18583,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190."
+  "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Infiniti QX80 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/infiniti/qx80-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "jaguar-f-pace",
@@ -22896,6 +22962,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Lexus NX 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/lexus/nx-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
   }
  },
  {
@@ -25542,7 +25619,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/mazda/cx-5/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Mazda CX-5 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/mazda/cx-5-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-50",
@@ -26762,7 +26850,18 @@ export const VEHICLES = [
    "credit": "Damian B Oh"
   },
   "confidence": "high",
-  "notes": "AMG C 63 S E Performance is a 671-hp plug-in hybrid with a small performance-oriented battery (minimal usable EV range). Climate and audio are controlled via the central touchscreen; no physical knobs."
+  "notes": "AMG C 63 S E Performance is a 671-hp plug-in hybrid with a small performance-oriented battery (minimal usable EV range). Climate and audio are controlled via the central touchscreen; no physical knobs.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Mercedes-Benz C-Class 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/mercedes-benz/c-class-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "mercedes-benz-cla",
@@ -27942,7 +28041,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Best-selling Mercedes in the US. GLC Coupe body style folded into this record. All-new electric GLC 400 4MATIC with EQ Technology (483 hp, MBUX Hyperscreen) arrives during 2026 - US pricing not yet announced. PHEV cargo volume slightly reduced."
+  "notes": "Best-selling Mercedes in the US. GLC Coupe body style folded into this record. All-new electric GLC 400 4MATIC with EQ Technology (483 hp, MBUX Hyperscreen) arrives during 2026 - US pricing not yet announced. PHEV cargo volume slightly reduced.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Mercedes-Benz GLC 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/mercedes-benz/glc-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "mercedes-benz-gle",
@@ -29420,7 +29530,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO (new), Platinum Reserve."
+  "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO (new), Platinum Reserve.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Nissan Armada 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/nissan/armada-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "nissan-frontier",
@@ -31651,7 +31772,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Gen-2 R1S. Lower Dual Standard/Large configurations were dropped in June 2026; Dual Motor Max pack is now the base trim at $90,990 (a $7,000+ increase). Cargo figure is behind 3rd row; max is all rows folded. Frunk adds 11.1 cu ft."
+  "notes": "Gen-2 R1S. Lower Dual Standard/Large configurations were dropped in June 2026; Dual Motor Max pack is now the base trim at $90,990 (a $7,000+ increase). Cargo figure is behind 3rd row; max is all rows folded. Frunk adds 11.1 cu ft.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Rivian R1S 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/rivian/r1s-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "rivian-r1t",
@@ -40088,7 +40220,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Built in South Carolina. New cheaper Single Motor RWD variant for 2026; Twin Motor power increased to 449 hp and Performance to 670 hp per press reports. Some quoted prices may include the $1,395 destination fee."
+  "notes": "Built in South Carolina. New cheaper Single Motor RWD variant for 2026; Twin Motor power increased to 449 hp and Performance to 670 hp per press reports. Some quoted prices may include the $1,395 destination fee.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Volvo EX90 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/volvo/ex90-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "volvo-v60-cross-country",
