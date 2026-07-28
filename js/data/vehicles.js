@@ -8958,23 +8958,55 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Select",
-    "msrp": 43645
+    "msrp": 43645,
+    "features": [
+     "Stow 'n Go seating and storage",
+     "10.1-inch Uconnect 5 touchscreen, wireless Apple CarPlay/Android Auto",
+     "Heated front seats and steering wheel",
+     "Power sliding doors and liftgate",
+     "SafetyTec Plus driver-assist package"
+    ]
    },
    {
     "name": "Limited",
-    "msrp": 48955
+    "msrp": 48955,
+    "features": [
+     "Nappa leather-trimmed seating",
+     "13-speaker Alpine premium audio",
+     "Dual-pane panoramic sunroof",
+     "Wireless phone charging",
+     "Integrated premium cabin air filtration"
+    ]
    },
    {
     "name": "Hybrid Select",
-    "msrp": 51765
+    "msrp": 51765,
+    "features": [
+     "3.6L V6 plug-in hybrid, 32-mile electric range",
+     "500+ mile total driving range",
+     "Eligible for the $7,500 federal EV tax credit",
+     "Hybrid-specific Uconnect 5 displays"
+    ]
    },
    {
     "name": "Pinnacle",
-    "msrp": 54945
+    "msrp": 54945,
+    "features": [
+     "Quilted Nappa leather seats with second-row lumbar",
+     "19-speaker Harman Kardon premium audio",
+     "Interior FamCam and 360-degree surround camera",
+     "Second-row heated and ventilated seats"
+    ]
    },
    {
     "name": "Hybrid Pinnacle",
-    "msrp": 60465
+    "msrp": 60465,
+    "features": [
+     "All Pinnacle content plus 3.6L V6 plug-in hybrid powertrain",
+     "32-mile electric range, 500+ mile total range",
+     "19-speaker Harman Kardon premium audio",
+     "Interior FamCam and 360-degree surround camera"
+    ]
    }
   ],
   "powertrains": [
@@ -9044,7 +9076,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination.",
+  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination. Trim pricing re-verified 2026-07-28 against the current lineup, unchanged. A 100th Anniversary Edition and a Hybrid Select Premium trim also exist, but reported pricing for both conflicted across sources, so they're left out rather than guessed. IIHS checked directly: Marginal moderate-overlap front rules out a Top Safety Pick.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -9055,7 +9087,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "Stellantis Media - 2026 Chrysler Pacifica Press Kit",
+    "url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=27056&mid=722",
+    "site": "media.stellantisnorthamerica.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Chrysler Pacifica",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49434.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Chrysler Pacifica Trim Levels & Pricing",
+    "url": "https://www.cars.com/research/chrysler-pacifica-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "chrysler-voyager",
@@ -9066,12 +9115,19 @@ export const VEHICLES = [
   "bodyStyle": "minivan",
   "segment": "minivan",
   "category": "van",
-  "priceFrom": 40895,
-  "priceTo": 40895,
+  "priceFrom": 39995,
+  "priceTo": 39995,
   "trims": [
    {
     "name": "LX",
-    "msrp": 40895
+    "msrp": 39995,
+    "features": [
+     "Stow 'n Go fold-flat seating",
+     "10.1-inch Uconnect 5 touchscreen",
+     "Tri-zone automatic climate control",
+     "Power sliding doors",
+     "Full suite of standard driver-assist features"
+    ]
    }
   ],
   "powertrains": [
@@ -9126,7 +9182,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Value version of the Pacifica sold in a single LX trim with one powertrain; returned to retail sale in 2025. Price excludes $1,995 destination.",
+  "notes": "Value version of the Pacifica sold in a single LX trim with one powertrain; returned to retail sale in 2025. Price excludes $1,995 destination. Corrected a stale $40,895 MSRP (2026-07-28): the confirmed 2026 base MSRP is $39,995, unchanged from the 2025 launch price, per Stellantis's own \"avoids a price hike\" release and cross-checked against CarBuzz. IIHS checked directly: Poor headlights rules out a Top Safety Pick.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -9137,7 +9193,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Chrysler Voyager Avoids Price Hike",
+    "url": "https://www.carsdirect.com/automotive-news/2026-chrysler-voyager-avoids-price-hike",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "EPA fuel economy 2026 Chrysler Voyager",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49435.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Chrysler Voyager Trim Levels & Pricing",
+    "url": "https://www.cars.com/research/chrysler-voyager-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "dodge-charger-daytona",

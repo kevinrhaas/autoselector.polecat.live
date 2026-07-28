@@ -565,7 +565,19 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   (Marginal small-overlap front, no pedestrian crash prevention — no Top Safety
   Pick); nothing guessed. Per-trim features and sources added to every model for
   the first time; Hornet's discontinued status re-confirmed unchanged, sources
-  array added.) — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
+  array added.) — [x] Chrysler (2026-07-28 — both models re-verified, see
+  js/changelog.js v71: Pacifica's Select/Limited/Hybrid Select/Pinnacle/Hybrid
+  Pinnacle trim ladder was independently re-verified against the current
+  lineup and found already exactly correct — no price changes. Real
+  correction on Voyager: the on-file $40,895 MSRP was stale — Stellantis's own
+  "avoids a price hike" release (cross-checked against CarBuzz) confirms the
+  2026 base MSRP is unchanged from 2025 at $39,995. IIHS checked directly for
+  both (Pacifica: Marginal moderate-overlap front; Voyager: Poor headlights) —
+  neither qualifies for a Top Safety Pick, nothing guessed. A Pacifica Hybrid
+  100th Anniversary Edition and Select Premium trim were found to be real but
+  had conflicting pricing across three sources, so left out rather than
+  guessed. Per-trim features and a sources array added to both models for the
+  first time.) — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
