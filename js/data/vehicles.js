@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 25;
+export const DATA_VERSION = 26;
 
 export const VEHICLES = [
  {
@@ -6448,20 +6448,42 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize SUV",
   "category": "suv",
-  "priceFrom": 35300,
-  "priceTo": 44900,
+  "priceFrom": 36095,
+  "priceTo": 45395,
   "trims": [
    {
     "name": "2LT",
-    "msrp": 35300
+    "msrp": 36095,
+    "features": [
+     "2.0L turbo I4 (228 hp)",
+     "Chevy Safety Assist suite",
+     "10.2-in HD color touchscreen",
+     "Wireless Apple CarPlay/Android Auto",
+     "Keyless Open and Start"
+    ]
+   },
+   {
+    "name": "3LT",
+    "msrp": 41495,
+    "features": [
+     "Leather-appointed seating",
+     "Power programmable liftgate",
+     "Rear Cross Traffic Alert",
+     "Lane Change Alert w/ Side Blind Zone Alert",
+     "Optional 3.6L V6"
+    ]
    },
    {
     "name": "RS",
-    "msrp": 44100
-   },
-   {
-    "name": "Premier",
-    "msrp": 44900
+    "msrp": 45395,
+    "features": [
+     "3.6L V6 (308 hp) standard",
+     "Sport-tuned suspension",
+     "Unique RS black-accent styling",
+     "20-in+ sport wheels",
+     "Jet Black perforated leather w/ red accents",
+     "Dual exhaust w/ bright tips"
+    ]
    }
   ],
   "powertrains": [
@@ -6529,8 +6551,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Chevrolet%20Blazer%20RS.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination.",
+  "confidence": "high",
+  "notes": "Chevy dropped the Premier trim and added 3LT for 2026 (lineup is now 2LT/3LT/RS). Prices verified 2026-07-28 (2LT $36,095, 3LT $41,495, RS $45,395, all FWD before the $1,995 destination charge; AWD adds ~$2,700-$2,900).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -6552,20 +6574,38 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize electric SUV",
   "category": "suv",
-  "priceFrom": 45000,
-  "priceTo": 61000,
+  "priceFrom": 44600,
+  "priceTo": 60600,
   "trims": [
    {
     "name": "LT",
-    "msrp": 45000
+    "msrp": 44600,
+    "features": [
+     "Single-motor FWD (220 hp) or dual-motor AWD",
+     "17.7-in touchscreen",
+     "Heated front seats",
+     "360-degree camera"
+    ]
    },
    {
     "name": "RS",
-    "msrp": 48900
+    "msrp": 50400,
+    "features": [
+     "Super Cruise hands-free driver assistance",
+     "Panoramic sunroof",
+     "Heated & ventilated front seats",
+     "Upgraded RS styling"
+    ]
    },
    {
     "name": "SS",
-    "msrp": 61000
+    "msrp": 60600,
+    "features": [
+     "615-hp dual-motor AWD, Wide Open Watts mode",
+     "0-60 in ~3.4s",
+     "Performance-tuned suspension",
+     "SS-exclusive styling and interior trim"
+    ]
    }
   ],
   "powertrains": [
@@ -6656,7 +6696,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "SS makes 615 hp / 650 lb-ft, 0-60 in under 3.5 s. RS mid-trim price approximate. Prices exclude ~$1,495 destination.",
+  "notes": "2026 lineup drops RWD; LT/RS offer FWD or AWD, SS is AWD-only. Prices verified 2026-07-28, before destination ($1,795, up from $1,495): LT FWD $44,600, RS AWD $50,400 (RS FWD not separately published), SS $60,600.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -6678,28 +6718,68 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "midsize pickup",
   "category": "truck",
-  "priceFrom": 32400,
-  "priceTo": 50700,
+  "priceFrom": 34495,
+  "priceTo": 64295,
   "trims": [
    {
     "name": "WT",
-    "msrp": 32400
+    "msrp": 34495,
+    "features": [
+     "2.7L TurboMax turbo I4 (310 hp)",
+     "11.3-in touchscreen (standard)",
+     "Chevy Safety Assist",
+     "Rear-wheel drive, 4WD optional"
+    ]
    },
    {
     "name": "LT",
-    "msrp": 36000
+    "msrp": 38095,
+    "features": [
+     "Alloy wheels",
+     "Remote start",
+     "Advanced trailering package (available)",
+     "4WD optional"
+    ]
    },
    {
     "name": "Trail Boss",
-    "msrp": 40100
+    "msrp": 42495,
+    "features": [
+     "2-in factory lift",
+     "Off-road suspension tuning",
+     "All-terrain tires",
+     "Standard 4WD w/ 2-speed transfer case"
+    ]
    },
    {
     "name": "Z71",
-    "msrp": 43900
+    "msrp": 46495,
+    "features": [
+     "Bose premium audio",
+     "Heated/ventilated front seats",
+     "Off-road skid plates",
+     "Standard 4WD"
+    ]
    },
    {
     "name": "ZR2",
-    "msrp": 50700
+    "msrp": 52595,
+    "features": [
+     "Multimatic DSSV dampers",
+     "Front/rear electronic lockers",
+     "Wider fender flares",
+     "Standard 4WD"
+    ]
+   },
+   {
+    "name": "ZR2 Bison",
+    "msrp": 64295,
+    "features": [
+     "AEV-designed steel bumpers & rock sliders",
+     "Unique 17-in AEV wheels",
+     "Multimatic DSSV dampers",
+     "Standard 4WD"
+    ]
    }
   ],
   "powertrains": [
@@ -6771,7 +6851,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Crew cab / short bed only. Single 310 hp TurboMax engine across the range. WT/LT verified; mid trims approximate. Prices exclude $2,095 destination. ZR2 ground clearance 10.7 in.",
+  "notes": "Crew cab / short bed only. Single 310 hp TurboMax engine across the range; 4WD optional on WT/LT, standard on Trail Boss/Z71/ZR2/ZR2 Bison. Prices verified 2026-07-28 (2WD base where offered), exclude $2,095 destination. ZR2 ground clearance 10.7 in.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -6813,27 +6893,53 @@ export const VEHICLES = [
   "segment": "sports car",
   "category": "car",
   "priceFrom": 70000,
-  "priceTo": 207100,
+  "priceTo": 205400,
   "trims": [
    {
     "name": "Stingray",
-    "msrp": 70000
+    "msrp": 70000,
+    "features": [
+     "6.2L V8 (495 hp)",
+     "Removable roof panel or convertible body",
+     "8-speed dual-clutch automatic",
+     "Z51 performance package available"
+    ]
    },
    {
     "name": "E-Ray",
-    "msrp": 108000
+    "msrp": 108600,
+    "features": [
+     "Hybrid AWD (655 hp combined)",
+     "Front e-motor for launch/traction assist",
+     "Magnetic Ride Control standard"
+    ]
    },
    {
     "name": "Z06",
-    "msrp": 131000
+    "msrp": 117700,
+    "features": [
+     "5.5L flat-plane-crank V8 (670 hp)",
+     "Track-tuned aero and cooling",
+     "Carbon-fiber wheels available"
+    ]
    },
    {
     "name": "ZR1",
-    "msrp": 182000
+    "msrp": 180400,
+    "features": [
+     "5.5L twin-turbo V8 (1,064 hp)",
+     "Active aero package",
+     "Carbon-fiber body panels"
+    ]
    },
    {
     "name": "ZR1X",
-    "msrp": 207100
+    "msrp": 205400,
+    "features": [
+     "Twin-turbo V8 + front e-motor hybrid AWD (1,250 hp)",
+     "Most powerful production Corvette",
+     "Track-focused chassis tuning"
+    ]
    }
   ],
   "powertrains": [
@@ -6936,7 +7042,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Coupe and convertible offered on most variants (convertible ~$7,500 more). E-Ray/Z06 prices approximate; Stingray/ZR1/ZR1X verified before destination."
+  "notes": "Coupe and convertible offered on most variants (convertible ~$7,000-10,000 more depending on trim). Prices verified 2026-07-28, base 1LT/1LZ coupe MSRP before the $2,495 destination charge (up from $1,995)."
  },
  {
   "id": "chevrolet-equinox",
@@ -6947,20 +7053,38 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact SUV",
   "category": "suv",
-  "priceFrom": 26950,
-  "priceTo": 30350,
+  "priceFrom": 28800,
+  "priceTo": 33600,
   "trims": [
    {
     "name": "LT",
-    "msrp": 26950
+    "msrp": 28800,
+    "features": [
+     "1.5L turbo I4 (175 hp)",
+     "17.7-in touchscreen (standard)",
+     "Chevy Safety Assist",
+     "Wireless Apple CarPlay/Android Auto"
+    ]
    },
    {
     "name": "ACTIV",
-    "msrp": 29950
+    "msrp": 33600,
+    "features": [
+     "All-terrain tires",
+     "Rugged exterior styling",
+     "Hands-free power liftgate",
+     "Heated front seats"
+    ]
    },
    {
     "name": "RS",
-    "msrp": 30350
+    "msrp": 33600,
+    "features": [
+     "20-in black machined-face wheels",
+     "Sport-tuned exterior styling",
+     "Adaptive cruise control",
+     "Heated/ventilated front seats"
+    ]
    }
   ],
   "powertrains": [
@@ -7024,8 +7148,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "All-new generation launched for 2025; 2026 is a carryover. ACTIV/RS trim prices are estimates; base LT verified. Prices exclude $1,495 destination.",
+  "confidence": "high",
+  "notes": "All-new generation launched for 2025; 2026 is a carryover. Prices verified 2026-07-28 after GM's second 2026MY price increase (Dec 2025): LT $28,800, ACTIV/RS both $33,600 (ACTIV/RS MSRP itself held steady this round — the $200 rise was purely the destination fee), all excluding the $1,995 destination charge (up from $1,395).",
   "sources": [
    {
     "label": "EPA fuel economy",
@@ -7074,20 +7198,37 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact electric SUV",
   "category": "suv",
-  "priceFrom": 34995,
-  "priceTo": 44500,
+  "priceFrom": 34890,
+  "priceTo": 44395,
   "trims": [
    {
     "name": "LT 1",
-    "msrp": 34995
+    "msrp": 34890,
+    "features": [
+     "Single-motor FWD (213 hp)",
+     "319-mi EPA range",
+     "17.7-in touchscreen (standard)",
+     "Chevy Safety Assist"
+    ]
    },
    {
     "name": "LT 2",
-    "msrp": 40300
+    "msrp": 40195,
+    "features": [
+     "Heated & ventilated front seats",
+     "360-degree camera",
+     "Power liftgate",
+     "Dual-motor AWD available"
+    ]
    },
    {
     "name": "RS",
-    "msrp": 44500
+    "msrp": 44395,
+    "features": [
+     "Super Cruise hands-free driver assistance",
+     "Sport-tuned exterior styling",
+     "19.2 kW AC charging available"
+    ]
    }
   ],
   "powertrains": [
@@ -7153,8 +7294,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Chevrolet%20Equinox%20EV%20Washington%20DC%20Metro%20Area%2C%20USA.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "high",
-  "notes": "One of the least expensive 300+ mile EVs in the US. Mid-trim (LT 2) price approximate. Prices exclude ~$1,395 destination.",
+  "confidence": "medium",
+  "notes": "One of the least expensive 300+ mile EVs in the US. Jan 2026 pricing update: GM trimmed base MSRP by $105 per trim while raising the destination charge $405 (now $1,800, up from $1,395), a net +$300 per config. LT 2 mid-trim figure remains an estimate.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -7311,7 +7452,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "medium",
-  "notes": "Regular, double and crew cabs; dims shown for crew cab short bed. Mid-trim prices approximate. Prices exclude $2,195 destination.",
+  "notes": "Regular, double and crew cabs; dims shown for crew cab short bed. Trail Boss is sold as a package on Custom/LT (not a standalone trim line here). Spot-checked 2026-07-28: base WT and top ZR2 pricing roughly confirmed against current listings; mid-trim (Custom/LT/RST/LTZ/High Country) figures remain estimates. Destination charge is $2,795 (up from $2,595) — the prior $2,195 note in this record was stale even before this sweep.",
   "sources": [
    {
     "label": "2026 pricing, trims & towing",
@@ -7369,24 +7510,44 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "full-size electric pickup",
   "category": "truck",
-  "priceFrom": 52700,
-  "priceTo": 89100,
+  "priceFrom": 54895,
+  "priceTo": 91295,
   "trims": [
    {
     "name": "WT Standard Range",
-    "msrp": 52700
+    "msrp": 54895,
+    "features": [
+     "Dual-motor AWD",
+     "Multi-Flex Midgate",
+     "Multi-Flex tailgate"
+    ]
    },
    {
     "name": "LT Standard Range",
-    "msrp": 60800
+    "msrp": 62995,
+    "features": [
+     "Super Cruise available",
+     "PowerBase 10.2 kW onboard power outlets",
+     "Upgraded interior trim"
+    ]
    },
    {
     "name": "Trail Boss Extended Range",
-    "msrp": 69900
+    "msrp": 72095,
+    "features": [
+     "Off-road suspension tuning",
+     "All-terrain tires",
+     "Extended-range battery"
+    ]
    },
    {
     "name": "LT Max Range",
-    "msrp": 89100
+    "msrp": 91295,
+    "features": [
+     "Max Range battery (478 mi EPA)",
+     "Super Cruise",
+     "Top interior/tech package"
+    ]
    }
   ],
   "powertrains": [
@@ -7441,7 +7602,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Range varies ~283-478 mi by battery. Trail Boss trim new for 2026. Prices back-calculated excluding $2,195 destination.",
+  "notes": "GM restructured the 2026 trim walk mid-cycle: 2WT Standard Range and RST Extended/Max Range were dropped, RST was reintroduced later tied to a mandatory Special Edition package, and 3WT/4WT fleet/retail trims were added — this record simplifies to the WT/LT/Trail Boss/LT Max Range spread. Range varies ~283-478 mi by battery. Prices verified 2026-07-28 (lowest configuration per trim shown); destination charge is $2,595 (up from $2,095).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -7463,8 +7624,8 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "heavy-duty pickup",
   "category": "truck",
-  "priceFrom": 46000,
-  "priceTo": 76500,
+  "priceFrom": 48195,
+  "priceTo": 89614,
   "trims": [
    {
     "name": "WT",
@@ -7555,7 +7716,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Single record covering Silverado 2500HD and 3500HD. Max towing 36,000 lb is 3500HD dually diesel with gooseneck; 2500HD tows up to ~22,500 lb. Prices approximate, exclude $2,195 destination."
+  "notes": "Single record covering Silverado 2500HD and 3500HD. Max towing 36,000 lb is 3500HD dually diesel with gooseneck; 2500HD tows up to ~22,500 lb. WT base verified 2026-07-28 at $48,195 (2500HD Regular Cab 2WD). A ZR2 off-road trim is now offered on 2500HD (~$77,000-$90,000 depending on cab/engine/options) — not itemized as a separate trim here. Custom/LT/LTZ/High Country figures remain approximate. Destination charge is $2,795 (up from $2,595)."
  },
  {
   "id": "chevrolet-suburban",
@@ -7567,7 +7728,7 @@ export const VEHICLES = [
   "segment": "extended full-size SUV",
   "category": "suv",
   "priceFrom": 63700,
-  "priceTo": 81510,
+  "priceTo": 83700,
   "trims": [
    {
     "name": "LS",
@@ -7579,19 +7740,19 @@ export const VEHICLES = [
    },
    {
     "name": "RST",
-    "msrp": 71700
+    "msrp": 71400
    },
    {
     "name": "Z71",
-    "msrp": 73700
+    "msrp": 73400
    },
    {
     "name": "Premier",
-    "msrp": 78600
+    "msrp": 78300
    },
    {
     "name": "High Country",
-    "msrp": 81510
+    "msrp": 83700
    }
   ],
   "powertrains": [
@@ -7674,7 +7835,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination.",
+  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices verified 2026-07-28 (LS/RST/Z71/Premier/High Country confirmed; LT remains an estimate between LS and RST), excluding the $2,795 destination charge.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -7709,15 +7870,15 @@ export const VEHICLES = [
    },
    {
     "name": "RST",
-    "msrp": 68200
+    "msrp": 68700
    },
    {
     "name": "Z71",
-    "msrp": 70200
+    "msrp": 70700
    },
    {
     "name": "Premier",
-    "msrp": 74700
+    "msrp": 75600
    },
    {
     "name": "High Country",
@@ -7804,7 +7965,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Refreshed for 2025. Base and top trims verified; mid-trim prices close estimates. Prices exclude $2,795 destination.",
+  "notes": "Refreshed for 2025. Re-verified 2026-07-28 against current GM pricing (LS/LT/High Country confirmed exactly; RST/Z71/Premier adjusted slightly). Prices exclude the $2,795 destination charge (up from $2,595).",
   "sources": [
    {
     "label": "2026 pricing, trims & specs",
@@ -7862,8 +8023,8 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact SUV",
   "category": "suv",
-  "priceFrom": 23000,
-  "priceTo": 27600,
+  "priceFrom": 23300,
+  "priceTo": 31295,
   "trims": [
    {
     "name": "LS",
@@ -7947,7 +8108,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Prices exclude ~$1,395 destination; trim MSRPs derived from advertised prices and may vary slightly. AWD requires 1.3L engine.",
+  "notes": "Prices exclude the $1,795 destination charge (up from $1,395). LS re-verified 2026-07-28 at $23,300; AWD-equipped RS/ACTIV top out at $31,295 including destination ($29,500 excl.) — FWD-only base pricing for RS/ACTIV/LT was not separately published and remains an estimate. AWD requires the 1.3L engine.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -7969,24 +8130,46 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize 3-row SUV",
   "category": "suv",
-  "priceFrom": 40800,
-  "priceTo": 57400,
+  "priceFrom": 40700,
+  "priceTo": 55300,
   "trims": [
    {
-    "name": "LS",
-    "msrp": 40800
-   },
-   {
     "name": "LT",
-    "msrp": 43900
+    "msrp": 40700,
+    "features": [
+     "2.5L turbo I4 (328 hp)",
+     "17.7-in touchscreen (standard)",
+     "Chevy Safety Assist",
+     "AWD available"
+    ]
    },
    {
     "name": "Z71",
-    "msrp": 51900
+    "msrp": 48800,
+    "features": [
+     "Off-road-tuned suspension",
+     "Z71 skid plates and styling",
+     "Standard AWD"
+    ]
+   },
+   {
+    "name": "High Country",
+    "msrp": 55000,
+    "features": [
+     "Premium leather upholstery",
+     "Heated 1st/2nd row seats",
+     "Power-folding 2nd/3rd row seats",
+     "Super Cruise + Enhanced Automatic Parking Assist (Enhanced Driving Package)"
+    ]
    },
    {
     "name": "RS",
-    "msrp": 57400
+    "msrp": 55300,
+    "features": [
+     "Sport-tuned exterior styling",
+     "Bose premium audio",
+     "Heated/ventilated front seats and heated 2nd row"
+    ]
    }
   ],
   "powertrains": [
@@ -8051,8 +8234,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "All turbo-four now; no V6. Mid-trim prices approximate; RS AWD verified at $59,395 incl. destination. Prices exclude ~$1,995 destination.",
+  "confidence": "high",
+  "notes": "Chevy dropped the LS base trim (discontinued for 2025) and brought back High Country for 2026 — lineup is now LT/Z71/High Country/RS. All turbo-four now; no V6. Prices verified 2026-07-28 (FWD base where offered; Z71 is AWD-only), excluding the $1,995 destination charge.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -8094,28 +8277,54 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact SUV",
   "category": "suv",
-  "priceFrom": 22000,
-  "priceTo": 25700,
+  "priceFrom": 21700,
+  "priceTo": 25400,
   "trims": [
    {
     "name": "LS",
-    "msrp": 22000
+    "msrp": 21700,
+    "features": [
+     "1.2L turbo I3 (137 hp)",
+     "11-in touchscreen",
+     "Wireless Apple CarPlay/Android Auto",
+     "Remote start"
+    ]
    },
    {
     "name": "1RS",
-    "msrp": 23500
+    "msrp": 23200,
+    "features": [
+     "Sport-styled front fascia",
+     "Alloy wheels",
+     "Heated front seats"
+    ]
    },
    {
     "name": "LT",
-    "msrp": 23500
+    "msrp": 23200,
+    "features": [
+     "Alloy wheels",
+     "Heated front seats and steering wheel",
+     "Wireless phone charging"
+    ]
    },
    {
     "name": "2RS",
-    "msrp": 25700
+    "msrp": 25400,
+    "features": [
+     "Sunroof",
+     "Sport black-accent styling",
+     "Adaptive cruise control"
+    ]
    },
    {
     "name": "ACTIV",
-    "msrp": 25700
+    "msrp": 25400,
+    "features": [
+     "Sunroof",
+     "Rugged ACTIV styling",
+     "Adaptive cruise control"
+    ]
    }
   ],
   "powertrains": [
@@ -8170,7 +8379,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "FWD only; no AWD offered. Prices exclude $1,495 destination. One of the least expensive new vehicles in the US.",
+  "notes": "FWD only; no AWD offered. Prices verified 2026-07-28 after the Dec 2025 increase, excluding the $1,795 destination charge (up from $1,495). One of the least expensive new vehicles in the US.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
