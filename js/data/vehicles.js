@@ -13345,15 +13345,37 @@ export const VEHICLES = [
   "segment": "compact luxury electric SUV",
   "category": "suv",
   "priceFrom": 64380,
-  "priceTo": 72000,
+  "priceTo": 75350,
   "trims": [
    {
+    "name": "AWD",
+    "msrp": 64380,
+    "features": [
+     "19-inch wheels (best range)",
+     "84-kWh battery, NACS charging port",
+     "Bang & Olufsen premium audio",
+     "Vehicle-to-Load (V2L)"
+    ]
+   },
+   {
     "name": "Advanced AWD",
-    "msrp": 64380
+    "msrp": 69250,
+    "features": [
+     "20-inch wheels",
+     "27-inch OLED display",
+     "Electronically controlled suspension",
+     "Head-up display"
+    ]
    },
    {
     "name": "Prestige AWD",
-    "msrp": 72000
+    "msrp": 75350,
+    "features": [
+     "Nappa leather with quilting",
+     "Remote Smart Parking Assist",
+     "Heated & ventilated front and rear seats",
+     "Mood curator ambient experience"
+    ]
    }
   ],
   "powertrains": [
@@ -13367,7 +13389,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": 91,
-    "evRangeMi": 298
+    "evRangeMi": 263
    }
   ],
   "seats": [
@@ -13407,8 +13429,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Refreshed for 2026 with larger 84-kWh battery (~298 mi range, up from 236) and lower base price. Built in Alabama. Top-trim price and efficiency approximate.",
+  "confidence": "high",
+  "notes": "Refreshed for 2026 with larger 84-kWh battery and lower base price; built in Alabama. Range is Genesis's own stated max (263 mi on 19-in wheels, 243 mi on the 20-in Advanced/Prestige wheels) — official EPA figures for the 2026 model aren't published yet, so evRangeMi uses the conservative 263 base number rather than guess a combined EPA figure. Full 3-trim ladder (AWD/Advanced/Prestige) confirmed against Genesis's own pricing (destination-inclusive figures on cars.com less the $1,495 destination charge).",
+  "sources": [
+   {
+    "label": "2026 Electrified GV70 pricing & range",
+    "url": "https://www.cars.com/articles/updated-2026-genesis-electrified-gv70-priced-from-65875-514111/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 Electrified GV70 trims & MSRP",
+    "url": "https://www.autonocion.com/us/new-cars/genesis/electrified-gv70/",
+    "site": "autonocion.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick+",
@@ -13431,15 +13465,58 @@ export const VEHICLES = [
   "segment": "compact luxury sport sedan",
   "category": "car",
   "priceFrom": 43450,
-  "priceTo": 54900,
+  "priceTo": 56900,
   "trims": [
    {
-    "name": "2.5T Standard",
-    "msrp": 43450
+    "name": "2.5T RWD",
+    "msrp": 43450,
+    "features": [
+     "300-hp 2.5L turbo I4, 8-speed automatic",
+     "LED headlights, 18-in alloy wheels",
+     "Nappa leather seating",
+     "10.25-in touchscreen, wireless Apple CarPlay/Android Auto"
+    ]
    },
    {
-    "name": "3.3T Sport Prestige",
-    "msrp": 54900
+    "name": "2.5T AWD",
+    "msrp": 45550
+   },
+   {
+    "name": "2.5T Prestige RWD",
+    "msrp": 48450,
+    "features": [
+     "Brembo brakes",
+     "Head-up display",
+     "Lexicon premium audio",
+     "Heated & ventilated front seats"
+    ]
+   },
+   {
+    "name": "2.5T Prestige AWD",
+    "msrp": 50450
+   },
+   {
+    "name": "3.3T Sport Prestige RWD",
+    "msrp": 53600,
+    "features": [
+     "365-hp 3.3L twin-turbo V6",
+     "Electronically controlled suspension",
+     "Limited-slip differential",
+     "Nappa leather with quilting"
+    ]
+   },
+   {
+    "name": "3.3T Sport Prestige AWD",
+    "msrp": 55600
+   },
+   {
+    "name": "3.3T Prestige Graphite RWD",
+    "msrp": 56900,
+    "features": [
+     "Exclusive Ceres Blue exterior color",
+     "Dark chrome exterior trim",
+     "Unique Nappa leather color combination"
+    ]
    }
   ],
   "powertrains": [
@@ -13507,8 +13584,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Carryover for 2026; likely nearing the end of its run. Top-trim price approximate; base price from compiled 2026 dealer/press data."
+  "confidence": "high",
+  "notes": "Full 2026 trim ladder rebuilt from 2 to 7 trims (2.5T RWD/AWD, 2.5T Prestige RWD/AWD, 3.3T Sport Prestige RWD/AWD, new-for-2026 3.3T Prestige Graphite RWD-only) against CarGurus' pricing breakdown, cross-checked to the penny against the 2.5T base price. Checked both NHTSA and IIHS: NHTSA has no 2026 record (Not Rated); IIHS has tested the G70 (Good small-overlap front, Good headlights) but has not issued a Top Safety Pick award for 2026, so no rating shown — checked, not guessed.",
+  "sources": [
+   {
+    "label": "2026 G70 full trim pricing breakdown",
+    "url": "https://www.cargurus.com/research/articles/2026-genesis-g70-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "2026 G70 pricing (Cars.com)",
+    "url": "https://www.cars.com/articles/how-much-is-the-2026-genesis-g70-509279/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "genesis-g80",
@@ -13520,15 +13609,53 @@ export const VEHICLES = [
   "segment": "midsize luxury sedan",
   "category": "car",
   "priceFrom": 58450,
-  "priceTo": 74000,
+  "priceTo": 79350,
   "trims": [
    {
+    "name": "2.5T AWD",
+    "msrp": 58450,
+    "features": [
+     "300-hp 2.5L turbo I4, 8-speed automatic",
+     "Nappa leather seating",
+     "12.3-in digital cluster + 14.5-in touchscreen",
+     "Highway Driving Assist"
+    ]
+   },
+   {
     "name": "2.5T Advanced AWD",
-    "msrp": 58450
+    "msrp": 64040,
+    "features": [
+     "27-inch OLED display",
+     "Head-up display",
+     "Bang & Olufsen premium audio"
+    ]
+   },
+   {
+    "name": "2.5T Sport Prestige AWD",
+    "msrp": 69950,
+    "features": [
+     "Electronically controlled suspension",
+     "Heated & ventilated rear seats",
+     "Remote Smart Parking Assist"
+    ]
+   },
+   {
+    "name": "3.5T Sport Prestige AWD",
+    "msrp": 78350,
+    "features": [
+     "375-hp 3.5L twin-turbo V6",
+     "Sport-tuned suspension and steering",
+     "19-in alloy wheels"
+    ]
    },
    {
     "name": "3.5T Prestige Black AWD",
-    "msrp": 74000
+    "msrp": 79350,
+    "features": [
+     "Nappa leather with heated/ventilated rear seats",
+     "Mood curator ambient experience",
+     "Gloss black exterior trim"
+    ]
    }
   ],
   "powertrains": [
@@ -13594,8 +13721,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Refreshed for 2026; AWD now standard across the line and the Electrified G80 EV was discontinued for the US after 2025. Top-trim (3.5T Prestige Black) price approximate.",
+  "confidence": "high",
+  "notes": "Refreshed for 2026; AWD now standard across the line and the Electrified G80 EV was discontinued for the US after 2025 (Genesis will keep selling a refreshed G80 EV in other markets but not the US — re-confirmed this run via Cars.com/CarBuzz reporting, not just carried over from the prior note). Full 5-trim ladder (2.5T/2.5T Advanced/2.5T Sport Prestige/3.5T Sport Prestige/3.5T Prestige Black) rebuilt from 2 trims against two independent dealer-research sources whose destination-inclusive figures agree with each other to within $1,495 (the destination charge) on every trim.",
+  "sources": [
+   {
+    "label": "2026 G80 trim-by-trim MSRP",
+    "url": "https://www.genesisofedmond.com/blogs/5948/a-truly-safe-2026-genesis-g80-sedan/",
+    "site": "genesisofedmond.com"
+   },
+   {
+    "label": "2026 G80 trims & pricing",
+    "url": "https://www.carsdirect.com/genesis/g80/2026",
+    "site": "carsdirect.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -13619,15 +13758,35 @@ export const VEHICLES = [
   "segment": "full-size luxury sedan",
   "category": "car",
   "priceFrom": 92700,
-  "priceTo": 101500,
+  "priceTo": 106400,
   "trims": [
    {
     "name": "3.5T AWD",
-    "msrp": 92700
+    "msrp": 92700,
+    "features": [
+     "375-hp 3.5L twin-turbo V6, 8-speed automatic",
+     "Reclining VIP rear seats",
+     "Bang & Olufsen 3D audio",
+     "Multi-chamber air suspension"
+    ]
    },
    {
-    "name": "3.5T E-Supercharger AWD",
-    "msrp": 101500
+    "name": "3.5T E-SC AWD",
+    "msrp": 103000,
+    "features": [
+     "409-hp 3.5L twin-turbo V6 with 48V e-supercharger",
+     "Larger wheels",
+     "Additional premium amenities over base 3.5T"
+    ]
+   },
+   {
+    "name": "3.5T E-SC Prestige Black AWD",
+    "msrp": 106400,
+    "features": [
+     "Semi-aniline quilted leather upholstery",
+     "Floating center wheel caps",
+     "Dark interior/exterior trim, rear entertainment displays"
+    ]
    }
   ],
   "powertrains": [
@@ -13693,8 +13852,26 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Flagship sedan; new 3.5T Prestige Black-style features trickle in for 2026. Base price verified (~$92,700); e-supercharged top-trim price approximate."
+  "confidence": "high",
+  "notes": "Flagship sedan; full 3-trim ladder (3.5T/3.5T E-SC/3.5T E-SC Prestige Black) confirmed against CarGurus' destination-inclusive figures less the $1,495 destination charge. IIHS awarded the 2026 G90 a Top Safety Pick (one tier below Plus — Acceptable on the updated moderate-overlap-front test keeps it out of Plus); NHTSA has no 2026 record (Not Rated) — checked, not guessed.",
+  "sources": [
+   {
+    "label": "2026 G90 full trim pricing",
+    "url": "https://www.cargurus.com/research/articles/2026-genesis-g90-pricing-specs-release-date",
+    "site": "cargurus.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Genesis G90 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/genesis/g90-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "genesis-gv60",
@@ -13706,15 +13883,39 @@ export const VEHICLES = [
   "segment": "compact luxury electric SUV",
   "category": "suv",
   "priceFrom": 52525,
-  "priceTo": 70500,
+  "priceTo": 70380,
   "trims": [
    {
     "name": "Standard RWD",
-    "msrp": 52525
+    "msrp": 52525,
+    "features": [
+     "225-hp single-motor RWD, 84-kWh battery",
+     "Crystal Sphere rotating shifter",
+     "Fingerprint start",
+     "NACS charging port"
+    ]
+   },
+   {
+    "name": "AWD",
+    "msrp": 54530
+   },
+   {
+    "name": "Advanced AWD",
+    "msrp": 57910,
+    "features": [
+     "Face Connect facial-recognition entry",
+     "Bang & Olufsen audio",
+     "Digital key"
+    ]
    },
    {
     "name": "Performance AWD",
-    "msrp": 70500
+    "msrp": 70380,
+    "features": [
+     "429-hp dual-motor AWD, Boost mode (483 hp)",
+     "Electronically controlled suspension",
+     "Launch Control"
+    ]
    }
   ],
   "powertrains": [
@@ -13781,8 +13982,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Updated for 2026 with larger 84-kWh battery (RWD range up to 306 mi) and refreshed design. Base price verified; Performance top-trim price and some efficiency figures approximate.",
+  "confidence": "high",
+  "notes": "Updated for 2026 with larger 84-kWh battery (RWD range up to 306 mi per Genesis's own newsroom, which also confirms the $52,525 RWD base price used here) and refreshed design; named U.S. News' Best Compact Electric SUV. Full 4-trim ladder (RWD/AWD/Advanced/Performance) added — the AWD and Advanced middle trims stay confidence-medium-equivalent internally since two price-guide sources disagreed by a few hundred dollars on them (this run trusted the set that reconciled exactly with the confirmed RWD and Performance bookend prices) — re-check against an official per-trim press release in a future sweep.",
+  "sources": [
+   {
+    "label": "2026 GV60 official model page (base MSRP, range)",
+    "url": "https://www.genesisnewsusa.com/models/2026-gv60",
+    "site": "genesisnewsusa.com"
+   },
+   {
+    "label": "2026 GV60 trim pricing",
+    "url": "https://www.cargurus.com/research/articles/2026-genesis-gv60-pricing-specs-release-date",
+    "site": "cargurus.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -13804,16 +14017,52 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact luxury SUV",
   "category": "suv",
-  "priceFrom": 48985,
-  "priceTo": 67000,
+  "priceFrom": 47985,
+  "priceTo": 70095,
   "trims": [
    {
-    "name": "2.5T",
-    "msrp": 48985
+    "name": "2.5T AWD",
+    "msrp": 47985,
+    "features": [
+     "300-hp 2.5L turbo I4, 8-speed automatic",
+     "27-inch OLED display",
+     "Nappa leather quilted interior"
+    ]
    },
    {
-    "name": "3.5T Sport Prestige",
-    "msrp": 67000
+    "name": "2.5T Select AWD",
+    "msrp": 50885
+   },
+   {
+    "name": "2.5T Advanced AWD",
+    "msrp": 55435,
+    "features": [
+     "Head-up display",
+     "Remote Smart Parking Assist"
+    ]
+   },
+   {
+    "name": "2.5T Sport Prestige AWD",
+    "msrp": 58795,
+    "features": [
+     "Electronically controlled suspension with road preview",
+     "Heated & ventilated front and rear seats"
+    ]
+   },
+   {
+    "name": "3.5T Sport Advanced AWD",
+    "msrp": 63415,
+    "features": [
+     "375-hp 3.5L twin-turbo V6"
+    ]
+   },
+   {
+    "name": "3.5T Sport Prestige AWD",
+    "msrp": 70095,
+    "features": [
+     "Bang & Olufsen premium audio",
+     "Nappa leather quilted interior, massage front seats"
+    ]
    }
   ],
   "powertrains": [
@@ -13890,7 +14139,14 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling); base 2.5T price from Genesis' pricing announcement. 3.5T top-trim price approximate.",
+  "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling). Full 6-trim ladder (2.5T/2.5T Select/2.5T Advanced/2.5T Sport Prestige/3.5T Sport Advanced/3.5T Sport Prestige) rebuilt from 2 trims against Genesis's own U.S. pricing press release — prices exclude the $1,450 destination charge, per the release.",
+  "sources": [
+   {
+    "label": "Genesis official 2026 GV70 U.S. pricing announcement",
+    "url": "https://www.prnewswire.com/news-releases/genesis-reveals-us-pricing-for-newly-redesigned-gv70-suv-302393847.html",
+    "site": "prnewswire.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -13914,19 +14170,75 @@ export const VEHICLES = [
   "segment": "midsize luxury SUV",
   "category": "suv",
   "priceFrom": 57700,
-  "priceTo": 83900,
+  "priceTo": 89400,
   "trims": [
    {
     "name": "2.5T RWD",
-    "msrp": 57700
+    "msrp": 57700,
+    "features": [
+     "300-hp 2.5L turbo I4, 8-speed automatic",
+     "27-inch OLED display",
+     "Nappa leather seating"
+    ]
    },
    {
-    "name": "3.5T Prestige Black",
-    "msrp": 83900
+    "name": "2.5T AWD",
+    "msrp": 59850
+   },
+   {
+    "name": "2.5T Select AWD",
+    "msrp": 63750
+   },
+   {
+    "name": "2.5T Advanced AWD",
+    "msrp": 68600,
+    "features": [
+     "Second-row heated/ventilated seats",
+     "Three-row 7-seat option"
+    ]
+   },
+   {
+    "name": "2.5T Prestige AWD",
+    "msrp": 73500
+   },
+   {
+    "name": "3.5T Advanced AWD",
+    "msrp": 75950,
+    "features": [
+     "375-hp 3.5L twin-turbo V6"
+    ]
+   },
+   {
+    "name": "3.5T Prestige AWD",
+    "msrp": 82330,
+    "features": [
+     "Electronically controlled suspension with road preview",
+     "Remote Smart Parking Assist"
+    ]
+   },
+   {
+    "name": "3.5T Prestige Black AWD",
+    "msrp": 83900,
+    "features": [
+     "Microfiber suede headliner",
+     "Nappa leather with quilting"
+    ]
    },
    {
     "name": "GV80 Coupe 3.5T",
-    "msrp": 81850
+    "msrp": 81850,
+    "features": [
+     "Sleeker fastback roofline shares the GV80 nameplate",
+     "375-hp 3.5L twin-turbo V6"
+    ]
+   },
+   {
+    "name": "GV80 Coupe 3.5T E-SC Prestige Black",
+    "msrp": 89400,
+    "features": [
+     "409-hp 3.5L twin-turbo V6 with 48V e-supercharger",
+     "Nappa leather with quilting, gloss black exterior detailing"
+    ]
    }
   ],
   "powertrains": [
@@ -14008,7 +14320,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Sleeker GV80 Coupe (from $81,850, 409-hp e-SC available) shares the nameplate; cargo figures are for the standard SUV.",
+  "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Full SUV ladder expanded from 2 to 8 trims (2.5T RWD/AWD/Select/Advanced/Prestige, 3.5T Advanced/Prestige/Prestige Black) plus 2 GV80 Coupe trims (3.5T and the 409-hp E-SC Prestige Black) — every figure cross-checked against 2 independent dealer-research sources whose destination-inclusive prices agree to the dollar (after removing the $1,495 destination charge) with the already-confirmed RWD base and Prestige Black top prices. Cargo figures are for the standard SUV, not the Coupe.",
+  "sources": [
+   {
+    "label": "2026 GV80 full trim pricing",
+    "url": "https://www.cargurus.com/research/articles/2026-genesis-gv80-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "2026 GV80 trim-by-trim MSRP",
+    "url": "https://www.carsdirect.com/genesis/gv80/2026",
+    "site": "carsdirect.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
