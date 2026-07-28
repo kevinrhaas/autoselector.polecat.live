@@ -8,7 +8,7 @@ import { el } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { QUESTIONS, traitProfile, TRAIT_WORDS } from '../data/oracle.js';
-import { vtileGrid, emptyState } from './shared.js';
+import { vtile, vtileGrid, emptyState } from './shared.js';
 
 const KEEP = 0.72;   // fraction of the current pool kept per answered question
 const FLOOR = 6;     // never whittle below this many
@@ -28,7 +28,7 @@ export function renderOracle(view, ctx){
   view.append(wrap);
   wrap.append(el('div',{class:'finder-head'},[
     el('h2',{text:'Mind Reader'}),
-    el('p',{text:'Answer a few odd little questions — none of them are about cars, we promise. We’ll read your taste and quietly whittle the 2026 market down to you. Don’t like a question? Wave it off for another.'}),
+    el('p',{text:'Answer a few odd little questions — none of them are about cars, we promise. Tap every answer that feels like you (more than one is fine), and we’ll quietly whittle the 2026 market down to your taste. Don’t like a question? Wave it off for another.'}),
   ]));
   const counter = el('div',{class:'finder-count'},[
     el('span',{class:'fc-n', text:String(pool.length)}),
@@ -54,46 +54,60 @@ export function renderOracle(view, ctx){
   }
 
   // ---- render one question (optionally atop a whittle report) ----
-  function ask(report){
+  function ask(report, forceQ){
     syncViz(!!report);
     stage.innerHTML = '';
     if(report) stage.append(report);
 
-    if(pool.length<=FLOOR || asked.size>=QUESTIONS.length){ return results(); }
-    current = nextQuestion();
+    if(!forceQ && (pool.length<=FLOOR || asked.size>=QUESTIONS.length)){ return results(); }
+    current = forceQ || nextQuestion();
     if(!current){ return results(); }
 
     const card = el('div',{class:'q-card oracle-card'});
     card.append(el('div',{class:'oracle-kicker', text:`Question ${asked.size+1}`}));
     card.append(el('h3',{text:current.prompt}));
-    if(current.sub) card.append(el('div',{class:'q-sub', text:current.sub}));
+    card.append(el('div',{class:'q-sub', text: current.sub || 'Tap all that feel like you — more than one is welcome.'}));
     const opts = el('div',{class:'q-opts oracle-opts'});
+    const selected = new Set();
+    const lockBtn = el('button',{class:'btn primary sm', style:'display:none', onclick:()=>answer([...selected])});
+    const relabel = ()=>{ lockBtn.innerHTML = `${icon('check',14)} Lock in ${selected.size} pick${selected.size===1?'':'s'}`;
+      lockBtn.style.display = selected.size ? '' : 'none'; };
     current.opts.forEach(o=>{
-      opts.append(el('button',{class:'q-opt oracle-opt', onclick:()=>answer(o)},[
-        el('span',{text:o.t}),
-      ]));
+      const b = el('button',{class:'q-opt oracle-opt', 'aria-pressed':'false', onclick:()=>{
+        if(selected.has(o)) selected.delete(o); else selected.add(o);
+        const on = selected.has(o);
+        b.classList.toggle('sel', on); b.setAttribute('aria-pressed', String(on));
+        relabel();
+      }},[ el('span',{text:o.t}) ]);
+      opts.append(b);
     });
     card.append(opts);
 
     const foot = el('div',{class:'finder-foot', style:'margin-top:14px;flex-wrap:wrap;gap:8px'});
+    foot.append(lockBtn);
     foot.append(el('button',{class:'btn ghost sm', html:`${icon('refresh',14)} I don’t know — ask me something else`,
       onclick:()=>{ asked.add(current.id); ask(); }}));
     if(history.length) foot.append(el('button',{class:'btn ghost sm', html:`${icon('undo',14)} Undo last`, onclick:undo}));
-    if(pool.length<all.length) foot.append(el('button',{class:'btn sm', html:`${icon('check',14)} Reveal my matches`, onclick:results}));
+    if(pool.length<all.length) foot.append(el('button',{class:'btn ghost sm', html:`${icon('check',14)} Reveal my matches`, onclick:results}));
     card.append(foot);
     stage.append(card);
   }
 
   // ---- apply an answer: score, whittle, build the "why" report ----
-  function answer(o){
+  // `picks` is an array of selected options; their trait weights are summed so
+  // choosing more than one keeps every taste you leaned toward in the running.
+  function answer(picks){
+    if(!picks || !picks.length) return;
+    const combined = {};
+    for(const o of picks) for(const t in o.w) combined[t] = (combined[t]||0) + o.w[t];
+
     const before = pool.map(v=>v.id);
     const scoreBefore = new Map(score);
-    // per-vehicle delta this round
     const delta = new Map();
     for(const v of pool){
       const prof = traitProfile(v);
       let d = 0;
-      for(const t in o.w) d += o.w[t] * (prof[t]||0);
+      for(const t in combined) d += combined[t] * (prof[t]||0);
       delta.set(v.id, d);
       score.set(v.id, (score.get(v.id)||0) + d);
     }
@@ -107,7 +121,7 @@ export function renderOracle(view, ctx){
     history.push({ qid:current.id, before, scoreBefore });
     pool = kept;
 
-    const report = buildReport(o, delta, dropped, kept, before.length - kept.length);
+    const report = buildReport({ w:combined }, delta, dropped, kept, before.length - kept.length);
     ask(report);
   }
 
@@ -116,7 +130,8 @@ export function renderOracle(view, ctx){
     asked.delete(h.qid);
     for(const [k,v] of h.scoreBefore) score.set(k,v);
     pool = all.filter(v=>h.before.includes(v.id));
-    ask();
+    // re-present the very question that was just undone, so it can be re-answered
+    ask(null, QUESTIONS.find(q=>q.id===h.qid));
   }
 
   // ---- the reveal ----------------------------------------------------------
@@ -147,26 +162,41 @@ export function renderOracle(view, ctx){
   }
 
   // ---- results -------------------------------------------------------------
+  // We never whittle to a single car (the tail would be arbitrary). Instead we
+  // rank the finalists by cumulative affinity and crown a clear #1, then show
+  // the rest as runners-up — so "your match" is one car, not a mysterious six.
   function results(){
     syncViz();
     stage.innerHTML = '';
-    Store.recordFinderRun('Mind Reader', history.map(h=>({q:h.qid, a:'answered'})), pool.slice(0,24).map(v=>v.id));
+    const ranked = [...pool].sort((a,b)=> (score.get(b.id)) - (score.get(a.id)));
+    const top = ranked[0];
+    const rest = ranked.slice(1);
+    Store.recordFinderRun('Mind Reader', history.map(h=>({q:h.qid, a:'answered'})), ranked.slice(0,24).map(v=>v.id));
+
     const done = el('div',{class:'q-card', style:'text-align:center'});
-    done.append(el('h3',{text: pool.length===1 ? '🔮 One perfect match.' : `🔮 We read you: ${pool.length} vehicle${pool.length===1?'':'s'}`}));
-    done.append(el('div',{class:'q-sub', text: pool.length<=8
-      ? 'These rose to the top from a few odd little questions. Open any card for the full story.'
-      : 'A tight-ish read — answer a couple more questions to sharpen it, or dive into these.'}));
-    const foot = el('div',{class:'finder-foot'});
+    done.append(el('h3',{text: rest.length ? '🔮 We read you.' : '🔮 One perfect match.'}));
+    done.append(el('div',{class:'q-sub', text: rest.length
+      ? `Here’s your #1 match — and ${rest.length} more that fit. Tap any card for the full story.`
+      : 'Tap the card for the full story.'}));
+    const foot = el('div',{class:'finder-foot', style:'flex-wrap:wrap;gap:8px'});
     foot.append(el('button',{class:'btn', html:`${icon('refresh',15)} Read me again`, onclick:restart}));
-    if(asked.size<QUESTIONS.length && pool.length>FLOOR)
-      foot.append(el('button',{class:'btn ghost', html:`${icon('wand',15)} Ask another question`, onclick:()=>ask()}));
+    if(history.length) foot.append(el('button',{class:'btn ghost', html:`${icon('undo',15)} Go back a question`, onclick:undo}));
+    if(asked.size<QUESTIONS.length) foot.append(el('button',{class:'btn ghost', html:`${icon('wand',15)} Ask one more`, onclick:()=>ask(null, nextQuestion())}));
     done.append(foot);
     stage.append(done);
-    stage.append(el('div',{style:'margin-top:16px'},[
-      pool.length ? vtileGrid(pool.slice(0,24), ctx)
-        : emptyState({title:'Nothing left', body:'That got a little too specific — read me again.', icon:'wand'}),
-    ]));
-    if(pool.length<=8 && pool.length>0) import('../ui.js').then(m=>m.celebrate && m.celebrate(28));
+
+    if(top){
+      const win = el('div',{class:'oracle-winner'});
+      win.append(el('div',{class:'ow-badge', html:`${icon('trophy',14)} Your #1 match`}));
+      win.append(vtile(top, ctx));
+      stage.append(win);
+    }
+    if(rest.length){
+      stage.append(el('h3',{class:'oracle-rest-h', text:`The rest of your shortlist`}));
+      stage.append(vtileGrid(rest, ctx));
+    }
+    if(!top) stage.append(emptyState({title:'Nothing left', body:'That got a little too specific — read me again.', icon:'wand'}));
+    if(top) import('../ui.js').then(m=>m.celebrate && m.celebrate(28));
   }
 
   function restart(){

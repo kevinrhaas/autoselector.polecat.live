@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 37;
+export const DATA_VERSION = 38;
 
 export const VEHICLES = [
  {
@@ -21732,7 +21732,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-new for 2026 after a two-year hiatus; hybrid-only with standard AWD and 500+ miles of total range. Advertised prices of $36,995-$44,995 include the $1,995 destination fee; figures here exclude it. Some exterior dimensions not yet published."
+  "notes": "All-new for 2026 after a two-year hiatus; hybrid-only with standard AWD and 500+ miles of total range. Advertised prices of $36,995-$44,995 include the $1,995 destination fee; figures here exclude it. Some exterior dimensions not yet published. Re-verified this run: all 4 trims' MSRPs confirmed independently ($36,995/$39,995/$41,995/$44,995 destination-inclusive), unchanged from prior record.",
+  "sources": [
+   {
+    "label": "2026 trim pricing (Overland)",
+    "url": "https://cars.usnews.com/cars-trucks/jeep/cherokee/specs/cherokee-overland-4x4-479524",
+    "site": "usnews.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Jeep_Cherokee.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "jeep-compass",
@@ -21744,15 +21756,31 @@ export const VEHICLES = [
   "segment": "compact SUV",
   "category": "suv",
   "priceFrom": 28995,
-  "priceTo": 32890,
+  "priceTo": 34885,
   "trims": [
    {
     "name": "Latitude",
     "msrp": 28995
    },
    {
+    "name": "Latitude Altitude",
+    "msrp": 30990
+   },
+   {
     "name": "Limited",
     "msrp": 32890
+   },
+   {
+    "name": "Trailhawk",
+    "msrp": 33395,
+    "features": [
+     "Off-road suspension, tow hooks, skid plates",
+     "Remote start, heated steering wheel/front seats standard"
+    ]
+   },
+   {
+    "name": "Limited Altitude",
+    "msrp": 34885
    }
   ],
   "powertrains": [
@@ -21799,7 +21827,7 @@ export const VEHICLES = [
    "Heated front seats and steering wheel",
    "Alpine premium audio",
    "Power liftgate",
-   "Trailhawk off-road package",
+   "Trailhawk trim (Trail Rated off-road package)",
    "Adaptive cruise control"
   ],
   "towingLb": 2000,
@@ -21824,7 +21852,14 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Carryover of the current-generation Compass for 2026 in the US (10th model year); base Sport trim dropped, Latitude is the new entry trim. AWD standard. All-new next-gen Compass not yet on sale in the US.",
+  "notes": "Carryover of the current-generation Compass for 2026 in the US (10th model year); base Sport trim dropped, Latitude is the new entry trim. AWD standard. All-new next-gen Compass not yet on sale in the US. Full 5-trim ladder (Latitude/Latitude Altitude/Limited/Trailhawk/Limited Altitude) rebuilt from 2 trims — Stellantis's own pricing announcement matched exactly on the two trims already on file (Latitude $28,995, Limited $32,890) once each figure's $1,995 destination is subtracted, confirming the fee and the source; the three new trims' prices come from that same announcement. Trailhawk's price reflects a since-announced cut (Convenience Group features rolled into the base trim).",
+  "sources": [
+   {
+    "label": "2026 Compass pricing announcement",
+    "url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=27203&mid=",
+    "site": "media.stellantisnorthamerica.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -21886,7 +21921,7 @@ export const VEHICLES = [
    },
    {
     "name": "Mojave",
-    "msrp": 52000
+    "msrp": 53995
    },
    {
     "name": "Rubicon",
@@ -21954,7 +21989,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Only convertible pickup on sale; 3.6L V6 with 8-speed automatic is now the sole powertrain (manual discontinued). Max payload 1,720 lb. Prices exclude destination."
+  "notes": "Only convertible pickup on sale; 3.6L V6 with 8-speed automatic is now the sole powertrain (manual discontinued). Max payload 1,720 lb. Sahara joined the lineup for the first time ever (announced 2025-12-19), confirmed still available. Re-verified this run against CarsDirect's pricing table: corrected Mojave, which had been mistakenly set equal to Rubicon's $52,000 — it's actually $53,995 (CarsDirect's $55,990 destination-inclusive figure minus the confirmed $1,995 destination), one step above Rubicon and below Mojave X/Rubicon X (both correctly $59,995, which the source also shows tied). Sport/Sport S/Willys/Sahara/Rubicon/Mojave X/Rubicon X all matched exactly once destination was subtracted, confirming those five were already correct. Several special editions (Willys '41, 85th Anniversary, Rubicon Shadow Ops, Texas Trail) also exist as trim-level packages but are not separately modeled here. Prices exclude $1,995 destination.",
+  "sources": [
+   {
+    "label": "2026 trim pricing",
+    "url": "https://www.carsdirect.com/jeep/gladiator/2026",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "Sahara trim confirmed for 2026",
+    "url": "https://www.diehlofbutler.com/jeep-gladiator-finally-gets-the-sahara-trim/",
+    "site": "diehlofbutler.com"
+   }
+  ]
  },
  {
   "id": "jeep-grand-cherokee",
@@ -21971,6 +22018,25 @@ export const VEHICLES = [
    {
     "name": "Laredo",
     "msrp": 38415
+   },
+   {
+    "name": "Laredo X",
+    "msrp": 40910
+   },
+   {
+    "name": "Limited",
+    "msrp": 43815
+   },
+   {
+    "name": "Laredo Altitude",
+    "msrp": 43855,
+    "features": [
+     "First trim with the standard 2.0L turbo four"
+    ]
+   },
+   {
+    "name": "Limited Reserve",
+    "msrp": 51410
    },
    {
     "name": "Summit",
@@ -22038,7 +22104,7 @@ export const VEHICLES = [
    "Massaging front seats",
    "Rear-seat entertainment screens",
    "360-degree camera",
-   "Advanced off-road packages (Trailhawk-style 4x4 systems)"
+   "Quadra-Trac II 4x4 system"
   ],
   "towingLb": 6200,
   "image": {
@@ -22055,7 +22121,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Refreshed for 2026 with new styling and a 324-hp 2.0L Hurricane turbo four on upper trims (V6 remains on base trims); 4xe PHEV discontinued. Three-row Grand Cherokee L included in this record (adds ~$2,000-$3,000; seats 6-7). Dims shown are two-row. Prices exclude $1,995 destination.",
+  "notes": "Refreshed for 2026 with new styling; the 324-hp 2.0L Hurricane turbo four is standard from Laredo Altitude up (V6 remains on Laredo/Laredo X/Limited/Limited Reserve/Summit). 4xe PHEV discontinued, and with it the Trailhawk and Overland trims — both return for 2027 with the turbo four, confirmed absent from the 2026 lineup. Three-row Grand Cherokee L included in this record (adds ~$2,000-$3,000; seats 6-7). Dims shown are two-row. Full 6-trim ladder (Laredo/Laredo X/Laredo Altitude/Limited/Limited Reserve/Summit) rebuilt from 2 trims — CarsDirect's destination-inclusive pricing table matched exactly on the two trims already on file (Laredo $38,415, Summit $60,195) once $1,995 is subtracted, so the remaining four trims' prices come from that same table. Prices exclude $1,995 destination.",
   "sources": [
    {
     "label": "2026 model overview & features",
@@ -22076,6 +22142,16 @@ export const VEHICLES = [
     "label": "Towing & specs",
     "url": "https://www.jeep.com/grand-cherokee/specs.html",
     "site": "jeep.com"
+   },
+   {
+    "label": "2026 trim pricing",
+    "url": "https://www.carsdirect.com/jeep/grand-cherokee/2026",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "Trailhawk/Overland confirmed absent from 2026, returning for 2027",
+    "url": "https://www.detroitnews.com/story/business/autos/chrysler/2026/04/10/jeep-will-revive-trailhawk-trim-of-detroit-made-grand-cherokee-suv/89556724007/",
+    "site": "detroitnews.com"
    }
   ],
   "ratings": {
@@ -22119,7 +22195,7 @@ export const VEHICLES = [
   "segment": "full-size luxury SUV",
   "category": "suv",
   "priceFrom": 62145,
-  "priceTo": 93390,
+  "priceTo": 98795,
   "trims": [
    {
     "name": "Grand Wagoneer",
@@ -22130,8 +22206,34 @@ export const VEHICLES = [
     "msrp": 71140
    },
    {
+    "name": "Upland",
+    "msrp": 72140,
+    "features": [
+     "Two-speed transfer case",
+     "Air suspension"
+    ]
+   },
+   {
+    "name": "Limited Reserve",
+    "msrp": 77145,
+    "features": [
+     "Tri-pane sunroof",
+     "Body-color fender flares"
+    ]
+   },
+   {
     "name": "Summit Obsidian",
-    "msrp": 93390
+    "msrp": 93390,
+    "features": [
+     "20-way power-adjustable massaging seats"
+    ]
+   },
+   {
+    "name": "Summit Reserve",
+    "msrp": 98795,
+    "features": [
+     "Suede headliner"
+    ]
    }
   ],
   "powertrains": [
@@ -22211,7 +22313,14 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability. Prices exclude $2,595 destination.",
+  "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability (no configurator pricing yet). Full 6-trim ladder (Grand Wagoneer/Limited Altitude/Upland/Limited Reserve/Summit Obsidian/Summit Reserve) rebuilt from 3 trims — CarsDirect's destination-inclusive pricing table matched exactly on the two trims already on file (Grand Wagoneer $62,145, Summit Obsidian $93,390) once $2,595 is subtracted, so the remaining trims' prices (and the corrected, higher priceTo — Summit Reserve tops the range, not Summit Obsidian) come from that same table. Standard-wheelbase pricing shown throughout; the long-wheelbase Grand Wagoneer L variant of each trim adds ~$3,000 (see keyOptions). Prices exclude $2,595 destination.",
+  "sources": [
+   {
+    "label": "2026 trim pricing",
+    "url": "https://www.carsdirect.com/jeep/grand-wagoneer/2026",
+    "site": "carsdirect.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -22252,7 +22361,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 230
+    "evRangeMi": 222
    }
   ],
   "seats": [
@@ -22265,7 +22374,7 @@ export const VEHICLES = [
    "heightIn": null,
    "wheelbaseIn": 113,
    "curbWeightLb": 6112,
-   "groundClearanceIn": null
+   "groundClearanceIn": 9.1
   },
   "interior": {
    "passengerVolumeCuFt": null,
@@ -22292,8 +22401,25 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/e/ef/26_Jeep_Recon_Moab_AZIAS.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "All-new battery-electric off-roader launching for 2026 in a single loaded Moab trim; 650 hp, ~230-mile EPA-estimated range, DC fast charge 5-80% in under 30 minutes. Some specs (interior volumes, final EPA figures) not yet published. Price excludes $1,995 destination."
+  "confidence": "high",
+  "notes": "All-new battery-electric off-roader; went on sale 2026-06 in a single loaded Moab trim at the previously-estimated $65,000, confirmed via its official on-sale pricing announcement. Official EPA range came in at 222 miles (below Stellantis's earlier ~230-mile estimate — raised to high confidence now that this is the final certified figure, not a pre-launch estimate); 650 hp, DC fast charge 5-80% in under 30 minutes. Ground clearance confirmed at 9.1 in (also: 33.8° approach / 23.3° breakover / 33.1° departure angles). Interior volumes and remaining dims (width, height) still not published. Price excludes $1,995 destination.",
+  "sources": [
+   {
+    "label": "On-sale pricing announcement",
+    "url": "https://electrek.co/2026/06/26/jeep-recon-ev-on-sale-67000-with-limited-range/",
+    "site": "electrek.co"
+   },
+   {
+    "label": "Official EPA range (222 mi)",
+    "url": "https://evchargingstations.com/chargingnews/2026-jeep-recon-moabs-range/",
+    "site": "evchargingstations.com"
+   },
+   {
+    "label": "Specs & ground clearance",
+    "url": "https://carbuzz.com/2026-jeep-recon-specs-pricing/",
+    "site": "carbuzz.com"
+   }
+  ]
  },
  {
   "id": "jeep-wrangler",
@@ -22312,8 +22438,27 @@ export const VEHICLES = [
     "msrp": 34895
    },
    {
+    "name": "Sport S",
+    "msrp": 39240
+   },
+   {
     "name": "Willys",
     "msrp": 42715
+   },
+   {
+    "name": "Rubicon",
+    "msrp": 45970
+   },
+   {
+    "name": "Sahara",
+    "msrp": 48895,
+    "features": [
+     "2.0L turbo four standard (4-door only)"
+    ]
+   },
+   {
+    "name": "Rubicon X",
+    "msrp": 57320
    },
    {
     "name": "Moab 392",
@@ -22331,6 +22476,18 @@ export const VEHICLES = [
      "4WD"
     ],
     "mpgCombined": 20,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "2.0L turbo I4",
+    "hp": 270,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "4WD"
+    ],
+    "mpgCombined": 21,
     "evRangeMi": null
    },
    {
@@ -22395,7 +22552,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "4xe plug-in hybrid discontinued for 2026; new Moab 392 (and Willys 392) replace Rubicon 392. Offered as 2-door (seats 4) and 4-door (seats 5); dims shown are 4-door. 85th Anniversary editions available. Prices exclude $1,995 destination.",
+  "notes": "4xe plug-in hybrid discontinued for 2026; Moab 392 replaces Rubicon 392 as the sole V8 trim. Offered as 2-door (seats 4) and 4-door (seats 5); dims shown are 4-door; Sahara and Moab 392 are 4-door only. 85th Anniversary editions available. Full 7-trim ladder (Sport/Sport S/Willys/Rubicon/Sahara/Rubicon X/Moab 392) confirmed against Stellantis's official 2026 Wrangler press release (trim names) cross-checked with CarsDirect's pricing table, which matched exactly on the two trims already on file (Sport $34,895, Moab 392 $79,995 once each source's destination-inclusive figure has $1,995 subtracted) — the remaining trims' prices come from that same table. Added the 270-hp 2.0L turbo four (standard on Sahara) as a third powertrain option alongside the V6 and Moab 392's V8. Prices exclude $1,995 destination.",
   "sources": [
    {
     "label": "2026 model overview & features",
@@ -22403,14 +22560,19 @@ export const VEHICLES = [
     "site": "jeep.com"
    },
    {
+    "label": "What's New for 2026: Jeep Wrangler (official trim lineup)",
+    "url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=27217&mid=1",
+    "site": "media.stellantisnorthamerica.com"
+   },
+   {
     "label": "EPA fuel economy",
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Jeep_Wrangler.shtml",
     "site": "fueleconomy.gov"
    },
    {
-    "label": "2026 pricing & trims",
-    "url": "https://www.edmunds.com/jeep/wrangler/2026/",
-    "site": "edmunds.com"
+    "label": "2026 trim pricing",
+    "url": "https://www.carsdirect.com/jeep/wrangler/2026",
+    "site": "carsdirect.com"
    }
   ],
   "ratings": {

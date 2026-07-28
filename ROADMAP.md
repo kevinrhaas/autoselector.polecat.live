@@ -472,7 +472,34 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   Cross is notably Poor on moderate overlap front and side crash despite its
   5-star NHTSA rating. Sources arrays added to all four models for the first
   time; Outlander raised to confidence high.)
-- [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
+- [x] Jeep (2026-07-28 — all 7 models re-verified, see js/changelog.js v66:
+  Wrangler grew from 3 to 7 trims — added Sport S, Rubicon, Sahara, Rubicon X
+  — and picked up the 270-hp 2.0L turbo four (standard on Sahara) alongside
+  the V6 and Moab 392's V8; Grand Cherokee grew from 2 to 6 (Laredo X,
+  Limited, Laredo Altitude, Limited Reserve added), also confirming Trailhawk
+  and Overland are genuinely absent for 2026 — both fell with the 4xe and
+  return for 2027 with the turbo four — and fixing a keyOption that still
+  referenced Trailhawk-style 4x4 as a 2026 feature. Grand Wagoneer grew from
+  3 to 6 (Upland, Limited Reserve, Summit Reserve added); Summit Reserve, not
+  Summit Obsidian, is the actual top trim, so priceTo rose $93,390 → $98,795.
+  Compass grew from 2 to 5 (Latitude Altitude, Trailhawk, Limited Altitude
+  added) against Stellantis's own pricing announcement, which also confirmed
+  the $1,995 destination fee by matching both existing trims exactly.
+  Gladiator: found and fixed a real bug — Mojave had been mistakenly priced
+  identically to Rubicon at $52,000 when it's actually $53,995, one step
+  above Rubicon; also confirmed Sahara's first-ever addition to the lineup
+  (announced 2025-12-19) is still current. Recon's range is now EPA-certified
+  at 222 mi (down from the ~230-mi pre-launch estimate) now that it's on
+  sale — raised to confidence high, plus its confirmed 9.1-in ground
+  clearance and approach/breakover/departure angles. Cherokee's existing
+  4-trim ladder was independently re-verified and found already exactly
+  correct — no changes needed there. jeep.com, edmunds.com and kbb.com all
+  blocked automated fetches (403) throughout, so verification relied on
+  Stellantis's own press releases/announcements, CarsDirect, and a handful
+  of single-model spec/news sites — each new figure was checked against
+  destination-inclusive prices matching the existing on-file MSRPs exactly
+  before being trusted for the remaining, previously-missing trims.)
+- [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
