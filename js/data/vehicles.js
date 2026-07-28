@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 36;
+export const DATA_VERSION = 37;
 
 export const VEHICLES = [
  {
@@ -33022,7 +33022,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Minimal changes for 2026 (embedded navigation deleted; hood badging added on SEL trims). Mirage was discontinued after 2025, leaving Mitsubishi with a four-model US lineup.",
+  "notes": "Minimal changes for 2026 (embedded navigation deleted; hood badging added on SEL trims). Mirage was discontinued after 2025, leaving Mitsubishi with a four-model US lineup. Re-verified 2026-07-28: pricing/trims/powertrain all confirmed unchanged. IIHS has published full ratings (checked, not previously recorded) but the Eclipse Cross does not qualify for Top Safety Pick — Poor in moderate overlap front, side crash, and seat belt reminders, despite the Good small-overlap-front score and the 5-star NHTSA overall.",
+  "sources": [
+   {
+    "label": "Mitsubishi Motors - 2026 Eclipse Cross",
+    "url": "https://www.mitsubishicars.com/cars-and-suvs/eclipse-cross",
+    "site": "mitsubishicars.com"
+   },
+   {
+    "label": "2026 Mitsubishi Eclipse Cross Prices, Reviews, and Pictures",
+    "url": "https://www.edmunds.com/mitsubishi/eclipse-cross/",
+    "site": "edmunds.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -33045,7 +33057,7 @@ export const VEHICLES = [
   "segment": "compact 3-row SUV",
   "category": "suv",
   "priceFrom": 29995,
-  "priceTo": 42645,
+  "priceTo": 43045,
   "trims": [
    {
     "name": "ES",
@@ -33053,27 +33065,27 @@ export const VEHICLES = [
    },
    {
     "name": "LE",
-    "msrp": 31995
+    "msrp": 32345
    },
    {
     "name": "SE",
-    "msrp": 33995
+    "msrp": 34345
    },
    {
     "name": "SEL",
-    "msrp": 38695
+    "msrp": 39045
    },
    {
     "name": "Trail Edition",
-    "msrp": 39295
+    "msrp": 39645
    },
    {
     "name": "Ralliart",
-    "msrp": 39295
+    "msrp": 39645
    },
    {
     "name": "Black Edition",
-    "msrp": 42645
+    "msrp": 43045
    }
   ],
   "powertrains": [
@@ -33129,8 +33141,25 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/9/99/2022_Mitsubishi_Outlander_SE_S-AWC%2C_07-29-2022.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small.",
+  "confidence": "high",
+  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid: 174 hp / 206 lb-ft, 28 mpg combined FWD (27 combined AWD) — now confirmed final, no longer a pending estimate. Third row is very small. Re-verified 2026-07-28: every trim above base ES carries a real ~$350 mid-model-year price increase (LE/SE/SEL/Trail Edition/Ralliart/Black Edition all up), confirmed against two independent current sources; ES is unchanged. IIHS has published 2026 ratings (Good on small overlap front and the updated side test) but no Top Safety Pick award; NHTSA still has no distinct 2026 record, so the carried-over 2025 4-star rating stays the best citable figure.",
+  "sources": [
+   {
+    "label": "2026 Mitsubishi Outlander - Specs, Prices, MPG, Reviews & Photos",
+    "url": "https://www.cars.com/research/mitsubishi-outlander-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 Mitsubishi Outlander Trim Levels, Pricing & Specs",
+    "url": "https://trimatlas.com/compare/mitsubishi/outlander/2026/",
+    "site": "trimatlas.com"
+   },
+   {
+    "label": "Mitsubishi's New Hybrid Outlander Makes 174 HP And Barely Cracks 28 MPG",
+    "url": "https://www.carscoops.com/2026/04/2026-mitsubishi-outlander-hybrid/",
+    "site": "carscoops.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -33160,6 +33189,14 @@ export const VEHICLES = [
     "msrp": 43245
    },
    {
+    "name": "SE",
+    "msrp": 45445
+   },
+   {
+    "name": "SEL",
+    "msrp": 48945
+   },
+   {
     "name": "Black Edition",
     "msrp": 53695
    }
@@ -33175,7 +33212,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": 73,
-    "evRangeMi": 44
+    "evRangeMi": 45
    }
   ],
   "seats": [
@@ -33217,7 +33254,24 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Mid-cycle refresh for 2026: bigger 22.7 kWh battery, 44-mile EPA electric range (up from 38), 73 MPGe, more power. Trim ladder is ES, SE, SEL, Black Edition."
+  "notes": "Mid-cycle refresh for 2026: bigger 22.7 kWh battery, 45-mile EPA electric range (up from 38, corrected from a previously recorded 44), 73 MPGe, more power (297 hp total system, up from 248). Re-verified 2026-07-28: full retail trim ladder is ES/SE/SEL/Black Edition — SE and SEL were missing from the record; a fifth \"ES Fleet\" trim exists but is fleet-only, not sold at retail, so it's excluded here. NHTSA has no star rating for either the 2025 or 2026 PHEV (both explicitly \"Not Rated\"); IIHS shows Good scores on small overlap front, the updated side test, and headlights but no Top Safety Pick award — checked, not guessed, so no rating recorded either way.",
+  "sources": [
+   {
+    "label": "2026 Mitsubishi Outlander PHEV - Specs, Prices, MPG, Range, Reviews & Photos",
+    "url": "https://www.cars.com/research/mitsubishi-outlander_phev-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 Mitsubishi Outlander PHEV Trim Levels, Pricing & Specs",
+    "url": "https://trimatlas.com/compare/mitsubishi/outlander-phev/2026/",
+    "site": "trimatlas.com"
+   },
+   {
+    "label": "2026 Mitsubishi Outlander Plug-In Hybrid Mid-Cycle Refresh Pricing To Start At $43,245",
+    "url": "https://www.prnewswire.com/news-releases/2026-mitsubishi-outlander-plug-in-hybrid-mid-cycle-refresh-pricing-to-start-at-43-245--302713854.html",
+    "site": "prnewswire.com"
+   }
+  ]
  },
  {
   "id": "mitsubishi-outlander-sport",
@@ -33324,7 +33378,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Carries over for 2026 with a new budget S trim and Trail Edition; AWD now standard. Design dates to 2011, making it one of the oldest vehicles on sale.",
+  "notes": "Carries over for 2026 with a new budget S trim and Trail Edition; AWD now standard. Design dates to 2011, making it one of the oldest vehicles on sale. Re-verified 2026-07-28: pricing/trims/powertrains all confirmed unchanged against two independent sources. IIHS rating is incomplete (tested one side only on small overlap front, no award status published).",
+  "sources": [
+   {
+    "label": "2026 Mitsubishi Outlander Sport Prices, Reviews, and Pictures",
+    "url": "https://www.edmunds.com/mitsubishi/outlander-sport/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Mitsubishi Outlander Sport Specs & Trims",
+    "url": "https://carbuzz.com/cars/mitsubishi/outlander-sport/2026/specs-and-trims/",
+    "site": "carbuzz.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 4,
