@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 27;
+export const DATA_VERSION = 28;
 
 export const VEHICLES = [
  {
@@ -13512,19 +13512,47 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Elevation",
-    "msrp": 43800
+    "msrp": 43800,
+    "features": [
+     "15-inch diagonal touchscreen infotainment",
+     "11-inch digital driver display",
+     "Bose 12-speaker premium audio",
+     "Standard trailering package, 5,000 lb tow rating",
+     "LED headlamps",
+     "19+ standard driver-assistance features"
+    ]
    },
    {
     "name": "AT4",
-    "msrp": 52500
+    "msrp": 52500,
+    "features": [
+     "18-inch dark-machined aluminum wheels",
+     "Lifted, off-road-tuned ride height",
+     "AT4 exterior styling and skid-plate cues",
+     "All Elevation equipment carried over",
+     "Available Super Cruise hands-free driving"
+    ]
    },
    {
     "name": "Denali",
-    "msrp": 55900
+    "msrp": 55900,
+    "features": [
+     "Ventilated front seats",
+     "Head-up display",
+     "Exclusive 20-inch machine-finished aluminum wheels",
+     "Denali chrome and interior trim upgrades",
+     "Available Super Cruise hands-free driving"
+    ]
    },
    {
     "name": "Denali Ultimate",
-    "msrp": 63100
+    "msrp": 63100,
+    "features": [
+     "Super Cruise hands-free driving standard",
+     "New range-topping trim for 2026",
+     "Denali Ultimate-exclusive interior appointments",
+     "Passive-entry key card"
+    ]
    }
   ],
   "powertrains": [
@@ -13580,8 +13608,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Acadia%20Denali%20front%20view.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination.",
+  "confidence": "high",
+  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Verified trim lineup and per-trim MSRP (Elevation $43,800 / AT4 $52,500 / Denali $55,900 / Denali Ultimate $63,100, all excluding destination) against GM Authority's Jan 2026 pricing update and Edmunds/dealer listings 2026-07-28 — figures unchanged from prior record. Destination freight charge confirmed at $1,995. Color swatches could not be verified from an accessible source, so left out rather than guessed.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -13593,7 +13621,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 GMC Acadia Gets MSRP And DFC Price Increases",
+    "url": "https://gmauthority.com/blog/2026/01/2026-gmc-acadia-gets-msrp-and-dfc-price-increases/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 GMC Acadia Prices, Reviews, and Pictures",
+    "url": "https://www.edmunds.com/gmc/acadia/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 GMC Acadia MSRP, Trim Levels, Pricing, Features",
+    "url": "https://www.spitzer.com/2026-gmc-acadia-trim-levels-and-prices/",
+    "site": "spitzer.com"
+   }
+  ]
  },
  {
   "id": "gmc-canyon",
@@ -13605,23 +13650,52 @@ export const VEHICLES = [
   "segment": "midsize pickup",
   "category": "truck",
   "priceFrom": 38900,
-  "priceTo": 57300,
+  "priceTo": 57200,
   "trims": [
    {
     "name": "Elevation",
-    "msrp": 38900
+    "msrp": 38900,
+    "features": [
+     "2.7L Turbo I4, 310 hp standard",
+     "11.3-inch touchscreen infotainment",
+     "Wireless Apple CarPlay/Android Auto",
+     "LED headlamps",
+     "Advanced driver-assistance safety suite",
+     "Available in 4x2 or 4x4"
+    ]
    },
    {
     "name": "AT4",
-    "msrp": 44300
+    "msrp": 45400,
+    "features": [
+     "Standard 4WD with off-road-tuned suspension",
+     "All-terrain tires and underbody skid plates",
+     "Hill descent control",
+     "Heated front seats",
+     "AT4 off-road exterior styling"
+    ]
    },
    {
     "name": "Denali",
-    "msrp": 52300
+    "msrp": 53000,
+    "features": [
+     "Premium chrome exterior accents",
+     "Leather seating, heated/ventilated front seats",
+     "Bose premium audio system",
+     "Wireless device charging",
+     "Advanced driver-assistance technology"
+    ]
    },
    {
     "name": "AT4X",
-    "msrp": 57300
+    "msrp": 57200,
+    "features": [
+     "Multimatic DSSV dampers (Jounce Control added for 2026)",
+     "Front and rear electronic locking differentials",
+     "33-inch mud-terrain tires",
+     "Underbody skid-plate armor",
+     "Baja off-road drive mode"
+    ]
    }
   ],
   "powertrains": [
@@ -13676,8 +13750,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_GMC_Canyon.jpg",
    "credit": "42-BRT"
   },
-  "confidence": "medium",
-  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination.",
+  "confidence": "high",
+  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Confirmed and corrected mid-year MSRPs 2026-07-28 (all excluding destination): Elevation unchanged at $38,900; AT4 raised from $44,300 to $45,400; Denali raised from $52,300 to $53,000; AT4X corrected to $57,200. Destination freight charge confirmed at $2,095, unchanged.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -13688,7 +13762,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 GMC Canyon Gets A Price Bump With Minor Updates",
+    "url": "https://carbuzz.com/pricing-2026-gmc-canyon-updates-details/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "How Much Is The Most Expensive 2026 GMC Canyon?",
+    "url": "https://gmauthority.com/blog/2026/01/how-much-is-the-most-expensive-2026-gmc-canyon/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 GMC Canyon Trim Levels & MSRP",
+    "url": "https://www.spitzer.com/2026-gmc-canyon-trim-levels-and-prices/",
+    "site": "spitzer.com"
+   }
+  ]
  },
  {
   "id": "gmc-hummer-ev-pickup",
@@ -13699,16 +13790,32 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "electric off-road super truck",
   "category": "truck",
-  "priceFrom": 94910,
-  "priceTo": 105705,
+  "priceFrom": 97200,
+  "priceTo": 105300,
   "trims": [
    {
     "name": "2X",
-    "msrp": 94910
+    "msrp": 97200,
+    "features": [
+     "Dual-motor 4WD, 570 hp / 7,400 lb-ft torque",
+     "20-module battery pack, GM-est. up to 316 mi range",
+     "Adaptive Air suspension",
+     "King Crab mode (four-wheel steer/CrabWalk) standard for 2026",
+     "Removable Infinity Roof panels",
+     "UltraVision underbody cameras"
+    ]
    },
    {
     "name": "3X",
-    "msrp": 105705
+    "msrp": 105300,
+    "features": [
+     "Tri-motor 4WD, 830 hp / 11,500 lb-ft torque",
+     "24-module battery pack option, GM-est. up to ~363 mi range",
+     "Watts to Freedom launch mode, 0-60 mph in 2.8s",
+     "King Crab mode standard",
+     "Extreme Off-Road Package (35-in tires) available",
+     "Removable Infinity Roof panels"
+    ]
    }
   ],
   "powertrains": [
@@ -13722,19 +13829,19 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 311
+    "evRangeMi": 316
    },
    {
     "type": "ev",
     "engine": "Tri-motor AWD (3X)",
-    "hp": 800,
+    "hp": 830,
     "transmission": "1-speed direct",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 381
+    "evRangeMi": 363
    }
   ],
   "seats": [
@@ -13775,7 +13882,24 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Prices back-calculated from advertised MSRPs minus ~$2,290 destination. Curb weight over 9,000 lb; 3X range varies by battery/tires."
+  "notes": "Prices verified 2026-07-28 against GM Authority's pricing bulletins: 2X $97,200 / 3X $105,300 (excl. destination), now matching the SUV exactly after GM's Dec 2025/Jan 2026 price increase. Destination freight charge corrected to $2,695 (was assumed ~$2,290). 3X horsepower corrected to 830 (was 800, confirmed across multiple 2026 spec sheets — 1,160 hp is a temporary Watts-to-Freedom/Carbon-Fiber-Edition peak, not the standard rating). GM-estimated range: 2X 316 mi, 3X 363 mi (24-module battery). Curb weight over 9,000 lb. Re-checked api.nhtsa.gov and iihs.org for a 2026 rating — none published.",
+  "sources": [
+   {
+    "label": "2026 Hummer EV price increase (base MSRP + destination detail)",
+    "url": "https://gmauthority.com/blog/2026/01/2026-gmc-hummer-ev-gets-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Hummer EV Pickup pricing with options/packages",
+    "url": "https://gmauthority.com/blog/2025/08/here-is-2026-gmc-hummer-ev-pickup-pricing-with-options-and-packages/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Hummer EV Pickup colors",
+    "url": "https://gmauthority.com/blog/2025/10/here-are-all-the-2026-gmc-hummer-ev-pickup-colors/",
+    "site": "gmauthority.com"
+   }
+  ]
  },
  {
   "id": "gmc-hummer-ev-suv",
@@ -13786,16 +13910,31 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "electric off-road SUV",
   "category": "suv",
-  "priceFrom": 94910,
-  "priceTo": 103010,
+  "priceFrom": 97200,
+  "priceTo": 105300,
   "trims": [
    {
     "name": "2X",
-    "msrp": 94910
+    "msrp": 97200,
+    "features": [
+     "Dual AC electric motors, 570 hp / 7,400 lb-ft torque",
+     "GM-est. up to 319 mi range",
+     "CrabWalk four-wheel steer, King Crab mode standard for 2026",
+     "Adaptive Air suspension / Extract Mode",
+     "Removable Infinity Roof panels",
+     "UltraVision underbody cameras"
+    ]
    },
    {
     "name": "3X",
-    "msrp": 103010
+    "msrp": 105300,
+    "features": [
+     "Triple AC electric motors, 830 hp / 11,500 lb-ft torque",
+     "GM-est. up to 310 mi range",
+     "Extreme Off-Road Package available",
+     "CrabWalk four-wheel steer, King Crab mode standard",
+     "Rear-mounted spare-tire carrier standard"
+    ]
    }
   ],
   "powertrains": [
@@ -13809,7 +13948,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 283
+    "evRangeMi": 319
    },
    {
     "type": "ev",
@@ -13821,7 +13960,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 314
+    "evRangeMi": 310
    }
   ],
   "seats": [
@@ -13862,7 +14001,24 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Shorter wheelbase than the pickup; exterior-mounted spare carrier is standard on SUV. Prices exclude ~$2,290 destination; ranges vary by configuration."
+  "notes": "Shorter wheelbase than the pickup; exterior-mounted spare carrier is standard on SUV. Prices verified 2026-07-28: 2X $97,200 / 3X $105,300 (excl. destination) — SUV pricing has converged with the Pickup's after GM's Dec 2025/Jan 2026 increase (SUV 3X was previously cheaper). Destination freight charge corrected to $2,695. GM-estimated range updated: 2X 319 mi, 3X 310 mi. EPA has not yet published 2026 figures. Re-checked api.nhtsa.gov and iihs.org for a 2026 rating — none published.",
+  "sources": [
+   {
+    "label": "2026 Hummer EV price increase (SUV base MSRP + destination detail)",
+    "url": "https://gmauthority.com/blog/2026/01/2026-gmc-hummer-ev-gets-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Hummer EV SUV pricing with options/packages",
+    "url": "https://gmauthority.com/blog/2025/09/here-is-2026-gmc-hummer-ev-suv-pricing-with-options-and-packages/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Hummer EV SUV trims (2X/3X MSRP confirmation)",
+    "url": "https://www.cars.com/research/gmc-hummer_ev_suv-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "gmc-sierra-1500",
@@ -14078,19 +14234,41 @@ export const VEHICLES = [
   "segment": "full-size electric pickup",
   "category": "truck",
   "priceFrom": 62400,
-  "priceTo": 99000,
+  "priceTo": 98600,
   "trims": [
    {
     "name": "Elevation",
-    "msrp": 62400
+    "msrp": 62400,
+    "features": [
+     "Standard Range battery: 605 hp, ~283 mi range",
+     "Extended Range battery option: 645 hp, ~410 mi range",
+     "MultiPro Midgate cab pass-through",
+     "10.2 kW PowerBase offboard power",
+     "Available Super Cruise"
+    ]
    },
    {
     "name": "AT4",
-    "msrp": 79800
+    "msrp": 79300,
+    "features": [
+     "Extended Range battery: 625 hp",
+     "Max Range battery option: 725 hp, GM-est. up to 478 mi range",
+     "35-in all-terrain tires, +2 in ground clearance vs Elevation",
+     "Red front recovery hooks",
+     "Available 4-Wheel Steer with CrabWalk"
+    ]
    },
    {
     "name": "Denali Max Range",
-    "msrp": 99000
+    "msrp": 98600,
+    "features": [
+     "760 hp / 785 lb-ft torque on Max Range battery",
+     "GM-est. up to 478 mi range",
+     "Air Ride adaptive suspension",
+     "Four-wheel steer with CrabWalk",
+     "Super Cruise",
+     "10.2 kW PowerBase offboard power"
+    ]
    }
   ],
   "powertrains": [
@@ -14104,7 +14282,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 460
+    "evRangeMi": 478
    }
   ],
   "seats": [
@@ -14144,8 +14322,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Sierra%20EV%20Denali%20front%20view.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination.",
+  "confidence": "high",
+  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Prices corrected 2026-07-28: AT4 $79,800→$79,300, Denali Max Range $99,000→$98,600 (excl. destination), cross-validated by matching GM's destination-inclusive prices minus the current $2,595 destination freight charge (up $500 from $2,095 in Dec 2025). Max Range GM-estimated range corrected to 478 mi (was 460).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -14156,7 +14334,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Sierra EV destination freight charge increase",
+    "url": "https://gmauthority.com/blog/2026/01/2026-gmc-sierra-ev-gets-freight-charge-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Sierra EV adds AT4 and Elevation trims",
+    "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2025/mar/0327-2026-gmc-sierra-ev.html",
+    "site": "news.gm.com"
+   },
+   {
+    "label": "GMC Sierra EV adds less-expensive AT4 and Elevation trims for 2026",
+    "url": "https://www.edmunds.com/car-news/2026-gmc-sierra-ev-pricing.html",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "gmc-sierra-hd",
@@ -14168,35 +14363,84 @@ export const VEHICLES = [
   "segment": "heavy-duty pickup",
   "category": "truck",
   "priceFrom": 47000,
-  "priceTo": 99300,
+  "priceTo": 93800,
   "trims": [
    {
     "name": "Pro",
-    "msrp": 47000
+    "msrp": 47000,
+    "features": [
+     "6.6L V8 gas engine standard",
+     "7-inch touchscreen with Apple CarPlay/Android Auto",
+     "Trailering Package with integrated trailer brake controller",
+     "Trailering mirrors",
+     "Wi-Fi hotspot"
+    ]
    },
    {
     "name": "SLE",
-    "msrp": 55500
+    "msrp": 53500,
+    "features": [
+     "Larger touchscreen infotainment display",
+     "Up to 13 available trailering camera views",
+     "MultiPro tailgate available",
+     "Traction management system",
+     "Upgraded cloth seating"
+    ]
    },
    {
     "name": "SLT",
-    "msrp": 64500
+    "msrp": 64700,
+    "features": [
+     "ProGrade Trailering System with in-vehicle trailering app",
+     "Heated front seats and steering wheel",
+     "Available leather-appointed seating",
+     "MultiPro tailgate available",
+     "Remote start"
+    ]
    },
    {
     "name": "AT4",
-    "msrp": 71500
+    "msrp": 71600,
+    "features": [
+     "Off-road-tuned suspension",
+     "Underbody skid plates",
+     "20-inch off-road wheels",
+     "Adaptive cruise control",
+     "Duramax diesel available"
+    ]
    },
    {
     "name": "Denali",
-    "msrp": 76500
+    "msrp": 75000,
+    "features": [
+     "Chrome exterior accents",
+     "Heated and ventilated leather seats",
+     "Premium trailering technology",
+     "Denali-exclusive grille and badging",
+     "Duramax diesel available"
+    ]
    },
    {
     "name": "AT4X",
-    "msrp": 88500
+    "msrp": 83700,
+    "features": [
+     "Factory 1.5-in suspension lift",
+     "Multimatic DSSV dampers",
+     "Rear electronic-locking differential",
+     "35-in mud-terrain tires",
+     "Full-grain leather interior"
+    ]
    },
    {
     "name": "Denali Ultimate",
-    "msrp": 99300
+    "msrp": 93800,
+    "features": [
+     "Alpine Umber full-grain leather interior",
+     "16-way power massaging front seats",
+     "Head-up display",
+     "Upgraded Bose premium audio",
+     "Wood interior trim accents"
+    ]
    }
   ],
   "powertrains": [
@@ -14266,8 +14510,25 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Sierra%202500HD%20Denali%20front%20view.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Single record covering Sierra 2500HD and 3500HD. Max tow is 3500HD dually diesel gooseneck; 2500HD up to ~22,500 lb. Mid/top prices approximate, exclude destination."
+  "confidence": "high",
+  "notes": "Single record covering Sierra 2500HD and 3500HD. Max tow is 3500HD dually diesel gooseneck; 2500HD up to ~22,500 lb. Trim MSRPs re-verified 2026-07-28 against three independent GM dealer-data sources (converged within ~$200/trim); Denali, AT4X, and Denali Ultimate corrected down from earlier overstated estimates. All trim prices exclude the $2,795 destination freight charge. No NHTSA or IIHS rating exists for the 2026 Sierra HD — reconfirmed via a live api.nhtsa.gov query (0 results); HD trucks over ~8,500 lb GVWR are exempt from NCAP testing.",
+  "sources": [
+   {
+    "label": "2026 GMC Sierra HD Trim Levels Explained",
+    "url": "https://www.weirsgmc.com/blogs/8231/2026-gmc-sierra-hd-trim-levels/",
+    "site": "weirsgmc.com"
+   },
+   {
+    "label": "2026 GMC Sierra HD MSRP, Trim Levels",
+    "url": "https://www.spitzergmcdubois.com/gmc-information-and-research/2026-gmc-sierra-hd-trim-levels-and-prices/",
+    "site": "spitzergmcdubois.com"
+   },
+   {
+    "label": "2026 GMC Sierra 2500HD Pricing, Specs, and Release Date",
+    "url": "https://www.cargurus.com/research/articles/2026-gmc-sierra-2500hd-pricing-specs-release-date",
+    "site": "cargurus.com"
+   }
+  ]
  },
  {
   "id": "gmc-terrain",
@@ -14278,20 +14539,40 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact SUV",
   "category": "suv",
-  "priceFrom": 30700,
-  "priceTo": 42400,
+  "priceFrom": 32195,
+  "priceTo": 43895,
   "trims": [
    {
     "name": "Elevation",
-    "msrp": 30700
+    "msrp": 32195,
+    "features": [
+     "Heated front seats",
+     "Heated steering wheel",
+     "Standard FWD with CVT; AWD optional with 8-speed automatic",
+     "1.5L turbo I4, 175 hp",
+     "Modern touchscreen infotainment"
+    ]
    },
    {
     "name": "AT4",
-    "msrp": 38400
+    "msrp": 41395,
+    "features": [
+     "Standard AWD with 8-speed automatic",
+     "Hands-free power liftgate, heated steering wheel, wireless charging",
+     "AT4 off-road styling and all-terrain tires",
+     "Lifted ride height"
+    ]
    },
    {
     "name": "Denali",
-    "msrp": 42400
+    "msrp": 43895,
+    "features": [
+     "Heated/ventilated front seats with perforated leather",
+     "Heated rear outboard seats",
+     "HD Surround Vision camera system",
+     "Denali-exclusive trim and badging",
+     "Standard AWD"
+    ]
    }
   ],
   "powertrains": [
@@ -14362,8 +14643,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "All-new generation launched 2025; shares platform with Chevy Equinox. AT4 price approximate. Prices exclude ~$1,495 destination.",
+  "confidence": "high",
+  "notes": "All-new generation launched 2025; shares platform with Chevy Equinox. Corrected MSRPs upward 2026-07-28 following two documented mid-model-year price increases (Sept 2025 and Dec 2025): Elevation $30,700→$32,195, AT4 $38,400→$41,395, Denali $42,400→$43,895 (all excluding destination). Destination freight charge confirmed at $1,995, up from the ~$1,495 previously assumed.",
   "ratings": {
    "owner": {
     "score": 3.9,
@@ -14375,7 +14656,24 @@ export const VEHICLES = [
      "site": "edmunds.com"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "Second Price Increase In 4 Months For The 2026 GMC Terrain",
+    "url": "https://gmauthority.com/blog/2025/12/second-price-increase-in-4-months-for-the-2026-gmc-terrain/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 GMC Terrain Invoice Pricing After Two Price Hikes",
+    "url": "https://www.automotiveaddicts.com/116905/2026-gmc-terrain-invoice-pricing-what-dealers-pay-after-two-price-hikes",
+    "site": "automotiveaddicts.com"
+   },
+   {
+    "label": "2026 GMC Terrain Trim Levels: Elevation, AT4, & Denali",
+    "url": "https://www.teamchevync.com/a-new-era-of-off-roading-luxury-the-2026-gmc-terrain-trim-levels/",
+    "site": "teamchevync.com"
+   }
+  ]
  },
  {
   "id": "gmc-yukon",
@@ -14391,23 +14689,58 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Elevation",
-    "msrp": 69600
+    "msrp": 69600,
+    "features": [
+     "Heated front seats",
+     "Leatherette/leather-appointed seating available",
+     "16.8-inch diagonal infotainment touchscreen with Google built-in",
+     "Bose premium audio system",
+     "Power liftgate"
+    ]
    },
    {
     "name": "AT4",
-    "msrp": 76500
+    "msrp": 76600,
+    "features": [
+     "All-terrain tires",
+     "Underbody skid plates",
+     "Off-road-tuned suspension",
+     "Ventilated front seats (4WD)",
+     "Rugged exterior styling cues"
+    ]
    },
    {
     "name": "Denali",
-    "msrp": 82900
+    "msrp": 80400,
+    "features": [
+     "Available captain's chairs",
+     "Head-up display",
+     "Upgraded interior trim materials",
+     "Denali-exclusive grille and badging",
+     "Magnetic Ride Control"
+    ]
    },
    {
     "name": "AT4 Ultimate",
-    "msrp": 96500
+    "msrp": 97900,
+    "features": [
+     "Air Ride adaptive suspension",
+     "Off-road hardware with Denali-level cabin appointments",
+     "Massaging front seats",
+     "18-speaker Bose audio",
+     "Rear-seat entertainment available"
+    ]
    },
    {
     "name": "Denali Ultimate",
-    "msrp": 103900
+    "msrp": 103900,
+    "features": [
+     "Exclusive Woodland Mahogany full-grain leather interior",
+     "Panoramic sunroof",
+     "Rear-seat entertainment displays",
+     "Super Cruise hands-free driver assistance",
+     "Executive second-row console"
+    ]
    }
   ],
   "powertrains": [
@@ -14489,8 +14822,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20GMC%20Yukon%20AT4%20Facelift.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination.",
+  "confidence": "high",
+  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Trim MSRPs re-verified 2026-07-28 against cars.com's trim table and GM Authority's tracking of GM's December 2025 price increase (both consistent); AT4 ($76,500→$76,600), Denali ($82,900→$80,400), and AT4 Ultimate ($96,500→$97,900) corrected to match current pricing. All trim prices exclude the $2,795 destination freight charge. Confirmed named exterior/interior color options via GM Authority, but GMC does not publish exact hex swatch values, so a colors object was not added rather than guessed.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -14501,7 +14834,29 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 GMC Yukon — Specs, Prices, MPG, Reviews & Photos",
+    "url": "https://www.cars.com/research/gmc-yukon-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "How Much Is the 2026 GMC Yukon?",
+    "url": "https://www.cars.com/articles/how-much-is-the-2026-gmc-yukon-520412/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 GMC Yukon Gets Price Increase",
+    "url": "https://gmauthority.com/blog/2025/12/2026-gmc-yukon-gets-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 GMC Yukon: Here Are All Eight Paint Colors",
+    "url": "https://gmauthority.com/blog/2026/01/2026-gmc-yukon-here-are-all-eight-paint-colors/",
+    "site": "gmauthority.com"
+   }
+  ]
  },
  {
   "id": "honda-accord",

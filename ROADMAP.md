@@ -235,7 +235,18 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   EV, Colorado, Corvette, Equinox, Equinox EV, Silverado EV and Traverse.
   Silverado 1500/EV/HD and Equinox EV stay confidence medium — their
   cab/battery/config sprawl means some mid-trim figures are still estimates,
-  noted in each record.) — [ ] GMC — [ ] Buick — [ ] Cadillac
+  noted in each record.)
+- [x] GMC (2026-07-28 — all 9 models re-verified, see js/changelog.js v52:
+  Terrain, Canyon, Sierra EV, Sierra HD and Yukon trim MSRPs corrected against
+  current 2026MY pricing; both Hummer EV variants now share identical 2X/3X
+  pricing after GM's Dec 2025/Jan 2026 increases; destination freight charges
+  corrected across the board. Per-trim features added to every model; 6 of 9
+  raised to confidence high with cited sources — gmc.com blocked automated
+  fetches (403), so verification relied on GM Authority, Edmunds, Cars.com,
+  KBB and dealer research pages. Sierra 1500 was already high confidence and
+  untouched. Colors intentionally omitted everywhere — named options were
+  findable but GMC doesn't publish hex swatch values, and the never-guess
+  rule means no fabricated hex codes.) — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
