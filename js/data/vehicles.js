@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 26;
+export const DATA_VERSION = 27;
 
 export const VEHICLES = [
  {
@@ -32100,7 +32100,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Gen-2 R1T. Entry Dual Standard pack was dropped in June 2026, raising the base price $7,000-$9,000; Dual Motor Large pack is now the base trim. Cargo figure is bed volume; adds 11.1 cu-ft frunk and gear tunnel. Ground clearance is max on standard air suspension. Range shown for Dual is with Max pack (Large pack: 330 mi)."
+  "notes": "Gen-2 R1T. Entry Dual Standard pack was dropped in June 2026, raising the base price $7,000-$9,000; Dual Motor Large pack is now the base trim. Cargo figure is bed volume; adds 11.1 cu-ft frunk and gear tunnel. Ground clearance is max on standard air suspension. Range shown for Dual is with Max pack (Large pack: 330 mi).",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Rivian R1T Crew Cab Pickup",
+     "url": "https://www.iihs.org/ratings/vehicle/rivian/r1t-crew-cab-pickup/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "rivian-r2",

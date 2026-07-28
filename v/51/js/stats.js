@@ -112,6 +112,53 @@ export function standing(metricKey, v){
   };
 }
 
+// Full breakdown behind a standing bar — for the "how is this computed?"
+// explainer. Returns the metric, this vehicle's value, and one entry per scope
+// (class, all, make) carrying the pool size, the percentile, the min/median/max
+// of the pool, and the ranked member list (name + value, this one flagged) so
+// the UI can show EXACTLY which vehicles are in the calculation. Returns null
+// when the metric doesn't apply to this vehicle.
+export function standingDetail(metricKey, v){
+  const m = METRICS[metricKey]; if(!m) return null;
+  const value = m.get(v);
+  if(value==null || isNaN(value) || value<=0) return null;
+  const s = standing(metricKey, v); if(!s) return null;
+
+  const peer = peerClass(v);
+  const usePeer = peer && VEHICLES.filter(x=>peerClass(x)===peer).length>=4;
+  const classPool = usePeer ? VEHICLES.filter(x=>peerClass(x)===peer)
+                            : VEHICLES.filter(x=>x.category===v.category);
+  const pools = {
+    class: { label:s.classLabel, pool:classPool,                        pct:s.pct.class },
+    all:   { label:'all 2026 vehicles', pool:VEHICLES,                  pct:s.pct.all   },
+    make:  { label:v.make, pool:VEHICLES.filter(x=>x.make===v.make),    pct:s.pct.make  },
+  };
+
+  const scopes = [];
+  for(const key of ['class','all','make']){
+    const { label, pool, pct } = pools[key];
+    // members with a real value for this metric, sorted high→low
+    const members = pool.map(x=>({ id:x.id, name:`${x.make} ${x.model}`, value:m.get(x), isThis:x.id===v.id }))
+      .filter(r=>r.value!=null && !isNaN(r.value) && r.value>0)
+      .sort((a,b)=> b.value-a.value);
+    const n = members.length;
+    if(n<2 || pct==null) continue;
+    const vals = members.map(r=>r.value);
+    const median = vals.length%2 ? vals[(vals.length-1)/2] : (vals[vals.length/2-1]+vals[vals.length/2])/2;
+    // rank: how many in the pool this vehicle is "higher" than (0-based from top)
+    const beats = members.filter(r=>r.value < value).length;
+    scopes.push({
+      key, label, n, pct,
+      hi:vals[0], lo:vals[vals.length-1], median,
+      rankFromTop: members.findIndex(r=>r.isThis)+1,   // 1 = highest
+      beats, members,
+    });
+  }
+  return { metricKey, label:m.label, higher:m.higher, lower:m.lower, value,
+    unit:METRIC_UNIT[metricKey]||'', scopes };
+}
+const METRIC_UNIT = { price:'', length:'″', width:'″', cargo:' cu ft', mpg:' mpg', hp:' hp', range:' mi', seats:'' };
+
 // A short plain-English verdict for the primary (class) scope, e.g.
 // "Bigger than 82% of SUVs" — falls back to the all-vehicles pool.
 export function verdict(metricKey, v){
