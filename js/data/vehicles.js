@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 33;
+export const DATA_VERSION = 34;
 
 export const VEHICLES = [
  {
@@ -17639,19 +17639,48 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SE",
-    "msrp": 22625
+    "msrp": 22625,
+    "features": [
+     "15-in alloy wheels",
+     "8-in touchscreen with wireless Apple CarPlay/Android Auto",
+     "6-speaker audio",
+     "Forward collision-avoidance assist w/ pedestrian detection",
+     "LED headlights"
+    ]
    },
    {
     "name": "SEL Sport",
-    "msrp": 23750
+    "msrp": 23750,
+    "features": [
+     "17-in alloy wheels",
+     "Blind-spot & rear cross-traffic collision-avoidance assist",
+     "Sport front seats",
+     "Gloss-black exterior accents & rear spoiler",
+     "Wireless Apple CarPlay/Android Auto"
+    ]
    },
    {
     "name": "Hybrid Blue",
-    "msrp": 25450
+    "msrp": 25450,
+    "features": [
+     "1.6L hybrid powertrain, EPA-rated 54 mpg combined",
+     "16-in wheels",
+     "8-in touchscreen",
+     "Forward collision-avoidance assist",
+     "Tire mobility kit (no spare)"
+    ]
    },
    {
     "name": "Hybrid Limited",
-    "msrp": 29800
+    "msrp": 29800,
+    "features": [
+     "8-speaker Bose premium audio",
+     "Power sunroof",
+     "Highway Driving Assist",
+     "H-Tex leatherette seating",
+     "Heated front seats",
+     "10.25-in touchscreen navigation"
+    ]
    }
   ],
   "powertrains": [
@@ -17730,7 +17759,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "SEL Sport Premium replaces SEL Convenience for 2026. Hybrid Blue rated up to 54 mpg combined. Hybrid trims use a tire mobility kit instead of a spare.",
+  "notes": "SE/SEL Sport/Hybrid Blue/Hybrid Limited MSRP confirmed unchanged for 2026 (verified via dealer spec tables cross-checked against KBB/Edmunds/cars.com). Hyundai's full 2026 Elantra lineup also includes SEL Sport Premium (~$27,000), non-hybrid N Line (~$29,400) and Limited (~$29,000-29,600) trims not individually tracked here. Hybrid Blue EPA-rated 54 mpg combined; hybrid trims use a tire mobility kit instead of a spare. Color hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -17742,7 +17771,64 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Atlas White",
+     "hex": "#F5F5F0"
+    },
+    {
+     "name": "Serenity White",
+     "hex": "#EDEDE8"
+    },
+    {
+     "name": "Abyss Black",
+     "hex": "#0B0B0C"
+    },
+    {
+     "name": "Cyber Gray",
+     "hex": "#6E7378"
+    },
+    {
+     "name": "Intense Blue",
+     "hex": "#1B4C8C"
+    },
+    {
+     "name": "Ultimate Red",
+     "hex": "#A5182A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8C8C8C",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Elantra | Compact Car",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/elantra",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Elantra — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Hyundai_Elantra.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Hyundai Elantra Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-elantra-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "hyundai-elantra-n",
@@ -17758,15 +17844,37 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "N (6MT)",
-    "msrp": 35100
+    "msrp": 35100,
+    "features": [
+     "2.0L turbo, 276 hp/289 lb-ft",
+     "6-speed manual",
+     "Electronically controlled limited-slip differential",
+     "19-in alloy wheels",
+     "8-speaker Bose audio",
+     "Dual 10.25-in displays"
+    ]
    },
    {
     "name": "N (8DCT)",
-    "msrp": 36600
+    "msrp": 36600,
+    "features": [
+     "N 8-speed wet dual-clutch transmission",
+     "N Grin Shift (+10 hp overboost, 10 sec)",
+     "Launch control",
+     "Adaptive suspension",
+     "N Custom drive modes"
+    ]
    },
    {
     "name": "TCR Edition (6MT)",
-    "msrp": 39250
+    "msrp": 39250,
+    "features": [
+     "Adjustable swan-neck carbon-fiber rear wing",
+     "Forged 19-in wheels in gloss-black finish",
+     "4-piston monobloc front brake calipers, 2-piece rotors",
+     "Alcantara-wrapped steering wheel, shift knob & handbrake",
+     "Exclusive Performance Blue exterior color"
+    ]
    }
   ],
   "powertrains": [
@@ -17821,7 +17929,54 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "One of the few remaining manual-transmission sport sedans. New TCR Edition added for 2026 ($39,250 with manual)."
+  "notes": "N (6MT/8DCT) and TCR Edition (6MT) MSRP confirmed unchanged for 2026 via Hyundai’s TCR Edition pricing release (Hyundai Newsroom, distributed via PR Newswire) and KBB. TCR Edition is also offered with the 8DCT at $40,750 (not tracked here). EPA rates the manual at 24 mpg combined, DCT at 23 mpg combined. Color hex values are best-effort sRGB matches.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Performance Blue",
+     "hex": "#1554A6"
+    },
+    {
+     "name": "Ultimate Red",
+     "hex": "#A5182A"
+    },
+    {
+     "name": "Atlas White",
+     "hex": "#F5F5F0"
+    },
+    {
+     "name": "Cyber Gray",
+     "hex": "#6E7378"
+    },
+    {
+     "name": "Abyss Black",
+     "hex": "#0B0B0C"
+    },
+    {
+     "name": "Intense Blue",
+     "hex": "#1B4C8C"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black leather/Alcantara",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Elantra N | High-performance Sedan",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/elantra-n",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Elantra N — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49818",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "hyundai-ioniq-5",
@@ -17833,27 +17988,102 @@ export const VEHICLES = [
   "segment": "compact electric SUV",
   "category": "suv",
   "priceFrom": 35000,
-  "priceTo": 48325,
+  "priceTo": 48975,
   "trims": [
    {
     "name": "SE Standard Range",
-    "msrp": 35000
+    "msrp": 35000,
+    "features": [
+     "63 kWh battery, 245-mi EPA range",
+     "168-hp rear motor, RWD",
+     "Dual 12.3-in displays",
+     "NACS charging port standard",
+     "6-speaker audio"
+    ]
    },
    {
     "name": "SE",
-    "msrp": 37500
+    "msrp": 37500,
+    "features": [
+     "84 kWh battery, up to 318-mi EPA range",
+     "225-hp rear motor",
+     "800V ultra-fast charging architecture",
+     "Dual 12.3-in displays",
+     "Digital Key"
+    ]
+   },
+   {
+    "name": "SE AWD",
+    "msrp": 41000,
+    "features": [
+     "84 kWh battery, dual-motor AWD",
+     "320-hp combined output",
+     "800V ultra-fast charging",
+     "Dual 12.3-in displays"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 39800,
+    "features": [
+     "Heated rear seats and heated steering wheel",
+     "Wireless phone charging",
+     "Smart (hands-free) power liftgate",
+     "Highway Driving Assist 2",
+     "84 kWh battery, up to 318-mi range"
+    ]
+   },
+   {
+    "name": "SEL AWD",
+    "msrp": 43300,
+    "features": [
+     "Heated rear seats and heated steering wheel",
+     "Wireless phone charging",
+     "Smart power liftgate",
+     "Highway Driving Assist 2",
+     "320-hp dual-motor AWD"
+    ]
    },
    {
     "name": "Limited",
-    "msrp": 45075
+    "msrp": 45075,
+    "features": [
+     "Panoramic sunroof",
+     "Bose premium audio",
+     "Ventilated front seats",
+     "Vehicle-to-Load (V2L) power outlets",
+     "Augmented-reality head-up display"
+    ]
+   },
+   {
+    "name": "Limited AWD",
+    "msrp": 48975,
+    "features": [
+     "Panoramic sunroof",
+     "Bose premium audio",
+     "Ventilated front seats",
+     "V2L power outlets",
+     "320-hp dual-motor AWD"
+    ]
    },
    {
     "name": "XRT AWD",
-    "msrp": 46275
+    "msrp": 46275,
+    "features": [
+     "320-hp dual-motor AWD, off-road-tuned suspension",
+     "XRT-exclusive styling, unique 18-in wheels",
+     "All-terrain tires",
+     "~2,700-lb towing capacity, ~259-mi range",
+     "Water-repellent H-Tex upholstery"
+    ]
    },
    {
     "name": "XRT AWD w/ Tow Hitch",
-    "msrp": 48325
+    "msrp": 46725,
+    "features": [
+     "All XRT AWD equipment",
+     "Factory-installed tow hitch receiver"
+    ]
    }
   ],
   "powertrains": [
@@ -17933,7 +18163,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Hyundai cut 2026 prices by $7,600-$9,800 per trim after the federal EV tax credit expired; now from $35,000. Built in Georgia; NACS port standard.",
+  "notes": "Verified full 9-trim MY26 lineup; base pricing unchanged since Hyundai’s Oct 2025 price cut. Corrected top price: Limited AWD is the true range-topping trim at $48,975 (prior $48,325 was mislabeled as XRT w/Tow Hitch, which is actually $46,725 per two independent price guides). Colors are real hyundaiusa/dealer-listed names; hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick+",
@@ -17944,6 +18174,89 @@ export const VEHICLES = [
      "site": "iihs.org"
     }
    }
+  },
+  "sources": [
+   {
+    "label": "Hyundai Lowers Price on 2026 IONIQ 5 EV Lineup",
+    "url": "https://www.hyundainews.com/releases/4568",
+    "site": "hyundainews.com"
+   },
+   {
+    "label": "2026 IONIQ 5 SEL | Trim Features & Options",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/sel",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Ioniq 5 RWD — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49960.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Hyundai IONIQ 5 Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-ioniq_5-2026/trims/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 Hyundai Ioniq 5 Trim Levels",
+    "url": "https://www.ontariohyundai.com/hyundai-research/2026-hyundai-ioniq-5-trim-levels/",
+    "site": "ontariohyundai.com"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Abyss Black",
+     "hex": "#1a1a1a"
+    },
+    {
+     "name": "Atlas White",
+     "hex": "#f2f2f0"
+    },
+    {
+     "name": "Cyber Gray",
+     "hex": "#6e7276"
+    },
+    {
+     "name": "Digital Teal",
+     "hex": "#1f4e4a"
+    },
+    {
+     "name": "Lucid Blue",
+     "hex": "#2c5aa0"
+    },
+    {
+     "name": "Ultimate Red",
+     "hex": "#a4193d"
+    },
+    {
+     "name": "Cosmic Blue",
+     "hex": "#1b3a5c"
+    },
+    {
+     "name": "Gravity Gold Matte",
+     "hex": "#a68a5b"
+    },
+    {
+     "name": "Ecotronic Gray Matte",
+     "hex": "#8a8d85"
+    },
+    {
+     "name": "Sage Silver Matte",
+     "hex": "#9a9c8f"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1a1a1a",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8a8d90",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -17955,12 +18268,20 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "high-performance electric SUV",
   "category": "suv",
-  "priceFrom": 66200,
-  "priceTo": 66200,
+  "priceFrom": 59900,
+  "priceTo": 59900,
   "trims": [
    {
     "name": "N",
-    "msrp": 66200
+    "msrp": 59900,
+    "features": [
+     "641 hp with N Grin Boost (601 hp standard)",
+     "N e-Shift 8-speed simulated dual-clutch shifting",
+     "N Drift Optimizer with 10 selectable stages",
+     "Native NACS port with Tesla Supercharger access + dual-amperage Level 1/2 charger and CCS adapter",
+     "N Active Sound+ and electronic limited-slip rear differential",
+     "Forward Attention Warning in-cabin driver camera (newly standard)"
+    ]
    }
   ],
   "powertrains": [
@@ -18014,8 +18335,60 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "2026 pricing not yet announced; price shown is the 2025 MSRP ($66,200). 0-60 in ~3.2s with N Grin Boost."
+  "confidence": "high",
+  "notes": "Official 2026 US pricing confirmed: Hyundai Motor America press release (July 15, 2026) set the IONIQ 5 N at $59,900 MSRP excluding $1,600 destination ($61,500 total) — a $6,300 cut from MY2025. Single N trim, unchanged EPA range of 221 miles (78 MPGe combined per EPA). Adds a new Performance Blue Pearl exterior color, standard NACS port, dual-amperage charger, and in-cabin driver-attention camera for 2026. Color hex values are best-effort sRGB matches.",
+  "sources": [
+   {
+    "label": "Hyundai Motor America press release: \"Track-Ready 2026 Hyundai IONIQ 5 N Priced at $59,900\" (July 15, 2026)",
+    "url": "https://www.prnewswire.com/news-releases/track-ready-2026-hyundai-ioniq-5-n-priced-at-59-900--now-more-attainable-than-ever-302825699.html",
+    "site": "prnewswire.com"
+   },
+   {
+    "label": "EPA Fuel Economy - 2026 Hyundai IONIQ 5 N (78 MPGe combined, AWD)",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49965.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "InsideEVs - \"One Of Our Favorite Hyundai EVs Is Suddenly Cheaper Than Ever\" (2026 Ioniq 5 N pricing/specs)",
+    "url": "https://insideevs.com/news/801814/2026-hyundai-ioniq-5-n-price-specs-official/",
+    "site": "insideevs.com"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Atlas White",
+     "hex": "#F4F4F1"
+    },
+    {
+     "name": "Abyss Black Pearl",
+     "hex": "#0B0B0C"
+    },
+    {
+     "name": "Cyber Gray Metallic",
+     "hex": "#5B5B5E"
+    },
+    {
+     "name": "Ecotronic Gray Matte",
+     "hex": "#8A8D89"
+    },
+    {
+     "name": "Soultronic Orange Pearl",
+     "hex": "#FF5A1F"
+    },
+    {
+     "name": "Performance Blue Pearl",
+     "hex": "#0A2F6E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black (N faux-suede w/ blue stitching)",
+     "hex": "#1B1B1D",
+     "tone": "dark"
+    }
+   ]
+  }
  },
  {
   "id": "hyundai-ioniq-6",
@@ -18026,18 +18399,9 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "midsize electric sedan",
   "category": "car",
-  "priceFrom": 37850,
-  "priceTo": 51100,
-  "trims": [
-   {
-    "name": "SE Standard Range",
-    "msrp": 37850
-   },
-   {
-    "name": "Limited AWD",
-    "msrp": 51100
-   }
-  ],
+  "priceFrom": null,
+  "priceTo": null,
+  "trims": [],
   "powertrains": [
    {
     "type": "ev",
@@ -18113,8 +18477,8 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Refreshed for 2026 with new styling, NACS port and added N Line trim; official 2026 US pricing not announced at time of writing, so 2025 prices shown. Expect possible cuts in line with Ioniq 5.",
+  "confidence": "high",
+  "notes": "DISCONTINUED for the US 2026 model year: Hyundai confirmed (statement reported by Cars.com, corroborated by Electric Cars Report/AOL/Safford Hyundai, all March 2026) that the standard IONIQ 6 is dropped in the US, with the lineup going forward consisting only of the IONIQ 6 N. Cited falling sales (10,478 in 2025, down 15%) and Korea-built import-tariff exposure. Independently re-confirmed via web search this run — multiple outlets corroborate. Remaining 2025 IONIQ 6 inventory continues selling at dealers, but there is no new 2026 non-N IONIQ 6 to price; priceFrom/priceTo/trims set to null/empty rather than carrying forward stale 2025 figures for a car no longer sold as new. See hyundai-ioniq-6-n for the surviving nameplate.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -18126,7 +18490,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "Cars.com - \"Hyundai Discontinues Ioniq 6 for 2026, Will Only Offer High-Performance N Version in U.S.\"",
+    "url": "https://www.cars.com/articles/hyundai-discontinues-ioniq-6-for-2026-will-only-offer-high-performance-n-version-in-u-s-522184/",
+    "site": "cars.com"
+   },
+   {
+    "label": "Electric Cars Report - \"Hyundai Drops Most Ioniq 6 Trims Amid Slumping Sales\" (Mar. 8, 2026)",
+    "url": "https://electriccarsreport.com/2026/03/hyundai-drops-most-ioniq-6-trims-leaving-only-high-performance-ioniq-6-n/",
+    "site": "electriccarsreport.com"
+   }
+  ]
  },
  {
   "id": "hyundai-ioniq-6-n",
@@ -18191,7 +18567,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "low",
-  "notes": "New nameplate arriving during the 2026 model year with very limited availability at select dealers. US pricing, EPA range and some specs not announced (estimates put MSRP near $60,000-$66,000); curb weight approximate."
+  "notes": "Confirmed by Hyundai (via Cars.com, March 2026) that the IONIQ 6 N is now the sole IONIQ 6 nameplate for the US going forward, replacing the discontinued standard IONIQ 6, and \"arrives later this year\" (2026). As of late July 2026, US pricing, EPA range and full specs are STILL not officially announced — no fueleconomy.gov listing, no hyundainews.com pricing release found despite extensive searching. Third-party estimates vary widely ($60K-$74K) and are unconfirmed; leaving priceFrom/priceTo/trims as null/empty rather than guessing.",
+  "sources": [
+   {
+    "label": "Cars.com - \"Hyundai Discontinues Ioniq 6 for 2026, Will Only Offer High-Performance N Version in U.S.\"",
+    "url": "https://www.cars.com/articles/hyundai-discontinues-ioniq-6-for-2026-will-only-offer-high-performance-n-version-in-u-s-522184/",
+    "site": "cars.com"
+   },
+   {
+    "label": "CarGurus - \"2026 Hyundai Ioniq 6 N Pricing, Specs, and Release Date\" (pricing still estimated, not official)",
+    "url": "https://www.cargurus.com/research/articles/2026-hyundai-ioniq-6-n-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "Jalopnik - \"Hyundai Ioniq 5 N Gets Less Expensive... But Where’s The Ioniq 6 N\" (confirms no US pricing/availability yet as of the July 2026 Ioniq 5 N price-cut news)",
+    "url": "https://www.jalopnik.com/2216193/2026-hyundai-ioniq-5-n-updates-pricing/",
+    "site": "jalopnik.com"
+   }
+  ]
  },
  {
   "id": "hyundai-ioniq-9",
@@ -18207,11 +18600,62 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "S RWD",
-    "msrp": 58955
+    "msrp": 58955,
+    "features": [
+     "160 kW (215-hp) single motor, RWD",
+     "335-mi EPA range",
+     "7-passenger bench seating",
+     "12.3-in touchscreen w/ navigation",
+     "NACS port + CCS adapter, 350kW DC fast charging (~24 min 10-80%)"
+    ]
+   },
+   {
+    "name": "SE AWD",
+    "msrp": 62765,
+    "features": [
+     "226 kW (303-hp) dual-motor AWD w/ HTRAC",
+     "320-mi EPA range",
+     "8-way power driver’s seat w/ lumbar",
+     "19-in alloy wheels"
+    ]
+   },
+   {
+    "name": "SEL AWD",
+    "msrp": 66320,
+    "features": [
+     "303-hp AWD, 320-mi EPA range",
+     "Blind-Spot View Monitor",
+     "Ventilated front seats, H-Tex surfaces",
+     "20-in alloy wheels"
+    ]
+   },
+   {
+    "name": "Performance Limited AWD",
+    "msrp": 71250,
+    "features": [
+     "314.6 kW (422-hp) dual-motor AWD",
+     "311-mi EPA range",
+     "2nd-row captain’s chairs, power-folding 3rd row",
+     "Panoramic sunroof"
+    ]
    },
    {
     "name": "Performance Calligraphy AWD",
-    "msrp": 76490
+    "msrp": 74990,
+    "features": [
+     "422-hp AWD, 311-mi range",
+     "Full-display rearview mirror w/ HomeLink",
+     "Head-Up Display, Remote Smart Parking Assist 2"
+    ]
+   },
+   {
+    "name": "Performance Calligraphy Design AWD",
+    "msrp": 76490,
+    "features": [
+     "422-hp AWD, 311-mi range",
+     "Matte exterior paint, turbine-design wheels",
+     "Calligraphy Design-exclusive trim details"
+    ]
    }
   ],
   "powertrains": [
@@ -18280,7 +18724,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "All-new for 2026; Hyundai's first three-row EV, built in Georgia. Mid trims (SE/SEL/Performance Limited) fall between the prices shown; AWD range and MPGe figures approximate.",
+  "notes": "Confirmed all 6 MY26 trims and pricing via Hyundai press release and dealer sources (previously only 2 of 6 trims were listed); corrected top-trim names to official ‘Performance Limited/Calligraphy/Calligraphy Design’ naming. Interior color names sourced from Hyundai Motor Group’s official IONIQ 9 design story; hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -18291,6 +18735,100 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "sources": [
+   {
+    "label": "Assembled-In-America 2026 Hyundai IONIQ 9 EV Delivers 300+ Miles of Range From $58,955",
+    "url": "https://www.prnewswire.com/news-releases/assembled-in-america-2026-hyundai-ioniq-9-ev-delivers-300-miles-of-range-from-58-955--302444667.html",
+    "site": "prnewswire.com"
+   },
+   {
+    "label": "2026 IONIQ 9 | S Trim | Hyundai USA",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/s",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Ioniq 9 RWD — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49661.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Hyundai IONIQ 9 Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-ioniq_9-2026/trims/",
+    "site": "cars.com"
+   },
+   {
+    "label": "Always Cozy, Always Striking: The Design Philosophy Behind IONIQ 9’s Interior and Colors",
+    "url": "https://www.hyundaimotorgroup.com/en/story/CONT0000000000169847",
+    "site": "hyundaimotorgroup.com"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Abyss Black",
+     "hex": "#1a1a1a"
+    },
+    {
+     "name": "Snow White Pearl",
+     "hex": "#f5f5f2"
+    },
+    {
+     "name": "Cyber Gray",
+     "hex": "#6e7276"
+    },
+    {
+     "name": "Ionosphere Green",
+     "hex": "#2f4d3a"
+    },
+    {
+     "name": "Cosmic Blue",
+     "hex": "#1b3a5c"
+    },
+    {
+     "name": "Ultimate Red",
+     "hex": "#a4193d"
+    },
+    {
+     "name": "Gravity Gold Matte",
+     "hex": "#a68a5b"
+    },
+    {
+     "name": "Ecotronic Gray Matte",
+     "hex": "#8a8d85"
+    },
+    {
+     "name": "Sage Silver Matte",
+     "hex": "#9a9c8f"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Monotone",
+     "hex": "#1a1a1a",
+     "tone": "dark"
+    },
+    {
+     "name": "Black-Dove Gray",
+     "hex": "#5a5a58",
+     "tone": "dark"
+    },
+    {
+     "name": "Dark Teal-Dove Gray",
+     "hex": "#2f4d47",
+     "tone": "dark"
+    },
+    {
+     "name": "Mud Gray-Creamy Beige",
+     "hex": "#c9b99a",
+     "tone": "light"
+    },
+    {
+     "name": "Cognac Brown-Creamy Beige",
+     "hex": "#8a5a3c",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -18303,15 +18841,87 @@ export const VEHICLES = [
   "segment": "subcompact SUV",
   "category": "suv",
   "priceFrom": 25500,
-  "priceTo": 33150,
+  "priceTo": 34035,
   "trims": [
    {
     "name": "SE",
-    "msrp": 25500
+    "msrp": 25500,
+    "features": [
+     "147-hp 2.0L 4-cyl, CVT",
+     "12.3-in touchscreen, wireless Apple CarPlay/Android Auto",
+     "Forward Collision-Avoidance Assist",
+     "31 mpg combined (FWD)"
+    ]
+   },
+   {
+    "name": "SE AWD",
+    "msrp": 27000,
+    "features": [
+     "147-hp 2.0L 4-cyl, CVT, AWD",
+     "28 mpg combined",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Forward Collision-Avoidance Assist"
+    ]
+   },
+   {
+    "name": "SEL Sport",
+    "msrp": 26675,
+    "features": [
+     "18-in alloy wheels, gloss-black exterior accents",
+     "Wireless device charging",
+     "Smart cruise control w/ stop-and-go",
+     "Push-button start"
+    ]
+   },
+   {
+    "name": "SEL Sport AWD",
+    "msrp": 28325,
+    "features": [
+     "18-in alloy wheels, gloss-black accents",
+     "AWD",
+     "Wireless device charging",
+     "Smart cruise control w/ stop-and-go"
+    ]
+   },
+   {
+    "name": "SEL Premium",
+    "msrp": 28425,
+    "features": [
+     "190-hp 1.6L turbo, 8-speed automatic",
+     "19-in wheels",
+     "Power driver’s seat w/ lumbar",
+     "Ambient lighting"
+    ]
+   },
+   {
+    "name": "SEL Premium AWD",
+    "msrp": 29925,
+    "features": [
+     "190-hp 1.6L turbo, 8-speed automatic, AWD",
+     "19-in wheels",
+     "Power driver’s seat w/ lumbar",
+     "Ambient lighting"
+    ]
+   },
+   {
+    "name": "Limited",
+    "msrp": 32535,
+    "features": [
+     "Hands-free smart liftgate",
+     "Surround-view monitor, blind-spot monitoring",
+     "Expanded digital displays, premium materials",
+     "190-hp turbocharged powertrain"
+    ]
    },
    {
     "name": "Limited AWD",
-    "msrp": 33150
+    "msrp": 34035,
+    "features": [
+     "Hands-free smart liftgate",
+     "Surround-view monitor, blind-spot monitoring",
+     "Expanded digital displays, premium materials",
+     "190-hp turbocharged powertrain, AWD"
+    ]
    }
   ],
   "powertrains": [
@@ -18380,7 +18990,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026.",
+  "notes": "Confirmed 2nd-gen Kona carries over for MY26 with a streamlined 4-trim lineup (SE/SEL Sport/SEL Premium/Limited, N Line dropped); added the two previously-missing mid trims. AWD is a same-trim option (+$1,500-1,650), not a separate nameplate; top price corrected to Limited AWD $34,035 (was $33,150). Colors are real hyundaiusa/dealer-listed names; hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -18391,6 +19001,80 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "sources": [
+   {
+    "label": "2026 Hyundai Kona (ICE) — Carry-over Model",
+    "url": "https://www.hyundainews.com/models/hyundai-kona-2026-kona",
+    "site": "hyundainews.com"
+   },
+   {
+    "label": "2026 Hyundai KONA Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-kona-2026/trims/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 Hyundai Kona MSRP, Trim Levels, Features & Specs",
+    "url": "https://www.spitzerhyundaicleveland.com/hyundai-research/2026-hyundai-kona-trim-levels-and-prices/",
+    "site": "spitzerhyundaicleveland.com"
+   },
+   {
+    "label": "2026 Hyundai Kona FWD — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49449.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Abyss Black Pearl",
+     "hex": "#1a1a1a"
+    },
+    {
+     "name": "Atlas White",
+     "hex": "#f2f2f0"
+    },
+    {
+     "name": "Cyber Gray Metallic",
+     "hex": "#6e7276"
+    },
+    {
+     "name": "Denim Blue Pearl",
+     "hex": "#2b4a6b"
+    },
+    {
+     "name": "Ecotronic Gray Pearl",
+     "hex": "#8a8d85"
+    },
+    {
+     "name": "Mirage Green",
+     "hex": "#5a6b4a"
+    },
+    {
+     "name": "Neoteric Yellow",
+     "hex": "#f0c419"
+    },
+    {
+     "name": "Soultronic Orange Pearl",
+     "hex": "#d9601a"
+    },
+    {
+     "name": "Ultimate Red Metallic",
+     "hex": "#a4193d"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1a1a1a",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8a8d90",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -18402,14 +19086,9 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact electric SUV",
   "category": "suv",
-  "priceFrom": 32975,
-  "priceTo": 32975,
-  "trims": [
-   {
-    "name": "SE (Standard Range)",
-    "msrp": 32975
-   }
-  ],
+  "priceFrom": null,
+  "priceTo": null,
+  "trims": [],
   "powertrains": [
    {
     "type": "ev",
@@ -18460,8 +19139,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "For 2026 the lineup shrinks to a single SE Standard Range trim. Official 2026 pricing not yet confirmed; price shown is the 2025 SE MSRP and a cut is possible given Hyundai's 2026 EV price reductions."
+  "confidence": "high",
+  "notes": "SKIPPING the 2026 model year entirely in the US — not a pricing gap, there is no 2026 Kona Electric to price. Confirmed by a Hyundai spokesperson (InsideEVs, Feb 2026; corroborated by Electrek, Digital Trends, Autoblog, CarsDirect) and independently re-confirmed via web search this run: Hyundai is selling through 2025 MY inventory while production pauses after a 41% sales decline (3,011 units in 2025); the nameplate returns as a 2027 model with production resuming June 2026 — no 2027 pricing published yet. priceFrom/priceTo/trims set to null/empty rather than carrying forward the stale 2025 SE MSRP that was previously mislabeled as 2026.",
+  "sources": [
+   {
+    "label": "InsideEVs - \"The Hyundai Kona Electric Is Not Getting A 2026 Model. Here’s Why\" (Feb. 5, 2026)",
+    "url": "https://insideevs.com/news/786442/2026-hyundai-kona-ev-pause-us/",
+    "site": "insideevs.com"
+   },
+   {
+    "label": "Electrek - \"Hyundai is pausing production of this electric SUV, but promises the EV will return\" (Feb. 4, 2026)",
+    "url": "https://electrek.co/2026/02/04/hyundai-pausing-production-electric-suv/",
+    "site": "electrek.co"
+   }
+  ]
  },
  {
   "id": "hyundai-nexo",
@@ -18472,9 +19163,33 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "hydrogen fuel-cell SUV",
   "category": "suv",
-  "priceFrom": null,
+  "priceFrom": 60135,
   "priceTo": null,
-  "trims": [],
+  "trims": [
+   {
+    "name": "Blue",
+    "msrp": 60135,
+    "features": [
+     "201-hp fuel-cell electric motor (up from 161 hp), 2.6-kWh buffer battery",
+     "Targeted 430+ mile driving range (final EPA rating not yet published)",
+     "~5-minute hydrogen refueling",
+     "Dual 12.3-in displays, wireless Apple CarPlay/Android Auto",
+     "Generative-AI voice assistant, Digital Key 2",
+     "Vehicle-to-load (V2L) power output"
+    ]
+   },
+   {
+    "name": "Limited",
+    "msrp": null,
+    "features": [
+     "All Blue-trim content plus Bang & Olufsen 14-speaker audio",
+     "Head-up display",
+     "Premium Relaxation front seats (heated, ventilated, reclining)",
+     "Dual wireless device charging",
+     "Larger-diameter wheels vs. Blue trim"
+    ]
+   }
+  ],
   "powertrains": [
    {
     "type": "hydrogen",
@@ -18526,7 +19241,29 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "low",
-  "notes": "All-new second-generation Nexo for 2026, sold only in California (hydrogen infrastructure). US pricing and EPA figures not announced at time of writing; prior generation ran $61,470-$64,920. Dimensions approximate (converted from global specs)."
+  "notes": "Second-gen Nexo confirmed for a 2026 US launch (California-only) with a 201-hp fuel-cell motor, 2.6-kWh battery, and a targeted 430+ mile range (final 2026 EPA figure not yet posted to fueleconomy.gov). Best pricing found is CarBuzz's reveal-event figure of $60,135 for the base Blue trim; several outlets (Autoblog, Edmunds, CarsDirect) still describe US pricing as unconfirmed/estimated and no official hyundaiusa.com/hyundainews.com MSRP page could be retrieved (JS-rendered, nav-only content). Limited-trim price not found anywhere; left null rather than guessed. Confidence kept low pending an authoritative price release.",
+  "sources": [
+   {
+    "label": "2026 Nexo reveal details & preliminary pricing",
+    "url": "https://carbuzz.com/reveal-2026-hyundai-nexo-is-bigger-faster-cooler/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "Next-gen Nexo first look (specs, range, features)",
+    "url": "https://topelectricsuv.com/first-look-review/hyundai-nexo-next-gen/",
+    "site": "topelectricsuv.com"
+   },
+   {
+    "label": "2026 Nexo first drive review",
+    "url": "https://www.edmunds.com/car-news/2026-hyundai-nexo-first-drive-review.html",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Nexo overview (range, powertrain, California-only)",
+    "url": "https://www.aol.com/2026-hyundai-nexo-might-coolest-002500683.html",
+    "site": "aol.com"
+   }
+  ]
  },
  {
   "id": "hyundai-palisade",
@@ -18538,27 +19275,77 @@ export const VEHICLES = [
   "segment": "midsize SUV (3-row)",
   "category": "suv",
   "priceFrom": 38935,
-  "priceTo": 56885,
+  "priceTo": 56280,
   "trims": [
    {
     "name": "SE",
-    "msrp": 38935
+    "msrp": 38935,
+    "features": [
+     "3.8L V6 (291 hp), FWD or AWD, 8-passenger seating",
+     "12.3-in dual displays, wireless Apple CarPlay/Android Auto",
+     "Hyundai SmartSense (forward collision-avoidance, lane-keep, driver attention warning)",
+     "LED headlights & taillights"
+    ]
    },
    {
-    "name": "SEL",
-    "msrp": 42045
+    "name": "SEL Convenience",
+    "msrp": 42870,
+    "features": [
+     "Heated front seats & heated steering wheel",
+     "Power liftgate, roof rails",
+     "Blind-Spot View Monitor",
+     "Wireless device charging"
+    ]
+   },
+   {
+    "name": "Blue SEL (Hybrid)",
+    "msrp": 43660,
+    "features": [
+     "2.5L turbo-hybrid powertrain, up to ~34 mpg combined est.",
+     "Unique Blue badging/interior accents",
+     "Standard SmartSense suite",
+     "Heated front seats, wireless device charging"
+    ]
+   },
+   {
+    "name": "XRT Pro",
+    "msrp": 49370,
+    "features": [
+     "Standard HTRAC AWD only",
+     "Off-road-styled fascias, 20-in dark alloy wheels",
+     "Skid plates, X-Tow mode",
+     "All-terrain-tuned suspension"
+    ]
    },
    {
     "name": "Limited",
-    "msrp": 49875
+    "msrp": 49270,
+    "features": [
+     "Leather seating, heated + ventilated front seats",
+     "Head-Up Display, Remote Smart Parking Assist",
+     "Surround View Monitor, Bose premium audio",
+     "Panoramic sunroof"
+    ]
    },
    {
     "name": "Calligraphy",
-    "msrp": 54665
+    "msrp": 54060,
+    "features": [
+     "Quilted Nappa leather, illuminated grille",
+     "Digital rearview mirror",
+     "Second-row captain’s chairs w/ leg rest",
+     "Ergo Motion driver’s seat, Bose 12-speaker audio"
+    ]
    },
    {
-    "name": "Hybrid Calligraphy",
-    "msrp": 56885
+    "name": "Calligraphy Hybrid",
+    "msrp": 56280,
+    "features": [
+     "Hybrid powertrain with all Calligraphy content",
+     "Quilted Nappa leather, panoramic sunroof",
+     "Digital rearview mirror, Bose audio",
+     "Remote Smart Parking Assist, Digital Key"
+    ]
    }
   ],
   "powertrains": [
@@ -18645,7 +19432,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "All-new generation for 2026, larger with first-ever Palisade Hybrid (329 hp, up to ~34 mpg). Trim prices above derived from published incl.-destination figures ($1,495 freight); cargo figures approximate.",
+  "notes": "Confirmed via official pricing release (PR Newswire) that SE ($38,935) and Hybrid-base ($43,660 as ‘Blue SEL’) figures are correct and are BASE MSRP excluding the $1,495 destination charge (previous notes mislabeled this as incl.-destination — corrected here). Full trim ladder expanded from 5 to 7 entries using the official release: adds SEL Convenience, XRT Pro, and Blue SEL (hybrid) mid-trims. Top trim Calligraphy Hybrid is $56,280 FWD / $58,280 AWD (AWD adds $2,000 across the range) — a small correction from the previous $56,885 estimate.",
   "sources": [
    {
     "label": "2026 specs & features (all-new generation)",
@@ -18658,9 +19445,19 @@ export const VEHICLES = [
     "site": "hyundainews.com"
    },
    {
+    "label": "Official 2026 Palisade pricing strategy release (full trim/price table)",
+    "url": "https://www.prnewswire.com/news-releases/new-bigger-better-2026-hyundai-palisade-releases-compelling-pricing-strategy-302504664.html",
+    "site": "prnewswire.com"
+   },
+   {
     "label": "EPA fuel economy",
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Hyundai_Palisade.shtml",
     "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Trim feature comparison",
+    "url": "https://www.findlayhyundaistgeorge.com/hyundai-info/hyundai-palisade-trims-and-price/",
+    "site": "findlayhyundaistgeorge.com"
    }
   ],
   "ratings": {
@@ -18693,6 +19490,55 @@ export const VEHICLES = [
      "site": "Edmunds"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Abyss Black",
+     "hex": "#1C1C1C"
+    },
+    {
+     "name": "Creamy White",
+     "hex": "#F0EDE4"
+    },
+    {
+     "name": "Typhoon Silver",
+     "hex": "#B8B9BB"
+    },
+    {
+     "name": "Ecotronic Gray",
+     "hex": "#8B8D8F"
+    },
+    {
+     "name": "Pacific Sapphire",
+     "hex": "#1B3A5C"
+    },
+    {
+     "name": "Galaxy Maroon",
+     "hex": "#5C1F2E"
+    },
+    {
+     "name": "Earthy Brass Matte",
+     "hex": "#8A7B5C"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#9C9C9C",
+     "tone": "light"
+    },
+    {
+     "name": "Brown (Calligraphy Nappa)",
+     "hex": "#6B4A36",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -18705,15 +19551,89 @@ export const VEHICLES = [
   "segment": "compact pickup",
   "category": "truck",
   "priceFrom": 29750,
-  "priceTo": 43805,
+  "priceTo": 43700,
   "trims": [
    {
     "name": "SE",
-    "msrp": 29750
+    "msrp": 29750,
+    "features": [
+     "191-hp 2.5L 4-cyl, 8-speed automatic",
+     "18-in wheels, LED exterior lighting",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Forward collision warning, AEB, lane-centering, blind-spot monitors"
+    ]
+   },
+   {
+    "name": "SE AWD",
+    "msrp": 31250,
+    "features": [
+     "191-hp 2.5L 4-cyl, 8-speed automatic, AWD",
+     "18-in wheels, LED lighting",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 31400,
+    "features": [
+     "Heated mirrors",
+     "Synthetic-leather upholstery",
+     "Power-adjustable driver’s seat",
+     "Dual-zone automatic climate control"
+    ]
+   },
+   {
+    "name": "SEL AWD",
+    "msrp": 32900,
+    "features": [
+     "Heated mirrors",
+     "Synthetic-leather upholstery",
+     "Power-adjustable driver’s seat",
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL Activity",
+    "msrp": 34450,
+    "features": [
+     "Integrated tonneau cover, LED bed lighting",
+     "Moonroof",
+     "12.3-in digital instrument cluster",
+     "Wireless phone charger",
+     "10-speaker Bose stereo",
+     "Bed cargo rails w/ anchor points, 115V outlet"
+    ]
+   },
+   {
+    "name": "SEL Activity AWD",
+    "msrp": 35950,
+    "features": [
+     "Integrated tonneau cover, LED bed lighting",
+     "Moonroof, AWD",
+     "12.3-in digital cluster",
+     "10-speaker Bose stereo"
+    ]
+   },
+   {
+    "name": "XRT",
+    "msrp": 41350,
+    "features": [
+     "281-hp turbocharged 2.5L, standard AWD",
+     "Terrain Mode (mud/snow/sand)",
+     "All-terrain tires, unique bumpers, front tow hooks",
+     "Navigation, voice recognition, Digital Key 2",
+     "5,000-lb towing capacity"
+    ]
    },
    {
     "name": "Limited",
-    "msrp": 43805
+    "msrp": 43700,
+    "features": [
+     "20-in wheels, rain-sensing wipers",
+     "Genuine leather seating, ventilated front seats",
+     "Power-adjustable front passenger seat",
+     "Bose premium audio, heated steering wheel, ambient lighting"
+    ]
    }
   ],
   "powertrains": [
@@ -18790,7 +19710,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination. Interior photo is the 2025 refresh (facelifted front/interior); 2026 is a carryover of that refresh (source: TFLtruck 2026-02 review).",
+  "notes": "Confirmed 5-trim MY26 lineup (SE/SEL/new SEL Activity/XRT/Limited) and pricing via dealer/price-guide sources; added previously-missing SEL and SEL Activity trims. Base SE and Limited MSRP essentially unchanged ($29,750 / $43,700, refining the prior approximate $43,805). Unibody crew-cab pickup, 4.3-ft composite bed. Colors are real hyundaiusa/dealer-listed names; hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -18801,6 +19721,87 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
+  },
+  "sources": [
+   {
+    "label": "2026 Hyundai SANTA CRUZ | Hyundai USA",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/santa-cruz",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Santa Cruz Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-santa_cruz-2026/trims/",
+    "site": "cars.com"
+   },
+   {
+    "label": "How Much Is the 2026 Hyundai Santa Cruz?",
+    "url": "https://www.cars.com/articles/how-much-is-the-2026-hyundai-santa-cruz-518272/",
+    "site": "cars.com"
+   },
+   {
+    "label": "2026 Hyundai Santa Cruz Review: Buy Now or Don’t Bother?",
+    "url": "https://tfltruck.com/2026/02/hyundai-santa-cruz-xrt-full-review/",
+    "site": "tfltruck.com"
+   },
+   {
+    "label": "2026 Hyundai Santa Cruz FWD — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/noframes/49450.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Hyundai Santa Cruz Color Options",
+    "url": "https://www.carsdirect.com/hyundai/santa-cruz/2026/colors",
+    "site": "carsdirect.com"
+   }
+  ],
+  "colors": {
+   "exterior": [
+    {
+     "name": "Atlas White",
+     "hex": "#f2f2f0"
+    },
+    {
+     "name": "Blue Stone",
+     "hex": "#3a4a52"
+    },
+    {
+     "name": "Hampton Gray",
+     "hex": "#6e6a63"
+    },
+    {
+     "name": "Phantom Black",
+     "hex": "#1a1a1a"
+    },
+    {
+     "name": "Sage Gray",
+     "hex": "#9a9c8f"
+    },
+    {
+     "name": "Rockwood Green",
+     "hex": "#4a5a3f"
+    },
+    {
+     "name": "Canyon Red",
+     "hex": "#8c2f1f"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1a1a1a",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8a8d90",
+     "tone": "light"
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#3a4a35",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -18817,11 +19818,63 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SE",
-    "msrp": 34800
+    "msrp": 34800,
+    "features": [
+     "2.5L turbo I4 (277 hp), standard 3-row seating (6/7-passenger)",
+     "18-in alloy wheels",
+     "12.3-in touchscreen, wireless Apple CarPlay/Android Auto",
+     "Hands-free smart liftgate, LED lighting"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 37340,
+    "features": [
+     "Synthetic-leather seating",
+     "Heated front seats, power driver’s seat",
+     "Dual-zone automatic climate control",
+     "Wireless device charging, roof rails"
+    ]
+   },
+   {
+    "name": "XRT",
+    "msrp": 41790,
+    "features": [
+     "Standard HTRAC AWD, all-terrain tires",
+     "Increased ground clearance, blacked-out exterior trim",
+     "Dual wireless charging pads, 115V outlet",
+     "Tows up to 4,500 lbs"
+    ]
+   },
+   {
+    "name": "Limited",
+    "msrp": 44350,
+    "features": [
+     "Leather seating, ventilated + heated front seats",
+     "Surround View Monitor, Bose premium audio",
+     "20-in wheels",
+     "Remote Smart Parking Assist"
+    ]
+   },
+   {
+    "name": "Calligraphy",
+    "msrp": 47350,
+    "features": [
+     "Nappa leather incl. new Pecan Brown option",
+     "21-in wheels",
+     "12-in head-up display, digital rearview mirror",
+     "Highway Driving Assist 2"
+    ]
    },
    {
     "name": "Hybrid Calligraphy AWD",
-    "msrp": 50250
+    "msrp": 50250,
+    "features": [
+     "Turbo-hybrid powertrain, standard HTRAC AWD",
+     "All Calligraphy content carried over",
+     "Improved combined mpg vs. gas Calligraphy",
+     "Panoramic sunroof, Digital Key"
+    ]
    }
   ],
   "powertrains": [
@@ -18908,7 +19961,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Boxy fifth-generation design with standard third row. Hybrid Calligraphy AWD tops the range around $50,250 excl. freight.",
+  "notes": "SE ($34,800) and Hybrid Calligraphy AWD ($50,250) figures both re-confirmed exactly via independent 2026 pricing coverage — no change needed to priceFrom/priceTo. Expanded the 2-trim list to the full 6-trim ladder (SE/SEL/XRT/Limited/Calligraphy/Hybrid Calligraphy AWD) using cross-checked dealer and enthusiast-press pricing tables. Pecan Brown Nappa leather confirmed as a new-for-2026 Calligraphy/Limited interior option.",
   "sources": [
    {
     "label": "2026 specs & features",
@@ -18924,6 +19977,16 @@ export const VEHICLES = [
     "label": "2026 pricing & trims",
     "url": "https://www.edmunds.com/hyundai/santa-fe/2026/",
     "site": "edmunds.com"
+   },
+   {
+    "label": "2026 trim-level pricing table",
+    "url": "https://carbuzz.com/cars/hyundai/santa-fe/2026/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "2026 trim & feature breakdown",
+    "url": "https://www.ontariohyundai.com/hyundai-research/2026-hyundai-santa-fe-trims/",
+    "site": "ontariohyundai.com"
    }
   ],
   "ratings": {
@@ -18956,6 +20019,55 @@ export const VEHICLES = [
      "site": "edmunds.com"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Serenity White",
+     "hex": "#F2F1EB"
+    },
+    {
+     "name": "Phantom Black",
+     "hex": "#1A1A1A"
+    },
+    {
+     "name": "Shimmering Silver",
+     "hex": "#C8CACB"
+    },
+    {
+     "name": "Ecotronic Gray",
+     "hex": "#83898C"
+    },
+    {
+     "name": "Atlantis Blue",
+     "hex": "#1F4E63"
+    },
+    {
+     "name": "Terracotta Orange",
+     "hex": "#B5583A"
+    },
+    {
+     "name": "Rockwood Green",
+     "hex": "#384C3E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#9C9C9C",
+     "tone": "light"
+    },
+    {
+     "name": "Pecan Brown",
+     "hex": "#7B4B34",
+     "tone": "dark"
+    }
+   ]
   }
  },
  {
@@ -18968,23 +20080,51 @@ export const VEHICLES = [
   "segment": "midsize sedan",
   "category": "car",
   "priceFrom": 27450,
-  "priceTo": 35900,
+  "priceTo": 36050,
   "trims": [
    {
     "name": "SE",
-    "msrp": 27450
+    "msrp": 27450,
+    "features": [
+     "12.3-in touchscreen with wireless Apple CarPlay/Android Auto",
+     "17-in alloy wheels",
+     "Forward collision-avoidance assist",
+     "6-speaker audio",
+     "LED headlights"
+    ]
    },
    {
     "name": "SEL Sport",
-    "msrp": 29000
+    "msrp": 29150,
+    "features": [
+     "18-in alloy wheels",
+     "Dual-zone automatic climate control",
+     "Heated front seats",
+     "Wireless device charging",
+     "Sport-styled front fascia"
+    ]
    },
    {
     "name": "Hybrid SEL",
-    "msrp": 32300
+    "msrp": 32300,
+    "features": [
+     "192-hp hybrid powertrain, EPA-rated 47 mpg combined",
+     "Wireless device charging",
+     "Leather-wrapped steering wheel",
+     "Blind-spot collision-avoidance assist",
+     "12.3-in touchscreen"
+    ]
    },
    {
     "name": "N Line",
-    "msrp": 35900
+    "msrp": 36050,
+    "features": [
+     "290-hp turbocharged 2.5L engine",
+     "Sport-tuned suspension & steering",
+     "19-in N Design alloy wheels, 245/40R19 tires",
+     "Bose 12-speaker premium audio w/ subwoofer",
+     "Sport bucket seats"
+    ]
    }
   ],
   "powertrains": [
@@ -19073,7 +20213,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Trim lineup simplified for 2026 (SEL Sport replaces SEL/SEL Convenience). N Line price is approximate (~$35,900; sources vary slightly). Hybrid uses a tire mobility kit.",
+  "notes": "SEL Sport and N Line MSRP each rose ~$150 since initial MY2026 launch pricing (SEL Sport now $29,150, N Line now $36,050), confirmed via KBB and cars.com; SE ($27,450) and Hybrid SEL ($32,300) unchanged. Hyundai’s 2026 Sonata lineup also includes Hybrid Blue (~$29,050) and Hybrid Limited (~$38,100) trims not individually tracked in this catalog. Color hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -19085,7 +20225,73 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Serenity White",
+     "hex": "#EFEFEA"
+    },
+    {
+     "name": "Abyss Black",
+     "hex": "#0B0B0C"
+    },
+    {
+     "name": "Aero Silver",
+     "hex": "#B7B9BB"
+    },
+    {
+     "name": "Portofino Gray",
+     "hex": "#6B6E70"
+    },
+    {
+     "name": "Carbon Blue",
+     "hex": "#1D2733"
+    },
+    {
+     "name": "Transmission Blue",
+     "hex": "#2B5FA5"
+    },
+    {
+     "name": "Ultimate Red",
+     "hex": "#A5182A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8C8C8C",
+     "tone": "light"
+    },
+    {
+     "name": "Dark Gray",
+     "hex": "#3D3D3D",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Sonata | Midsize Sedan",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/sonata",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Sonata — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Hyundai_Sonata.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Hyundai Sonata Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-sonata-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "hyundai-tucson",
@@ -19101,19 +20307,73 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SE",
-    "msrp": 30800
+    "msrp": 30800,
+    "features": [
+     "187-hp 2.5L 4-cylinder engine",
+     "8-in touchscreen, wireless Android Auto/Apple CarPlay",
+     "Hyundai SmartSense safety suite",
+     "17-in alloy wheels, LED headlights"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 32050,
+    "features": [
+     "Heated front seats",
+     "8-way power driver’s seat",
+     "Hands-free smart liftgate",
+     "Dual-zone automatic climate control"
+    ]
    },
    {
     "name": "Hybrid Blue SE",
-    "msrp": 33800
+    "msrp": 33800,
+    "features": [
+     "231-hp turbo-hybrid powertrain",
+     "Est. ~38 mpg combined",
+     "Unique Blue badging",
+     "SmartSense suite standard"
+    ]
+   },
+   {
+    "name": "XRT",
+    "msrp": 34825,
+    "features": [
+     "18-in dark alloy wheels, XRT cladding & side steps",
+     "Black H-Tex seating surfaces",
+     "12.3-in navigation",
+     "Darkened exterior trim/grille"
+    ]
    },
    {
     "name": "Plug-in Hybrid SEL",
-    "msrp": 40325
+    "msrp": 40325,
+    "features": [
+     "261-hp PHEV powertrain, est. ~32-33 mi EV range",
+     "Standard AWD",
+     "Tire mobility kit (no spare)",
+     "Onboard Level 2 charging capability"
+    ]
+   },
+   {
+    "name": "Limited",
+    "msrp": 39425,
+    "features": [
+     "Panoramic sunroof",
+     "Leather-trimmed, ventilated front seats",
+     "Blind-Spot View Monitor & Surround View Monitor",
+     "Remote Smart Parking Assist, Bose premium audio"
+    ]
    },
    {
     "name": "Plug-in Hybrid Limited",
-    "msrp": 48655
+    "msrp": 48655,
+    "features": [
+     "All Limited content plus PHEV powertrain",
+     "Panoramic sunroof, leather seating",
+     "Remote Smart Parking Assist",
+     "Bose audio, Surround View Monitor"
+    ]
    }
   ],
   "powertrains": [
@@ -19210,7 +20470,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "New Hybrid Blue SE trim and increased gas-model towing for 2026. Top Limited PHEV price is approximate (~$48.7k per KBB; sources vary). PHEV trims use a tire mobility kit.",
+  "notes": "SE ($30,800), Hybrid Blue SE ($33,800), and Plug-in Hybrid SEL ($40,325) all re-confirmed exactly via independent 2026 pricing coverage. Expanded 4-trim list to 7 by adding SEL, XRT, and Limited (gas) mid-trims. Plug-in Hybrid Limited remains an approximation — sources this session ranged $48,550-$50,150 with no single authoritative figure found, so the existing $48,655 estimate was left unchanged rather than guessed. Destination charge confirmed at $1,600 across multiple sources (unchanged from prior).",
   "sources": [
    {
     "label": "2026 specs & features",
@@ -19226,6 +20486,21 @@ export const VEHICLES = [
     "label": "2026 pricing & trims",
     "url": "https://www.edmunds.com/hyundai/tucson/2026/",
     "site": "edmunds.com"
+   },
+   {
+    "label": "2026 trim-level pricing table",
+    "url": "https://carbuzz.com/cars/hyundai/tucson/2026/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "2026 trim & feature breakdown",
+    "url": "https://www.boucherhyundai.com/hyundai-model-research/hyundai-tucson-trim-levels/",
+    "site": "boucherhyundai.com"
+   },
+   {
+    "label": "2026 Tucson Hybrid lineup expansion press release",
+    "url": "https://www.prnewswire.com/news-releases/2026-hyundai-tucson-hybrid-lineup-expands-gains-sleek-blacked-out-awd-night-trim-new-attainable-trims-302786494.html",
+    "site": "prnewswire.com"
    }
   ],
   "ratings": {
@@ -19258,6 +20533,55 @@ export const VEHICLES = [
      "site": "edmunds.com"
     }
    }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Phantom Black",
+     "hex": "#1A1A1A"
+    },
+    {
+     "name": "Serenity White Pearl",
+     "hex": "#F2F1EB"
+    },
+    {
+     "name": "Hampton Gray",
+     "hex": "#A9ACA6"
+    },
+    {
+     "name": "Ecotronic Gray",
+     "hex": "#83898C"
+    },
+    {
+     "name": "Atlantis Blue",
+     "hex": "#1F4E63"
+    },
+    {
+     "name": "Cypress Green Pearl",
+     "hex": "#35513F"
+    },
+    {
+     "name": "Ultimate Red Metallic",
+     "hex": "#9E2B32"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#9C9C9C",
+     "tone": "light"
+    },
+    {
+     "name": "Gray/Green 3-Tone",
+     "hex": "#6E8A73",
+     "tone": "light"
+    }
+   ]
   }
  },
  {
@@ -19274,11 +20598,26 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SE",
-    "msrp": 20550
+    "msrp": 20550,
+    "features": [
+     "15-in alloy wheels",
+     "8-in touchscreen with wireless Apple CarPlay/Android Auto",
+     "Black cloth seating",
+     "6-speaker audio",
+     "Forward collision-avoidance assist"
+    ]
    },
    {
     "name": "SEL",
-    "msrp": 22825
+    "msrp": 22825,
+    "features": [
+     "17-in alloy wheels",
+     "Heated front seats",
+     "Dual-zone automatic climate control",
+     "Wireless phone charger",
+     "Leather-wrapped steering wheel",
+     "Chrome grille & heated side mirrors"
+    ]
    }
   ],
   "powertrains": [
@@ -19333,7 +20672,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL.",
+  "notes": "SE ($20,550) and SEL ($22,825) pricing confirmed unchanged for 2026 via cars.com and KBB. FWD only, no AWD offered; Limited trim remains dropped for 2026. Color hex values are best-effort sRGB matches.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -19344,7 +20683,73 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "colors": {
+   "exterior": [
+    {
+     "name": "Lunar White",
+     "hex": "#F0F0EC"
+    },
+    {
+     "name": "Onyx Black",
+     "hex": "#0B0B0C"
+    },
+    {
+     "name": "Shimmering Silver",
+     "hex": "#C7C9CB"
+    },
+    {
+     "name": "Ecotronic Gray",
+     "hex": "#6E7378"
+    },
+    {
+     "name": "Intense Blue",
+     "hex": "#1B4C8C"
+    },
+    {
+     "name": "Ultimate Red",
+     "hex": "#A5182A"
+    },
+    {
+     "name": "Mirage Green",
+     "hex": "#4C6B5A"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black",
+     "hex": "#1A1A1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Gray",
+     "hex": "#8C8C8C",
+     "tone": "light"
+    },
+    {
+     "name": "Denim",
+     "hex": "#35506B",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Venue | Compact SUV",
+    "url": "https://www.hyundaiusa.com/us/en/vehicles/venue",
+    "site": "hyundaiusa.com"
+   },
+   {
+    "label": "2026 Hyundai Venue — Fuel Economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Hyundai_Venue.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Hyundai Venue Trims & Pricing",
+    "url": "https://www.cars.com/research/hyundai-venue-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "ineos-grenadier",
