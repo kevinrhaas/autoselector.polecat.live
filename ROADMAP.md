@@ -151,7 +151,22 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  74 models done so far (2026-07-28, +8, js/changelog.js v59: honda-prologue,
+  79 models done so far (2026-07-28, +5, js/changelog.js v62: chevrolet-suburban,
+  nissan-z, infiniti-qx80, kia-k4, hyundai-elantra-n — all interior shots, found
+  via the Commons search API, license/author pulled from each file's own
+  metadata, every URL live-checked with curl before shipping; chevrolet-suburban
+  and nissan-z and hyundai-elantra-n share the same MIAS-2024-showfloor
+  photographer (Ethan Llamas) already credited for several other gallery shots;
+  infiniti-qx80 and kia-k4 are both explicitly captioned "(United States)" and
+  show the current (2025+) redesigned generation. Checked but skipped this run
+  (no confirmed current-gen or US-spec Commons interior shot): acura-mdx (only a
+  2018 pre-facelift dashboard shot exists), gmc-yukon (only 2015/2021-2023
+  pre-refresh Denali shots), ford-mustang, ford-expedition, kia-niro (Commons'
+  "Niro Plus" results are a different China-market MPV, not the US crossover),
+  volkswagen-jetta, bmw-x3 (exterior-only G45 shots), lexus-es (only the prior
+  XZ10 generation and a China-spec XZ20 shot, not confirmed US-spec), subaru-ascent
+  (Commons' match is a "Subaru Evoltis," a different, non-US nameplate). Previous
+  batch (2026-07-28, +8, js/changelog.js v59: honda-prologue,
   ford-mustang-mach-e, chevrolet-tahoe, nissan-armada, kia-k5, kia-seltos,
   volkswagen-id4, subaru-wrx — all interior shots, found via the Commons
   search API, license/author pulled from each file's own metadata, every URL

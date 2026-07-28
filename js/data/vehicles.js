@@ -8329,7 +8329,16 @@ export const VEHICLES = [
   "towingLb": 8300,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/23%20Chevrolet%20Suburban%20LT.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/MIAS_2024_-_2024_Chevrolet_Suburban_5.3_Z71_V8_%28interior%29.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Chevrolet_Suburban_5.3_Z71_V8_(interior).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices verified 2026-07-28 (LS/RST/Z71/Premier/High Country confirmed; LT remains an estimate between LS and RST), excluding the $2,795 destination charge.",
@@ -18277,7 +18286,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/MIAS_2024_-_2024_Hyundai_Elantra_N_%28interior%29.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Hyundai_Elantra_N_(interior).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "N (6MT/8DCT) and TCR Edition (6MT) MSRP confirmed unchanged for 2026 via Hyundai’s TCR Edition pricing release (Hyundai Newsroom, distributed via PR Newswire) and KBB. TCR Edition is also offered with the 8DCT at $40,750 (not tracked here). EPA rates the manual at 24 mpg combined, DCT at 23 mpg combined. Color hex values are best-effort sRGB matches.",
@@ -21433,7 +21451,16 @@ export const VEHICLES = [
   "towingLb": 8500,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/9/97/2025_Infiniti_QX80_%28United_States%29_front_view.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2025_Infiniti_QX80_%28United_States%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Charles",
+     "license": "CC BY 2.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Infiniti_QX80_(United_States)_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190.",
@@ -23144,7 +23171,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/2025_Kia_K4_4DR_GT_Line_%28United_States%29_interior.png",
+     "kind": "interior",
+     "credit": "Autosdeprimera",
+     "license": "CC BY 3.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Kia_K4_4DR_GT_Line_(United_States)_interior.png"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joined the line in January 2026 (EX from $24,890, GT-Line Turbo now confirmed at $28,790, both excl. destination). Sedan LX-through-GT-Line Turbo pricing re-confirmed via Kia's own 2026 K4 pricing page; destination fee is $1,245.",
@@ -34497,7 +34533,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/0/0a/2023_Nissan_Z%2C_NYIAS_2022.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/MIAS_2024_-_2024_Nissan_Z_RZ34_%28interior%29.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Nissan_Z_RZ34_(interior).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Heritage Edition new for 2026, celebrating the Z's heritage. NISMO is automatic-only. GT-R was discontinued after 2025 (R35 production ended).",
