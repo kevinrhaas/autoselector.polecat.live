@@ -525,7 +525,32 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   of single-model spec/news sites — each new figure was checked against
   destination-inclusive prices matching the existing on-file MSRPs exactly
   before being trusted for the remaining, previously-missing trims.)
-- [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
+- [x] Ram (2026-07-28 — all 3 models re-verified, see js/changelog.js latest:
+  every record's trim ladder was thin (1500 and 2500/3500 each had only 3
+  bookend trims, ProMaster only 2), so this run rebuilt full lineups —
+  1500 grew from 3 to 10 trims (Tradesman through Tungsten, picking up
+  Express/Big Horn-Lone Star/Warlock/Laramie/Rebel/Limited/Limited Longhorn),
+  2500/3500 from 3 to 9 (adding the genuinely new-for-2026 Black Express and
+  Warlock trims alongside Big Horn/Laramie/Rebel/Limited Longhorn), and
+  ProMaster from 2 to 3 (Tradesman/SLT/SLT+ spanning its 14 wheelbase/roof
+  combinations). Real correction: RHO's on-file $71,200 was stale — its base
+  MSRP is confirmed unchanged from 2025 at $69,995 (+ $2,595 destination =
+  $72,590), not the previously recorded figure. ramtrucks.com, edmunds.com,
+  kbb.com and moparinsiders.com all blocked or partially blocked automated
+  fetches (403s) throughout, so 1500 pricing leans on CarsDirect's dedicated
+  trim-by-trim 2026-vs-2025 comparison (cross-checked against Cars.com for
+  the 3 trims it didn't cover) and 2500/3500/ProMaster lean on TrimAtlas's
+  single coherent per-model pricing tables — chosen over mixing figures
+  across sites after early cross-checks showed dealer-blog summaries
+  disagreeing by $1,000-$3,000 per trim depending on whether destination was
+  included. Checked both NHTSA and IIHS for 1500 (added no `iihs` field:
+  Poor moderate-overlap-front rules out Top Safety Pick, checked directly on
+  iihs.org, not guessed) and for 2500/3500 (neither publishes a 2026 record —
+  HD trucks are GVWR-exempt from testing, so no `ratings` block added).
+  Per-trim features added to every model for the first time; ProMaster stays
+  confidence medium (only one source could be cross-checked, all others
+  blocked automated fetches).)
+- [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
