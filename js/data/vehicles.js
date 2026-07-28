@@ -888,12 +888,19 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "compact luxury sports sedan",
   "category": "car",
-  "priceFrom": 46450,
-  "priceTo": null,
+  "priceFrom": 44995,
+  "priceTo": 44995,
   "trims": [
    {
     "name": "Sprint",
-    "msrp": 46450
+    "msrp": 44995,
+    "features": [
+     "Leather seating with heated front and rear seats",
+     "Heated steering wheel",
+     "Heated side mirrors with memory",
+     "Proximity keyless entry",
+     "Wireless smartphone charging pad"
+    ]
    }
   ],
   "powertrains": [
@@ -907,7 +914,7 @@ export const VEHICLES = [
      "RWD",
      "AWD"
     ],
-    "mpgCombined": 27,
+    "mpgCombined": 26,
     "evRangeMi": null
    }
   ],
@@ -936,20 +943,35 @@ export const VEHICLES = [
    "audio": true
   },
   "keyOptions": [
+   "AWD (+$2,000)",
+   "Veloce Package: limited-slip rear differential, aluminum paddle shifters, gloss-red brake calipers, 19-inch wheels (+$1,625)",
    "Harman Kardon audio",
-   "Limited-slip rear differential",
-   "Active suspension",
-   "Heated seats and steering wheel",
-   "Intensa special series",
-   "19-inch wheels"
+   "Active suspension"
   ],
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/2/29/Alfa_952_26.06.19_JM_%281%29_%28cropped%29.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Current generation carries over into 2026 in its final years; 505-hp Quadrifoglio discontinued for the US after 2025. Base price derived from a listed $48,245 sticker assuming $1,795 destination; full 2026 trim walk (Ti, Veloce, Intensa) pricing not confirmed, so priceTo is null."
+  "confidence": "high",
+  "notes": "Streamlined to a single Sprint trim for 2026 (Quadrifoglio discontinued after 2025); RWD standard, AWD +$2,000. Corrected the base MSRP (2026-07-28): the previous $46,450 wrongly assumed a $1,795 destination fee on the commonly-quoted $48,245 sticker; Alfa Romeo's 2026 destination charge is actually $3,250 (sharply up from 2025 levels), so the confirmed base MSRP is $44,995 ($44,995 + $3,250 = $48,245, matching CarsDirect's listed all-in price exactly). A 2025 Intensa special series existed for Giulia/Stelvio/Tonale, but no source checked confirms it continuing into 2026 or at what price, so it's left out rather than guessed. IIHS has completed only a one-sided small-overlap-front test (Good) and rates LATCH ease-of-use Marginal — checked directly on iihs.org, no Top Safety Pick; NHTSA has no 2026 record.",
+  "sources": [
+   {
+    "label": "CarsDirect - 2026 Alfa Romeo Giulia Specs",
+    "url": "https://www.carsdirect.com/alfa-romeo/giulia/2026/specs",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "IIHS ratings - 2026 Alfa Romeo Giulia 4-door sedan",
+    "url": "https://www.iihs.org/ratings/vehicle/alfa-romeo/giulia-4-door-sedan/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "EPA 2026 Fuel Economy Guide",
+    "url": "https://www.fueleconomy.gov/feg/pdfs/guides/FEG2026.pdf",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "alfa-romeo-stelvio",
@@ -960,12 +982,19 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact luxury SUV",
   "category": "suv",
-  "priceFrom": 48200,
-  "priceTo": null,
+  "priceFrom": 49995,
+  "priceTo": 49995,
   "trims": [
    {
     "name": "Sprint",
-    "msrp": 48200
+    "msrp": 49995,
+    "features": [
+     "Leather seating with heated front and rear seats",
+     "Heated steering wheel",
+     "Heated side mirrors with memory",
+     "Proximity keyless entry",
+     "Standard Q4 all-wheel drive"
+    ]
    }
   ],
   "powertrains": [
@@ -1007,11 +1036,9 @@ export const VEHICLES = [
    "audio": true
   },
   "keyOptions": [
-   "Harman Kardon audio",
-   "Dual-pane sunroof",
-   "Limited-slip rear differential",
-   "Heated seats and steering wheel",
-   "Intensa special series",
+   "Veloce Package: limited-slip rear differential, strut tower brace, sport seats (+$2,025)",
+   "Premium Interior and Audio Package: leather-trimmed dash, 14-speaker Harman Kardon audio",
+   "Dual-pane power sunroof (optional, not standard)",
    "21-inch wheels"
   ],
   "towingLb": 3000,
@@ -1019,8 +1046,25 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Alfa_Romeo_Stelvio_Suv_Free_Car_Picture_-_Give_Credit_Via_Link.%28cropped%29.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Current generation continues into 2026 ahead of a delayed next-gen model; Quadrifoglio discontinued for the US. AWD standard. Base price derived from a listed ~$49,995 sticker assuming $1,795 destination; full 2026 trim pricing not confirmed, so priceTo is null."
+  "confidence": "high",
+  "notes": "Streamlined to a single Sprint trim for 2026 (Quadrifoglio discontinued after 2025); Q4 AWD standard. Leather, heated front/rear seats, heated steering wheel and wireless charging are standard, but Harman Kardon audio needs the Premium Interior and Audio Package and the dual-pane sunroof is also optional. Corrected the base MSRP (2026-07-28): the previous $48,200 wrongly treated the commonly-quoted $49,995 as an all-in sticker; multiple 2026-specific sources confirm $49,995 IS the base MSRP, excluding Alfa Romeo's 2026 destination charge of $3,250 ($49,995 + $3,250 = $53,245, matching CarsDirect's listed all-in price exactly). IIHS has not evaluated the 2026 Stelvio at all (no test page exists) and NHTSA has no 2026 record either — checked both, not guessed.",
+  "sources": [
+   {
+    "label": "CarsDirect - 2026 Alfa Romeo Stelvio Specs",
+    "url": "https://www.carsdirect.com/alfa-romeo/stelvio/2026/specs",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "EPA 2026 Fuel Economy Guide",
+    "url": "https://www.fueleconomy.gov/feg/pdfs/guides/FEG2026.pdf",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Alfa Romeo Stelvio Trim Levels & Pricing",
+    "url": "https://www.cars.com/research/alfa_romeo-stelvio-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "alfa-romeo-tonale",
@@ -1031,16 +1075,39 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact luxury SUV",
   "category": "suv",
-  "priceFrom": 38950,
-  "priceTo": 43450,
+  "priceFrom": 36995,
+  "priceTo": 41495,
   "trims": [
    {
     "name": "Sprint",
-    "msrp": 38950
+    "msrp": 36995,
+    "features": [
+     "Gloss black body kit, 18-inch wheels",
+     "10.25-inch touchscreen, 12.3-inch digital instrument cluster",
+     "Heated front seats and wireless device charging",
+     "Fabric seats with contrasting stitching and Biscione logo",
+     "Aluminum pedals and sills"
+    ]
+   },
+   {
+    "name": "Veloce",
+    "msrp": 41495,
+    "features": [
+     "19-inch wheels, red Brembo brake calipers",
+     "Dual-mode suspension, aluminum paddle shifters",
+     "Hands-free power liftgate",
+     "Perforated leather seating (black or red) with ventilation"
+    ]
    },
    {
     "name": "Sport Speciale",
-    "msrp": 43450
+    "msrp": 41495,
+    "features": [
+     "Exclusive 20-inch three-hole wheels, silver lower-body accents",
+     "Gloss-black Brembo brake calipers",
+     "Black-and-pearl Alcantara-trimmed seats with contrast stitching",
+     "Unique ambient lighting signature"
+    ]
    }
   ],
   "powertrains": [
@@ -1053,7 +1120,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": null,
+    "mpgCombined": 24,
     "evRangeMi": null
    }
   ],
@@ -1084,18 +1151,33 @@ export const VEHICLES = [
   "keyOptions": [
    "Harman Kardon audio",
    "Dual-pane sunroof",
-   "Heated seats and steering wheel",
    "Level 2 driver assistance package",
-   "Sport Speciale styling package",
-   "20-inch wheels"
+   "Premium Package (Sprint): perforated leather, ambient lighting, hands-free liftgate, ventilated seats"
   ],
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/0/06/Alfa_Romeo_Tonale_2026_Front_1_%28cropped%29.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Refreshed for 2026: plug-in hybrid dropped in North America, replaced by a 268-hp 2.0L turbo with standard AWD. Prices derived from listed stickers of $40,745-$45,245 assuming $1,795 destination; EPA figures for the new powertrain not yet published."
+  "confidence": "high",
+  "notes": "Refreshed for 2026: plug-in hybrid dropped in North America, replaced by a 268-hp 2.0L turbo four with standard AWD across all three trims (Sprint/Veloce/Sport Speciale). Corrected pricing and destination (2026-07-28): trims confirmed at Sprint $36,995 / Veloce $41,495 / Sport Speciale $41,495, excluding a $3,250 destination charge — a sharp jump from the prior year's ~$1,595, independently confirmed across multiple sources. EPA rates the AWD powertrain at 24 mpg combined (21 city/29 highway) per the official 2026 Fuel Economy Guide, filling in the previously-null figure. No 2026 NHTSA or IIHS rating was found for the Tonale in this sweep (NHTSA's API returned server errors on repeated queries and no third-party source cites a rating either) — recheck in a future sweep rather than guess.",
+  "sources": [
+   {
+    "label": "CarBuzz - 2026 Alfa Romeo Tonale Pricing Announced",
+    "url": "https://carbuzz.com/2026-alfa-romeo-tonale-pricing/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "EPA 2026 Fuel Economy Guide",
+    "url": "https://www.fueleconomy.gov/feg/pdfs/guides/FEG2026.pdf",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Alfa Romeo Tonale Trim Levels & Configurations",
+    "url": "https://www.cars.com/research/alfa_romeo-tonale-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "aston-martin-db12",

@@ -577,7 +577,31 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   100th Anniversary Edition and Select Premium trim were found to be real but
   had conflicting pricing across three sources, so left out rather than
   guessed. Per-trim features and a sources array added to both models for the
-  first time.) — [ ] Alfa Romeo — [ ] Fiat
+  first time.)
+- [x] Alfa Romeo (2026-07-28 — all 3 models re-verified, see js/changelog.js latest:
+  Giulia and Stelvio were both simplified to a single Sprint trim for 2026
+  (Quadrifoglio discontinued), with a Veloce performance package (limited-slip
+  diff, paddle shifters, red calipers) available on each rather than sold as a
+  separate trim SKU — corrected a real base-MSRP error on both: the previous
+  figures ($46,450/$48,200) had wrongly assumed a $1,795-ish destination
+  charge against the commonly-quoted all-in stickers, when Alfa Romeo's actual
+  2026 destination charge jumped to $3,250; true base MSRPs are Giulia $44,995
+  and Stelvio $49,995 (each checks out exactly against CarsDirect's all-in
+  listing once the real destination is added back in). Tonale's three real
+  trims (Sprint/Veloce/Sport Speciale) got corrected pricing and, for the
+  first time, an EPA combined mpg figure (24, from the official 2026 Fuel
+  Economy Guide PDF) after shipping with a null MPG since its 2026 refresh.
+  Per-trim features and a sources array added to all three models for the
+  first time, all raised to confidence high. IIHS checked directly for all
+  three: Giulia has only an incomplete one-sided small-overlap test (no
+  award), Stelvio has no IIHS test page at all, and Tonale has neither an
+  IIHS nor (after the NHTSA API returned server errors on repeated queries
+  this run) a confirmed NHTSA record — nothing guessed, recheck later. A 2025
+  Intensa special series was found for all three nameplates, but no source
+  confirmed it continuing into 2026 at any price, so it was left out rather
+  than guessed. alfaromeousa.com and edmunds.com blocked automated fetches
+  (403) throughout, so citations lean on CarsDirect, CarBuzz, cars.com's
+  trim-comparison pages and the official EPA guide instead.) — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures

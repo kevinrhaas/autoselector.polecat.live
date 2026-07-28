@@ -1,5 +1,11 @@
 [
   {
+    "v": 72,
+    "title": "Alfa Romeo lineup re-verified — two stale base prices fixed",
+    "date": "Jul 28, 2026, 1:05 PM CT",
+    "path": "/v/72/app/"
+  },
+  {
     "v": 71,
     "title": "Chrysler lineup re-verified — a stale Voyager price fixed",
     "date": "Jul 28, 2026, 12:45 PM CT",
@@ -136,11 +142,5 @@
     "title": "9 more models get real NHTSA safety ratings — 92 covered now",
     "date": "Jul 22, 2026, 11:51 AM CT",
     "path": "/v/39/app/"
-  },
-  {
-    "v": 37,
-    "title": "Mind Reader is multi-select — tap every answer that fits",
-    "date": "Jul 18, 2026, 8:44 AM CT",
-    "path": "/v/37/app/"
   }
 ]
