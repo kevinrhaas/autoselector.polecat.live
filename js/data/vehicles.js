@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 32;
+export const DATA_VERSION = 33;
 
 export const VEHICLES = [
  {
@@ -5673,7 +5673,15 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Celestiq (bespoke commission)",
-    "msrp": 414855
+    "msrp": 414855,
+    "features": [
+     "Single all-inclusive MSRP replacing itemized interior mix-and-match options",
+     "8 years of connected services included at no extra cost (new for 2026)",
+     "Premium-pattern 4-quadrant Smart Glass Roof now standard (previously optional)",
+     "55-inch pillar-to-pillar front display with dual 12.6-inch rear displays, Google built-in",
+     "AKG Studio Reference 38-speaker audio system standard",
+     "All four seats heated, ventilated and massaging with 4-zone microclimate control"
+    ]
    }
   ],
   "powertrains": [
@@ -5728,7 +5736,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Hand-built flagship EV; 2026 base price $414,855 before $8,195 destination, effectively bespoke with virtually unlimited personalization."
+  "notes": "Verified 2026-07-28. Base MSRP confirmed at $414,855 ($423,050 with $8,195 destination) across multiple independent outlets. For 2026 Cadillac simplified ordering to one all-in MSRP, added 8 years of connected services standard, and made the premium-pattern Smart Glass Roof standard rather than optional.",
+  "sources": [
+   {
+    "label": "2026 Cadillac Celestiq Starts At This Price",
+    "url": "https://gmauthority.com/blog/2026/03/2026-cadillac-celestiq-starts-at-this-price/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac Celestiq Now Costs Over $400k",
+    "url": "https://www.carsdirect.com/automotive-news/2026-cadillac-celestiq-now-costs-over-400k",
+    "site": "carsdirect.com"
+   }
+  ]
  },
  {
   "id": "cadillac-ct4",
@@ -5739,28 +5759,59 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "compact luxury sedan",
   "category": "car",
-  "priceFrom": 36200,
-  "priceTo": 63800,
+  "priceFrom": 37795,
+  "priceTo": 65395,
   "trims": [
    {
     "name": "Luxury",
-    "msrp": 36200
-   },
-   {
-    "name": "Sport",
-    "msrp": 40300
+    "msrp": 37795,
+    "features": [
+     "17-inch wheels",
+     "LED exterior lighting",
+     "Keyless entry and start",
+     "2.0L turbo I4, 8-speed automatic standard"
+    ]
    },
    {
     "name": "Premium Luxury",
-    "msrp": 40900
+    "msrp": 42195,
+    "features": [
+     "Genuine leather upholstery",
+     "Adaptive cruise control",
+     "Front parking sensors, reverse automatic braking",
+     "Optional 2.7L turbo I4 (310 hp)"
+    ]
+   },
+   {
+    "name": "Sport",
+    "msrp": 46195,
+    "features": [
+     "Sport-tuned suspension with available adaptive dampers",
+     "Grippier performance-oriented tires",
+     "Sportier exterior styling and badging"
+    ]
    },
    {
     "name": "V-Series",
-    "msrp": 50300
+    "msrp": 52395,
+    "features": [
+     "2.7L turbo I4, 325 hp / 380 lb-ft standard",
+     "Front Brembo brakes",
+     "Adaptive sport suspension, launch control",
+     "Summer tires"
+    ]
    },
    {
     "name": "V-Series Blackwing",
-    "msrp": 63800
+    "msrp": 65395,
+    "features": [
+     "3.6L twin-turbo V6, 472 hp / 445 lb-ft",
+     "Front and rear Brembo brakes",
+     "Upgraded limited-slip differential",
+     "Unique front bumper with ground effects",
+     "15-speaker AKG audio, nav, 12-inch digital cluster",
+     "6-speed manual or 10-speed automatic"
+    ]
    }
   ],
   "powertrains": [
@@ -5841,7 +5892,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Final model year: CT4 production ends mid-2026. Mid-trim prices approximate; excludes ~$1,595 destination."
+  "notes": "Verified 2026-07-28. GM Authority reports a December 2025 MSRP and destination-charge increase (destination $1,495 to $1,795); trim order also changed, with Sport now priced above Premium Luxury. CT4 production ended June 25, 2026 at Lansing Grand River with final orders closed April 20, 2026, so remaining 2026 CT4s are dealer-inventory only. Exact digit-level MSRPs come from GM Authority's dated pricing article since gmauthority.com/edmunds.com trim pages blocked direct verification (403); kept at medium confidence pending a live spot-check.",
+  "sources": [
+   {
+    "label": "2026 Cadillac CT4 Gets MSRP And DFC Increases",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-ct4-gets-msrp-and-dfc-increases/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "Cadillac Is Killing The CT4 In Weeks, And The Blackwing Goes With It",
+    "url": "https://www.carscoops.com/2026/04/cadillac-ct4-production-end/",
+    "site": "carscoops.com"
+   }
+  ]
  },
  {
   "id": "cadillac-ct5",
@@ -5852,28 +5915,46 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "midsize luxury sedan",
   "category": "car",
-  "priceFrom": 49200,
-  "priceTo": 98900,
+  "priceFrom": 50095,
+  "priceTo": 100695,
   "trims": [
    {
-    "name": "Luxury",
-    "msrp": 49200
+    "name": "Premium Luxury",
+    "msrp": 50095,
+    "features": [
+     "2.0L turbo I4 (237 hp / 258 lb-ft), 10-speed automatic standard",
+     "Heated, ventilated and massaging front seats",
+     "Super Cruise hands-free driving standard",
+     "Optional twin-turbo 3.0L V6 upgrade (335 hp)"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 52900
-   },
-   {
-    "name": "Premium Luxury",
-    "msrp": 53700
+    "msrp": 51095,
+    "features": [
+     "Sport-tuned suspension and exterior styling",
+     "Sportier wheel choices",
+     "Super Cruise carried over standard"
+    ]
    },
    {
     "name": "V-Series",
-    "msrp": 63300
+    "msrp": 60095,
+    "features": [
+     "Twin-turbo 3.0L V6 standard, 360 hp / 405 lb-ft",
+     "19-inch alloy wheels",
+     "Performance-tuned chassis and brakes"
+    ]
    },
    {
     "name": "V-Series Blackwing",
-    "msrp": 98900
+    "msrp": 100695,
+    "features": [
+     "Supercharged 6.2L V8, 668 hp / 659 lb-ft, 0-60 in 3.4s",
+     "Exclusive 6-speed manual transmission option",
+     "Rear decklid spoiler, front splitter, gloss-black rocker extensions",
+     "Optional track-focused Precision Package"
+    ]
    }
   ],
   "powertrains": [
@@ -5954,7 +6035,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026.",
+  "notes": "Verified 2026-07-28. Cadillac dropped the standalone CT5 Luxury trim starting MY2025 — the 2026 lineup is Premium Luxury (base), Sport, V-Series and V-Series Blackwing only. A December 2025 price increase (partly driven by the $1,495 to $1,795 destination hike) raised Premium Luxury/Sport MSRPs $600, V-Series $700 and Blackwing over $1,300. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -5965,7 +6046,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Cadillac CT5 Gets Price Increase Across All Trim Levels",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-ct5-gets-price-increase-across-all-trim-levels/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac CT5 V Blackwing Prices, Reviews, and Pictures",
+    "url": "https://www.edmunds.com/cadillac/ct5/2026/v-blackwing/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "cadillac-escalade",
@@ -5976,28 +6069,67 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "full-size luxury SUV",
   "category": "suv",
-  "priceFrom": 91700,
-  "priceTo": 168600,
+  "priceFrom": 91100,
+  "priceTo": 168000,
   "trims": [
    {
-    "name": "Luxury",
-    "msrp": 91700
+    "name": "Escalade",
+    "msrp": 91100,
+    "features": [
+     "6.2L V8, Super Cruise hands-free driving",
+     "55-inch curved OLED display",
+     "22-inch wheels",
+     "Synthetic leather seating, heated front/rear seats"
+    ]
    },
    {
-    "name": "Premium Luxury",
-    "msrp": 104000
+    "name": "Luxury",
+    "msrp": 102100,
+    "features": [
+     "Genuine perforated leather seating",
+     "Heated and ventilated front seats",
+     "Head-up display, digital rearview mirror",
+     "Air-suspension option available"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 104500
+    "msrp": 102700,
+    "features": [
+     "Gloss-black exterior trim, grille and roof rails",
+     "Dark-finish 22-inch wheels",
+     "Panoramic sunroof",
+     "Enhanced towing tech"
+    ]
    },
    {
-    "name": "Premium Luxury Platinum",
-    "msrp": 128000
+    "name": "Platinum Luxury",
+    "msrp": 120000,
+    "features": [
+     "Standard air-ride adaptive suspension",
+     "Semi-aniline quilted leather, massaging front seats",
+     "36-38 speaker AKG Studio Reference audio",
+     "Night Vision thermal imaging, rear-seat entertainment screens"
+    ]
+   },
+   {
+    "name": "Platinum Sport",
+    "msrp": 122995,
+    "features": [
+     "Platinum content in blackout Sport styling",
+     "Power-closing doors",
+     "Sueded microfiber headliner"
+    ]
    },
    {
     "name": "Escalade-V",
-    "msrp": 168600
+    "msrp": 168000,
+    "features": [
+     "Hand-built 682-hp supercharged 6.2L V8",
+     "Standard AWD, V-Mode performance system",
+     "Brembo front brakes, electronic limited-slip differential",
+     "24-inch wheels"
+    ]
    }
   ],
   "powertrains": [
@@ -6079,7 +6211,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "ESV long-wheelbase adds ~$3,000. Base and V prices verified; mid-trim figures approximate. Climate control is largely screen-based after the 2025 refresh. Prices exclude ~$1,995 destination.",
+  "notes": "Verified 2026-07-28. Cadillac renamed the gas Escalade's trim lineup for MY2026 (Luxury to base Escalade, Premium Luxury to Luxury, Premium Luxury Platinum to Platinum Luxury, Premium Sport Platinum to Platinum Sport) without changing each tier's content or position; a new Platinum Sport tier is now tracked. Destination freight rose from $2,595 to $2,895 in December 2025. Platinum Luxury/Platinum Sport figures are approximate (~$120,000/~$122,995); ESV long-wheelbase adds ~$3,000. Climate control is largely screen-based after the 2025 refresh.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -6090,7 +6222,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Cadillac Escalade Gets Trim Level Name Changes",
+    "url": "https://gmauthority.com/blog/2025/07/2026-cadillac-escalade-gets-trim-level-name-changes/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac Escalade Pricing: What Dealers Charge After a December Price Increase and a Full Trim Rename",
+    "url": "https://www.automotiveaddicts.com/118033/2026-cadillac-escalade-pricing-what-dealers-charge-december-price-increase-full-trim-rename",
+    "site": "automotiveaddicts.com"
+   }
+  ]
  },
  {
   "id": "cadillac-escalade-iq",
@@ -6106,23 +6250,48 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Luxury",
-    "msrp": 127405
+    "msrp": 127405,
+    "features": [
+     "Heated and ventilated front seats",
+     "55-inch interior display",
+     "Hands-free Super Cruise standard",
+     "Up to 460-mile range"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 127905
+    "msrp": 127905,
+    "features": [
+     "Black roof rails, body-color door handles",
+     "Obsidian Chrome grille (styling package over Luxury)"
+    ]
    },
    {
     "name": "Premium Luxury",
-    "msrp": 147705
+    "msrp": 147705,
+    "features": [
+     "24-inch wheels, 19.2 kW onboard charging",
+     "Smart Trailering Package",
+     "16-way massaging front seats, premium wood trim",
+     "38-speaker AKG Studio Reference audio with Dolby Atmos",
+     "Night Vision, power open/close doors"
+    ]
    },
    {
     "name": "Premium Sport",
-    "msrp": 148205
+    "msrp": 148205,
+    "features": [
+     "Premium Luxury's equipment set in Sport-styled exterior",
+     "24-inch dark-tint wheels"
+    ]
    },
    {
     "name": "IQL Premium Sport",
-    "msrp": 151205
+    "msrp": 151205,
+    "features": [
+     "Extended-length IQL body, +4.4 in third-row legroom",
+     "Cargo behind row 1 up to 125.2 cu ft (vs 119.2 on standard IQ)"
+    ]
    }
   ],
   "powertrains": [
@@ -6186,7 +6355,19 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "~205 kWh battery, 460-mile range, 800V DC fast charging. Extended-length Escalade IQL folded into this record (+$3,000). Prices exclude $2,895 destination."
+  "notes": "Verified 2026-07-28. ~205 kWh battery, 460-mile range, 800V DC fast charging. Trim names (Luxury/Sport/Premium Luxury/Premium Sport, plus IQL length variant) confirmed current. Extended-length Escalade IQL folded into this record (+$3,000). Prices exclude $2,895 destination (raised from $2,390 in December 2025).",
+  "sources": [
+   {
+    "label": "2026 Cadillac Escalade IQ Gets Freight Price Increase",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-escalade-iq-gets-freight-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac Escalade IQ Pricing Announced",
+    "url": "https://gmauthority.com/blog/2025/05/2026-cadillac-escalade-iq-pricing-announced/",
+    "site": "gmauthority.com"
+   }
+  ]
  },
  {
   "id": "cadillac-lyriq",
@@ -6202,27 +6383,50 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Luxury",
-    "msrp": 59200
+    "msrp": 59200,
+    "features": [
+     "33-inch curved LED display",
+     "Super Cruise hands-free driving standard"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 59700
+    "msrp": 59700,
+    "features": [
+     "Obsidian Chrome exterior detailing, sport-tuned grille styling"
+    ]
    },
    {
     "name": "Premium Luxury",
-    "msrp": 63200
+    "msrp": 63200,
+    "features": [
+     "Upgraded AKG Studio audio system with noise cancellation",
+     "Ventilated seating"
+    ]
    },
    {
     "name": "Signature Luxury",
-    "msrp": 67800
+    "msrp": 67800,
+    "features": [
+     "Augmented Reality Head-Up Display",
+     "Heated rear seats, tri-zone climate control"
+    ]
    },
    {
     "name": "V-Series",
-    "msrp": 78595
+    "msrp": 78595,
+    "features": [
+     "Dual-motor AWD, 615 hp",
+     "Brembo brakes"
+    ]
    },
    {
     "name": "V-Series Premium",
-    "msrp": 83795
+    "msrp": 83795,
+    "features": [
+     "19.2 kW onboard AC charging module",
+     "Optional Carbon Fiber package"
+    ]
    }
   ],
   "powertrains": [
@@ -6301,7 +6505,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "2026 trim prices verified (incl.-destination figures minus $1,495 DFC). Lyriq-V does 0-60 in about 3.3 s.",
+  "notes": "Verified 2026-07-28. All six trim prices confirmed unchanged since launch. Destination freight rose from $1,495 to $1,795 as of January 16, 2026 (MSRPs themselves unchanged). Trim names reflect Cadillac's June 2025 rename (Luxury/Premium Luxury/Signature Luxury tiers replacing Luxury 1/2/3). Lyriq-V does 0-60 in about 3.3 s.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -6312,7 +6516,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Cadillac Lyriq Gets Destination Freight Charge Hike",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-lyriq-gets-destination-freight-charge-hike/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac Lyriq Gets Trim Level Name Changes",
+    "url": "https://gmauthority.com/blog/2025/06/2026-cadillac-lyriq-gets-trim-level-name-changes/",
+    "site": "gmauthority.com"
+   }
+  ]
  },
  {
   "id": "cadillac-optiq",
@@ -6328,23 +6544,49 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Luxury",
-    "msrp": 50900
+    "msrp": 50900,
+    "features": [
+     "85 kWh Ultium battery, 315-hp single-motor RWD",
+     "Standard Super Cruise",
+     "33-inch curved OLED display with Google built-in",
+     "Wireless CarPlay/Android Auto, adaptive cruise control"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 51500
+    "msrp": 51500,
+    "features": [
+     "Dark/blacked-out exterior brightwork over Luxury",
+     "Distinct color and wheel choices"
+    ]
    },
    {
     "name": "Premium Luxury",
-    "msrp": 53100
+    "msrp": 53100,
+    "features": [
+     "Head-up display",
+     "Heated rear seats",
+     "Upgraded interior trim and materials",
+     "Optional 21-inch wheel package"
+    ]
    },
    {
     "name": "Premium Sport",
-    "msrp": 53600
+    "msrp": 53600,
+    "features": [
+     "Sport-tuned steering",
+     "Ventilated and massaging front seats",
+     "Blacked-out exterior brightwork"
+    ]
    },
    {
     "name": "V-Series",
-    "msrp": 67300
+    "msrp": 67300,
+    "features": [
+     "Dual-motor AWD, 519 hp / 650 lb-ft, ~3.5s 0-60",
+     "Standard NACS charge port",
+     "Distinct V-Series styling"
+    ]
    }
   ],
   "powertrains": [
@@ -6358,7 +6600,7 @@ export const VEHICLES = [
      "RWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": null
+    "evRangeMi": 317
    },
    {
     "type": "ev",
@@ -6422,8 +6664,20 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac%20Optiq%20Auto%20Zuerich%202025%20DSC%203328.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "RWD variant and V-Series new for 2026; RWD output/range not yet EPA-published (hp estimated). AWD adds $3,500. Prices exclude $1,495 destination."
+  "confidence": "high",
+  "notes": "Verified 2026-07-28. RWD single-motor variant (315 hp / 332 lb-ft) now has an EPA-published range of 317 miles, resolving the prior estimate caveat. Base trim MSRPs unchanged since launch; destination/freight charge rose from $1,495 to $1,795 in Dec 2025/Jan 2026. AWD adds $3,500 to any non-V trim.",
+  "sources": [
+   {
+    "label": "2026 Cadillac Optiq Gets Output Changes, Adds RWD",
+    "url": "https://gmauthority.com/blog/2025/06/2026-cadillac-optiq-gets-output-changes-adds-rwd/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac Optiq Gets A Destination Freight Charge Increase",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-optiq-gets-a-destination-freight-charge-increase/",
+    "site": "gmauthority.com"
+   }
+  ]
  },
  {
   "id": "cadillac-vistiq",
@@ -6439,19 +6693,40 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Luxury",
-    "msrp": 77395
+    "msrp": 77395,
+    "features": [
+     "Dual-motor AWD standard, Super Cruise with 3-yr OnStar",
+     "Dual-pane Power SkyGlass roof",
+     "5-zone ClimateSense HVAC",
+     "23-speaker AKG Studio audio",
+     "Heated/ventilated/massaging front seats, power-folding 3rd row"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 77895
+    "msrp": 77895,
+    "features": [
+     "Gloss-black exterior accents, Obsidian Chrome trim",
+     "Unique Sport grille, 21-inch Diamond Cut wheels"
+    ]
    },
    {
     "name": "Premium Luxury",
-    "msrp": 91895
+    "msrp": 91895,
+    "features": [
+     "Air Ride Adaptive Suspension, Active Rear Steering",
+     "Augmented-reality head-up display, Night Vision",
+     "19.2 kW onboard charger (vs 11.5 kW)"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 96495
+    "msrp": 96495,
+    "features": [
+     "Unique front/rear fascias, body-color wheel moldings",
+     "Brembo front brakes, 22-inch Reverse Rim wheels",
+     "Exclusive Nouveauluxe seats with custom quilting, open-pore trim"
+    ]
    }
   ],
   "powertrains": [
@@ -6507,7 +6782,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-new for 2026; three-row electric successor to the XT6. Velocity Max mode unlocks full 615 hp. Prices exclude $1,995 destination."
+  "notes": "Verified 2026-07-28. Base trim MSRPs unchanged since launch. All-new for 2026; three-row electric successor to the XT6. Velocity Max mode unlocks full 615 hp. Prices exclude $1,995 destination (a January 2026 second increase from $1,695).",
+  "sources": [
+   {
+    "label": "2026 Cadillac Vistiq Gets Second Price Increase",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-vistiq-gets-second-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac Vistiq - Specs, Prices, MPG, Reviews & Photos",
+    "url": "https://www.cars.com/research/cadillac-vistiq-2026/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "cadillac-xt5",
@@ -6518,20 +6805,36 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize luxury SUV",
   "category": "suv",
-  "priceFrom": 45000,
-  "priceTo": 55000,
+  "priceFrom": 46595,
+  "priceTo": 64595,
   "trims": [
    {
     "name": "Luxury",
-    "msrp": 45000
+    "msrp": 46595,
+    "features": [
+     "2.0L turbo I4 (235 hp / 258 lb-ft), FWD standard, AWD optional",
+     "Heated front seats",
+     "Bose audio, wireless CarPlay/Android Auto"
+    ]
    },
    {
     "name": "Premium Luxury",
-    "msrp": 49500
+    "msrp": 55295,
+    "features": [
+     "Technology Package standard (8-inch color gauge cluster, head-up display)",
+     "Optional 3.6L V6 (310 hp)",
+     "Upgraded interior trim, optional Onyx Package"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 55000
+    "msrp": 64595,
+    "features": [
+     "3.6L V6 (310 hp / 271 lb-ft) and AWD standard",
+     "Technology Package standard",
+     "Onyx Lite Package with blacked-out gloss-black accents/wheels",
+     "Added towing-capability hardware"
+    ]
    }
   ],
   "powertrains": [
@@ -6598,8 +6901,8 @@ export const VEHICLES = [
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2020%20Cadillac%20XT5%20au%20SIAM%202020.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Continues for 2026 as Cadillac's last gas crossover alongside Escalade; XT4 and XT6 are discontinued. Mid/top trim prices approximate; excludes ~$1,595 destination.",
+  "confidence": "high",
+  "notes": "Verified 2026-07-28. XT5 is NOT discontinued for MY2026 — it continues alongside Escalade as Cadillac's last gas crossover (XT4/XT6 discontinued), though GM Authority reports production winding down in late 2026 with no 2027 model year before a redesigned second-gen XT5 returns. A December 2025 price increase raised Luxury $800, Premium Luxury FWD $900 and Sport $1,000; destination rose to $1,795. Prices shown are FWD/base-drivetrain MSRPs; AWD adds $2,000 on Luxury/Premium Luxury, and Sport requires AWD.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -6610,7 +6913,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Cadillac XT5 Gets MSRP And DFC Increases",
+    "url": "https://gmauthority.com/blog/2026/01/2026-cadillac-xt5-gets-msrp-and-dfc-increases/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Cadillac XT5 - Specs, Prices, MPG, Reviews & Photos",
+    "url": "https://www.cars.com/research/cadillac-xt5-2026/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "chevrolet-blazer",
