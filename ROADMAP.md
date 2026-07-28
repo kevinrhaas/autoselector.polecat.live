@@ -441,7 +441,24 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   nissanusa.com/edmunds.com mostly blocked automated fetches, so citations
   lean on Nissan's own newsroom press releases (usa.nissannews.com) plus
   Motor1, TFLtruck and Businesswire syndication of those releases.)
-- [ ] Infiniti — [ ] Mitsubishi
+- [x] Infiniti (2026-07-28 — both models re-verified, see js/changelog.js latest:
+  corrected the QX60 LUXE and AUTOGRAPH AWD MSRPs (were $56,845/$68,385; the
+  official trim ladder is $56,600/$66,700 before the $1,495 destination charge
+  — cross-checked against a dealer pricing breakdown that also matched the
+  already-correct PURE/SPORT figures exactly) and corrected the QX60's EPA
+  combined rating from 23 to 24 mpg (both FWD and AWD, verified directly on
+  fueleconomy.gov). QX80 pricing was re-checked against a current live listing
+  and found already accurate — no mid-year change despite some secondary
+  sources quoting destination-inclusive totals that looked like an increase.
+  Per-trim features and a sources array added to both models for the first
+  time; QX60 raised to confidence high. infinitiusa.com already serves 2027
+  content and infinitinews.com/edmunds.com/cars.com blocked automated
+  fetches (403), so citations lean on automotiveaddicts.com, carsdirect.com
+  and fueleconomy.gov instead. Colors intentionally omitted for both — named
+  options are findable but no manufacturer hex swatch values are published,
+  and the never-guess rule means no fabricated hex codes (same call as the
+  GMC/Buick sweeps).)
+- [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
