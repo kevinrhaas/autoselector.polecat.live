@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 35;
+export const DATA_VERSION = 36;
 
 export const VEHICLES = [
  {
@@ -21282,23 +21282,47 @@ export const VEHICLES = [
   "segment": "midsize luxury 3-row SUV",
   "category": "suv",
   "priceFrom": 51200,
-  "priceTo": 68385,
+  "priceTo": 66700,
   "trims": [
    {
     "name": "PURE",
-    "msrp": 51200
+    "msrp": 51200,
+    "features": [
+     "20-in machined-face alloy wheels",
+     "Dual 12.3-in displays (digital cluster + touchscreen)",
+     "TailorFit synthetic leather seating",
+     "INFINITI Safety Shield 360"
+    ]
    },
    {
     "name": "LUXE",
-    "msrp": 56845
+    "msrp": 56600,
+    "features": [
+     "ProPILOT Assist 1.1",
+     "16-speaker Klipsch Premium Audio",
+     "Heated front seats"
+    ]
    },
    {
     "name": "SPORT AWD",
-    "msrp": 61700
+    "msrp": 61700,
+    "features": [
+     "Standard AWD",
+     "20-in gloss-black wheels",
+     "Black front grille with dark chrome surround, S badging",
+     "Dusk Blue interior available"
+    ]
    },
    {
     "name": "AUTOGRAPH AWD",
-    "msrp": 68385
+    "msrp": 66700,
+    "features": [
+     "Standard AWD",
+     "6-seat captain's-chair layout",
+     "Massaging front seats w/ 4-way power lumbar, front passenger memory",
+     "Quilted semi-aniline leather, ambient lighting, 20-speaker audio",
+     "INFINITI Light Path illuminated welcome projection"
+    ]
    }
   ],
   "powertrains": [
@@ -21312,7 +21336,7 @@ export const VEHICLES = [
      "FWD",
      "AWD"
     ],
-    "mpgCombined": 23,
+    "mpgCombined": 24,
     "evRangeMi": null
    }
   ],
@@ -21355,8 +21379,20 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/9/96/23_Infiniti_QX60_Autograph.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Significantly refreshed for 2026 with new SPORT grade. Base ($51,200) and SPORT ($61,700) prices are from Infiniti; LUXE and AUTOGRAPH MSRPs derived from list prices less $1,495 destination and vary slightly by source. Q50, QX50 and QX55 were all discontinued before 2026.",
+  "confidence": "high",
+  "notes": "Significantly refreshed for 2026 with new SPORT grade. Destination is $1,495 on every trim (not included in the MSRP figures above). LUXE and AUTOGRAPH MSRPs corrected 2026-07-28 (were $56,845/$68,385; verified $56,600/$66,700 against a dealer pricing breakdown that also matches the already-confirmed PURE/SPORT figures exactly once destination is added back). Q50, QX50 and QX55 were all discontinued before 2026.",
+  "sources": [
+   {
+    "label": "2026 INFINITI QX60 Pricing — full trim MSRP + destination breakdown",
+    "url": "https://www.automotiveaddicts.com/118731/2026-infiniti-qx60-pricing-major-refresh-sport-grade-what-real-buyers-are-paying",
+    "site": "automotiveaddicts.com"
+   },
+   {
+    "label": "EPA fuel economy — 2026 Infiniti QX60 (FWD/AWD, Combined 24 MPG)",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Infiniti_QX60.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -21384,19 +21420,41 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "PURE",
-    "msrp": 83750
+    "msrp": 83750,
+    "features": [
+     "Dual 14.3-in InTouch displays + 9-in climate touchscreen",
+     "14-speaker Klipsch audio",
+     "Wireless Apple CarPlay/Android Auto",
+     "ProPILOT Assist 1.1"
+    ]
    },
    {
     "name": "LUXE",
-    "msrp": 90850
+    "msrp": 90850,
+    "features": [
+     "22-in wheels",
+     "Heated and ventilated front seats",
+     "Head-up display"
+    ]
    },
    {
     "name": "SPORT 4WD",
-    "msrp": 101950
+    "msrp": 101950,
+    "features": [
+     "Darkened exterior trim, new front grille, restyled bumper",
+     "Massaging front seats, semi-aniline leather",
+     "24-speaker Klipsch Reference Premier audio",
+     "Available Dusk Blue interior"
+    ]
    },
    {
     "name": "AUTOGRAPH 4WD",
-    "msrp": 111500
+    "msrp": 111500,
+    "features": [
+     "Heated third-row seats",
+     "Massaging second-row seats",
+     "ProPILOT Assist 2.1 hands-off driving"
+    ]
    }
   ],
   "powertrains": [
@@ -21463,7 +21521,19 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190.",
+  "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190. Trim pricing re-verified 2026-07-28 against a current live listing — unchanged since launch, no mid-year increase.",
+  "sources": [
+   {
+    "label": "2026 INFINITI QX80 pricing by trim (current listing)",
+    "url": "https://www.carsdirect.com/infiniti/qx80/2026",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "EPA fuel economy — 2026 Infiniti QX80 4WD (Combined 17 MPG)",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Infiniti_QX80.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ],
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick",
