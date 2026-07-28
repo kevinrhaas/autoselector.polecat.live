@@ -1,9 +1,9 @@
 // views/shared.js — helpers shared by every view: money/spec formatting,
 // powertrain chips, the vehicle tile card, and local-asset lookups.
-import { el, escapeHtml } from '../ui.js';
+import { el, escapeHtml, modal } from '../ui.js';
 import { icon, bodyIcon } from '../icons.js';
 import { Store } from '../store.js';
-import { standing, verdict } from '../stats.js';
+import { standing, verdict, standingDetail } from '../stats.js';
 
 // ---- formatting -----------------------------------------------------------
 export const money = (x)=> (x==null||isNaN(x)) ? '—' : '$' + Number(x).toLocaleString('en-US');
@@ -77,6 +77,66 @@ export function ratingsBadge(v){
 
 // ---- vehicle tile ------------------------------------------------------------
 // The standard card. ctx: { openVehicle } — favorite toggles in place.
+// Data completeness for a vehicle — how many detail sets are filled in, paired
+// with the editorial confidence level. Powers the little at-a-glance chip on
+// each card so shoppers know how much of a record is verified vs pre-release.
+export function dataCompleteness(v){
+  const checks = [
+    ['Sources',       (v.sources||[]).length>0],
+    ['Full specs',    !!(v.dims?.lengthIn && v.dims?.widthIn && v.dims?.heightIn)],
+    ['Colors',        (v.colors?.exterior||[]).length>0],
+    ['Photos',        (v.image?.gallery||[]).length>0 || !!v.image?.remote],
+    ['Ratings',       !!(v.ratings?.safety || v.ratings?.owner || v.ratings?.expert)],
+    ['Trim features', (v.trims||[]).some(t=>(t.features||[]).length>0)],
+  ];
+  const filled = checks.filter(c=>c[1]).length;
+  const missing = checks.filter(c=>!c[1]).map(c=>c[0].toLowerCase());
+  const level = v.confidence || 'medium';
+  const title = `Data confidence: ${level} · ${filled} of ${checks.length} detail sets complete`
+    + (missing.length ? ` — still to add: ${missing.join(', ')}` : ' — fully detailed');
+  return { filled, total:checks.length, level, missing, title };
+}
+
+// The card chip: a confidence-colored completeness meter + fraction, with a
+// small info glyph. Tapping it opens the breakdown so it isn't a mystery.
+export function dataChip(v){
+  const c = dataCompleteness(v);
+  const bars = el('span',{class:'dc-bars', 'aria-hidden':'true'});
+  for(let i=0;i<c.total;i++) bars.append(el('i',{class:'dc-seg'+(i<c.filled?' on':'')}));
+  return el('button',{class:`vt-data lvl-${c.level}`, type:'button', title:c.title,
+    'aria-label':`Data completeness ${c.filled} of ${c.total} — tap for details`,
+    onclick:(e)=>{ e.stopPropagation(); explainDataChip(v); }},[
+    bars, el('span',{class:'dc-frac', text:`${c.filled}/${c.total}`}),
+    el('span',{class:'dc-i', html:icon('info',11), 'aria-hidden':'true'}),
+  ]);
+}
+
+// Breakdown modal for the completeness chip — spells out what each segment
+// means and which detail sets are present vs still to add.
+export function explainDataChip(v){
+  const c = dataCompleteness(v);
+  const CHECKS = [
+    ['Sources',       (v.sources||[]).length>0,                                   'Cited manufacturer / EPA / price-guide links'],
+    ['Full specs',    !!(v.dims?.lengthIn && v.dims?.widthIn && v.dims?.heightIn), 'Length, width and height on record'],
+    ['Colors',        (v.colors?.exterior||[]).length>0,                          'Real paint (and interior) swatches'],
+    ['Photos',        (v.image?.gallery||[]).length>0 || !!v.image?.remote,       'At least one verified photo'],
+    ['Ratings',       !!(v.ratings?.safety || v.ratings?.owner || v.ratings?.expert), 'NHTSA / IIHS / owner / expert scores'],
+    ['Trim features', (v.trims||[]).some(t=>(t.features||[]).length>0),           'Standout equipment per trim'],
+  ];
+  const body = [];
+  body.push(el('p',{class:'ex-lead', html:
+    `The meter on each card shows how fully researched a vehicle’s data is — <b>${c.filled} of ${c.total}</b> detail sets here. `+
+    `Its color is our editorial confidence in the core specs — <b>${escapeHtml(c.level)}</b>. The list fills in as the per-brand verification sweeps roll on.`}));
+  const list = el('ul',{class:'dc-list'});
+  CHECKS.forEach(([label,ok,hint])=> list.append(el('li',{class:'dc-litem'+(ok?' ok':'')},[
+    el('span',{class:'dc-mark', html:icon(ok?'check':'plus',13)}),
+    el('span',{class:'dc-lt'},[ el('b',{text:label}), el('span',{class:'muted tiny', text:hint}) ]),
+    el('span',{class:'dc-state muted tiny', text:ok?'present':'to add'}),
+  ])));
+  body.push(list);
+  modal({ title:`${v.year} ${v.make} ${v.model} — data completeness`, icon:icon('info',18), body });
+}
+
 export function vtile(v, ctx={}){
   const t = el('div',{class:'vtile', tabindex:'0', role:'button', 'aria-label':`${v.make} ${v.model}`,
     onclick:()=>ctx.openVehicle && ctx.openVehicle(v.id),
@@ -90,6 +150,7 @@ export function vtile(v, ctx={}){
   const fav = el('button',{class:'vt-fav'+(Store.isFav(v.id)?' on':''), title:'Favorite', 'aria-label':'Toggle favorite',
     html:icon('heart',17), onclick:(e)=>{ e.stopPropagation(); Store.toggleFav(v.id); fav.classList.toggle('on', Store.isFav(v.id)); }});
   img.append(fav);
+  if(Store.settings().dataMeter!==false) img.append(dataChip(v));
 
   const body = el('div',{class:'vt-body'});
   body.append(el('div',{class:'vt-make', html:`${logoImg(v.make)}<span>${escapeHtml(v.make)}</span>`}));
@@ -133,7 +194,74 @@ export function relBar(metricKey, v){
     track.append(el('span',{class:'rb-tick all', style:`left:${Math.round(s.pct.all*100)}%`, title:`All cars: ${pctTxt(s.pct.all)}`}));
   if(s.pct.make!=null)
     track.append(el('span',{class:'rb-tick make', style:`left:${Math.round(s.pct.make*100)}%`, title:`${v.make}: ${pctTxt(s.pct.make)}`}));
-  return el('div',{class:'relbar'},[ track, el('div',{class:'rb-cap', text:verdict(metricKey, v)}) ]);
+  const cap = el('div',{class:'rb-cap'},[
+    el('span',{text:verdict(metricKey, v)}),
+    el('span',{class:'rb-more', html:icon('info',12), 'aria-hidden':'true'}),
+  ]);
+  const bar = el('button',{class:'relbar as-btn', type:'button',
+    'aria-label':`${verdict(metricKey, v)} — tap to see how this is calculated`,
+    onclick:(e)=>{ e.stopPropagation(); explainStanding(metricKey, v); },
+  },[ track, cap ]);
+  return bar;
+}
+
+// The "how is this number computed?" explainer. Opens a modal listing the exact
+// pool behind each standing bar — how many vehicles, the range, and the full
+// ranked member list (this vehicle highlighted) — so the percentile is no
+// longer a black box.
+export function explainStanding(metricKey, v){
+  const d = standingDetail(metricKey, v); if(!d) return;
+  const fmt = (x)=> (metricKey==='price') ? money(x) : `${Number.isInteger(x)?x:Math.round(x*10)/10}${d.unit}`;
+  const body = [];
+  body.push(el('p',{class:'ex-lead', html:
+    `This <b>${escapeHtml(v.year+' '+v.make+' '+v.model)}</b> — <b>${escapeHtml(fmt(d.value))}</b>. `+
+    `Each bar shows where that sits in a pool of similar vehicles. Higher percentile means ${escapeHtml(d.higher)}.`}));
+
+  for(const sc of d.scopes){
+    const pctInt = Math.round(sc.pct*100);
+    const word = pctInt>=50 ? d.higher : d.lower;
+    const share = pctInt>=50 ? pctInt : 100-pctInt;
+    const wrap = el('div',{class:'ex-scope'});
+    const scopeName = sc.key==='class' ? `its class — ${sc.label}`
+                    : sc.key==='make'  ? sc.label
+                    : 'all 2026 vehicles';
+    wrap.append(el('div',{class:'ex-scope-head'},[
+      el('span',{class:'ex-scope-title', text:scopeName}),
+      el('span',{class:'ex-scope-n', text:`${sc.n} vehicle${sc.n===1?'':'s'}`}),
+    ]));
+    wrap.append(el('div',{class:'ex-verdict', html:
+      `<b>${cap0(word)} than ${share}%</b> of them · ranks <b>#${sc.rankFromTop}</b> of ${sc.n} · `+
+      `range ${escapeHtml(fmt(sc.lo))}–${escapeHtml(fmt(sc.hi))}, median ${escapeHtml(fmt(sc.median))}`}));
+    // full ranked list for the peer class and the brand (both meaningful to
+    // scroll); for the big all-vehicles pool, a member list would be 300+ rows,
+    // so the summary line above stands on its own there.
+    if(sc.key!=='all'){
+      const list = el('ol',{class:'ex-list'});
+      sc.members.forEach((r,i)=> list.append(el('li',{class:'ex-row'+(r.isThis?' is-this':'')},[
+        el('span',{class:'ex-rank', text:`${i+1}`}),
+        el('span',{class:'ex-name', text:r.name}),
+        el('span',{class:'ex-val', text:fmt(r.value)}),
+      ])));
+      wrap.append(list);
+    }
+    body.push(wrap);
+  }
+  modal({ title:`${d.label} — how this compares`, icon:icon('info',18), body, wide:true });
+}
+const cap0 = s=> s ? s[0].toUpperCase()+s.slice(1) : s;
+
+// A one-line key for the standing bars above, so the fill and the two ticks
+// aren't a mystery. Render it once per detail page, before the first bar.
+export function relLegend(v){
+  const item = (swatchCls, label)=> el('span',{class:'rl-item'},[
+    el('span',{class:swatchCls}), el('span',{text:label}),
+  ]);
+  return el('div',{class:'rb-legend'},[
+    el('span',{class:'rl-lead', text:'How to read the bars:'}),
+    item('rl-bar', 'fill = rank within its class'),
+    item('rl-tick all', 'vs all vehicles'),
+    item('rl-tick make', `vs ${v.make}`),
+  ]);
 }
 
 export function emptyState({ title, body, icon:ic='car' }){

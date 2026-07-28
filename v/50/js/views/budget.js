@@ -7,7 +7,7 @@ import { vtileGrid, emptyState, money, PT_LABEL } from './shared.js';
 
 export function renderBudget(view, ctx){
   const all = Store.vehicles();
-  const f = { max:45000, seats:0, mpg:0, pts:[], bodyCat:'' };
+  const f = { max:45000, seats:0, seatsMax:0, mpg:0, hp:0, pts:[], drives:[], bodyCat:'' };
 
   view.append(el('div',{class:'finder-head', style:'margin-bottom:16px'},[
     el('h2',{text:'Budget Explorer'}),
@@ -31,10 +31,20 @@ export function renderBudget(view, ctx){
   seatIn.addEventListener('input', ()=>{ f.seats=+seatIn.value; update(); });
   panel.append(rangeRow('Minimum seats', seatOut, seatIn));
 
+  const seatMaxOut = el('span',{class:'rv'});
+  const seatMaxIn = el('input',{type:'range', class:'slider-x', min:'0', max:'8', step:'1', value:'0', 'aria-label':'Maximum seats'});
+  seatMaxIn.addEventListener('input', ()=>{ f.seatsMax=+seatMaxIn.value; update(); });
+  panel.append(rangeRow('Maximum seats', seatMaxOut, seatMaxIn));
+
   const mpgOut = el('span',{class:'rv'});
   const mpgIn = el('input',{type:'range', class:'slider-x', min:'0', max:'60', step:'5', value:'0', 'aria-label':'Minimum MPG'});
   mpgIn.addEventListener('input', ()=>{ f.mpg=+mpgIn.value; update(); });
   panel.append(rangeRow('Min MPG / MPGe', mpgOut, mpgIn));
+
+  const hpOut = el('span',{class:'rv'});
+  const hpIn = el('input',{type:'range', class:'slider-x', min:'0', max:'600', step:'25', value:'0', 'aria-label':'Minimum power'});
+  hpIn.addEventListener('input', ()=>{ f.hp=+hpIn.value; update(); });
+  panel.append(rangeRow('Min power', hpOut, hpIn));
 
   panel.append(el('div',{class:'muted tiny', style:'margin:6px 0 8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em', text:'Powertrain'}));
   const ptRow = el('div',{class:'chip-row', style:'margin-bottom:14px'});
@@ -47,6 +57,17 @@ export function renderBudget(view, ctx){
   });
   panel.append(ptRow);
 
+  panel.append(el('div',{class:'muted tiny', style:'margin:6px 0 8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em', text:'Drivetrain'}));
+  const driveRow = el('div',{class:'chip-row', style:'margin-bottom:14px'});
+  [['AWD','AWD'],['FWD','FWD'],['RWD','RWD'],['4WD','4WD']].forEach(([k,l])=>{
+    const b = el('button',{class:'pill', text:l, onclick:()=>{
+      const i=f.drives.indexOf(k); if(i>=0) f.drives.splice(i,1); else f.drives.push(k);
+      b.classList.toggle('on', f.drives.includes(k)); update();
+    }});
+    driveRow.append(b);
+  });
+  panel.append(driveRow);
+
   panel.append(el('div',{class:'muted tiny', style:'margin:6px 0 8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em', text:'Type'}));
   const catRow = el('div',{class:'chip-row'});
   [['','Anything'],['car','Cars'],['suv','SUVs'],['truck','Trucks'],['van','Vans']].forEach(([k,l])=>{
@@ -58,7 +79,9 @@ export function renderBudget(view, ctx){
   panel.append(catRow);
 
   const goBrowse = el('button',{class:'btn block', style:'margin-top:16px', html:`${icon('filter',15)} Open in All Vehicles`, onclick:()=>{
-    ctx.navigate('browse', { filters:{ priceMax:f.max, seatsMin:f.seats, pts:[...f.pts] } });
+    ctx.navigate('browse', { filters:{ priceMax:f.max<150000?f.max:0, seatsMin:f.seats, seatsMax:f.seatsMax,
+      mpgMin:f.mpg, hpMin:f.hp, pts:[...f.pts], drives:[...f.drives],
+      bodies:f.bodyCat?Store.vehicles().filter(v=>v.category===f.bodyCat).reduce((a,v)=>a.includes(v.bodyStyle)?a:[...a,v.bodyStyle],[]):[] } });
   }});
   panel.append(goBrowse);
 
@@ -78,12 +101,17 @@ export function renderBudget(view, ctx){
   function update(){
     maxOut.textContent = f.max>=150000 ? 'No limit' : money(f.max);
     seatOut.textContent = f.seats? `${f.seats}+` : 'Any';
+    seatMaxOut.textContent = f.seatsMax? `${f.seatsMax} max` : 'Any';
     mpgOut.textContent = f.mpg? `${f.mpg}+` : 'Any';
+    hpOut.textContent = f.hp? `${f.hp}+ hp` : 'Any';
     const list = all.filter(v=>{
       if(f.max<150000 && (v.priceFrom==null || v.priceFrom>f.max)) return false;
       if(f.seats && !(v.seats||[]).some(s=>s>=f.seats)) return false;
+      if(f.seatsMax && Math.max(0,...(v.seats||[0])) > f.seatsMax) return false;
       if(f.mpg && !(v.powertrains||[]).some(p=>(p.mpgCombined||0)>=f.mpg)) return false;
+      if(f.hp && Math.max(0,...(v.powertrains||[]).map(p=>p.hp||0)) < f.hp) return false;
       if(f.pts.length && !(v.powertrains||[]).some(p=>f.pts.includes(p.type))) return false;
+      if(f.drives.length && !(v.powertrains||[]).some(p=>(p.drive||[]).some(d=>f.drives.includes(d)))) return false;
       if(f.bodyCat && v.category!==f.bodyCat) return false;
       return true;
     }).sort((a,b)=>(a.priceFrom??9e9)-(b.priceFrom??9e9));

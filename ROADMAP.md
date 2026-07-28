@@ -216,7 +216,15 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   Nautilus top price to 77660; Corsair flagged final model year — Louisville
   production ended Dec 2025 — and now IIHS-Marginal side, not a TSP; sources,
   per-trim features and colors added to every record)
-- [ ] Chevrolet — [ ] GMC — [ ] Buick — [ ] Cadillac
+- [x] Chevrolet (2026-07-28 — all 14 models re-verified, see js/changelog.js v50:
+  Blazer dropped Premier/added 3LT, Traverse dropped LS/brought back High
+  Country — both trim lineups and every trim's MSRP corrected against
+  current 2026MY pricing across the whole brand; destination charges rose
+  fleet-wide since last checked. Per-trim features added to Blazer, Blazer
+  EV, Colorado, Corvette, Equinox, Equinox EV, Silverado EV and Traverse.
+  Silverado 1500/EV/HD and Equinox EV stay confidence medium — their
+  cab/battery/config sprawl means some mid-trim figures are still estimates,
+  noted in each record.) — [ ] GMC — [ ] Buick — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
