@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 28;
+export const DATA_VERSION = 29;
 
 export const VEHICLES = [
  {
@@ -26063,7 +26063,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.mazdausa.com/vehicles/cx-30",
+    "site": "mazdausa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Mazda_CX-30.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mazda-cx-5",
@@ -26333,7 +26345,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.mazdausa.com/vehicles/cx-50",
+    "site": "mazdausa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Mazda_CX-50.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mazda-cx-70",
@@ -26464,7 +26488,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.mazdausa.com/vehicles/cx-70",
+    "site": "mazdausa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Mazda_CX-70.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mazda-cx-90",
@@ -26586,7 +26622,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.mazdausa.com/vehicles/cx-90",
+    "site": "mazdausa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Mazda_CX-90.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mazda-mazda3",
@@ -26708,7 +26756,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.mazdausa.com/vehicles/mazda3-sedan",
+    "site": "mazdausa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Mazda_3.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mazda-mx-5-miata",
@@ -26795,7 +26855,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Soft top and RF retractable-hardtop offered (one record; RF adds roughly $2,700-8,000 depending on trim and weighs ~90 lb more). Manual standard; automatic offered on Grand Touring. RF Club includes the Brembo BBS Recaro package as standard."
+  "notes": "Soft top and RF retractable-hardtop offered (one record; RF adds roughly $2,700-8,000 depending on trim and weighs ~90 lb more). Manual standard; automatic offered on Grand Touring. RF Club includes the Brembo BBS Recaro package as standard.",
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.mazdausa.com/vehicles/mx-5-miata",
+    "site": "mazdausa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Mazda_MX-5.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mclaren-750s",
@@ -30016,7 +30088,19 @@ export const VEHICLES = [
      "site": "Edmunds"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/cars/altima.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Altima.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-armada",
@@ -30105,7 +30189,19 @@ export const VEHICLES = [
      "site": "iihs.org"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/armada.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Armada.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-frontier",
@@ -30201,7 +30297,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/trucks/frontier.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Frontier.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-kicks",
@@ -30296,7 +30404,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/kicks.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Kicks.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-leaf",
@@ -30392,7 +30512,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "All-new third generation for 2026, now a crossover-style EV. EPA range: 303 mi (S+), 288 mi (SV+), 259 mi (Platinum+); base S with 52 kWh battery arrives later and is not yet EPA-rated."
+  "notes": "All-new third generation for 2026, now a crossover-style EV. EPA range: 303 mi (S+), 288 mi (SV+), 259 mi (Platinum+); base S with 52 kWh battery arrives later and is not yet EPA-rated.",
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/electric-cars/leaf.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Leaf.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-murano",
@@ -30483,7 +30615,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/murano.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Murano.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-pathfinder",
@@ -30612,7 +30756,19 @@ export const VEHICLES = [
      "site": "Edmunds"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder.html",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Pathfinder.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-rogue",
@@ -30845,7 +31001,14 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "New nameplate for 2026, built on the Mitsubishi Outlander PHEV platform with standard AWD and a small third row (7 seats). 64 MPGe combined, 26 mpg on gas, 420-mile total range."
+  "notes": "New nameplate for 2026, built on the Mitsubishi Outlander PHEV platform with standard AWD and a small third row (7 seats). 64 MPGe combined, 26 mpg on gas, 420-mile total range.",
+  "sources": [
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/rogue-plug-in-hybrid.html",
+    "site": "nissanusa.com"
+   }
+  ]
  },
  {
   "id": "nissan-sentra",
@@ -31035,7 +31198,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Heritage Edition new for 2026, celebrating the Z's heritage. NISMO is automatic-only. GT-R was discontinued after 2025 (R35 production ended)."
+  "notes": "Heritage Edition new for 2026, celebrating the Z's heritage. NISMO is automatic-only. GT-R was discontinued after 2025 (R35 production ended).",
+  "sources": [
+   {
+    "label": "2026 Z brochure (PDF)",
+    "url": "https://www.nissanusa.com/content/dam/Nissan/us/vehicle-brochures/2026/2026-nissan-z-brochure-en.pdf",
+    "site": "nissanusa.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Z.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "polestar-polestar-3",

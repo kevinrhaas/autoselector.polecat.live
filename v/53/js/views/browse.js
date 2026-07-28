@@ -8,6 +8,7 @@ import { el, toast, promptDialog, debounce, escapeHtml } from '../ui.js';
 import { icon } from '../icons.js';
 import { Store } from '../store.js';
 import { vtile, vtileGrid, emptyState, money, PT_LABEL, logoImg } from './shared.js';
+import { peerClass } from '../stats.js';
 
 export const BODY_STYLES = ['sedan','hatchback','coupe','convertible','wagon','suv','minivan','pickup','van'];
 const DRIVES = ['FWD','RWD','AWD','4WD'];
@@ -58,7 +59,7 @@ export function colorFamily(hex){
 }
 
 export function defaultFilters(){
-  return { q:'', makes:[], bodies:[], pts:[], drives:[], priceMax:0, seatsMin:0, seatsMax:0,
+  return { q:'', makes:[], bodies:[], classes:[], pts:[], drives:[], priceMax:0, seatsMin:0, seatsMax:0,
     mpgMin:0, hpMin:0, feats:[], spares:[], controls:[], extColors:[], intColors:[], sort:'price' };
 }
 
@@ -81,6 +82,7 @@ export function applyFilters(vehicles, f){
     if(f.q){ const s=`${v.make} ${v.manufacturer||''} ${v.model} ${v.segment}`.toLowerCase(); if(!s.includes(f.q.toLowerCase())) return false; }
     if(f.makes.length && !f.makes.includes(v.make)) return false;
     if(f.bodies.length && !f.bodies.includes(v.bodyStyle)) return false;
+    if(f.classes?.length && !f.classes.includes(peerClass(v))) return false;
     if(f.pts.length && !(v.powertrains||[]).some(p=>f.pts.includes(p.type))) return false;
     if(f.drives.length && !(v.powertrains||[]).some(p=>(p.drive||[]).some(d=>f.drives.includes(d)))) return false;
     if(f.priceMax>0 && (v.priceFrom==null || v.priceFrom>f.priceMax)) return false;
@@ -190,10 +192,16 @@ export function renderBrowse(view, ctx){
   const driveOpts = [['AWD','All-wheel drive'],['FWD','Front-wheel drive'],['RWD','Rear-wheel drive'],['4WD','Four-wheel drive']]
     .map(([k,l])=>({ key:k, label:l, count:cnt(v=>(v.powertrains||[]).some(p=>(p.drive||[]).includes(k))) })).filter(o=>o.count);
   const featOpts = FEATURES.map(ft=>({ key:ft.key, label:ft.label, count:cnt(ft.test) })).filter(o=>o.count);
+  // vehicle class = the peer class (size + body: "compact SUV", "full-size pickup"…)
+  const classCounts = {};
+  for(const v of all){ const pc=peerClass(v); if(pc) classCounts[pc]=(classCounts[pc]||0)+1; }
+  const classOpts = Object.entries(classCounts).sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+    .map(([k,n])=>({ key:k, label:k[0].toUpperCase()+k.slice(1), count:n }));
 
   const brand = brandPicker(all, f, update);
   const ddRow = el('div',{class:'toolbar filter-dd'});
   ddRow.append(brand.el);
+  ddRow.append(multiDropdown({ label:'Class',          ic:'grid',     options:classOpts,    sel:f.classes,   onChange:update, note:'Size + body — e.g. compact SUV, full-size pickup' }));
   ddRow.append(multiDropdown({ label:'Drivetrain',     ic:'wheel',    options:driveOpts,    sel:f.drives,    onChange:update }));
   ddRow.append(multiDropdown({ label:'Tire',           ic:'wheel',    options:tireOpts,     sel:f.spares,    onChange:update }));
   ddRow.append(multiDropdown({ label:'Controls',       ic:'settings', options:ctrlOpts,     sel:f.controls,  onChange:update }));
