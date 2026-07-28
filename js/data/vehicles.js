@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 31;
+export const DATA_VERSION = 32;
 
 export const VEHICLES = [
  {
@@ -6174,7 +6174,16 @@ export const VEHICLES = [
   "towingLb": 8000,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/25%20Cadillac%20Escalade%20IQ%20Luxury%201.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/2025_Cadillac_Escalade_IQ_Interior.jpg",
+     "kind": "interior",
+     "credit": "Wlb5V",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Cadillac_Escalade_IQ_Interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "~205 kWh battery, 460-mile range, 800V DC fast charging. Extended-length Escalade IQL folded into this record (+$3,000). Prices exclude $2,895 destination."
@@ -6713,7 +6722,16 @@ export const VEHICLES = [
   "towingLb": 4500,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Chevrolet%20Blazer%20RS.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/2023_Chevrolet_Blazer_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Chevrolet_Blazer_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Chevy dropped the Premier trim and added 3LT for 2026 (lineup is now 2LT/3LT/RS). Prices verified 2026-07-28 (2LT $36,095, 3LT $41,495, RS $45,395, all FWD before the $1,995 destination charge; AWD adds ~$2,700-$2,900).",
@@ -13527,7 +13545,16 @@ export const VEHICLES = [
   "towingLb": 3500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Genesis_GV70_JK1_PE_Interior_%E2%80%93_Seoul_Mobility_Show_2025_%2802%29.jpg",
+     "kind": "interior",
+     "credit": "Treeinkr",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Genesis_GV70_JK1_PE_Interior_%E2%80%93_Seoul_Mobility_Show_2025_(02).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling); base 2.5T price from Genesis' pricing announcement. 3.5T top-trim price approximate.",
@@ -13770,7 +13797,16 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024%20GMC%20Acadia%20Denali%20front%20view.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/2024_GMC_Acadia_Denali_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_GMC_Acadia_Denali_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Verified trim lineup and per-trim MSRP (Elevation $43,800 / AT4 $52,500 / Denali $55,900 / Denali Ultimate $63,100, all excluding destination) against GM Authority's Jan 2026 pricing update and Edmunds/dealer listings 2026-07-28 — figures unchanged from prior record. Destination freight charge confirmed at $1,995. Color swatches could not be verified from an accessible source, so left out rather than guessed.",
@@ -18710,7 +18746,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Hyundai_Sonata_Inspiration_DN8_Navy_Interior_%281%29.jpg",
+     "kind": "interior",
+     "credit": "Damian B Oh",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Hyundai_Sonata_Inspiration_DN8_Navy_Interior_(1).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Trim lineup simplified for 2026 (SEL Sport replaces SEL/SEL Convenience). N Line price is approximate (~$35,900; sources vary slightly). Hybrid uses a tire mobility kit.",
@@ -19986,7 +20031,16 @@ export const VEHICLES = [
   "towingLb": 10000,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/4/4d/2022_Jeep_Grand_Wagoneer_Series_III_in_Bright_White_and_Black%2C_front_left.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/2022_Jeep_Grand_Wagoneer_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2022_Jeep_Grand_Wagoneer_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability. Prices exclude $2,595 destination.",
@@ -20297,7 +20351,16 @@ export const VEHICLES = [
   "towingLb": 3500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Kia_Carnival_KA4_1.6_SX%2B_Turbo_Hybrid_-_interior_view.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Kia_Carnival_KA4_1.6_SX%2B_Turbo_Hybrid_-_interior_view.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Only minivan with a hybrid option besides the Sienna/Pacifica set; no AWD offered. Prices derived from published incl.-destination figures ($38,485 / $54,585 with ~$1,395 freight)."
@@ -31271,7 +31334,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/7/7c/2026_Nissan_Sentra_front_view.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/2026_Nissan_Sentra_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2026_Nissan_Sentra_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL.",
