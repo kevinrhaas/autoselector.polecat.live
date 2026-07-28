@@ -283,7 +283,18 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   KBB and dealer research pages. Sierra 1500 was already high confidence and
   untouched. Colors intentionally omitted everywhere — named options were
   findable but GMC doesn't publish hex swatch values, and the never-guess
-  rule means no fabricated hex codes.) — [ ] Buick — [ ] Cadillac
+  rule means no fabricated hex codes.)
+- [x] Buick (2026-07-28 — all 4 models re-verified, see js/changelog.js v55:
+  Enclave, Encore GX, Envision and Envista MSRPs corrected against confirmed
+  2025/2026 price increases (Enclave's Dec 2025 hike, Encore GX's second 2025
+  hike, Envista's Feb 2026 hike) and current destination freight charges;
+  Envision's mid/top trims — previously "approximate" — now cited exactly.
+  Per-trim features added to every model, all four raised to confidence high
+  with cited sources — buick.com blocked automated fetches (403), so
+  verification relied on GM Authority, Edmunds and Cars.com. Envista stays
+  unrated: NHTSA has no 2026-specific record and IIHS scored it Poor on
+  moderate overlap front + front crash prevention, which rules out a Top
+  Safety Pick — checked, not guessed.) — [ ] Cadillac
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat

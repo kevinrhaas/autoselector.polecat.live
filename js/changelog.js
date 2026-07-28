@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 55,
+    title: 'Buick lineup re-verified — real 2026 pricing across all 4 models',
+    kind: 'data',
+    ts: '2026-07-28T05:17:01.149Z',
+    items: [
+      'All 4 Buick models re-verified against current 2026 pricing. Enclave, Encore GX, Envision and Envista MSRPs corrected against confirmed 2025/2026 price increases (Enclave\'s Dec 2025 hike, Encore GX\'s second 2025 hike, Envista\'s Feb 2026 hike) and current destination freight charges; Envision\'s previously-approximate mid/top trims are now cited exactly.',
+      'Every Buick trim now lists its notable per-trim features. All 4 models raised to confidence high with cited sources — buick.com blocked automated fetches, so verification relied on GM Authority, Edmunds and Cars.com instead.',
+      'Envista stays unrated: NHTSA has no 2026-specific safety record and IIHS scored it Poor on moderate overlap front crash plus front crash prevention, which rules out a Top Safety Pick — checked both agencies, not guessed.',
+    ],
+  },
+  {
     v: 54,
     title: 'Interior photos added for 6 models — Buick lineup, Santa Cruz, Murano',
     kind: 'data',
