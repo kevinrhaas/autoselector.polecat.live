@@ -34,6 +34,30 @@
   "license": "CC BY 2.0",
   "author": "Charles from Port Chester, New York"
  },
+ "gallery/buick-enclave/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Buick_Enclave_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/buick-encore-gx/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Buick_Encore_GX_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/buick-envision/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Buick_Envision_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/buick-envista/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Buick_Envista_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/chevrolet-colorado/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_interior.jpg",
   "license": "CC BY-SA 4.0",
@@ -220,6 +244,12 @@
   "author": "Masamiotter",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
+ "gallery/hyundai-santa-cruz/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Hyundai_Santa_Cruz_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/hyundai-santa-fe/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Hyundai_Santa_Fe_2.5_Calligraphy_AWD_(interior).jpg",
   "license": "CC BY-SA 4.0",
@@ -326,6 +356,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Altima_SR_in_Brilliant_Silver_Metallic,_front_right.jpg",
   "license": "CC BY-SA 3.0",
   "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/nissan-murano/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Murano_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/nissan-pathfinder/1 (interior)": {
