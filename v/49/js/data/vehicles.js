@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 12;
+export const DATA_VERSION = 25;
 
 export const VEHICLES = [
  {
@@ -119,8 +119,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Acura_ADX_A-Spec%2C_front_7.19.25.jpg",
+   "credit": "Kevauto"
   },
   "confidence": "high",
   "notes": "190 hp / 179 lb-ft confirmed (the widely-repeated 200 hp figure is an error; that is the Integra rating). EPA combined is 28 mpg FWD / 27 mpg AWD per fueleconomy.gov, so prior record 29 was slightly high. AWD is a $2,000 option on each package (top AWD A-Spec Advance = $44,000). Trims are Acura package tiers; each of ADX/A-Spec/A-Spec Advance is offered FWD or AWD. Exterior/interior color hex values are best-effort sRGB matches to Acura swatches; color availability varies by trim (Orchid restricted to certain paints).",
@@ -189,7 +189,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/acura/adx/2026/features-specs/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura ADX SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/22064",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "acura-integra",
@@ -310,7 +321,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/2023_Acura_Integra_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2023_Acura_Integra_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "EPA per fueleconomy.gov: 1.5T CVT 32 mpg combined, 1.5T 6-speed manual 30 mpg combined, Type S 2.0T manual 24 mpg combined. The 6-speed manual is offered only on A-Spec w/Technology (1.5T) and is standard/exclusive on Type S. Color hex values are best-effort sRGB matches; several paints are $600 premium options and Double Apex Blue is limited to A-Spec/Type S.",
@@ -375,7 +395,19 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/acura/integra/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura Integra (5-door hatchback, FWD), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20899",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "acura-mdx",
@@ -609,7 +641,19 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/acura/mdx/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura MDX SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20891",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "acura-rdx",
@@ -724,8 +768,17 @@ export const VEHICLES = [
   ],
   "towingLb": 1500,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Acura_RDX_(TC1)_Washington_DC_Metro_Area%2C_USA.jpg",
+   "credit": "OWS Photography",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/2023_Acura_RDX_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2023_Acura_RDX_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "SH-AWD is standard on every 2026 RDX trim (no FWD offered), so the single powertrain is AWD-only. EPA combined is 23 mpg per fueleconomy.gov, so prior record 24 was high. 2.0T 272 hp / 280 lb-ft with 10-speed automatic confirmed. Per-trim MSRPs verified via dealer research/Edmunds. Color hex values are best-effort sRGB matches.",
@@ -813,7 +866,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/acura/rdx/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Acura RDX SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20904",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "alfa-romeo-giulia",
@@ -1610,7 +1674,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "All-new generation replaced the A4 sedan; body is a five-door liftback. S5 included as performance variant (price approximate). Nearly all controls are on the touchscreen."
+  "notes": "All-new generation replaced the A4 sedan; body is a five-door liftback. S5 included as performance variant (price approximate). Nearly all controls are on the touchscreen.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Audi A5 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/audi/a5-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "audi-a6",
@@ -1681,7 +1756,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "All-new generation gas A6 sedan for 2026 with 362-hp V6 (published start price of $65,395 appears to include $1,495 destination; $63,900 used here). Upper-trim pricing and EPA figures not yet confirmed. No gas S6 offered; S6 continues only as the S6 e-tron EV."
+  "notes": "All-new generation gas A6 sedan for 2026 with 362-hp V6 (published start price of $65,395 appears to include $1,495 destination; $63,900 used here). Upper-trim pricing and EPA figures not yet confirmed. No gas S6 offered; S6 continues only as the S6 e-tron EV.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Audi A6 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/audi/a6-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "audi-a6-e-tron",
@@ -2103,7 +2189,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Continues for 2026; prices shown are latest published (2025) MSRPs and the top-trim figure is approximate. Sportback roofline sold under the same nameplate."
+  "notes": "Continues for 2026; prices shown are latest published (2025) MSRPs and the top-trim figure is approximate. Sportback roofline sold under the same nameplate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q4 E-Tron SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21013",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "audi-q5",
@@ -2190,7 +2287,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Third-generation Q5 (new for 2025) carries into 2026; Audi's best-seller. Prices derived from published figures less $1,495 destination. Sportback variants cost about $2,300 more. Touchscreen-centric controls."
+  "notes": "Third-generation Q5 (new for 2025) carries into 2026; Audi's best-seller. Prices derived from published figures less $1,495 destination. Sportback variants cost about $2,300 more. Touchscreen-centric controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Audi Q5 SUV AWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20611",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "audi-q6-e-tron",
@@ -2376,7 +2485,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Carryover generation with 2025 facelift. SQ7 price is approximate (latest published figure). Three engines: 261-hp four, 335-hp V6, 500-hp V8 SQ7."
+  "notes": "Carryover generation with 2025 facelift. SQ7 price is approximate (latest published figure). Three engines: 261-hp four, 335-hp V6, 500-hp V8 SQ7.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q7 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21025",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "audi-q8",
@@ -2479,7 +2599,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Two-row coupe sibling to the Q7. Base price derived from published $75,600 figure less destination; SQ8 and RS Q8 performance prices approximate (latest published figures)."
+  "notes": "Two-row coupe sibling to the Q7. Base price derived from published $75,600 figure less destination; SQ8 and RS Q8 performance prices approximate (latest published figures).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q8 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21027",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bentley-bentayga",
@@ -3047,7 +3178,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Final year of the G20 generation; new 3 Series (Neue Klasse) arrives for 2027. M340i mild-hybrid is folded in here. Climate is touchscreen-based since the 2023 facelift."
+  "notes": "Final year of the G20 generation; new 3 Series (Neue Klasse) arrives for 2027. M340i mild-hybrid is folded in here. Climate is touchscreen-based since the 2023 facelift.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW 3 Series Sedan RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21332",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-4-series",
@@ -4283,7 +4425,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "AWD standard on all trims. MSRPs back-calculated from sticker prices that include the destination fee, so may be off by about $100."
+  "notes": "AWD standard on all trims. MSRPs back-calculated from sticker prices that include the destination fee, so may be off by about $100.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW X1 SUV AWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21366",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-x2",
@@ -4454,11 +4607,23 @@ export const VEHICLES = [
   ],
   "towingLb": 4850,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_G45_X3_M_Sport_Alpine_White.jpg",
+   "credit": "Damian B Oh"
   },
   "confidence": "high",
-  "notes": "G45 generation launched for 2025. No full X3 M offered this generation; M50 is the performance flagship."
+  "notes": "G45 generation launched for 2025. No full X3 M offered this generation; M50 is the performance flagship.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW X3 SUV AWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21368",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-x5",
@@ -4583,7 +4748,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "X5 M Competition folded in as top trim (shares nameplate). 50e plug-in hybrid figure shown is MPGe. Last full year of this generation; redesign expected for 2027."
+  "notes": "X5 M Competition folded in as top trim (shares nameplate). 50e plug-in hybrid figure shown is MPGe. Last full year of this generation; redesign expected for 2027.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 BMW X5 SUV AWD, OverallRating 4 (RWD variant Not Rated)",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21370",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "bmw-x6",
@@ -5033,7 +5209,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices exclude $1,995 destination."
+  "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Buick Enclave 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/buick/enclave-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "buick-encore-gx",
@@ -5125,7 +5312,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination."
+  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Buick Encore GX SUV N/A FWD Early Release, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21818",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "buick-envision",
@@ -5205,7 +5403,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Base Preferred price verified ($42,895 incl. destination); mid/top trims approximate. Prices exclude ~$1,495 destination."
+  "notes": "Base Preferred price verified ($42,895 incl. destination); mid/top trims approximate. Prices exclude ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Buick Envision SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21820",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "buick-envista",
@@ -5581,7 +5790,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026."
+  "notes": "Price range verified ($50,995-$100,695 incl. $1,795 destination); mid-trim figures approximate. Cadillac's last remaining mainstream gas sedan line with the CT4 ending mid-2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac CT5 4 DR N/A RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21811",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "cadillac-escalade",
@@ -5695,7 +5915,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "ESV long-wheelbase adds ~$3,000. Base and V prices verified; mid-trim figures approximate. Climate control is largely screen-based after the 2025 refresh. Prices exclude ~$1,995 destination."
+  "notes": "ESV long-wheelbase adds ~$3,000. Base and V prices verified; mid-trim figures approximate. Climate control is largely screen-based after the 2025 refresh. Prices exclude ~$1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac Escalade SUV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21827",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "cadillac-escalade-iq",
@@ -5897,7 +6128,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "2026 trim prices verified (incl.-destination figures minus $1,495 DFC). Lyriq-V does 0-60 in about 3.3 s."
+  "notes": "2026 trim prices verified (incl.-destination figures minus $1,495 DFC). Lyriq-V does 0-60 in about 3.3 s.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac Lyriq SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21834",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "cadillac-optiq",
@@ -6184,7 +6426,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Continues for 2026 as Cadillac's last gas crossover alongside Escalade; XT4 and XT6 are discontinued. Mid/top trim prices approximate; excludes ~$1,595 destination."
+  "notes": "Continues for 2026 as Cadillac's last gas crossover alongside Escalade; XT4 and XT6 are discontinued. Mid/top trim prices approximate; excludes ~$1,595 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Cadillac XT5 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21873",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-blazer",
@@ -6277,7 +6530,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination."
+  "notes": "Gas Blazer continues for 2026 (GM reversed earlier plans to drop it). 2026 prices not fully published; figures based on latest 2025 MSRPs excluding ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Blazer SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21788",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-blazer-ev",
@@ -6392,7 +6656,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "SS makes 615 hp / 650 lb-ft, 0-60 in under 3.5 s. RS mid-trim price approximate. Prices exclude ~$1,495 destination."
+  "notes": "SS makes 615 hp / 650 lb-ft, 0-60 in under 3.5 s. RS mid-trim price approximate. Prices exclude ~$1,495 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Blazer EV SUV BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21790",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-colorado",
@@ -6879,7 +7154,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "One of the least expensive 300+ mile EVs in the US. Mid-trim (LT 2) price approximate. Prices exclude ~$1,395 destination."
+  "notes": "One of the least expensive 300+ mile EVs in the US. Mid-trim (LT 2) price approximate. Prices exclude ~$1,395 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Equinox EV SUV BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21824",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-silverado-1500",
@@ -7155,7 +7441,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Range varies ~283-478 mi by battery. Trail Boss trim new for 2026. Prices back-calculated excluding $2,195 destination."
+  "notes": "Range varies ~283-478 mi by battery. Trail Boss trim new for 2026. Prices back-calculated excluding $2,195 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Silverado EV PU/CC BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21858",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-silverado-hd",
@@ -7377,7 +7674,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination."
+  "notes": "Long-wheelbase companion to the Tahoe with huge third-row and cargo space. Prices exclude $2,795 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Suburban SUV, RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21860",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-tahoe",
@@ -7639,7 +7947,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Prices exclude ~$1,395 destination; trim MSRPs derived from advertised prices and may vary slightly. AWD requires 1.3L engine."
+  "notes": "Prices exclude ~$1,395 destination; trim MSRPs derived from advertised prices and may vary slightly. AWD requires 1.3L engine.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chevrolet Trailblazer SUV FWD (early release), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21866",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chevrolet-traverse",
@@ -7853,6 +8172,15 @@ export const VEHICLES = [
   "confidence": "high",
   "notes": "FWD only; no AWD offered. Prices exclude $1,495 destination. One of the least expensive new vehicles in the US.",
   "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Chevrolet Trax Early Release SUV FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20410",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 4.4,
     "scale": 5,
@@ -7974,7 +8302,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination."
+  "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chrysler Pacifica PV N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20913",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "chrysler-voyager",
@@ -8045,7 +8384,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Value version of the Pacifica sold in a single LX trim with one powertrain; returned to retail sale in 2025. Price excludes $1,995 destination."
+  "notes": "Value version of the Pacifica sold in a single LX trim with one powertrain; returned to retail sale in 2025. Price excludes $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Chrysler Voyager PV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20916",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "dodge-charger-daytona",
@@ -8340,11 +8690,22 @@ export const VEHICLES = [
   ],
   "towingLb": 8700,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/7/70/2021_Dodge_Durango_GT_%28facelift%29%2C_front_6.21.22.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_Dodge_Durango_Citadel_(facelift)%2C_front_6.21.22.jpg",
+   "credit": "Kevauto"
   },
   "confidence": "high",
-  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration."
+  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Dodge Durango SUV N/A RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20919",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "dodge-hornet",
@@ -9339,8 +9700,8 @@ export const VEHICLES = [
   ],
   "towingLb": 2700,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/2/29/Ford_Bronco_Sport_Badlands_1X7A0384.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2026_Ford_Bronco_Sport_au_salon_auto_Lanaudi%C3%A8re_2025.jpg",
+   "credit": "Bull-Doser"
   },
   "confidence": "high",
   "notes": "Ford.com confirms only four 2026 trims (Big Bend, Heritage, Outer Banks, Badlands) and carryover engines, so 2026 is a mid-cycle refresh (new grille, colors, interior fabrics) rather than a ground-up redesign. Base engine is now cataloged by the EPA as a 3-cylinder 1.5L EcoBoost. Some dealer sites quote a $31,845 start; the verified per-trim Big Bend MSRP is $33,840. Dealer chatter about 'Free Wheeling' and other special editions is not reflected on Ford's current 2026 configurator.",
@@ -9413,7 +9774,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/bronco-sport/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Bronco Sport SUV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21394",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-e-transit",
@@ -9942,8 +10314,8 @@ export const VEHICLES = [
   ],
   "towingLb": 9600,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Ford_Expedition_%28fourth_generation%29_Max_DSC_2924.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Ford_Expedition_Tremor%2C_front_NYIAS_2025.jpg",
+   "credit": "Kevauto"
   },
   "confidence": "high",
   "notes": "Fifth-generation Expedition (redesigned for 2025, carryover for 2026) with 24-inch digital dash and two-piece power liftgate. priceFrom reflects the retail Active trim ($62,700 RWD); a fleet-only XL trim (~$57,700) exists but is not a retail consumer trim. priceTo reflects Max King Ranch ($90,155). Extended-length Max variants of Active, Platinum and King Ranch add roughly $3,000. Standard V6 is 400 hp; high-output V6 (standard on Tremor, optional on Platinum) is 440 hp. EPA combined 19 (RWD) / 18 (4WD).",
@@ -10022,7 +10394,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/expedition/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Expedition SUV, RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21400",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-explorer",
@@ -10819,7 +11202,18 @@ export const VEHICLES = [
     "url": "https://www.truecar.com/overview/ford/f-150-lightning/2026/",
     "site": "truecar.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford F-150 (Super Crew) Lightning PU/CC BEV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21413",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-f-series-super-duty",
@@ -11226,6 +11620,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Ford Maverick Later Release PU/CC FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20335",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 4.2,
     "scale": 5,
@@ -11550,6 +11953,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Mustang (2-door fastback, RWD), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21424",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -11783,7 +12197,19 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/mustang-mach-e/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Mustang Mach-E BEV SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21428",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-ranger",
@@ -11912,8 +12338,8 @@ export const VEHICLES = [
   ],
   "towingLb": 7500,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/8/82/Ford_Ranger_Raptor_%28P703%29_DSC_7063.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Ford_Ranger_LARIAT_4WD_SuperCrew_(2024)_(53620395647).jpg",
+   "credit": "Charles from Port Chester, New York"
   },
   "confidence": "high",
   "notes": "Four trims: XL, XLT, Lariat, Raptor. XL/XLT/Lariat are RWD standard with 4WD +$3,500; Raptor is 4WD-only SuperCrew. EPA combined: 2.3L 23/21 (2WD/4WD), 2.7L V6 20 (4WD), Raptor 3.0L 17. The 2.7L V6 is optional on XLT/Lariat. Destination excluded from MSRP.",
@@ -11990,7 +12416,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/ford/ranger/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Ford Ranger (Super Crew) pickup, RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21430",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ford-transit",
@@ -12247,7 +12684,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Refreshed for 2026 with larger 84-kWh battery (~298 mi range, up from 236) and lower base price. Built in Alabama. Top-trim price and efficiency approximate."
+  "notes": "Refreshed for 2026 with larger 84-kWh battery (~298 mi range, up from 236) and lower base price. Built in Alabama. Top-trim price and efficiency approximate.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2023-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Genesis Electrified GV70 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/genesis/electrified-gv70-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "genesis-g70",
@@ -12423,7 +12871,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Refreshed for 2026; AWD now standard across the line and the Electrified G80 EV was discontinued for the US after 2025. Top-trim (3.5T Prestige Black) price approximate."
+  "notes": "Refreshed for 2026; AWD now standard across the line and the Electrified G80 EV was discontinued for the US after 2025. Top-trim (3.5T Prestige Black) price approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis G80 4 DR AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21122",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "genesis-g90",
@@ -12598,7 +13058,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Updated for 2026 with larger 84-kWh battery (RWD range up to 306 mi) and refreshed design. Base price verified; Performance top-trim price and some efficiency figures approximate."
+  "notes": "Updated for 2026 with larger 84-kWh battery (RWD range up to 306 mi) and refreshed design. Base price verified; Performance top-trim price and some efficiency figures approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis GV60 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21130",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "genesis-gv70",
@@ -12686,7 +13157,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling); base 2.5T price from Genesis' pricing announcement. 3.5T top-trim price approximate."
+  "notes": "Significantly refreshed for 2026 (new interior with 27-inch OLED, revised styling); base 2.5T price from Genesis' pricing announcement. 3.5T top-trim price approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis GV70 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20838",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "genesis-gv80",
@@ -12792,7 +13275,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Sleeker GV80 Coupe (from $81,850, 409-hp e-SC available) shares the nameplate; cargo figures are for the standard SUV."
+  "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Sleeker GV80 Coupe (from $81,850, 409-hp e-SC available) shares the nameplate; cargo figures are for the standard SUV.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Genesis GV80 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21127",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-acadia",
@@ -12877,7 +13372,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination."
+  "notes": "Grew substantially with 2024 redesign; mechanical twin of Chevy Traverse. Prices back-calculated excluding ~$1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Acadia SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21786",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-canyon",
@@ -12957,11 +13464,22 @@ export const VEHICLES = [
   ],
   "towingLb": 7700,
   "image": {
-   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20GMC%20Canyon.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_GMC_Canyon.jpg",
+   "credit": "42-BRT"
   },
   "confidence": "medium",
-  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination."
+  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Mid-trim prices approximate; base/top from published range. Prices believed to exclude $2,095 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Canyon PU/CC 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21796",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-hummer-ev-pickup",
@@ -13418,7 +13936,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination."
+  "notes": "Elevation and AT4 trims new for 2026 lowered the entry price. Range 330-460 mi by battery. AT4 price approximate; excludes ~$2,195 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Sierra EV PU/CC BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21850",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "gmc-sierra-hd",
@@ -13752,7 +14281,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination."
+  "notes": "Includes Yukon XL (adds ~$3,000; 227 in long, 41.5/144.7 cu ft cargo). Mid-trim prices approximate; excludes $2,795 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 GMC Yukon SUV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21874",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "honda-accord",
@@ -15797,7 +16337,18 @@ export const VEHICLES = [
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_Prologue.shtml",
     "site": "fueleconomy.gov"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Honda Prologue SUV, BEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20906",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "honda-ridgeline",
@@ -15982,7 +16533,18 @@ export const VEHICLES = [
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Honda_Ridgeline.shtml",
     "site": "fueleconomy.gov"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Honda Ridgeline pickup/crew cab, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20901",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-elantra",
@@ -16089,7 +16651,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "SEL Sport Premium replaces SEL Convenience for 2026. Hybrid Blue rated up to 54 mpg combined. Hybrid trims use a tire mobility kit instead of a spare."
+  "notes": "SEL Sport Premium replaces SEL Convenience for 2026. Hybrid Blue rated up to 54 mpg combined. Hybrid trims use a tire mobility kit instead of a spare.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Elantra 4dr FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21149",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-elantra-n",
@@ -16280,7 +16854,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Hyundai cut 2026 prices by $7,600-$9,800 per trim after the federal EV tax credit expired; now from $35,000. Built in Georgia; NACS port standard."
+  "notes": "Hyundai cut 2026 prices by $7,600-$9,800 per trim after the federal EV tax credit expired; now from $35,000. Built in Georgia; NACS port standard.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Hyundai Ioniq 5 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/hyundai/ioniq-5-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-ioniq-5-n",
@@ -16450,7 +17035,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Refreshed for 2026 with new styling, NACS port and added N Line trim; official 2026 US pricing not announced at time of writing, so 2025 prices shown. Expect possible cuts in line with Ioniq 5."
+  "notes": "Refreshed for 2026 with new styling, NACS port and added N Line trim; official 2026 US pricing not announced at time of writing, so 2025 prices shown. Expect possible cuts in line with Ioniq 5.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Hyundai Ioniq 6 4 DR RWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20579",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-ioniq-6-n",
@@ -16604,7 +17201,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "All-new for 2026; Hyundai's first three-row EV, built in Georgia. Mid trims (SE/SEL/Performance Limited) fall between the prices shown; AWD range and MPGe figures approximate."
+  "notes": "All-new for 2026; Hyundai's first three-row EV, built in Georgia. Mid trims (SE/SEL/Performance Limited) fall between the prices shown; AWD range and MPGe figures approximate.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Ioniq 9 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21158",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-kona",
@@ -16693,7 +17301,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026."
+  "notes": "Base price verified ($25,500 SE excl. freight); Limited AWD top price is approximate. Second-generation Kona carries over largely unchanged for 2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Kona SUV, FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21146",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-kona-electric",
@@ -17083,7 +17702,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination."
+  "notes": "Unibody crew-cab pickup with 4.3-ft composite bed (no published cargo cu-ft). 5,000-lb towing with 2.5T; 3,500 lb with base engine. Top Limited price derived from published price incl. destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Santa Cruz pickup/crew cab, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21140",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-santa-fe",
@@ -17346,7 +17976,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Trim lineup simplified for 2026 (SEL Sport replaces SEL/SEL Convenience). N Line price is approximate (~$35,900; sources vary slightly). Hybrid uses a tire mobility kit."
+  "notes": "Trim lineup simplified for 2026 (SEL Sport replaces SEL/SEL Convenience). N Line price is approximate (~$35,900; sources vary slightly). Hybrid uses a tire mobility kit.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Sonata 4dr FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21160",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "hyundai-tucson",
@@ -17594,7 +18236,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL."
+  "notes": "Cheapest Hyundai in the US; FWD only, no AWD offered. Limited trim dropped for 2026, leaving SE and SEL.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Hyundai Venue 5HB FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21163",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "ineos-grenadier",
@@ -17832,7 +18485,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Significantly refreshed for 2026 with new SPORT grade. Base ($51,200) and SPORT ($61,700) prices are from Infiniti; LUXE and AUTOGRAPH MSRPs derived from list prices less $1,495 destination and vary slightly by source. Q50, QX50 and QX55 were all discontinued before 2026."
+  "notes": "Significantly refreshed for 2026 with new SPORT grade. Base ($51,200) and SPORT ($61,700) prices are from Infiniti; LUXE and AUTOGRAPH MSRPs derived from list prices less $1,495 destination and vary slightly by source. Q50, QX50 and QX55 were all discontinued before 2026.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Infiniti QX60 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21072",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "infiniti-qx80",
@@ -17918,7 +18583,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190."
+  "notes": "Third generation (introduced 2025); new SPORT grade for 2026. Climate is controlled via lower touchscreen rather than physical knobs. Destination is a steep $2,190.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Infiniti QX80 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/infiniti/qx80-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "jaguar-f-pace",
@@ -18178,8 +18854,8 @@ export const VEHICLES = [
   ],
   "towingLb": 2000,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/e/e0/2019_Jeep_Compass_Limited_2.4L%2C_front_7.6.19.jpg",
-   "credit": "Wikimedia Commons",
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeep_Compass_(MP)_PHEV_Facelift_1X7A0139.jpg",
+   "credit": "Alexander Migl",
    "gallery": [
     {
      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/2022_Jeep_Compass_interior.jpg",
@@ -18576,7 +19252,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability. Prices exclude $2,595 destination."
+  "notes": "For 2026 the standard Wagoneer is discontinued and the refreshed Grand Wagoneer (now Jeep-badged) takes a ~$20,000 base-price cut; 4WD is now optional on base trim. Range-extended EV (REEV) powertrain has late availability. Prices exclude $2,595 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Jeep Grand Wagoneer SUV 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20931",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "jeep-recon",
@@ -18979,7 +19666,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia."
+  "notes": "Kia cut 2026 prices $5,000-$5,900 per trim (now from $37,900) after the federal EV credit expired; the 641-hp GT trim was dropped for 2026. Built in Georgia.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia EV6 SUV, BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21169",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-ev9",
@@ -19068,7 +19766,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia."
+  "notes": "Light Long Range (~304 mi) and mid trims fall between the prices shown; range/MPGe vary by battery and wheels. Base price unchanged from launch; built in Georgia.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia EV9 SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21170",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-k4",
@@ -19159,7 +19869,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025)."
+  "notes": "Replaced the Forte (Forte discontinued after 2024). New K4 Hatchback body style joins the line in early 2026 from $24,890. GT-Line Turbo top price approximate (carryover from 2025).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia K4 4 DR N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21172",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-k5",
@@ -19247,7 +19969,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Base and top prices derived from published incl.-destination figures (LXS ~$27.4k, EX ~$34.9k excl. freight). Availability of the 290-hp GT trim for 2026 is unclear; Kia's 2026 price list showed EX as the top trim."
+  "notes": "Base and top prices derived from published incl.-destination figures (LXS ~$27.4k, EX ~$34.9k excl. freight). Availability of the 290-hp GT trim for 2026 is unclear; Kia's 2026 price list showed EX as the top trim.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia K5 4dr FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21174",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-niro",
@@ -19338,7 +20071,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Sold as Niro Hybrid and Niro EV for 2026; the plug-in hybrid no longer appears in the US lineup. Prices derived from published incl.-destination figures. A refreshed 2027 Niro (hybrid-only) has been revealed."
+  "notes": "Sold as Niro Hybrid and Niro EV for 2026; the plug-in hybrid no longer appears in the US lineup. Prices derived from published incl.-destination figures. A refreshed 2027 Niro (hybrid-only) has been revealed.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Kia Niro SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20732",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-seltos",
@@ -19426,7 +20170,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Carryover generation, slightly cheaper for 2026; prices derived from published incl.-destination figures. An all-new Seltos has been revealed globally and is expected as a 2027 model."
+  "notes": "Carryover generation, slightly cheaper for 2026; prices derived from published incl.-destination figures. An all-new Seltos has been revealed globally and is expected as a 2027 model.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Kia Seltos SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21179",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "kia-sorento",
@@ -20966,8 +21721,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus-ES-2026.jpg",
+   "credit": "Ohcock"
   },
   "confidence": "high",
   "notes": "All-new eighth-generation ES for 2026, larger and offered as hybrid (ES 350h) or EV (ES 350e/500e) - the first electric ES. 8 total trims across 3 powertrains (representative subset shown). Destination fee is $1,395; priceFrom/priceTo shown are ex-destination base prices. EV range figures are final EPA-rated (19-inch wheels; 21-inch wheels reduce range slightly).",
@@ -21159,8 +21914,17 @@ export const VEHICLES = [
   ],
   "towingLb": 9063,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2024_Lexus_GX_550_Overtrail_(United_States)_front_view_01.jpg",
+   "credit": "Charles",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/2024_Lexus_GX_550_Luxury%2B_%28United_States%29_interior.png",
+     "kind": "interior",
+     "credit": "Autosdeprimera",
+     "license": "CC BY 3.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2024_Lexus_GX_550_Luxury%2B_(United_States)_interior.png"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Body-on-frame off-road luxury SUV sharing the Land Cruiser platform. Full 2026 lineup is 6 trims across 3 families (Premium, Luxury, Overtrail), each with a base and \"+\" tier; a mid-cycle 2026 price increase (~$1,350) is reflected here. Overtrail/Overtrail+ are 2-row (5-passenger) with E-KDSS and a locking rear diff; other trims seat 7. Destination fee is $1,450.",
@@ -21342,8 +22106,17 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Lexus_IS_350_F_Sport_in_Sonic_Iridium%2C_front_left.jpg",
+   "credit": "Ethan Llamas",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Lexus_IS_350_F_Sport_GSE31_FL3_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_IS_350_F_Sport_GSE31_FL3_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "2026 refresh: new front styling, larger 12.3-inch screens, physical climate row. IS 300 and V8 IS 500 both dropped for 2026; lineup is IS 350 only, in F Sport Design and F Sport grades (AWD is a ~$2,000 option on either, not a separate trim), plus the limited-run F Sport Special Appearance Package. Destination fee is $1,295.",
@@ -21524,8 +22297,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Lexus_LC_500_in_White_Nova_Glass_Flake%2C_front_right.jpg",
+   "credit": "Ethan Llamas"
   },
   "confidence": "high",
   "notes": "471-hp V8 grand tourer, coupe or convertible. The 354-hp LC 500h hybrid is discontinued for 2026 - the lineup is now V8-only. New Inspiration Series limited editions (200 coupes, 350 convertibles) add exclusive colors and interiors. Destination fee is $1,550; priceFrom/priceTo shown are ex-destination base prices.",
@@ -21687,8 +22460,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_LS_500_VXFA50_F_Sport_White_Nova_01.jpg",
+   "credit": "Ethan Llamas"
   },
   "confidence": "high",
   "notes": "Final model year for the LS in the US after a 36-year run; sold only as the LS 500 Heritage Edition limited to 250 units (about $99,380 with the $1,550 destination fee). Only 2026 exterior color is Ninety Noir; only interior color is Rioja Red.",
@@ -21868,8 +22641,17 @@ export const VEHICLES = [
   ],
   "towingLb": 8000,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_LX_600_VJA310_Sonic_Quartz_-_front.jpg",
+   "credit": "Ethan Llamas",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/LEXUS_LX_600_ULTRA_LUXURY_%28J310%29_INTERIOR.jpg",
+     "kind": "interior",
+     "credit": "Dinkun Chen",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALEXUS_LX_600_ULTRA_LUXURY_(J310)_INTERIOR.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Flagship Lexus SUV on the Land Cruiser 300 platform, 7 total 2026 trims (LX 600 Premium/F SPORT Handling/Luxury, LX 700h Overtrail/F SPORT Handling/Luxury/Ultra Luxury). No E-KDSS on the LX (that's GX-exclusive) - LX uses standard Active Height Control + Adaptive Variable Suspension lineup-wide, with front and rear locking differentials added on Overtrail. Ultra Luxury is 4-passenger only; other trims seat 5 or 7. Destination fee is $1,550; priceFrom/priceTo shown are ex-destination base prices.",
@@ -22092,8 +22874,17 @@ export const VEHICLES = [
   ],
   "towingLb": 2000,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_NX_350_(TAZA25)_1X7A0305.jpg",
+   "credit": "Alexander Migl",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lexus_NX_450h%2B_%22version_L%22_%286LA-AAZH26-AWXLB%28L%29%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_NX_450h%2B_%22version_L%22_(6LA-AAZH26-AWXLB(L))_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Base NX 250 dropped for 2026; lineup now starts with the new-for-2026 NX 350h FWD hybrid (cheapest trim at $44,175), running through NX 350, NX 350h AWD, and NX 450h+ plug-in hybrid, each in Standard/Premium/Luxury/F Sport Handling grades (12 trims total; a representative subset is shown). Destination fee is $1,395. NX 450h+ MPGe/EV-range figures are manufacturer-projected, not yet EPA-certified.",
@@ -22171,6 +22962,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Lexus NX 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/lexus/nx-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
   }
  },
  {
@@ -22321,8 +23123,17 @@ export const VEHICLES = [
   ],
   "towingLb": 3500,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_RX_500h_F_Sport_Performance_(TALH17)_1X7A7076.jpg",
+   "credit": "Alexander-93",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Lexus_RX_500h_F_Sport_Performance_TALH17_DIRECT-4_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_RX_500h_F_Sport_Performance_TALH17_DIRECT-4_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Best-selling Lexus, offered in 7 grades (Standard, Premium, Premium+, F SPORT Design, F SPORT Handling, Luxury, F SPORT Performance) across 4 powertrains. Destination fee is $1,550; priceFrom/priceTo shown are ex-destination base prices. RX 450h+ plug-in offers 38 miles EV range and 85 MPGe.",
@@ -22418,6 +23229,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus RX 350 SUV, FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21619",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -22554,8 +23376,17 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_RZ_450e_(XEBM15)_1X7A0836.jpg",
+   "credit": "Alexander-93",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lexus_RZ_450e%22F_SPORT_Performance%22_%28ZAA-XEBM15-AWDLS%28T%29%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ALexus_RZ_450e%22F_SPORT_Performance%22_(ZAA-XEBM15-AWDLS(T))_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Significantly updated for 2026: larger 74.69 kWh battery (76.96 kWh on 550e F SPORT), native NACS charging port (first Lexus BEV with native NACS; CCS/J1772 adapter included), and the new 402-hp RZ 550e F SPORT flagship with M Mode paddle-shift simulation. 6 total trims across 3 power levels. Destination fee is $1,395; priceFrom/priceTo shown are ex-destination base prices.",
@@ -22629,6 +23460,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus RZ 450E SUV BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21634",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -22762,8 +23604,8 @@ export const VEHICLES = [
   ],
   "towingLb": 5000,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_TX_550h%2B_(2024)_(53626567768).jpg",
+   "credit": "Charles from Port Chester, New York"
   },
   "confidence": "high",
   "notes": "Three-row Lexus based on the Grand Highlander platform, 10 total trims across TX 350/TX 500h F SPORT Performance/TX 550h+ (representative subset shown). TX 550h+'s PHEV powertrain uses a 3.5L V6 (not a 4-cylinder). Destination fee is $1,450; priceFrom/priceTo shown are ex-destination base prices.",
@@ -22832,6 +23674,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus TX 350 SUV N/A FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21636",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -22943,8 +23796,8 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": null,
-   "credit": null
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus_UX_300h_MZAH11_Sonic_Quartz.jpg",
+   "credit": "Ethan Llamas"
   },
   "confidence": "high",
   "notes": "Hybrid-only (UX 300h, 196 hp) since 2025. New-for-2026 F Sport Design grade added between Premium and F Sport Handling (4 trims total). Destination fee is $1,295. Smallest Lexus crossover.",
@@ -23023,6 +23876,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lexus UX 300H 5 HB HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21631",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -23039,29 +23903,51 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 56910
+    "msrp": 56910,
+    "features": [
+     "Standard rear-wheel drive with optional all-wheel drive",
+     "13.2-inch center touchscreen with Lincoln Digital Experience",
+     "Heated and ventilated front seats",
+     "Adaptive suspension",
+     "BlueCruise hands-free highway driving capability"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 66730
+    "msrp": 66730,
+    "features": [
+     "Illumination Package",
+     "Adaptive Pixel LED headlamps",
+     "Dynamic Handling Package",
+     "Panoramic Vista Roof",
+     "Premium leather seating surfaces",
+     "Second-row 5.8-inch rear touchscreen"
+    ]
    },
    {
     "name": "Black Label",
-    "msrp": 85910
+    "msrp": 85910,
+    "features": [
+     "Standard all-wheel drive",
+     "Exclusive interior themes Invitation, Flight and Moonbeam",
+     "Perfect Position front seats",
+     "Revel Ultima 3D Audio System with 28 speakers",
+     "Black Label owner privileges and services"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "3.0L twin-turbo V6",
-    "hp": 400,
-    "transmission": "10-speed automatic",
+    "engine": "3.0L twin-turbocharged V6",
+    "hp": 383,
+    "transmission": "10-speed SelectShift automatic",
     "manualAvailable": false,
     "drive": [
      "RWD",
      "AWD"
     ],
-    "mpgCombined": 20,
+    "mpgCombined": 21,
     "evRangeMi": null
    }
   ],
@@ -23071,23 +23957,23 @@ export const VEHICLES = [
   ],
   "doors": 4,
   "dims": {
-   "lengthIn": 199.3,
+   "lengthIn": 199.7,
    "widthIn": 79.6,
-   "heightIn": 69.8,
+   "heightIn": 69.2,
    "wheelbaseIn": 119.1,
-   "curbWeightLb": 4774,
-   "groundClearanceIn": null
+   "curbWeightLb": 4745,
+   "groundClearanceIn": 8.5
   },
   "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": 18.3,
+   "passengerVolumeCuFt": 140.6,
+   "cargoCuFt": 16.5,
    "cargoMaxCuFt": 77.7,
    "lightInterior": true,
    "darkInterior": true
   },
   "spareTire": "temporary",
   "physicalControls": {
-   "climate": false,
+   "climate": true,
    "audio": true
   },
   "keyOptions": [
@@ -23099,13 +23985,123 @@ export const VEHICLES = [
    "Soft-close doors (Black Label)",
    "Adaptive pixel LED headlights"
   ],
-  "towingLb": 6700,
+  "towingLb": 5000,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/d/de/2020_Lincoln_Aviator_Reserve_AWD%2C_front_left%2C_10-28-2022.jpg",
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Gas V6 only since the Grand Touring PHEV was dropped. RWD standard on Premiere/Reserve; AWD standard on Black Label. Most climate functions in the touchscreen."
+  "notes": "For 2026 the Aviator is offered exclusively with the 3.0L twin-turbo V6 rated at 383 hp and 415 lb-ft paired to a 10-speed automatic. The former Grand Touring plug-in hybrid is discontinued so no electrified variant remains. Premiere and Reserve come standard with rear-wheel drive and offer optional all-wheel drive while Black Label includes standard all-wheel drive. EPA combined economy is 21 mpg for RWD and 20 mpg for AWD. Trim lineup carries over as Premiere, Reserve and Black Label. The cabin uses a 13.2-inch touchscreen but retains partial physical climate controls plus a volume control for easier operation. Note that Edmunds lists 400 hp while Lincoln and KBB official specs state 383 hp.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Infinite Black Metallic",
+     "hex": "#141516"
+    },
+    {
+     "name": "Pristine White Metallic Tri-Coat",
+     "hex": "#f4f4f0"
+    },
+    {
+     "name": "Harbor Gray",
+     "hex": "#6f7377"
+    },
+    {
+     "name": "Whisper Blue Metallic",
+     "hex": "#a9b6c4"
+    },
+    {
+     "name": "Red Carpet Metallic",
+     "hex": "#7c1d24"
+    },
+    {
+     "name": "Cenote Green (Black Label)",
+     "hex": "#33493a"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Onyx",
+     "hex": "#1c1c1c",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Light Space Gray",
+     "hex": "#b6b7b3",
+     "tone": "light"
+    },
+    {
+     "name": "Harvest Bronze",
+     "hex": "#9a7b4f",
+     "tone": "light"
+    },
+    {
+     "name": "Hot Chocolate",
+     "hex": "#4a3627",
+     "tone": "dark"
+    },
+    {
+     "name": "Black Label Invitation",
+     "hex": "#ddd6c8",
+     "tone": "light"
+    },
+    {
+     "name": "Black Label Flight",
+     "hex": "#2b3138",
+     "tone": "dark"
+    },
+    {
+     "name": "Black Label Moonbeam",
+     "hex": "#c9cebc",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Aviator Premiere specs — Lincoln.com",
+    "url": "https://www.lincoln.com/luxury-suvs/aviator/models/premiere/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov 2026 Aviator RWD",
+    "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49887",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Aviator specs — KBB",
+    "url": "https://www.kbb.com/lincoln/aviator/2026/specs/",
+    "site": "kbb.com"
+   },
+   {
+    "label": "2026 Aviator review and ratings — Edmunds",
+    "url": "https://www.edmunds.com/lincoln/aviator/2026/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Aviator safety — NHTSA",
+    "url": "https://www.nhtsa.gov/vehicle/2026/LINCOLN/AVIATOR",
+    "site": "nhtsa.gov"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": "https://www.nhtsa.gov/vehicle/2026/LINCOLN/AVIATOR"
+   },
+   "owner": {
+    "score": 4.4,
+    "scale": 5,
+    "count": 38,
+    "source": "https://www.edmunds.com/lincoln/aviator/2026/"
+   },
+   "expert": {
+    "score": 6.5,
+    "scale": 10,
+    "source": "https://www.edmunds.com/lincoln/aviator/2026/"
+   }
+  }
  },
  {
   "id": "lincoln-corsair",
@@ -23121,21 +24117,46 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 39985
+    "msrp": 39985,
+    "features": [
+     "2.0L turbocharged gas I4",
+     "8-speed automatic",
+     "FWD standard (AWD available)",
+     "13.2-inch SYNC 4 touchscreen",
+     "12.3-inch digital cluster",
+     "dual-zone automatic climate control",
+     "wireless Apple CarPlay and Android Auto"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 47640
+    "msrp": 47640,
+    "features": [
+     "2.0L turbocharged gas I4",
+     "leather-trimmed seating",
+     "14-speaker Revel audio",
+     "heated and ventilated front seats",
+     "hands-free liftgate",
+     "wireless charging pad"
+    ]
    },
    {
-    "name": "Grand Touring (PHEV)",
-    "msrp": 54365
+    "name": "Grand Touring",
+    "msrp": 54365,
+    "features": [
+     "2.5L plug-in hybrid powertrain",
+     "standard all-wheel drive",
+     "27 miles EPA electric range",
+     "onboard charging",
+     "Phone As A Key",
+     "adaptive suspension"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.0L turbo I4",
+    "engine": "2.0L turbocharged I4",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -23148,14 +24169,14 @@ export const VEHICLES = [
    },
    {
     "type": "phev",
-    "engine": "2.5L I4 plug-in hybrid (Grand Touring)",
+    "engine": "2.5L I4 plug-in hybrid",
     "hp": 266,
-    "transmission": "eCVT",
+    "transmission": "eCVT (continuously variable)",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 78,
+    "mpgCombined": 76,
     "evRangeMi": 27
    }
   ],
@@ -23164,15 +24185,15 @@ export const VEHICLES = [
   ],
   "doors": 4,
   "dims": {
-   "lengthIn": 180.6,
+   "lengthIn": 181.4,
    "widthIn": 74.3,
    "heightIn": 64.1,
    "wheelbaseIn": 106.7,
-   "curbWeightLb": 3708,
+   "curbWeightLb": 3685,
    "groundClearanceIn": null
   },
   "interior": {
-   "passengerVolumeCuFt": null,
+   "passengerVolumeCuFt": 102.5,
    "cargoCuFt": 27.6,
    "cargoMaxCuFt": 57.6,
    "lightInterior": true,
@@ -23180,7 +24201,7 @@ export const VEHICLES = [
   },
   "spareTire": "temporary",
   "physicalControls": {
-   "climate": false,
+   "climate": true,
    "audio": true
   },
   "keyOptions": [
@@ -23198,7 +24219,99 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Final model year: Corsair production ends alongside the Ford Escape as the Louisville plant converts to EV production. Grand Touring PHEV: 27-mile electric range. Climate is controlled mainly through the 13.2-inch touchscreen."
+  "notes": "The 2026 Corsair is the final model year. Production at Louisville Assembly ended in December 2025 as the plant retools for EV output alongside the discontinued Ford Escape and Lincoln.com now lists the 2026 Corsair as sold out. Two powertrains were offered. The 250-hp 2.0L turbo gas four came with FWD or AWD and the 266-hp 2.5L Grand Touring plug-in hybrid was AWD only with 27 miles of electric range and a 76 MPGe combined rating. The cabin pairs a 13.2-inch SYNC 4 touchscreen with retained physical climate and volume controls. IIHS rated the updated side crash test only Marginal for 2026 so it is not a Top Safety Pick and NHTSA had no published 2026 star rating at research time.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Infinite Black Metallic",
+     "hex": "#17181C"
+    },
+    {
+     "name": "Crystal White Metallic",
+     "hex": "#E6E7E4"
+    },
+    {
+     "name": "Pristine White Metallic Tri-Coat",
+     "hex": "#F3F2EE"
+    },
+    {
+     "name": "Red Carpet Metallic",
+     "hex": "#7A1B1F"
+    },
+    {
+     "name": "Harbor Gray",
+     "hex": "#5C6268"
+    },
+    {
+     "name": "Whisper Blue Metallic",
+     "hex": "#A9B7C2"
+    },
+    {
+     "name": "Asher Gray Metallic",
+     "hex": "#8A8D8F"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Ebony",
+     "hex": "#1C1B1A",
+     "tone": "dark"
+    },
+    {
+     "name": "Light Smoked Truffle",
+     "hex": "#C9BBA6",
+     "tone": "light"
+    },
+    {
+     "name": "Medium Smoked Truffle",
+     "hex": "#7A6E5F",
+     "tone": "dark"
+    },
+    {
+     "name": "Eternal Red",
+     "hex": "#6E1E22",
+     "tone": "dark"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Lincoln.com — 2026 Corsair",
+    "url": "https://www.lincoln.com/luxury-suvs/corsair/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov 2026 Corsair",
+    "url": "https://fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Lincoln&baseModel=Corsair&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Edmunds — 2026 Corsair specs",
+    "url": "https://www.edmunds.com/lincoln/corsair/2026/features-specs/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "IIHS — 2026 Corsair ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/lincoln/corsair-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "Ford Authority — Escape and Corsair production ends",
+    "url": "https://fordauthority.com/2025/12/ford-escape-lincoln-corsair-production-ends-this-week/",
+    "site": "fordauthority.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lincoln Corsair Gas SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21445",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "lincoln-nautilus",
@@ -23210,25 +24323,43 @@ export const VEHICLES = [
   "segment": "midsize luxury SUV",
   "category": "suv",
   "priceFrom": 53995,
-  "priceTo": 77130,
+  "priceTo": 77660,
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 53995
+    "msrp": 53995,
+    "features": [
+     "2.0L turbocharged I-4 with 250 hp and AWD standard",
+     "48-inch panoramic display with 11.1-inch center touchscreen",
+     "Lincoln Co-Pilot360 Drive 2.0 with adaptive cruise and 360-degree camera",
+     "Power-adjustable heated front seats"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 63180
+    "msrp": 63595,
+    "features": [
+     "Genuine leather upholstery",
+     "Panoramic Vista Roof",
+     "Ventilated front seats",
+     "Adaptive suspension"
+    ]
    },
    {
     "name": "Black Label",
-    "msrp": 77130
+    "msrp": 77660,
+    "features": [
+     "Curated interior theme packages with premium materials",
+     "28-speaker Revel Ultima 3D audio",
+     "BlueCruise hands-free highway driving standard",
+     "Black Label member privileges and concierge service"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
-    "engine": "2.0L turbo I4",
+    "engine": "2.0L Turbocharged I-4",
     "hp": 250,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
@@ -23240,9 +24371,9 @@ export const VEHICLES = [
    },
    {
     "type": "hybrid",
-    "engine": "2.0L turbo I4 hybrid",
+    "engine": "2.0L Turbocharged I-4 Hybrid with 100 kW electric motor",
     "hp": 310,
-    "transmission": "CVT",
+    "transmission": "eCVT (continuously variable automatic)",
     "manualAvailable": false,
     "drive": [
      "AWD"
@@ -23256,21 +24387,21 @@ export const VEHICLES = [
   ],
   "doors": 4,
   "dims": {
-   "lengthIn": 193.4,
-   "widthIn": 78.2,
+   "lengthIn": 193.2,
+   "widthIn": 76.9,
    "heightIn": 68.2,
    "wheelbaseIn": 114.2,
-   "curbWeightLb": 4534,
-   "groundClearanceIn": null
+   "curbWeightLb": 4301,
+   "groundClearanceIn": 8
   },
   "interior": {
    "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
+   "cargoCuFt": 36.4,
+   "cargoMaxCuFt": 71.3,
    "lightInterior": true,
    "darkInterior": true
   },
-  "spareTire": "temporary",
+  "spareTire": "none",
   "physicalControls": {
    "climate": false,
    "audio": true
@@ -23290,7 +24421,105 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Pricing carried over unchanged from 2025 per Ford Authority. Hybrid available on every trim (~$1,500-2,000 upcharge). AWD standard. Nearly all controls run through the 48-inch display plus center touchscreen; volume knob retained."
+  "notes": "The 2026 Nautilus carries over the 2024 redesign with three trims (Premiere 53995, Reserve 63595, Black Label 77660) and pricing essentially unchanged from 2025. All trims are AWD standard and every trim can be ordered as a hybrid for roughly 3000 dollars more (Premiere Hybrid starts near 56995). Gas 2.0L turbo makes 250 hp and rates 21/29/24 mpg; the 2.0L turbo hybrid makes 310 hp total system output and rates 29/31/30 mpg per fueleconomy.gov. Ergonomics center on the 48-inch panoramic display paired with an 11.1-inch lower touchscreen that handles most climate and comfort functions, so dedicated physical climate buttons are absent, though a physical audio volume control is retained. Standard tire kit is an inflator and sealant kit rather than a spare, with a spare available as an option. IIHS names it a Top Safety Pick; a current NHTSA overall star rating was not verifiable and is omitted.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "White Platinum",
+     "hex": "#EDEEEA"
+    },
+    {
+     "name": "Silver Radiance",
+     "hex": "#C9CBCC"
+    },
+    {
+     "name": "Whisper Blue",
+     "hex": "#B9C4CC"
+    },
+    {
+     "name": "Gray Matter",
+     "hex": "#6E7276"
+    },
+    {
+     "name": "Chroma Caviar Dark Gray",
+     "hex": "#34373B"
+    },
+    {
+     "name": "Red Carpet",
+     "hex": "#6D1A1F"
+    },
+    {
+     "name": "Infinite Black",
+     "hex": "#0B0C0E"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#16171B",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Light Space Gray",
+     "hex": "#9A9EA3",
+     "tone": "light"
+    },
+    {
+     "name": "Hot Chocolate",
+     "hex": "#4A3220",
+     "tone": "dark"
+    },
+    {
+     "name": "Chalet",
+     "hex": "#D8CDBB",
+     "tone": "light"
+    },
+    {
+     "name": "Aurora",
+     "hex": "#B7C0C8",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "Lincoln official 2026 Nautilus",
+    "url": "https://www.lincoln.com/luxury-suvs/nautilus/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Lincoln&baseModel=Nautilus&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "IIHS 2026 Nautilus ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/lincoln/nautilus-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "2026 Nautilus powertrains outlined",
+    "url": "https://fordauthority.com/2025/08/2026-lincoln-nautilus-all-powertrains-outlined/",
+    "site": "fordauthority.com"
+   },
+   {
+    "label": "2026 Nautilus trims and pricing",
+    "url": "https://trimatlas.com/compare/lincoln/nautilus/2026/",
+    "site": "trimatlas.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lincoln Nautilus SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21448",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "lincoln-navigator",
@@ -23306,32 +24535,77 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Premiere",
-    "msrp": 91995
+    "msrp": 91995,
+    "features": [
+     "Standard 4x4",
+     "3.5L twin-turbo V6 (432 hp)",
+     "48-inch panoramic display",
+     "11.1-inch center touchscreen",
+     "14-speaker audio",
+     "Lincoln Connectivity Package (5G, Wi-Fi hotspot)"
+    ]
    },
    {
     "name": "Reserve",
-    "msrp": 101995
+    "msrp": 101995,
+    "features": [
+     "Panoramic Vista Roof with power sunshade",
+     "Power-deployable running boards",
+     "Revel Ultima 3D Audio (28 speakers)",
+     "Lincoln Rejuvenate wellness experience",
+     "Digital Scent",
+     "Premium leather first/second rows"
+    ]
    },
    {
     "name": "Black Label",
-    "msrp": 118995
+    "msrp": 118995,
+    "features": [
+     "Curated interior themes (Atmospheric, Enlighten, Invitation)",
+     "Exclusive premium colors",
+     "Black Label member privileges",
+     "Highest-tier appointments"
+    ]
+   },
+   {
+    "name": "Premiere L",
+    "msrp": 93995,
+    "features": [
+     "Extended long-wheelbase body (221.9 in)",
+     "Standard 4x4",
+     "Premiere equipment level"
+    ]
+   },
+   {
+    "name": "Reserve L",
+    "msrp": 104995,
+    "features": [
+     "Extended long-wheelbase body",
+     "Reserve equipment level",
+     "Revel Ultima 3D Audio (28 speakers)"
+    ]
    },
    {
     "name": "Black Label L",
-    "msrp": 121995
+    "msrp": 121995,
+    "features": [
+     "Extended long-wheelbase body",
+     "Curated interior themes",
+     "Black Label member privileges"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
     "engine": "3.5L twin-turbo V6",
-    "hp": 440,
+    "hp": 432,
     "transmission": "10-speed automatic",
     "manualAvailable": false,
     "drive": [
      "4WD"
     ],
-    "mpgCombined": 16,
+    "mpgCombined": 17,
     "evRangeMi": null
    }
   ],
@@ -23342,16 +24616,16 @@ export const VEHICLES = [
   "doors": 4,
   "dims": {
    "lengthIn": 210,
-   "widthIn": 79.9,
-   "heightIn": 77.6,
+   "widthIn": 80,
+   "heightIn": 78,
    "wheelbaseIn": 122.5,
-   "curbWeightLb": 6100,
-   "groundClearanceIn": null
+   "curbWeightLb": 5936,
+   "groundClearanceIn": 8.9
   },
   "interior": {
-   "passengerVolumeCuFt": null,
-   "cargoCuFt": null,
-   "cargoMaxCuFt": null,
+   "passengerVolumeCuFt": 195,
+   "cargoCuFt": 22.9,
+   "cargoMaxCuFt": 107,
    "lightInterior": true,
    "darkInterior": true
   },
@@ -23375,7 +24649,112 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Redesigned generation launched for 2025; base Premiere trim added for 2026, cutting the entry price by ~$8,000. Extended-length Navigator L versions run ~$2,000-3,000 more per trim (Premiere L $93,995, Reserve L $104,995). Destination fee $2,595. 4WD standard."
+  "notes": "Redesigned generation (launched 2025) built around a 48-inch panoramic dash display plus an 11.1-inch center touchscreen. For 2026 Lincoln added a new base Premiere trim that drops entry pricing roughly 8000 dollars below the former Reserve starting point. Each trim (Premiere Reserve Black Label) is offered in a standard body and an extended L body that runs about 2000 to 3000 dollars more per trim. Every model uses a 3.5L twin-turbo V6 rated at 432 hp and 510 lb-ft with a 10-speed automatic and standard 4x4. Destination is 2595 dollars and is not included in the listed MSRPs. Ergonomically the cabin relies heavily on screens; a large console volume knob remains but climate and most audio functions moved onto the touchscreen, a point several reviewers criticized.",
+  "colors": {
+   "exterior": [
+    {
+     "name": "Infinite Black Metallic",
+     "hex": "#0B0B0D"
+    },
+    {
+     "name": "Pristine White Metallic Tri-Coat",
+     "hex": "#F3F4F5"
+    },
+    {
+     "name": "Crystal White Metallic",
+     "hex": "#E9EAEC"
+    },
+    {
+     "name": "Star White Metallic Tri-Coat",
+     "hex": "#ECEBE4"
+    },
+    {
+     "name": "Gray Mist Metallic",
+     "hex": "#9DA1A4"
+    },
+    {
+     "name": "Starlight Gray",
+     "hex": "#7B7F82"
+    },
+    {
+     "name": "Flight Blue Metallic",
+     "hex": "#2E4A63"
+    },
+    {
+     "name": "Chroma Caviar Dark Gray Metallic",
+     "hex": "#2B2D30"
+    },
+    {
+     "name": "Sunrise Copper Metallic Pearlcoat",
+     "hex": "#8A5A3B"
+    }
+   ],
+   "interior": [
+    {
+     "name": "Black Onyx",
+     "hex": "#1A1A1C",
+     "tone": "dark"
+    },
+    {
+     "name": "Medium Light Space Gray",
+     "hex": "#A9ABAD",
+     "tone": "light"
+    },
+    {
+     "name": "Hot Chocolate",
+     "hex": "#4A2E22",
+     "tone": "dark"
+    },
+    {
+     "name": "Salt Crystal Gray",
+     "hex": "#C9C7C0",
+     "tone": "light"
+    },
+    {
+     "name": "Warm Horizon",
+     "hex": "#B99C7A",
+     "tone": "light"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "label": "2026 Lincoln Navigator official page",
+    "url": "https://www.lincoln.com/luxury-suvs/navigator/2026/",
+    "site": "lincoln.com"
+   },
+   {
+    "label": "EPA — fueleconomy.gov",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Lincoln&baseModel=Navigator&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Navigator prices, specs and expert rating",
+    "url": "https://www.edmunds.com/lincoln/navigator/2026/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "2026 Navigator lineup new trim and pricing",
+    "url": "https://fordauthority.com/2025/12/2026-lincoln-navigator-lineup-features-new-trim-higher-prices/",
+    "site": "fordauthority.com"
+   }
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Lincoln Navigator SUV 4WD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21450",
+     "site": "nhtsa.gov"
+    }
+   },
+   "expert": {
+    "score": 6.3,
+    "scale": 10,
+    "source": "https://www.edmunds.com/lincoln/navigator/2026/"
+   }
+  }
  },
  {
   "id": "lotus-emira",
@@ -24108,7 +25487,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "i-Activ AWD standard on every trim. Turbo makes 250 hp on 93-octane / 227 hp on 87-octane."
+  "notes": "i-Activ AWD standard on every trim. Turbo makes 250 hp on 93-octane / 227 hp on 87-octane.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-30 SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21112",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-5",
@@ -24228,7 +25619,18 @@ export const VEHICLES = [
     "url": "https://www.edmunds.com/mazda/cx-5/2026/",
     "site": "edmunds.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Mazda CX-5 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/mazda/cx-5-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-50",
@@ -24356,7 +25758,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota."
+  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-50 SUV, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21114",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-70",
@@ -24476,7 +25889,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Two-row version of CX-90; standard AWD. PHEV EV range improved from 26 to 32 miles for 2026 via smaller 19-in wheels. Mazda raised 2026 CX-70 prices $200-$500 effective May 2026. Turbo S output on 93-octane (319 hp on 87); PHEV tow rating 3,500 lb."
+  "notes": "Two-row version of CX-90; standard AWD. PHEV EV range improved from 26 to 32 miles for 2026 via smaller 19-in wheels. Mazda raised 2026 CX-70 prices $200-$500 effective May 2026. Turbo S output on 93-octane (319 hp on 87); PHEV tow rating 3,500 lb.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-70 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21119",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-cx-90",
@@ -24586,7 +26010,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row."
+  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda CX-90 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21117",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-mazda3",
@@ -24696,7 +26132,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Sold as sedan and hatchback (one record; hatchback costs ~$1,000-1,150 more, dims for sedan). Turbo makes 250 hp on 93-octane / 227 hp on 87-octane."
+  "notes": "Sold as sedan and hatchback (one record; hatchback costs ~$1,000-1,150 more, dims for sedan). Turbo makes 250 hp on 93-octane / 227 hp on 87-octane.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mazda3 Sedan FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21108",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mazda-mx-5-miata",
@@ -25398,11 +26846,22 @@ export const VEHICLES = [
   ],
   "towingLb": null,
   "image": {
-   "remote": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mercedes-AMG_C_63_%28W206%29_IMG_0310.jpg",
-   "credit": "Wikimedia Commons"
+   "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz_W206_C_300_4MATIC_AMG_Line_Polar_White_(14).jpg",
+   "credit": "Damian B Oh"
   },
   "confidence": "high",
-  "notes": "AMG C 63 S E Performance is a 671-hp plug-in hybrid with a small performance-oriented battery (minimal usable EV range). Climate and audio are controlled via the central touchscreen; no physical knobs."
+  "notes": "AMG C 63 S E Performance is a 671-hp plug-in hybrid with a small performance-oriented battery (minimal usable EV range). Climate and audio are controlled via the central touchscreen; no physical knobs.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Mercedes-Benz C-Class 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/mercedes-benz/c-class-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "mercedes-benz-cla",
@@ -26582,7 +28041,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Best-selling Mercedes in the US. GLC Coupe body style folded into this record. All-new electric GLC 400 4MATIC with EQ Technology (483 hp, MBUX Hyperscreen) arrives during 2026 - US pricing not yet announced. PHEV cargo volume slightly reduced."
+  "notes": "Best-selling Mercedes in the US. GLC Coupe body style folded into this record. All-new electric GLC 400 4MATIC with EQ Technology (483 hp, MBUX Hyperscreen) arrives during 2026 - US pricing not yet announced. PHEV cargo volume slightly reduced.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Mercedes-Benz GLC 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/mercedes-benz/glc-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "mercedes-benz-gle",
@@ -27535,7 +29005,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Minimal changes for 2026 (embedded navigation deleted; hood badging added on SEL trims). Mirage was discontinued after 2025, leaving Mitsubishi with a four-model US lineup."
+  "notes": "Minimal changes for 2026 (embedded navigation deleted; hood badging added on SEL trims). Mirage was discontinued after 2025, leaving Mitsubishi with a four-model US lineup.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mitsubishi Eclipse Cross SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21609",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mitsubishi-outlander",
@@ -27632,7 +29113,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small."
+  "notes": "2026 update replaces the 2.5L with a new 1.5L turbo mild-hybrid (sources cite 174-177 hp; ~28 mpg combined, manufacturer estimate with final EPA figures pending). Third row is very small.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Mitsubishi Outlander SUV FWD (carried-over generation into 2026), OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20196",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "mitsubishi-outlander-phev",
@@ -27815,7 +29307,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Carries over for 2026 with a new budget S trim and Trail Edition; AWD now standard. Design dates to 2011, making it one of the oldest vehicles on sale."
+  "notes": "Carries over for 2026 with a new budget S trim and Trail Edition; AWD now standard. Design dates to 2011, making it one of the oldest vehicles on sale.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Mitsubishi Outlander Sport SUV AWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21608",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-altima",
@@ -28027,7 +29530,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO (new), Platinum Reserve."
+  "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO (new), Platinum Reserve.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Nissan Armada 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/nissan/armada-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "nissan-frontier",
@@ -28112,7 +29626,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup."
+  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Frontier Crew Cab PU/CC N/A RWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21069",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-kicks",
@@ -28196,7 +29721,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD."
+  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Kicks SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21077",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-leaf",
@@ -28371,7 +29907,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs."
+  "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Nissan Murano SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21074",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "nissan-pathfinder",
@@ -28817,7 +30365,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL."
+  "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "IIHS ratings — 2026 Nissan Sentra 4-door sedan",
+     "url": "https://www.iihs.org/ratings/vehicle/nissan/sentra-4-door-sedan/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "nissan-z",
@@ -30213,7 +31772,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Gen-2 R1S. Lower Dual Standard/Large configurations were dropped in June 2026; Dual Motor Max pack is now the base trim at $90,990 (a $7,000+ increase). Cargo figure is behind 3rd row; max is all rows folded. Frunk adds 11.1 cu ft."
+  "notes": "Gen-2 R1S. Lower Dual Standard/Large configurations were dropped in June 2026; Dual Motor Max pack is now the base trim at $90,990 (a $7,000+ increase). Cargo figure is behind 3rd row; max is all rows folded. Frunk adds 11.1 cu ft.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Rivian R1S 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/rivian/r1s-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "rivian-r1t",
@@ -30894,7 +32464,19 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicles/ascent",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru Ascent SUV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21699",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "subaru-brz",
@@ -31817,7 +33399,18 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicle-info/subaru-impreza-colors.html",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru Impreza SW AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21691",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "subaru-outback",
@@ -32796,7 +34389,18 @@ export const VEHICLES = [
     "url": "https://www.subaru.com/vehicle-info/subaru-wrx-colors.html",
     "site": "subaru.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Subaru WRX 4dr, AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21695",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "tesla-cybertruck",
@@ -32888,7 +34492,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Tesla does not use traditional model years; current production treated as 2026. Single-motor Long Range RWD trim was discontinued in 2025; lineup is now Dual Motor AWD ($69,990 after 2026 price cuts), Premium AWD and Cyberbeast. Cargo figure is the 6-ft bed volume; max includes frunk/sub-trunk. Ground clearance is max on air suspension. Prices exclude $1,995 destination."
+  "notes": "Tesla does not use traditional model years; current production treated as 2026. Single-motor Long Range RWD trim was discontinued in 2025; lineup is now Dual Motor AWD ($69,990 after 2026 price cuts), Premium AWD and Cyberbeast. Cargo figure is the 6-ft bed volume; max includes frunk/sub-trunk. Ground clearance is max on air suspension. Prices exclude $1,995 destination.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Tesla Cybertruck PU/CC BEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/22075",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "tesla-model-3",
@@ -34148,12 +35763,13 @@ export const VEHICLES = [
   ],
   "ratings": {
    "safety": {
+    "nhtsa": 5,
     "iihs": "Top Safety Pick+",
     "appliesTo": "2026",
     "source": {
-     "label": "IIHS 2026 Top Safety Pick Awards — Toyota (Camry 4-door sedan: Top Safety Pick+)",
-     "url": "https://www.iihs.org/ratings/top-safety-picks/2026/all/toyota",
-     "site": "iihs.org"
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Camry Hybrid 4 DR HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21640",
+     "site": "nhtsa.gov"
     }
    },
    "owner": {
@@ -34307,6 +35923,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2025",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2025 Toyota Corolla 4 DR FWD (carried-over generation into 2026), OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20249",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 3.7,
     "scale": 5,
@@ -34701,7 +36326,18 @@ export const VEHICLES = [
     "url": "https://www.autoevolution.com/news/2026-toyota-corolla-hatchback-fx-edition-replaces-nightshade-pricing-shoots-up-256599.html",
     "site": "autoevolution.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Corolla Hatchback 5-door, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21645",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-crown",
@@ -34834,7 +36470,18 @@ export const VEHICLES = [
     "url": "https://carbuzz.com/cars/toyota/crown/2026/",
     "site": "carbuzz.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Crown Hybrid 4dr, HEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21680",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-crown-signia",
@@ -35836,7 +37483,18 @@ export const VEHICLES = [
     "url": "https://www.carsdirect.com/toyota/land-cruiser/2026",
     "site": "carsdirect.com"
    }
-  ]
+  ],
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Land Cruiser SUV, HEV 4WD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21659",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "toyota-mirai",
@@ -36278,6 +37936,17 @@ export const VEHICLES = [
      "tone": "dark"
     }
    ]
+  },
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Prius PHEV 5 HB PHEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21652",
+     "site": "nhtsa.gov"
+    }
+   }
   }
  },
  {
@@ -36675,6 +38344,15 @@ export const VEHICLES = [
    }
   ],
   "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Toyota Sienna Hybrid Van HEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21660",
+     "site": "nhtsa.gov"
+    }
+   },
    "owner": {
     "score": 3.5,
     "scale": 5,
@@ -37414,7 +39092,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls."
+  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas SUV, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21031",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-atlas-cross-sport",
@@ -37493,7 +39182,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Five-seat coupe-roof version of the Atlas. Top-trim price is approximate (official 2026 top-trim figure not confirmed)."
+  "notes": "Five-seat coupe-roof version of the Atlas. Top-trim price is approximate (official 2026 top-trim figure not confirmed).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas Cross Sport SUV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21033",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-golf-gti",
@@ -37818,7 +39519,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls."
+  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen ID.4 SUV BEV RWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21037",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-jetta",
@@ -37901,7 +39613,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI)."
+  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI).",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Jetta 4dr, FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21040",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-jetta-gli",
@@ -37972,7 +39695,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Sold in a single loaded Autobahn trim. One of the last affordable sedans still offered with a manual gearbox."
+  "notes": "Sold in a single loaded Autobahn trim. One of the last affordable sedans still offered with a manual gearbox.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Jetta GLI 4 DR FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21041",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-taos",
@@ -38052,7 +39786,18 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28."
+  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 4,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen Taos SUV FWD, OverallRating 4",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21042",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volkswagen-tiguan",
@@ -38475,7 +40220,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Built in South Carolina. New cheaper Single Motor RWD variant for 2026; Twin Motor power increased to 449 hp and Performance to 670 hp per press reports. Some quoted prices may include the $1,395 destination fee."
+  "notes": "Built in South Carolina. New cheaper Single Motor RWD variant for 2026; Twin Motor power increased to 449 hp and Performance to 670 hp per press reports. Some quoted prices may include the $1,395 destination fee.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2025-26",
+    "source": {
+     "label": "IIHS ratings — 2026 Volvo EX90 4-door SUV",
+     "url": "https://www.iihs.org/ratings/vehicle/volvo/ex90-4-door-suv/2026",
+     "site": "iihs.org"
+    }
+   }
+  }
  },
  {
   "id": "volvo-v60-cross-country",
@@ -38551,7 +40307,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Volvo's sole remaining US wagon for 2026 after the V90 Cross Country's discontinuation. Compact spare optional."
+  "notes": "Volvo's sole remaining US wagon for 2026 after the V90 Cross Country's discontinuation. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo V60 CC SW MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20875",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-v90-cross-country",
@@ -38715,7 +40482,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "2026 lineup restructured: lower-priced 194-hp base engine on Core/Plus, 247-hp B5 on Ultra; exact powertrain/trim pairings and EPA figures for the new base engine not fully confirmed. Compact spare optional."
+  "notes": "2026 lineup restructured: lower-priced 194-hp base engine on Core/Plus, 247-hp B5 on Ultra; exact powertrain/trim pairings and EPA figures for the new base engine not fully confirmed. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC40 SUV MHEV FWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20873",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-xc60",
@@ -38812,7 +40590,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Refreshed for 2026 with new grille, larger 11.2-inch screen and updated interior. T8 trim prices quoted by some sources may include destination. Compact spare optional."
+  "notes": "Refreshed for 2026 with new grille, larger 11.2-inch screen and updated interior. T8 trim prices quoted by some sources may include destination. Compact spare optional.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC60 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20876",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  },
  {
   "id": "volvo-xc90",
@@ -38918,6 +40707,18 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Carries the major 2025.5 facelift into 2026. B6 Plus price is approximate; base and top prices verified. XC60-platform SUV remains Volvo's 3-row flagship alongside electric EX90."
+  "notes": "Carries the major 2025.5 facelift into 2026. B6 Plus price is approximate; base and top prices verified. XC60-platform SUV remains Volvo's 3-row flagship alongside electric EX90.",
+  "ratings": {
+   "safety": {
+    "nhtsa": 5,
+    "iihs": "Top Safety Pick",
+    "appliesTo": "2026",
+    "source": {
+     "label": "NHTSA SafetyRatings API - 2026 Volvo XC90 SUV MHEV AWD, OverallRating 5",
+     "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20880",
+     "site": "nhtsa.gov"
+    }
+   }
+  }
  }
 ];

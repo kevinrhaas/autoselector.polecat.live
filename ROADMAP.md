@@ -61,12 +61,26 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 
 - [ ] **Public ratings for every model** — extend `ratings` (safety
   `{nhtsa, iihs}`, `owner`, `expert`, each with a resolving `source`) beyond
-  the 146 models done so far (137 with a real NHTSA star rating). Latest
-  (2026-07-27, +10): audi-q4-e-tron, cadillac-lyriq, chevrolet-blazer-ev/
-  equinox-ev/silverado-ev/trailblazer, ford-f-150-lightning, gmc-sierra-ev,
-  hyundai-ioniq-9, tesla-cybertruck (all 5-star) — see js/changelog.js v48;
-  this run's skips (checked, not guessed — NHTSA "Not Rated" or no 2026
-  record at all): audi-a3/a5/q3/q6-e-tron/a6-e-tron/e-tron-gt,
+  the 159 models done so far (137 with a real NHTSA star, 22 with an IIHS
+  award only). Latest (2026-07-28, +13, IIHS-sourced): mercedes-benz-c-class,
+  mercedes-benz-glc, audi-a5, audi-a6, volvo-ex90, genesis-electrified-gv70,
+  lexus-nx, infiniti-qx80, nissan-armada, buick-enclave, hyundai-ioniq-5,
+  mazda-cx-5, rivian-r1s — all confirmed NHTSA "Not Rated" for 2026 but IIHS
+  Top Safety Pick/Pick+ winners, so this batch pulled from IIHS instead — see
+  js/changelog.js v49; this run's skips (checked both NHTSA and IIHS, neither
+  has a 2026 record): bmw-2-series/4-series/x2/x7/i4/ix, mini-countryman,
+  porsche-macan/cayenne, toyota-gr-corolla/gr86, dodge-charger-daytona/
+  charger-sixpack/hornet, polestar-polestar-3/4, ram-2500-3500/promaster,
+  lucid-air/gravity, hyundai-nexo, ineos-grenadier/grenadier-quartermaster,
+  vinfast-vf-8/vf-9, rivian-r2, and every current Cadillac, Land Rover and
+  Jaguar model (no IIHS Top Safety Pick page exists for those three brands
+  this year either).
+  Previous batch (2026-07-27, +10): audi-q4-e-tron, cadillac-lyriq,
+  chevrolet-blazer-ev/equinox-ev/silverado-ev/trailblazer,
+  ford-f-150-lightning, gmc-sierra-ev, hyundai-ioniq-9, tesla-cybertruck
+  (all 5-star) — see js/changelog.js v48; that run's skips (checked, not
+  guessed — NHTSA "Not Rated" or no 2026 record at all):
+  audi-a3/a5/q3/q6-e-tron/a6-e-tron/e-tron-gt,
   buick-enclave/envista, cadillac-ct4/optiq/vistiq/celestiq/escalade-iq,
   chevrolet-equinox (gas)/silverado-hd/corvette, ford-bronco/
   f-series-super-duty/transit/e-transit, genesis-g70/g90, gmc-terrain/
