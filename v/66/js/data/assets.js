@@ -54,8 +54,10 @@ export const LOGOS = {
 };
 
 export const LOCAL_PHOTOS = [
+ "acura-adx",
  "acura-integra",
  "acura-mdx",
+ "acura-rdx",
  "audi-q5",
  "bmw-3-series",
  "bmw-x3",
