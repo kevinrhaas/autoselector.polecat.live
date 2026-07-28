@@ -94,6 +94,12 @@
   "author": "Deathpallie325",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
+ "gallery/chevrolet-tahoe/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Chevrolet_Tahoe_5.3_High_Country_V8_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/chevrolet-traverse/1 (exterior)": {
   "source": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Traverse_RS_AWD,_front_10.16.24.jpg",
   "license": "CC BY-SA 4.0",
@@ -140,6 +146,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_Maverick_interior.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/ford-mustang-mach-e/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Ford_Mustang_Mach-E_CX727_Premium_RWD_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/genesis-gv70/1 (interior)": {
@@ -256,6 +268,12 @@
   "author": "Kevauto",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
+ "gallery/honda-prologue/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Honda_Prologue_Elite_(United_States)_interior.jpg",
+  "license": "CC BY 2.0",
+  "author": "Charles",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/hyundai-palisade/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Palisade_Highroof_LX3_Interior.jpg",
   "license": "CC BY-SA 4.0",
@@ -340,6 +358,18 @@
   "author": "Ethan Llamas",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
+ "gallery/kia-k5/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Kia_K5_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/kia-seltos/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Kia_Seltos_Gravity_SP2_PE_Midnight_Green_(1).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Damian B Oh",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/kia-sorento/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:2024_Kia_Sorento_interior.jpg",
   "license": "CC BY-SA 4.0",
@@ -398,6 +428,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Altima_SR_in_Brilliant_Silver_Metallic,_front_right.jpg",
   "license": "CC BY-SA 3.0",
   "author": "Mr.choppers",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/nissan-armada/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2026_Nissan_Armada_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/nissan-murano/1 (interior)": {
@@ -488,6 +524,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2026_Subaru_Outback_Rear_Left_Quater_NYC_2025.png",
   "license": "CC BY 4.0",
   "author": "Raszbeary",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/subaru-wrx/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Subaru_WRX_S4_GT-H_EX_(5BA-VBH)_interior_(cropped).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Tokumeigakarinoaoshima",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/tesla-model-3/1 (interior)": {
@@ -626,6 +668,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2022_Toyota_Tundra_Limited_(United_States)_front_view.jpg",
   "license": "CC BY 3.0",
   "author": "Oxmoor Toyota",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/volkswagen-id4/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_ID.4_Pro_(ZAA-E2EBJ)_interior.jpg",
+  "license": "CC0",
+  "author": "Tokumeigakarinoaoshima",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/volkswagen-tiguan/1 (interior)": {

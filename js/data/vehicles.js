@@ -8459,7 +8459,16 @@ export const VEHICLES = [
   "towingLb": 8400,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20Chevrolet%20Tahoe%20Facelift.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/MIAS_2024_-_2024_Chevrolet_Tahoe_5.3_High_Country_V8_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3AMIAS_2024_-_2024_Chevrolet_Tahoe_5.3_High_Country_V8_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Refreshed for 2025. Re-verified 2026-07-28 against current GM pricing (LS/LT/High Country confirmed exactly; RST/Z71/Premier adjusted slightly). Prices exclude the $2,795 destination charge (up from $2,595).",
@@ -12835,7 +12844,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Ford_Mustang_Mach-E_Rally_Auto_Zuerich_2023_1X7A1182.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Ford_Mustang_Mach-E_CX727_Premium_RWD_interior.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3AFord_Mustang_Mach-E_CX727_Premium_RWD_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Electric crossover. MPGe and EPA range verified on fueleconomy.gov: RWD Standard 107 MPGe/260 mi, RWD Extended 110 MPGe/320 mi, AWD Standard 100 MPGe/240 mi, AWD Extended 104 MPGe/300 mi, GT 90 MPGe/280 mi, Rally 84 MPGe/255 mi. Prices from Edmunds (Select from 37795, Premium from 40595, GT from 53395); Rally top price ~55440 per Ford/aggregator. Confidence is medium because exact per-configuration horsepower is not published uniformly by Ford; 266 hp (RWD/AWD Standard), ~325 hp (AWD Extended), and 480 hp (GT/Rally) are well supported, while the RWD Extended figure (~290 hp) is a best estimate and battery usable-kWh values are approximate.",
@@ -17356,7 +17374,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/2024_Honda_Prologue_Elite_%28United_States%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Charles",
+     "license": "CC BY 2.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2024_Honda_Prologue_Elite_(United_States)_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "GM Ultium-based EV (85 kWh). Honda cut Prologue prices ~$7,500 across the board (effective April 2026), so 2026 MSRPs verified as EX $39,900 to Elite AWD $50,400. EPA range: 308 mi FWD, 294 mi dual-motor AWD, 283 mi Elite. DC fast charge 20-80% in ~35 minutes.",
@@ -22486,7 +22513,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/2024_Kia_K5_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2024_Kia_K5_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Base and top prices derived from published incl.-destination figures (LXS ~$27.4k, EX ~$34.9k excl. freight). Availability of the 290-hp GT trim for 2026 is unclear; Kia's 2026 price list showed EX as the top trim.",
@@ -22687,7 +22723,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Kia_Seltos_Gravity_SP2_PE_Midnight_Green_%281%29.jpg",
+     "kind": "interior",
+     "credit": "Damian B Oh",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3AKia_Seltos_Gravity_SP2_PE_Midnight_Green_(1).jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Carryover generation, slightly cheaper for 2026; prices derived from published incl.-destination figures. An all-new Seltos has been revealed globally and is expected as a 2027 model.",
@@ -32131,7 +32176,16 @@ export const VEHICLES = [
   "towingLb": 8500,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Nissan_Armada_%28Y63%29_Washington_DC_Metro_Area%2C_USA.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/2026_Nissan_Armada_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2026_Nissan_Armada_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO (new), Platinum Reserve.",
@@ -37036,7 +37090,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Subaru%20WRX%20(VB)%20Washington%20DC%20Metro%20Area,%20USA.jpg?width=1280",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Subaru_WRX_S4_GT-H_EX_%285BA-VBH%29_interior_%28cropped%29.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ASubaru_WRX_S4_GT-H_EX_(5BA-VBH)_interior_(cropped).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Verified against Subaru's 2026 WRX pricing release and fueleconomy.gov. Affordable base trim returns at $32,495 with most trims cut $2,700-$3,700 vs 2025; keyless access now standard on base. Series.Yellow is new for 2026 (350 units). GT (SPT auto) and tS (6MT) are both $44,995. 271-hp 2.4L turbo; 6MT standard on most trims, SPT automatic optional on Limited and standard on GT. Combined mpg is 22 with the manual, 21 with the SPT automatic.",
@@ -42240,7 +42303,16 @@ export const VEHICLES = [
   "towingLb": 2700,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Volkswagen_ID.4_Pro_%28ZAA-E2EBJ%29_interior.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3AVolkswagen_ID.4_Pro_(ZAA-E2EBJ)_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls.",
