@@ -21,6 +21,15 @@
 
 export const CHANGELOG = [
   {
+    v: 67,
+    title: 'Shell caught up to v0.5.8',
+    kind: 'fix',
+    ts: '2026-07-28T15:55:28.345Z',
+    items: [
+      'Vendored Polecat Shell refreshed from v0.5.4 to v0.5.8 — on mobile, the navigation drawer\'s close button (the rail-local toggle) now stays reachable even when the drawer backdrop sits above the topbar, fixing a case where the hamburger that opened the drawer couldn\'t close it again.',
+    ],
+  },
+  {
     v: 66,
     title: 'Jeep lineup re-verified — trim ladders rebuilt, a pricing bug fixed',
     kind: 'data',

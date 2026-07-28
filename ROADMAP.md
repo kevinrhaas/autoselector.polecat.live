@@ -56,6 +56,14 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
 - [x] SW cache bump (2026-07-17, `as-shell-v1` → `as-shell-v2`) — the shell
   swap changes enough cached JS/CSS that stale offline visitors need a clean
   cache.
+- [x] Vendor copy caught up from v0.5.4 to v0.5.8 (2026-07-28, `as-shell-v5`
+  → `as-shell-v6`) — picks up a real mobile fix (the rail drawer's close
+  toggle stays reachable once the backdrop layers above the topbar); the
+  other v0.5.4→v0.5.8 changes (site-chrome's light-fallback theming,
+  multiselectDropdown's second-click toggle, a pinned Supabase ESM version)
+  live in shell code this app doesn't currently exercise (marketing site
+  untouched, no multiselectDropdown/auth usage yet). Keep it current with
+  future `sync-shell` dispatches.
 
 ## Next up (ordered)
 
