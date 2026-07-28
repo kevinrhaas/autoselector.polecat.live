@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 34;
+export const DATA_VERSION = 35;
 
 export const VEHICLES = [
  {
@@ -33281,19 +33281,37 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SV",
-    "msrp": 27580
+    "msrp": 27580,
+    "features": [
+     "2.5L I4, Xtronic CVT",
+     "17-in alloy wheels",
+     "8-in touchscreen, wired Apple CarPlay/Android Auto",
+     "Safety Shield 360 suite"
+    ]
    },
    {
     "name": "SV Special Edition",
-    "msrp": 28880
-   },
-   {
-    "name": "SR",
-    "msrp": 28980
+    "msrp": 28880,
+    "features": [
+     "Power moonroof",
+     "Dual-zone automatic climate control",
+     "Wireless smartphone integration",
+     "Rear spoiler"
+    ]
    },
    {
     "name": "SV AWD",
-    "msrp": 29080
+    "msrp": 28980
+   },
+   {
+    "name": "SR",
+    "msrp": 29080,
+    "features": [
+     "19-in wheels",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Paddle shifters, wireless phone charging",
+     "Sport seats"
+    ]
    },
    {
     "name": "SR AWD",
@@ -33369,7 +33387,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Final model year; production expected to end mid-2026. Lineup cut to SV and SR grades only (S and SL dropped).",
+  "notes": "2026-07-28 verification: the SR/SV AWD trim labels were transposed against the actual MSRP order (SV AWD $28,980 sits below SR $29,080, not above it) — corrected. Also removed an unverified 'final model year, SV/SR-only' claim: no source (Nissan newsroom, KBB, Motor1) supports it; the real 2026 lineup is SV / SV Special Edition / SR, each offered FWD or AWD, plus an SR Midnight Edition appearance package.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -33407,6 +33425,11 @@ export const VEHICLES = [
     "site": "nissanusa.com"
    },
    {
+    "label": "2026 Altima pricing announcement",
+    "url": "https://usa.nissannews.com/en-US/releases/2026-nissan-altima-priced-from-27580",
+    "site": "usa.nissannews.com"
+   },
+   {
     "label": "EPA fuel economy",
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Altima.shtml",
     "site": "fueleconomy.gov"
@@ -33423,15 +33446,82 @@ export const VEHICLES = [
   "segment": "full-size SUV",
   "category": "suv",
   "priceFrom": 58840,
-  "priceTo": 79530,
+  "priceTo": 80550,
   "trims": [
    {
     "name": "SV",
-    "msrp": 58840
+    "msrp": 58840,
+    "features": [
+     "3.5L twin-turbo V6, 9-speed automatic",
+     "7- or 8-passenger seating",
+     "8,500-lb tow package",
+     "Safety Shield 360 suite"
+    ]
+   },
+   {
+    "name": "SV 4WD",
+    "msrp": 61840
+   },
+   {
+    "name": "SL",
+    "msrp": 63530,
+    "features": [
+     "Klipsch premium audio",
+     "Heated front seats & steering wheel",
+     "Power third row, power liftgate",
+     "Navigation"
+    ]
+   },
+   {
+    "name": "SL 4WD",
+    "msrp": 66530
+   },
+   {
+    "name": "PRO-4X 4WD",
+    "msrp": 72300,
+    "features": [
+     "All-terrain tires, off-road front bumper",
+     "Electronic locking rear differential",
+     "Air suspension, skid plates",
+     "20-in wheels"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "msrp": 70490,
+    "features": [
+     "Massaging front seats",
+     "Head-up display",
+     "Second-row captain's chairs",
+     "22-in wheels"
+    ]
+   },
+   {
+    "name": "Platinum 4WD",
+    "msrp": 73490
+   },
+   {
+    "name": "Platinum Reserve",
+    "msrp": 77550,
+    "features": [
+     "Quilted semi-aniline leather",
+     "Largest available touchscreen",
+     "Top-of-range Platinum equipment plus Reserve trim finishes"
+    ]
+   },
+   {
+    "name": "Platinum Reserve 4WD",
+    "msrp": 80550
    },
    {
     "name": "NISMO 4WD",
-    "msrp": 79530
+    "msrp": 79530,
+    "features": [
+     "460-hp tuned 3.5L twin-turbo V6 (premium fuel)",
+     "NISMO-exclusive fascia & wheels",
+     "Quilted leather with red accents",
+     "NISMO-exclusive exterior colorway"
+    ]
    }
   ],
   "powertrains": [
@@ -33446,6 +33536,18 @@ export const VEHICLES = [
      "4WD"
     ],
     "mpgCombined": 17,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "3.5L twin-turbo V6 (NISMO tune, premium fuel)",
+    "hp": 460,
+    "transmission": "9-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "4WD"
+    ],
+    "mpgCombined": null,
     "evRangeMi": null
    }
   ],
@@ -33498,7 +33600,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO (new), Platinum Reserve.",
+  "notes": "Third generation (introduced 2025). Six grades for 2026: SV, SL, PRO-4X, Platinum, NISMO, Platinum Reserve — 2026-07-28 verification filled in the SL/Platinum/Platinum Reserve MSRPs that were previously missing (only SV and NISMO had been priced). RWD/SV, RWD/SL and RWD/Platinum figures cross-checked directly against a Nissan newsroom-sourced businesswire release; PRO-4X's 4WD-only MSRP was derived by backing the standard $2,190 destination charge out of a dealer-quoted delivered price ($74,490), a conversion validated against four other trims whose destination-inclusive and MSRP-only figures both appear in independent sources and agree to the dollar.",
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick",
@@ -33515,6 +33617,16 @@ export const VEHICLES = [
     "label": "2026 pricing & trims",
     "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/armada.html",
     "site": "nissanusa.com"
+   },
+   {
+    "label": "Full 2026 trim-by-trim MSRP table (RWD/4WD)",
+    "url": "https://tfltruck.com/2025/08/2026-nissan-armada-pricing-news/",
+    "site": "tfltruck.com"
+   },
+   {
+    "label": "2026 Armada pricing announcement (SV $58,840, NISMO $79,530)",
+    "url": "https://markets.financialcontent.com/woonsocketcall/article/bizwire-2025-8-14-2026-nissan-armada-pricing-starts-at-58840-new-nismo-version-from-79530",
+    "site": "businesswire.com"
    },
    {
     "label": "EPA fuel economy",
@@ -33537,19 +33649,43 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "S King Cab",
-    "msrp": 32150
+    "msrp": 32150,
+    "features": [
+     "3.8L V6, 9-speed automatic",
+     "16-in steel wheels, cloth seats",
+     "8-in touchscreen",
+     "Full-size spare"
+    ]
    },
    {
     "name": "SV",
-    "msrp": 36190
+    "msrp": 36190,
+    "features": [
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Power driver's seat",
+     "Fender 10-speaker audio (available)",
+     "Crew Cab, 5- or 6-ft bed"
+    ]
    },
    {
     "name": "PRO-X",
-    "msrp": 38570
+    "msrp": 38570,
+    "features": [
+     "Off-road-tuned suspension",
+     "Chrome exterior accents (vs. PRO-4X blackout)",
+     "All-terrain tires",
+     "Utili-track bed system (available)"
+    ]
    },
    {
     "name": "PRO-4X",
-    "msrp": 41870
+    "msrp": 41870,
+    "features": [
+     "Bilstein off-road shocks",
+     "Electronic locking rear differential",
+     "Blackout exterior styling, skid plates",
+     "360-degree camera with off-road mode"
+    ]
    }
   ],
   "powertrains": [
@@ -33606,7 +33742,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup.",
+  "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup. 2026-07-28 verification: all four trim MSRPs re-confirmed exact against current sources, no changes; per-trim features added.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -33645,15 +33781,31 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "S",
-    "msrp": 22730
+    "msrp": 22730,
+    "features": [
+     "Zero Gravity sport cloth seats",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Safety Shield 360 suite"
+    ]
    },
    {
     "name": "SV",
-    "msrp": 24470
+    "msrp": 24470,
+    "features": [
+     "Intelligent Key with remote start",
+     "Wireless phone charging",
+     "Dual 12.3-in displays"
+    ]
    },
    {
     "name": "SR",
-    "msrp": 27565
+    "msrp": 27565,
+    "features": [
+     "19-in wheels, LED headlights",
+     "360-degree camera",
+     "Automatic climate control",
+     "Bose Personal Plus audio (Premium Package)"
+    ]
    },
    {
     "name": "SR AWD",
@@ -33713,7 +33865,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD.",
+  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD. 2026-07-28 verification: all four trim MSRPs re-confirmed exact, no changes; per-trim features added.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -33747,39 +33899,40 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact electric SUV",
   "category": "suv",
-  "priceFrom": 25360,
+  "priceFrom": 29990,
   "priceTo": 38990,
   "trims": [
    {
-    "name": "S",
-    "msrp": 25360
-   },
-   {
     "name": "S+",
-    "msrp": 29990
+    "msrp": 29990,
+    "features": [
+     "75 kWh battery, 214-hp single motor",
+     "Cloth seats, 6-way manual driver seat",
+     "NACS fast-charge port"
+    ]
    },
    {
     "name": "SV+",
-    "msrp": 34230
+    "msrp": 34230,
+    "features": [
+     "Power driver's seat, heated front seats",
+     "Synthetic leather seating",
+     "Dual 14.3-in displays with Google built-in",
+     "ProPILOT Assist"
+    ]
    },
    {
     "name": "Platinum+",
-    "msrp": 38990
+    "msrp": 38990,
+    "features": [
+     "Standard head-up display",
+     "Bose Personal Plus 10-speaker audio",
+     "Heated rear seats",
+     "Panoramic glass roof"
+    ]
    }
   ],
   "powertrains": [
-   {
-    "type": "ev",
-    "engine": "Single-motor FWD (52 kWh)",
-    "hp": 174,
-    "transmission": "1-speed direct",
-    "manualAvailable": false,
-    "drive": [
-     "FWD"
-    ],
-    "mpgCombined": null,
-    "evRangeMi": null
-   },
    {
     "type": "ev",
     "engine": "Single-motor FWD (75 kWh)",
@@ -33832,12 +33985,17 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "All-new third generation for 2026, now a crossover-style EV. EPA range: 303 mi (S+), 288 mi (SV+), 259 mi (Platinum+); base S with 52 kWh battery arrives later and is not yet EPA-rated.",
+  "notes": "All-new third generation for 2026, now a crossover-style EV. EPA range: 303 mi (S+), 288 mi (SV+), 259 mi (Platinum+). 2026-07-28 verification: removed the '52 kWh S' entry-trim that had been listed at $25,360 — Nissan announced a base S but never brought it to the US market for MY2026 (it stayed Europe-only); the confirmed US lineup is S+/SV+/Platinum+, all on the 75 kWh pack, starting at $29,990.",
   "sources": [
    {
     "label": "2026 pricing & trims",
     "url": "https://www.nissanusa.com/vehicles/electric-cars/leaf.html",
     "site": "nissanusa.com"
+   },
+   {
+    "label": "2026 Leaf pricing announcement (US lineup confirmed as S+/SV+/Platinum+)",
+    "url": "https://usa.nissannews.com/en-US/releases/more-features-more-range-still-under-30k-all-new-2026-nissan-leaf-priced-from-29990-msrp",
+    "site": "usa.nissannews.com"
    },
    {
     "label": "EPA fuel economy",
@@ -33860,15 +34018,32 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SV",
-    "msrp": 41670
+    "msrp": 41670,
+    "features": [
+     "Prima-Tex leatherette seating",
+     "Heated front seats",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Panoramic sunroof"
+    ]
    },
    {
     "name": "SL",
-    "msrp": 46760
+    "msrp": 46760,
+    "features": [
+     "Perforated Prima-Tex seating",
+     "Heated seats standard",
+     "Bose 10-speaker audio",
+     "64-color ambient lighting"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 49800
+    "msrp": 49800,
+    "features": [
+     "Quilted semi-aniline leather, heated/ventilated/massaging front seats",
+     "ProPILOT Assist 2.1 (available)",
+     "360-degree camera with Invisible Hood View"
+    ]
    }
   ],
   "powertrains": [
@@ -33932,7 +34107,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs.",
+  "notes": "Fourth generation (introduced 2025); AWD standard for 2026. Climate uses haptic touch controls rather than physical knobs. 2026-07-28 verification: all three trim MSRPs re-confirmed exact, no changes; per-trim features added.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -33967,20 +34142,54 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize 3-row SUV",
   "category": "suv",
-  "priceFrom": 39990,
-  "priceTo": 50895,
+  "priceFrom": 38995,
+  "priceTo": 50896,
   "trims": [
    {
     "name": "S",
-    "msrp": 39990
+    "msrp": 38995,
+    "features": [
+     "3.5L V6, 9-speed automatic",
+     "12.3-in touchscreen, wireless CarPlay/Android Auto",
+     "Safety Shield 360 suite",
+     "8-passenger seating"
+    ]
+   },
+   {
+    "name": "SV",
+    "msrp": 41395,
+    "features": [
+     "Remote start, heated front seats",
+     "Adaptive cruise control",
+     "ProPILOT Assist 1.0"
+    ]
+   },
+   {
+    "name": "SL",
+    "msrp": 43995,
+    "features": [
+     "Wireless phone charging",
+     "Digital gauge cluster, navigation",
+     "Bose audio & panoramic moonroof (available)"
+    ]
    },
    {
     "name": "Rock Creek 4WD",
-    "msrp": 46495
+    "msrp": 46495,
+    "features": [
+     "Standard 4WD, off-road-tuned suspension",
+     "18-in beadlock-style wheels",
+     "All-terrain tires"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 50895
+    "msrp": 50896,
+    "features": [
+     "Climate-controlled front seats",
+     "Panoramic moonroof, 13-speaker Bose audio",
+     "20-in wheels, head-up display"
+    ]
    }
   ],
   "powertrains": [
@@ -34053,8 +34262,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Refreshed for 2026 (new front styling, upgraded tech). Trim ladder is S, SV, SL, Rock Creek, Platinum; some sources list base S at $38,995 vs Nissan's announced $39,990 start.",
+  "confidence": "high",
+  "notes": "Refreshed for 2026 (new front styling, upgraded tech). 2026-07-28 verification resolved the earlier S-trim price ambiguity and filled in the previously-missing SV/SL prices: Motor1's full trim table (sourced from Nissan) gives S $38,995, SV $41,395, SL $43,995, Rock Creek 4WD $46,495, Platinum $50,896 — all five now priced and cross-checked against a second independent source.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -34093,6 +34302,11 @@ export const VEHICLES = [
     "site": "nissanusa.com"
    },
    {
+    "label": "Full 5-trim MSRP table (S/SV/SL/Rock Creek/Platinum)",
+    "url": "https://www.motor1.com/news/782414/2026-nissan-pathfinder-pricing-trims-specs/",
+    "site": "motor1.com"
+   },
+   {
     "label": "EPA fuel economy",
     "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Pathfinder.shtml",
     "site": "fueleconomy.gov"
@@ -34108,28 +34322,62 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact SUV",
   "category": "suv",
-  "priceFrom": 30180,
-  "priceTo": 40380,
+  "priceFrom": 29490,
+  "priceTo": 39390,
   "trims": [
    {
     "name": "S",
-    "msrp": 30180
+    "msrp": 29490,
+    "features": [
+     "1.5L VC-Turbo I3, CVT",
+     "Forward collision warning/AEB",
+     "8-in touchscreen"
+    ]
    },
    {
     "name": "SV",
-    "msrp": 31180
+    "msrp": 30490,
+    "features": [
+     "18-in wheels",
+     "Power liftgate",
+     "Adaptive cruise control"
+    ]
    },
    {
-    "name": "Rock Creek AWD",
-    "msrp": 35080
+    "name": "Dark Armor",
+    "msrp": 33340,
+    "features": [
+     "Gloss-black exterior trim (mirrors, grille, pillars, roof rails), black 19-in wheels",
+     "Panoramic moonroof",
+     "Heated front seats & steering wheel",
+     "HD surround-view monitor with moving-object detection"
+    ]
+   },
+   {
+    "name": "Rock Creek",
+    "msrp": 34390,
+    "features": [
+     "Standard AWD",
+     "All-terrain tires, hill descent control"
+    ]
    },
    {
     "name": "SL",
-    "msrp": 36680
+    "msrp": 35990,
+    "features": [
+     "Leather seating",
+     "12.3-in digital cluster",
+     "ProPILOT Assist"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 40380
+    "msrp": 39390,
+    "features": [
+     "Standard AWD",
+     "Bose premium audio",
+     "Semi-aniline leather"
+    ]
    }
   ],
   "powertrains": [
@@ -34202,7 +34450,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "New Dark Armor appearance trim added between SV and SL for 2026. Plug-in hybrid version sold separately as Rogue Plug-in Hybrid.",
+  "notes": "New Dark Armor appearance trim added between SV and Rock Creek for 2026.5. Plug-in hybrid version sold separately as Rogue Plug-in Hybrid. 2026-07-28 verification: the Dark Armor trim and the 2026.5 pricing were already cited in sources below but had never actually been synced into the trim ladder — the old figures (S $30,180 ... Platinum $40,380) were the original August-2025 2026 MY launch pricing; the mid-cycle '2026.5' refresh (confirmed via the press release's own URL slug and independently corroborated by KBB's Dark Armor page) lowered every trim by a flat $690 and added Dark Armor as a 6th grade. AWD adds a flat $1,400 on S/SV/Dark Armor/SL; Rock Creek and Platinum ship AWD-only.",
   "sources": [
    {
     "label": "2026 model overview & trims (official model page)",
@@ -34271,11 +34519,22 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SL",
-    "msrp": 45990
+    "msrp": 45990,
+    "features": [
+     "12.3-in driver display, 9-in touchscreen",
+     "Wireless Apple CarPlay",
+     "Leatherette seating, heated front seats"
+    ]
    },
    {
     "name": "Platinum",
-    "msrp": 49990
+    "msrp": 49990,
+    "features": [
+     "10-in head-up display",
+     "Power panoramic moonroof",
+     "Heated 2nd row, leather seating",
+     "LED accent lighting"
+    ]
    }
   ],
   "powertrains": [
@@ -34330,12 +34589,17 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "New nameplate for 2026, built on the Mitsubishi Outlander PHEV platform with standard AWD and a small third row (7 seats). 64 MPGe combined, 26 mpg on gas, 420-mile total range.",
+  "notes": "New nameplate for 2026, built on the Mitsubishi Outlander PHEV platform with standard AWD and a small third row (7 seats). 64 MPGe combined, 26 mpg on gas, 420-mile total range. 2026-07-28 verification: both trim MSRPs re-confirmed exact; the Outlander-PHEV platform-sharing claim independently corroborated by multiple outlets (The Drive, Forbes, Cars.com, CarBuzz); per-trim features added.",
   "sources": [
    {
     "label": "2026 pricing & trims",
     "url": "https://www.nissanusa.com/vehicles/crossovers-suvs/rogue-plug-in-hybrid.html",
     "site": "nissanusa.com"
+   },
+   {
+    "label": "2026 Rogue Plug-in Hybrid pricing announcement",
+    "url": "https://usa.nissannews.com/en-US/releases/2026-nissan-rogue-plug-in-hybrid-pricing-starts-at-45990",
+    "site": "usa.nissannews.com"
    }
   ]
  },
@@ -34348,24 +34612,45 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "compact sedan",
   "category": "car",
-  "priceFrom": 22400,
+  "priceFrom": 22600,
   "priceTo": 27990,
   "trims": [
    {
     "name": "S",
-    "msrp": 22400
+    "msrp": 22600,
+    "features": [
+     "Cloth seats, manual driver seat",
+     "7-in display, wired CarPlay/Android Auto",
+     "Safety Shield 360 suite"
+    ]
    },
    {
     "name": "SV",
-    "msrp": 23170
+    "msrp": 23370,
+    "features": [
+     "Dual 12.3-in displays",
+     "Wireless CarPlay/Android Auto",
+     "Dual-zone climate control, heated seats"
+    ]
    },
    {
     "name": "SR",
-    "msrp": 25000
+    "msrp": 25000,
+    "features": [
+     "Sport cloth with orange stitching",
+     "Leather-wrapped wheel, paddle shifters",
+     "Sport-tuned suspension",
+     "ProPILOT Assist (Premium Package)"
+    ]
    },
    {
     "name": "SL",
-    "msrp": 27990
+    "msrp": 27990,
+    "features": [
+     "TailorFit quilted synthetic leather",
+     "Standard ProPILOT Assist",
+     "Standard Bose audio, power sunroof, 17-in wheels"
+    ]
    }
   ],
   "powertrains": [
@@ -34430,7 +34715,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL.",
+  "notes": "All-new ninth generation for 2026. Climate is controlled via capacitive-touch HVAC panel (not physical knobs); EPA 30/40 mpg on S/SV, 33 combined on SR/SL. 2026-07-28 verification: S and SV were each $200 low ($22,400/$23,170 vs. confirmed $22,600/$23,370, per the Nissan newsroom release's own title); SR and SL confirmed exact. Per-trim features added.",
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick+",
@@ -34441,7 +34726,19 @@ export const VEHICLES = [
      "site": "iihs.org"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Sentra pricing announcement (S $22,600)",
+    "url": "https://usa.nissannews.com/en-US/releases/all-new-2026-nissan-sentra-offers-incredible-value-with-pricing-from-22600",
+    "site": "usa.nissannews.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Nissan_Sentra.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "nissan-z",
@@ -34457,19 +34754,41 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Sport",
-    "msrp": 42970
+    "msrp": 42970,
+    "features": [
+     "400-hp 3.0L twin-turbo V6",
+     "6-speed manual standard (9-speed auto no-charge)",
+     "18-in wheels"
+    ]
    },
    {
     "name": "Performance",
-    "msrp": 52970
+    "msrp": 52970,
+    "features": [
+     "19-in RAYS forged wheels",
+     "Mechanical limited-slip differential",
+     "14-in Akebono brakes",
+     "Heated leather/suede seats, 8-speaker Bose audio"
+    ]
    },
    {
     "name": "Heritage Edition",
-    "msrp": 55910
+    "msrp": 55910,
+    "features": [
+     "Performance-grade special edition, limited to 500 units",
+     "Midnight Purple paint, bronze RAYS wheels",
+     "Carbon-fiber spoiler with retro 300ZX-inspired badge"
+    ]
    },
    {
     "name": "NISMO",
-    "msrp": 65750
+    "msrp": 65750,
+    "features": [
+     "420-hp NISMO-tuned V6, automatic only",
+     "NISMO-tuned suspension",
+     "Recaro seats in Alcantara with red accents",
+     "Dunlop SP Sport Maxx GT600 tires"
+    ]
    }
   ],
   "powertrains": [
@@ -34545,7 +34864,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Heritage Edition new for 2026, celebrating the Z's heritage. NISMO is automatic-only. GT-R was discontinued after 2025 (R35 production ended).",
+  "notes": "Heritage Edition new for 2026, celebrating the Z's heritage. NISMO is automatic-only. GT-R was discontinued after 2025 (R35 production ended). 2026-07-28 verification: all four MSRPs re-confirmed exact, no changes; per-trim features added. Heritage Edition is technically a Performance-grade special-edition package (+$2,940, limited to 500 units) rather than a fully standalone body/chassis trim, but it carries its own MSRP and is sold as a distinct configuration, so it stays listed as a trim here.",
   "sources": [
    {
     "label": "2026 Z brochure (PDF)",
