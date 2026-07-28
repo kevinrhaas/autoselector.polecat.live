@@ -97,13 +97,44 @@ export function dataCompleteness(v){
   return { filled, total:checks.length, level, missing, title };
 }
 
-// The card chip: a confidence-colored completeness meter + fraction.
+// The card chip: a confidence-colored completeness meter + fraction, with a
+// small info glyph. Tapping it opens the breakdown so it isn't a mystery.
 export function dataChip(v){
   const c = dataCompleteness(v);
   const bars = el('span',{class:'dc-bars', 'aria-hidden':'true'});
   for(let i=0;i<c.total;i++) bars.append(el('i',{class:'dc-seg'+(i<c.filled?' on':'')}));
-  return el('span',{class:`vt-data lvl-${c.level}`, title:c.title,
-    'aria-label':c.title},[ bars, el('span',{class:'dc-frac', text:`${c.filled}/${c.total}`}) ]);
+  return el('button',{class:`vt-data lvl-${c.level}`, type:'button', title:c.title,
+    'aria-label':`Data completeness ${c.filled} of ${c.total} — tap for details`,
+    onclick:(e)=>{ e.stopPropagation(); explainDataChip(v); }},[
+    bars, el('span',{class:'dc-frac', text:`${c.filled}/${c.total}`}),
+    el('span',{class:'dc-i', html:icon('info',11), 'aria-hidden':'true'}),
+  ]);
+}
+
+// Breakdown modal for the completeness chip — spells out what each segment
+// means and which detail sets are present vs still to add.
+export function explainDataChip(v){
+  const c = dataCompleteness(v);
+  const CHECKS = [
+    ['Sources',       (v.sources||[]).length>0,                                   'Cited manufacturer / EPA / price-guide links'],
+    ['Full specs',    !!(v.dims?.lengthIn && v.dims?.widthIn && v.dims?.heightIn), 'Length, width and height on record'],
+    ['Colors',        (v.colors?.exterior||[]).length>0,                          'Real paint (and interior) swatches'],
+    ['Photos',        (v.image?.gallery||[]).length>0 || !!v.image?.remote,       'At least one verified photo'],
+    ['Ratings',       !!(v.ratings?.safety || v.ratings?.owner || v.ratings?.expert), 'NHTSA / IIHS / owner / expert scores'],
+    ['Trim features', (v.trims||[]).some(t=>(t.features||[]).length>0),           'Standout equipment per trim'],
+  ];
+  const body = [];
+  body.push(el('p',{class:'ex-lead', html:
+    `The meter on each card shows how fully researched a vehicle’s data is — <b>${c.filled} of ${c.total}</b> detail sets here. `+
+    `Its color is our editorial confidence in the core specs — <b>${escapeHtml(c.level)}</b>. The list fills in as the per-brand verification sweeps roll on.`}));
+  const list = el('ul',{class:'dc-list'});
+  CHECKS.forEach(([label,ok,hint])=> list.append(el('li',{class:'dc-litem'+(ok?' ok':'')},[
+    el('span',{class:'dc-mark', html:icon(ok?'check':'plus',13)}),
+    el('span',{class:'dc-lt'},[ el('b',{text:label}), el('span',{class:'muted tiny', text:hint}) ]),
+    el('span',{class:'dc-state muted tiny', text:ok?'present':'to add'}),
+  ])));
+  body.push(list);
+  modal({ title:`${v.year} ${v.make} ${v.model} — data completeness`, icon:icon('info',18), body });
 }
 
 export function vtile(v, ctx={}){
@@ -119,7 +150,7 @@ export function vtile(v, ctx={}){
   const fav = el('button',{class:'vt-fav'+(Store.isFav(v.id)?' on':''), title:'Favorite', 'aria-label':'Toggle favorite',
     html:icon('heart',17), onclick:(e)=>{ e.stopPropagation(); Store.toggleFav(v.id); fav.classList.toggle('on', Store.isFav(v.id)); }});
   img.append(fav);
-  img.append(dataChip(v));
+  if(Store.settings().dataMeter!==false) img.append(dataChip(v));
 
   const body = el('div',{class:'vt-body'});
   body.append(el('div',{class:'vt-make', html:`${logoImg(v.make)}<span>${escapeHtml(v.make)}</span>`}));

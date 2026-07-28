@@ -151,19 +151,31 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  55 models done (2026-07-28, +6, js/changelog.js v54: buick-enclave,
-  buick-encore-gx, buick-envision, buick-envista, hyundai-santa-cruz,
-  nissan-murano — all interior shots, found via the Commons search API,
-  license/author pulled from Commons' own file metadata, every URL
-  live-checked with curl before shipping). Wikimedia Commons, free licenses
-  only, current generation only; interior/cabin shots are the priority.
-  Record each in assets/credits.json. The detail-page thumbnail strip already
-  renders them. **Checked but skipped this run (no current-gen Commons
-  interior shot exists yet)**: kia-k5 and volvo-xc60 both had a MY25/26
-  interior refresh Commons hasn't caught up to (only pre-refresh shots
-  found); mazda-cx-50, volkswagen-atlas and toyota-4runner have no interior
-  shots on Commons at all for their current generation yet — re-check in
-  future runs as Commons contributors upload more 2026MY photos.
+  69 models done so far (2026-07-28, +8, js/changelog.js v56: nissan-sentra,
+  hyundai-sonata, chevrolet-blazer, gmc-acadia, cadillac-escalade-iq,
+  genesis-gv70, kia-carnival, jeep-grand-wagoneer — all interior shots, found
+  via the Commons search API, license/author pulled from Commons' own file
+  metadata, every URL live-checked with curl before shipping; the GV70 shot
+  is specifically the post-refresh "PE" cabin with the 27-inch OLED display
+  that ships for 2026, verified via the file's Seoul Mobility Show 2025
+  upload date rather than assumed). Wikimedia Commons, free licenses only,
+  current generation only; interior/cabin shots are the priority. Record each
+  in assets/credits.json. The detail-page thumbnail strip already renders
+  them. **Checked but skipped this run (no confirmed current-gen Commons
+  interior shot)**: ford-escape and chevrolet-trax only have pre-redesign
+  interior shots (2013 and 2020 respectively, both since fully redesigned);
+  kia-seltos likewise only has 1st-gen (pre-2024) interior shots; toyota-
+  4runner has no interior shots on Commons at all yet; honda-ridgeline,
+  toyota-corolla-hatchback and subaru-impreza had candidate interior shots
+  but the generation/trim couldn't be confirmed as the current US-spec car
+  with confidence, so left out rather than guess. Previous batch (2026-07-28,
+  +6, js/changelog.js v54): buick-enclave, buick-encore-gx, buick-envision,
+  buick-envista, hyundai-santa-cruz, nissan-murano. Earlier skip history:
+  kia-k5 and volvo-xc60 both had a MY25/26 interior refresh Commons hasn't
+  caught up to (only pre-refresh shots found); mazda-cx-50 and
+  volkswagen-atlas have no interior shots on Commons at all for their
+  current generation yet — re-check in future runs as Commons contributors
+  upload more 2026MY photos.
 - [ ] **Sources for every stat** — every record gets a `sources` array of
   precise, verified citations (manufacturer 2026 model page or pressroom,
   fueleconomy.gov for EPA numbers, one major price guide). 116 of 325 models
