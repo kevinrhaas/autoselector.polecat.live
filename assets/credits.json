@@ -34,10 +34,28 @@
   "license": "CC BY 2.0",
   "author": "Charles from Port Chester, New York"
  },
+ "gallery/bmw-x1/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:BMW_X1_U11_Interior1.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Pixelatedfacealex",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/bmw-x3/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:BMW_X3_G45_xDrive30e_PHEV_M_Sport_Package_Dune_Grey_Metallic_03.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/bmw-x5/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:BMW_X5_G05_LCI_xDrive50e_PHEV_M_Sport_Package_Brooklyn_Grey_Metallic_03.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/bmw-x7/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_BMW_X7_M60i_Interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Pixelatedfacealex",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/buick-enclave/1 (interior)": {
@@ -68,6 +86,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:2025_Cadillac_Escalade_IQ_Interior.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Wlb5V",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/cadillac-lyriq/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Cadillac_Lyriq_L233_Oxford_Stone_(1).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Damian B Oh",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/chevrolet-blazer/1 (interior)": {
@@ -116,6 +140,12 @@
   "source": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Chevrolet_Tahoe_5.3_High_Country_V8_interior.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/chevrolet-trailblazer/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_TrailBlazer_interior.jpg",
+  "license": "CC BY 4.0",
+  "author": "Deathpallie325",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/chevrolet-traverse/1 (exterior)": {
