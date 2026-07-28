@@ -324,7 +324,24 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   to every model for the first time; CT4/XT5 stay confidence medium/high
   respectively pending a live-configurator spot-check (cadillac.com and
   several dealer/pricing sites blocked automated fetches with 403).
-- [ ] Hyundai — [ ] Kia — [ ] Genesis
+- [x] Hyundai (2026-07-28 — all 16 models re-verified, see js/changelog.js v58:
+  caught two real structural changes — the standard Ioniq 6 is discontinued in
+  the US for 2026 (only the Ioniq 6 N carries the nameplate forward) and the
+  Kona Electric is skipping the 2026 model year entirely (production paused,
+  returns as a 2027 model) — both independently re-confirmed via web search
+  rather than taken solely from the research pass, and both now show honest
+  null pricing/empty trims instead of stale 2025 figures. The Ioniq 5 N picked
+  up its first real 2026 US price ($59,900, a $6,300 cut); the Ioniq 6 N
+  remains genuinely unpriced in the US despite being the surviving nameplate.
+  Expanded several trim ladders that only tracked base/top pricing (Ioniq 5,
+  Ioniq 9, Kona, Santa Cruz, Palisade, Santa Fe, Tucson) to their full
+  real-world lineups and corrected a mislabeled Ioniq 5 top trim. Per-trim
+  features, sources and color swatches added to every model for the first
+  time; hyundaiusa.com/hyundainews.com are JS-rendered and mostly returned
+  nav-only content to automated fetches, so most citations lean on
+  hyundainews.com press releases (which did resolve), PRNewswire, cars.com
+  and dealer trim-comparison pages instead.)
+- [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
