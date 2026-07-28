@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 30;
+export const DATA_VERSION = 31;
 
 export const VEHICLES = [
  {
@@ -5140,20 +5140,40 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize 3-row premium SUV",
   "category": "suv",
-  "priceFrom": 46400,
-  "priceTo": 60000,
+  "priceFrom": 46100,
+  "priceTo": 59600,
   "trims": [
    {
     "name": "Preferred",
-    "msrp": 46400
+    "msrp": 46100,
+    "features": [
+     "20-inch wheels",
+     "Second-row captain's chairs, three-row seating",
+     "Wireless phone charging",
+     "Premium audio system",
+     "AutoSense power liftgate",
+     "HD Surround Vision"
+    ]
    },
    {
     "name": "Sport Touring",
-    "msrp": 49900
+    "msrp": 49700,
+    "features": [
+     "High Gloss Black exterior accents (grille, mirror caps, wheels, roof rails)",
+     "Digital rearview mirror",
+     "Head-up display"
+    ]
    },
    {
     "name": "Avenir",
-    "msrp": 60000
+    "msrp": 59600,
+    "features": [
+     "22-inch alloy wheels",
+     "Panoramic power sunroof",
+     "16-speaker Bose sound system",
+     "Adaptive real-time damping suspension",
+     "Ventilated front seats, heated second-row outboard seats"
+    ]
    }
   ],
   "powertrains": [
@@ -5218,7 +5238,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices exclude $1,995 destination.",
+  "notes": "All-new generation for 2025; turbo-four replaced the V6. Prices verified 2026-07-28 against current post-Dec-2025-increase MSRPs (Preferred/Sport Touring +$300, Avenir +$500 that round); exclude the $1,995 destination freight charge.",
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick",
@@ -5229,7 +5249,19 @@ export const VEHICLES = [
      "site": "iihs.org"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "Here Is 2026 Buick Enclave Pricing With Options And Packages",
+    "url": "https://gmauthority.com/blog/2025/08/here-is-2026-buick-enclave-pricing-with-options-and-packages/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Buick Enclave Trims Comparison",
+    "url": "https://www.edmunds.com/buick/enclave/2026/trims/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "buick-encore-gx",
@@ -5240,20 +5272,39 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact SUV",
   "category": "suv",
-  "priceFrom": 24800,
-  "priceTo": 31400,
+  "priceFrom": 26100,
+  "priceTo": 31600,
   "trims": [
    {
     "name": "Preferred",
-    "msrp": 24800
+    "msrp": 26100,
+    "features": [
+     "1.2L turbo I3 standard (1.3L optional)",
+     "11-inch touchscreen, wireless CarPlay/Android Auto",
+     "Forward collision warning, automatic emergency braking",
+     "Lane departure warning, blind spot monitors, rear cross-traffic alert"
+    ]
    },
    {
     "name": "Sport Touring",
-    "msrp": 26600
+    "msrp": 27300,
+    "features": [
+     "Standard 1.3L turbo I3 (155 hp)",
+     "Sport-inspired exterior with Gloss Black accents",
+     "18-inch alloy wheels",
+     "Advanced Technology Package available (adaptive cruise, 360-degree camera, rear parking sensors)"
+    ]
    },
    {
     "name": "Avenir",
-    "msrp": 31400
+    "msrp": 31600,
+    "features": [
+     "Standard 1.3L turbo I3 (155 hp)",
+     "Perforated leather seating",
+     "Dual-zone automatic climate control",
+     "Avenir Technology Package (adaptive cruise, 360-degree camera, rear parking sensors)",
+     "Bose premium audio"
+    ]
    }
   ],
   "powertrains": [
@@ -5329,8 +5380,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "AWD requires the 1.3L engine. Prices approximate, excluding ~$1,395 destination.",
+  "confidence": "high",
+  "notes": "AWD requires the 1.3L engine. Prices verified 2026-07-28 against the confirmed second 2026 price increase (GM added $200 to MSRP and $400 to destination); exclude the current $1,795 destination freight charge.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -5341,7 +5392,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Buick Encore GX Gets Second Price Increase",
+    "url": "https://gmauthority.com/blog/2025/09/2026-buick-encore-gx-gets-second-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "Which Trim Level of the 2026 Buick Encore GX Should You Buy?",
+    "url": "https://www.cars.com/articles/which-trim-level-of-the-2026-buick-encore-gx-should-you-buy-521046/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "buick-envision",
@@ -5352,20 +5415,41 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact premium SUV",
   "category": "suv",
-  "priceFrom": 41400,
-  "priceTo": 47900,
+  "priceFrom": 40900,
+  "priceTo": 50600,
   "trims": [
    {
     "name": "Preferred",
-    "msrp": 41400
+    "msrp": 40900,
+    "features": [
+     "18-inch machined alloy wheels (Technical Gray)",
+     "30-inch Ultrawide diagonal display, Google built-in",
+     "QuietTuning with Active Noise Cancellation",
+     "Perforated leatherette seating",
+     "Wireless phone charging, Bose 9-speaker audio",
+     "Head-Up Display"
+    ]
    },
    {
     "name": "Sport Touring",
-    "msrp": 43700
+    "msrp": 43400,
+    "features": [
+     "20-inch Carbon Flash Metallic alloy wheels",
+     "Gloss Black exterior accents, unique mesh grille",
+     "Perforated leather-appointed seats with leatherette inserts",
+     "Leather-wrapped flat-bottom steering wheel, alloy sport pedals"
+    ]
    },
    {
     "name": "Avenir",
-    "msrp": 47900
+    "msrp": 50600,
+    "features": [
+     "Ventilated front seats, massaging driver's seat",
+     "Heated rear seats",
+     "Video-feed rearview mirror",
+     "Adaptive suspension",
+     "Front cornering lights"
+    ]
    }
   ],
   "powertrains": [
@@ -5429,8 +5513,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "Base Preferred price verified ($42,895 incl. destination); mid/top trims approximate. Prices exclude ~$1,495 destination.",
+  "confidence": "high",
+  "notes": "All trims verified 2026-07-28 ($42,895 / $45,396 / $52,595 including destination). Prices exclude the $1,995 destination freight charge (up from $1,895 as of Dec 2025).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -5441,7 +5525,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "Here Is 2026 Buick Envision Pricing With Options, Packages",
+    "url": "https://gmauthority.com/blog/2025/10/here-is-2026-buick-envision-pricing-with-options-and-packages/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Buick Envision Trims Comparison",
+    "url": "https://www.edmunds.com/buick/envision/2026/trims/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "buick-envista",
@@ -5452,20 +5548,40 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact crossover coupe",
   "category": "suv",
-  "priceFrom": 24600,
-  "priceTo": 28600,
+  "priceFrom": 24700,
+  "priceTo": 29500,
   "trims": [
    {
     "name": "Preferred",
-    "msrp": 24600
+    "msrp": 24700,
+    "features": [
+     "Cloth/leatherette seating",
+     "17-inch aluminum wheels",
+     "LED signature daytime running lamps",
+     "Buick Driver Confidence (forward collision alert, automatic emergency braking, lane keep assist)",
+     "11-inch touchscreen, wireless CarPlay/Android Auto"
+    ]
    },
    {
     "name": "Sport Touring",
-    "msrp": 25300
+    "msrp": 26200,
+    "features": [
+     "18-inch gloss black wheels",
+     "Black roof rails, Sport Touring badging",
+     "Leatherette seating",
+     "Remote vehicle start"
+    ]
    },
    {
     "name": "Avenir",
-    "msrp": 28600
+    "msrp": 29500,
+    "features": [
+     "Perforated leather-appointed seating",
+     "Heated front seats and steering wheel",
+     "19-inch aluminum wheels",
+     "Enhanced Bose premium audio",
+     "Standard power liftgate"
+    ]
    }
   ],
   "powertrains": [
@@ -5528,8 +5644,20 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "FWD only. Sleek fastback-styled crossover on the Trax platform. Prices approximate, excluding ~$1,395 destination."
+  "confidence": "high",
+  "notes": "FWD only. Sleek fastback-styled crossover on the Trax platform. Prices verified 2026-07-28 against the confirmed Feb 2026 increase (base MSRP +$100/trim, destination +$400); exclude the current $1,795 destination freight charge (up from $1,395). No safety rating added: NHTSA has not published a 2026-specific record (only a 2025 rating exists, and carryover isn't confirmed) and IIHS gave the 2026 Envista a Poor in the moderate overlap front test plus its front crash prevention system, which rules out a Top Safety Pick — checked both, neither qualifies to cite.",
+  "sources": [
+   {
+    "label": "2026 Buick Envista Gets Price Increase",
+    "url": "https://gmauthority.com/blog/2026/01/2026-buick-envista-gets-price-increase/",
+    "site": "gmauthority.com"
+   },
+   {
+    "label": "2026 Buick Envista Trims Comparison",
+    "url": "https://www.edmunds.com/buick/envista/2026/trims/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "cadillac-celestiq",
