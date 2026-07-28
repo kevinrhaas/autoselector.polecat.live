@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 39;
+export const DATA_VERSION = 40;
 
 export const VEHICLES = [
  {
@@ -36053,20 +36053,108 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "full-size pickup",
   "category": "truck",
-  "priceFrom": 42025,
-  "priceTo": 88800,
+  "priceFrom": 42870,
+  "priceTo": 89670,
   "trims": [
    {
     "name": "Tradesman",
-    "msrp": 42025
+    "msrp": 42870,
+    "features": [
+     "3.6L V6 eTorque standard",
+     "Vinyl flooring",
+     "8.4-in Uconnect touchscreen",
+     "17-in steel wheels"
+    ]
+   },
+   {
+    "name": "Express",
+    "msrp": 46295,
+    "features": [
+     "Blacked-out badging/grille",
+     "20-in wheels available",
+     "Fog lamps",
+     "Value-focused appearance package"
+    ]
+   },
+   {
+    "name": "Big Horn / Lone Star",
+    "msrp": 48125,
+    "features": [
+     "Chrome exterior accents",
+     "Cloth seating",
+     "12-in Uconnect touchscreen available",
+     "Best-selling volume trim"
+    ]
+   },
+   {
+    "name": "Warlock",
+    "msrp": 55010,
+    "features": [
+     "4x4 standard",
+     "Off-road-styled appearance package",
+     "Tow hooks",
+     "Unique wheels/decals"
+    ]
+   },
+   {
+    "name": "Laramie",
+    "msrp": 62625,
+    "features": [
+     "3.0L twin-turbo Hurricane I6 (420 hp) standard",
+     "Leather seating",
+     "Dual-pane panoramic sunroof available",
+     "12-in touchscreen"
+    ]
+   },
+   {
+    "name": "Rebel",
+    "msrp": 66790,
+    "features": [
+     "Off-road-tuned suspension",
+     "33-in off-road tires",
+     "Underbody skid plates",
+     "Rebel-specific interior trim"
+    ]
    },
    {
     "name": "RHO",
-    "msrp": 71200
+    "msrp": 72590,
+    "features": [
+     "3.0L Hurricane high-output I6 (540 hp)",
+     "Desert-tuned Bilstein suspension",
+     "Reinforced high-speed off-road chassis",
+     "RHO-specific gauges/appearance"
+    ]
+   },
+   {
+    "name": "Limited",
+    "msrp": 77750,
+    "features": [
+     "Four-corner air suspension standard",
+     "Massaging front seats",
+     "14.4-in Uconnect touchscreen",
+     "Digital rearview mirror"
+    ]
+   },
+   {
+    "name": "Limited Longhorn",
+    "msrp": 79045,
+    "features": [
+     "Western-inspired leather/wood interior theme",
+     "Unique badging and wheels",
+     "Air suspension standard",
+     "Premium Klipsch audio"
+    ]
    },
    {
     "name": "Tungsten",
-    "msrp": 88800
+    "msrp": 89670,
+    "features": [
+     "24-way massaging front seats",
+     "14.5-in touchscreen + 10.25-in passenger screen",
+     "Head-up display",
+     "Digital rearview mirror"
+    ]
    }
   ],
   "powertrains": [
@@ -36179,12 +36267,17 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "5.7L HEMI V8 returns for 2026 alongside the Hurricane sixes; 540-hp RHO off-road flagship included as a trim here. Ramcharger range-extended EV pickup delayed (not included). Dims are crew cab 5'7\" bed. Prices exclude $2,595 destination.",
+  "notes": "5.7L HEMI V8 returns for 2026 alongside the Hurricane sixes; 540-hp RHO off-road flagship included as a trim here. Ramcharger range-extended EV pickup delayed (not included). Dims are crew cab 5'7\" bed. Full 10-trim ladder (Tradesman through Tungsten) re-verified 2026-07-28: base MSRPs (excl. destination) from CarsDirect's dedicated trim-by-trim 2026-vs-2025 pricing comparison, plus the confirmed $2,595 destination charge; Express/Warlock/Limited Longhorn (not covered by that CarsDirect piece) sourced from Cars.com's 2026 pricing breakdown instead, which independently confirmed the same $2,595 destination figure. ramtrucks.com/edmunds.com/moparinsiders.com all blocked or partially blocked automated fetches, so cross-checks relied on CarsDirect, Cars.com and TrimAtlas; all three landed within a few hundred dollars per trim and prices stayed monotonically increasing across the ladder, which is why confidence stays high despite the site-blocking noise. IIHS was checked directly on iihs.org (2026 Ram 1500 Crew Cab): Good small overlap front and side, Poor moderate overlap front, Marginal front crash prevention (vehicle-to-vehicle) — no Top Safety Pick, so no `iihs` field added (checked, not guessed).",
   "sources": [
    {
     "label": "2026 pricing & trims",
     "url": "https://www.ramtrucks.com/ram-1500.html",
     "site": "ramtrucks.com"
+   },
+   {
+    "label": "2026 trim-by-trim pricing (vs 2025)",
+    "url": "https://www.carsdirect.com/automotive-news/2026-ram-1500-avoids-big-price-hikes",
+    "site": "carsdirect.com"
    },
    {
     "label": "Towing",
@@ -36237,20 +36330,85 @@ export const VEHICLES = [
   "bodyStyle": "pickup",
   "segment": "heavy-duty pickup",
   "category": "truck",
-  "priceFrom": 46485,
-  "priceTo": 73280,
+  "priceFrom": 46855,
+  "priceTo": 76345,
   "trims": [
    {
     "name": "Tradesman",
-    "msrp": 46485
+    "msrp": 46855,
+    "features": [
+     "Vinyl flooring",
+     "8.4-in Uconnect touchscreen",
+     "Work-focused base equipment"
+    ]
+   },
+   {
+    "name": "Big Horn / Lone Star",
+    "msrp": 50605,
+    "features": [
+     "Chrome exterior accents",
+     "Cloth seating",
+     "Upgraded infotainment options"
+    ]
+   },
+   {
+    "name": "Black Express",
+    "msrp": 53270,
+    "features": [
+     "Blacked-out badging/wheels",
+     "New for 2026"
+    ]
+   },
+   {
+    "name": "Warlock",
+    "msrp": 56400,
+    "features": [
+     "Off-road-styled appearance package",
+     "New for 2026"
+    ]
+   },
+   {
+    "name": "Laramie",
+    "msrp": 62310,
+    "features": [
+     "Leather seating",
+     "12-in Uconnect touchscreen",
+     "Daily-driver comfort focus"
+    ]
+   },
+   {
+    "name": "Rebel (2500)",
+    "msrp": 69755,
+    "features": [
+     "Off-road-tuned suspension",
+     "Underbody skid plates"
+    ]
    },
    {
     "name": "Power Wagon (2500)",
-    "msrp": 71920
+    "msrp": 73250,
+    "features": [
+     "6.4L HEMI V8 exclusive",
+     "Front locking differential + winch",
+     "Off-road suspension articulation"
+    ]
+   },
+   {
+    "name": "Limited Longhorn",
+    "msrp": 74320,
+    "features": [
+     "Western-inspired leather/wood interior theme",
+     "Air suspension (2500)"
+    ]
    },
    {
     "name": "Limited",
-    "msrp": 73280
+    "msrp": 74610,
+    "features": [
+     "14.4-in Uconnect touchscreen",
+     "Premium leather",
+     "Top 3500 Limited reaches $76,345"
+    ]
    }
   ],
   "powertrains": [
@@ -36321,8 +36479,20 @@ export const VEHICLES = [
    "remote": "https://upload.wikimedia.org/wikipedia/commons/4/45/RAM_3500_and_2019_2500_RAM_Power_Wagon.jpg",
    "credit": "Wikimedia Commons"
   },
-  "confidence": "medium",
-  "notes": "Single record covers Ram 2500 and 3500. Max tow rating (36,610 lb) is 3500 dually with high-output Cummins; 2500 tows up to ~20,000 lb. Heavy-duty trucks are exempt from EPA mpg labeling. Base price derived from advertised price including $2,595 destination; regular, crew, and mega cabs offered."
+  "confidence": "high",
+  "notes": "Single record covers Ram 2500 and 3500 (they share nearly identical trim names; the 3500 adds dually/Mega Cab configurations and its own Limited tops out at $76,345, used as this record's priceTo). Max tow rating (36,610 lb) is 3500 dually with high-output Cummins; 2500 tows up to ~20,000 lb. Heavy-duty trucks are exempt from EPA mpg labeling and were checked on both NHTSA and IIHS this run — neither publishes a 2026 crash-test record for the 2500/3500 (both are GVWR-exempt from testing), so no `ratings` block is added rather than guessed. Full 9-trim ladder re-verified 2026-07-28 via TrimAtlas's 2026 Ram 2500 pricing page (destination-inclusive, single coherent source rather than mixing per-trim figures across sites); Black Express and Warlock are genuinely new-for-2026 trims. ramtrucks.com blocked automated fetches (403) so TrimAtlas was the primary cross-check against several dealer-blog summaries that agreed within a few hundred dollars. Base price derived from advertised price including $2,595 destination; regular, crew, and mega cabs offered.",
+  "sources": [
+   {
+    "label": "2026 Ram 2500 trim-by-trim pricing",
+    "url": "https://trimatlas.com/compare/ram/2500/2026/",
+    "site": "trimatlas.com"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.ramtrucks.com/ram-2500.html",
+    "site": "ramtrucks.com"
+   }
+  ]
  },
  {
   "id": "ram-promaster",
@@ -36333,16 +36503,35 @@ export const VEHICLES = [
   "bodyStyle": "van",
   "segment": "full-size cargo van",
   "category": "van",
-  "priceFrom": 43330,
-  "priceTo": 57630,
+  "priceFrom": 45870,
+  "priceTo": 62680,
   "trims": [
    {
     "name": "1500 Tradesman Low Roof",
-    "msrp": 43330
+    "msrp": 45870,
+    "features": [
+     "3.6L V6 (276 hp) / 9-speed automatic",
+     "118-in wheelbase, 66-in low roof",
+     "10.1-in Uconnect 5 touchscreen"
+    ]
    },
    {
-    "name": "3500 SLT+ Super High Roof Extended",
-    "msrp": 57630
+    "name": "2500 SLT+ Low Roof",
+    "msrp": 57160,
+    "features": [
+     "Upgraded cloth/comfort seating",
+     "Additional cargo tie-downs",
+     "Higher payload rating vs 1500"
+    ]
+   },
+   {
+    "name": "3500 SLT+ High Roof",
+    "msrp": 62680,
+    "features": [
+     "86-in super high roof (stand-up cargo area)",
+     "Extended-length body option",
+     "Top-of-lineup SLT+ trim"
+    ]
    }
   ],
   "powertrains": [
@@ -36398,7 +36587,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "medium",
-  "notes": "Front-wheel-drive commercial van in 1500/2500/3500 series with many body configurations; dims shown are 136-inch-wheelbase low roof. Prices derived from destination-inclusive listings. ProMaster EV no longer offered for retail 2026. Not EPA mpg rated (commercial class)."
+  "notes": "Front-wheel-drive commercial van in 1500/2500/3500 series with many body configurations; dims shown are 136-inch-wheelbase low roof. Prices derived from destination-inclusive listings. ProMaster EV no longer offered for retail 2026. Not EPA mpg rated (commercial class). Trim ladder re-verified 2026-07-28: now 3 trims (Tradesman, SLT, SLT+) spanning 14 published wheelbase/roof/payload-class combinations at $45,870-$62,680, sourced from TrimAtlas's single coherent 2026 pricing table (avoids mixing per-configuration figures across sites, which produced inconsistent results for other Ram records this run). ramtrucks.com and kbb.com both blocked automated fetches (403s), so TrimAtlas was the only fully cross-checkable source found; stays confidence medium pending a second independent source.",
+  "sources": [
+   {
+    "label": "2026 Ram ProMaster trim-by-trim pricing",
+    "url": "https://trimatlas.com/compare/ram/promaster-cargo-van/2026/",
+    "site": "trimatlas.com"
+   },
+   {
+    "label": "2026 pricing & trims",
+    "url": "https://www.ramtrucks.com/ram-promaster.html",
+    "site": "ramtrucks.com"
+   }
+  ]
  },
  {
   "id": "rivian-r1s",
