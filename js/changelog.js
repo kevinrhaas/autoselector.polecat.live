@@ -21,6 +21,18 @@
 
 export const CHANGELOG = [
   {
+    v: 63,
+    title: 'Nissan lineup re-verified — pricing fixes, new trim, sources',
+    kind: 'data',
+    ts: '2026-07-28T14:01:51.453Z',
+    items: [
+      'All 11 current Nissan models re-verified against Nissan newsroom releases and independent price guides: caught real changes the data had missed, including the mid-cycle "2026.5" Rogue refresh (added the new Dark Armor trim, corrected every trim price) and a $200 Sentra S/SV pricing correction.',
+      'Removed a Leaf "S" trim that Nissan announced but never actually brought to the US market for 2026 (Europe-only); the real US lineup is S+/SV+/Platinum+.',
+      'Filled in previously-missing trims: Armada now prices all 6 grades (was 2), Pathfinder all 5 (was 3); fixed a label swap on two Altima AWD trims.',
+      'Per-trim equipment features and updated sourcing added across the whole brand; Frontier, Kicks, Murano and the Rogue Plug-in Hybrid were re-checked and confirmed already accurate.',
+    ],
+  },
+  {
     v: 62,
     title: 'Interior galleries for 5 more models',
     kind: 'data',

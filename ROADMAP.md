@@ -427,7 +427,21 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   automated fetches, so citations lean on CarGurus, CarsDirect,
   genesisofedmond.com, Cars.com and Genesis's own prnewswire/newsroom
   releases instead.)
-- [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
+- [x] Nissan (2026-07-28 — all 11 models re-verified, see js/changelog.js v63:
+  caught a mid-cycle "2026.5" Rogue refresh the data had missed entirely — new
+  Dark Armor trim added, every Rogue price corrected against the actual
+  current lineup (was still showing original-launch 2026 MY pricing). Also
+  fixed a real Sentra S/SV underpricing ($200 low each), removed a Leaf "S"
+  trim that Nissan announced but never brought to the US market (Europe-only),
+  filled in the previously-missing Armada SL/Platinum/Platinum Reserve and
+  Pathfinder SV/SL trims (both had only partial ladders priced), and untangled
+  a label swap on two Altima AWD trims. Frontier, Kicks, Murano and Rogue
+  Plug-in Hybrid were re-checked and confirmed already accurate — no changes.
+  Per-trim features and updated sources added across the brand.
+  nissanusa.com/edmunds.com mostly blocked automated fetches, so citations
+  lean on Nissan's own newsroom press releases (usa.nissannews.com) plus
+  Motor1, TFLtruck and Businesswire syndication of those releases.)
+- [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
