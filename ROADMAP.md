@@ -550,7 +550,22 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   Per-trim features added to every model for the first time; ProMaster stays
   confidence medium (only one source could be cross-checked, all others
   blocked automated fetches).)
-- [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
+- [x] Dodge (2026-07-28 — all 4 models re-verified, see js/changelog.js v70: Charger
+  Sixpack grew from 3 to 8 trims — the full R/T/R/T Plus/Scat Pack/Scat Pack Plus
+  ladder across 2-door and 4-door bodies — cross-checked against CarBuzz's full
+  pricing table plus an independent search summary of Dodge's launch pricing; EPA
+  figures (previously null) filled in at 20/19 mpg combined for R/T/Scat Pack. Real
+  correction on Durango: the R/T 392 Launch Edition was on file at $50,390, but two
+  independent outlets (TFLcar, a Cars.com/GM Authority-syndicated piece) confirm
+  $49,995: fixed, and added the previously-untracked R/T 392 Launch Edition Premium
+  trim ($57,595). Confirmed the Durango GT keeps both its Pentastar V6 and HEMI V8
+  variants — Dodge briefly dropped the V6 for 2026 then reopened orders for it in
+  Nov 2025 to cover HEMI supply, so both coexist today. Checked NHTSA/IIHS for
+  Charger Daytona/Sixpack (neither has a 2026 record yet) and IIHS for Durango
+  (Marginal small-overlap front, no pedestrian crash prevention — no Top Safety
+  Pick); nothing guessed. Per-trim features and sources added to every model for
+  the first time; Hornet's discontinued status re-confirmed unchanged, sources
+  array added.) — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures

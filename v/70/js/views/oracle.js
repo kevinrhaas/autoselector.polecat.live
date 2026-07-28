@@ -28,7 +28,7 @@ export function renderOracle(view, ctx){
   view.append(wrap);
   wrap.append(el('div',{class:'finder-head'},[
     el('h2',{text:'Mind Reader'}),
-    el('p',{text:'Answer a few odd little questions — none of them are about cars, we promise. We’ll read your taste and quietly whittle the 2026 market down to you. Don’t like a question? Wave it off for another.'}),
+    el('p',{text:'Answer a few odd little questions — none of them are about cars, we promise. Tap every answer that feels like you (more than one is fine), and we’ll quietly whittle the 2026 market down to your taste. Don’t like a question? Wave it off for another.'}),
   ]));
   const counter = el('div',{class:'finder-count'},[
     el('span',{class:'fc-n', text:String(pool.length)}),
@@ -66,34 +66,48 @@ export function renderOracle(view, ctx){
     const card = el('div',{class:'q-card oracle-card'});
     card.append(el('div',{class:'oracle-kicker', text:`Question ${asked.size+1}`}));
     card.append(el('h3',{text:current.prompt}));
-    if(current.sub) card.append(el('div',{class:'q-sub', text:current.sub}));
+    card.append(el('div',{class:'q-sub', text: current.sub || 'Tap all that feel like you — more than one is welcome.'}));
     const opts = el('div',{class:'q-opts oracle-opts'});
+    const selected = new Set();
+    const lockBtn = el('button',{class:'btn primary sm', style:'display:none', onclick:()=>answer([...selected])});
+    const relabel = ()=>{ lockBtn.innerHTML = `${icon('check',14)} Lock in ${selected.size} pick${selected.size===1?'':'s'}`;
+      lockBtn.style.display = selected.size ? '' : 'none'; };
     current.opts.forEach(o=>{
-      opts.append(el('button',{class:'q-opt oracle-opt', onclick:()=>answer(o)},[
-        el('span',{text:o.t}),
-      ]));
+      const b = el('button',{class:'q-opt oracle-opt', 'aria-pressed':'false', onclick:()=>{
+        if(selected.has(o)) selected.delete(o); else selected.add(o);
+        const on = selected.has(o);
+        b.classList.toggle('sel', on); b.setAttribute('aria-pressed', String(on));
+        relabel();
+      }},[ el('span',{text:o.t}) ]);
+      opts.append(b);
     });
     card.append(opts);
 
     const foot = el('div',{class:'finder-foot', style:'margin-top:14px;flex-wrap:wrap;gap:8px'});
+    foot.append(lockBtn);
     foot.append(el('button',{class:'btn ghost sm', html:`${icon('refresh',14)} I don’t know — ask me something else`,
       onclick:()=>{ asked.add(current.id); ask(); }}));
     if(history.length) foot.append(el('button',{class:'btn ghost sm', html:`${icon('undo',14)} Undo last`, onclick:undo}));
-    if(pool.length<all.length) foot.append(el('button',{class:'btn sm', html:`${icon('check',14)} Reveal my matches`, onclick:results}));
+    if(pool.length<all.length) foot.append(el('button',{class:'btn ghost sm', html:`${icon('check',14)} Reveal my matches`, onclick:results}));
     card.append(foot);
     stage.append(card);
   }
 
   // ---- apply an answer: score, whittle, build the "why" report ----
-  function answer(o){
+  // `picks` is an array of selected options; their trait weights are summed so
+  // choosing more than one keeps every taste you leaned toward in the running.
+  function answer(picks){
+    if(!picks || !picks.length) return;
+    const combined = {};
+    for(const o of picks) for(const t in o.w) combined[t] = (combined[t]||0) + o.w[t];
+
     const before = pool.map(v=>v.id);
     const scoreBefore = new Map(score);
-    // per-vehicle delta this round
     const delta = new Map();
     for(const v of pool){
       const prof = traitProfile(v);
       let d = 0;
-      for(const t in o.w) d += o.w[t] * (prof[t]||0);
+      for(const t in combined) d += combined[t] * (prof[t]||0);
       delta.set(v.id, d);
       score.set(v.id, (score.get(v.id)||0) + d);
     }
@@ -107,7 +121,7 @@ export function renderOracle(view, ctx){
     history.push({ qid:current.id, before, scoreBefore });
     pool = kept;
 
-    const report = buildReport(o, delta, dropped, kept, before.length - kept.length);
+    const report = buildReport({ w:combined }, delta, dropped, kept, before.length - kept.length);
     ask(report);
   }
 
