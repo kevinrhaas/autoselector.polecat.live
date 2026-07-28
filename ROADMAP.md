@@ -391,7 +391,27 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   as a carryover of the 2025 generation, with the all-new redesign arriving
   as a 2027), so this run only added trim features for the two existing
   carryover trims and left pricing/colors alone rather than relitigate or
-  guess at a lineup Kia itself never fully priced.) — [ ] Genesis
+  guess at a lineup Kia itself never fully priced.)
+- [x] Genesis (2026-07-28 — all 7 models re-verified, see js/changelog.js v61:
+  every model's trim ladder was thin (2-3 bookend trims each), so this run
+  rebuilt full lineups against Genesis's own U.S. pricing release (GV70:
+  official prnewswire announcement) and cross-checked dealer-research pages
+  (G70 grew 2 to 7 trims incl. the new Prestige Graphite; G80 2 to 5; G90 2
+  to 3; GV60 2 to 4; GV70 2 to 6; GV80 3 to 10 incl. both Coupe trims;
+  Electrified GV70 2 to 3). Two real corrections: confirmed the Electrified
+  G80 stays discontinued for the US in 2026 (re-verified independently, not
+  just carried over), and the Electrified GV70's range figure was corrected
+  from a stale 298 mi to Genesis's own current stated 263 mi (243 on the
+  20-in Advanced/Prestige wheels) — official EPA numbers for 2026 aren't
+  published yet. IIHS ratings added/corrected: G90 earns Top Safety Pick (not
+  Plus, checked directly on iihs.org); G70 has real IIHS test results but no
+  overall award, and NHTSA has no 2026 record for G70 or G90 — checked both,
+  neither guessed. Per-trim features and a sources array added to every
+  model for the first time; all 7 raised to confidence high with cited
+  sources — genesis.com is JS-rendered and returned redirect loops to
+  automated fetches, so citations lean on CarGurus, CarsDirect,
+  genesisofedmond.com, Cars.com and Genesis's own prnewswire/newsroom
+  releases instead.)
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz

@@ -1,5 +1,11 @@
 [
   {
+    "v": 61,
+    "title": "Genesis lineup re-verified — trim ladders rebuilt, sources added",
+    "date": "Jul 28, 2026, 7:59 AM CT",
+    "path": "/v/61/app/"
+  },
+  {
     "v": 60,
     "title": "Kia lineup re-verified — trim features, sources and colors added",
     "date": "Jul 28, 2026, 4:38 AM CT",
@@ -136,11 +142,5 @@
     "title": "New finder — Mind Reader reads your taste from questions that aren’t about cars",
     "date": "Jul 16, 2026, 8:15 PM CT",
     "path": "/v/28/app/"
-  },
-  {
-    "v": 27,
-    "title": "Match Maker — the getting-in and controls questions are multi-select now",
-    "date": "Jul 16, 2026, 3:45 PM CT",
-    "path": "/v/27/app/"
   }
 ]
