@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 62,
+    title: 'Interior galleries for 5 more models',
+    kind: 'data',
+    ts: '',
+    items: [
+      'Real cabin photos added for the Chevrolet Suburban, Nissan Z, Infiniti QX80, Kia K4 and Hyundai Elantra N — all current-generation or US-spec, sourced from Wikimedia Commons with verified free licenses.',
+      'Every photo was found via the Commons search API, license and photographer credit pulled from the file’s own metadata, and the URL live-checked before shipping.',
+      '79 of 325 models now have a real interior photo.',
+    ],
+  },
+  {
     v: 61,
     title: 'Genesis lineup re-verified — trim ladders rebuilt, sources added',
     kind: 'data',
