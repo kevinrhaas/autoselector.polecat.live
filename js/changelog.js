@@ -21,6 +21,16 @@
 
 export const CHANGELOG = [
   {
+    v: 73,
+    title: 'Interior photos added for 5 more models',
+    kind: 'data',
+    ts: '2026-07-28T18:51:07.196Z',
+    items: [
+      'BMW X1, X5 and X7, Cadillac Lyriq and Chevrolet TrailBlazer all gained a verified current-generation interior gallery photo, sourced from Wikimedia Commons under a free license and live-checked before shipping.',
+      'Skipped this run for lack of a confirmed current-generation Commons interior shot: Acura MDX, Audi Q5/Q7/Q8, Cadillac Optiq/XT5 and Chevrolet Blazer EV — see ROADMAP.md for the per-model reasons.',
+    ],
+  },
+  {
     v: 72,
     title: 'Alfa Romeo lineup re-verified — two stale base prices fixed',
     kind: 'data',

@@ -159,7 +159,24 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  82 models done so far (2026-07-28, +3, js/changelog.js v68: chevrolet-corvette
+  90 models done so far (2026-07-28, +5, js/changelog.js v73: bmw-x1 (U11,
+  explicitly captioned USDM), bmw-x5 (G05 LCI, the current Curved Display
+  dash — an older pre-LCI shot was found and rejected first), bmw-x7 (G07,
+  post-LCI Curved Display interior), cadillac-lyriq (L233, its one generation
+  to date) and chevrolet-trailblazer (VSS-S, post-2024-refresh 11-inch
+  screen) — all interior shots, found via the Commons search API, generation
+  confirmed against each file's own Commons categories/description (not just
+  the filename), every URL live-checked with curl. Checked but held back
+  this run for a generation mismatch or unconfirmed currency (never guess):
+  acura-mdx (only a 3rd-gen/2018 shot; current MDX is 4th-gen since 2022),
+  audi-q7 and audi-q8 (only pre-facelift interior shots exist; no Commons
+  photo of either's current-facelift dash), cadillac-optiq (no interior shot
+  on Commons at all), cadillac-xt5 (the only interior shot is the China-only
+  second-generation XT5, a different vehicle from the US-spec model), and
+  chevrolet-blazer-ev (the only Commons photo is from GM's 2022 pre-production
+  reveal, which contemporary coverage explicitly said would differ from the
+  production interior). audi-q5 re-checked and still held back per the note
+  below. Previous batch (2026-07-28, +3, js/changelog.js v68: chevrolet-corvette
   (C8, MIAS 2024 showfloor shot), mercedes-benz-glc (X254, a Japan-market 220d
   interior — generation/dash architecture is shared across powertrains and
   markets, same call as prior JDM/Euro-shot precedent below), bmw-x3 (G45, the

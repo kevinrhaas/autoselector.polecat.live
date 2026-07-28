@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 41;
+export const DATA_VERSION = 42;
 
 export const VEHICLES = [
  {
@@ -4504,7 +4504,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/BMW_X1_U11_Interior1.jpg",
+     "kind": "interior",
+     "credit": "Pixelatedfacealex",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ABMW_X1_U11_Interior1.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "AWD standard on all trims. MSRPs back-calculated from sticker prices that include the destination fee, so may be off by about $100.",
@@ -4836,7 +4845,16 @@ export const VEHICLES = [
   "towingLb": 7200,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/BMW_X5_G05_LCI_xDrive50e_PHEV_M_Sport_Package_Brooklyn_Grey_Metallic_03.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ABMW_X5_G05_LCI_xDrive50e_PHEV_M_Sport_Package_Brooklyn_Grey_Metallic_03.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "X5 M Competition folded in as top trim (shares nameplate). 50e plug-in hybrid figure shown is MPGe. Last full year of this generation; redesign expected for 2027.",
@@ -5055,7 +5073,16 @@ export const VEHICLES = [
   "towingLb": 7500,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/2025_BMW_X7_M60i_Interior.jpg",
+     "kind": "interior",
+     "credit": "Pixelatedfacealex",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2025_BMW_X7_M60i_Interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Three-row flagship SUV. M60i and Alpina XB7 MSRPs are estimates within about $2,000; base price verified. Alpina XB7 folded in as a trim."
@@ -6593,7 +6620,16 @@ export const VEHICLES = [
   "towingLb": 3500,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac%20Lyriq%2C%20Auto%202024%2C%20Zurich%20%28PANA0503%29.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cadillac_Lyriq_L233_Oxford_Stone_%281%29.jpg",
+     "kind": "interior",
+     "credit": "Damian B Oh",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3ACadillac_Lyriq_L233_Oxford_Stone_(1).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Verified 2026-07-28. All six trim prices confirmed unchanged since launch. Destination freight rose from $1,495 to $1,795 as of January 16, 2026 (MSRPs themselves unchanged). Trim names reflect Cadillac's June 2025 rename (Luxury/Premium Luxury/Signature Luxury tiers replacing Luxury 1/2/3). Lyriq-V does 0-60 in about 3.3 s.",
@@ -8720,7 +8756,16 @@ export const VEHICLES = [
   "towingLb": 1000,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/24%20Chevrolet%20Trailblazer%20LT.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/2024_Chevrolet_TrailBlazer_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2024_Chevrolet_TrailBlazer_interior.jpg"
+    }
+   ]
   },
   "confidence": "medium",
   "notes": "Prices exclude the $1,795 destination charge (up from $1,395). LS re-verified 2026-07-28 at $23,300; AWD-equipped RS/ACTIV top out at $31,295 including destination ($29,500 excl.) — FWD-only base pricing for RS/ACTIV/LT was not separately published and remains an estimate. AWD requires the 1.3L engine.",
