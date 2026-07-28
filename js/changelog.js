@@ -21,6 +21,18 @@
 
 export const CHANGELOG = [
   {
+    v: 65,
+    title: 'Mitsubishi lineup re-verified — pricing fix, missing trims, sources',
+    kind: 'data',
+    ts: '2026-07-28T15:02:31.658Z',
+    items: [
+      'All 4 current Mitsubishi models re-verified against current pricing and manufacturer releases: caught a real mid-model-year price increase on the Outlander — every trim above the base ES (LE/SE/SEL/Trail Edition/Ralliart/Black Edition) rose by about $350, confirmed against two independent current sources.',
+      'The Outlander PHEV was missing its SE and SEL trims entirely (only ES and Black Edition were recorded) — added both with verified MSRPs, and corrected its EPA electric range from 44 to the officially stated 45 miles.',
+      'Confirmed the Outlander\'s new 1.5L turbo hybrid figures (174 hp, 28 mpg combined) are now final EPA numbers, no longer pending estimates; Eclipse Cross and Outlander Sport pricing/specs checked and found already accurate.',
+      'Per-trim IIHS ratings checked for all four (previously only NHTSA had been recorded): Eclipse Cross does not qualify for Top Safety Pick despite its 5-star NHTSA rating; none of the four earn an award. Sources arrays added to all four for the first time.',
+    ],
+  },
+  {
     v: 64,
     title: 'Infiniti lineup re-verified — pricing fix, sources, features',
     kind: 'data',

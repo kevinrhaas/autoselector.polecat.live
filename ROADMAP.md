@@ -458,7 +458,20 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   options are findable but no manufacturer hex swatch values are published,
   and the never-guess rule means no fabricated hex codes (same call as the
   GMC/Buick sweeps).)
-- [ ] Mitsubishi
+- [x] Mitsubishi (2026-07-28 — all 4 models re-verified, see js/changelog.js v65:
+  caught a real mid-model-year Outlander price increase (~$350 on every trim
+  above the base ES: LE/SE/SEL/Trail Edition/Ralliart/Black Edition), confirmed
+  against two independent current sources; the Outlander PHEV was missing its
+  SE and SEL trims entirely (only ES and Black Edition were recorded) — added
+  both with verified MSRPs and corrected the EPA electric range from a stale
+  44 to the officially stated 45 miles. Confirmed the Outlander's 1.5L turbo
+  hybrid figures (174 hp, 28 mpg combined) are now final EPA numbers, not
+  pending estimates. Eclipse Cross and Outlander Sport checked and found
+  already accurate. IIHS ratings checked for all four for the first time
+  (previously only NHTSA was recorded) — none earn a Top Safety Pick; Eclipse
+  Cross is notably Poor on moderate overlap front and side crash despite its
+  5-star NHTSA rating. Sources arrays added to all four models for the first
+  time; Outlander raised to confidence high.)
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
 - [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
