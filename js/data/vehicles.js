@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 40;
+export const DATA_VERSION = 41;
 
 export const VEHICLES = [
  {
@@ -9153,19 +9153,43 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Scat Pack (2-door)",
-    "msrp": 59995
+    "msrp": 59995,
+    "features": [
+     "670-hp dual-motor AWD standard",
+     "Fratzonic Chambered Exhaust sound",
+     "Alpine 9-speaker audio",
+     "18-in wheels"
+    ]
    },
    {
     "name": "Scat Pack (4-door)",
-    "msrp": 61995
+    "msrp": 61995,
+    "features": [
+     "670-hp dual-motor AWD standard",
+     "4-door liftback body style",
+     "Fratzonic Chambered Exhaust sound",
+     "Alpine 9-speaker audio"
+    ]
    },
    {
     "name": "Scat Pack Plus (2-door)",
-    "msrp": 64990
+    "msrp": 64990,
+    "features": [
+     "Comfort/tech content standard that's optional on Scat Pack",
+     "Alpine 18-speaker audio",
+     "Glass roof",
+     "Carbon and suede interior package"
+    ]
    },
    {
     "name": "Scat Pack Plus (4-door)",
-    "msrp": 66990
+    "msrp": 66990,
+    "features": [
+     "Comfort/tech content standard that's optional on Scat Pack",
+     "Alpine 18-speaker audio",
+     "Glass roof",
+     "Carbon and suede interior package"
+    ]
    }
   ],
   "powertrains": [
@@ -9221,7 +9245,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "All-electric Charger; base R/T dropped for 2026, leaving 670-hp Scat Pack as the entry point. Liftback 2-door coupe and 4-door sedan body styles (doors field shows coupe). Prices exclude destination."
+  "notes": "All-electric Charger; base R/T dropped for 2026, leaving 670-hp Scat Pack as the entry point. Liftback 2-door coupe and 4-door sedan body styles (doors field shows coupe). Prices exclude destination ($1,995). Re-verified 2026-07-28 (Dodge brand sweep): all four MSRPs confirmed unchanged against CarsDirect and Dodge's own trims page; per-trim features and a sources array added for the first time. NHTSA/IIHS: neither has published a 2026 Charger Daytona record yet (checked directly, not guessed) — no ratings block added.",
+  "sources": [
+   {
+    "label": "2026 Charger Daytona Scat Pack pricing",
+    "url": "https://www.carsdirect.com/automotive-news/2026-dodge-charger-daytona-scat-pack-price-cut-by-5-000",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "2026 Charger trims",
+    "url": "https://www.dodge.com/charger/trims.html",
+    "site": "dodge.com"
+   }
+  ]
  },
  {
   "id": "dodge-charger-sixpack",
@@ -9237,15 +9273,81 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "R/T (2-door)",
-    "msrp": 49995
+    "msrp": 49995,
+    "features": [
+     "420-hp Hurricane SO twin-turbo I6",
+     "Black cloth upholstery",
+     "Steel brake rotors/calipers",
+     "20-in wheels"
+    ]
+   },
+   {
+    "name": "R/T (4-door)",
+    "msrp": 51995,
+    "features": [
+     "420-hp Hurricane SO twin-turbo I6",
+     "4-door body style",
+     "Black cloth upholstery",
+     "20-in wheels"
+    ]
+   },
+   {
+    "name": "R/T Plus (2-door)",
+    "msrp": 54990,
+    "features": [
+     "Upgraded interior/premium features package",
+     "Leatherette/cloth seating",
+     "Performance Handling Group available"
+    ]
+   },
+   {
+    "name": "R/T Plus (4-door)",
+    "msrp": 56990,
+    "features": [
+     "Upgraded interior/premium features package",
+     "Leatherette/cloth seating",
+     "4-door body style"
+    ]
+   },
+   {
+    "name": "Scat Pack (2-door)",
+    "msrp": 54995,
+    "features": [
+     "550-hp Hurricane HO twin-turbo I6",
+     "Brembo brakes standard",
+     "Line lock, launch control, valved exhaust standard",
+     "Leatherette/cloth seating"
+    ]
    },
    {
     "name": "Scat Pack (4-door)",
-    "msrp": 56995
+    "msrp": 56995,
+    "features": [
+     "550-hp Hurricane HO twin-turbo I6",
+     "Brembo brakes standard",
+     "Line lock, launch control, valved exhaust standard",
+     "4-door body style"
+    ]
+   },
+   {
+    "name": "Scat Pack Plus (2-door)",
+    "msrp": 59990,
+    "features": [
+     "Premium comfort/tech content standard",
+     "Alpine 18-speaker audio",
+     "360-degree camera",
+     "Ventilated front seats"
+    ]
    },
    {
     "name": "Scat Pack Plus (4-door)",
-    "msrp": 61990
+    "msrp": 61990,
+    "features": [
+     "Premium comfort/tech content standard",
+     "Alpine 18-speaker audio",
+     "360-degree camera",
+     "Ventilated front seats"
+    ]
    }
   ],
   "powertrains": [
@@ -9258,7 +9360,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": null,
+    "mpgCombined": 20,
     "evRangeMi": null
    },
    {
@@ -9270,7 +9372,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": null,
+    "mpgCombined": 19,
     "evRangeMi": null
    }
   ],
@@ -9313,7 +9415,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "New-for-2026 gas version of the new Charger with the twin-turbo Hurricane inline-six (420 hp standard output, 550 hp high output in Scat Pack); standard AWD with drift-capable RWD mode. 2-door and 4-door bodies. EPA figures not yet published. Prices exclude destination."
+  "notes": "New-for-2026 gas version of the new Charger with the twin-turbo Hurricane inline-six (420 hp standard output, 550 hp high output in Scat Pack); standard AWD with drift-capable RWD mode. 2-door and 4-door bodies. Prices exclude destination. Re-verified 2026-07-28 (Dodge brand sweep): trim ladder expanded from 3 to the full 8-way lineup (R/T, R/T Plus, Scat Pack, Scat Pack Plus, each 2-door and 4-door — 4-door adds a flat $2,000 across the board), cross-checked against CarBuzz's full pricing table and an independent search summary of Dodge's own launch pricing; EPA figures now published and filled in (R/T 20 mpg combined, Scat Pack 19 mpg combined). Per-trim features and a sources array added for the first time. NHTSA/IIHS: neither has published a 2026 Charger Sixpack record yet (checked directly, not guessed) — no ratings block added.",
+  "sources": [
+   {
+    "label": "2026 Charger full pricing table",
+    "url": "https://carbuzz.com/cars/dodge/charger/2026/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Dodge_Charger.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "dodge-durango",
@@ -9329,19 +9443,53 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "GT",
-    "msrp": 38995
+    "msrp": 38995,
+    "features": [
+     "3.6L Pentastar V6, 295 hp",
+     "RWD standard, AWD +$2,000",
+     "8.4-in Uconnect 5 touchscreen",
+     "Cloth seating"
+    ]
    },
    {
     "name": "GT HEMI",
-    "msrp": 42695
+    "msrp": 42695,
+    "features": [
+     "5.7L HEMI V8, 360 hp, AWD standard",
+     "Most affordable AWD V8 in its class",
+     "20-in wheels",
+     "Power liftgate"
+    ]
    },
    {
-    "name": "R/T 392",
-    "msrp": 50390
+    "name": "R/T 392 Launch Edition",
+    "msrp": 49995,
+    "features": [
+     "6.4L HEMI 392 V8, 475 hp",
+     "Performance suspension",
+     "10.1-in Uconnect 5 Nav",
+     "Launch Edition badging/wheels"
+    ]
+   },
+   {
+    "name": "R/T 392 Launch Edition Premium",
+    "msrp": 57595,
+    "features": [
+     "Nappa leather, ventilated front seats",
+     "Power sunroof",
+     "Adaptive cruise control, forward collision warning",
+     "Premium audio"
+    ]
    },
    {
     "name": "SRT Hellcat",
-    "msrp": 79995
+    "msrp": 79995,
+    "features": [
+     "6.2L supercharged HEMI V8, 710 hp",
+     "Brembo six-piston brakes",
+     "Electronic limited-slip differential",
+     "Launch control"
+    ]
    }
   ],
   "powertrains": [
@@ -9436,7 +9584,24 @@ export const VEHICLES = [
    "credit": "Kevauto"
   },
   "confidence": "high",
-  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration.",
+  "notes": "Long-running current generation continues for 2026 with a V8-heavy lineup: R/T now uses the 475-hp 392, and the 710-hp SRT Hellcat returns. Seats 6 or 7 depending on second-row configuration. Re-verified 2026-07-28 (Dodge brand sweep): caught a real pricing error — R/T 392 Launch Edition was on file at $50,390 but Dodge's own launch pricing (independently confirmed by TFLcar and a Cars.com/GM Authority-syndicated report) is $49,995 before destination ($51,990 with the $1,995 destination charge), corrected here. Added the R/T 392 Launch Edition Premium tier ($57,595) that wasn't tracked before. GT/GT HEMI prices re-confirmed unchanged against Stellantis's own Nov 2025 press release (the GT Pentastar V6 was briefly dropped for 2026, then reopened for orders to meet demand while HEMI V8 supply ramps up — both trims coexist today). Per-trim features and a sources array added for the first time. IIHS checked directly on iihs.org: Marginal small overlap front (driver side only tested), no pedestrian front crash prevention available — does not qualify for Top Safety Pick, so no `iihs` field added (checked, not guessed).",
+  "sources": [
+   {
+    "label": "2026 Durango full trim/pricing table",
+    "url": "https://www.cars.com/research/dodge-durango-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "R/T 392 Launch Edition pricing",
+    "url": "https://tflcar.com/2026/03/dodge-durango-rt-392-launch-edition-info-news/",
+    "site": "tflcar.com"
+   },
+   {
+    "label": "GT Pentastar V6 orders reopened, GT HEMI pricing",
+    "url": "https://www.barchart.com/story/news/36213201/hemi-is-hot-durango-is-hotter-dodge-reopens-orders-for-durango-gt-powered-by-pentastar-v-6-to-meet-demand",
+    "site": "barchart.com"
+   }
+  ],
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -9542,7 +9707,19 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "low",
-  "notes": "Discontinued: tariffs halted Italian production in Aug 2025 and Dodge confirmed the end of the Hornet in Jan 2026; sold from remaining (mostly 2025) inventory, often heavily discounted. Prices shown are 2025 MSRPs; a distinct 2026 model year may not reach all dealers."
+  "notes": "Discontinued: tariffs halted Italian production in Aug 2025 and Dodge confirmed the end of the Hornet in Jan 2026; sold from remaining (mostly 2025) inventory, often heavily discounted. Prices shown are 2025 MSRPs; a distinct 2026 model year may not reach all dealers. Re-confirmed 2026-07-28 (Dodge brand sweep): discontinuation status still current — dealers report inventory now heavily discounted (up to $8,000 off), and the Hornet's closest surviving relative is its Alfa Romeo Tonale twin, refreshed for 2026 on the same Italian line. Confidence stays low (a genuinely stale, wind-down record) rather than raised; sources array added for the first time.",
+  "sources": [
+   {
+    "label": "Dodge Hornet officially killed off for 2026",
+    "url": "https://www.cars.com/articles/dodge-hornet-officially-killed-off-for-2026-520414/",
+    "site": "cars.com"
+   },
+   {
+    "label": "Dodge Hornet discontinued after 3 years",
+    "url": "https://tflcar.com/2026/01/dodge-hornet-officially-discontinued-news/",
+    "site": "tflcar.com"
+   }
+  ]
  },
  {
   "id": "ferrari-12cilindri",
