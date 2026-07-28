@@ -33,6 +33,7 @@ export function renderHome(view, ctx){
   // ---- key actions ----
   const acts = el('div',{class:'quick-acts'});
   qa(acts, 'target', 'Match Maker', 'Answer questions, whittle the market', ()=>ctx.navigate('matchmaker'));
+  qa(acts, 'wand', 'Mind Reader', 'Odd questions that secretly read your taste', ()=>ctx.navigate('oracle'));
   qa(acts, 'users', 'Lifestyles', 'Pick the driver you are', ()=>ctx.navigate('lifestyles'));
   qa(acts, 'chart', 'Budget Explorer', 'Slide the money, see what fits', ()=>ctx.navigate('budget'));
   qa(acts, 'list', 'Browse everything', 'Filters for the details that matter', ()=>ctx.navigate('browse'));

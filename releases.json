@@ -1,5 +1,11 @@
 [
   {
+    "v": 57,
+    "title": "Cadillac lineup re-verified — trim renames, real 2026 pricing, per-trim features",
+    "date": "Jul 28, 2026, 2:18 AM CT",
+    "path": "/v/57/app/"
+  },
+  {
     "v": 56,
     "title": "Interior photos added for 8 more models — Sentra, Sonata, Blazer, Acadia and more",
     "date": "Jul 28, 2026, 12:30 AM CT",
@@ -136,11 +142,5 @@
     "title": "Data-completeness meter — now tappable for context, and toggleable",
     "date": "Jul 16, 2026, 2:40 PM CT",
     "path": "/v/25/app/"
-  },
-  {
-    "v": 24,
-    "title": "Budget Explorer gains the main-screen filters — max seats, power and drivetrain",
-    "date": "Jul 16, 2026, 2:28 PM CT",
-    "path": "/v/24/app/"
   }
 ]

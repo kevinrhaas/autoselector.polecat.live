@@ -306,7 +306,24 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   verification relied on GM Authority, Edmunds and Cars.com. Envista stays
   unrated: NHTSA has no 2026-specific record and IIHS scored it Poor on
   moderate overlap front + front crash prevention, which rules out a Top
-  Safety Pick — checked, not guessed.) — [ ] Cadillac
+  Safety Pick — checked, not guessed.)
+- [x] Cadillac (2026-07-28 — all 9 models re-verified, see js/changelog.js v57:
+  caught two real structural changes GM made mid-model-year — the gas Escalade
+  lineup was renamed (Luxury→Escalade base, Premium Luxury→Luxury, Premium
+  Luxury Platinum→Platinum Luxury, plus a new Platinum Sport tier), and the
+  CT5 dropped its standalone Luxury trim, making Premium Luxury the base.
+  Corrected stale pricing/destination charges on CT4, CT5, Escalade, Escalade
+  IQ, Optiq and XT5 following Dec 2025–Jan 2026 GM price increases, each
+  cross-checked against 2+ independent sources (not just one article) after
+  an initial research pass surfaced a figure that turned out to be a
+  destination-inclusive total mistaken for a new base MSRP — caught by an
+  independent re-search rather than shipped. Confirmed XT5 continues for 2026
+  (not discontinued alongside XT4/XT6) though production winds down late in
+  the model year. Optiq's new-for-2026 RWD variant now has an EPA-published
+  317-mile range, replacing an estimate. Per-trim features and sources added
+  to every model for the first time; CT4/XT5 stay confidence medium/high
+  respectively pending a live-configurator spot-check (cadillac.com and
+  several dealer/pricing sites blocked automated fetches with 403).
 - [ ] Hyundai — [ ] Kia — [ ] Genesis
 - [ ] Nissan — [ ] Infiniti — [ ] Mitsubishi
 - [ ] Jeep — [ ] Ram — [ ] Dodge — [ ] Chrysler — [ ] Alfa Romeo — [ ] Fiat
