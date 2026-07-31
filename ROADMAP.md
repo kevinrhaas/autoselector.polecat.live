@@ -619,7 +619,36 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   than guessed. alfaromeousa.com and edmunds.com blocked automated fetches
   (403) throughout, so citations lean on CarsDirect, CarBuzz, cars.com's
   trim-comparison pages and the official EPA guide instead.) — [ ] Fiat
-- [ ] VW — [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
+- [x] VW (2026-07-31 — all 10 models re-verified, see js/changelog.js v74:
+  every trim ladder was undercounted — Atlas and Atlas Cross Sport each grew
+  from 3 to their real 7 configurations (SE/SE w/Technology/Peak Edition or
+  SEL variants/SEL Premium R-Line, each FWD or 4Motion where offered), Golf
+  GTI from 2 to 3 (added the $39,080 SE trim), Taos from 3 to 4 (added SE
+  Black), Tiguan from 2 to 4 (added SE and SE R-Line Black), ID.4 from 2 to 5
+  (Pro/Pro S each RWD or AWD, plus AWD-only Pro S Plus); Golf R and Jetta GLI
+  confirmed genuinely single-trim. Two real pricing corrections: Atlas Cross
+  Sport's top trim was $53,620 not $52,500, and Tiguan's was $44,560 not
+  $44,135 — both cross-checked against VW's dealer order-guide mirror and
+  cars.com. IIHS corrected for Atlas and Atlas Cross Sport from "Top Safety
+  Pick+" to "Top Safety Pick" (fetched iihs.org directly — Acceptable
+  pedestrian front crash prevention and Marginal LATCH rule out the + tier).
+  Caught a real discontinuation: the ID. Buzz has no 2026 US model year at
+  all (VW confirmed to press it's selling through 2025 inventory, returning
+  as a 2027 model) — priceFrom/priceTo/trims set to null/empty instead of the
+  stale 2025 figures previously mislabeled as 2026, same treatment as the
+  Hyundai Kona Electric precedent. Per-trim features and a sources array
+  added to every model, all raised to confidence high except ID.4 (stays
+  medium — its two AWD-tier trim prices, Pro S AWD and Pro S Plus, could not
+  be nailed to the dollar against a primary source; Edmunds/KBB blocked
+  automated fetches and vw.com's configurator is JS-gated). Colors
+  intentionally omitted fleet-wide: VW does not publish hex swatch values
+  anywhere public (confirmed across vw.com, CarsDirect, and every dealer
+  research page checked) — named color lists were found and are documented
+  in each record's notes, but the never-guess rule means no fabricated hex.
+  NHTSA API note: the ID.4 is indexed as "ID.4 BEV" (not "ID.4") — a naive
+  model-name query returns a false "no 2026 record" negative that a first
+  research pass hit before being caught by a direct VehicleId lookup.)
+- [ ] Audi — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
   fixed, Ascent "final year" note corrected; sources/features/colors added)

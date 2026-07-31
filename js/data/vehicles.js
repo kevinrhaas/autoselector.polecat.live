@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 42;
+export const DATA_VERSION = 43;
 
 export const VEHICLES = [
  {
@@ -44355,15 +44355,67 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "SE",
-    "msrp": 39310
+    "msrp": 39310,
+    "features": [
+     "269-hp 2.0L turbo four, FWD",
+     "18-inch wheels",
+     "7-seat second-row bench"
+    ]
    },
    {
     "name": "SE 4Motion",
-    "msrp": 41210
+    "msrp": 41210,
+    "features": [
+     "4Motion all-wheel drive"
+    ]
    },
    {
-    "name": "SEL Premium R-Line 4Motion",
-    "msrp": 54630
+    "name": "SE w/ Technology",
+    "msrp": 43730,
+    "features": [
+     "20-inch wheels",
+     "Illuminated front/rear light bars with lit VW logos",
+     "Standard 5,000-lb trailer hitch",
+     "Power tailgate, remote start"
+    ]
+   },
+   {
+    "name": "SE w/ Technology 4Motion",
+    "msrp": 45630,
+    "features": [
+     "4Motion all-wheel drive"
+    ]
+   },
+   {
+    "name": "Peak Edition",
+    "msrp": 48060,
+    "features": [
+     "All-terrain tires, rugged bumpers & underbody cladding",
+     "Standard panoramic sunroof",
+     "Orange contrast-stitched Titan Black leatherette",
+     "6-seat captain's-chair second row",
+     "4Motion AWD only"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 49620,
+    "features": [
+     "Genuine leather seating",
+     "Heated second-row outboard seats",
+     "12-inch Discover Pro navigation, head-up display",
+     "4Motion AWD only"
+    ]
+   },
+   {
+    "name": "SEL Premium R-Line",
+    "msrp": 54630,
+    "features": [
+     "21-inch two-tone wheels, R-Line exterior package",
+     "Perforated Vienna leather, massaging front seats",
+     "Harman Kardon audio, 360-degree area-view camera",
+     "4Motion AWD only"
+    ]
    }
   ],
   "powertrains": [
@@ -44420,10 +44472,11 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls.",
+  "notes": "Single 269-hp turbo four since 2024 refresh (VR6 discontinued). Touch-slider climate/volume controls. 2026-07-31 sweep: corrected the trim ladder from 3 to the real 7 configurations (SE/SE w/Technology/Peak Edition/SEL/SEL Premium R-Line, each FWD or 4Motion where offered) — VW's own order guide and dealer spec mirrors confirm all seven. mpgCombined varies by config: 23 FWD, 22 AWD on standard wheels, 21 AWD on Peak Edition/SEL/SEL Premium R-Line's larger wheels (fueleconomy.gov); 22 recorded here as the representative AWD figure. IIHS confirmed directly on iihs.org: Top Safety Pick (not Plus) for 2026 — Good on crashworthiness/headlights, Acceptable on pedestrian front crash prevention, Marginal on LATCH ease-of-use. No hex hex codes exist for VW's exterior/interior color names anywhere public (vw.com configurator is JS-gated); colors intentionally omitted rather than fabricated — exterior options are Deep Black Pearl, Mountain Lake Blue Metallic, Opal White (Pearl), Silver Mist Metallic, Avocado Green Metallic/Pearl, Pure Gray; interior is Titan Black, Shetland Beige, Titan Black w/ Orange Stitching, French Roast w/ Titan Black, or Titan Black w/ Silver Underlay.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
+    "iihs": "Top Safety Pick",
     "appliesTo": "2026",
     "source": {
      "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas SUV, FWD, OverallRating 5",
@@ -44431,7 +44484,29 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Volkswagen Atlas Trim Levels & Prices",
+    "url": "https://www.cars.com/research/volkswagen-atlas-2026/trims/",
+    "site": "cars.com"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Atlas ratings - Top Safety Pick",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/atlas-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas",
+    "url": "https://api.nhtsa.gov/SafetyRatings/modelyear/2026/make/volkswagen/model/atlas",
+    "site": "nhtsa.gov"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 Volkswagen Atlas",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Volkswagen&baseModel=Atlas&srchtyp=ymm",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "volkswagen-atlas-cross-sport",
@@ -44443,19 +44518,65 @@ export const VEHICLES = [
   "segment": "midsize 2-row SUV",
   "category": "suv",
   "priceFrom": 38300,
-  "priceTo": 52500,
+  "priceTo": 53620,
   "trims": [
    {
     "name": "SE",
-    "msrp": 38300
+    "msrp": 38300,
+    "features": [
+     "269-hp 2.0L turbo four, FWD",
+     "18-inch wheels"
+    ]
    },
    {
     "name": "SE 4Motion",
-    "msrp": 40200
+    "msrp": 40200,
+    "features": [
+     "4Motion all-wheel drive"
+    ]
    },
    {
-    "name": "SEL Premium R-Line 4Motion",
-    "msrp": 52500
+    "name": "SE w/ Technology",
+    "msrp": 42720,
+    "features": [
+     "20-inch wheels, illuminated grille",
+     "Power liftgate, remote start",
+     "Standard 5,000-lb tow hitch"
+    ]
+   },
+   {
+    "name": "SE w/ Technology 4Motion",
+    "msrp": 44620,
+    "features": [
+     "4Motion all-wheel drive"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 48610,
+    "features": [
+     "Standard 4Motion AWD only",
+     "Panoramic sunroof, leather seats",
+     "Head-up display, navigation"
+    ]
+   },
+   {
+    "name": "SEL R-Line Black",
+    "msrp": 50560,
+    "features": [
+     "R-Line styling with black exterior accents",
+     "Stainless sport pedals",
+     "4Motion AWD only"
+    ]
+   },
+   {
+    "name": "SEL Premium R-Line",
+    "msrp": 53620,
+    "features": [
+     "21-inch wheels, perforated Vienna leather",
+     "Massaging front seats, 360-degree camera",
+     "4Motion AWD only"
+    ]
    }
   ],
   "powertrains": [
@@ -44469,7 +44590,7 @@ export const VEHICLES = [
      "FWD",
      "AWD"
     ],
-    "mpgCombined": 23,
+    "mpgCombined": 22,
     "evRangeMi": null
    }
   ],
@@ -44510,11 +44631,11 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Five-seat coupe-roof version of the Atlas. Top-trim price is approximate (official 2026 top-trim figure not confirmed).",
+  "notes": "Five-seat coupe-roof version of the Atlas. 2026-07-31 sweep: corrected the trim ladder from 3 to the real 7 configurations, and corrected the top-trim SEL Premium R-Line MSRP from an unverified $52,500 to the confirmed $53,620 (cars.com trim table + dealer spec mirror agree). mpgCombined is 23 for FWD trims, 22 for 4Motion AWD (fueleconomy.gov); 22 recorded here as the representative AWD figure. IIHS confirmed directly on iihs.org: Top Safety Pick for 2026 — this CORRECTS the previously recorded \"Top Safety Pick+\" (the page shows Acceptable pedestrian front crash prevention and Marginal LATCH ease-of-use, which rules out the + tier). No hex codes exist for VW's color names anywhere public; colors intentionally omitted. Exterior options: Silver Mist Metallic, Mountain Lake Blue Metallic, Deep Black Pearl, Opal White on SE; SE w/Technology and above add Avocado Green Metallic and Pure Gray.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
-    "iihs": "Top Safety Pick+",
+    "iihs": "Top Safety Pick",
     "appliesTo": "2026",
     "source": {
      "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas Cross Sport SUV FWD, OverallRating 5",
@@ -44522,7 +44643,29 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Volkswagen Atlas Cross Sport Trim Levels and Prices",
+    "url": "https://www.spitzervw.com/vw-research/2026-volkswagen-atlas-cross-sport-trim-levels-and-prices/",
+    "site": "spitzervw.com"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Atlas Cross Sport ratings - Top Safety Pick",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/atlas-cross-sport-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "NHTSA SafetyRatings API - 2026 Volkswagen Atlas Cross Sport",
+    "url": "https://api.nhtsa.gov/SafetyRatings/modelyear/2026/make/volkswagen/model/atlas%20cross%20sport",
+    "site": "nhtsa.gov"
+   },
+   {
+    "label": "2026 Volkswagen Atlas Cross Sport trim/price research",
+    "url": "https://www.cars.com/research/volkswagen-atlas_cross_sport-2026/trims/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "volkswagen-golf-gti",
@@ -44538,11 +44681,32 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "S",
-    "msrp": 34590
+    "msrp": 34590,
+    "features": [
+     "241-hp 2.0L turbo four, 7-speed DSG, FWD",
+     "18-inch wheels",
+     "Scalepaper Plaid cloth seats"
+    ]
+   },
+   {
+    "name": "SE",
+    "msrp": 39080,
+    "features": [
+     "Panoramic sunroof",
+     "ArtVelours Clubsport cloth seats, power driver's seat",
+     "Harman Kardon audio",
+     "Light Assist auto high-beams"
+    ]
    },
    {
     "name": "Autobahn",
-    "msrp": 42480
+    "msrp": 42480,
+    "features": [
+     "DCC adaptive chassis control",
+     "19-inch wheels with summer tires",
+     "Standard Vienna leather, heated rear seats",
+     "Head-up display, 3-zone climate"
+    ]
    }
   ],
   "powertrains": [
@@ -44597,7 +44761,29 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "2025 facelift (Mk8.5) carries over; manual transmission discontinued after 2024. Climate and volume use touch sliders (now illuminated). MotorTrend 2026 Car of the Year (with Golf R)."
+  "notes": "2025 facelift (Mk8.5) carries over; manual transmission discontinued after 2024. Climate and volume use touch sliders (now illuminated). MotorTrend 2026 Car of the Year (with Golf R). 2026-07-31 sweep: corrected the trim ladder from 2 to 3 — the SE trim at $39,080 sits between S and Autobahn (VW dealer order guide). mpgCombined of 27-28 is a secondary-sourced carryover figure; fueleconomy.gov has not yet published a 2026-specific GTI record. NHTSA has a 2026 record (VehicleId 21034) but every category is \"Not Rated\" (no crash test performed yet) — checked directly, not guessed. IIHS small-overlap front is Good but explicitly carried over from a 2022 test; no full battery, no Top Safety Pick award. No hex codes exist for VW's 6 exterior colors (Mythos Black Metallic, Alpine Silver Metallic, Slate Blue Metallic, Opal White Pearl, Moonstone Gray, Kings Red Metallic) or interior trims; colors intentionally omitted.",
+  "sources": [
+   {
+    "label": "2026 Volkswagen Golf GTI Pricing, Specs & Release Date",
+    "url": "https://www.cargurus.com/research/articles/2026-volkswagen-golf-gti-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "NHTSA SafetyRatings API - 2026 Volkswagen Golf GTI (Not Rated)",
+    "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21034",
+    "site": "nhtsa.gov"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Golf GTI ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/golf-gti-4-door-hatchback/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "2026 Volkswagen Golf GTI colors",
+    "url": "https://www.carsdirect.com/volkswagen/gti/2026/colors",
+    "site": "carsdirect.com"
+   }
+  ]
  },
  {
   "id": "volkswagen-golf-r",
@@ -44613,7 +44799,13 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Golf R",
-    "msrp": 49455
+    "msrp": 49455,
+    "features": [
+     "328-hp 2.0L turbo four, 7-speed DSG only",
+     "R-Performance 4Motion AWD with torque vectoring",
+     "Standard DCC adaptive chassis control",
+     "Nappa leather sport seats"
+    ]
    }
   ],
   "powertrains": [
@@ -44668,7 +44860,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "DSG only; manual dropped after 2024. Drift and Special (Nurburgring) drive modes standard. Touch-slider climate/volume controls."
+  "notes": "DSG only; manual dropped after 2024. Drift and Special (Nurburgring) drive modes standard. Touch-slider climate/volume controls. 2026-07-31 sweep: confirmed genuinely single-trim at $49,455 (VW order guide). Euro Style Package (+$3,795: solid roof, Akropovic exhaust, cloth seats) and Black Wheel Package (+$395) are options, not separate trims. mpgCombined of ~25 is a secondary-sourced carryover figure; fueleconomy.gov has no 2026-specific record yet. NHTSA has a 2026 record (VehicleId 21035) but every category is \"Not Rated\" — checked directly. IIHS small-overlap front is Good but explicitly the same carried-over 2022 GTI test; no Top Safety Pick award. No hex codes exist for VW's 4 exterior colors (Mythos Black Metallic, Pure White, Lapiz Blue Metallic, Graphite Gray) or interior trim; colors intentionally omitted.",
+  "sources": [
+   {
+    "label": "2026 Volkswagen Golf R specs",
+    "url": "https://www.carsdirect.com/volkswagen/golf-r/2026/specs",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "NHTSA SafetyRatings API - 2026 Volkswagen Golf R (Not Rated)",
+    "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21035",
+    "site": "nhtsa.gov"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Golf R ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/golf-r-4-door-hatchback/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "volkswagen-id-buzz",
@@ -44679,22 +44888,9 @@ export const VEHICLES = [
   "bodyStyle": "van",
   "segment": "electric minivan",
   "category": "van",
-  "priceFrom": 59995,
-  "priceTo": 67995,
-  "trims": [
-   {
-    "name": "Pro S RWD",
-    "msrp": 59995
-   },
-   {
-    "name": "Pro S Plus RWD",
-    "msrp": 63495
-   },
-   {
-    "name": "Pro S Plus 4Motion",
-    "msrp": 67995
-   }
-  ],
+  "priceFrom": null,
+  "priceTo": null,
+  "trims": [],
   "powertrains": [
    {
     "type": "ev",
@@ -44759,8 +44955,25 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "2026 pricing not yet announced; figures are 2025 MSRPs (launch-only 1st Edition dropped). Retro electric bus with three rows; AWD adds power and slightly reduces range."
+  "confidence": "high",
+  "notes": "SKIPPING the 2026 model year entirely in the US — not a pricing gap, there is no 2026 ID. Buzz to price. Confirmed 2026-07-31 via InsideEVs, CarsDirect, Cars.com and KBB (all dated 2026): VW is selling through remaining 2025 inventory while it plans a reintroduced 2027 model. priceFrom/priceTo/trims set to null/empty rather than carrying forward the 2025 MSRPs that were previously mislabeled as 2026 ($59,995 Pro S RWD - $67,995 Pro S Plus 4Motion, kept below for reference only). Powertrain/dims/interior figures below describe the most recent (2025 MY) US-spec van. Two-tone paint remains a signature option once the 2027 model arrives; no confirmed 2027 pricing yet.",
+  "sources": [
+   {
+    "label": "VW ID. Buzz skipping 2026 model year in the US",
+    "url": "https://www.carsdirect.com/automotive-news/volkswagen-id-buzz-skipping-2026-model-year",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "Volkswagen ID. Buzz skips U.S. market for 2026",
+    "url": "https://www.cars.com/articles/volkswagen-id-buzz-skips-u-s-market-for-2026-519884/",
+    "site": "cars.com"
+   },
+   {
+    "label": "Volkswagen to skip 2026 model year with ID. Buzz van",
+    "url": "https://www.kbb.com/car-news/volkswagen-to-skip-2026-model-year-with-id-buzz-van",
+    "site": "kbb.com"
+   }
+  ]
  },
  {
   "id": "volkswagen-id4",
@@ -44772,15 +44985,50 @@ export const VEHICLES = [
   "segment": "compact electric SUV",
   "category": "suv",
   "priceFrom": 45095,
-  "priceTo": 57295,
+  "priceTo": 57655,
   "trims": [
    {
     "name": "Pro RWD",
-    "msrp": 45095
+    "msrp": 45095,
+    "features": [
+     "282-hp single-motor RWD, 82 kWh pack",
+     "291-mile EPA range",
+     "Heated front seats, 12.9-inch touchscreen"
+    ]
    },
    {
-    "name": "Pro S Plus AWD",
-    "msrp": 57295
+    "name": "Pro AWD",
+    "msrp": 48995,
+    "features": [
+     "Dual-motor AWD, 335 hp",
+     "263-mile EPA range"
+    ]
+   },
+   {
+    "name": "Pro S RWD",
+    "msrp": 50195,
+    "features": [
+     "20-inch wheels, fixed panoramic glass roof",
+     "V-Tex leatherette, power front seats w/ memory",
+     "Hands-free power liftgate"
+    ]
+   },
+   {
+    "name": "Pro S AWD",
+    "msrp": 54095,
+    "features": [
+     "Dual-motor AWD, 335 hp"
+    ]
+   },
+   {
+    "name": "Pro S Plus",
+    "msrp": 57655,
+    "features": [
+     "Standard AWD only",
+     "21-inch wheels, heated rear outboard seats",
+     "Three-zone climate, 360-degree camera",
+     "Harman Kardon audio"
+    ]
    }
   ],
   "powertrains": [
@@ -44856,18 +45104,40 @@ export const VEHICLES = [
    ]
   },
   "confidence": "medium",
-  "notes": "2026 pricing not announced at time of writing; figures are 2025 model-year MSRPs. VW says the ID.4 gets a mid-2026 model-year update with added features. Touch-slider climate/volume controls.",
+  "notes": "VW dropped the smaller 62 kWh \"Standard\" pack for 2026 — all trims now share the 82 kWh gross/77 kWh usable pack, which is why base price rose ~$5,100 vs 2025. Touch-slider climate/volume controls. 2026-07-31 sweep: expanded the trim ladder from 2 to the real 5 (Pro/Pro S each RWD or AWD, plus AWD-only Pro S Plus). Pro and Pro S RWD/AWD pricing confirmed against a VW dealer order-guide mirror; the Pro S AWD ($54,095) and Pro S Plus ($57,655) figures could not be nailed to the dollar against a primary VW/Edmunds source (both blocked automated fetch) — kept at confidence medium for that reason, not the RWD figures. NHTSA 2026 record confirmed directly (VehicleId 21037 RWD 5-star, VehicleId 21036 AWD 5-star — note the model is indexed as \"ID.4 BEV,\" not \"ID.4,\" in NHTSA's system). IIHS (fetched directly): ratings explicitly carried over from a 2021 ID.4 test, applies to \"2021-26 models,\" no fresh 2026 crash test, no Top Safety Pick award. No hex codes exist for the 6 exterior colors (Arctic Blue Metallic, Deep Black Pearl, Mountain Lake Blue Metallic, Opal White Pearl, Pure Gray, Silver Mist Metallic); interior color naming (\"Nutmeg\"/\"Stone\"/\"Cosmic Black\"/\"Galaxy\") could not be confirmed as current for 2026 vs. carried-over 2023-24 naming, so colors intentionally omitted rather than guessed.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
     "appliesTo": "2026",
     "source": {
-     "label": "NHTSA SafetyRatings API - 2026 Volkswagen ID.4 SUV BEV RWD, OverallRating 5",
+     "label": "NHTSA SafetyRatings API - 2026 Volkswagen ID.4 BEV SUV RWD, OverallRating 5",
      "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21037",
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "NHTSA SafetyRatings API - 2026 Volkswagen ID.4 BEV (RWD + AWD)",
+    "url": "https://api.nhtsa.gov/SafetyRatings/modelyear/2026/make/Volkswagen/model/ID.4%20BEV",
+    "site": "nhtsa.gov"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen ID.4 ratings (carried over from 2021 test)",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/id.4-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 Volkswagen ID.4",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Volkswagen_ID4.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 Volkswagen ID.4 colors",
+    "url": "https://www.carsdirect.com/volkswagen/id-4/2026/colors",
+    "site": "carsdirect.com"
+   }
+  ]
  },
  {
   "id": "volkswagen-jetta",
@@ -44883,19 +45153,38 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "S",
-    "msrp": 23995
+    "msrp": 23995,
+    "features": [
+     "158-hp 1.5L turbo four, 8-speed automatic, FWD",
+     "16-inch wheels"
+    ]
    },
    {
     "name": "Sport",
-    "msrp": 25305
+    "msrp": 25305,
+    "features": [
+     "17-inch wheels, heated front seats",
+     "Blacked-out exterior trim",
+     "Molekular-fabric sport interior"
+    ]
    },
    {
     "name": "SE",
-    "msrp": 26985
+    "msrp": 26985,
+    "features": [
+     "Standard panoramic sunroof",
+     "CloudTex/leatherette seats, power driver's seat",
+     "Keyless entry, remote start, wireless charging"
+    ]
    },
    {
     "name": "SEL",
-    "msrp": 29995
+    "msrp": 29995,
+    "features": [
+     "Vienna leather, heated rear seats & steering wheel",
+     "10.25-inch Digital Cockpit Pro, navigation",
+     "Ventilated front seats, 18-inch wheels"
+    ]
    }
   ],
   "powertrains": [
@@ -44908,7 +45197,7 @@ export const VEHICLES = [
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 35,
+    "mpgCombined": 33,
     "evRangeMi": null
    }
   ],
@@ -44950,7 +45239,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI).",
+  "notes": "Refreshed styling for 2025 carries into 2026. Manual transmission dropped from the base Jetta (still offered on GLI). 2026-07-31 sweep: trim names and pricing confirmed exactly against VW's dealer order guide. mpgCombined is 34 on S (16-inch wheels) and 33 on Sport/SE/SEL (17-18-inch wheels), an EPA-documented wheel-size effect (fueleconomy.gov, VehicleIds 49269/49270); 33 recorded as the representative figure. IIHS (fetched directly): Good small-overlap front, Acceptable side, Marginal pedestrian front crash prevention, Poor seat belt reminders — no Top Safety Pick award. No hex codes exist for the 8 exterior colors; colors intentionally omitted.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -44961,7 +45250,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Volkswagen Jetta price increase coverage",
+    "url": "https://www.carsdirect.com/automotive-news/2026-volkswagen-jetta-price-increasing-nearly-5",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 Volkswagen Jetta",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Volkswagen_Jetta.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Jetta ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/jetta-4-door-sedan/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "volkswagen-jetta-gli",
@@ -44977,7 +45283,13 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Autobahn",
-    "msrp": 33745
+    "msrp": 33745,
+    "features": [
+     "228-hp 2.0L turbo four",
+     "DCC adaptive chassis control, VAQ limited-slip diff",
+     "6-speed manual or 7-speed DSG, same price either way",
+     "Vienna leather, red brake calipers"
+    ]
    }
   ],
   "powertrains": [
@@ -44990,7 +45302,7 @@ export const VEHICLES = [
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 30,
+    "mpgCombined": 29,
     "evRangeMi": null
    }
   ],
@@ -45032,7 +45344,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Sold in a single loaded Autobahn trim. One of the last affordable sedans still offered with a manual gearbox.",
+  "notes": "Sold in a single loaded Autobahn trim. One of the last affordable sedans still offered with a manual gearbox (DSG-only additions: adaptive cruise Stop&Go, Emergency Assist, remote start, paddle shifters). 2026-07-31 sweep: confirmed both manual and DSG carry the identical $33,745 price (VW order guide). mpgCombined confirmed 29 for both transmissions on fueleconomy.gov (VehicleIds 49267/49268). IIHS has no GLI-specific 2026 ratings page; it's rated under the shared Jetta sedan listing (same Good/Acceptable/Marginal/Poor pattern, no Top Safety Pick) per IIHS's own \"applies to 2019-26 models\" language. No hex codes exist for the 5 exterior colors; colors intentionally omitted.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -45043,7 +45355,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Volkswagen Jetta GLI research",
+    "url": "https://www.cars.com/research/volkswagen-jetta_gli-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 Volkswagen Jetta GLI",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Volkswagen_Jetta_GLI.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "volkswagen-taos",
@@ -45055,19 +45379,43 @@ export const VEHICLES = [
   "segment": "subcompact SUV",
   "category": "suv",
   "priceFrom": 26500,
-  "priceTo": 35950,
+  "priceTo": 35900,
   "trims": [
    {
     "name": "S",
-    "msrp": 26500
+    "msrp": 26500,
+    "features": [
+     "174-hp 1.5L turbo four, 8-speed automatic",
+     "17-inch wheels, heated steering wheel",
+     "Wireless Apple CarPlay/Android Auto"
+    ]
    },
    {
-    "name": "S 4Motion",
-    "msrp": 28200
+    "name": "SE",
+    "msrp": 29260,
+    "features": [
+     "Adaptive headlights, keyless entry/start, remote start",
+     "CloudTex synthetic-leather seats, power driver's seat",
+     "Dual-zone climate, wireless charging"
+    ]
    },
    {
-    "name": "SEL 4Motion",
-    "msrp": 35950
+    "name": "SE Black",
+    "msrp": 31510,
+    "features": [
+     "Standard panoramic moonroof",
+     "Blacked-out roof, wheels, mirror housings",
+     "All-black interior décor"
+    ]
+   },
+   {
+    "name": "SEL",
+    "msrp": 35900,
+    "features": [
+     "Standard 4Motion AWD, 19-inch wheels",
+     "Leather upholstery, ventilated front seats",
+     "Navigation, road-sign recognition"
+    ]
    }
   ],
   "powertrains": [
@@ -45123,7 +45471,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. Top-trim SEL 4Motion price is approximate (advertised prices vary on destination inclusion). AWD combined mpg is about 28.",
+  "notes": "174-hp engine and 8-speed automatic on all trims since the 2025 refresh. 2026-07-31 sweep: expanded the trim ladder from 3 to the real 4 (added SE Black between SE and SEL, per VW's own press kit) and corrected the SEL ceiling from an unverified $35,950 to the confirmed $35,900. mpgCombined is 31 FWD, 28 4Motion AWD (fueleconomy.gov); 31 recorded as the representative FWD figure. IIHS (fetched directly, 2026-specific page): moderate overlap front is Marginal and front crash prevention (vehicle-to-vehicle) is Poor under IIHS's updated/harder protocol — a real regression vs. the 2022 MY's better scores, not stale data; no Top Safety Pick award. No hex codes exist for the 8 exterior colors; all interior options read visually dark (no light-toned interior offered on any trim) — colors intentionally omitted for lack of hex values.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -45134,7 +45482,29 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "How Much Is the 2026 Volkswagen Taos?",
+    "url": "https://www.cars.com/articles/how-much-is-the-2026-volkswagen-taos-519838/",
+    "site": "cars.com"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Taos ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/taos-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "NHTSA SafetyRatings API - 2026 Volkswagen Taos",
+    "url": "https://api.nhtsa.gov/SafetyRatings/modelyear/2026/make/volkswagen/model/taos",
+    "site": "nhtsa.gov"
+   },
+   {
+    "label": "2026 Volkswagen Taos colors",
+    "url": "https://www.carsdirect.com/volkswagen/taos/2026/colors",
+    "site": "carsdirect.com"
+   }
+  ]
  },
  {
   "id": "volkswagen-tiguan",
@@ -45146,15 +45516,44 @@ export const VEHICLES = [
   "segment": "compact SUV",
   "category": "suv",
   "priceFrom": 30805,
-  "priceTo": 44135,
+  "priceTo": 44560,
   "trims": [
    {
     "name": "S",
-    "msrp": 30805
+    "msrp": 30805,
+    "features": [
+     "201-hp 2.0L turbo four, 8-speed automatic, FWD",
+     "12.9-inch touchscreen, 10.25-inch Digital Cockpit Pro",
+     "Wireless charging, heated front seats"
+    ]
    },
    {
-    "name": "SEL R-Line Turbo 4Motion",
-    "msrp": 44135
+    "name": "SE",
+    "msrp": 33605,
+    "features": [
+     "19-inch wheels",
+     "V-Tex synthetic leather, 8-way power driver's seat",
+     "Dual-zone climate control"
+    ]
+   },
+   {
+    "name": "SE R-Line Black",
+    "msrp": 37245,
+    "features": [
+     "20-inch R-Line black wheels",
+     "Panoramic sunroof, head-up display",
+     "Illuminated door handles, black-out styling"
+    ]
+   },
+   {
+    "name": "SEL R-Line Turbo",
+    "msrp": 43085,
+    "features": [
+     "268-hp 2.0L turbo (EA888 evo5), standard 4Motion AWD",
+     "Walnut wood trim, quilted Varenna leather",
+     "Ventilated & massaging front seats, Harman Kardon audio",
+     "15-inch touchscreen, tri-zone climate"
+    ]
    }
   ],
   "powertrains": [
@@ -45238,7 +45637,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Third generation launched for 2025 (five seats only, no more third row). 2026 adds 268-hp SEL R-Line Turbo flagship; that trim's price is approximate pending official destination-exclusive figure. Most controls are touchscreen-based with a rotary driving-experience dial.",
+  "notes": "Third generation launched for 2025 (five seats only, no more third row). Most controls are touchscreen-based with a rotary driving-experience dial. 2026-07-31 sweep: expanded the trim ladder from 2 to the real 4 (S/SE/SE R-Line Black/SEL R-Line Turbo) and corrected the top price from an unverified $44,135 to the confirmed $44,560 (base $43,085 + $1,475 destination). AWD (4Motion) is +$1,500 on S/SE/SE R-Line Black, standard on SEL R-Line Turbo. IIHS (fetched directly, 2026-specific): small overlap front and side both Good, front crash prevention Good — but moderate overlap front is Poor under IIHS's newer rear-dummy protocol, which is why the redesigned Tiguan misses a 2026 award (confirmed independently via IIHS's own news post on the same miss for the Honda CR-V). No hex codes exist for the 8 exterior colors; interior options are Grigio & Black (medium/dark), Mistral (light gray), Crystal Gray (medium-dark), and Amber Brown on SEL R-Line Turbo (medium-dark warm) — colors intentionally omitted for lack of hex values.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -45268,7 +45667,29 @@ export const VEHICLES = [
      "site": "Edmunds"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Volkswagen Tiguan Trim Levels and Prices",
+    "url": "https://www.spitzervw.com/vw-research/2026-tiguan-trim-levels-and-prices/",
+    "site": "spitzervw.com"
+   },
+   {
+    "label": "IIHS 2026 Volkswagen Tiguan ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/volkswagen/tiguan-4-door-suv/2026",
+    "site": "iihs.org"
+   },
+   {
+    "label": "Better headlights boost... (Tiguan/CR-V miss updated moderate overlap)",
+    "url": "https://www.iihs.org/news/detail/better-headlights-boost-volkswagen-tiguan-to-highest-award",
+    "site": "iihs.org"
+   },
+   {
+    "label": "2026 Volkswagen Tiguan research",
+    "url": "https://www.cars.com/research/volkswagen-tiguan-2026/",
+    "site": "cars.com"
+   }
+  ]
  },
  {
   "id": "volvo-ex30",
