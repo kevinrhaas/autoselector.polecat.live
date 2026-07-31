@@ -159,7 +159,33 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  90 models done so far (2026-07-28, +5, js/changelog.js v73: bmw-x1 (U11,
+  95 models done so far (2026-07-31, +5, js/changelog.js v77: nissan-kicks
+  (P16, explicitly captioned "(United States)" SR AWD), toyota-crown (2023+
+  crossover-sedan generation, its only US generation to date), kia-ev9
+  (GT-Line, single generation since 2023 launch), mazda-cx-90 (2024 Turbo
+  Exclusive HEV, KK-platform generation unchanged through 2026) and gmc-canyon
+  (Denali, third-generation 2023+ unchanged through 2026) — all interior
+  shots, found via the Commons search API, generation/spec confirmed against
+  each file's own Commons description before shipping, every URL live-checked
+  with curl. Checked but held back this run for a generation mismatch or
+  unconfirmed currency (never guess): hyundai-ioniq-5 (the one Commons
+  interior shot is captioned "NE1 PE" with GPS coordinates placing it in the
+  Philippines — facelift code and regional spec both unconfirmed for US
+  currency), kia-ev6 (Commons' GT-Line interior shot has no generation/year
+  info in its description, so the pre- vs post-2025-facelift cabin can't be
+  confirmed), audi-a3 (the only Commons interior shot is explicitly titled
+  "Pre-Facelifted" — the current listing already reflects the 2024+ facelift
+  dash), volkswagen-golf-gti (the one dated interior shot was taken Nov 2022,
+  before the Golf's 2024 facelift restored physical climate/volume sliders —
+  can't confirm which dash it shows), jeep-gladiator (only a 2022 Willys
+  Edition shot exists — Gladiator's Uconnect 5 upgrade rolled out gradually
+  starting around that same model year, so currency is unconfirmed) and
+  dodge-durango (Commons' one interior result is from the 2013 New York Auto
+  Show, over a decade before the current 2021+ facelift). No Commons interior
+  shot exists at all for: subaru-solterra, infiniti-qx60, volkswagen-taos,
+  bmw-3-series (any generation), toyota-sequoia (2023+ redesign) and
+  honda-prelude (the 2025-2026 revival — Commons only has 1980s-90s originals
+  so far). Previous batch (2026-07-28, +5, js/changelog.js v73: bmw-x1 (U11,
   explicitly captioned USDM), bmw-x5 (G05 LCI, the current Curved Display
   dash — an older pre-LCI shot was found and rejected first), bmw-x7 (G07,
   post-LCI Curved Display interior), cadillac-lyriq (L233, its one generation

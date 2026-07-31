@@ -15500,10 +15500,19 @@ export const VEHICLES = [
   "towingLb": 7700,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_GMC_Canyon.jpg",
-   "credit": "42-BRT"
+   "credit": "42-BRT",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/2023_GMC_Canyon_Denali_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_GMC_Canyon_Denali_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Confirmed and corrected mid-year MSRPs 2026-07-28 (all excluding destination): Elevation unchanged at $38,900; AT4 raised from $44,300 to $45,400; Denali raised from $52,300 to $53,000; AT4X corrected to $57,200. Destination freight charge confirmed at $2,095, unchanged.",
+  "notes": "Crew cab / short bed only; 310 hp TurboMax standard. Confirmed and corrected mid-year MSRPs 2026-07-28 (all excluding destination): Elevation unchanged at $38,900; AT4 raised from $44,300 to $45,400; Denali raised from $52,300 to $53,000; AT4X corrected to $57,200. Destination freight charge confirmed at $2,095, unchanged. 2026-07-31: interior gallery photo added — Denali cabin, third-generation Canyon (2023+) sold unchanged through 2026.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -24062,10 +24071,19 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Kia_EV9_GT-Line_-_interior_view.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Kia_EV9_GT-Line_-_interior_view.jpg"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Base and top prices ($54,900 / $71,900) re-confirmed exactly via Kia's own 2026 pricing page. Expanded the trim ladder from 2 to 5 (Light RWD, Light LR RWD, Wind AWD, Land AWD, GT-Line AWD) to show the full lineup; range/MPGe vary by battery and wheels. Built in Georgia.",
+  "notes": "Base and top prices ($54,900 / $71,900) re-confirmed exactly via Kia's own 2026 pricing page. Expanded the trim ladder from 2 to 5 (Light RWD, Light LR RWD, Wind AWD, Land AWD, GT-Line AWD) to show the full lineup; range/MPGe vary by battery and wheels. Built in Georgia. 2026-07-31: interior gallery photo added — GT-Line cabin, single generation since 2023 launch (no redesign for 2026).",
   "sources": [
    {
     "label": "2026 EV9 MSRP",
@@ -31036,10 +31054,19 @@ export const VEHICLES = [
   "towingLb": 5000,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Mazda%20CX-90%20(KK)%20Washington%20DC%20Metro%20Area,%20USA.jpg?width=1280",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Mazda_CX-90_3.3_e-Skyactiv-G_AWD_HEV_Turbo_Exclusive_2024_%28interior%29.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Mazda_CX-90_3.3_e-Skyactiv-G_AWD_HEV_Turbo_Exclusive_2024_(interior).jpg"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row.",
+  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row. 2026-07-31: interior gallery photo added — 2024 Turbo Exclusive HEV cabin, same KK-platform generation sold unchanged through 2026.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -35055,10 +35082,19 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/0/07/Nissan_Kicks_%28P16%29_DSC_2875.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/2025_Nissan_Kicks_SR_AWD_%28United_States%29_interior.png",
+     "kind": "interior",
+     "credit": "Autosdeprimera",
+     "license": "CC BY 3.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Kicks_SR_AWD_(United_States)_interior.png"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD. 2026-07-28 verification: all four trim MSRPs re-confirmed exact, no changes; per-trim features added.",
+  "notes": "Second-generation Kicks (introduced 2025). The old-generation budget 'Kicks Play' was dropped for 2026. Cargo is 30.0 cu ft FWD, 23.9 cu ft AWD. 2026-07-28 verification: all four trim MSRPs re-confirmed exact, no changes; per-trim features added. 2026-07-31: interior gallery photo added — explicitly captioned \"(United States)\" SR AWD trim, confirmed second-generation P16 platform.",
   "ratings": {
    "safety": {
     "nhtsa": 4,
@@ -42269,10 +42305,19 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2023_Toyota_Crown_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Crown_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
-  "notes": "Standard AWD across the lineup. Added a new-for-2026 Nightshade trim (blacked-out styling) between Limited and Platinum. XLE/Limited/Nightshade use the 236-hp standard hybrid (41 mpg combined); Platinum uses the 340-hp Hybrid Max system (30 mpg combined). Prices verified: $41,440/$45,950/$48,765/$54,990 before destination.",
+  "notes": "Standard AWD across the lineup. Added a new-for-2026 Nightshade trim (blacked-out styling) between Limited and Platinum. XLE/Limited/Nightshade use the 236-hp standard hybrid (41 mpg combined); Platinum uses the 340-hp Hybrid Max system (30 mpg combined). Prices verified: $41,440/$45,950/$48,765/$54,990 before destination. 2026-07-31: interior gallery photo added — dashboard of a 2023 Crown XLE, the same US-market crossover-sedan generation sold unchanged through 2026 (no redesign since launch).",
   "sources": [
    {
     "label": "2026 Crown model page",
