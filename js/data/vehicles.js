@@ -10826,11 +10826,28 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "Pop",
-    "msrp": 35700
+    "msrp": 35700,
+    "features": [
+     "Body-color dashboard (new for 2026)",
+     "17-inch aluminum wheels, all-season tires",
+     "Uconnect 5 Nav with 10.25-inch touchscreen",
+     "LED headlamps and taillights",
+     "ParkView backup camera"
+    ]
    },
    {
     "name": "Icona",
-    "msrp": 37700
+    "msrp": 37700,
+    "features": [
+     "Pearl dashboard standard regardless of exterior color",
+     "Vegan leather upholstery",
+     "Heated front seats",
+     "Power-adjustable, heated exterior mirrors",
+     "Blind-spot monitoring and rear cross-traffic alert",
+     "Adaptive cruise control with lane-centering assist",
+     "Front and side parking sensors",
+     "Automatic high-beam headlights"
+    ]
    }
   ],
   "powertrains": [
@@ -10876,8 +10893,8 @@ export const VEHICLES = [
    "Fixed glass roof",
    "Wireless Apple CarPlay/Android Auto",
    "10.25-inch touchscreen",
-   "Level 2 home charger promotions",
-   "Advanced driver assistance package"
+   "Active Driving Assist ($1,250 option)",
+   "NACS port — Tesla Supercharger network access via adapter"
   ],
   "towingLb": null,
   "image": {
@@ -10885,7 +10902,24 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Fiat's only US model for 2026; tariffs pushed base price up several thousand dollars from the 2025 car's $32,500. 149-mile EPA range, DC fast charge to 80% in about 35 minutes; very slow seller, heavy discounts common. Image shows the closely related Cabrio version."
+  "notes": "Fiat's only US model for 2026, arriving summer 2026. Re-verified 2026-07-31: Pop $35,700 / Icona $37,700 (both + $1,995 destination) and the 149-mile EPA range/116 MPGe combined were independently confirmed exact matches across Stellantis's own press release and fueleconomy.gov — no changes from the prior figures. Pricing is a $5,200/17% jump from the outgoing car's $30,500 base; a CarsDirect report flagged tariffs as a possible but unconfirmed cause. New for 2026: a body-color dashboard on Pop (pearl stays standard on Icona), a Miami Sunset color option, and Active Driving Assist un-bundled from the old $2,000 Icona-only package into a standalone $1,250 option. No 2026 NHTSA record exists (api.nhtsa.gov returns an empty result set for FIAT 500e MY2026) and no 2026 IIHS test page was found (iihs.org 404s; only a 2016-model-year 500e is in their archive) — checked both directly, nothing guessed. fiatusa.com, kbb.com, truecar.com and cars.usnews.com all blocked or timed out on automated fetches, so citations lean on Stellantis's own newsroom release plus fueleconomy.gov and CarsDirect instead. Image shows the closely related Cabrio version.",
+  "sources": [
+   {
+    "label": "Stellantis Media - 2026 Fiat 500e: 100% Electric, 100% Italian",
+    "url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=27662&mid=1",
+    "site": "media.stellantisnorthamerica.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 FIAT 500e",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=FIAT&model=500e&mpgUnit=1",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "CarsDirect - 2026 Fiat 500e Hit With $5,200 Price Increase",
+    "url": "https://www.carsdirect.com/automotive-news/2026-fiat-500e-hit-with-5-200-price-increase",
+    "site": "carsdirect.com"
+   }
+  ]
  },
  {
   "id": "ford-bronco",
