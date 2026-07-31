@@ -21,6 +21,18 @@
 
 export const CHANGELOG = [
   {
+    v: 75,
+    title: 'Audi lineup re-verified — two models found to skip the 2026 model year entirely',
+    kind: 'data',
+    ts: '',
+    items: [
+      'All 12 Audi models re-verified against Audi\'s own pricing, NHTSA and IIHS. Every trim ladder was undercounted — A5/S5 grew from 3 to 7 trims, Q5/SQ5 from 2 to 6, Q7 from 2 to 7, Q8 from 3 to 6, A3 from 3 to 5 (a new "Premium Plus S line plus" trim), A6 from 1 to 3, Q4 e-tron from 2 to 4.',
+      'Real discovery: the A6 Sportback e-tron and the Q6 e-tron both skip the 2026 model year in the US entirely — Audi jumps straight from 2025 to 2027 for both. Both records now show the real, current 2027 pricing instead of a stale or fabricated 2026 figure.',
+      'Real pricing correction: RS Q8 performance is actually $138,300, well below the stale $146,000 on file. Audi\'s real destination charge is $1,295, correcting a prior $1,495 assumption on A6/A8/Q5. IIHS corrected: Q7 earns Top Safety Pick (not Plus); Q4 e-tron\'s "Poor" moderate-overlap rating disqualifies it from any award; A3 doesn\'t qualify either — all checked directly on iihs.org, nothing guessed.',
+      'Per-trim features and a sources array added to every model. Colors intentionally omitted fleet-wide — confirmed no Audi model publishes hex swatch values anywhere public.',
+    ],
+  },
+  {
     v: 74,
     title: 'Volkswagen lineup re-verified — real trim ladders for all 10 models',
     kind: 'data',

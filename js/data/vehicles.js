@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 43;
+export const DATA_VERSION = 44;
 
 export const VEHICLES = [
  {
@@ -1578,15 +1578,45 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "A3 Premium",
-    "msrp": 40100
+    "msrp": 40100,
+    "features": [
+     "201-hp 2.0L turbo four, quattro AWD, 7-speed S tronic",
+     "18-inch wheels, heated front seats"
+    ]
    },
    {
-    "name": "S3 Premium",
-    "msrp": 50800
+    "name": "A3 Premium Plus",
+    "msrp": 43000,
+    "features": [
+     "Bang & Olufsen audio, 360-degree camera",
+     "Automated parking, adaptive cruise with lane centering"
+    ]
+   },
+   {
+    "name": "A3 Premium Plus S line plus",
+    "msrp": 45700,
+    "features": [
+     "New trim for 2026",
+     "Sport front seats with S embossing, aluminum inlays",
+     "Stainless-steel pedals, unique wheels, lowered suspension"
+    ]
+   },
+   {
+    "name": "S3",
+    "msrp": 52000,
+    "features": [
+     "328-hp 2.0L turbo four, quattro AWD",
+     "Now the only S3 trim for 2026 (was 3 trims in 2025)",
+     "Synthetic-leather sport seats, head-up display, carbon interior trim"
+    ]
    },
    {
     "name": "RS 3",
-    "msrp": 66100
+    "msrp": 66100,
+    "features": [
+     "401-hp 2.5L turbo I5, quattro AWD",
+     "Matrix LED headlights, Nappa leather"
+    ]
    }
   ],
   "powertrains": [
@@ -1664,8 +1694,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "S3 and RS 3 performance variants included as trims. Quattro AWD standard across the range. Pricing sources vary slightly (A3 approx $40,100; S3 approx $50,800-$52,000); RS 3 $66,100 per Audi USA."
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: real trim ladder confirmed at 5 trims (was 3) — a new-for-2026 \"A3 Premium Plus S line plus\" trim was added between Premium Plus and S3 ($45,700), and the S3 was pruned from 3 trims down to just one for 2026 ($52,000, down from the previous $50,800 3-trim spread). RS 3 unchanged at $66,100. Checked IIHS directly: the 2026 A3 sedan does NOT earn a Top Safety Pick/Pick+ (Marginal side-crash structure/pelvis injury measures, Poor seat belt reminders) — no rating added, nothing guessed. NHTSA has no 2026 A3 record (\"Not Rated\" across every category, confirmed via api.nhtsa.gov). Quattro AWD standard across the range. audiusa.com blocked automated fetches (403); citations lean on Cars.com's dedicated A3 pricing article and cars.usnews.com.",
+  "sources": [
+   {
+    "label": "How Much Is the 2026 Audi A3? - Cars.com",
+    "url": "https://www.cars.com/articles/how-much-is-the-2026-audi-a3-516669/",
+    "site": "cars.com"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi A3 4-door sedan",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/a3-4-door-sedan/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-a5",
@@ -1677,19 +1719,52 @@ export const VEHICLES = [
   "segment": "compact luxury sedan",
   "category": "car",
   "priceFrom": 50200,
-  "priceTo": 63700,
+  "priceTo": 70900,
   "trims": [
    {
     "name": "A5 Premium",
-    "msrp": 50200
+    "msrp": 50200,
+    "features": [
+     "268-hp 2.0L turbo four, quattro AWD",
+     "11.9-in digital cluster + 14.5-in touchscreen curved display",
+     "Heated front seats, 18-inch wheels"
+    ]
+   },
+   {
+    "name": "A5 Premium Plus",
+    "msrp": 52700,
+    "features": [
+     "Dimmable panoramic sunroof",
+     "Surround-view camera, Bang & Olufsen audio"
+    ]
    },
    {
     "name": "A5 Prestige",
-    "msrp": 56700
+    "msrp": 56700,
+    "features": [
+     "Heated rear seats, ventilated front seats",
+     "Passenger-side infotainment display",
+     "OLED headlight/taillight animations"
+    ]
    },
    {
     "name": "S5 Premium",
-    "msrp": 63700
+    "msrp": 63300,
+    "features": [
+     "362-hp 3.0L turbo V6, quattro AWD",
+     "19-inch wheels, sport suspension, red brake calipers"
+    ]
+   },
+   {
+    "name": "S5 Premium Plus",
+    "msrp": 66200
+   },
+   {
+    "name": "S5 Prestige",
+    "msrp": 70900,
+    "features": [
+     "Adaptive dampers"
+    ]
    }
   ],
   "powertrains": [
@@ -1755,8 +1830,8 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "All-new generation replaced the A4 sedan; body is a five-door liftback. S5 included as performance variant (price approximate). Nearly all controls are on the touchscreen.",
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: full 3-trim A5 ladder confirmed (Premium/Premium Plus/Prestige at $50,200/$52,700/$56,700, all before the $1,295 destination charge) plus per-trim feature deltas; S5 grew from a single listed trim to its real 3-trim ladder (Premium $63,300, Premium Plus $66,200, Prestige $70,900 — Premium corrected slightly from $63,700). All-new generation replaced the A4 sedan; body is a five-door liftback. Nearly all controls are on the touchscreen. audiusa.com blocked automated fetches (403); citations lean on Cars.com and cars.usnews.com trim-comparison pages.",
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick+",
@@ -1767,7 +1842,24 @@ export const VEHICLES = [
      "site": "iihs.org"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Audi A5 Review, Pricing, & Pictures - U.S. News",
+    "url": "https://cars.usnews.com/cars-trucks/audi/a5",
+    "site": "cars.usnews.com"
+   },
+   {
+    "label": "2026 Audi A5 Trims Comparison - Edmunds",
+    "url": "https://www.edmunds.com/audi/a5/2026/trims/",
+    "site": "edmunds.com"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi A5 4-door sedan",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/a5-4-door-sedan/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-a6",
@@ -1778,12 +1870,34 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "midsize luxury sedan",
   "category": "car",
-  "priceFrom": 63900,
-  "priceTo": null,
+  "priceFrom": 64100,
+  "priceTo": 71400,
   "trims": [
    {
     "name": "Premium",
-    "msrp": 63900
+    "msrp": 64100,
+    "features": [
+     "362-hp 3.0L turbo V6 mild hybrid, quattro AWD standard",
+     "Curved OLED display, heated front seats"
+    ]
+   },
+   {
+    "name": "Premium Plus",
+    "msrp": 67500,
+    "features": [
+     "Enhanced adaptive cruise assist with lane centering",
+     "4-zone automatic climate control",
+     "360-degree camera system"
+    ]
+   },
+   {
+    "name": "Prestige",
+    "msrp": 71400,
+    "features": [
+     "Customizable digital OLED taillights",
+     "Front passenger dashboard display",
+     "Adaptive air suspension"
+    ]
    }
   ],
   "powertrains": [
@@ -1837,8 +1951,8 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "All-new generation gas A6 sedan for 2026 with 362-hp V6 (published start price of $65,395 appears to include $1,495 destination; $63,900 used here). Upper-trim pricing and EPA figures not yet confirmed. No gas S6 offered; S6 continues only as the S6 e-tron EV.",
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: real trim ladder confirmed (Premium/Premium Plus/Prestige) — was showing a single Premium trim with priceTo null. Corrected the destination-fee assumption: prior note guessed $1,495 destination; Audi's actual 2026 destination charge is $1,295 (confirmed across A3/A5/Q5/Q7/Q8 sweeps this run), so Premium's base MSRP is $64,100, not $63,900 — independently cross-checked against a direct '$64,100' quote from AutoFinder. Premium Plus ($67,500) and Prestige ($71,400) are new. No gas S6 offered; S6 continues only as the S6 e-tron EV. audiusa.com blocked automated fetches (403); citations lean on CarsDirect, AutoFinder and cars.usnews.com trim-comparison summaries.",
   "ratings": {
    "safety": {
     "iihs": "Top Safety Pick+",
@@ -1849,7 +1963,24 @@ export const VEHICLES = [
      "site": "iihs.org"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Audi A6 Price from $64,100 - AutoFinder",
+    "url": "https://autofinder.com/cars/audi/a6/2026",
+    "site": "autofinder.com"
+   },
+   {
+    "label": "2026 Audi A6: Reviews, Prices, Ratings and Specs - CarsDirect",
+    "url": "https://www.carsdirect.com/audi/a6/2026",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi A6 4-door sedan",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/a6-4-door-sedan/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-a6-e-tron",
@@ -1860,23 +1991,48 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "midsize electric luxury sedan",
   "category": "car",
-  "priceFrom": 65900,
-  "priceTo": 78900,
+  "priceFrom": 66700,
+  "priceTo": 79600,
   "trims": [
    {
     "name": "A6 Sportback e-tron Premium",
-    "msrp": 65900
+    "msrp": 66700,
+    "features": [
+     "362-hp single-motor RWD (375 hp with launch control)",
+     "94.4 kWh net battery, 800-volt architecture"
+    ]
    },
    {
-    "name": "S6 Sportback e-tron",
-    "msrp": 78900
+    "name": "A6 Sportback e-tron Premium Plus",
+    "msrp": 70000,
+    "features": [
+     "Surround-view camera",
+     "Adaptive cruise control with traffic-jam assist",
+     "Integrated Audi dashcam standard"
+    ]
+   },
+   {
+    "name": "A6 Sportback e-tron Prestige",
+    "msrp": 74600,
+    "features": [
+     "Augmented-reality head-up display",
+     "Remote Park Assist Pro, rear emergency brake assist",
+     "Digital OLED taillights, 3D top-view camera"
+    ]
+   },
+   {
+    "name": "S6 Sportback e-tron Premium Plus",
+    "msrp": 79600,
+    "features": [
+     "543-hp dual-motor quattro AWD"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "ev",
-    "engine": "Single-motor RWD",
-    "hp": 375,
+    "engine": "Single-motor RWD (362 hp continuous, 375 hp with launch control)",
+    "hp": 362,
     "transmission": "1-speed direct",
     "manualAvailable": false,
     "drive": [
@@ -1936,7 +2092,35 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "Audi USA jumps this model from 2025 directly to 2027 model year; cars sold new during 2026 are 2025 carryover stock. Prices shown are 2025 MSRPs (S6 e-tron approximate). Up to 392 miles EPA range (RWD with base wheels)."
+  "notes": "2026-07-31 sweep: confirmed via Automotive News and Autoblog that Audi genuinely skipped the 2026 model year for this nameplate (and for the Q6 e-tron) — \"rather than initiating a very short model year run of 2026 vehicles, we elected to skip that model year and introduce the 2027 model year in the U.S. early.\" fueleconomy.gov and NHTSA both have zero entries for a 2026 (or even 2025) A6/S6 Sportback e-tron, corroborating there's no true 2026 record. Since 2026 buyers are actually being sold the 2027 model (2027 arrived Q2 2026; earlier 2025 carryover has sold through), this record now shows the real, current 2027 trim ladder rather than stale 2025 figures: A6 Sportback e-tron grew from 2 trims to its real 4 (Premium/Premium Plus/Prestige at $66,700/$70,000/$74,600, S6 Sportback e-tron Premium Plus at $79,600, all before the $1,295 destination charge). S6 Sportback e-tron Prestige pricing could not be found in any source checked — left out rather than guessed. Single-motor RWD output corrected to 362 hp continuous (375 hp is a launch-control-only peak). EV range figures are still the 2025-model values pending 2027 EPA publication (fueleconomy.gov has no 2027 A6 e-tron entry yet). IIHS Top Safety Pick+ (below) is for the 2027 model, the one actually being sold. audiusa.com blocked automated fetches (403); citations lean on CarGurus and CarsDirect.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2027",
+    "source": {
+     "label": "IIHS ratings — 2027 Audi A6 Sportback e-tron (the model actually sold during 2026)",
+     "url": "https://www.iihs.org/ratings/vehicle/audi/a6-sportback-e-tron/2027",
+     "site": "iihs.org"
+    }
+   }
+  },
+  "sources": [
+   {
+    "label": "Audi skips 2026 model year on A6 Sportback E-tron, Q6 E-tron - Automotive News",
+    "url": "https://www.autonews.com/volkswagen/audi/an-audi-a6-q6-skips-2026-0217/",
+    "site": "autonews.com"
+   },
+   {
+    "label": "2027 Audi A6 Sportback e-tron pricing - CarGurus",
+    "url": "https://www.cargurus.com/research/articles/2027-audi-a6-sportback-e-tron-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "IIHS ratings — 2027 Audi A6 Sportback e-tron",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/a6-sportback-e-tron/2027",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-a8",
@@ -1947,16 +2131,23 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "full-size luxury sedan",
   "category": "car",
-  "priceFrom": 94900,
-  "priceTo": 127000,
+  "priceFrom": 95100,
+  "priceTo": 130000,
   "trims": [
    {
     "name": "A8 L",
-    "msrp": 94900
+    "msrp": 95100,
+    "features": [
+     "335-hp 3.0L mild-hybrid V6, quattro AWD, adaptive air suspension",
+     "Optional Executive Plus package: adaptive cruise, Matrix LED headlights, HUD, massaging heated/ventilated rear seats"
+    ]
    },
    {
     "name": "S8",
-    "msrp": 127000
+    "msrp": 130000,
+    "features": [
+     "563-hp 4.0L twin-turbo V8, 590 lb-ft"
+    ]
    }
   ],
   "powertrains": [
@@ -1969,7 +2160,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 21,
+    "mpgCombined": 22,
     "evRangeMi": null
    },
    {
@@ -1981,7 +2172,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 17,
+    "mpgCombined": 18,
     "evRangeMi": null
    }
   ],
@@ -2022,8 +2213,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "US market gets long-wheelbase A8 L only; S8 uses standard wheelbase. Nearing end of life with no direct successor announced. Base price derived from published $96,395 figure less $1,495 destination; S8 price approximate."
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: confirmed both A8 L ($95,100, was $94,900) and S8 ($130,000, was an approximate $127,000) as firm, single-trim base MSRPs (Audi's real destination fee is $1,295, not the $1,495 previously assumed — corrected). US market gets long-wheelbase A8 L only; S8 uses standard wheelbase; former Luxury/Executive packages merged into a new Executive Plus option package for 2026. EPA mpg corrected to 22 combined (A8) and 18 combined (S8), confirmed directly on fueleconomy.gov. NHTSA has both on file (VehicleId 21008/21009) but \"Not Rated\" across every category — no crash-test data exists. No IIHS rating page exists for either (not unusual for this low-volume a segment). Nearing end of life: Germany closed A8 order books Feb 18 2026, no direct successor currently planned (Audi's flagship sedan is expected to return \"at the end of the decade\" per CEO Gernot Döllner). audiusa.com blocked automated fetches (403); citations lean on Cars.com's dedicated A8/S8 pricing pages.",
+  "sources": [
+   {
+    "label": "2026 Audi A8 - Specs, Prices, MPG, Reviews & Photos - Cars.com",
+    "url": "https://www.cars.com/research/audi-a8-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 Audi A8 / S8",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&year1=2026&year2=2026&make=Audi&baseModel=A8",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "audi-e-tron-gt",
@@ -2039,15 +2242,27 @@ export const VEHICLES = [
   "trims": [
    {
     "name": "S e-tron GT Premium Plus",
-    "msrp": 127700
+    "msrp": 127700,
+    "features": [
+     "670-hp dual-motor quattro AWD, 97 kWh net battery",
+     "All-wheel steering, adaptive air suspension",
+     "Matrix-design LED headlights/taillights with dynamic turn signals"
+    ]
    },
    {
     "name": "S e-tron GT Prestige",
-    "msrp": 137000
+    "msrp": 137000,
+    "features": [
+     "Dinamica headliner, panoramic glass roof",
+     "Audi Laserlight front lighting with rear animations"
+    ]
    },
    {
     "name": "RS e-tron GT performance",
-    "msrp": 170500
+    "msrp": 170500,
+    "features": [
+     "912-hp dual-motor quattro AWD"
+    ]
    }
   ],
   "powertrains": [
@@ -2060,7 +2275,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 84,
+    "mpgCombined": 90,
     "evRangeMi": 300
    },
    {
@@ -2072,7 +2287,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 82,
+    "mpgCombined": 84,
     "evRangeMi": 278
    }
   ],
@@ -2113,8 +2328,20 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Shares J1 platform with Porsche Taycan; 2025 refresh dropped the base trim, leaving S and RS performance. Small frunk in addition to rear trunk. Some published prices may include destination."
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: confirmed the plain \"e-tron GT\" base trim really was dropped in the 2025 refresh (InsideEVs) — fueleconomy.gov's full 2026 Audi model list has entries only for \"S e-tron GT\" and \"RS e-tron GT Performance,\" corroborating no base trim exists. Confirmed the $127,700/$137,000/$170,500 prices are destination-inclusive (Audi's actual destination charge is $1,295). EPA range/MPGe corrected against direct fueleconomy.gov figures: S e-tron GT 300 mi/90 MPGe (20-in wheels; 294 mi/88 MPGe on 21-in wheels), RS e-tron GT performance 278 mi/84 MPGe. NHTSA has both on file (VehicleId 21010/21011) but \"Not Rated\" across every category. No IIHS rating page exists (not tested; not on the 2026 Top Safety Pick Audi list). Shares J1 platform with Porsche Taycan. Small frunk in addition to rear trunk. audiusa.com blocked automated fetches (403); citations lean on fueleconomy.gov and InsideEVs.",
+  "sources": [
+   {
+    "label": "fueleconomy.gov - 2026 Audi S e-tron GT / RS e-tron GT Performance",
+    "url": "https://www.fueleconomy.gov/feg/bymake/Audi2026.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Audi e-tron GT refresh drops base trim - InsideEVs",
+    "url": "https://insideevs.com/news/742087/audi-e-tron-gt-refresh/",
+    "site": "insideevs.com"
+   }
+  ]
  },
  {
   "id": "audi-q3",
@@ -2129,21 +2356,26 @@ export const VEHICLES = [
   "priceTo": null,
   "trims": [
    {
-    "name": "Premium",
-    "msrp": 43700
+    "name": "Q3 S line quattro",
+    "msrp": 43700,
+    "features": [
+     "255-hp 2.0L turbo four, standard quattro AWD",
+     "11.9-in virtual cockpit + 12.8-in MMI touchscreen (\"Audi Digital Stage\")",
+     "Acoustic front door glass, aluminum trim, auto-dimming mirrors"
+    ]
    }
   ],
   "powertrains": [
    {
     "type": "gas",
     "engine": "2.0L turbo I4",
-    "hp": 228,
+    "hp": 255,
     "transmission": "7-speed S tronic (DCT)",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": null,
+    "mpgCombined": 25,
     "evRangeMi": null
    }
   ],
@@ -2156,7 +2388,7 @@ export const VEHICLES = [
    "widthIn": 73.2,
    "heightIn": 63.1,
    "wheelbaseIn": 105.5,
-   "curbWeightLb": null,
+   "curbWeightLb": 3935,
    "groundClearanceIn": null
   },
   "interior": {
@@ -2184,7 +2416,7 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "All-new third-generation Q3 arrives for 2026; US pricing reported from about $43,700 before destination. Full US specs, EPA figures, and trim walk not yet published - several fields left null pending official data."
+  "notes": "2026-07-31 sweep: confirmed the all-new third-generation Q3 is genuinely single-trim for 2026 (\"S line quattro\" customized via option packages, e.g. Technology $1,400, Driver Assistance $1,250) — not a data gap, Audi's actual go-to-market strategy. Corrected engine output to 255 hp (was 228). EPA confirmed directly at 25 combined mpg. NHTSA has no 2026 record (\"Not Rated\" — the commonly-cited \"5-star Q3\" traces to a 2019/2020 press release for the outgoing generation, a stale-data trap avoided here). No IIHS rating exists yet for 2026. Curb weight confirmed at 3,935 lb; ground clearance still not published by any source, left null. audiusa.com blocked automated fetches (403); citations lean on CarsDirect and Cars.com."
  },
  {
   "id": "audi-q4-e-tron",
@@ -2195,16 +2427,38 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact electric luxury SUV",
   "category": "suv",
-  "priceFrom": 49800,
-  "priceTo": 60600,
+  "priceFrom": 50600,
+  "priceTo": 60500,
   "trims": [
    {
     "name": "45 e-tron Premium",
-    "msrp": 49800
+    "msrp": 50600,
+    "features": [
+     "282-hp single-motor RWD"
+    ]
    },
    {
-    "name": "55 e-tron quattro Prestige",
-    "msrp": 60600
+    "name": "45 e-tron Premium Plus",
+    "msrp": 55100,
+    "features": [
+     "Park assist plus, top-view camera, SONOS sound system",
+     "Power-folding mirrors, heated steering wheel"
+    ]
+   },
+   {
+    "name": "55 e-tron quattro Premium",
+    "msrp": 56000,
+    "features": [
+     "335-hp dual-motor quattro AWD"
+    ]
+   },
+   {
+    "name": "55 e-tron quattro Premium Plus",
+    "msrp": 60500,
+    "features": [
+     "Park assist plus, top-view camera, SONOS sound system",
+     "Power-folding mirrors, heated steering wheel"
+    ]
    }
   ],
   "powertrains": [
@@ -2217,7 +2471,7 @@ export const VEHICLES = [
     "drive": [
      "RWD"
     ],
-    "mpgCombined": 107,
+    "mpgCombined": 115,
     "evRangeMi": 288
    },
    {
@@ -2229,8 +2483,8 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 95,
-    "evRangeMi": 258
+    "mpgCombined": 97,
+    "evRangeMi": 251
    }
   ],
   "seats": [
@@ -2270,19 +2524,31 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Continues for 2026; prices shown are latest published (2025) MSRPs and the top-trim figure is approximate. Sportback roofline sold under the same nameplate.",
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: real 2026 US trim ladder confirmed — grew from 2 stale (2025-carryover-priced) trims to the real 4: Premium/Premium Plus across both the 45 (RWD) and 55 quattro (AWD) powertrains (Prestige was NOT found for 2026 on this model — a WebSearch synthesis claiming a Vision-package replacement could not be corroborated against a primary source, so it's omitted rather than asserted). EPA range corrected: 55 quattro is 251 mi per fueleconomy.gov directly (marketing/dealer copy says 258 mi, but 251 is the EPA figure of record); MPGe corrected to 115 (45)/97 (55 quattro). NHTSA 5-star applies to the AWD variant only (VehicleId 21013); the RWD variant (VehicleId 21014) is Not Rated. Notable safety finding: IIHS rated moderate-overlap front crashworthiness \"Poor\" for both Q4 e-tron and Q4 Sportback e-tron (rear-passenger chest injury risk), which disqualifies both from any 2026 Top Safety Pick award — confirmed directly on iihs.org, no rating added. Sportback roofline sold under the same nameplate for roughly $3,000 more. audiusa.com blocked automated fetches (403); citations lean on CarsDirect and CarGurus.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
     "appliesTo": "2026",
     "source": {
-     "label": "NHTSA SafetyRatings API - 2026 Audi Q4 E-Tron SUV BEV AWD, OverallRating 5",
+     "label": "NHTSA SafetyRatings API - 2026 Audi Q4 E-Tron SUV BEV AWD, OverallRating 5 (RWD variant is Not Rated)",
      "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/21013",
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Audi Q4 e-tron pricing - CarGurus",
+    "url": "https://www.cargurus.com/research/articles/2026-audi-q4-e-tron-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi Q4 e-tron 4-door SUV",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/q4-e-tron-4-door-suv/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-q5",
@@ -2293,16 +2559,45 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact luxury SUV",
   "category": "suv",
-  "priceFrom": 52600,
-  "priceTo": 65200,
+  "priceFrom": 52800,
+  "priceTo": 71300,
   "trims": [
    {
     "name": "Q5 Premium",
-    "msrp": 52600
+    "msrp": 52800,
+    "features": [
+     "268-hp 2.0L turbo four mild hybrid, quattro AWD"
+    ]
+   },
+   {
+    "name": "Q5 Premium Plus",
+    "msrp": 55700
+   },
+   {
+    "name": "Q5 Prestige",
+    "msrp": 60700,
+    "features": [
+     "OLED digital taillights",
+     "Head-up display"
+    ]
    },
    {
     "name": "SQ5 Premium",
-    "msrp": 65200
+    "msrp": 65400,
+    "features": [
+     "362-hp 3.0L turbo V6, quattro AWD, adaptive air suspension"
+    ]
+   },
+   {
+    "name": "SQ5 Premium Plus",
+    "msrp": 67300
+   },
+   {
+    "name": "SQ5 Prestige",
+    "msrp": 71300,
+    "features": [
+     "OLED lighting units, extra tech package"
+    ]
    }
   ],
   "powertrains": [
@@ -2369,19 +2664,36 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Third-generation Q5 (new for 2025) carries into 2026; Audi's best-seller. Prices derived from published figures less $1,495 destination. Sportback variants cost about $2,300 more. Touchscreen-centric controls.",
+  "notes": "2026-07-31 sweep: real 6-trim ladder confirmed (Q5 Premium/Premium Plus/Prestige plus SQ5 Premium/Premium Plus/Prestige, all before the $1,295 destination charge), up from 2 trims — cross-validated across two independent dealer-configurator sources that reconcile exactly against destination-inclusive aggregator figures. Third-generation Q5 (new for 2025) carries into 2026; Audi's best-seller. Sportback variants cost about $2,300-2,900 more (kept as a keyOption rather than separate trims). Touchscreen-centric controls. Correction to prior destination-fee assumption: Audi's real 2026 destination charge is $1,295, not $1,495. NHTSA caveat: a live 2026-specific API query this run returned \"Not Rated\" for both Q5 and SQ5 — the 5-star rating below still reflects the carried-over 2025-generation test (VehicleId 20611), not a fresh 2026 test; kept per the existing precedent for carried-over generations. IIHS Top Safety Pick+ re-confirmed directly for Q5/Q5 Sportback; SQ5 is explicitly NOT on the 2026 award list (checked, not guessed — no SQ5 rating added). audiusa.com blocked automated fetches (403); citations lean on autofinder.com dealer configurator pages and CarGurus.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
     "iihs": "Top Safety Pick+",
     "appliesTo": "2025",
     "source": {
-     "label": "NHTSA SafetyRatings API - 2025 Audi Q5 SUV AWD (carried-over generation into 2026), OverallRating 5",
+     "label": "NHTSA SafetyRatings API - 2025 Audi Q5 SUV AWD (carried-over generation into 2026; a live 2026-specific query returns Not Rated), OverallRating 5",
      "url": "https://api.nhtsa.gov/SafetyRatings/VehicleId/20611",
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Audi Q5 pricing - AutoFinder",
+    "url": "https://autofinder.com/cars/audi/q5/2026",
+    "site": "autofinder.com"
+   },
+   {
+    "label": "2026 Audi SQ5 pricing, specs, release date - CarGurus",
+    "url": "https://www.cargurus.com/research/articles/2026-audi-sq5-pricing-specs-release-date",
+    "site": "cargurus.com"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi Q5 4-door SUV",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/q5-4-door-suv/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-q6-e-tron",
@@ -2392,16 +2704,31 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize electric luxury SUV",
   "category": "suv",
-  "priceFrom": 64500,
-  "priceTo": 74300,
+  "priceFrom": 65796,
+  "priceTo": 76895,
   "trims": [
    {
     "name": "Q6 e-tron Premium",
-    "msrp": 64500
+    "msrp": 65796
    },
    {
-    "name": "SQ6 e-tron",
-    "msrp": 74300
+    "name": "Q6 e-tron Premium Plus",
+    "msrp": 70195
+   },
+   {
+    "name": "Q6 e-tron Prestige",
+    "msrp": 74395,
+    "features": [
+     "Updated steering wheel for 2027"
+    ]
+   },
+   {
+    "name": "SQ6 e-tron Premium Plus",
+    "msrp": 74495
+   },
+   {
+    "name": "SQ6 e-tron Prestige",
+    "msrp": 76895
    }
   ],
   "powertrains": [
@@ -2468,7 +2795,35 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "PPE-platform EV introduced for 2025. Q6 base price per 2026 published figure (destination inclusion unconfirmed); SQ6 (509 hp) price is latest published 2025 figure. Sportback versions cost several thousand more."
+  "notes": "2026-07-31 sweep: major correction — this nameplate has NO 2026 model year at all. Audi confirmed it skipped 2026 entirely for the Q6 e-tron (same as the A6 Sportback e-tron), jumping straight from 2025 to 2027; fueleconomy.gov and NHTSA both have zero 2026 Q6 e-tron entries, corroborating the skip. Since the 2027 model is what's actually being sold now (arrived Q2 2026), this record shows the real, current 2027 ladder rather than a fabricated/stale 2026 price: Premium $65,796, Premium Plus $70,195, Prestige $74,395 (up from a stale single $64,500 Premium figure). SQ6 e-tron Premium Plus ($74,495) and Prestige ($76,895) are lower-confidence — search-summarized figures had some inconsistency that couldn't be resolved against a primary source; the prior $74,300/509-hp SQ6 figure was itself a tell that no real 2026 SQ6 price ever existed. All 2027 Q6/SQ6 e-tron models are now standard dual-motor AWD (the single-motor RWD 45 variant is discontinued for 2027) — exact updated 2027 hp/range figures were not found, so the powertrains below still reflect the pre-2027 lineup pending a future sweep. PPE platform, shared with Porsche Macan Electric. Sportback versions cost several thousand more. audiusa.com blocked automated fetches (403); citations lean on CarsDirect and Edmunds.",
+  "ratings": {
+   "safety": {
+    "iihs": "Top Safety Pick+",
+    "appliesTo": "2027",
+    "source": {
+     "label": "IIHS ratings — 2027 Audi Q6 e-tron 4-door SUV (the model actually sold during 2026)",
+     "url": "https://www.iihs.org/ratings/vehicle/audi/q6-e-tron-4-door-suv/2027",
+     "site": "iihs.org"
+    }
+   }
+  },
+  "sources": [
+   {
+    "label": "You Can't Get a 2026 Audi A6 Sportback e-Tron and Q6 e-Tron—Here's Why - Autoblog",
+    "url": "https://www.autoblog.com/news/you-cant-get-a-2026-audi-a6-sportback-e-tron-and-q6-e-tron-heres-why",
+    "site": "autoblog.com"
+   },
+   {
+    "label": "2026 Audi Q6 e-tron Preview (confirms 2026 skip, gives 2027 pricing) - CarsDirect",
+    "url": "https://www.carsdirect.com/audi/q6-e-tron/2026",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "IIHS ratings — 2027 Audi Q6 e-tron 4-door SUV",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/q6-e-tron-4-door-suv/2027",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-q7",
@@ -2480,15 +2835,58 @@ export const VEHICLES = [
   "segment": "midsize 3-row luxury SUV",
   "category": "suv",
   "priceFrom": 62000,
-  "priceTo": 91300,
+  "priceTo": 99800,
   "trims": [
    {
     "name": "Q7 45 TFSI Premium",
-    "msrp": 62000
+    "msrp": 62000,
+    "features": [
+     "261-hp 2.0L turbo four mild hybrid, quattro AWD"
+    ]
    },
    {
-    "name": "SQ7",
-    "msrp": 91300
+    "name": "Q7 45 TFSI Premium Plus",
+    "msrp": 65800,
+    "features": [
+     "20-inch wheels, surround-view cameras, Bang & Olufsen audio"
+    ]
+   },
+   {
+    "name": "Q7 55 TFSI Premium",
+    "msrp": 67600,
+    "features": [
+     "335-hp 3.0L turbo V6 mild hybrid, quattro AWD"
+    ]
+   },
+   {
+    "name": "Q7 55 TFSI Premium Plus",
+    "msrp": 73200,
+    "features": [
+     "20-inch wheels, surround-view cameras, Bang & Olufsen audio"
+    ]
+   },
+   {
+    "name": "Q7 55 TFSI Prestige",
+    "msrp": 76900,
+    "features": [
+     "Head-up display, adaptive air suspension",
+     "Ventilated/massaging front seats, OLED taillights, rear-axle steering"
+    ]
+   },
+   {
+    "name": "SQ7 Premium Plus",
+    "msrp": 93800,
+    "features": [
+     "500-hp 4.0L twin-turbo V8"
+    ]
+   },
+   {
+    "name": "SQ7 Prestige",
+    "msrp": 99800,
+    "features": [
+     "Head-up display, adaptive air suspension",
+     "Ventilated/massaging front seats, OLED taillights, rear-axle steering"
+    ]
    }
   ],
   "powertrains": [
@@ -2501,7 +2899,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 21,
+    "mpgCombined": 22,
     "evRangeMi": null
    },
    {
@@ -2525,7 +2923,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 17,
+    "mpgCombined": 16,
     "evRangeMi": null
    }
   ],
@@ -2566,11 +2964,12 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Carryover generation with 2025 facelift. SQ7 price is approximate (latest published figure). Three engines: 261-hp four, 335-hp V6, 500-hp V8 SQ7.",
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: full real trim ladder confirmed — grew from 2 trims to the real 7 (45 TFSI Premium/Premium Plus, 55 TFSI Premium/Premium Plus/Prestige, SQ7 Premium Plus/Prestige). The 55 TFSI V6 was previously only a powertrain footnote on the SQ7 entry; it's a real, separately-priced trim tier available at all three levels. EPA combined mpg corrected via fueleconomy.gov: 22 (45 TFSI, was 21), 20 (55 TFSI, unchanged), 16 (SQ7, was 17). Carryover generation with a 2025 facelift. Destination charge confirmed at $1,295 (not included in the trim prices above). audiusa.com blocked automated fetches (403); citations lean on Audi Elk Grove and AutoFinder dealer pages.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
+    "iihs": "Top Safety Pick",
     "appliesTo": "2026",
     "source": {
      "label": "NHTSA SafetyRatings API - 2026 Audi Q7 SUV MHEV AWD, OverallRating 5",
@@ -2578,7 +2977,24 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "2026 Audi Q7 Trim Levels & SQ7 Models - Audi Elk Grove",
+    "url": "https://www.audielkgrove.com/en/2026-audi-q7-trim-levels/",
+    "site": "audielkgrove.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 Audi Q7 / SQ7",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Audi_Q7.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi Q7 4-door SUV",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/q7-4-door-suv/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "audi-q8",
@@ -2589,20 +3005,49 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize luxury coupe SUV",
   "category": "suv",
-  "priceFrom": 74100,
-  "priceTo": 146000,
+  "priceFrom": 75600,
+  "priceTo": 138300,
   "trims": [
    {
-    "name": "Q8 55 TFSI Premium",
-    "msrp": 74100
+    "name": "Q8 Premium",
+    "msrp": 75600,
+    "features": [
+     "335-hp 3.0L turbo V6 mild hybrid, quattro AWD"
+    ]
    },
    {
-    "name": "SQ8",
-    "msrp": 99500
+    "name": "Q8 Premium Plus",
+    "msrp": 80800,
+    "features": [
+     "Bang & Olufsen 3D audio, ventilated seats, surround-view cameras"
+    ]
+   },
+   {
+    "name": "Q8 Prestige",
+    "msrp": 86200,
+    "features": [
+     "All-wheel steering, OLED taillights",
+     "Adaptive air suspension, matrix LED with laser headlights"
+    ]
+   },
+   {
+    "name": "SQ8 Premium Plus",
+    "msrp": 99700,
+    "features": [
+     "500-hp 4.0L twin-turbo V8, 22-inch wheels, massaging seats"
+    ]
+   },
+   {
+    "name": "SQ8 Prestige",
+    "msrp": 107200
    },
    {
     "name": "RS Q8 performance",
-    "msrp": 146000
+    "msrp": 138300,
+    "features": [
+     "631-hp 4.0L twin-turbo V8",
+     "RS sport exhaust, digital OLED taillights, massaging heated/ventilated seats"
+    ]
    }
   ],
   "powertrains": [
@@ -2615,7 +3060,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 20,
+    "mpgCombined": 19,
     "evRangeMi": null
    },
    {
@@ -2639,7 +3084,7 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 15,
+    "mpgCombined": 16,
     "evRangeMi": null
    }
   ],
@@ -2680,8 +3125,8 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Two-row coupe sibling to the Q7. Base price derived from published $75,600 figure less destination; SQ8 and RS Q8 performance prices approximate (latest published figures).",
+  "confidence": "high",
+  "notes": "2026-07-31 sweep: full real 6-trim ladder confirmed (Q8 Premium/Premium Plus/Prestige, SQ8 Premium Plus/Prestige, RS Q8 performance), up from 3. Two real corrections: SQ8 is actually 2 trims spanning $99,700-$107,200 (was a single approximate $99,500 point), and RS Q8 performance's real current price is $138,300 — materially lower than the prior stale $146,000 figure. EPA combined mpg corrected to 19 (Q8, was 20) and 16 (RS Q8 performance, was 15) via fueleconomy.gov. Two-row coupe sibling to the Q7. audiusa.com blocked automated fetches (403); citations lean on KBB, Edmunds and CarBuzz trim-comparison summaries (a Canadian Audi Blainville dealer page with CAD pricing for different trim names was found and explicitly excluded as inapplicable to the US market).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -2692,7 +3137,19 @@ export const VEHICLES = [
      "site": "nhtsa.gov"
     }
    }
-  }
+  },
+  "sources": [
+   {
+    "label": "fueleconomy.gov - 2026 Audi Q8 / SQ8 / RS Q8",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Audi_Q8.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "IIHS ratings — 2026 Audi Q8 4-door SUV (no Top Safety Pick award)",
+    "url": "https://www.iihs.org/ratings/vehicle/audi/q8-4-door-suv/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "bentley-bentayga",
