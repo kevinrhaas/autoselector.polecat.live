@@ -24,7 +24,7 @@ export const CHANGELOG = [
     v: 75,
     title: 'Audi lineup re-verified — two models found to skip the 2026 model year entirely',
     kind: 'data',
-    ts: '',
+    ts: '2026-07-31T23:06:28.004Z',
     items: [
       'All 12 Audi models re-verified against Audi\'s own pricing, NHTSA and IIHS. Every trim ladder was undercounted — A5/S5 grew from 3 to 7 trims, Q5/SQ5 from 2 to 6, Q7 from 2 to 7, Q8 from 3 to 6, A3 from 3 to 5 (a new "Premium Plus S line plus" trim), A6 from 1 to 3, Q4 e-tron from 2 to 4.',
       'Real discovery: the A6 Sportback e-tron and the Q6 e-tron both skip the 2026 model year in the US entirely — Audi jumps straight from 2025 to 2027 for both. Both records now show the real, current 2027 pricing instead of a stale or fabricated 2026 figure.',
