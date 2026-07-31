@@ -1670,5 +1670,35 @@
   "source": "https://commons.wikimedia.org/wiki/File:Volvo_XC90_II_facelift_003.jpg",
   "license": "CC0",
   "author": "JustAnotherCarDesigner"
+ },
+ "gallery/nissan-kicks/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Kicks_SR_AWD_(United_States)_interior.png",
+  "license": "CC BY 3.0",
+  "author": "Autosdeprimera",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/toyota-crown/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Crown_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/kia-ev9/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Kia_EV9_GT-Line_-_interior_view.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/mazda-cx-90/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-90_3.3_e-Skyactiv-G_AWD_HEV_Turbo_Exclusive_2024_(interior).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ethan Llamas",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/gmc-canyon/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2023_GMC_Canyon_Denali_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
  }
 }

@@ -21,6 +21,17 @@
 
 export const CHANGELOG = [
   {
+    v: 77,
+    title: '5 more interior photos — Kicks, Crown, EV9, CX-90, Canyon',
+    kind: 'data',
+    ts: '2026-07-31T23:49:15.272Z',
+    items: [
+      'Interior gallery photos added for 5 more models: Nissan Kicks (explicitly US-captioned second-gen SR AWD), Toyota Crown, Kia EV9, Mazda CX-90 and GMC Canyon — all found via Wikimedia Commons, generation/spec confirmed against each file\'s own description, every URL live-checked before shipping.',
+      'Several strong-looking candidates were checked and held back instead of guessed: a Hyundai Ioniq 5 shot with an unconfirmed facelift code and non-US location, a Kia EV6 shot missing any generation info, an Audi A3 shot explicitly labeled pre-facelift, a Golf GTI shot that predates the 2024 hardware refresh, and aging Jeep Gladiator/Dodge Durango shots that don\'t confirm the current dashboard.',
+      'Gallery coverage is now 95 of 325 models.',
+    ],
+  },
+  {
     v: 76,
     title: 'Fiat 500e re-verified — pricing and range confirmed exact, sources added',
     kind: 'data',
