@@ -618,7 +618,21 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   confirmed it continuing into 2026 at any price, so it was left out rather
   than guessed. alfaromeousa.com and edmunds.com blocked automated fetches
   (403) throughout, so citations lean on CarsDirect, CarBuzz, cars.com's
-  trim-comparison pages and the official EPA guide instead.) — [ ] Fiat
+  trim-comparison pages and the official EPA guide instead.)
+- [x] Fiat (2026-07-31 — its one US model, the 500e, re-verified, see
+  js/changelog.js v76: Pop $35,700 / Icona $37,700 (both + $1,995
+  destination) and the 149-mile EPA range / 116 MPGe combined were
+  independently confirmed exact matches against Stellantis's own press
+  release and fueleconomy.gov — already accurate, no price/spec changes.
+  Per-trim features (Pop's new-for-2026 body-color dashboard vs Icona's
+  standard pearl dashboard, vegan leather, ADAS suite) and a sources array
+  added for the first time. Confirmed no 2026 NHTSA record (api.nhtsa.gov
+  returns an empty result set) and no 2026 IIHS test page (iihs.org 404s;
+  only a 2016-model-year 500e is in their archive) — checked both directly,
+  nothing guessed. fiatusa.com, kbb.com, truecar.com and cars.usnews.com all
+  blocked or timed out on automated fetches, so citations lean on
+  Stellantis's own newsroom release, fueleconomy.gov and CarsDirect
+  instead.)
 - [x] VW (2026-07-31 — all 10 models re-verified, see js/changelog.js v74:
   every trim ladder was undercounted — Atlas and Atlas Cross Sport each grew
   from 3 to their real 7 configurations (SE/SE w/Technology/Peak Edition or

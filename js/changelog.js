@@ -21,6 +21,18 @@
 
 export const CHANGELOG = [
   {
+    v: 76,
+    title: 'Fiat 500e re-verified — pricing and range confirmed exact, sources added',
+    kind: 'data',
+    ts: '2026-07-31T23:21:08.493Z',
+    items: [
+      'Fiat\'s one US model, the 500e, re-verified against Stellantis\'s own press release and fueleconomy.gov: Pop $35,700 / Icona $37,700 (both + $1,995 destination) and the 149-mile EPA range / 116 MPGe combined were confirmed exact matches — no price or spec changes needed.',
+      'Per-trim features added for the first time: Pop\'s new-for-2026 body-color dashboard vs Icona\'s standard pearl dashboard, vegan leather, heated seats/mirrors and full ADAS suite (blind-spot, adaptive cruise, lane-centering).',
+      'Confirmed no 2026 NHTSA record (api.nhtsa.gov returns an empty result set) and no 2026 IIHS test page (only a 2016-model-year 500e is in their archive) — checked both directly, nothing guessed.',
+      'A sources array was added citing Stellantis\'s newsroom release, fueleconomy.gov and CarsDirect; fiatusa.com, kbb.com, truecar.com and cars.usnews.com all blocked or timed out on automated fetches.',
+    ],
+  },
+  {
     v: 75,
     title: 'Audi lineup re-verified — two models found to skip the 2026 model year entirely',
     kind: 'data',
