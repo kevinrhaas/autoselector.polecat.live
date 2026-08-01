@@ -21,6 +21,15 @@
 
 export const CHANGELOG = [
   {
+    v: 79,
+    title: 'Bigger touch targets for the Engine/Body filter chips on mobile',
+    kind: 'fix',
+    ts: '2026-08-01T03:49:15.021Z',
+    items: [
+      'On All Vehicles, the Engine and Body filter chips were only 24px tall on phones — smaller than every other touch target on the site, on the app\'s core search/filter path. They now reach the 44px floor on mobile, matching the rail\'s touch targets.',
+    ],
+  },
+  {
     v: 78,
     title: 'Shell caught up to v0.6.1 — mobile drawer close button fixed',
     kind: 'fix',
