@@ -719,7 +719,28 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   NHTSA API note: the ID.4 is indexed as "ID.4 BEV" (not "ID.4") — a naive
   model-name query returns a false "no 2026 record" negative that a first
   research pass hit before being caught by a direct VehicleId lookup.)
-- [x] Audi (2026-07-31 — all 12 models re-verified, see js/changelog.js v75: trim ladders were undercounted across the board — A3 grew from 3 to 5 trims (a new-for-2026 "Premium Plus S line plus" trim added, S3 pruned from 3 to 1), A5/S5 from 3 to 7, A6 from 1 to 3, Q4 e-tron from 2 to 4, Q5/SQ5 from 2 to 6, Q7 from 2 to 7, Q8 from 3 to 6. Two real model-year discoveries: the A6 Sportback e-tron AND the Q6 e-tron both skip the 2026 model year entirely (Audi jumps 2025 straight to 2027 in the US) — both records now show the real, current 2027 pricing instead of stale figures. Real pricing corrections: RS Q8 performance's actual price is $138,300, well below the stale $146,000 on file; Audi's real destination charge is $1,295, correcting a prior $1,495 assumption used on A6/A8/Q5. IIHS corrected: Q7 earns Top Safety Pick (not Plus, checked directly); Q4 e-tron's moderate-overlap-front "Poor" rating disqualifies it from any award (checked, not guessed); A3 does not qualify for a Top Safety Pick either. Per-trim features and a sources array added across every model. Colors intentionally omitted fleet-wide — confirmed no Audi model publishes hex swatch values anywhere public. audiusa.com blocked automated fetches (403) throughout; citations lean on Cars.com, CarsDirect, CarGurus, fueleconomy.gov, api.nhtsa.gov and iihs.org instead.) — [ ] Porsche — [ ] BMW — [ ] Mini — [ ] Mercedes-Benz
+- [x] Audi (2026-07-31 — all 12 models re-verified, see js/changelog.js v75: trim ladders were undercounted across the board — A3 grew from 3 to 5 trims (a new-for-2026 "Premium Plus S line plus" trim added, S3 pruned from 3 to 1), A5/S5 from 3 to 7, A6 from 1 to 3, Q4 e-tron from 2 to 4, Q5/SQ5 from 2 to 6, Q7 from 2 to 7, Q8 from 3 to 6. Two real model-year discoveries: the A6 Sportback e-tron AND the Q6 e-tron both skip the 2026 model year entirely (Audi jumps 2025 straight to 2027 in the US) — both records now show the real, current 2027 pricing instead of stale figures. Real pricing corrections: RS Q8 performance's actual price is $138,300, well below the stale $146,000 on file; Audi's real destination charge is $1,295, correcting a prior $1,495 assumption used on A6/A8/Q5. IIHS corrected: Q7 earns Top Safety Pick (not Plus, checked directly); Q4 e-tron's moderate-overlap-front "Poor" rating disqualifies it from any award (checked, not guessed); A3 does not qualify for a Top Safety Pick either. Per-trim features and a sources array added across every model. Colors intentionally omitted fleet-wide — confirmed no Audi model publishes hex swatch values anywhere public. audiusa.com blocked automated fetches (403) throughout; citations lean on Cars.com, CarsDirect, CarGurus, fueleconomy.gov, api.nhtsa.gov and iihs.org instead.) — [ ] Porsche — [ ] BMW — [x] Mini — [ ] Mercedes-Benz
+- [x] Mini (2026-08-01 — all 3 models re-verified against BMW Group's official
+  MY2026 US pricing release, see js/changelog.js latest: real correction — the
+  electric Countryman SE ALL4 was wrongly noted as a stale MY2025 carryover;
+  it's a genuine current 2026 model with its own Signature Plus ($45,200) /
+  Iconic ($48,400) trims, corrected output (308 hp, was a stale 313) and EPA
+  figure (96 MPGe combined, was 100). The Oxford Edition value trim returned
+  for 2026 on both Cooper Hardtop ($25,500/$26,500 for 2/4 Door) and
+  Countryman ($34,900) — added, dropping both priceFrom values. Cooper
+  Hardtop and Convertible trim ladders expanded from coarse door/powertrain
+  entries to their real Signature/Signature Plus/Iconic ladders (17 and 9
+  trims respectively); Countryman's JCW ALL4 split from one flat $46,900 into
+  its real Signature Plus/Iconic pair. EPA combined MPG corrected across the
+  board via fueleconomy.gov: Cooper base 33→32, all three Convertible
+  powertrains 32/31/29→30, Countryman JCW ALL4 26→25 (Countryman S ALL4's 27
+  was already exact). Checked NHTSA (all Mini 2026 listings return a null
+  vehicle ID — no rating) and IIHS (Cooper Hardtop/Convertible 404 — never
+  tested; Countryman has only a partial 2025-26 test with no overall award,
+  despite some secondary sources claiming a carried-over Top Safety Pick+) —
+  nothing guessed, both checked directly. Sources arrays added to all three
+  models for the first time; colors and per-trim features left for later
+  sweeps (this run's scope was pricing/specs verification).)
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
   fixed, Ascent "final year" note corrected; sources/features/colors added)
