@@ -64,6 +64,18 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   live in shell code this app doesn't currently exercise (marketing site
   untouched, no multiselectDropdown/auth usage yet). Keep it current with
   future `sync-shell` dispatches.
+- [x] Vendor copy caught up from v0.5.8 to v0.6.1 (2026-08-01, `as-shell-v6`
+  → `as-shell-v7`) — the real fix this time: a dedicated `.ps-rail-close`
+  button now renders inside the drawer itself (see js/changelog.js v78) and
+  fixes the fleet's oldest open UX-sweep finding on this app (#10/#31/#33/
+  #39/#54) — the topbar hamburger that opens the mobile drawer is a
+  non-positioned element, so it always painted below the positioned
+  `.ps-rail`/`.ps-rail-backdrop` and a second tap silently hit the rail's own
+  logo instead of closing it. Also picked up the round ring-badge rail brand
+  mark (replaces the gradient tile) and `fonts.css`/`fonts/` (Hanken Grotesk,
+  not linked by this app yet — tokens.css falls through to the system stack
+  without it, so this is a no-op until a future run opts in). Keep it current
+  with future `sync-shell` dispatches.
 
 ## Next up (ordered)
 
