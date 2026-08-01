@@ -21,6 +21,15 @@
 
 export const CHANGELOG = [
   {
+    v: 83,
+    title: 'Interior photos added for 8 more models',
+    kind: 'polish',
+    ts: '2026-08-01T12:53:04.225Z',
+    items: [
+      'Vehicle-page galleries gained verified current-generation interior/cabin photos for Toyota Land Cruiser, Ford Ranger, Hyundai Elantra, Hyundai Venue, Subaru BRZ, Toyota GR86, Nissan Frontier and Genesis GV80, each sourced from Wikimedia Commons under a free license and credited in the Sources section.',
+    ],
+  },
+  {
     v: 82,
     title: 'Mazda lineup re-verified for MY2026: CX-90 trim list rebuilt, corrected base engine hp',
     kind: 'fix',

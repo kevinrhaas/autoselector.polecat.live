@@ -190,7 +190,27 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  95 models done so far (2026-07-31, +5, js/changelog.js v77: nissan-kicks
+  100 models done so far (2026-08-01, +8, js/changelog.js v83: toyota-land-cruiser
+  (current 250-series/J250 "Prado" platform sold in the US simply as "Land
+  Cruiser"), ford-ranger (12th-gen P703, captioned "2024 Ford Ranger" with the
+  redesigned digital dash), hyundai-elantra (7th-gen/CN7 facelift dash via the
+  Elantra N trim, same architecture as the base car), hyundai-venue (current
+  US-market generation, explicitly captioned 2023 SEL — the redesigned Venue
+  is India-only, not sold here), subaru-brz (2nd-gen ZD8, confirmed via chassis
+  code, JDM S-trim shares the globally-common dash), toyota-gr86 (current ZN8
+  generation, explicitly dated 2024), nissan-frontier (current D41 generation,
+  captioned "2022 Nissan Frontier crew cab") and genesis-gv80 (the MY2025/2026
+  US facelift — visually confirmed via direct image download: single-panel
+  curved OLED display and single-spoke wheel unique to the JX1 PE update,
+  distinct from the pre-facelift dual-screen dash) — all interior shots, found
+  via the Commons search API, generation confirmed against each file's own
+  Commons categories/captions (not just the filename), every URL live-checked
+  (initial checks hit Wikimedia's CDN-wide rate limiting; a descriptive
+  User-Agent header resolved it and all 8 confirmed HTTP 200 image/jpeg, plus
+  license/author cross-checked directly against the Commons API's extmetadata
+  rather than trusted from the research pass alone). No models held back this
+  run — usable, verified photos existed for all 8 candidates checked.
+  Previous batch (2026-07-31, +5, js/changelog.js v77: nissan-kicks
   (P16, explicitly captioned "(United States)" SR AWD), toyota-crown (2023+
   crossover-sedan generation, its only US generation to date), kia-ev9
   (GT-Line, single generation since 2023 launch), mazda-cx-90 (2024 Turbo

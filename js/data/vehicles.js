@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 45;
+export const DATA_VERSION = 46;
 
 export const VEHICLES = [
  {
@@ -13958,7 +13958,16 @@ export const VEHICLES = [
   "towingLb": 7500,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Ford_Ranger_LARIAT_4WD_SuperCrew_(2024)_(53620395647).jpg",
-   "credit": "Charles from Port Chester, New York"
+   "credit": "Charles from Port Chester, New York",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/2024_Ford_Ranger_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Ford_Ranger_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Four trims: XL, XLT, Lariat, Raptor. XL/XLT/Lariat are RWD standard with 4WD +$3,500; Raptor is 4WD-only SuperCrew. EPA combined: 2.3L 23/21 (2WD/4WD), 2.7L V6 20 (4WD), Raptor 3.0L 17. The 2.7L V6 is optional on XLT/Lariat. Destination excluded from MSRP.",
@@ -15212,7 +15221,16 @@ export const VEHICLES = [
   "towingLb": 6000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Genesis_GV80_Black_JX1_PE_Black_Exclusive_Design_Obsidian_Black_Mono-tone_%2824%29.jpg",
+     "kind": "interior",
+     "credit": "Damian B Oh",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Genesis_GV80_Black_JX1_PE_Black_Exclusive_Design_Obsidian_Black_Mono-tone_(24).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "New lower-priced 2.5T RWD base variant for 2026 ($2,150 below AWD). Full SUV ladder expanded from 2 to 8 trims (2.5T RWD/AWD/Select/Advanced/Prestige, 3.5T Advanced/Prestige/Prestige Black) plus 2 GV80 Coupe trims (3.5T and the 409-hp E-SC Prestige Black) — every figure cross-checked against 2 independent dealer-research sources whose destination-inclusive prices agree to the dollar (after removing the $1,495 destination charge) with the already-confirmed RWD base and Prestige Black top prices. Cargo figures are for the standard SUV, not the Coupe.",
@@ -19011,7 +19029,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/MIAS_2024_-_2024_Hyundai_Elantra_N_%28interior%29.jpg",
+     "kind": "interior",
+     "credit": "Ethan Llamas",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:MIAS_2024_-_2024_Hyundai_Elantra_N_(interior).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "SE/SEL Sport/Hybrid Blue/Hybrid Limited MSRP confirmed unchanged for 2026 (verified via dealer spec tables cross-checked against KBB/Edmunds/cars.com). Hyundai's full 2026 Elantra lineup also includes SEL Sport Premium (~$27,000), non-hybrid N Line (~$29,400) and Limited (~$29,000-29,600) trims not individually tracked here. Hybrid Blue EPA-rated 54 mpg combined; hybrid trims use a tire mobility kit instead of a spare. Color hex values are best-effort sRGB matches.",
@@ -21933,7 +21960,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/2023_Hyundai_Venue_interior.jpg",
+     "kind": "interior",
+     "credit": "deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2023_Hyundai_Venue_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "SE ($20,550) and SEL ($22,825) pricing confirmed unchanged for 2026 via cars.com and KBB. FWD only, no AWD offered; Limited trim remains dropped for 2026. Color hex values are best-effort sRGB matches.",
@@ -35135,7 +35171,16 @@ export const VEHICLES = [
   "towingLb": 7150,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Nissan_Frontier_%28D41%29_Pro-4X_Automesse_Ludwigsburg_2022_1X7A5942.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Nissan_Frontier_D41_interior_%28edited%29.jpg",
+     "kind": "interior",
+     "credit": "Oq10pass",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Nissan_Frontier_D41_interior_(edited).jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "King Cab (S only) or Crew Cab with 5- or 6-ft bed. Dimensions listed are for Crew Cab standard bed. Titan was discontinued after 2024, leaving Frontier as Nissan's only pickup. 2026-07-28 verification: all four trim MSRPs re-confirmed exact against current sources, no changes; per-trim features added.",
@@ -38601,7 +38646,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://commons.wikimedia.org/wiki/Special:FilePath/Subaru%20BRZ%20(ZD8)%20IMG%200771.jpg?width=1280",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/The_interior_of_Subaru_BRZ_S_%283BA-ZD8%29_with_STI_Performance_parts.jpg",
+     "kind": "interior",
+     "credit": "Tokumeigakarinoaoshima",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:The_interior_of_Subaru_BRZ_S_(3BA-ZD8)_with_STI_Performance_parts.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Verified against Subaru's 2026 BRZ pricing release and fueleconomy.gov. Premium base trim dropped for 2026; lineup starts at Limited. Series.Yellow is a new-for-2026 limited edition (350 units, 6MT only) based on the tS. 2+2 seating. Combined mpg is 22 with the manual, 25 with the automatic (automatic offered on Limited only).",
@@ -42967,7 +43021,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/2024_Toyota_GR86_-_interior.jpg",
+     "kind": "interior",
+     "credit": "Ssu",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:2024_Toyota_GR86_-_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "228-hp 2.4L boxer, RWD, manual or automatic (automatic adds about $1,100 across trims). 2026 pricing verified: GR86 $31,400, Premium $33,965, new-for-2026 Yuzu Edition $37,465 (all manual-transmission base prices, before destination). Rear seats are occasional-use 2+2.",
@@ -43503,7 +43566,16 @@ export const VEHICLES = [
   "towingLb": 6000,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Toyota_Land_Cruiser_Prado_%28J250%29_Auto_Zuerich_2024_DSC_6833.jpg",
+     "kind": "interior",
+     "credit": "Alexander-93",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File:Toyota_Land_Cruiser_Prado_(J250)_Auto_Zuerich_2024_DSC_6833.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Returned to the US for MY2024 on a 2-row, 5-seat layout; 2026 carries over the same 2-trim structure (base '1958' and the 'Land Cruiser' trim). Standard i-FORCE MAX hybrid (326 hp) on every unit. Prices verified around $57,600/$62,920 before destination; Toyota's own site has begun surfacing 2027 pages alongside 2026 inventory, so figures were cross-checked against dealer 2026-specific listings.",
