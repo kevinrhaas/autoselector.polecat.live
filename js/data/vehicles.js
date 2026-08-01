@@ -36565,20 +36565,32 @@ export const VEHICLES = [
   "bodyStyle": "coupe",
   "segment": "sports car",
   "category": "car",
-  "priceFrom": 133200,
-  "priceTo": 272000,
+  "priceFrom": 127700,
+  "priceTo": 270300,
   "trims": [
    {
     "name": "Carrera",
-    "msrp": 133200
+    "msrp": 127700
+   },
+   {
+    "name": "Carrera T",
+    "msrp": 140950
+   },
+   {
+    "name": "Carrera S",
+    "msrp": 148650
    },
    {
     "name": "Carrera GTS T-Hybrid",
-    "msrp": 178200
+    "msrp": 171995
    },
    {
-    "name": "Turbo S",
-    "msrp": 272000
+    "name": "GT3",
+    "msrp": 224750
+   },
+   {
+    "name": "Turbo S T-Hybrid",
+    "msrp": 270300
    }
   ],
   "powertrains": [
@@ -36605,7 +36617,19 @@ export const VEHICLES = [
      "RWD",
      "AWD"
     ],
-    "mpgCombined": 19,
+    "mpgCombined": 20,
+    "evRangeMi": null
+   },
+   {
+    "type": "hybrid",
+    "engine": "3.6L T-Hybrid flat-6 w/ electric exhaust-gas turbos (Turbo S)",
+    "hp": 701,
+    "transmission": "8-speed PDK",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
     "evRangeMi": null
    }
   ],
@@ -36648,7 +36672,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "992.2 generation. Wide range: Carrera, T, S, GTS T-Hybrid, Turbo, 701-hp Turbo S T-Hybrid, GT3. Porsche raised prices repeatedly during 2025, so base MSRP is approximate (~$133,000-$134,000 before ~$2,250 delivery); Turbo S price approximate. Rear seats are +2 style; deleted on some variants."
+  "notes": "992.2 generation. 2026-08-01 re-verify: Carrera S reintroduced to the lineup (missing before); Turbo S is now a 701-hp 3.6L T-Hybrid AWD-only car with electric exhaust-gas turbos (was mistakenly described as a carryover 388-hp variant) — confirmed directly via Porsche Newsroom, EPA MPG not yet published for it. GTS T-Hybrid MPG corrected 19->20. GT3 RS pricing is not yet officially published for 992.2/MY2026 (only unconfirmed estimates exist) — omitted rather than guessed; GT3 price itself has a real spread across sources ($224,750-$235,800), listed at the more-cited lower figure. No NHTSA rating exists for the 911 (API returns zero results) and no IIHS test page exists (never tested) — checked directly, not guessed. Rear seats are +2 style; deleted on some variants. No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "Turbo S T-Hybrid world premiere (701 hp, specs)",
+    "url": "https://newsroom.porsche.com/en_US/2025/products/new-porsche-911-turbo-s-celebrates-world-premiere-in-munich.html",
+    "site": "newsroom.porsche.com"
+   },
+   {
+    "label": "Full 2026 trim pricing table",
+    "url": "https://carbuzz.com/130000-2026-911-carrera/",
+    "site": "carbuzz.com"
+   },
+   {
+    "label": "EPA fuel economy",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Porsche_911.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "porsche-cayenne",
@@ -36659,20 +36700,36 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize luxury SUV",
   "category": "suv",
-  "priceFrom": 86800,
-  "priceTo": 153000,
+  "priceFrom": 89900,
+  "priceTo": 214800,
   "trims": [
    {
     "name": "Cayenne",
-    "msrp": 86800
+    "msrp": 89900
+   },
+   {
+    "name": "Cayenne E-Hybrid",
+    "msrp": 103100
    },
    {
     "name": "Cayenne S",
-    "msrp": 99000
+    "msrp": 108300
    },
    {
-    "name": "Turbo E-Hybrid",
-    "msrp": 153000
+    "name": "Cayenne S E-Hybrid",
+    "msrp": 111600
+   },
+   {
+    "name": "Cayenne GTS",
+    "msrp": 132400
+   },
+   {
+    "name": "Cayenne Turbo E-Hybrid",
+    "msrp": 164500
+   },
+   {
+    "name": "Cayenne Turbo GT",
+    "msrp": 214800
    }
   ],
   "powertrains": [
@@ -36690,8 +36747,32 @@ export const VEHICLES = [
    },
    {
     "type": "gas",
-    "engine": "4.0L twin-turbo V8 (S / GTS)",
+    "engine": "4.0L twin-turbo V8 (S)",
     "hp": 468,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 18,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "4.0L twin-turbo V8 (GTS)",
+    "hp": 493,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 18,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "4.0L twin-turbo V8 (Turbo GT, Coupe-only)",
+    "hp": 650,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
     "drive": [
@@ -36702,14 +36783,38 @@ export const VEHICLES = [
    },
    {
     "type": "phev",
-    "engine": "3.0L V6 / 4.0L V8 E-Hybrid",
+    "engine": "3.0L V6 E-Hybrid",
     "hp": 463,
     "transmission": "8-speed automatic",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": null,
+    "mpgCombined": 22,
+    "evRangeMi": 29
+   },
+   {
+    "type": "phev",
+    "engine": "3.0L V6 E-Hybrid (S)",
+    "hp": 512,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 22,
+    "evRangeMi": 27
+   },
+   {
+    "type": "phev",
+    "engine": "4.0L V8 E-Hybrid (Turbo)",
+    "hp": 729,
+    "transmission": "8-speed automatic",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 22,
     "evRangeMi": 24
    }
   ],
@@ -36750,8 +36855,25 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Gas and E-Hybrid Cayenne continue alongside the new Cayenne Electric. Turbo E-Hybrid makes 729 hp. Prices approximate; base derived from published $89,050 figure less ~$2,250 delivery fee. EV range of E-Hybrid approx. 20-25 miles."
+  "confidence": "high",
+  "notes": "Gas and E-Hybrid Cayenne continue alongside the separate all-electric Cayenne Electric. 2026-08-01 re-verify: full 7-trim lineup confirmed (was missing E-Hybrid, S E-Hybrid, GTS and Turbo GT entirely) — GTS is a distinct 493-hp V8 tune, not the same spec as S (468 hp), a real correction. Turbo GT is Coupe-body-style only. Split the single PHEV powertrain bucket into three real tunes (E-Hybrid 463hp/29mi, S E-Hybrid 512hp/27mi, Turbo E-Hybrid 729hp/24mi) — EV-range/MPG figures for the hybrids are 2025 EPA-certified data used as the best available reference since fueleconomy.gov hasn't posted 2026 hybrid entries yet (gas trims' 2026 EPA figures are current). NHTSA has never crash-tested the Cayenne (checked directly, consistently \"Not Rated\"); no IIHS award or test page exists. No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "2026 pricing & trims (SUV + Coupe, gas + E-Hybrid)",
+    "url": "https://www.cars.com/research/porsche-cayenne-2026/",
+    "site": "cars.com"
+   },
+   {
+    "label": "EPA fuel economy (gas trims)",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Porsche_Cayenne.shtml",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Turbo E-Hybrid pricing cross-check",
+    "url": "https://www.edmunds.com/porsche/cayenne/2026/plug-in-hybrid/",
+    "site": "edmunds.com"
+   }
+  ]
  },
  {
   "id": "porsche-cayenne-electric",
@@ -36770,6 +36892,10 @@ export const VEHICLES = [
     "msrp": 111350
    },
    {
+    "name": "Cayenne S Electric",
+    "msrp": 128650
+   },
+   {
     "name": "Cayenne Turbo Electric",
     "msrp": 165350
    }
@@ -36779,6 +36905,18 @@ export const VEHICLES = [
     "type": "ev",
     "engine": "Dual-motor AWD",
     "hp": 435,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": null
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (S)",
+    "hp": 657,
     "transmission": "1-speed direct",
     "manualAvailable": false,
     "drive": [
@@ -36838,7 +36976,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "medium",
-  "notes": "All-new EV flagship SUV revealed late 2025; US deliveries during 2026. Announced prices ($111,350 base, $165,350 Turbo) may include delivery fee. Turbo hp is peak launch-control figure (~845 hp continuous); EPA range not yet published. S Coupe Electric ($131,200) slots between."
+  "notes": "All-new EV flagship SUV revealed late 2025; US deliveries during 2026. 2026-08-01 re-verify: added the missing Cayenne S Electric trim ($126,300 base / $128,650 incl. the confirmed $2,350 destination fee — every price here now includes destination, verified via official Porsche Newsroom releases); hp figures are peak launch-control figures (435/657/1,139; continuous outputs are 402/536/844 respectively, plus a +173-hp 10-second Push-to-Pass on Turbo). EPA range still not officially published as of this check (fueleconomy.gov shows zero 2026 results) — only unofficial estimates exist (Edmunds real-world test: 328 mi), so left unset rather than guessed. S Coupe Electric ($131,200 base, excludes destination) slots between; full Coupe sub-line (Coupe/S Coupe/Turbo Coupe) not yet modeled as separate trims. No NHTSA or IIHS rating exists yet (checked directly — too new to be tested; confirmed absent from IIHS's 2026 award list). No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "Cayenne Electric & Turbo Electric official pricing/specs",
+    "url": "https://newsroom.porsche.com/en_US/2025/products/new-porsche-all-rounder-Cayenne-nameplate-expands-portfolio-to-include-electrification-41132.html",
+    "site": "newsroom.porsche.com"
+   },
+   {
+    "label": "Cayenne S Electric official pricing/specs",
+    "url": "https://newsroom.porsche.com/en_US/2026/products/porsche-the-new-cayenne-s-electric-41867.html",
+    "site": "newsroom.porsche.com"
+   },
+   {
+    "label": "2026 IIHS Top Safety Pick/Pick+ list (no Porsche models)",
+    "url": "https://www.iihs.org/ratings/top-safety-picks",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "porsche-macan",
@@ -36849,16 +37004,24 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact luxury SUV",
   "category": "suv",
-  "priceFrom": 63200,
-  "priceTo": 72200,
+  "priceFrom": 65400,
+  "priceTo": 94200,
   "trims": [
    {
     "name": "Macan",
-    "msrp": 63200
+    "msrp": 65400
+   },
+   {
+    "name": "Macan T",
+    "msrp": 71100
    },
    {
     "name": "Macan S",
-    "msrp": 72200
+    "msrp": 78900
+   },
+   {
+    "name": "Macan GTS",
+    "msrp": 94200
    }
   ],
   "powertrains": [
@@ -36878,6 +37041,18 @@ export const VEHICLES = [
     "type": "gas",
     "engine": "2.9L twin-turbo V6 (S)",
     "hp": 375,
+    "transmission": "7-speed PDK",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 19,
+    "evRangeMi": null
+   },
+   {
+    "type": "gas",
+    "engine": "2.9L twin-turbo V6 (GTS)",
+    "hp": 434,
     "transmission": "7-speed PDK",
     "manualAvailable": false,
     "drive": [
@@ -36923,8 +37098,25 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Final model year for the gas Macan in the US; production winds down ahead of its electric-only future. Prices approximate (derived from listings that may include delivery fee)."
+  "confidence": "high",
+  "notes": "Final model year for the gas Macan in the US — confirmed via Motor1: production ends around Q3 2026, with US dealer inventory expected to last into 2027; the next gas/hybrid successor (\"M1\") isn't expected until 2028 (Porsche has reportedly stepped back from an electric-only Macan future). 2026-08-01 re-verify: added the missing Macan T ($71,100) and Macan GTS ($94,200, 434-hp V6, distinct tune from S) trims and corrected pricing across the board — on-file figures were a full model year stale. Base/S powertrain specs (hp/mpg) confirmed unchanged. NHTSA has no published rating and no IIHS test page exists for the Macan (checked directly — low-volume luxury SUV, not tested) — worth stating explicitly since it isn't merely unknown. No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "Full 2026 trim/spec table (pricing, hp, torque, EPA mpg)",
+    "url": "https://www.champion-porsche.com/blog/porsche-101-macan-specs/",
+    "site": "champion-porsche.com"
+   },
+   {
+    "label": "Gas Macan production end / US inventory timing",
+    "url": "https://www.motor1.com/news/801083/porsche-gas-macan-production-ends/",
+    "site": "motor1.com"
+   },
+   {
+    "label": "2026 IIHS Top Safety Pick/Pick+ list (no Porsche models)",
+    "url": "https://www.iihs.org/ratings/top-safety-picks",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "porsche-macan-electric",
@@ -36935,38 +37127,82 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "compact electric luxury SUV",
   "category": "suv",
-  "priceFrom": 78000,
-  "priceTo": 108000,
+  "priceFrom": 80350,
+  "priceTo": 111850,
   "trims": [
    {
     "name": "Macan Electric",
-    "msrp": 78000
+    "msrp": 80350
    },
    {
-    "name": "Macan 4",
-    "msrp": 82000
+    "name": "Macan 4 Electric",
+    "msrp": 83950
+   },
+   {
+    "name": "Macan 4S Electric",
+    "msrp": 90350
+   },
+   {
+    "name": "Macan GTS Electric",
+    "msrp": 107650
    },
    {
     "name": "Macan Turbo Electric",
-    "msrp": 108000
+    "msrp": 111850
    }
   ],
   "powertrains": [
    {
     "type": "ev",
     "engine": "Single-motor RWD",
-    "hp": 335,
+    "hp": 355,
     "transmission": "1-speed direct",
     "manualAvailable": false,
     "drive": [
      "RWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 315
+    "evRangeMi": 309
    },
    {
     "type": "ev",
-    "engine": "Dual-motor AWD (4 / 4S / Turbo)",
+    "engine": "Dual-motor AWD (4)",
+    "hp": 402,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 304
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (4S)",
+    "hp": 509,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 290
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (GTS)",
+    "hp": 563,
+    "transmission": "1-speed direct",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 294
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (Turbo)",
     "hp": 630,
     "transmission": "1-speed direct",
     "manualAvailable": false,
@@ -36974,7 +37210,7 @@ export const VEHICLES = [
      "AWD"
     ],
     "mpgCombined": null,
-    "evRangeMi": 288
+    "evRangeMi": 293
    }
   ],
   "seats": [
@@ -37014,8 +37250,25 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "PPE-platform EV sold alongside the gas Macan for 2026. Prices approximate (advertised figures vary on delivery-fee inclusion); hp figures are peak with launch control. Adds a 3.0 cu-ft frunk."
+  "confidence": "high",
+  "notes": "PPE-platform EV sold alongside the gas Macan for 2026. 2026-08-01 re-verify: added the missing Macan 4S Electric and the new-for-2026 Macan GTS Electric (Porsche's first electric GTS) trims and corrected pricing across the board — all figures now include destination. Split the old single \"dual-motor 630hp/288mi\" bucket (which was really Turbo-only data) into distinct 4/4S/GTS/Turbo entries; hp figures are peak launch-control (continuous: 335/382/442/509/576 respectively). EV range sourced from fueleconomy.gov's standard-wheel EPA figures (a smaller-wheel option raises range further on some trims). No NHTSA rating and no IIHS award/test found (checked directly; Euro NCAP's separate 5-star rating is not a US rating). Adds a 3.0 cu-ft frunk. No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "Base/4/4S/Turbo pricing, hp, EPA range",
+    "url": "https://www.cars.com/articles/2026-porsche-macan-electric-upgraded-driver-assist-and-tech-features-80350-base-price-515097/",
+    "site": "cars.com"
+   },
+   {
+    "label": "GTS Electric pricing, hp, torque",
+    "url": "https://www.cars.com/articles/the-2026-porsche-macan-gts-electric-is-your-ev-giga-hatch-review-521290/",
+    "site": "cars.com"
+   },
+   {
+    "label": "GTS Electric official specs cross-check",
+    "url": "https://insideevs.com/news/776417/2026-porsche-macan-gts-official-specs-price/",
+    "site": "insideevs.com"
+   }
+  ]
  },
  {
   "id": "porsche-panamera",
@@ -37026,20 +37279,36 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "full-size luxury sport sedan",
   "category": "car",
-  "priceFrom": 110700,
-  "priceTo": 232000,
+  "priceFrom": 113000,
+  "priceTo": 245200,
   "trims": [
    {
     "name": "Panamera",
-    "msrp": 110700
+    "msrp": 113000
    },
    {
     "name": "Panamera 4",
-    "msrp": 117000
+    "msrp": 120400
    },
    {
-    "name": "Turbo S E-Hybrid",
-    "msrp": 232000
+    "name": "Panamera 4 E-Hybrid",
+    "msrp": 127200
+   },
+   {
+    "name": "Panamera 4S E-Hybrid",
+    "msrp": 139100
+   },
+   {
+    "name": "Panamera GTS",
+    "msrp": 166900
+   },
+   {
+    "name": "Panamera Turbo E-Hybrid",
+    "msrp": 207900
+   },
+   {
+    "name": "Panamera Turbo S E-Hybrid",
+    "msrp": 245200
    }
   ],
   "powertrains": [
@@ -37053,13 +37322,13 @@ export const VEHICLES = [
      "RWD",
      "AWD"
     ],
-    "mpgCombined": 20,
+    "mpgCombined": 21,
     "evRangeMi": null
    },
    {
-    "type": "phev",
-    "engine": "2.9L V6 / 4.0L V8 E-Hybrid",
-    "hp": 536,
+    "type": "gas",
+    "engine": "4.0L twin-turbo V8 (GTS)",
+    "hp": 493,
     "transmission": "8-speed PDK",
     "manualAvailable": false,
     "drive": [
@@ -37067,6 +37336,54 @@ export const VEHICLES = [
     ],
     "mpgCombined": null,
     "evRangeMi": null
+   },
+   {
+    "type": "phev",
+    "engine": "2.9L V6 E-Hybrid",
+    "hp": 463,
+    "transmission": "8-speed PDK",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 28
+   },
+   {
+    "type": "phev",
+    "engine": "2.9L V6 E-Hybrid (4S)",
+    "hp": 536,
+    "transmission": "8-speed PDK",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 28
+   },
+   {
+    "type": "phev",
+    "engine": "4.0L V8 E-Hybrid (Turbo)",
+    "hp": 670,
+    "transmission": "8-speed PDK",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 28
+   },
+   {
+    "type": "phev",
+    "engine": "4.0L V8 E-Hybrid (Turbo S)",
+    "hp": 771,
+    "transmission": "8-speed PDK",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": null,
+    "evRangeMi": 27
    }
   ],
   "seats": [
@@ -37096,19 +37413,35 @@ export const VEHICLES = [
   },
   "keyOptions": [
    "Porsche Active Ride suspension",
-   "Executive long-wheelbase versions",
    "Burmester high-end audio",
    "Rear-axle steering",
    "Panoramic roof",
-   "Multiple E-Hybrid powertrains (4, 4S, Turbo, Turbo S)"
+   "Multiple E-Hybrid powertrains (4 E-Hybrid, 4S E-Hybrid, Turbo E-Hybrid, Turbo S E-Hybrid)"
   ],
   "towingLb": null,
   "image": {
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Third generation (new 2024). Liftback body. E-Hybrid PHEVs span roughly 536-771 hp (Turbo S E-Hybrid). Base and top prices approximate; Porsche adjusted prices during 2025."
+  "confidence": "high",
+  "notes": "Third generation (new 2024). Liftback body. 2026-08-01 re-verify: full 7-trim lineup confirmed (was missing 4, GTS, 4 E-Hybrid and Turbo E-Hybrid entirely) against Cars.com, cross-checked against Edmunds/US News/KBB search results; a lower CarsDirect price set looks stale/pre-2025-increase and was not used. No standalone Executive long-wheelbase trim exists in the current (facelifted 3rd-gen) US lineup for MY2026 — removed from keyOptions, it was carried over from the prior generation. Gas MPG corrected 20->21 (fueleconomy.gov). Split the single PHEV bucket into V6-based (4/4S E-Hybrid, 463/536 hp) and V8-based (Turbo/Turbo S E-Hybrid, 670/771 hp) entries, and set EV-only range (27-28 mi) which was previously null. GTS's non-hybrid V8 tune (493 hp) added as its own powertrain entry; its combined MPG wasn't independently confirmed this run, left unset rather than guessed. No NHTSA rating exists (API returns zero results) and no IIHS test page/award exists — checked directly, not guessed. No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "Full 2026 trim ladder + prices + system hp",
+    "url": "https://www.cars.com/research/porsche-panamera-2026/trims/",
+    "site": "cars.com"
+   },
+   {
+    "label": "EV-only range by trim",
+    "url": "https://www.carmax.com/research/porsche/panamera-e-phev/2026",
+    "site": "carmax.com"
+   },
+   {
+    "label": "EPA fuel economy (gas V6)",
+    "url": "https://www.fueleconomy.gov/feg/bymodel/2026_Porsche_Panamera.shtml",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "porsche-taycan",
@@ -37119,24 +37452,36 @@ export const VEHICLES = [
   "bodyStyle": "sedan",
   "segment": "electric sports sedan",
   "category": "car",
-  "priceFrom": 100300,
-  "priceTo": 230000,
+  "priceFrom": 108050,
+  "priceTo": 245950,
   "trims": [
    {
     "name": "Taycan",
-    "msrp": 100300
+    "msrp": 108050
    },
    {
     "name": "Taycan 4",
-    "msrp": 104200
+    "msrp": 112150
    },
    {
     "name": "Taycan 4S",
-    "msrp": 119400
+    "msrp": 128150
+   },
+   {
+    "name": "Taycan GTS",
+    "msrp": 159250
+   },
+   {
+    "name": "Taycan Turbo",
+    "msrp": 186850
+   },
+   {
+    "name": "Taycan Turbo S",
+    "msrp": 223650
    },
    {
     "name": "Taycan Turbo GT",
-    "msrp": 230000
+    "msrp": 245950
    }
   ],
   "powertrains": [
@@ -37149,20 +37494,80 @@ export const VEHICLES = [
     "drive": [
      "RWD"
     ],
-    "mpgCombined": 96,
-    "evRangeMi": 318
+    "mpgCombined": 91,
+    "evRangeMi": 274
    },
    {
     "type": "ev",
-    "engine": "Dual-motor AWD (up to Turbo GT)",
+    "engine": "Dual-motor AWD (4)",
+    "hp": 402,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 87,
+    "evRangeMi": 251
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (4S)",
+    "hp": 536,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 88,
+    "evRangeMi": 252
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (GTS)",
+    "hp": 690,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 86,
+    "evRangeMi": 293
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (Turbo)",
+    "hp": 871,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 86,
+    "evRangeMi": 292
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (Turbo S)",
+    "hp": 938,
+    "transmission": "2-speed (rear axle)",
+    "manualAvailable": false,
+    "drive": [
+     "AWD"
+    ],
+    "mpgCombined": 79,
+    "evRangeMi": 266
+   },
+   {
+    "type": "ev",
+    "engine": "Dual-motor AWD (Turbo GT)",
     "hp": 1019,
     "transmission": "2-speed (rear axle)",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 84,
-    "evRangeMi": 301
+    "mpgCombined": 82,
+    "evRangeMi": 276
    }
   ],
   "seats": [
@@ -37202,8 +37607,25 @@ export const VEHICLES = [
    "remote": null,
    "credit": null
   },
-  "confidence": "medium",
-  "notes": "Heavily updated for 2025 with more range and 320-kW charging. Turbo GT price is latest published figure (2025). Cross Turismo wagon variants sold under same nameplate. hp figures are peak/overboost."
+  "confidence": "high",
+  "notes": "Heavily updated for 2025 with more range and 320-kW charging. 2026-08-01 re-verify: full 7-trim lineup confirmed (was missing 4S, GTS, Turbo, Turbo S entirely) — added new-for-2026 Black Edition sub-trims of base/4/4S aren't separately modeled here (roughly +$17K over their base trim). Prices cross-checked across two independent dealer/pricing sources agreeing within ~$100/trim. MPGe/range corrected: the prior flat 96 MPGe/318mi and 84 MPGe/301mi figures didn't match any real fueleconomy.gov entry — actual EPA figures span 77-93 MPGe and 251-315mi depending on battery pack (base Performance Battery vs. optional Performance Battery Plus, which raises range further on most trims) and trim; base-Performance-Battery figures used here as the representative floor. Cross Turismo (wagon) and GTS's \"Sport Turismo\" wagon variant exist for several trims at a premium, sold under the same nameplate. hp figures are peak/overboost. No NHTSA rating and no IIHS test page exist (checked directly — low sales volume, not tested; Euro NCAP's separate 5-star rating is not a US rating). No manufacturer-published hex color values found.",
+  "sources": [
+   {
+    "label": "2026 trim-by-trim MSRP",
+    "url": "https://www.carsdirect.com/porsche/taycan/prices-deals",
+    "site": "carsdirect.com"
+   },
+   {
+    "label": "EPA MPGe/range by variant",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=Porsche&baseModel=Taycan&srchtyp=ymm&pageno=1&rowLimit=50",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "2026 MSRP + hp cross-check",
+    "url": "https://www.porschelongbeach.com/2026-porsche-ev-prices-by-model/",
+    "site": "porschelongbeach.com"
+   }
+  ]
  },
  {
   "id": "ram-1500",
