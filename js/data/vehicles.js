@@ -33706,28 +33706,76 @@ export const VEHICLES = [
   "bodyStyle": "hatchback",
   "segment": "subcompact premium hatchback",
   "category": "car",
-  "priceFrom": 29500,
+  "priceFrom": 25500,
   "priceTo": 43300,
   "trims": [
    {
-    "name": "Cooper 2 Door",
+    "name": "Cooper Oxford Edition 2 Door",
+    "msrp": 25500
+   },
+   {
+    "name": "Cooper Oxford Edition 4 Door",
+    "msrp": 26500
+   },
+   {
+    "name": "Cooper Signature 2 Door",
     "msrp": 29500
    },
    {
-    "name": "Cooper 4 Door",
+    "name": "Cooper Signature 4 Door",
     "msrp": 30500
    },
    {
-    "name": "Cooper S 2 Door",
+    "name": "Cooper Signature Plus 2 Door",
+    "msrp": 31900
+   },
+   {
+    "name": "Cooper Signature Plus 4 Door",
+    "msrp": 32900
+   },
+   {
+    "name": "Cooper Iconic 2 Door",
+    "msrp": 33600
+   },
+   {
+    "name": "Cooper Iconic 4 Door",
+    "msrp": 34600
+   },
+   {
+    "name": "Cooper S Signature 2 Door",
     "msrp": 32800
    },
    {
-    "name": "Cooper S 4 Door",
+    "name": "Cooper S Signature 4 Door",
     "msrp": 33800
    },
    {
-    "name": "John Cooper Works 2 Door",
+    "name": "Cooper S Signature Plus 2 Door",
+    "msrp": 35200
+   },
+   {
+    "name": "Cooper S Signature Plus 4 Door",
+    "msrp": 36200
+   },
+   {
+    "name": "Cooper S Iconic 2 Door",
+    "msrp": 36900
+   },
+   {
+    "name": "Cooper S Iconic 4 Door",
+    "msrp": 37900
+   },
+   {
+    "name": "John Cooper Works Signature 2 Door",
     "msrp": 38900
+   },
+   {
+    "name": "John Cooper Works Signature Plus 2 Door",
+    "msrp": 41300
+   },
+   {
+    "name": "John Cooper Works Iconic 2 Door",
+    "msrp": 43300
    }
   ],
   "powertrains": [
@@ -33740,7 +33788,7 @@ export const VEHICLES = [
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 33,
+    "mpgCombined": 32,
     "evRangeMi": null
    },
    {
@@ -33808,7 +33856,24 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "New F66 generation; no manual transmission offered. 4 Door adds $1,000, seats 5, and stretches to 161.4 in; JCW is 2-door only. priceTo reflects JCW Iconic tier. Cooper Electric not sold in the US. Destination $1,175 not included."
+  "notes": "Re-verified 2026-08-01 against BMW Group's official MY2026 US pricing release: every Signature/Signature Plus/Iconic price for Cooper, Cooper S and JCW Hardtop (2 Door and 4 Door) confirmed exact. Real addition: the value-focused Oxford Edition trim returned for 2026 at $25,500 (2 Door) / $26,500 (4 Door) — a simplified-equipment, lower-cost tier sold alongside the full lineup (confirmed via dealer inventory listings and BMW-focused press coverage, since it postdated the main pricing release) — dropping priceFrom from $29,500. Corrected the base Cooper's EPA combined MPG from a stale 33 to the fueleconomy.gov-confirmed 32 (Cooper S's 32 and JCW's 30 were already exactly correct). New F66 generation; no manual transmission offered. 4 Door adds $1,000, seats 5, and stretches to 161.4 in; JCW is 2-door only. priceTo reflects JCW Iconic tier. Cooper Electric not sold in the US. No 2026 NHTSA record (api.nhtsa.gov lists the Hardtop with a null vehicle ID) and no IIHS test page (iihs.org 404s) — checked both directly, nothing guessed. Destination $1,175 not included.",
+  "sources": [
+   {
+    "label": "BMW Group PressClub USA - Model Year 2026 MINI Lineup Pricing and Equipment Updates",
+    "url": "https://www.press.bmwgroup.com/usa/article/detail/T0450606EN_US/model-year-2026-mini-lineup-pricing-and-equipment-updates?language=en_US",
+    "site": "press.bmwgroup.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 MINI Cooper Hardtop MPG",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=MINI&model=Cooper&mpgUnit=1",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "BMWBLOG - 2026 MINI Cooper Overview: Oxford Edition Returns",
+    "url": "https://www.bmwblog.com/2026/01/07/2026-mini-cooper-overview-oxford-edition-updates/",
+    "site": "bmwblog.com"
+   }
+  ]
  },
  {
   "id": "mini-cooper-convertible",
@@ -33823,16 +33888,40 @@ export const VEHICLES = [
   "priceTo": 49000,
   "trims": [
    {
-    "name": "Cooper Convertible",
+    "name": "Cooper Convertible Signature",
     "msrp": 34600
    },
    {
-    "name": "Cooper S Convertible",
+    "name": "Cooper Convertible Signature Plus",
+    "msrp": 37000
+   },
+   {
+    "name": "Cooper Convertible Iconic",
+    "msrp": 38700
+   },
+   {
+    "name": "Cooper S Convertible Signature",
     "msrp": 37900
    },
    {
-    "name": "John Cooper Works Convertible",
+    "name": "Cooper S Convertible Signature Plus",
+    "msrp": 40300
+   },
+   {
+    "name": "Cooper S Convertible Iconic",
+    "msrp": 42000
+   },
+   {
+    "name": "John Cooper Works Convertible Signature",
     "msrp": 44600
+   },
+   {
+    "name": "John Cooper Works Convertible Signature Plus",
+    "msrp": 47000
+   },
+   {
+    "name": "John Cooper Works Convertible Iconic",
+    "msrp": 49000
    }
   ],
   "powertrains": [
@@ -33845,7 +33934,7 @@ export const VEHICLES = [
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 32,
+    "mpgCombined": 30,
     "evRangeMi": null
    },
    {
@@ -33857,7 +33946,7 @@ export const VEHICLES = [
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 31,
+    "mpgCombined": 30,
     "evRangeMi": null
    },
    {
@@ -33869,7 +33958,7 @@ export const VEHICLES = [
     "drive": [
      "FWD"
     ],
-    "mpgCombined": 29,
+    "mpgCombined": 30,
     "evRangeMi": null
    }
   ],
@@ -33911,7 +34000,19 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "Redesigned soft-top based on the new-generation Cooper. priceTo reflects JCW Iconic tier. Destination $1,175 not included."
+  "notes": "Re-verified 2026-08-01 against BMW Group's official MY2026 US pricing release: every Signature/Signature Plus/Iconic price for Cooper, Cooper S and JCW Convertible confirmed exact (no Oxford Edition offered on the convertible body style — not found in any pricing coverage). Corrected EPA combined MPG across all three powertrains — fueleconomy.gov shows a flat 30 mpg combined for Cooper, Cooper S and JCW Convertible, not the previously recorded 32/31/29. Redesigned soft-top based on the new-generation Cooper. priceTo reflects JCW Iconic tier. No 2026 NHTSA record (api.nhtsa.gov lists Convertible with a null vehicle ID) and no IIHS test page (iihs.org 404s — convertibles are rarely crash-tested) — checked both directly, nothing guessed. Destination $1,175 not included.",
+  "sources": [
+   {
+    "label": "BMW Group PressClub USA - Model Year 2026 MINI Lineup Pricing and Equipment Updates",
+    "url": "https://www.press.bmwgroup.com/usa/article/detail/T0450606EN_US/model-year-2026-mini-lineup-pricing-and-equipment-updates?language=en_US",
+    "site": "press.bmwgroup.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 MINI Cooper Convertible MPG",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=MINI&model=Cooper&mpgUnit=1",
+    "site": "fueleconomy.gov"
+   }
+  ]
  },
  {
   "id": "mini-countryman",
@@ -33922,20 +34023,36 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "subcompact premium SUV",
   "category": "suv",
-  "priceFrom": 38900,
+  "priceFrom": 34900,
   "priceTo": 49400,
   "trims": [
    {
-    "name": "Countryman S ALL4",
+    "name": "Countryman S ALL4 Oxford Edition",
+    "msrp": 34900
+   },
+   {
+    "name": "Countryman S ALL4 Signature Plus",
     "msrp": 38900
    },
    {
-    "name": "Countryman SE ALL4 (EV, sold as MY2025)",
+    "name": "Countryman S ALL4 Iconic",
+    "msrp": 42300
+   },
+   {
+    "name": "Countryman SE ALL4 Signature Plus",
     "msrp": 45200
    },
    {
-    "name": "John Cooper Works Countryman ALL4",
+    "name": "Countryman SE ALL4 Iconic",
+    "msrp": 48400
+   },
+   {
+    "name": "John Cooper Works Countryman ALL4 Signature Plus",
     "msrp": 46900
+   },
+   {
+    "name": "John Cooper Works Countryman ALL4 Iconic",
+    "msrp": 49400
    }
   ],
   "powertrains": [
@@ -33960,19 +34077,19 @@ export const VEHICLES = [
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 26,
+    "mpgCombined": 25,
     "evRangeMi": null
    },
    {
     "type": "ev",
     "engine": "Dual-motor AWD (SE ALL4)",
-    "hp": 313,
+    "hp": 308,
     "transmission": "1-speed direct",
     "manualAvailable": false,
     "drive": [
      "AWD"
     ],
-    "mpgCombined": 100,
+    "mpgCombined": 96,
     "evRangeMi": 212
    }
   ],
@@ -34015,7 +34132,34 @@ export const VEHICLES = [
    "credit": null
   },
   "confidence": "high",
-  "notes": "All-wheel drive standard on all US Countrymans. The electric Countryman SE ALL4 continues on sale but as a carryover Model Year 2025 (MINI has not announced MY2026 pricing for it); it is folded in here. priceTo reflects JCW Iconic tier. Destination $1,175 not included."
+  "notes": "Re-verified 2026-08-01 against BMW Group's official MY2026 US pricing release plus dedicated Oxford Edition and SE ALL4 coverage. Real correction: the previous note calling the electric SE ALL4 a stale MY2025 carryover was wrong — it is a genuine current 2026 model sold in its own Signature Plus ($45,200) and Iconic ($48,400) sub-trims (confirmed via Autoblog's 2026 review and cross-checked against destination-inclusive $46,375/$49,575 figures quoted elsewhere, which match exactly once the $1,175 destination is added back in). Also corrected the SE ALL4's output from a stale 313 hp / 100 MPGe combined to the current 308 hp / 364 lb-ft and fueleconomy.gov-confirmed 96 MPGe combined (212-mi range on 18-in wheels unchanged). Real addition: the Countryman S ALL4 Oxford Edition returned for 2026 at $34,900, a simplified-equipment tier below Signature Plus (confirmed via BMW-focused press coverage and dealer inventory, since it postdated the main pricing release) — dropping priceFrom from $38,900. Expanded the JCW ALL4 from one flat $46,900 entry to its real Signature Plus ($46,900) / Iconic ($49,400) ladder; corrected its EPA combined MPG from a stale 26 to the fueleconomy.gov-confirmed 25 (S ALL4's 27 was already exactly correct). All-wheel drive standard on all US Countrymans. priceTo reflects JCW ALL4 Iconic tier. IIHS shows only a partial 2025-26 test (small overlap front: Good, side: Good, headlights: Good, front pedestrian crash prevention: Good) with no moderate-overlap/roof-strength/LATCH categories published and no overall award listed — some secondary coverage claims a Top Safety Pick+ carried over from the closely related 2025 model, but iihs.org itself shows no award for this listing, so none is recorded here; NHTSA has no 2026 record either (api.nhtsa.gov lists Countryman with a null vehicle ID) — checked both directly, nothing guessed.",
+  "sources": [
+   {
+    "label": "BMW Group PressClub USA - Model Year 2026 MINI Lineup Pricing and Equipment Updates",
+    "url": "https://www.press.bmwgroup.com/usa/article/detail/T0450606EN_US/model-year-2026-mini-lineup-pricing-and-equipment-updates?language=en_US",
+    "site": "press.bmwgroup.com"
+   },
+   {
+    "label": "fueleconomy.gov - 2026 MINI Countryman SE ALL4 (electric)",
+    "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2026&year2=2026&make=MINI&model=Countryman&mpgUnit=1",
+    "site": "fueleconomy.gov"
+   },
+   {
+    "label": "Autoblog - 2026 MINI Countryman Electric Review, Specs, Pricing and Warranty",
+    "url": "https://www.autoblog.com/cars/mini/countryman-electric/2026",
+    "site": "autoblog.com"
+   },
+   {
+    "label": "autoevolution - MINI Oxford Edition Countryman Starts At $34,900",
+    "url": "https://www.autoevolution.com/news/mini-usa-rolls-out-2026-countryman-s-all4-oxford-edition-260775.html",
+    "site": "autoevolution.com"
+   },
+   {
+    "label": "IIHS - 2026 Mini Countryman 4-door SUV ratings",
+    "url": "https://www.iihs.org/ratings/vehicle/mini/countryman-4-door-suv/2026",
+    "site": "iihs.org"
+   }
+  ]
  },
  {
   "id": "mitsubishi-eclipse-cross",

@@ -21,6 +21,16 @@
 
 export const CHANGELOG = [
   {
+    v: 81,
+    title: 'Mini lineup re-verified for MY2026: new Oxford Edition trims, corrected EV specs',
+    kind: 'fix',
+    ts: '2026-08-01T09:43:25.283Z',
+    items: [
+      'All 3 Mini models re-verified against BMW\'s official 2026 pricing release: added the returning value-priced Oxford Edition trim on Cooper Hardtop and Countryman, corrected the electric Countryman SE ALL4\'s output and efficiency figures, and expanded thin trim ladders into their real Signature/Signature Plus/Iconic lineups.',
+      'Fixed several stale EPA combined MPG/MPGe figures across Cooper, Cooper Convertible and Countryman JCW ALL4.',
+    ],
+  },
+  {
     v: 80,
     title: 'Topbar icon buttons reach the 44px touch-target floor on mobile',
     kind: 'fix',
