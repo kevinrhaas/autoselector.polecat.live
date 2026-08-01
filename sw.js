@@ -7,7 +7,7 @@
 // online visit is never served stale JS after a deploy (this app ships new
 // builds hourly). The cache only kicks in when the network is unavailable,
 // which is exactly what "installable / offline-capable" needs here.
-const CACHE = 'as-shell-v6';   // bumped: polecat-shell v0.5.8 (rail-toggle drawer fix, theme-aware site-chrome fallback)
+const CACHE = 'as-shell-v7';   // bumped: polecat-shell v0.6.1 (mobile drawer close button reachable behind its own backdrop)
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();

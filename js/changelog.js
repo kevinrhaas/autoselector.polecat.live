@@ -21,6 +21,16 @@
 
 export const CHANGELOG = [
   {
+    v: 78,
+    title: 'Shell caught up to v0.6.1 — mobile drawer close button fixed',
+    kind: 'fix',
+    ts: '2026-08-01T00:07:36.725Z',
+    items: [
+      'Vendored Polecat Shell refreshed from v0.5.8 to v0.6.1. On phones, the drawer\'s close control now sits inside the drawer itself and always stays reachable — previously a second tap of the topbar hamburger could silently land on the rail\'s own logo instead of closing the drawer, since the backdrop painted above it.',
+      'The rail\'s brand mark is now a round single-color ring badge instead of a gradient tile, matching the fleet\'s current mark system.',
+    ],
+  },
+  {
     v: 77,
     title: '5 more interior photos — Kicks, Crown, EV9, CX-90, Canyon',
     kind: 'data',
