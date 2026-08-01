@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 44;
+export const DATA_VERSION = 45;
 
 export const VEHICLES = [
  {
@@ -30422,12 +30422,20 @@ export const VEHICLES = [
     "msrp": 29690
    },
    {
+    "name": "2.5 S Aire Edition",
+    "msrp": 30250
+   },
+   {
     "name": "2.5 Carbon Edition",
     "msrp": 31430
    },
    {
     "name": "2.5 S Premium",
     "msrp": 33640
+   },
+   {
+    "name": "2.5 Turbo Aire Edition",
+    "msrp": 34410
    },
    {
     "name": "2.5 Turbo Premium Plus",
@@ -30438,7 +30446,7 @@ export const VEHICLES = [
    {
     "type": "gas",
     "engine": "2.5L I4",
-    "hp": 191,
+    "hp": 186,
     "transmission": "6-speed automatic",
     "manualAvailable": false,
     "drive": [
@@ -30498,7 +30506,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "i-Activ AWD standard on every trim. Turbo makes 250 hp on 93-octane / 227 hp on 87-octane.",
+  "notes": "i-Activ AWD standard on every trim. Turbo makes 250 hp on 93-octane / 227 hp on 87-octane. 2026-08-01 re-verify: added the S Aire Edition ($30,250) and Turbo Aire Edition ($34,410) trims (new since the prior sweep) and corrected the base 2.5L's hp from a stale 191 to Mazda's official 186 (mazdausa.com and its Sep 2025 pricing/packaging press release both cite 186; a few third-party dealer pages still show 191).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -30579,7 +30587,7 @@ export const VEHICLES = [
    "lengthIn": 184.6,
    "widthIn": 73.2,
    "heightIn": 66.7,
-   "wheelbaseIn": null,
+   "wheelbaseIn": 110.8,
    "curbWeightLb": null,
    "groundClearanceIn": 8.1
   },
@@ -30624,8 +30632,8 @@ export const VEHICLES = [
     }
    ]
   },
-  "confidence": "medium",
-  "notes": "All-new third generation for 2026, on sale from early 2026; larger than before, AWD standard, single 187-hp powertrain at launch (Skyactiv-Z hybrid expected for 2027). New touchscreen-centric cabin drops Mazda's rotary commander and physical climate knobs. Wheelbase/curb weight not yet in this dataset; some published specs still preliminary.",
+  "confidence": "high",
+  "notes": "All-new third generation for 2026, on sale from early 2026; larger than before, AWD standard, single 187-hp powertrain at launch (Skyactiv-Z hybrid expected for 2027). New touchscreen-centric cabin drops Mazda's rotary commander and physical climate knobs. 2026-08-01 re-verify: all 5 trims/prices (S $29,990 through S Premium Plus $38,990) confirmed unchanged against mazdausa.com; wheelbase confirmed at 110.8 in (a 4.5 in stretch over the prior generation). Curb weight stays unset — Mazda's own US spec pages still say official curb-weight figures are TBD, so no per-trim number is citable yet (third-party estimates run 3,300-3,700 lb depending on trim, too wide to cite as one figure).",
   "sources": [
    {
     "label": "2026 pricing & trims",
@@ -30694,6 +30702,10 @@ export const VEHICLES = [
    {
     "name": "Hybrid Premium",
     "msrp": 38150
+   },
+   {
+    "name": "2.5 Turbo Meridian Edition",
+    "msrp": 40400
    },
    {
     "name": "Hybrid Premium Plus",
@@ -30781,7 +30793,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota.",
+  "notes": "AWD standard. Towing: 3,500 lb with Turbo, 2,000 lb NA gas, 1,500 lb Hybrid. Turbo makes 256 hp on 93-octane / 227 hp on 87-octane. Built in Alabama alongside Toyota. 2026-08-01 re-verify: added the missing 2.5 Turbo Meridian Edition trim ($40,400, all-terrain tires like the S Meridian Edition but on the turbo engine); Hybrid confirmed still offered for 2026 (Preferred/Premium/Premium Plus), not discontinued. Every other trim price unchanged against mazdausa.com.",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -30958,24 +30970,44 @@ export const VEHICLES = [
   "bodyStyle": "suv",
   "segment": "midsize 3-row SUV",
   "category": "suv",
-  "priceFrom": 38800,
-  "priceTo": 58500,
+  "priceFrom": 39300,
+  "priceTo": 59295,
   "trims": [
    {
     "name": "3.3 Turbo Select",
-    "msrp": 38800
+    "msrp": 39300
+   },
+   {
+    "name": "3.3 Turbo Preferred",
+    "msrp": 43450
+   },
+   {
+    "name": "3.3 Turbo Premium Sport",
+    "msrp": 47480
    },
    {
     "name": "PHEV Preferred",
-    "msrp": 50495
+    "msrp": 50695
+   },
+   {
+    "name": "3.3 Turbo Premium Plus",
+    "msrp": 50270
+   },
+   {
+    "name": "3.3 Turbo S Premium Sport",
+    "msrp": 54140
+   },
+   {
+    "name": "PHEV Premium Sport",
+    "msrp": 55300
    },
    {
     "name": "3.3 Turbo S Premium Plus",
-    "msrp": 57370
+    "msrp": 57570
    },
    {
     "name": "PHEV Premium Plus",
-    "msrp": 58500
+    "msrp": 59295
    }
   ],
   "powertrains": [
@@ -31066,7 +31098,7 @@ export const VEHICLES = [
    ]
   },
   "confidence": "high",
-  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row. 2026-07-31: interior gallery photo added — 2024 Turbo Exclusive HEV cabin, same KK-platform generation sold unchanged through 2026.",
+  "notes": "Standard AWD; gas trims span Select to Turbo S Premium Plus, PHEV spans Preferred to Premium Plus. For 2026 all PHEVs get 21-in wheels, ventilated front seats and Alexa built-in standard. Mid-2026 price increases of a few hundred dollars were announced. Cargo figure is behind the third row. 2026-07-31: interior gallery photo added — 2024 Turbo Exclusive HEV cabin, same KK-platform generation sold unchanged through 2026. 2026-08-01 re-verify: the trim list only had 4 of the real 9 trims (missing 3.3 Turbo Preferred/Premium Sport/Premium Plus/S Premium Sport and PHEV Premium Sport) and every price was stale from the mid-2026 increase — replaced with the full current lineup against mazdausa.com (gas Select $39,300 through S Premium Plus $57,570; PHEV Preferred $50,695 through Premium Plus $59,295).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
@@ -31137,7 +31169,7 @@ export const VEHICLES = [
    {
     "type": "gas",
     "engine": "2.5L I4",
-    "hp": 191,
+    "hp": 186,
     "transmission": "6-speed automatic",
     "manualAvailable": true,
     "drive": [
@@ -31200,7 +31232,7 @@ export const VEHICLES = [
    "credit": "Wikimedia Commons"
   },
   "confidence": "high",
-  "notes": "Sold as sedan and hatchback (one record; hatchback costs ~$1,000-1,150 more, dims for sedan). Turbo makes 250 hp on 93-octane / 227 hp on 87-octane.",
+  "notes": "Sold as sedan and hatchback (one record; hatchback costs ~$1,000-1,150 more, dims for sedan). Turbo makes 250 hp on 93-octane / 227 hp on 87-octane. 2026-08-01 re-verify: all 7 trim prices confirmed unchanged against mazdausa.com; corrected the base 2.5L's hp from a stale 191 to Mazda's official 186 (matches the CX-30's identical engine — same correction).",
   "ratings": {
    "safety": {
     "nhtsa": 5,
