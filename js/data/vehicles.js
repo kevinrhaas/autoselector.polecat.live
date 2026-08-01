@@ -20,7 +20,7 @@
 //   • Bump DATA_VERSION (int) whenever records change.
 // -----------------------------------------------------------------------
 
-export const DATA_VERSION = 46;
+export const DATA_VERSION = 47;
 
 export const VEHICLES = [
  {
@@ -1828,7 +1828,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": null,
-   "credit": null
+   "credit": null,
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Interior_of_Audi_A5_Avant_at_Japan_Mobility_Show_Kansai_2025.jpg",
+     "kind": "interior",
+     "credit": "Aos.1905",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3AInterior_of_Audi_A5_Avant_at_Japan_Mobility_Show_Kansai_2025.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "2026-07-31 sweep: full 3-trim A5 ladder confirmed (Premium/Premium Plus/Prestige at $50,200/$52,700/$56,700, all before the $1,295 destination charge) plus per-trim feature deltas; S5 grew from a single listed trim to its real 3-trim ladder (Premium $63,300, Premium Plus $66,200, Prestige $70,900 — Premium corrected slightly from $63,700). All-new generation replaced the A4 sedan; body is a five-door liftback. Nearly all controls are on the touchscreen. audiusa.com blocked automated fetches (403); citations lean on Cars.com and cars.usnews.com trim-comparison pages.",
@@ -9657,7 +9666,16 @@ export const VEHICLES = [
   "towingLb": 3600,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/9/9e/2020_Chrysler_Pacifica_Touring-L_in_Bright_White%2C_front_left.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/2022_Chrysler_Pacifica_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2022_Chrysler_Pacifica_interior.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Updated for 2026 with simplified Select/Limited/Pinnacle lineup and 100th Anniversary hybrid edition. Plug-in hybrid is FWD only and uses an inflator kit instead of a spare. Prices exclude $1,995 destination. Trim pricing re-verified 2026-07-28 against the current lineup, unchanged. A 100th Anniversary Edition and a Hybrid Select Premium trim also exist, but reported pricing for both conflicted across sources, so they're left out rather than guessed. IIHS checked directly: Marginal moderate-overlap front rules out a Top Safety Pick.",
@@ -10361,7 +10379,16 @@ export const VEHICLES = [
   "towingLb": 2000,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/9/91/2023_Dodge_Hornet_GT_in_Blu_Bayou%2C_Front_Left%2C_05-14-2023.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/2024_Dodge_Hornet_interior.jpg",
+     "kind": "interior",
+     "credit": "Deathpallie325",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2024_Dodge_Hornet_interior.jpg"
+    }
+   ]
   },
   "confidence": "low",
   "notes": "Discontinued: tariffs halted Italian production in Aug 2025 and Dodge confirmed the end of the Hornet in Jan 2026; sold from remaining (mostly 2025) inventory, often heavily discounted. Prices shown are 2025 MSRPs; a distinct 2026 model year may not reach all dealers. Re-confirmed 2026-07-28 (Dodge brand sweep): discontinuation status still current — dealers report inventory now heavily discounted (up to $8,000 off), and the Hornet's closest surviving relative is its Alfa Romeo Tonale twin, refreshed for 2026 on the same Italian line. Confidence stays low (a genuinely stale, wind-down record) rather than raised; sources array added for the first time.",
@@ -10899,7 +10926,16 @@ export const VEHICLES = [
   "towingLb": null,
   "image": {
    "remote": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Fiat_500e_Cabrio_%282024%29_%2855075554992%29.jpg",
-   "credit": "Wikimedia Commons"
+   "credit": "Wikimedia Commons",
+   "gallery": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/2025_FIAT_500e_%28interior%29.jpg",
+     "kind": "interior",
+     "credit": "Oleg Yunakov",
+     "license": "CC BY-SA 4.0",
+     "commons": "https://commons.wikimedia.org/wiki/File%3A2025_FIAT_500e_%28interior%29.jpg"
+    }
+   ]
   },
   "confidence": "high",
   "notes": "Fiat's only US model for 2026, arriving summer 2026. Re-verified 2026-07-31: Pop $35,700 / Icona $37,700 (both + $1,995 destination) and the 149-mile EPA range/116 MPGe combined were independently confirmed exact matches across Stellantis's own press release and fueleconomy.gov — no changes from the prior figures. Pricing is a $5,200/17% jump from the outgoing car's $30,500 base; a CarsDirect report flagged tariffs as a possible but unconfirmed cause. New for 2026: a body-color dashboard on Pop (pearl stays standard on Icona), a Miami Sunset color option, and Active Driving Assist un-bundled from the old $2,000 Icona-only package into a standalone $1,250 option. No 2026 NHTSA record exists (api.nhtsa.gov returns an empty result set for FIAT 500e MY2026) and no 2026 IIHS test page was found (iihs.org 404s; only a 2016-model-year 500e is in their archive) — checked both directly, nothing guessed. fiatusa.com, kbb.com, truecar.com and cars.usnews.com all blocked or timed out on automated fetches, so citations lean on Stellantis's own newsroom release plus fueleconomy.gov and CarsDirect instead. Image shows the closely related Cabrio version.",

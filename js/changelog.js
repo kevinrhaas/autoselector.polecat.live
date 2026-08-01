@@ -21,6 +21,15 @@
 
 export const CHANGELOG = [
   {
+    v: 84,
+    title: 'Interior photos added for 4 more models',
+    kind: 'polish',
+    ts: '2026-08-01T15:25:34.849Z',
+    items: [
+      'Vehicle-page galleries gained verified current-generation interior/cabin photos for the Audi A5 (all-new B10 generation), Chrysler Pacifica, Fiat 500e and Dodge Hornet, each sourced from Wikimedia Commons under a free license and credited in the Sources section.',
+    ],
+  },
+  {
     v: 83,
     title: 'Interior photos added for 8 more models',
     kind: 'polish',
