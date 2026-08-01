@@ -76,6 +76,13 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   not linked by this app yet — tokens.css falls through to the system stack
   without it, so this is a no-op until a future run opts in). Keep it current
   with future `sync-shell` dispatches.
+- [x] UX-sweep fix (2026-08-01, issue #84 item 1, js/changelog.js v79) —
+  the Engine/Body filter chips on All Vehicles (`.fgroup .pill`) were 24px
+  tall on mobile, under the 44px touch-target floor and smaller than any
+  other control on the site, on the app's core search/filter path. Bumped
+  to a 44px min-height under the existing `max-width:700px` phone breakpoint
+  (`css/styles.css`); desktop untouched. Issue #84 item 2 (topbar icons,
+  38px) is unchanged/carried over — lower priority per the sweep.
 
 ## Next up (ordered)
 

@@ -1422,6 +1422,9 @@ html[data-simple="1"] .kpis .kpi .k-val{font-size:26px}
 .filterbar.grouped .fgroup-sep{display:none}
 .fgroup{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .fgroup .fgroup-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--text-3);min-width:50px}
+@media (max-width:700px){
+  .fgroup .pill{min-height:44px;padding:10px 14px}
+}
 
 .toolbar.filter-dd{gap:8px}
 .mpick-wrap{position:relative}
