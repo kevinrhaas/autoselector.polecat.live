@@ -21,6 +21,15 @@
 
 export const CHANGELOG = [
   {
+    v: 80,
+    title: 'Topbar icon buttons reach the 44px touch-target floor on mobile',
+    kind: 'fix',
+    ts: '2026-08-01T06:11:25.192Z',
+    items: [
+      'The topbar\'s hamburger, Undo, What\'s New, theme toggle and app-switcher buttons were 38px on phones — under the 44px minimum the shell already enforces. This app\'s own CSS was silently restating the shell\'s pre-mobile-fix button size at equal specificity, loading after it and winning; the fix mirrors the shell\'s own mobile override here so it can\'t be clobbered again. Desktop is unchanged.',
+    ],
+  },
+  {
     v: 79,
     title: 'Bigger touch targets for the Engine/Body filter chips on mobile',
     kind: 'fix',

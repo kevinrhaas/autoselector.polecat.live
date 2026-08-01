@@ -81,8 +81,20 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   tall on mobile, under the 44px touch-target floor and smaller than any
   other control on the site, on the app's core search/filter path. Bumped
   to a 44px min-height under the existing `max-width:700px` phone breakpoint
-  (`css/styles.css`); desktop untouched. Issue #84 item 2 (topbar icons,
-  38px) is unchanged/carried over — lower priority per the sweep.
+  (`css/styles.css`); desktop untouched.
+- [x] UX-sweep fix (2026-08-01, issue #84 item 2, js/changelog.js v80) —
+  the topbar's hamburger/Undo/What's-New/theme-toggle/app-switcher buttons
+  stayed at 38px on mobile across 5+ sweeps (#10/#31/#33/#39/#54/#84) even
+  though `vendor/polecat-shell/shell.css` already bumps `.btn.icon` to 44px
+  under its own `max-width:860px` breakpoint. Root cause: `css/styles.css`'s
+  own `.btn.icon{width:38px;height:38px}` (kept app-side per the comment at
+  its `.btn{display:inline-flex}` restatement) loads after shell.css at
+  equal specificity with no matching mobile override, so it silently won on
+  every phone viewport. Mirrored the shell's exact mobile override into
+  `css/styles.css`'s existing 860px block. Verified via direct
+  `getBoundingClientRect` measurement at 390x780 (all five buttons now
+  44x44) and 1280x800 (unchanged at 38x38). Both UX-sweep findings on this
+  app are now resolved.
 
 ## Next up (ordered)
 
