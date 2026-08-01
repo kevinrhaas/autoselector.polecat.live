@@ -518,6 +518,12 @@ tr:hover .row-actions{opacity:1}
 @media (max-width:860px){
   .topbar-search{min-width:0;flex:1}
   .topbar-search span{display:none}
+  /* This file's own .btn.icon (line ~100, restated at equal specificity per
+     the note above) was clobbering the shell's mobile 44px touch-target
+     override with its unconditional 38px value — restate the shell's fix
+     here too (UX sweep #84 item 2 / #54 item 2, carried over 5+ sweeps). */
+  .btn:not(.icon){min-height:44px}
+  .btn.icon{width:44px;height:44px}
 }
 @media (max-width:820px){
   .def-grid{grid-template-columns:1fr}
@@ -1422,6 +1428,9 @@ html[data-simple="1"] .kpis .kpi .k-val{font-size:26px}
 .filterbar.grouped .fgroup-sep{display:none}
 .fgroup{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .fgroup .fgroup-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--text-3);min-width:50px}
+@media (max-width:700px){
+  .fgroup .pill{min-height:44px;padding:10px 14px}
+}
 
 .toolbar.filter-dd{gap:8px}
 .mpick-wrap{position:relative}

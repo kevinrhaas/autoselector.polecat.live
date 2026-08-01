@@ -808,6 +808,38 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
   and MX-5 Miata: no rating on either yet (empty API results, not guessed);
   checked IIHS for MX-5 Miata: not among Mazda's 2026 Top Safety Pick+ wins,
   so no rating added.)
+- [x] Porsche (2026-08-01 — all 7 models re-verified, see js/changelog.js v85:
+  every model's trim ladder was thin and stale-priced — 911 gained a
+  reintroduced Carrera S and its Turbo S corrected from a carryover
+  388-hp description to the real 701-hp T-Hybrid AWD-only car (confirmed
+  directly via Porsche Newsroom); GT3 RS pricing is not yet officially
+  published for 992.2/MY2026 so it was left out rather than guessed, and
+  GT3 itself has a real cross-source price spread, listed at the
+  more-cited figure with the disagreement noted. Cayenne grew from 3 to 7
+  trims (added E-Hybrid, S E-Hybrid, GTS, Turbo GT) and its GTS split out
+  as a distinct 493-hp tune, not the same spec as S (468 hp) as previously
+  conflated. Cayenne Electric gained the missing S Electric trim. Macan
+  (gas, confirmed final US model year) grew from 2 to 4 trims (T, GTS
+  added) with a full model year's stale pricing corrected. Macan Electric
+  grew from 3 to 5 (added 4S and the new-for-2026 GTS, Porsche's first
+  electric GTS). Panamera grew from 3 to 7 (added 4, GTS, 4 E-Hybrid,
+  Turbo E-Hybrid) and dropped a stale "Executive long-wheelbase" keyOption
+  that no longer exists in the current generation's US lineup. Taycan grew
+  from 4 to 7 (added 4S, GTS, Turbo, Turbo S) and its MPGe/range figures —
+  previously a flat 96/318mi and 84/301mi that matched no real EPA
+  record — corrected to real per-trim EPA data (77-93 MPGe, 251-315mi).
+  Checked NHTSA and IIHS directly for every model: none of the seven
+  currently carry a rating (confirmed via live API/site queries, not
+  assumed absent) — now stated explicitly in each record's notes. No
+  manufacturer-published hex color values were found for any Porsche
+  model, so colors were left unset fleet-wide rather than fabricated.
+  usa.porsche.com/configurator.porsche.com blocked or JS-rendered
+  automated fetches throughout, so citations lean on Porsche's own
+  Newsroom press releases (which did resolve), Cars.com, CarsDirect,
+  Edmunds, Champion Porsche's spec pages and fueleconomy.gov instead.
+  Sources arrays added to all seven models for the first time; six of
+  seven raised to confidence high (911 stays medium pending the GT3/GT3RS
+  pricing gap).)
 - [ ] Volvo — [ ] Polestar — [ ] Land Rover — [ ] Jaguar
 - [ ] Tesla — [ ] Rivian — [ ] Lucid — [ ] VinFast — [ ] Ineos
 - [ ] Exotics (Ferrari, Lamborghini, McLaren, Bentley, Rolls-Royce, Aston Martin, Maserati, Lotus)
