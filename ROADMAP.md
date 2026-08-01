@@ -744,7 +744,26 @@ raise `confidence`, fix `notes`, then check off; restart when all done):
 - [x] Subaru (2026-07-12 — all 10 models re-verified, see js/changelog.js v9:
   Forester rebuilt to 11 trims, Impreza/Outback/Solterra/Uncharted figures
   fixed, Ascent "final year" note corrected; sources/features/colors added)
-- [ ] Mazda — [ ] Volvo — [ ] Polestar — [ ] Land Rover — [ ] Jaguar
+- [x] Mazda (2026-08-01 — all 7 models re-verified against mazdausa.com, see
+  js/changelog.js v82: the CX-90 trim list was the real find — only 4 of its
+  9 actual trims were present (missing 3.3 Turbo Preferred/Premium Sport, PHEV
+  Premium Sport, and 3.3 Turbo Premium Plus) and every price was stale from a
+  mid-2026 increase; rebuilt the full lineup (gas Select $39,300 through S
+  Premium Plus $57,570, PHEV Preferred $50,695 through Premium Plus $59,295).
+  Corrected the CX-30/Mazda3's shared base 2.5L engine from a stale 191 hp to
+  Mazda's official 186 hp (confirmed via Mazda's own Sep 2025 pricing press
+  release, not just the current site). Added new trims that had launched
+  since the last sweep: CX-30 S/Turbo Aire Edition ($30,250/$34,410) and
+  CX-50 Turbo Meridian Edition ($40,400). CX-5 (all-new for 2026, previously
+  confidence medium) raised to high: its 5 trims/prices confirmed unchanged
+  and wheelbase filled in at 110.8 in; curb weight stays unset because
+  Mazda's own US spec pages still list it as TBD (third-party estimates span
+  3,300-3,700 lb, too wide to cite as a single figure — never guess). CX-70
+  and MX-5 Miata re-checked with zero discrepancies. Checked NHTSA for CX-5
+  and MX-5 Miata: no rating on either yet (empty API results, not guessed);
+  checked IIHS for MX-5 Miata: not among Mazda's 2026 Top Safety Pick+ wins,
+  so no rating added.)
+- [ ] Volvo — [ ] Polestar — [ ] Land Rover — [ ] Jaguar
 - [ ] Tesla — [ ] Rivian — [ ] Lucid — [ ] VinFast — [ ] Ineos
 - [ ] Exotics (Ferrari, Lamborghini, McLaren, Bentley, Rolls-Royce, Aston Martin, Maserati, Lotus)
 
