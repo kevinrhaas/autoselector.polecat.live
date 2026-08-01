@@ -34,6 +34,12 @@
   "license": "CC BY 2.0",
   "author": "Charles from Port Chester, New York"
  },
+ "gallery/audi-a5/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:Interior_of_Audi_A5_Avant_at_Japan_Mobility_Show_Kansai_2025.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Aos.1905",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
  "gallery/bmw-x1/1 (interior)": {
   "source": "https://commons.wikimedia.org/wiki/File:BMW_X1_U11_Interior1.jpg",
   "license": "CC BY-SA 4.0",
@@ -152,6 +158,24 @@
   "source": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Traverse_RS_AWD,_front_10.16.24.jpg",
   "license": "CC BY-SA 4.0",
   "author": "Kevauto",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/chrysler-pacifica/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2022_Chrysler_Pacifica_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/dodge-hornet/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2024_Dodge_Hornet_interior.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Deathpallie325",
+  "note": "hotlinked from Wikimedia Commons (not stored locally)"
+ },
+ "gallery/fiat-500e/1 (interior)": {
+  "source": "https://commons.wikimedia.org/wiki/File:2025_FIAT_500e_(interior).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Oleg Yunakov",
   "note": "hotlinked from Wikimedia Commons (not stored locally)"
  },
  "gallery/ford-bronco/1 (interior)": {

@@ -190,7 +190,32 @@ polecat-platform repo's `lib/` + a sync-shell PR). Progress so far:
   only coverage for now). ~15–20 models per run.
 - [ ] **Interior & multi-photo galleries** — extend `image.gallery`
   (`[{url, kind:'interior'|'exterior', credit, license, commons}]`) beyond the
-  100 models done so far (2026-08-01, +8, js/changelog.js v83: toyota-land-cruiser
+  107 models done so far (2026-08-01, +4, js/changelog.js v84: audi-a5 (all-new
+  B10 generation replacing the A4, confirmed via the Japan Mobility Show Kansai
+  2025 caption and the model's own trim notes citing the same curved-display
+  cockpit), chrysler-pacifica (2022 Touring-L dashboard — the RU2 facelift
+  dash introduced for 2021 and unchanged through 2026), fiat-500e (2025 New
+  York Auto Show shot, current single generation) and dodge-hornet (2024 GT
+  dashboard — Hornet's only generation before its January-2026 discontinuation,
+  still sold from dealer inventory as a 2026 model) — all interior shots,
+  found via the Commons search API, license/author pulled from each file's own
+  Commons metadata, every URL live-checked (curl, HTTP 200 image/jpeg).
+  Checked but held back this run for a facelift/generation risk the source
+  photo couldn't confirm (never guess): ford-bronco-sport (Commons' only
+  interior shot is 2022, predating the 2025 model year's 12.3-13.2-inch
+  touchscreen upgrade), audi-q4-e-tron (2022 shot predates the 2025 facelift's
+  panoramic dual-screen dash), genesis-g70/g80/electrified-gv70 (all three
+  Commons candidates show a pre-2026 dash — G80 and GV70 are confirmed moving
+  to a new 27-inch OLED display for MY2026 and G70's "PE2" second facelift
+  status/timing couldn't be confirmed against the photo), ford-f-150-lightning
+  (a genuine MY2026 screen change — 15.5-inch vertical touchscreen — was
+  confirmed but whether the Commons 2024 Flash-trim shot already had it could
+  not be), chevrolet-equinox-ev (the only Commons interior file's upload date
+  predates the vehicle's own public reveal, an unresolved metadata
+  inconsistency) and volkswagen-id-buzz (the one Commons shot is a 2022
+  Euro-spec short-wheelbase van; the US market only got the redesigned
+  long-wheelbase 3-row version, a different cabin layout).
+  Previous batch (2026-08-01, +8, js/changelog.js v83: toyota-land-cruiser
   (current 250-series/J250 "Prado" platform sold in the US simply as "Land
   Cruiser"), ford-ranger (12th-gen P703, captioned "2024 Ford Ranger" with the
   redesigned digital dash), hyundai-elantra (7th-gen/CN7 facelift dash via the
